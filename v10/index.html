@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="v10">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="qc-container hero__grid">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span class="hero__line">Quote in minutes.</span>
+              <span class="hero__line hero__line--accent">Close in days.</span>
+            </h1>
+            <p class="hero__lead">
+              QuoteCloud is the proposal and quoting software that takes a deal from first draft to signed and paid &mdash; in one interactive document.
+            </p>
+            <div class="hero__cta">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">No credit card required.</p>
+          </div>
+
+          <div class="hero__visual" data-reveal="scale">
+            <div class="deal p0 p1 p2 p3 p4" data-deal aria-label="Animated example: a proposal moving from draft to signed and paid" role="img">
+              <div class="deal__top">
+                <div class="deal__title">
+                  <span class="deal__kicker">Proposal #2041</span>
+                  <strong>Harbour St office fit-out</strong>
+                </div>
+                <span class="deal__chip">
+                  <span class="deal__chip-roll">
+                    <span>Draft</span><span>Sent</span><span>Viewed</span><span>Signed</span><span>Paid</span>
+                  </span>
+                </span>
+              </div>
+
+              <div class="deal__status">
+                <div class="deal__ai">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM5 16l.9 2.6L8.5 19.5l-2.6.9L5 23l-.9-2.6L1.5 19.5l2.6-.9zM19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg>
+                  Introduction drafted by AI Co-worker
+                </div>
+                <div class="deal__viewer">
+                  <span class="deal__avatar">DR</span>
+                  <span>Dana Reyes is viewing</span>
+                  <i class="deal__pulse"></i>
+                </div>
+              </div>
+
+              <div class="deal__lines" aria-hidden="true">
+                <i style="--w: 92%"></i><i style="--w: 100%"></i><i style="--w: 64%"></i>
+              </div>
+
+              <div class="deal__table">
+                <div class="deal__row"><span>Workstations &times; 24</span><b>$12,480</b></div>
+                <div class="deal__row"><span>Meeting pods &times; 2</span><b>$8,920</b></div>
+                <div class="deal__row deal__row--opt">
+                  <span><i class="deal__toggle"></i>Acoustic panels <small>optional</small></span>
+                  <b>$3,400</b>
+                </div>
+                <div class="deal__total"><span>Total</span><b data-deal-total>$24,800</b></div>
+              </div>
+
+              <div class="deal__foot">
+                <div class="deal__sign">
+                  <svg viewBox="0 0 140 44" width="140" height="44" fill="none" aria-hidden="true">
+                    <path class="deal__ink" d="M4 32c10-14 18-22 22-20 5 3-8 24-2 26 6 2 12-18 18-18 5 0-2 16 4 16 7 0 12-18 20-16 6 2-4 14 2 15 7 1 14-14 22-12 6 2 2 14 8 14 6 0 10-10 16-10 5 0 6 8 12 6 4-1 6-5 10-7" stroke="#242424" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Dana Reyes &middot; signed</span>
+                </div>
+                <span class="deal__pay">
+                  <span class="deal__pay-face">Pay deposit &middot; $4,960</span>
+                  <span class="deal__pay-face deal__pay-face--done">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                    Paid
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <div class="track p0 p1 p2 p3 p4" aria-hidden="true">
+              <div class="track__rail"><i class="track__bar"></i></div>
+              <ol class="track__steps">
+                <li><span>Draft</span><time>9:02</time></li>
+                <li><span>Sent</span><time>9:04</time></li>
+                <li><span>Viewed</span><time>9:09</time></li>
+                <li><span>Signed</span><time>9:13</time></li>
+                <li><span>Paid</span><time>9:16</time></li>
+              </ol>
+              <p class="track__elapsed">
+                Draft to paid in <strong><span data-deal-elapsed>14</span> min</strong>
+                <s>3 days</s>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Outcome pillars ───────── -->
+      <section class="pillars" aria-labelledby="pillars-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="pillars-title">Three outcomes. <em>One platform.</em></h2>
+            <p>Every feature in QuoteCloud exists to do one of three things for your sales team.</p>
+          </header>
+
+          <div class="pillar-grid" data-reveal-stagger="110">
+            <article class="pillar" data-reveal data-live>
+              <div class="pv pv--faster" aria-hidden="true">
+                <div class="pv__lib">
+                  <i class="pv__tile pv__tile--1">Intro</i>
+                  <i class="pv__tile pv__tile--2">Pricing</i>
+                  <i class="pv__tile pv__tile--3">Terms</i>
+                  <i class="pv__tile pv__tile--fly">Pricing</i>
+                </div>
+                <div class="pv__doc">
+                  <div class="pv__ai">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/></svg>
+                    AI rewrite
+                  </div>
+                  <div class="pv__text"><i></i><i></i><i></i></div>
+                  <div class="pv__price">
+                    <div><span>Installation</span><b>$6,200</b></div>
+                    <div><span>Hardware &times; 12</span><b>$4,800</b></div>
+                    <div><span>Support plan</span><b>$1,400</b></div>
+                    <div class="pv__sum"><span>Total</span><b>$12,400</b></div>
+                  </div>
+                </div>
+              </div>
+              <h3>Faster</h3>
+              <p>A priced, branded proposal in minutes &mdash; not an afternoon.</p>
+              <button class="pillar__toggle" type="button" aria-expanded="false" aria-controls="pillar-faster">
+                See what delivers it
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pillar__panel" id="pillar-faster">
+                <ul class="pillar__list">
+                  <li><a href="https://www.quote.cloud/cpq-software">Configurable pricing tables</a><span>Options, quantities, discounts, tax and multi-currency &mdash; totals flow automatically.</span></li>
+                  <li><a href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker</a><span>Drafts introductions and value propositions you refine, not write.</span></li>
+                  <li><a href="https://www.quote.cloud/templates">Templates &amp; content libraries</a><span>Approved content, ready to drop in from personal, team and company libraries.</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="pillar" data-reveal data-live>
+              <div class="pv pv--persuasive" aria-hidden="true">
+                <div class="pv__doc pv__doc--client">
+                  <div class="pv__opt">
+                    <span><i class="pv__switch"></i>Extended warranty</span>
+                    <b>+$1,200</b>
+                  </div>
+                  <div class="pv__sum pv__sum--client"><span>Your total</span><b class="pv__amt"><span>$12,400</span><span>$13,600</span></b></div>
+                  <div class="pv__comment">
+                    <i>MK</i><span>Can we start in May?</span>
+                  </div>
+                  <div class="pv__sig">
+                    <svg viewBox="0 0 120 36" width="120" height="36" fill="none"><path d="M4 26c8-12 14-18 18-16 4 2-6 20-1 22 5 2 10-16 15-16 4 0-2 14 3 14 6 0 10-16 17-14 5 2-3 12 2 13 6 1 12-12 19-10 5 2 1 12 7 12 5 0 9-8 14-8 4 0 5 7 10 5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Sign here</span>
+                  </div>
+                  <div class="pv__pay"><span>Pay now</span><span>Paid</span></div>
+                </div>
+              </div>
+              <h3>More persuasive</h3>
+              <p>Customers choose, ask, sign and pay inside the document itself.</p>
+              <button class="pillar__toggle" type="button" aria-expanded="false" aria-controls="pillar-persuasive">
+                See what delivers it
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pillar__panel" id="pillar-persuasive">
+                <ul class="pillar__list">
+                  <li><a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Interactive customer view</a><span>Optional items, quantities, forms, video, comments and annotations &mdash; and you see when it&rsquo;s opened.</span></li>
+                  <li><a href="https://www.quote.cloud/electronic-signature-software-solution">Legally binding eSignatures</a><span>eIDAS compliant, 256-bit encrypted, full audit trail.</span></li>
+                  <li><a href="https://www.quote.cloud/stripe-integration-with-quotecloud">Pay online</a><span>Collect deposits or full payment via Stripe or PayPal the moment they sign.</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="pillar" data-reveal data-live>
+              <div class="pv pv--control" aria-hidden="true">
+                <div class="pv__flow">
+                  <div class="pv__node pv__node--1"><i>JS</i><span>Rep</span></div>
+                  <div class="pv__link pv__link--1"><b class="pv__dot pv__dot--1"></b></div>
+                  <div class="pv__node pv__node--2"><i>AM</i><span>Manager</span></div>
+                  <div class="pv__link pv__link--2"><b class="pv__dot pv__dot--2"></b></div>
+                  <div class="pv__node pv__node--3"><i>&#10003;</i><span>Approved</span></div>
+                </div>
+                <div class="pv__rule">Discount &gt; 15% &rarr; needs manager approval</div>
+                <div class="pv__sheet">
+                  <small>Template &middot; Fit-out proposal</small>
+                  <i></i><i></i>
+                  <span class="pv__cursor pv__cursor--a"><b>Alex</b></span>
+                  <span class="pv__cursor pv__cursor--b"><b>Priya</b></span>
+                </div>
+              </div>
+              <h3>More control</h3>
+              <p>Every quote on-brand, correctly priced and approved before it leaves.</p>
+              <button class="pillar__toggle" type="button" aria-expanded="false" aria-controls="pillar-control">
+                See what delivers it
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+              <div class="pillar__panel" id="pillar-control">
+                <ul class="pillar__list">
+                  <li><a href="https://www.quote.cloud/product-overview">Visual approval workflows</a><span>Hierarchies, conditional rules and escalation &mdash; built without code.</span></li>
+                  <li><a href="https://www.quote.cloud/collaboration">Real-time collaboration</a><span>Several people in one document at once, with comments and mentions.</span></li>
+                  <li><a href="https://www.quote.cloud/templates">Templates &amp; libraries</a><span>Locked, approved content keeps every document consistent.</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Time-savings estimator ───────── -->
+      <section class="est" aria-labelledby="est-title">
+        <div class="qc-container">
+          <div class="est__card" data-reveal="scale" data-estimator>
+            <div class="est__controls">
+              <h2 id="est-title">How many hours could your team get back?</h2>
+              <p class="est__lead">Move the sliders. The estimate updates as you go.</p>
+
+              <div class="slider">
+                <label class="slider__head" for="est-team">
+                  <span>People writing proposals</span>
+                  <output for="est-team" data-est-team-out>5</output>
+                </label>
+                <input class="slider__input" id="est-team" type="range" min="1" max="50" step="1" value="5" data-est-team aria-describedby="est-note" />
+              </div>
+
+              <div class="slider">
+                <label class="slider__head" for="est-per">
+                  <span>Proposals each sends per month</span>
+                  <output for="est-per" data-est-per-out>8</output>
+                </label>
+                <input class="slider__input" id="est-per" type="range" min="1" max="60" step="1" value="8" data-est-per aria-describedby="est-note" />
+              </div>
+
+              <p class="est__note" id="est-note">
+                Estimate only, not a guarantee. Assumes about 2 hours saved per proposal compared with assembling it in Word, Excel and a separate eSign tool, and an 8-hour working day. Your results will vary.
+              </p>
+            </div>
+
+            <div class="est__result">
+              <div class="est__live" aria-live="polite" aria-atomic="true">
+                <span class="est__label">Estimated hours saved every month</span>
+                <strong class="est__num"><span data-est-hours>80</span><small>h</small></strong>
+                <span class="est__sub">About <b data-est-days>10</b> working days back, every month.</span>
+              </div>
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="estimator">Start free 14-day trial</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Before / after ───────── -->
+      <section class="cmp" aria-labelledby="cmp-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="cmp-title">Your customer feels <em>the difference.</em></h2>
+            <p>A static PDF sits in an inbox. A QuoteCloud document is a place to choose, ask, sign and pay.</p>
+          </header>
+
+          <div class="cmp__stage" data-compare style="--pos: 50" data-reveal="scale">
+            <div class="cmp__pane cmp__pane--before">
+              <div class="cmp__doc cmp__doc--pdf">
+                <div class="cmp__bar"><span>proposal_final_v3.pdf</span><span>1 / 6</span></div>
+                <div class="cmp__sheet">
+                  <h3 class="cmp__h">Proposal</h3>
+                  <p class="cmp__p"><i></i><i></i><i></i></p>
+                  <div class="cmp__rows"><div><span>Workstations</span><span>$12,480</span></div><div><span>Meeting pods</span><span>$8,920</span></div><div><span>Acoustic panels (optional)</span><span>$3,400</span></div></div>
+                  <div class="cmp__sigline"><span>Signature: ______________</span><span>Date: ______</span></div>
+                  <p class="cmp__steps">Print &rarr; sign &rarr; scan &rarr; email back &rarr; invoice &rarr; wait</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cmp__pane cmp__pane--after">
+              <div class="cmp__doc cmp__doc--qc">
+                <div class="cmp__bar cmp__bar--qc"><span>Harbour St office fit-out</span><span class="cmp__live"><i></i>Opened 2 min ago</span></div>
+                <div class="cmp__sheet">
+                  <h3 class="cmp__h">Proposal</h3>
+                  <p class="cmp__p"><i></i><i></i><i></i></p>
+                  <div class="cmp__rows cmp__rows--qc">
+                    <div><span>Workstations <em>&times; 24</em></span><span>$12,480</span></div>
+                    <div><span>Meeting pods <em>&times; 2</em></span><span>$8,920</span></div>
+                    <div class="cmp__optrow"><span><i class="cmp__switch"></i>Acoustic panels <em>optional</em></span><span>$3,400</span></div>
+                    <div class="cmp__tot"><span>Total</span><span>$24,800</span></div>
+                  </div>
+                  <div class="cmp__actions">
+                    <span class="cmp__sig"><svg viewBox="0 0 120 36" width="110" height="33" fill="none" aria-hidden="true"><path d="M4 26c8-12 14-18 18-16 4 2-6 20-1 22 5 2 10-16 15-16 4 0-2 14 3 14 6 0 10-16 17-14 5 2-3 12 2 13 6 1 12-12 19-10 5 2 1 12 7 12 5 0 9-8 14-8 4 0 5 7 10 5" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Signed</span>
+                    <span class="cmp__paybtn">Pay deposit</span>
+                  </div>
+                </div>
+                <div class="cmp__bubble"><i>MK</i>Can we add two more pods?</div>
+              </div>
+            </div>
+
+            <input class="cmp__range" type="range" min="0" max="100" value="50" aria-label="Drag to compare a static PDF with the QuoteCloud interactive document" data-compare-range />
+            <div class="cmp__handle" aria-hidden="true">
+              <span class="cmp__knob">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
+              </span>
+            </div>
+            <span class="cmp__tag cmp__tag--before" aria-hidden="true">Static PDF</span>
+            <span class="cmp__tag cmp__tag--after" aria-hidden="true">QuoteCloud</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="intg" aria-labelledby="intg-title">
+        <div class="qc-container">
+          <header class="sec-head sec-head--tight" data-reveal>
+            <h2 id="intg-title">Fits the tools <em>you already run.</em></h2>
+            <p>CRM, accounting, payments and spreadsheets stay in sync. <a href="https://www.quote.cloud/all-integrations">See all integrations</a></p>
+          </header>
+        </div>
+        <div class="marquee" data-live>
+          <ul class="marquee__track">
+            <li><img src="/assets/integrations/salesforce-cpq.png" width="56" height="56" alt="Salesforce" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/hub-spot.png" width="56" height="56" alt="HubSpot" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/xero.png" width="56" height="56" alt="Xero" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/quickbooks.png" width="56" height="56" alt="QuickBooks" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/stripe.png" width="56" height="56" alt="Stripe" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/paypal.png" width="56" height="56" alt="PayPal" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/mondaydotcom-logo.jpg" width="56" height="56" alt="monday.com" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/microsoft-dynamics.jpg" width="56" height="56" alt="Microsoft Dynamics" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="56" height="56" alt="FreshBooks" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/slack.jpg" width="56" height="56" alt="Slack" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/googlesheets.png" width="56" height="56" alt="Google Sheets" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/excel.png" width="56" height="56" alt="Microsoft Excel" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/calendar.jpg" width="56" height="56" alt="Google Calendar" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/zendesk-logo.jpg" width="56" height="56" alt="Zendesk" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/serviceM8.png" width="56" height="56" alt="ServiceM8" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/googledocs.jpg" width="56" height="56" alt="Google Docs" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Proof strip ───────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <h2 class="qc-sr-only" id="proof-title">Ratings and security</h2>
+        <ul class="qc-container proof__list" data-reveal-stagger="70">
+          <li data-reveal="fade">
+            <span class="proof__stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="is-part"></i></span>
+            <strong>4.2</strong><span>on Capterra</span>
+          </li>
+          <li data-reveal="fade">
+            <span class="proof__stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="is-part"></i></span>
+            <strong>4.2</strong><span>on Software Advice</span>
+          </li>
+          <li data-reveal="fade">
+            <img src="/assets/compliance/eidas.svg" width="36" height="36" alt="" loading="lazy" decoding="async" />
+            <span>eIDAS compliant eSignatures</span>
+          </li>
+          <li data-reveal="fade">
+            <img src="/assets/compliance/encryption-256.png" width="36" height="34" alt="" loading="lazy" decoding="async" />
+            <span>256-bit encryption</span>
+          </li>
+          <li data-reveal="fade">
+            <img src="/assets/compliance/aws.svg" width="36" height="36" alt="" loading="lazy" decoding="async" />
+            <span>Hosted on AWS</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- @include faq -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title" data-close>
+        <div class="qc-container close__inner" data-reveal="scale">
+          <h2 id="close-title">Your next proposal, <em>signed sooner.</em></h2>
+          <p>Build it in minutes. Send one link. Watch it get opened, chosen, signed and paid.</p>
+          <div class="close__cta">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial</a>
+            <a class="qc-btn qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+          </div>
+          <p class="close__note">No credit card required &middot; Cancel anytime &middot; Helping sales teams since 2013</p>
+        </div>
+      </section>
+    </main>
+
+    <div class="sticky-cta" data-sticky hidden>
+      <span>Free 14-day trial</span>
+      <a class="qc-btn qc-btn--primary qc-btn--sm" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile">Start free</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

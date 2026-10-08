@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-itinerary -->
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="td">
+      <svg class="td-sprite" aria-hidden="true" focusable="false">
+        <defs>
+          <symbol id="i-flight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" /></symbol>
+          <symbol id="i-hotel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9" /></symbol>
+          <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2M9 17h6" /><circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" /></symbol>
+          <symbol id="i-tour" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7" /></symbol>
+          <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" /></symbol>
+          <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7ZM14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8" /></symbol>
+          <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" /></symbol>
+          <symbol id="i-paste" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /></symbol>
+          <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+          <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></symbol>
+          <symbol id="i-offline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01M8.5 16.4a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 4.2-2.6M10.7 5a15 15 0 0 1 11.3 3.8M16.9 11.3a10 10 0 0 1 2.2 1.6M5 13a10 10 0 0 1 5.2-2.8M2 2l20 20" /></symbol>
+          <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13" /></symbol>
+          <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5v14" /></symbol>
+          <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4M3 8l4-4 4 4M17 8v12M21 16l-4 4-4-4" /></symbol>
+          <symbol id="i-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2ZM13 5v2M13 17v2M13 11v2" /></symbol>
+          <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></symbol>
+          <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></symbol>
+          <symbol id="i-tip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4" /></symbol>
+          <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></symbol>
+          <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" /><circle cx="12" cy="12" r="3" /></symbol>
+          <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 2.5v17.2l4.6-4.3 2.9 6.6 2.9-1.3-2.9-6.5 6.3-.3z" fill="#0a0a0a" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" /></symbol>
+        </defs>
+      </svg>
+
+      <!-- ═════════ 1 · Cover (hero) ═════════ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner qc-container">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">Turn your itineraries into <em>branded travel documents</em></h1>
+            <p class="hero__lede">Bring in the booking from your GDS or a PDF, add your expertise, and hand travellers the whole trip in the TravelDocs app.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__fine">No credit card required</p>
+            <p class="hero__sources"><span>Imports from</span> Sabre · Tramada · Tres CCTE · PowerSuite · Resworld · <span class="hero__sources-pdf">or a booking PDF</span></p>
+          </div>
+
+          <div class="hero__doc" aria-label="Preview of a branded travel document for Ms Olivia Harper's Bali trip" role="img">
+            <div class="sheet sheet--page" aria-hidden="true">
+              <div class="sheet__head">
+                <span class="sheet__brand">Paradise Travel</span>
+                <span class="sheet__meta">Ms Olivia Harper · QX7K2M</span>
+              </div>
+              <p class="sheet__title">Your itinerary</p>
+              <div class="sheet__seg sheet__seg--flight" data-anno="Imported from Sabre. No re-keying.">
+                <span class="sheet__ico"><svg width="14" height="14"><use href="#i-flight" /></svg></span>
+                <div>
+                  <b>QF1 · SYD 11:40 → SIN 17:15</b>
+                  <small>Fri 12 Mar · Seat 4A · Booking code QX7K2M</small>
+                </div>
+              </div>
+              <div class="sheet__seg sheet__seg--hotel" data-anno="Hotel image, added in the segment">
+                <span class="sheet__ico"><svg width="14" height="14"><use href="#i-hotel" /></svg></span>
+                <div>
+                  <b>The Mulia, Nusa Dua</b>
+                  <small>Ocean Court Suite · 4 nights</small>
+                  <span class="sheet__img"></span>
+                </div>
+              </div>
+              <div class="sheet__seg">
+                <span class="sheet__ico"><svg width="14" height="14"><use href="#i-car" /></svg></span>
+                <div>
+                  <b>Ngurah Rai Airport → Nusa Dua</b>
+                  <small>Private transfer · arrival notes</small>
+                </div>
+              </div>
+              <div class="sheet__total"><span>Trip total</span><b>AUD 6,240</b></div>
+            </div>
+
+            <div class="sheet sheet--cover" aria-hidden="true">
+              <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" fetchpriority="high" decoding="async" />
+              <span class="cover__patch"></span>
+              <span class="cover__val cover__val--for">Ms Olivia Harper</span>
+              <span class="cover__val cover__val--by">Paradise Travel</span>
+              <span class="cover__val cover__val--date">12 Mar 2027</span>
+            </div>
+
+            <p class="hero__anno hero__anno--a" aria-hidden="true"><span>Imported from Sabre.</span> No re-keying.</p>
+            <p class="hero__anno hero__anno--b" aria-hidden="true"><span>Hotel image,</span> added in the segment</p>
+            <p class="hero__anno hero__anno--c" aria-hidden="true"><span>Your template,</span> your branding</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ 2 · Bring in your bookings ═════════ -->
+      <section class="import" id="import" aria-labelledby="import-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <span class="folio" aria-hidden="true">01</span>
+            <h2 id="import-title">Bring in the booking. <em>Skip the re-keying.</em></h2>
+            <p>Two ways in. Both end in a structured itinerary and price table, ready to style.</p>
+          </header>
+
+          <div class="import__grid">
+            <!-- Route A: GDS / mid-office -->
+            <article class="route route--gds" aria-labelledby="route-gds-title" data-reveal>
+              <span class="route__num" aria-hidden="true">A</span>
+              <h3 id="route-gds-title">From your GDS or mid-office</h3>
+              <p>Export PNRs and trip files straight into QuoteCloud. Your QuoteCloud team arranges the connection for your provider.</p>
+
+              <ul class="route__logos" aria-label="Supported booking systems">
+                <li><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="Sabre GDS" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/travel/tramada.png" width="400" height="125" alt="Tramada" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="PowerSuite" loading="lazy" decoding="async" /></li>
+                <li class="wordmark wordmark--ccte">Tres <b>CCTE</b></li>
+                <li class="wordmark wordmark--resworld">Helloworld <b>Resworld</b></li>
+              </ul>
+
+              <div class="pnr" data-pnr aria-hidden="true">
+                <div class="pnr__term">
+                  <span class="pnr__bar"><i></i><i></i><i></i> PNR · QX7K2M</span>
+                  <code class="pnr__line">1.1HARPER/OLIVIA MS</code>
+                  <code class="pnr__line pnr__line--hit">1 QF 1Y 12MAR SYDSIN HK1 1140 1715</code>
+                  <code class="pnr__line">2 HHL MU HK1 DPS 13MAR-17MAR</code>
+                  <code class="pnr__line">3 TRF DPS NUSA DUA 13MAR</code>
+                </div>
+                <div class="pnr__arrow"><svg width="18" height="18"><use href="#i-arrow" /></svg></div>
+                <div class="pnr__card">
+                  <span class="pnr__ico"><svg width="16" height="16"><use href="#i-flight" /></svg></span>
+                  <div>
+                    <b>SYD 11:40 → SIN 17:15</b>
+                    <small>Qantas QF1 · 12 Mar · Seat 4A</small>
+                  </div>
+                </div>
+              </div>
+
+              <a class="route__link" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="integration">Talk to us about your integration <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </article>
+
+            <!-- Route B: PDF upload / paste -->
+            <article class="route route--pdf" aria-labelledby="route-pdf-title" data-reveal>
+              <span class="route__num" aria-hidden="true">B</span>
+              <h3 id="route-pdf-title">Or upload a PDF, or paste it in</h3>
+              <p>Right-click the Itinerary block, choose upload or paste, and QuoteCloud pulls out the segments and pricing. It can be set up to recognise the formats you use.</p>
+
+              <div class="imp" data-imp data-step="9" data-mode="upload">
+                <div class="imp__stage" aria-hidden="true">
+                  <div class="imp__chrome">
+                    <span class="imp__dots"><i></i><i></i><i></i></span>
+                    <span class="imp__title">Bali escape · Ms Olivia Harper</span>
+                    <span class="imp__pill"><svg width="13" height="13"><use href="#i-eye" /></svg> Preview</span>
+                  </div>
+                  <div class="imp__canvas">
+                    <div class="imp__block imp__block--itin">
+                      <span class="imp__tag"><svg width="12" height="12"><use href="#i-flight" /></svg> Itinerary</span>
+                      <p class="imp__empty">Right-click to add an itinerary</p>
+                      <ol class="imp__segs">
+                        <li><span class="imp__ico"><svg width="14" height="14"><use href="#i-flight" /></svg></span><b>QF1 Sydney → Singapore</b><time>12 Mar · 11:40</time></li>
+                        <li><span class="imp__ico"><svg width="14" height="14"><use href="#i-car" /></svg></span><b>Airport → Nusa Dua</b><time>13 Mar</time></li>
+                        <li><span class="imp__ico"><svg width="14" height="14"><use href="#i-hotel" /></svg></span><b>The Mulia · 4 nights</b><time>13–17 Mar</time></li>
+                        <li><span class="imp__ico"><svg width="14" height="14"><use href="#i-tour" /></svg></span><b>Ubud rice terraces &amp; temples</b><time>15 Mar</time></li>
+                      </ol>
+
+                      <div class="imp__menu">
+                        <span>Edit itinerary</span>
+                        <span class="imp__opt imp__opt--upload"><svg width="14" height="14"><use href="#i-upload" /></svg> Upload itinerary file…</span>
+                        <span class="imp__opt imp__opt--paste"><svg width="14" height="14"><use href="#i-paste" /></svg> Paste itinerary data</span>
+                        <hr />
+                        <span>Delete block</span>
+                      </div>
+
+                      <div class="imp__file">
+                        <span class="imp__pdf"><i></i><i></i><i></i><i></i><i></i><em>PDF</em></span>
+                        <div>
+                          <b>Harper-QX7K2M-trip.pdf</b>
+                          <small>Extracting segments and pricing</small>
+                          <span class="imp__bar"><i></i></span>
+                        </div>
+                      </div>
+                      <pre class="imp__paste">QF 1 12MAR SYDSIN HK1 1140 1715 4A
+TRF DPS-NUSA DUA 13MAR
+HTL THE MULIA 13MAR-17MAR 4NTS
+TUR UBUD TERRACES 15MAR
+TTL AUD 6240.00</pre>
+
+                      <svg class="imp__cursor" width="22" height="22"><use href="#i-cursor" /></svg>
+                    </div>
+
+                    <div class="imp__block imp__block--price">
+                      <span class="imp__tag">Price table</span>
+                      <table class="imp__price">
+                        <tbody>
+                          <tr><th scope="row">Flights</th><td>2,480</td></tr>
+                          <tr><th scope="row">Hotel</th><td>3,160</td></tr>
+                          <tr><th scope="row">Transfers</th><td>180</td></tr>
+                          <tr><th scope="row">Tours</th><td>420</td></tr>
+                        </tbody>
+                        <tfoot>
+                          <tr><th scope="row">Total AUD</th><td data-imp-total>6,240</td></tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="imp__controls">
+                  <div class="imp__modes" role="group" aria-label="Choose an import method to play">
+                    <button type="button" class="imp__mode" data-imp-mode="upload" aria-pressed="true"><svg width="15" height="15" aria-hidden="true"><use href="#i-upload" /></svg> Upload PDF</button>
+                    <button type="button" class="imp__mode" data-imp-mode="paste" aria-pressed="false"><svg width="15" height="15" aria-hidden="true"><use href="#i-paste" /></svg> Paste</button>
+                  </div>
+                  <ol class="imp__steps">
+                    <li data-imp-stage="1">Right-click the Itinerary block</li>
+                    <li data-imp-stage="2">Upload the booking PDF, or paste</li>
+                    <li data-imp-stage="3">Segments and prices, structured</li>
+                  </ol>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ 3 · The document: personalise each segment ═════════ -->
+      <section class="enrich" id="document" aria-labelledby="enrich-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <span class="folio" aria-hidden="true">02</span>
+            <h2 id="enrich-title">Then add what <em>only you know</em></h2>
+            <p>Every segment carries its own content, right beside the booking it belongs to.</p>
+          </header>
+
+          <div class="doc">
+            <div class="doc__head doc__full">
+              <span class="doc__brand">Paradise Travel</span>
+              <span class="doc__for">Itinerary for <b>Ms Olivia Harper</b> · Booking ref <b>QX7K2M</b></span>
+              <span class="doc__page" aria-hidden="true">p. 2</span>
+            </div>
+
+            <article class="seg seg--flight" aria-label="Flight segment" data-reveal>
+
+              <p class="anno" style="--at: 46px"><b>Imported from Sabre.</b> No re-keying.</p>
+              <p class="seg__kind"><svg width="14" height="14" aria-hidden="true"><use href="#i-flight" /></svg> Flight · Fri 12 Mar</p>
+              <div class="seg__flight">
+                <div><b>SYD</b><span>11:40</span><small>Sydney</small></div>
+                <span class="seg__route" aria-hidden="true"><i></i><svg width="16" height="16"><use href="#i-flight" /></svg></span>
+                <div><b>SIN</b><span>17:15</span><small>Singapore</small></div>
+              </div>
+              <dl class="seg__facts">
+                <div><dt>Flight</dt><dd>Qantas QF1</dd></div>
+                <div><dt>Seat</dt><dd>4A</dd></div>
+                <div><dt>Booking code</dt><dd>QX7K2M</dd></div>
+              </dl>
+            </article>
+
+            <article class="seg seg--transfer" aria-label="Transfer segment" data-reveal>
+
+              <p class="anno" style="--at: 104px"><b>Text block:</b> arrival instructions</p>
+              <p class="seg__kind"><svg width="14" height="14" aria-hidden="true"><use href="#i-car" /></svg> Transfer · Sat 13 Mar</p>
+              <h3 class="seg__title">Ngurah Rai Airport → The Mulia, Nusa Dua</h3>
+              <div class="seg__note">
+                <p class="seg__note-label"><svg width="14" height="14" aria-hidden="true"><use href="#i-pin" /></svg> Arrival instructions</p>
+                <p>After customs, look for your driver holding a Paradise Travel sign at the international arrivals exit.</p>
+              </div>
+            </article>
+
+            <article class="seg seg--hotel" aria-label="Hotel segment" data-reveal>
+
+              <p class="anno" style="--at: 120px"><b>Added in the segment:</b> hotel image</p>
+              <p class="seg__kind"><svg width="14" height="14" aria-hidden="true"><use href="#i-hotel" /></svg> Hotel · 13–17 Mar · 4 nights</p>
+              <h3 class="seg__title">The Mulia, Nusa Dua</h3>
+              <figure class="seg__img">
+                <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="Overwater villas on a calm turquoise bay in Bali" loading="lazy" decoding="async" />
+              </figure>
+              <dl class="seg__facts">
+                <div><dt>Room</dt><dd>Ocean Court Suite</dd></div>
+                <div><dt>Check-in</dt><dd>Sat 13 Mar</dd></div>
+                <div><dt>Check-out</dt><dd>Wed 17 Mar</dd></div>
+              </dl>
+            </article>
+
+            <article class="seg seg--tour" aria-label="Tour segment" data-reveal>
+
+              <p class="anno" style="--at: 110px"><b>Destination video</b> and local tips, beside the booking</p>
+              <p class="seg__kind"><svg width="14" height="14" aria-hidden="true"><use href="#i-tour" /></svg> Tour · Mon 15 Mar · Full day</p>
+              <h3 class="seg__title">Ubud rice terraces &amp; temples</h3>
+              <div class="seg__media">
+                <div class="seg__video" role="img" aria-label="Destination video placeholder: Ubud, Bali">
+                  <svg class="seg__terraces" viewBox="0 0 320 180" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0 70 C60 50 120 80 180 62 S280 40 320 56 V180 H0Z" />
+                    <path d="M0 98 C70 80 130 108 200 90 S290 72 320 84 V180 H0Z" />
+                    <path d="M0 126 C80 110 150 136 210 120 S290 104 320 114 V180 H0Z" />
+                    <path d="M0 152 C70 140 160 162 230 148 S300 136 320 142 V180 H0Z" />
+                  </svg>
+                  <span class="seg__play"><svg width="22" height="22"><use href="#i-play" /></svg></span>
+                  <span class="seg__vlabel">Ubud, Bali <i>1:12</i></span>
+                </div>
+                <div class="seg__tips">
+                  <p class="seg__note-label"><svg width="14" height="14" aria-hidden="true"><use href="#i-tip" /></svg> Local tips</p>
+                  <ul>
+                    <li>Bring a sarong for temple visits</li>
+                    <li>Small notes for entry donations</li>
+                    <li>Go early, before the heat and crowds</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ 4 · Preview and share ═════════ -->
+      <section class="preview" id="preview" aria-labelledby="preview-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <span class="folio" aria-hidden="true">03</span>
+            <h2 id="preview-title">Preview it as your traveller will. <em>Then share it.</em></h2>
+            <p>Check the layout, review the pricing, and send an enhanced travel document.</p>
+          </header>
+
+          <div class="doc doc--end">
+            <div class="doc__bar doc__full" data-reveal="fade">
+              <span class="doc__mode"><svg width="15" height="15" aria-hidden="true"><use href="#i-eye" /></svg> Previewing as Olivia Harper</span>
+              <span class="doc__share"><svg width="14" height="14" aria-hidden="true"><use href="#i-share" /></svg> Share</span>
+            </div>
+
+            <article class="seg seg--price" aria-label="Trip cost" data-reveal>
+
+              <p class="anno" style="--at: 70px"><b>Pricing extracted</b> straight into a price table</p>
+              <p class="seg__kind">Trip cost</p>
+              <table class="price">
+                <thead><tr><th scope="col">Item</th><th scope="col">AUD</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Flights</th><td>2,480</td></tr>
+                  <tr><th scope="row">Hotel · 4 nights</th><td>3,160</td></tr>
+                  <tr><th scope="row">Transfers</th><td>180</td></tr>
+                  <tr><th scope="row">Tours</th><td>420</td></tr>
+                </tbody>
+                <tfoot><tr><th scope="row">Total</th><td><span data-count-to="6240">6,240</span></td></tr></tfoot>
+              </table>
+            </article>
+
+            <article class="seg seg--docs" aria-label="Attached documents" data-reveal>
+
+              <p class="anno anno--two" style="--at: 66px"><b>Attach e-tickets and vouchers</b> to a segment or the whole trip <span class="anno__sub"><b>Corporate?</b> Travel policy attached automatically</span></p>
+              <p class="seg__kind">Documents</p>
+              <ul class="docs">
+                <li><span class="docs__ico"><svg width="18" height="18" aria-hidden="true"><use href="#i-ticket" /></svg></span><span><b>E-ticket · QF1</b><small>PDF · attached to flight</small></span></li>
+                <li><span class="docs__ico"><svg width="18" height="18" aria-hidden="true"><use href="#i-doc" /></svg></span><span><b>Tour voucher · Ubud</b><small>PDF · attached to tour</small></span></li>
+                <li class="docs__auto"><span class="docs__ico"><svg width="18" height="18" aria-hidden="true"><use href="#i-bag" /></svg></span><span><b>Company travel policy</b><small>PDF · auto-attached</small></span></li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="midcta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-document">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="after-document-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ 5 · TravelDocs: the document folds into the phone ═════════ -->
+      <div class="dark">
+        <section class="app" id="traveldocs" aria-labelledby="app-title">
+          <div class="qc-container">
+            <header class="sec-head sec-head--center" data-reveal>
+              <span class="folio" aria-hidden="true">04</span>
+              <h2 id="app-title">The same trip, <em>in their pocket</em></h2>
+              <p>Make the itinerary available in the free TravelDocs app, so travellers see every detail on their phone.</p>
+            </header>
+
+            <div class="fold" data-fold>
+              <ul class="fold__notes fold__notes--left">
+                <li class="fnote fnote--signin">
+                  <div class="signin" aria-hidden="true">
+                    <img src="/assets/travel/traveldocs-logo.png" width="640" height="247" alt="" loading="lazy" decoding="async" />
+                    <span class="signin__field"><small>Surname</small><b data-type>Harper</b></span>
+                    <span class="signin__field"><small>Booking reference</small><b data-type>QX7K2M</b></span>
+                    <span class="signin__btn">Open trip</span>
+                  </div>
+                  <p><b>Surname + booking reference.</b> That's the whole sign-in.</p>
+                </li>
+              </ul>
+
+              <div class="fold__stage" aria-hidden="true">
+                <div class="phone">
+                  <div class="phone__screen">
+                    <div class="phone__status"><span>9:41</span><span class="phone__island"></span><span class="phone__sig"></span></div>
+                    <div class="trip">
+                      <div class="trip__banner"></div>
+                      <div class="trip__body">
+                        <p class="trip__when">12–19 Mar · Paradise Travel</p>
+                        <p class="trip__name">Bali escape</p>
+                        <ul class="trip__list">
+                          <li><span class="trip__thumb trip__thumb--sea"></span><span><b>QF1 Sydney → Singapore</b><small>Fri 12 Mar · 11:40 · Seat 4A</small></span></li>
+                          <li><span class="trip__thumb trip__thumb--villa"></span><span><b>The Mulia, Nusa Dua</b><small>Check-in Sat 13 Mar</small></span></li>
+                          <li><span class="trip__thumb trip__thumb--green"></span><span><b>Ubud rice terraces</b><small>Mon 15 Mar · Full day</small></span></li>
+                        </ul>
+                        <p class="trip__docs-h">Documents</p>
+                        <div class="trip__docs">
+                          <span><svg width="14" height="14"><use href="#i-ticket" /></svg> E-ticket</span>
+                          <span><svg width="14" height="14"><use href="#i-doc" /></svg> Voucher</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fold__paper">
+                  <div class="fold__half fold__half--top"></div>
+                  <div class="fold__half fold__half--bottom"></div>
+                </div>
+              </div>
+
+              <ul class="fold__notes fold__notes--right">
+                <li class="fnote" style="--y: 90px"><p><b>Destination images</b> appear for each segment automatically</p></li>
+                <li class="fnote" style="--y: 64px"><p><b>Your branding:</b> a company banner, or your logo over the images</p></li>
+                <li class="fnote" style="--y: 70px"><p><b>Flights, accommodation</b> and the documents you attached in QuoteCloud</p></li>
+              </ul>
+            </div>
+
+            <div class="stores" data-reveal>
+              <a href="https://apps.apple.com/au/app/traveldocs/id6477499212" data-qc-cta="app-store"><img src="/assets/travel/app-store.png" width="400" height="118" alt="Download TravelDocs on the App Store" loading="lazy" decoding="async" /></a>
+              <a href="https://play.google.com/store/apps/details?id=com.corporateinteractive.traveldocs" data-qc-cta="google-play"><img src="/assets/travel/google-play.png" width="400" height="117" alt="Get TravelDocs on Google Play" loading="lazy" decoding="async" /></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═════════ 6 · On the road ═════════ -->
+        <section class="road" id="on-the-road" aria-labelledby="road-title">
+          <div class="qc-container">
+            <header class="sec-head" data-reveal>
+              <span class="folio" aria-hidden="true">05</span>
+              <h2 id="road-title">Useful on the road, <em>not just before it</em></h2>
+              <p>Everything travellers reach for once they've left home, even without a connection.</p>
+            </header>
+
+            <ul class="bento" data-reveal-stagger="70">
+              <li class="tile tile--status" data-reveal>
+                <div class="tile__shot tile__shot--lock"><img src="/assets/travel/traveldocs-lockscreen-1.jpg" width="369" height="800" alt="TravelDocs live flight status on a phone lock screen: gate departure in 3 minutes, new takeoff slot" loading="lazy" decoding="async" /></div>
+                <h3>Flight status and delays</h3>
+              </li>
+              <li class="tile tile--checkin" data-reveal>
+                <div class="tile__shot tile__shot--timeline"><img src="/assets/travel/traveldocs-timeline.jpg" width="414" height="900" alt="TravelDocs trip timeline with Check-in and Flight Status buttons on a flight" loading="lazy" decoding="async" /></div>
+                <h3>Flight check-in</h3>
+              </li>
+              <li class="tile tile--fx" data-reveal>
+                <div class="fx" aria-hidden="true">
+                  <span class="fx__row"><small>AUD</small><b>40.00</b></span>
+                  <span class="fx__swap"><svg width="16" height="16"><use href="#i-swap" /></svg></span>
+                  <span class="fx__row fx__row--to"><small>IDR</small><b data-count-to="421600" data-count-duration="1400">421,600</b></span>
+                  <span class="fx__live"><i></i> Live rate</span>
+                </div>
+                <h3>Real-time currency converter</h3>
+              </li>
+              <li class="tile tile--offline" data-reveal>
+                <div class="offline" aria-hidden="true">
+                  <svg width="22" height="22"><use href="#i-offline" /></svg>
+                  <span>No connection.<br />Trip still here.</span>
+                </div>
+                <h3>Available offline</h3>
+              </li>
+              <li class="tile tile--share" data-reveal>
+                <div class="share" aria-hidden="true">
+                  <span class="share__who"><i>JH</i><i>SK</i><i>MP</i></span>
+                  <span class="share__btn"><svg width="14" height="14"><use href="#i-share" /></svg> Share trip</span>
+                </div>
+                <h3>Shared with family, friends or colleagues</h3>
+              </li>
+              <li class="tile tile--own" data-reveal>
+                <div class="own" aria-hidden="true">
+                  <span class="own__row"><i>19:30</i> Dinner at Jimbaran Bay</span>
+                  <span class="own__add"><svg width="14" height="14"><use href="#i-plus" /></svg> Add your own</span>
+                </div>
+                <h3>Their own arrangements</h3>
+              </li>
+              <li class="tile tile--wallet" data-reveal>
+                <div class="wallet" aria-hidden="true">
+                  <span class="wallet__card"><svg width="14" height="14"><use href="#i-ticket" /></svg> E-ticket · QF1</span>
+                  <span class="wallet__card"><svg width="14" height="14"><use href="#i-doc" /></svg> Tour voucher · Ubud</span>
+                  <span class="wallet__card"><svg width="14" height="14"><use href="#i-doc" /></svg> Hotel confirmation</span>
+                </div>
+                <h3>Documents wallet</h3>
+              </li>
+              <li class="tile tile--extra tile--policy" data-reveal>
+                <p class="tile__flag">Corporate travel</p>
+                <h3>Travel policies attach themselves</h3>
+                <p>Configure QuoteCloud to add your client's travel policy and guidelines to every employee itinerary.</p>
+                <span class="policy" aria-hidden="true"><svg width="16" height="16"><use href="#i-doc" /></svg> Travel-policy.pdf <i><svg width="11" height="11"><use href="#i-check" /></svg> Auto-attached</i></span>
+              </li>
+              <li class="tile tile--extra tile--alt" data-reveal>
+                <p class="tile__flag">Connected to Sabre GDS</p>
+                <h3>Meeting running late?</h3>
+                <p>Travellers can look up alternative flight times and seat availability, or head home earlier.</p>
+                <div class="alt" aria-hidden="true">
+                  <span><b>QF82</b> SIN → SYD <i>20:30</i><em>9 seats</em></span>
+                  <span><b>QF2</b> SIN → SYD <i>23:05</i><em>4 seats</em></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- ═════════ 7 · FAQ ═════════ -->
+      <div class="faq-wrap">
+        <!-- @include faq-itinerary -->
+      </div>
+
+      <!-- ═════════ 8 · Closing ═════════ -->
+      <section class="closing" id="start" aria-labelledby="closing-title">
+        <div class="closing__inner qc-container" data-reveal>
+          <h2 id="closing-title">Bring in your bookings, add your expertise, and give your customers <em>a richer travel experience</em></h2>
+          <div class="closing__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="closing__fine">No credit card required · QuoteCloud + TravelDocs</p>
+        </div>
+      </section>
+
+      <div class="sticky" data-sticky>
+        <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="sticky">Start free 14-day trial</a>
+        <a class="sticky__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="sticky-demo">Book a demo</a>
+      </div>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

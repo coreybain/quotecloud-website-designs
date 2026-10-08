@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-travel -->
+  </head>
+  <body class="bp">
+    <!-- @include header -->
+    <main id="main">
+      <svg class="bp-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-flight" viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5Z" /></symbol>
+        <symbol id="i-hotel" viewBox="0 0 24 24"><path d="M7 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9a4 4 0 0 0-4-4Z" /></symbol>
+        <symbol id="i-car" viewBox="0 0 24 24"><path d="M18.92 6.01A1.5 1.5 0 0 0 17.5 5h-11a1.5 1.5 0 0 0-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99ZM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM5 11l1.5-4.5h11L19 11H5Z" /></symbol>
+        <symbol id="i-tour" viewBox="0 0 24 24"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4ZM9 2 7.17 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3.17L15 2H9Zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z" /></symbol>
+        <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M17 5H3a2 2 0 0 0-2 2v9h2a3 3 0 0 0 6 0h5.5a3 3 0 0 0 6 0H23v-5l-6-6ZM3 11V7h4v4H3Zm3 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM13 11H9V7h4v4Zm4.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3ZM15 11V7h1l4 4h-5Z" /></symbol>
+        <symbol id="i-guide" viewBox="0 0 24 24"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1Zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5Z" /></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4Zm-2 16-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8Z" /></symbol>
+        <symbol id="i-passport" viewBox="0 0 24 24"><path d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Zm-6 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm5 12H7v-1c0-2 4-3.1 5-3.1s5 1.1 5 3.1v1Z" /></symbol>
+        <symbol id="i-luggage" viewBox="0 0 24 24"><path d="M17 6h-2V3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3H7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2 1 1 0 0 0 2 0h6a1 1 0 0 0 2 0 2 2 0 0 0 2-2V8a2 2 0 0 0-2-2ZM9.5 18H8V9h1.5v9Zm3.25 0h-1.5V9h1.5v9Zm.75-12h-3V3.5h3V6ZM16 18h-1.5V9H16v9Z" /></symbol>
+        <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm2 16H8v-2h8v2Zm0-4H8v-2h8v2Zm-3-5V3.5L18.5 9H13Z" /></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z" /></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17Z" /></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" /></symbol>
+      </svg>
+
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <svg class="hero__routes" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path d="M-40 620 C 300 360, 760 300, 1480 120" />
+          <path d="M-40 700 C 420 520, 980 520, 1480 380" />
+          <path d="M180 820 C 420 420, 1000 140, 1480 40" />
+          <circle class="hero__routes-dot" r="3"><animateMotion dur="14s" repeatCount="indefinite" path="M-40 620 C 300 360, 760 300, 1480 120" /></circle>
+        </svg>
+
+        <div class="hero__grid qc-container">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">Travel quotes &amp; itineraries, <span class="foil">first class.</span></h1>
+            <p class="hero__lede">Open GDS and mid-office bookings as rich, branded proposals that travellers sign, pay and carry with them.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">No credit card required</p>
+            <div class="hero__sources">
+              <span class="mono">Opens bookings from</span>
+              <img src="/assets/travel/sabre.jpg" width="200" height="200" alt="Sabre GDS" />
+              <img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="PowerSuite mid-office" />
+              <img src="/assets/travel/tramada.png" width="400" height="125" alt="Tramada" class="is-wide" />
+            </div>
+          </div>
+
+          <div class="hero__stage" role="img" aria-label="A QuoteCloud travel quote styled as a boarding pass: Sydney to Bali, 4 to 12 April, two adults, total $4,550, unfolding into a day-by-day itinerary with flights, hotel and a sunset tour.">
+            <div class="printer" aria-hidden="true"><span class="printer__led"></span></div>
+            <div class="pass-window">
+              <div class="pass pass--hero">
+                <div class="pass__main">
+                  <div class="pass__top">
+                    <span class="pass__brand"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" /> QuoteCloud</span>
+                    <span class="mono pass__ref">Travel proposal · Nº 2814</span>
+                  </div>
+                  <div class="route">
+                    <div class="route__end">
+                      <span class="route__code">SYD</span>
+                      <span class="route__city">Sydney</span>
+                    </div>
+                    <svg class="route__arc" viewBox="0 0 200 64" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="foil-stroke" x1="0" x2="1" y1="0" y2="0">
+                          <stop offset="0" stop-color="#e8352f" />
+                          <stop offset=".45" stop-color="#ff8a80" />
+                          <stop offset=".6" stop-color="#ff4d47" />
+                          <stop offset="1" stop-color="#c92a24" />
+                        </linearGradient>
+                      </defs>
+                      <path class="route__base" d="M8 54 Q100 -14 192 54" />
+                      <path class="route__ink" d="M8 54 Q100 -14 192 54" pathLength="1" />
+                      <circle cx="8" cy="54" r="3.2" class="route__node" />
+                      <circle cx="192" cy="54" r="3.2" class="route__node" />
+                      <g class="route__plane">
+                        <path d="M-7 0 6 -1.2 9 0 6 1.2Z M-1 0 -5 -6 -2.6 -6 3 0 -2.6 6 -5 6Z M-6 0 -8.5 -3 -7.2 -3 -5 0 -7.2 3 -8.5 3Z" />
+                        <animateMotion class="route__motion" dur="2.2s" begin="indefinite" fill="freeze" rotate="auto" keyPoints="0;0.56" keyTimes="0;1" calcMode="spline" keySplines="0.3 0 0.2 1" path="M8 54 Q100 -14 192 54" />
+                      </g>
+                    </svg>
+                    <div class="route__end route__end--to">
+                      <span class="route__code">DPS</span>
+                      <span class="route__city">Bali, Denpasar</span>
+                    </div>
+                  </div>
+                  <dl class="fields">
+                    <div><dt>Prepared for</dt><dd>J. &amp; M. Walker</dd></div>
+                    <div><dt>Depart</dt><dd>Fri 04 Apr</dd></div>
+                    <div><dt>Return</dt><dd>Sat 12 Apr</dd></div>
+                    <div><dt>Travellers</dt><dd>2 adults</dd></div>
+                  </dl>
+                  <div class="pass__total">
+                    <span class="mono">Trip total</span>
+                    <strong class="foil">$4,550</strong>
+                    <span class="seal" aria-hidden="true"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" /></span>
+                  </div>
+                </div>
+                <div class="pass__stub">
+                  <div class="stub__route mono"><b>SYD</b> → <b>DPS</b></div>
+                  <dl class="stub__fields">
+                    <div><dt>Date</dt><dd>04 Apr</dd></div>
+                    <div><dt>Class</dt><dd>Quote</dd></div>
+                  </dl>
+                  <span class="qr" data-qr="QC-2814-SYD-DPS"></span>
+                  <span class="status mono"><i></i>Awaiting signature</span>
+                  <span class="barcode" data-barcode="2814SYDDPS"></span>
+                </div>
+              </div>
+            </div>
+            <div class="unfold">
+              <div class="fold fold--1">
+                <div class="fold__head mono"><span>Itinerary</span><span>9 days · 8 nights</span></div>
+                <ol class="seg-list">
+                  <li class="seg"><span class="seg__icon"><svg><use href="#i-flight" /></svg></span><span class="seg__date mono">Fri 04 Apr</span><span class="seg__title">Flight QF43 · Sydney → Denpasar</span><span class="seg__meta mono">10:20 – 15:15</span></li>
+                  <li class="seg"><span class="seg__icon"><svg><use href="#i-hotel" /></svg></span><span class="seg__date mono">Fri 04 Apr</span><span class="seg__title">Seminyak beach resort · 6 nights</span><span class="seg__meta mono">Check-in 15:00</span></li>
+                </ol>
+              </div>
+              <div class="fold fold--2">
+                <ol class="seg-list">
+                  <li class="seg"><span class="seg__icon"><svg><use href="#i-tour" /></svg></span><span class="seg__date mono">Mon 07 Apr</span><span class="seg__title">Uluwatu temple at sunset</span><span class="seg__meta mono">Half day</span></li>
+                  <li class="seg"><span class="seg__icon"><svg><use href="#i-flight" /></svg></span><span class="seg__date mono">Sat 12 Apr</span><span class="seg__title">Flight QF44 · Denpasar → Sydney</span><span class="seg__meta mono">16:45 – 00:55</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Build: GDS → itinerary, enrich ───────── -->
+      <section class="tickets" id="build" aria-labelledby="build-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="build-title">From booking to <span class="accent">boarding</span>, beautifully.</h2>
+            <p>Every ticket below is a real part of QuoteCloud. Watch each one open.</p>
+          </header>
+
+          <!-- 01 GDS import -->
+          <article class="tk" data-ticket="gds" aria-labelledby="tk-gds">
+            <div class="tk__stub">
+              <h3 id="tk-gds">Your GDS booking, instantly an itinerary.</h3>
+              <p>Bookings from Sabre, PowerSuite and Tramada open straight in QuoteCloud, structured and ready to enrich. No rekeying.</p>
+              <a class="tk__link" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-sabre-gds">How the Sabre import works <span aria-hidden="true">→</span></a>
+              <div class="tk__foot">
+                <dl class="tk__route"><div><dt>From</dt><dd>PNR</dd></div><span aria-hidden="true">→</span><div><dt>To</dt><dd>Itinerary</dd></div></dl>
+                <span class="barcode barcode--sm" data-barcode="gds01"></span>
+              </div>
+            </div>
+            <div class="tk__body">
+              <div class="tk__visual gds">
+                <div class="gds__src">
+                  <div class="gds__tabs" role="group" aria-label="Import source">
+                    <button type="button" class="gds__tab" aria-pressed="true" data-src="Sabre GDS"><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" />Sabre</button>
+                    <button type="button" class="gds__tab" aria-pressed="false" data-src="PowerSuite"><img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" />PowerSuite</button>
+                    <button type="button" class="gds__tab" aria-pressed="false" data-src="Tramada"><span class="gds__tab-t" aria-hidden="true">t</span>Tramada</button>
+                  </div>
+                  <div class="term" aria-hidden="true">
+                    <div class="term__bar"><i></i><i></i><i></i><span class="term__src">Sabre GDS</span> · PNR WALKER/J</div>
+                    <ol class="term__lines">
+                      <li>1 QF 43Y 04APR SYDDPS HK2 1020 1515</li>
+                      <li>2 HHL SEMINYAK BCH 04APR-10APR 6N</li>
+                      <li>3 TRF DPS-SEMINYAK 04APR PVT</li>
+                      <li>4 TUR ULUWATU SUNSET 07APR HD</li>
+                      <li>5 QF 44Y 12APR DPSSYD HK2 1645 0055</li>
+                    </ol>
+                    <span class="term__cursor"></span>
+                  </div>
+                </div>
+                <div class="gds__bridge" aria-hidden="true"><span class="gds__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span></div>
+                <ol class="gds__out" aria-label="Itinerary imported into QuoteCloud">
+                  <li class="seg seg--card"><span class="seg__icon"><svg aria-hidden="true"><use href="#i-flight" /></svg></span><span class="seg__title">Flight · Sydney → Denpasar</span><span class="seg__meta mono">QF43 · Fri 04 Apr · 10:20</span></li>
+                  <li class="seg seg--card"><span class="seg__icon"><svg aria-hidden="true"><use href="#i-hotel" /></svg></span><span class="seg__title">Hotel · Seminyak, 6 nights</span><span class="seg__meta mono">Check-in Fri 04 Apr</span></li>
+                  <li class="seg seg--card"><span class="seg__icon"><svg aria-hidden="true"><use href="#i-transfer" /></svg></span><span class="seg__title">Private transfer to Seminyak</span><span class="seg__meta mono">On arrival</span></li>
+                  <li class="seg seg--card"><span class="seg__icon"><svg aria-hidden="true"><use href="#i-tour" /></svg></span><span class="seg__title">Tour · Uluwatu at sunset</span><span class="seg__meta mono">Mon 07 Apr · Half day</span></li>
+                  <li class="seg seg--card"><span class="seg__icon"><svg aria-hidden="true"><use href="#i-flight" /></svg></span><span class="seg__title">Flight · Denpasar → Sydney</span><span class="seg__meta mono">QF44 · Sat 12 Apr · 16:45</span></li>
+                </ol>
+              </div>
+              <div class="tk__sleeve" aria-hidden="true"><span class="sleeve__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span><span class="sleeve__name">GDS import</span><span class="sleeve__seq">01</span></div>
+            </div>
+          </article>
+
+          <!-- 02 Rich media -->
+          <article class="tk tk--flip" data-ticket="rich" aria-labelledby="tk-rich">
+            <div class="tk__stub">
+              <h3 id="tk-rich">Rich media that sells the destination.</h3>
+              <p>Add photos, galleries, maps, videos, PDF brochures and destination guides, so travellers can picture the trip before they book.</p>
+              <a class="tk__link" href="https://www.quote.cloud/enhanced-travel-itinerary-software">Enhanced itineraries <span aria-hidden="true">→</span></a>
+              <div class="tk__foot">
+                <dl class="tk__route"><div><dt>From</dt><dd>Plain text</dd></div><span aria-hidden="true">→</span><div><dt>To</dt><dd>A story</dd></div></dl>
+                <span class="barcode barcode--sm" data-barcode="rich02"></span>
+              </div>
+            </div>
+            <div class="tk__body">
+              <div class="tk__visual rich" aria-hidden="true">
+                <div class="rich__doc">
+                  <div class="rich__cover">
+                    <span class="rich__cover-img"></span>
+                    <div class="rich__cover-text"><span class="mono">Your itinerary</span><strong>Bali Discovery</strong></div>
+                  </div>
+                  <div class="rich__guide">
+                    <span class="rich__guide-h"><svg><use href="#i-guide" /></svg>Destination guide · Bali</span>
+                    <dl>
+                      <div><dt>Currency</dt><dd>IDR</dd></div>
+                      <div><dt>Time zone</dt><dd>GMT+8</dd></div>
+                      <div><dt>Best months</dt><dd>Apr – Oct</dd></div>
+                    </dl>
+                  </div>
+                  <div class="rich__gallery"><span></span><span></span><span></span></div>
+                </div>
+                <div class="rich__side">
+                  <div class="rich__video">
+                    <span class="rich__video-img"></span>
+                    <span class="rich__play"><svg><use href="#i-play" /></svg></span>
+                    <span class="rich__video-cap mono">Destination overview · 02:45</span>
+                    <span class="rich__video-bar"><i></i></span>
+                  </div>
+                  <div class="rich__map">
+                    <svg viewBox="0 0 240 150">
+                      <path class="map__land" d="M30 70c18-22 52-30 84-26s52-14 78-6 30 30 18 48-40 18-60 30-46 18-70 10-44-12-52-28 2-28 2-28Z" />
+                      <path class="map__route" pathLength="1" d="M74 92 C 96 70, 120 66, 142 60 S 176 70, 186 96" />
+                      <g class="map__pin" transform="translate(74 92)"><circle r="4.5" /></g>
+                      <g class="map__pin" transform="translate(142 60)"><circle r="4.5" /></g>
+                      <g class="map__pin map__pin--end" transform="translate(186 96)"><circle r="4.5" /></g>
+                      <text x="58" y="112">SEMINYAK</text><text x="128" y="48">UBUD</text><text x="168" y="116">ULUWATU</text>
+                    </svg>
+                  </div>
+                  <div class="rich__pdf"><span class="rich__pdf-ic">PDF</span><span><strong>Bali-brochure.pdf</strong><span class="mono">2.4 MB</span></span></div>
+                </div>
+              </div>
+              <div class="tk__sleeve" aria-hidden="true"><span class="sleeve__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span><span class="sleeve__name">Rich media</span><span class="sleeve__seq">02</span></div>
+            </div>
+          </article>
+
+          <!-- 03 Libraries -->
+          <article class="tk" data-ticket="lib" aria-labelledby="tk-lib">
+            <div class="tk__stub">
+              <h3 id="tk-lib">Libraries your whole team can drop in.</h3>
+              <p>Destination guides, visa requirements, travel safety, packing tips, forms and terms. Approved once, reused everywhere.</p>
+              <a class="tk__link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Explore content blocks <span aria-hidden="true">→</span></a>
+              <div class="tk__foot">
+                <dl class="tk__route"><div><dt>From</dt><dd>Library</dd></div><span aria-hidden="true">→</span><div><dt>To</dt><dd>Every quote</dd></div></dl>
+                <span class="barcode barcode--sm" data-barcode="lib03"></span>
+              </div>
+            </div>
+            <div class="tk__body">
+              <div class="tk__visual lib" aria-hidden="true">
+                <div class="lib__panel">
+                  <div class="lib__head">Content library</div>
+                  <div class="lib__scope"><span>Personal</span><span class="is-on">Team</span><span>Company</span></div>
+                  <ul class="lib__list">
+                    <li data-lib="0"><svg><use href="#i-guide" /></svg>Destination guide · Bali</li>
+                    <li data-lib="1"><svg><use href="#i-passport" /></svg>Visa requirements</li>
+                    <li data-lib="2"><svg><use href="#i-shield" /></svg>Travel safety</li>
+                    <li data-lib="3"><svg><use href="#i-luggage" /></svg>Packing tips</li>
+                    <li data-lib="4"><svg><use href="#i-doc" /></svg>Terms &amp; conditions</li>
+                  </ul>
+                </div>
+                <div class="lib__doc">
+                  <div class="lib__doc-h"><strong>Bali Discovery</strong><span class="mono">Page 3 of 8</span></div>
+                  <span class="sk sk--70"></span><span class="sk sk--90"></span><span class="sk sk--50"></span>
+                  <div class="lib__slots">
+                    <div class="lib__slot" data-slot="0"><svg><use href="#i-guide" /></svg><span><strong>Destination guide · Bali</strong><span class="sk sk--80"></span></span></div>
+                    <div class="lib__slot" data-slot="1"><svg><use href="#i-passport" /></svg><span><strong>Visa requirements</strong><span class="sk sk--60"></span></span></div>
+                    <div class="lib__slot" data-slot="3"><svg><use href="#i-luggage" /></svg><span><strong>Packing tips</strong><span class="sk sk--70"></span></span></div>
+                  </div>
+                </div>
+                <span class="lib__ghost"><svg><use href="#i-guide" /></svg><span>Destination guide · Bali</span></span>
+                <svg class="lib__cursor" viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.5L10 19 5 3Z" /></svg>
+              </div>
+              <div class="tk__sleeve" aria-hidden="true"><span class="sleeve__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span><span class="sleeve__name">Libraries</span><span class="sleeve__seq">03</span></div>
+            </div>
+          </article>
+
+          <!-- 04 Branding & templates -->
+          <article class="tk tk--flip" data-ticket="brand" aria-labelledby="tk-brand">
+            <div class="tk__stub">
+              <h3 id="tk-brand">Your brand on every page.</h3>
+              <p>Start from a travel template, then apply your logo, colours and layout for corporate, leisure or group travel.</p>
+              <a class="tk__link" href="https://www.quote.cloud/templates/travel">Browse travel templates <span aria-hidden="true">→</span></a>
+              <div class="tk__foot">
+                <dl class="tk__route"><div><dt>From</dt><dd>Template</dd></div><span aria-hidden="true">→</span><div><dt>To</dt><dd>Your brand</dd></div></dl>
+                <span class="barcode barcode--sm" data-barcode="brand04"></span>
+              </div>
+            </div>
+            <div class="tk__body">
+              <div class="tk__visual brand">
+                <div class="brand__fan">
+                  <img class="brand__cover" data-i="0" src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="Paradise Travel template cover: Your Dream Holiday Awaits, 7 nights in Bali" loading="lazy" decoding="async" />
+                  <img class="brand__cover" data-i="1" src="/assets/travel/template-african-journey.jpg" width="566" height="800" alt="African journey template cover with a lodge at dusk" loading="lazy" decoding="async" />
+                  <img class="brand__cover" data-i="2" src="/assets/travel/template-travel-agency.jpg" width="566" height="800" alt="Travel agency proposal template cover in blue and orange" loading="lazy" decoding="async" />
+                  <img class="brand__cover" data-i="3" src="/assets/travel/template-collage.jpg" width="566" height="800" alt="Photo collage template cover with a red agent panel" loading="lazy" decoding="async" />
+                </div>
+                <div class="brand__ctrl">
+                  <span class="mono">Agency colour</span>
+                  <div class="brand__swatches" role="group" aria-label="Choose a template and agency colour">
+                    <button type="button" style="--sw: #0d2d6e" aria-pressed="true" data-i="0" aria-label="Paradise, navy"></button>
+                    <button type="button" style="--sw: #b8925a" aria-pressed="false" data-i="1" aria-label="African journey, gold"></button>
+                    <button type="button" style="--sw: #f2a516" aria-pressed="false" data-i="2" aria-label="Travel agency, orange"></button>
+                    <button type="button" style="--sw: #e30613" aria-pressed="false" data-i="3" aria-label="Collage, red"></button>
+                  </div>
+                  <div class="brand__sample" aria-hidden="true">
+                    <span class="brand__logo"></span>
+                    <span class="brand__sample-h">Your Bali proposal</span>
+                    <span class="sk sk--90"></span><span class="sk sk--60"></span>
+                    <span class="brand__btn">Accept quote</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tk__sleeve" aria-hidden="true"><span class="sleeve__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span><span class="sleeve__name">Branding</span><span class="sleeve__seq">04</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ───────── Sell: trip cost, e-sign ───────── -->
+      <section class="tickets tickets--sell" id="sell" aria-labelledby="sell-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="sell-title">Price it. Sign it. <span class="accent">Confirmed.</span></h2>
+            <p>Travellers choose their extras, accept and pay deposit inside the proposal.</p>
+          </header>
+
+          <!-- 05 Trip cost -->
+          <article class="tk" data-ticket="cost" aria-labelledby="tk-cost">
+            <div class="tk__stub">
+              <h3 id="tk-cost">Trip cost with options they choose.</h3>
+              <p>Break down flights, nights, transfers and tours, then offer optional extras. Totals update as travellers tick.</p>
+              <a class="tk__link" href="https://www.quote.cloud/travel-quoting-software">Travel quoting software <span aria-hidden="true">→</span></a>
+              <div class="tk__foot">
+                <dl class="tk__route"><div><dt>From</dt><dd>Costs</dd></div><span aria-hidden="true">→</span><div><dt>To</dt><dd>Choices</dd></div></dl>
+                <span class="barcode barcode--sm" data-barcode="cost05"></span>
+              </div>
+            </div>
+            <div class="tk__body">
+              <div class="tk__visual cost">
+                <div class="cost__card">
+                  <div class="cost__head"><strong>Trip cost breakdown</strong><span class="mono">2 adults</span></div>
+                  <table class="cost__table">
+                    <caption class="qc-sr-only">Example trip cost for Bali Discovery</caption>
+                    <tbody>
+                      <tr><th scope="row"><svg aria-hidden="true"><use href="#i-flight" /></svg>Flights, return</th><td>$1,250</td></tr>
+                      <tr><th scope="row"><svg aria-hidden="true"><use href="#i-hotel" /></svg>Hotel, 6 nights</th><td>$2,400</td></tr>
+                      <tr><th scope="row"><svg aria-hidden="true"><use href="#i-transfer" /></svg>Transfers</th><td>$350</td></tr>
+                      <tr><th scope="row"><svg aria-hidden="true"><use href="#i-tour" /></svg>Tours &amp; activities</th><td>$550</td></tr>
+                    </tbody>
+                  </table>
+                  <fieldset class="cost__opts">
+                    <legend class="mono">Optional extras</legend>
+                    <label class="opt"><input type="checkbox" value="320" data-opt /><span class="opt__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span><span class="opt__name">Nusa Penida day trip</span><span class="opt__price">+$320</span></label>
+                    <label class="opt"><input type="checkbox" value="240" data-opt /><span class="opt__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span><span class="opt__name">Spa day for two</span><span class="opt__price">+$240</span></label>
+                  </fieldset>
+                  <div class="cost__total"><span class="mono">Total</span><output class="foil" data-total="4550" aria-live="polite">$4,550</output></div>
+                </div>
+                <div class="cost__ticket" aria-hidden="true">
+                  <span class="mono">Selected</span>
+                  <strong data-sel>0 extras</strong>
+                  <span class="barcode barcode--sm" data-barcode="sel"></span>
+                </div>
+              </div>
+              <div class="tk__sleeve" aria-hidden="true"><span class="sleeve__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span><span class="sleeve__name">Trip cost</span><span class="sleeve__seq">05</span></div>
+            </div>
+          </article>
+
+          <!-- 06 E-sign -->
+          <article class="tk tk--flip" data-ticket="sign" aria-labelledby="tk-sign">
+            <div class="tk__stub">
+              <h3 id="tk-sign">One signature stamps it confirmed.</h3>
+              <p>Legally binding eSignatures with a full audit trail, and deposits paid online by Stripe or PayPal.</p>
+              <a class="tk__link" href="https://www.quote.cloud/electronic-signature-software-solution">Electronic signatures <span aria-hidden="true">→</span></a>
+              <div class="tk__foot">
+                <dl class="tk__route"><div><dt>From</dt><dd>Proposal</dd></div><span aria-hidden="true">→</span><div><dt>To</dt><dd>Booking</dd></div></dl>
+                <span class="barcode barcode--sm" data-barcode="sign06"></span>
+              </div>
+            </div>
+            <div class="tk__body">
+              <div class="tk__visual sign">
+                <div class="sign__pass" aria-hidden="true">
+                  <div class="sign__main">
+                    <div class="sign__row"><span class="mono">Bali Discovery · Nº 2814</span><span class="mono">$4,550</span></div>
+                    <div class="sign__route"><b>SYD</b><span class="sign__line"></span><b>DPS</b></div>
+                    <div class="sign__sig">
+                      <svg viewBox="0 0 260 70" class="sign__ink"><path pathLength="1" d="M10 48c10-20 18-34 24-32s-8 36-2 38 14-30 22-30-4 26 4 26 12-18 18-18 2 14 8 14 10-10 16-10 2 10 10 8c14-4 30-22 46-24s22 10 40 6 30-10 50-12" /></svg>
+                      <span class="sign__who"><span>James Walker</span><span class="mono">Signed 14:32 AEST</span></span>
+                    </div>
+                    <div class="stamp"><span>Confirmed</span><small class="mono">04 · Apr · QC</small></div>
+                  </div>
+                  <div class="sign__stub">
+                    <span class="mono">Deposit</span>
+                    <strong>$1,000</strong>
+                    <span class="sign__paid mono"><svg><use href="#i-check" /></svg>Paid</span>
+                    <span class="sign__pay"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" /><img src="/assets/integrations/paypal.png" width="792" height="790" alt="" loading="lazy" decoding="async" /></span>
+                  </div>
+                </div>
+                <ol class="sign__trail mono" aria-label="Audit trail">
+                  <li>Opened by traveller <time>09:12</time></li>
+                  <li>Extras selected <time>09:20</time></li>
+                  <li>Signed, eIDAS <time>14:32</time></li>
+                  <li>Deposit paid <time>14:33</time></li>
+                </ol>
+                <button type="button" class="sign__replay mono" data-replay>Sign again</button>
+              </div>
+              <div class="tk__sleeve" aria-hidden="true"><span class="sleeve__q"><img src="/assets/logos/qc-symbol-white.png" width="122" height="126" alt="" loading="lazy" /></span><span class="sleeve__name">E-sign</span><span class="sleeve__seq">06</span></div>
+            </div>
+          </article>
+
+          <div class="call" data-reveal>
+            <p class="call__t">Ready to issue your first pass?</p>
+            <div class="call__ctas">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="qc-btn qc-btn--ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── TravelDocs ───────── -->
+      <section class="lounge" id="traveldocs" aria-labelledby="td-title">
+        <div class="lounge__grid qc-container">
+          <div class="lounge__copy" data-reveal>
+            <img class="lounge__logo" src="/assets/travel/traveldocs-logo.png" width="640" height="247" alt="TravelDocs" loading="lazy" decoding="async" />
+            <h2 id="td-title">The whole trip, <span class="accent">in their pocket.</span></h2>
+            <p>Every itinerary you send lives in the free TravelDocs app, with live flight status right on the lock screen.</p>
+            <div class="td-tabs" role="tablist" aria-label="TravelDocs screens">
+              <button type="button" role="tab" id="td-t0" aria-controls="td-screen" aria-selected="true" data-step="0"><span class="mono">01</span>My trips<i></i></button>
+              <button type="button" role="tab" id="td-t1" aria-controls="td-screen" aria-selected="false" tabindex="-1" data-step="1"><span class="mono">02</span>Boarding info<i></i></button>
+              <button type="button" role="tab" id="td-t2" aria-controls="td-screen" aria-selected="false" tabindex="-1" data-step="2"><span class="mono">03</span>Gate alert<i></i></button>
+              <button type="button" role="tab" id="td-t3" aria-controls="td-screen" aria-selected="false" tabindex="-1" data-step="3"><span class="mono">04</span>Taxiing<i></i></button>
+            </div>
+            <div class="lounge__stores">
+              <a href="https://apps.apple.com/au/app/traveldocs/id6477499212" rel="noopener"><img src="/assets/travel/app-store.png" width="400" height="118" alt="Download TravelDocs on the App Store" loading="lazy" decoding="async" /></a>
+              <a href="https://play.google.com/store/apps/details?id=com.corporateinteractive.traveldocs" rel="noopener"><img src="/assets/travel/google-play.png" width="400" height="117" alt="Get TravelDocs on Google Play" loading="lazy" decoding="async" /></a>
+            </div>
+            <a class="tk__link tk__link--light" href="https://www.quote.cloud/traveldocs-mobile-app">About the TravelDocs app <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="lounge__stage">
+            <div class="lounge__pass" aria-hidden="true">
+              <div class="lp__main">
+                <span class="mono">Boarding · QF43</span>
+                <div class="lp__route"><b>SYD</b><svg viewBox="0 0 24 24"><use href="#i-flight" /></svg><b>DPS</b></div>
+                <dl><div><dt>Gate</dt><dd>9</dd></div><div><dt>Seat</dt><dd>14A</dd></div><div><dt>Boards</dt><dd>09:40</dd></div></dl>
+              </div>
+              <div class="lp__stub"><span class="qr qr--light" data-qr="QF43-14A"></span></div>
+            </div>
+            <div class="phone" id="td-screen" role="tabpanel" aria-labelledby="td-t0">
+              <div class="phone__screen">
+                <img class="is-on" src="/assets/travel/traveldocs-itineraries.jpg" width="414" height="900" alt="TravelDocs My Itineraries screen with pinned trips and countdowns" loading="lazy" decoding="async" />
+                <img src="/assets/travel/traveldocs-flight.jpg" width="414" height="900" alt="TravelDocs flight detail with departure and arrival times, booking code, seat and airline" loading="lazy" decoding="async" />
+                <img src="/assets/travel/traveldocs-lockscreen-1.jpg" width="369" height="800" alt="Lock screen live activity: gate departure in 3 minutes, flight on time" loading="lazy" decoding="async" />
+                <img src="/assets/travel/traveldocs-lockscreen-2.jpg" width="369" height="800" alt="Lock screen live activity: departed gate, taxiing for take-off" loading="lazy" decoding="async" />
+              </div>
+              <span class="phone__btn phone__btn--a"></span><span class="phone__btn phone__btn--b"></span><span class="phone__btn phone__btn--c"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="connect" id="integrations" aria-labelledby="int-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="int-title">Connected at <span class="accent">every gate.</span></h2>
+            <p>Import from the systems you book in. Get paid through the ones you already use.</p>
+          </header>
+          <ul class="stubs" data-reveal-stagger="70">
+            <li data-reveal><a class="stubcard" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-sabre-gds"><span class="stubcard__logo"><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" /></span><span class="stubcard__txt"><strong>Sabre GDS</strong><span class="mono">GDS import</span></span><span class="stubcard__go" aria-hidden="true">→</span></a></li>
+            <li data-reveal><a class="stubcard" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-powersuite-mid-office"><span class="stubcard__logo"><img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" /></span><span class="stubcard__txt"><strong>PowerSuite</strong><span class="mono">Mid-office</span></span><span class="stubcard__go" aria-hidden="true">→</span></a></li>
+            <li data-reveal><a class="stubcard" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tramada"><span class="stubcard__logo stubcard__logo--wide"><img src="/assets/travel/tramada.png" width="400" height="125" alt="" loading="lazy" decoding="async" /></span><span class="stubcard__txt"><strong>Tramada</strong><span class="mono">Mid-office</span></span><span class="stubcard__go" aria-hidden="true">→</span></a></li>
+            <li data-reveal><a class="stubcard" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tres-ccte"><span class="stubcard__logo stubcard__logo--text" aria-hidden="true">Tres</span><span class="stubcard__txt"><strong>Tres CCTE</strong><span class="mono">CrossCheck</span></span><span class="stubcard__go" aria-hidden="true">→</span></a></li>
+            <li data-reveal><a class="stubcard" href="https://www.quote.cloud/all-integrations"><span class="stubcard__logo"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" /></span><span class="stubcard__txt"><strong>Stripe</strong><span class="mono">Payments</span></span><span class="stubcard__go" aria-hidden="true">→</span></a></li>
+            <li data-reveal><a class="stubcard" href="https://www.quote.cloud/all-integrations"><span class="stubcard__logo"><img src="/assets/integrations/paypal.png" width="792" height="790" alt="" loading="lazy" decoding="async" /></span><span class="stubcard__txt"><strong>PayPal</strong><span class="mono">Payments</span></span><span class="stubcard__go" aria-hidden="true">→</span></a></li>
+          </ul>
+          <p class="connect__all"><a class="tk__link" href="https://www.quote.cloud/all-integrations">See all integrations <span aria-hidden="true">→</span></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Proof: departures board ───────── -->
+      <section class="proof" id="proof" aria-labelledby="proof-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="proof-title">Rated, secured and <span class="accent">on time.</span></h2>
+          </header>
+          <div class="board" data-board>
+            <div class="board__head mono" aria-hidden="true"><span>Departures</span><span class="board__clock">QC · since 2013</span></div>
+            <table class="board__table">
+              <caption class="qc-sr-only">QuoteCloud ratings, security and track record</caption>
+              <thead><tr><th scope="col">Code</th><th scope="col">Detail</th><th scope="col">Status</th></tr></thead>
+              <tbody>
+                <tr><td><span data-flap>4.2</span></td><td><span data-flap>Capterra rating</span></td><td class="ok"><span data-flap>Verified</span></td></tr>
+                <tr><td><span data-flap>4.2</span></td><td><span data-flap>Software Advice</span></td><td class="ok"><span data-flap>Verified</span></td></tr>
+                <tr><td><span data-flap>eIDAS</span></td><td><span data-flap>Binding e-sign</span></td><td class="ok"><span data-flap>Compliant</span></td></tr>
+                <tr><td><span data-flap>256</span></td><td><span data-flap>Bit encryption</span></td><td class="ok"><span data-flap>Secure</span></td></tr>
+                <tr><td><span data-flap>AWS</span></td><td><span data-flap>Hosted, GDPR</span></td><td class="ok"><span data-flap>Compliant</span></td></tr>
+                <tr><td><span data-flap>2013</span></td><td><span data-flap>In service since</span></td><td class="ok"><span data-flap>On time</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-travel -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="final" id="start" aria-labelledby="final-title">
+        <div class="qc-container">
+          <div class="final__pass" data-reveal="scale">
+            <div class="final__main">
+              <div class="final__top mono"><span>QuoteCloud for Travel</span><span>Class · First</span></div>
+              <h2 id="final-title">Your next trip is <span class="foil">ready to board.</span></h2>
+              <dl class="fields fields--final">
+                <div><dt>From</dt><dd>GDS booking</dd></div>
+                <div><dt>To</dt><dd>Signed trip</dd></div>
+                <div><dt>Trial</dt><dd>14 days free</dd></div>
+                <div><dt>Card</dt><dd>Not required</dd></div>
+              </dl>
+              <a class="final__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Prefer a guided tour? Book a demo <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="qc-btn qc-btn--primary final__stub" href="https://app.quote.cloud/register" data-qc-cta="closing-stub">
+              <span class="final__stub-k mono">Admit one</span>
+              <span class="final__stub-t">Start free <span class="nowrap">14-day</span> trial</span>
+              <span class="final__stub-arrow" aria-hidden="true">→</span>
+              <span class="barcode barcode--light" data-barcode="trial14" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

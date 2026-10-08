@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="mn-body">
+    <!-- @include header -->
+    <main id="main" class="mn">
+      <!-- ───────── Hero ───────── -->
+      <section class="mn-hero" id="hero" data-pause aria-labelledby="mn-hero-title">
+        <div class="mn-hero__bg" aria-hidden="true">
+          <div class="mn-hero__grid"></div>
+          <div class="mn-hero__glow mn-hero__glow--red"></div>
+          <div class="mn-hero__glow mn-hero__glow--violet"></div>
+        </div>
+
+        <div class="qc-container mn-hero__inner">
+          <div class="mn-hero__copy">
+            <h1 class="mn-hero__title" id="mn-hero-title" data-reveal>
+              Proposal &amp; quoting software <em>built to close</em>
+            </h1>
+            <p class="mn-hero__lede" data-reveal>
+              Replace Word, Excel, PowerPoint, email approvals and eSign apps with one interactive document your
+              customers can price, sign and pay in.
+            </p>
+            <div class="mn-hero__cta" data-reveal>
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg mn-btn-ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="mn-hero__note" data-reveal>No credit card required</p>
+          </div>
+
+          <!-- Product window: a live proposal in the QuoteCloud editor -->
+          <div class="mn-stage" data-reveal="scale">
+            <div class="mn-window" id="mn-window" aria-label="The QuoteCloud editor showing an interactive proposal with a pricing table, form and signature" role="img">
+              <div class="mn-window__bar">
+                <span class="mn-window__dots"><i></i><i></i><i></i></span>
+                <span class="mn-window__tab">Northwind — Cloud Migration Proposal</span>
+                <span class="mn-window__people">
+                  <i class="mn-avatar mn-avatar--a">JL</i><i class="mn-avatar mn-avatar--b">SK</i><i class="mn-avatar mn-avatar--c">+3</i>
+                </span>
+              </div>
+              <div class="mn-window__body">
+                <aside class="mn-window__rail" aria-hidden="true">
+                  <i class="is-on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </aside>
+                <div class="mn-page">
+                  <div class="mn-page__head">
+                    <span class="mn-page__brand"></span>
+                    <span class="mn-page__title">Cloud migration proposal</span>
+                    <span class="mn-page__meta">Prepared for Northwind Traders · Valid 30 days</span>
+                  </div>
+                  <div class="mn-page__lines" aria-hidden="true"><i style="--w: 92%"></i><i style="--w: 78%"></i><i style="--w: 60%"></i></div>
+
+                  <table class="mn-price" aria-hidden="true">
+                    <thead>
+                      <tr><th>Item</th><th>Qty</th><th>Price</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Discovery &amp; architecture</td><td>1</td><td>$4,800</td></tr>
+                      <tr><td>Workload migration</td><td>12</td><td>$14,400</td></tr>
+                      <tr class="mn-price__opt is-on" data-opt><td><span class="mn-check"></span>Managed support (12 mo)</td><td>1</td><td>$6,000</td></tr>
+                      <tr class="mn-price__opt" data-opt><td><span class="mn-check"></span>Staff training workshop</td><td>2</td><td>$1,900</td></tr>
+                    </tbody>
+                    <tfoot>
+                      <tr><td>Total</td><td></td><td class="mn-price__total" data-total>$25,200</td></tr>
+                    </tfoot>
+                  </table>
+
+                  <div class="mn-page__row">
+                    <div class="mn-field"><span>Project start date</span><b>14 Nov 2026</b></div>
+                    <div class="mn-sign" data-sign>
+                      <svg viewBox="0 0 160 48" aria-hidden="true"><path class="mn-sign__path" d="M6 34c10-18 16-22 18-12s-4 22 4 16 14-26 20-18-2 22 8 14 12-16 20-10 4 14 14 8 10-14 18-8 8 12 16 6 10-10 22-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                      <span class="mn-sign__label">Sign here</span>
+                    </div>
+                  </div>
+                </div>
+                <aside class="mn-window__side" aria-hidden="true">
+                  <span class="mn-side__h">Blocks</span>
+                  <div class="mn-side__grid">
+                    <i>T</i><i>▦</i><i>$</i><i>✎</i><i>▤</i><i>◔</i><i>⌁</i><i>▣</i>
+                  </div>
+                  <span class="mn-side__h">AI co-worker</span>
+                  <div class="mn-side__ai"><span class="mn-side__ai-text" data-hero-ai></span></div>
+                </aside>
+                <!-- live cursors -->
+                <span class="mn-cursor mn-cursor--a" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M2 1l11 7-5 1 3 5-2 1-3-5-4 4z" fill="currentColor"/></svg><b>Jess</b></span>
+                <span class="mn-cursor mn-cursor--b" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M2 1l11 7-5 1 3 5-2 1-3-5-4 4z" fill="currentColor"/></svg><b>Sam</b></span>
+              </div>
+            </div>
+            <div class="mn-stage__shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Feature bento ───────── -->
+      <section class="mn-section mn-bento-section" id="features" aria-labelledby="mn-features-title">
+        <div class="qc-container">
+          <h2 class="mn-h2" id="mn-features-title" data-reveal>
+            Everything a deal needs, <em>in one document</em>
+          </h2>
+          <p class="mn-sub" data-reveal>Pricing, approvals, collaboration, AI and eSignatures live inside the editor — not in six other apps.</p>
+
+          <div class="mn-bento" id="mn-bento" data-reveal-stagger="90">
+            <!-- 1 Pricing / CPQ -->
+            <article class="mn-card mn-card--wide" data-reveal data-pause data-live="pricing">
+              <div class="mn-card__visual mn-cpq">
+                <div class="mn-cpq__table">
+                  <div class="mn-cpq__row mn-cpq__row--h"><span>Option</span><span>Qty</span><span>Total</span></div>
+                  <div class="mn-cpq__row"><span><i class="mn-tick is-on"></i>Fibre 1 Gbps</span><span>1</span><span>$299</span></div>
+                  <div class="mn-cpq__row" data-cpq-opt="1"><span><i class="mn-tick is-on"></i>Managed firewall</span><span>2</span><span>$180</span></div>
+                  <div class="mn-cpq__row" data-cpq-opt="2"><span><i class="mn-tick"></i>Static IP block</span><span>1</span><span>$45</span></div>
+                  <div class="mn-cpq__row" data-cpq-opt="3"><span><i class="mn-tick"></i>24/7 priority support</span><span>1</span><span>$120</span></div>
+                  <div class="mn-cpq__row mn-cpq__row--disc"><span>Bundle discount</span><span>10%</span><span data-cpq-disc>−$48</span></div>
+                  <div class="mn-cpq__row mn-cpq__row--t"><span>Monthly total</span><span></span><span class="mn-cpq__total" data-cpq-total>$431</span></div>
+                </div>
+                <div class="mn-cpq__formula" aria-hidden="true"><code>=SUM(selected) × (1 − discount)</code></div>
+              </div>
+              <h3 class="mn-card__title">Configurable pricing that recalculates itself</h3>
+              <p class="mn-card__text">Options, quantities, discounts, tax, formulas and multi-currency. Spreadsheets link to price tables so totals flow both ways. <a href="https://www.quote.cloud/cpq-software">CPQ software</a></p>
+            </article>
+
+            <!-- 2 eSignature -->
+            <article class="mn-card" data-reveal data-pause data-live="sign">
+              <div class="mn-card__visual mn-esign">
+                <div class="mn-esign__pad">
+                  <svg viewBox="0 0 220 90" aria-hidden="true">
+                    <path class="mn-esign__path" d="M12 62c14-30 24-40 28-22s-6 36 6 26 20-40 30-28-4 36 12 22 18-24 28-16 4 22 18 12 14-20 24-12 10 18 20 10 12-14 26-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="mn-esign__line"></span>
+                </div>
+                <div class="mn-esign__status"><i></i><span>Signed · eIDAS · 256-bit · audit trail</span></div>
+              </div>
+              <h3 class="mn-card__title">Legally binding eSignatures</h3>
+              <p class="mn-card__text">Sign on any device. eIDAS compliant, AWS hosted, every step audited. <a href="https://www.quote.cloud/electronic-signature-software-solution">eSignature</a></p>
+            </article>
+
+            <!-- 3 Collaboration -->
+            <article class="mn-card" data-reveal data-pause data-live="collab">
+              <div class="mn-card__visual mn-collab">
+                <div class="mn-collab__doc">
+                  <i style="--w: 70%"></i><i style="--w: 92%"></i><i style="--w: 55%" class="is-hl"></i><i style="--w: 84%"></i><i style="--w: 40%"></i>
+                  <span class="mn-collab__comment"><b>SK</b> Can we add the SLA here?</span>
+                </div>
+                <span class="mn-cursor mn-cursor--a mn-collab__c1" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M2 1l11 7-5 1 3 5-2 1-3-5-4 4z" fill="currentColor"/></svg><b>Jess</b></span>
+                <span class="mn-cursor mn-cursor--b mn-collab__c2" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M2 1l11 7-5 1 3 5-2 1-3-5-4 4z" fill="currentColor"/></svg><b>Sam</b></span>
+                <span class="mn-cursor mn-cursor--c mn-collab__c3" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M2 1l11 7-5 1 3 5-2 1-3-5-4 4z" fill="currentColor"/></svg><b>Priya</b></span>
+              </div>
+              <h3 class="mn-card__title">Real-time collaboration</h3>
+              <p class="mn-card__text">Sales, technical and finance edit the same document together, with comments and mentions. <a href="https://www.quote.cloud/collaboration">Collaboration</a></p>
+            </article>
+
+            <!-- 4 AI co-worker -->
+            <article class="mn-card mn-card--wide" data-reveal data-pause data-live="ai">
+              <div class="mn-card__visual mn-ai">
+                <div class="mn-ai__prompt"><span class="mn-ai__spark" aria-hidden="true"></span><span>Write an introduction for Northwind’s cloud migration proposal</span></div>
+                <div class="mn-ai__out"><p><span data-ai-text></span><i class="mn-ai__caret" aria-hidden="true"></i></p></div>
+                <div class="mn-ai__actions" aria-hidden="true"><span>Insert</span><span>Rewrite</span><span>Shorter</span></div>
+              </div>
+              <h3 class="mn-card__title">AI co-worker drafts the words</h3>
+              <p class="mn-card__text">Introductions, value propositions and rewrites, generated inside the editor. <a href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI co-worker</a></p>
+            </article>
+
+            <!-- 5 Approval flow -->
+            <article class="mn-card" data-reveal data-pause data-live="flow">
+              <div class="mn-card__visual mn-flow">
+                <svg class="mn-flow__svg" viewBox="0 0 260 150" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="mn-flow-g" x1="0" x2="1"><stop offset="0" stop-color="#5b3df5"/><stop offset="1" stop-color="#ff4d47"/></linearGradient>
+                  </defs>
+                  <path class="mn-flow__link" d="M58 40 H110 M150 40 H202 M130 60 V92 M130 92 H78 M130 92 H182" />
+                  <path class="mn-flow__pulse" d="M58 40 H110 M150 40 H202" />
+                  <g class="mn-flow__node mn-flow__node--1" transform="translate(18 24)"><rect width="40" height="32" rx="9"/><text x="20" y="20">Draft</text></g>
+                  <g class="mn-flow__node mn-flow__node--2" transform="translate(110 24)"><rect width="40" height="32" rx="9"/><text x="20" y="20">&gt;$10k</text></g>
+                  <g class="mn-flow__node mn-flow__node--3" transform="translate(202 24)"><rect width="40" height="32" rx="9"/><text x="20" y="20">CFO</text></g>
+                  <g class="mn-flow__node mn-flow__node--4" transform="translate(58 92)"><rect width="40" height="32" rx="9"/><text x="20" y="20">Sales</text></g>
+                  <g class="mn-flow__node mn-flow__node--5 mn-flow__node--ok" transform="translate(162 92)"><rect width="40" height="32" rx="9"/><text x="20" y="20">Sent</text></g>
+                </svg>
+              </div>
+              <h3 class="mn-card__title">Approval flows without code</h3>
+              <p class="mn-card__text">Visual hierarchies, conditional rules and escalation keep every quote compliant.</p>
+            </article>
+
+            <!-- 6 Gantt / project blocks -->
+            <article class="mn-card mn-card--wide" data-reveal data-pause data-live="gantt">
+              <div class="mn-card__visual mn-gantt">
+                <div class="mn-gantt__head"><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan</span></div>
+                <div class="mn-gantt__rows">
+                  <div class="mn-gantt__row"><span>Discovery</span><i style="--s: 2%; --l: 20%; --d: 0"></i></div>
+                  <div class="mn-gantt__row"><span>Migration</span><i style="--s: 20%; --l: 38%; --d: 1; --c: var(--qc-violet)"></i></div>
+                  <div class="mn-gantt__row"><span>Testing</span><i style="--s: 50%; --l: 22%; --d: 2; --c: var(--qc-sky)"></i></div>
+                  <div class="mn-gantt__row"><span>Go-live</span><i style="--s: 70%; --l: 12%; --d: 3; --c: var(--qc-mint)"></i></div>
+                  <div class="mn-gantt__row"><span>Support</span><i style="--s: 82%; --l: 16%; --d: 4; --c: var(--qc-amber)"></i></div>
+                </div>
+                <span class="mn-gantt__today" aria-hidden="true"></span>
+              </div>
+              <h3 class="mn-card__title">18 content blocks, one editor</h3>
+              <p class="mn-card__text">Gantt charts, diagrams, forms, spreadsheets, video, itineraries and more — in Canvas or Grid mode. <a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">All content blocks</a></p>
+            </article>
+          </div>
+
+          <div class="mn-inline-cta" data-reveal>
+            <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="features">Start free 14-day trial</a>
+            <a class="mn-link" href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas &amp; Grid editing modes →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Numbers ───────── -->
+      <section class="mn-section mn-numbers" id="numbers" aria-labelledby="mn-numbers-title">
+        <div class="qc-container">
+          <h2 class="mn-h2 mn-h2--center" id="mn-numbers-title" data-reveal>
+            Document chaos costs <em>over 20% of productivity</em>
+          </h2>
+          <p class="mn-sub mn-sub--center" data-reveal>One platform, built since 2013 to get it back.</p>
+          <ul class="mn-stats" data-reveal-stagger="100">
+            <li data-reveal><strong><span data-count-to="14">14</span></strong><span>day free trial, no credit card</span></li>
+            <li data-reveal><strong><span data-count-to="18">18</span></strong><span>content blocks in one editor</span></li>
+            <li data-reveal><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><em>/5</em></strong><span>rated on Capterra and Software Advice</span></li>
+            <li data-reveal><strong><span data-count-to="20" data-count-suffix="%+">20%+</span></strong><span>productivity lost to inefficient documents</span></li>
+            <li data-reveal><strong>2013</strong><span>helping teams close deals since</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="mn-section mn-integrations" id="integrations" aria-labelledby="mn-integrations-title">
+        <div class="qc-container">
+          <h2 class="mn-h2 mn-h2--center" id="mn-integrations-title" data-reveal>
+            Plugs into the tools <em>you already run</em>
+          </h2>
+          <p class="mn-sub mn-sub--center" data-reveal>CRM, accounting, payments and productivity — synced both ways.</p>
+          <ul class="mn-logos" data-pause data-reveal-stagger="40">
+            <li data-reveal style="--i: 0"><img src="/assets/integrations/salesforce-cpq.png" width="96" height="48" alt="Salesforce" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 1"><img src="/assets/integrations/hub-spot.png" width="96" height="48" alt="HubSpot" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 2"><img src="/assets/integrations/microsoft-dynamics.jpg" width="96" height="48" alt="Microsoft Dynamics" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 3"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="96" height="48" alt="monday.com" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 4"><img src="/assets/integrations/xero.png" width="96" height="48" alt="Xero" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 5"><img src="/assets/integrations/quickbooks.png" width="96" height="48" alt="QuickBooks" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 6"><img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="96" height="48" alt="FreshBooks" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 7"><img src="/assets/integrations/stripe.png" width="96" height="48" alt="Stripe" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 8"><img src="/assets/integrations/paypal.png" width="96" height="48" alt="PayPal" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 9"><img src="/assets/integrations/slack.jpg" width="96" height="48" alt="Slack" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 10"><img src="/assets/integrations/googlesheets.png" width="96" height="48" alt="Google Sheets" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 11"><img src="/assets/integrations/googledocs.jpg" width="96" height="48" alt="Google Docs" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 12"><img src="/assets/integrations/excel.png" width="96" height="48" alt="Microsoft Excel" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 13"><img src="/assets/integrations/calendar.jpg" width="96" height="48" alt="Google Calendar" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 14"><img src="/assets/integrations/zendesk-logo.jpg" width="96" height="48" alt="Zendesk" loading="lazy" decoding="async" /></li>
+            <li data-reveal style="--i: 15"><img src="/assets/integrations/serviceM8.png" width="96" height="48" alt="ServiceM8" loading="lazy" decoding="async" /></li>
+          </ul>
+          <p class="mn-logos__more" data-reveal>Also Pipedrive, Zoho, OneDrive, Teams, simPRO, Sabre GDS, Tramada and Tres CCTE. <a class="mn-link" href="https://www.quote.cloud/all-integrations">All integrations →</a></p>
+        </div>
+      </section>
+
+      <!-- ───────── FAQ (shared partial, restyled for dark) ───────── -->
+      <div class="mn-section mn-faq-wrap">
+        <!-- @include faq -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="mn-close" id="start" data-pause aria-labelledby="mn-close-title">
+        <div class="mn-close__glow" aria-hidden="true"></div>
+        <div class="qc-container mn-close__inner">
+          <h2 class="mn-close__title" id="mn-close-title" data-reveal>Send your next proposal <em>from QuoteCloud</em></h2>
+          <p class="mn-sub mn-sub--center" data-reveal>Free for 14 days. No credit card. Templates included.</p>
+          <div class="mn-close__cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg mn-btn-ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="mn-close__links" data-reveal>
+            <a href="https://www.quote.cloud/pricing">Pricing</a><a href="https://www.quote.cloud/templates">Templates</a><a href="https://www.quote.cloud/free-esignature-software">Free eSignature</a>
+          </p>
+        </div>
+        <div class="mn-close__fade" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <!-- Slim mobile CTA (appears after the hero, hides near the closing CTA) -->
+    <div class="mn-sticky" id="mn-sticky" aria-hidden="true">
+      <span>14-day free trial · no card</span>
+      <a class="qc-btn qc-btn--primary qc-btn--sm" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile" tabindex="-1">Start free</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

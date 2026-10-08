@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-blocks -->
+  </head>
+  <body class="b2">
+    <!-- @include header -->
+
+    <svg class="b2-sprite" aria-hidden="true" focusable="false">
+      <symbol id="b2-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="b2-i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+      <symbol id="b2-i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+      <symbol id="b2-i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="b2-i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol>
+      <symbol id="b2-i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+      <symbol id="b2-i-bed" viewBox="0 0 24 24"><path d="M2 20V8M2 16h20M22 20v-6a3 3 0 0 0-3-3h-8v5"/><circle cx="7" cy="12" r="2"/></symbol>
+      <symbol id="b2-i-car" viewBox="0 0 24 24"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5M4 12h16"/></symbol>
+      <symbol id="b2-i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+      <symbol id="b2-i-doc" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+      <symbol id="b2-i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.5 1.1 6.3L12 17.3l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero + pinned story: seven apps dock into one document ───────── -->
+      <section class="b2-pw" id="b2-pw" aria-labelledby="b2-title" data-phase="hero">
+        <div class="b2-stage">
+          <div class="b2-pw__grid qc-container">
+            <div class="b2-copy">
+              <div class="b2-hero">
+                <h1 class="b2-h1" id="b2-title">One document editor. <span class="b2-red">18 content blocks</span> for interactive proposals.</h1>
+                <p class="b2-lede">Stop switching between Word, Excel, PowerPoint, Visio, PDF editors and sign-here emails. Text, pricing, plans, forms and signatures live in one document your client can act on.</p>
+                <div class="b2-ctas">
+                  <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg></a>
+                  <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+                </div>
+                <p class="b2-note">No credit card required <span aria-hidden="true">·</span> Rated 4.2 on Capterra and Software Advice</p>
+                <p class="b2-cue" aria-hidden="true"><span class="b2-cue__line"></span>Scroll to assemble the proposal</p>
+              </div>
+
+              <div class="b2-rail">
+                <h2 class="b2-rail__title" id="b2-story-title">From patchwork to <span class="b2-red">one document</span></h2>
+                <p class="b2-count"><span class="b2-count__n" data-b2-count>7</span><span class="b2-count__of">of 18 content blocks<br />in this proposal</span></p>
+                <div class="b2-steps-wrap">
+                  <span class="b2-steps__track" aria-hidden="true"><span class="b2-steps__fill"></span></span>
+                  <ol class="b2-steps">
+                    <li class="b2-step"><span class="b2-step__name">Text</span><span class="b2-step__desc">Scope, summary and terms with familiar word processing.</span></li>
+                    <li class="b2-step"><span class="b2-step__name">Price Table</span><span class="b2-step__desc">Optional items, quantities and tax calculate themselves.</span></li>
+                    <li class="b2-step"><span class="b2-step__name">Spreadsheet</span><span class="b2-step__desc">Pulls the table total and works out finance terms.</span></li>
+                    <li class="b2-step"><span class="b2-step__name">Gantt Chart</span><span class="b2-step__desc">Milestones and deliverables everyone can follow.</span></li>
+                    <li class="b2-step"><span class="b2-step__name">Diagram</span><span class="b2-step__desc">Process flows and architecture, no separate tool.</span></li>
+                    <li class="b2-step"><span class="b2-step__name">Forms</span><span class="b2-step__desc">Clients answer questions inside the document.</span></li>
+                    <li class="b2-step"><span class="b2-step__name">eSignature</span><span class="b2-step__desc">Legally binding signatures without leaving the page.</span></li>
+                  </ol>
+                </div>
+                <div class="b2-rail__done">
+                  <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="story">Start free 14-day trial</a>
+                  <a class="b2-textlink" href="#b2-index-title">See all 18 blocks <svg class="b2-ico" aria-hidden="true"><use href="#b2-i-down"/></svg></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="b2-desk">
+              <p class="b2-label b2-label--before">Before: seven apps, seven files</p>
+              <div class="b2-canvas">
+                <!-- The patchwork: neutral, code-built app windows -->
+                <div class="b2-mess" aria-hidden="true">
+                  <div class="b2-mess__in">
+                    <div class="b2-win b2-win--text" data-i="0">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>Proposal_v7_FINAL.docx</span></div>
+                      <div class="b2-win__body">
+                        <span class="w-h"></span>
+                        <span class="w-l"></span><span class="w-l"></span><span class="w-l w-l--del"></span><span class="w-l w-l--ins"></span><span class="w-l"></span><span class="w-l w-l--s"></span>
+                        <span class="w-h w-h--s"></span>
+                        <span class="w-l"></span><span class="w-l w-l--del"></span><span class="w-l"></span><span class="w-l w-l--s"></span>
+                        <span class="w-note">3 comments · 14 tracked changes</span>
+                      </div>
+                    </div>
+                    <div class="b2-win b2-win--price" data-i="1">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>Pricing_calc_v3.xlsx</span></div>
+                      <div class="b2-win__body w-grid">
+                        <span class="w-c w-c--hd"></span><span class="w-c w-c--hd">A</span><span class="w-c w-c--hd">B</span><span class="w-c w-c--hd">C</span><span class="w-c w-c--hd">D</span>
+                        <span class="w-c w-c--hd">1</span><span class="w-c">Item</span><span class="w-c">Qty</span><span class="w-c">Rate</span><span class="w-c">Total</span>
+                        <span class="w-c w-c--hd">2</span><span class="w-c">Design</span><span class="w-c">1</span><span class="w-c">18400</span><span class="w-c">18400</span>
+                        <span class="w-c w-c--hd">3</span><span class="w-c">Desks</span><span class="w-c">120</span><span class="w-c">540</span><span class="w-c">64800</span>
+                        <span class="w-c w-c--hd">4</span><span class="w-c">Pods?</span><span class="w-c">2</span><span class="w-c">6300</span><span class="w-c w-c--err">#REF!</span>
+                        <span class="w-c w-c--hd">5</span><span class="w-c"></span><span class="w-c"></span><span class="w-c">Total</span><span class="w-c w-c--err">#REF!</span>
+                      </div>
+                    </div>
+                    <div class="b2-win b2-win--sheet" data-i="2">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>Finance_options_OLD.xlsx</span></div>
+                      <div class="b2-win__body w-grid w-grid--3">
+                        <span class="w-c">Term</span><span class="w-c">Rate</span><span class="w-c">Monthly</span>
+                        <span class="w-c">12</span><span class="w-c">6.9%</span><span class="w-c">7915</span>
+                        <span class="w-c">24</span><span class="w-c">6.9%</span><span class="w-c">4093</span>
+                        <span class="w-c">36</span><span class="w-c">6.9%</span><span class="w-c">2822</span>
+                      </div>
+                    </div>
+                    <div class="b2-win b2-win--gantt" data-i="3">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>Timeline_final2.mpp</span></div>
+                      <div class="b2-win__body">
+                        <span class="w-bar" style="--a: 0; --w: 32%"></span>
+                        <span class="w-bar" style="--a: 26%; --w: 18%"></span>
+                        <span class="w-bar" style="--a: 40%; --w: 46%"></span>
+                        <span class="w-bar" style="--a: 82%; --w: 14%"></span>
+                      </div>
+                    </div>
+                    <div class="b2-win b2-win--diagram" data-i="4">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>Architecture.vsdx</span></div>
+                      <div class="b2-win__body">
+                        <svg viewBox="0 0 220 120" class="w-svg"><rect x="8" y="12" width="56" height="26" rx="3"/><rect x="82" y="12" width="56" height="26" rx="3"/><rect x="156" y="12" width="56" height="26" rx="3"/><rect x="82" y="80" width="56" height="26" rx="3"/><path d="M64 25h18M138 25h18M110 38v42"/></svg>
+                      </div>
+                    </div>
+                    <div class="b2-win b2-win--form" data-i="5">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>forms.example.com/intake</span></div>
+                      <div class="b2-win__body">
+                        <span class="w-lbl"></span><span class="w-in"></span>
+                        <span class="w-lbl"></span><span class="w-in"></span>
+                        <span class="w-lbl"></span><span class="w-in w-in--s"></span>
+                        <span class="w-btn">Submit</span>
+                      </div>
+                    </div>
+                    <div class="b2-win b2-win--sign" data-i="6">
+                      <div class="b2-win__bar"><i></i><i></i><i></i><span>Inbox (12)</span></div>
+                      <div class="b2-win__body">
+                        <span class="w-mail"><b>Re: FW: Contract v4</b>Please sign, scan and send back</span>
+                        <span class="w-mail"><b>Re: Re: pricing</b>Which version is current?</span>
+                        <span class="w-att">Contract_scan(2).pdf</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- The result: one QuoteCloud document -->
+                <p class="b2-label b2-label--after">After: one QuoteCloud document</p>
+                <figure class="b2-doc" aria-label="Sample QuoteCloud proposal built from seven content blocks">
+                  <div class="b2-doc__bar" aria-hidden="true">
+                    <span class="b2-doc__logo"><img src="/assets/logos/qc-symbol-white.png" alt="" width="122" height="126" /></span>
+                    <span class="b2-doc__title">Harbour &amp; Co. <em>Office fit-out proposal</em></span>
+                    <span class="b2-doc__mode"><span class="is-on">Grid</span><span>Canvas</span></span>
+                    <span class="b2-doc__people"><i style="--c: #5b3df5">MR</i><i style="--c: #1fbf8f">JL</i></span>
+                    <span class="b2-doc__share">Share</span>
+                  </div>
+                  <div class="b2-doc__grid">
+                    <!-- 1 Text -->
+                    <div class="b2-slot b2-slot--text" data-i="0">
+                      <div class="b2-blk b2-blk--text">
+                        <span class="b2-tag">Text</span>
+                        <p class="b2-t-h">Executive summary</p>
+                        <p class="b2-t-p">We'll turn level 3 into a flexible workspace for 120 people, delivered in <mark>10 weeks</mark> with no downtime for your team.</p>
+                        <span class="b2-cursor" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 1l11 6-5 1.4L6 14z"/></svg><span>Mia</span></span>
+                      </div>
+                    </div>
+                    <!-- 2 Price Table -->
+                    <div class="b2-slot b2-slot--price" data-i="1">
+                      <div class="b2-blk b2-blk--price">
+                        <span class="b2-tag">Price Table</span>
+                        <table class="b2-pt">
+                          <thead><tr><th scope="col">Item</th><th scope="col">Qty</th><th scope="col">Amount</th></tr></thead>
+                          <tbody>
+                            <tr><td>Design &amp; project management</td><td>1</td><td>$18,400</td></tr>
+                            <tr><td>Workstations &amp; joinery</td><td>120</td><td>$64,800</td></tr>
+                            <tr class="b2-pt__opt">
+                              <td><button class="b2-switch" type="button" role="switch" aria-checked="true" aria-label="Include acoustic meeting pods" data-b2-pods><span></span></button>Acoustic pods <em>optional</em></td>
+                              <td>2</td><td>$12,600</td>
+                            </tr>
+                          </tbody>
+                          <tfoot>
+                            <tr><td colspan="2">Tax 10%</td><td data-b2-tax>$9,580</td></tr>
+                            <tr class="b2-pt__total"><td colspan="2">Total</td><td><span data-b2-total>$105,380</span></td></tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- 3 Spreadsheet -->
+                    <div class="b2-slot b2-slot--sheet" data-i="2">
+                      <div class="b2-blk b2-blk--sheet">
+                        <span class="b2-tag">Spreadsheet</span>
+                        <p class="b2-ss__fx"><span>B1</span><i>fx</i><code>=PriceTable.Total</code><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-link"/></svg></p>
+                        <table class="b2-ss">
+                          <thead><tr><th></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th></tr></thead>
+                          <tbody>
+                            <tr><th scope="row">1</th><td>Total</td><td class="b2-ss__link" colspan="2" data-b2-linked>$105,380</td></tr>
+                            <tr class="b2-ss__hd"><th scope="row">2</th><td>Term</td><td>Rate</td><td>Monthly</td></tr>
+                            <tr><th scope="row">3</th><td>12 mo</td><td>6.9%</td><td data-b2-term="12">$9,113</td></tr>
+                            <tr><th scope="row">4</th><td>24 mo</td><td>6.9%</td><td data-b2-term="24">$4,713</td></tr>
+                            <tr><th scope="row">5</th><td>36 mo</td><td>6.9%</td><td data-b2-term="36">$3,249</td></tr>
+                            <tr><th scope="row">6</th><td>48 mo</td><td>6.9%</td><td data-b2-term="48">$2,519</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- 4 Gantt Chart -->
+                    <div class="b2-slot b2-slot--gantt" data-i="3">
+                      <div class="b2-blk b2-blk--gantt">
+                        <span class="b2-tag">Gantt Chart</span>
+                        <div class="b2-gt">
+                          <span class="b2-gt__lbl"></span>
+                          <span class="b2-gt__wk">W1</span><span class="b2-gt__wk">W2</span><span class="b2-gt__wk">W3</span><span class="b2-gt__wk">W4</span><span class="b2-gt__wk">W5</span><span class="b2-gt__wk">W6</span><span class="b2-gt__wk">W7</span><span class="b2-gt__wk">W8</span><span class="b2-gt__wk">W9</span><span class="b2-gt__wk">W10</span>
+                          <span class="b2-gt__lbl" style="grid-row: 2">Design</span><span class="b2-gt__bar" style="grid-row: 2; grid-column: 2 / 5; --c: #5b3df5"></span>
+                          <span class="b2-gt__lbl" style="grid-row: 3">Client approval</span><span class="b2-gt__bar" style="grid-row: 3; grid-column: 4 / 6; --c: #2ba8f0; --d: 1"></span><span class="b2-gt__ms" style="grid-row: 3; grid-column: 6"></span>
+                          <span class="b2-gt__lbl" style="grid-row: 4">Build &amp; install</span><span class="b2-gt__bar" style="grid-row: 4; grid-column: 6 / 11; --c: #ff4d47; --d: 2"></span>
+                          <span class="b2-gt__lbl" style="grid-row: 5">Handover</span><span class="b2-gt__bar" style="grid-row: 5; grid-column: 11 / 12; --c: #1fbf8f; --d: 3"></span>
+                          <span class="b2-gt__today" style="grid-row: 1 / 6; grid-column: 6"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 5 Diagram -->
+                    <div class="b2-slot b2-slot--diagram" data-i="4">
+                      <div class="b2-blk b2-blk--diagram">
+                        <span class="b2-tag">Diagram</span>
+                        <svg class="b2-dg" viewBox="0 0 320 112" role="img" aria-label="Process flow: brief, design, approval, build, handover">
+                          <path class="b2-dg__ln" pathLength="1" d="M74 26h28" /><path class="b2-dg__ln" pathLength="1" d="M174 26h26" /><path class="b2-dg__ln" pathLength="1" d="M232 46v18q0 6-6 6h-52" /><path class="b2-dg__ln" pathLength="1" d="M102 86H74" />
+                          <g class="b2-dg__n"><rect x="4" y="10" width="70" height="32" rx="8" /><text x="39" y="30">Brief</text></g>
+                          <g class="b2-dg__n"><rect x="104" y="10" width="70" height="32" rx="8" /><text x="139" y="30">Design</text></g>
+                          <g class="b2-dg__n b2-dg__n--q"><path d="M232 4l28 22-28 22-28-22z" /><text x="232" y="30">OK?</text></g>
+                          <g class="b2-dg__n"><rect x="104" y="70" width="70" height="32" rx="8" /><text x="139" y="90">Build</text></g>
+                          <g class="b2-dg__n b2-dg__n--end"><rect x="4" y="70" width="70" height="32" rx="16" /><text x="39" y="90">Handover</text></g>
+                        </svg>
+                      </div>
+                    </div>
+                    <!-- 6 Forms -->
+                    <div class="b2-slot b2-slot--form" data-i="5">
+                      <div class="b2-blk b2-blk--form">
+                        <span class="b2-tag">Forms</span>
+                        <p class="b2-f-h">Site access details</p>
+                        <div class="b2-f">
+                          <span class="b2-f__lbl">Preferred start date</span>
+                          <span class="b2-f__in"><span class="b2-f__typed">Monday 3 March</span></span>
+                          <span class="b2-f__lbl">Contact on site</span>
+                          <span class="b2-f__in"><span class="b2-f__typed" style="--d: 1">Sam Lee, facilities</span></span>
+                          <span class="b2-f__chk"><span class="b2-f__box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>After-hours works are OK</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 7 eSignature -->
+                    <div class="b2-slot b2-slot--sign" data-i="6">
+                      <div class="b2-blk b2-blk--sign">
+                        <span class="b2-tag">eSignature</span>
+                        <div class="b2-sg">
+                          <span class="b2-sg__lbl">Accepted by</span>
+                          <svg class="b2-sg__sig" viewBox="0 0 220 56" aria-hidden="true"><path pathLength="1" d="M10 38c6-10 14-30 22-30 7 0-4 30 2 30 5 0 9-18 15-18 4 0 1 14 6 14 6 0 9-12 14-12 4 0 2 10 7 10 6 0 10-16 17-16 5 0 0 18 7 18 9 0 14-10 22-10 6 0 4 8 10 8 12 0 26-12 44-14M30 30c30-4 70-6 120-4"/></svg>
+                          <span class="b2-sg__who">Jordan Reyes <em>Harbour &amp; Co. · 12 March</em></span>
+                        </div>
+                        <div class="b2-sg__state">
+                          <span class="b2-sg__here">Sign here</span>
+                          <span class="b2-sg__ok"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-check"/></svg>Signed</span>
+                          <span class="b2-sg__audit">Audit trail recorded</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Itinerary spotlight ───────── -->
+      <section class="b2-itin" aria-labelledby="b2-itin-title">
+        <div class="b2-itin__grid qc-container">
+          <div class="b2-itin__copy" data-reveal>
+            <h2 class="b2-h2" id="b2-itin-title">Import a booking. Send a client-ready <span class="b2-red">itinerary</span>.</h2>
+            <p class="b2-sub">The Itinerary block fills itself from Sabre GDS, CCTE, Tramada and PowerSuite bookings, or from the PDF and Word documents you already have. Flights, hotels, transfers, meetings and activities, laid out cleanly.</p>
+            <a class="b2-textlink" href="https://www.quote.cloud/enhanced-travel-itinerary-software">Explore travel itineraries <svg class="b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg></a>
+          </div>
+          <div class="b2-itin__vis" data-reveal="scale">
+            <ul class="b2-src" aria-label="Itinerary import sources">
+              <li><img src="/assets/travel/sabre.jpg" alt="" width="200" height="200" loading="lazy" decoding="async" /><span>Sabre GDS</span></li>
+              <li><span class="b2-src__mono">CC</span><span>CCTE</span></li>
+              <li><img src="/assets/travel/tramada.png" alt="" width="400" height="125" loading="lazy" decoding="async" class="b2-src__wide" /><span>Tramada</span></li>
+              <li><img src="/assets/travel/powersuite.jpg" alt="" width="200" height="200" loading="lazy" decoding="async" /><span>PowerSuite</span></li>
+              <li><span class="b2-src__mono"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-doc"/></svg></span><span>PDF or Word</span></li>
+            </ul>
+            <svg class="b2-beams" viewBox="0 0 120 300" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 30C60 30 60 150 120 150" /><path d="M0 90C60 90 60 150 120 150" /><path d="M0 150H120" /><path d="M0 210C60 210 60 150 120 150" /><path d="M0 270C60 270 60 150 120 150" />
+            </svg>
+            <div class="b2-it" aria-label="Sample itinerary: New York to Paris">
+              <div class="b2-it__head">
+                <span class="b2-tag b2-tag--static">Itinerary</span>
+                <p class="b2-it__trip">New York <svg class="b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg> Paris</p>
+                <p class="b2-it__dates">5 to 9 May · 2 travellers</p>
+              </div>
+              <ol class="b2-it__list">
+                <li class="b2-seg" style="--c: #5b3df5"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-plane"/></svg><span><b>JFK 19:30 → CDG 08:50</b>Flight AF 7 · Seat 14A · 2 bags</span><em>Mon 5</em></li>
+                <li class="b2-seg" style="--c: #2ba8f0"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-car"/></svg><span><b>Private transfer</b>CDG Terminal 2E to hotel</span><em>Tue 6</em></li>
+                <li class="b2-seg" style="--c: #ff4d47"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-bed"/></svg><span><b>Hotel in Le Marais</b>3 nights · Breakfast included</span><em>Tue 6</em></li>
+                <li class="b2-seg" style="--c: #1fbf8f"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-cal"/></svg><span><b>Client workshop</b>09:30 · Rue de Rivoli office</span><em>Wed 7</em></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── All 18 blocks: horizontal, scroll-snapped index ───────── -->
+      <section class="b2-index" aria-labelledby="b2-index-title">
+        <div class="qc-container b2-index__head">
+          <div data-reveal>
+            <h2 class="b2-h2" id="b2-index-title">All <span class="b2-red">18 content blocks</span>, one editor</h2>
+            <p class="b2-sub">Six families you can mix in the same document, in <a href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Grid or Canvas mode</a>.</p>
+          </div>
+          <div class="b2-index__nav">
+            <button class="b2-nav-btn" type="button" data-b2-prev aria-label="Previous block family" aria-controls="b2-rows"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-left"/></svg></button>
+            <button class="b2-nav-btn" type="button" data-b2-next aria-label="Next block family" aria-controls="b2-rows"><svg class="b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg></button>
+          </div>
+        </div>
+
+        <ul class="b2-rows" id="b2-rows" tabindex="0" aria-label="Content block families">
+          <li class="b2-fam">
+            <div class="b2-vis b2-vis--data" aria-hidden="true">
+              <div class="v-pt"><span></span><span></span><span></span><b>$105,380</b></div>
+              <svg class="v-link" viewBox="0 0 60 40"><path d="M2 32C26 32 30 8 58 8" /><path class="v-link__pulse" pathLength="100" d="M2 32C26 32 30 8 58 8" /></svg>
+              <div class="v-ss"><i></i><i></i><i class="is-link"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <h3 class="b2-fam__title">Pricing &amp; data <span>2 blocks</span></h3>
+            <ul class="b2-fam__list">
+              <li><strong>Price Table</strong>Automatic totals, optional items, markups, discounts and pricing summaries, with products from your catalogue. <a href="https://www.quote.cloud/cpq-software">CPQ software</a></li>
+              <li><strong>Spreadsheet</strong>Calculations, financial models and comparisons, linked to price tables so totals flow both ways.</li>
+            </ul>
+          </li>
+          <li class="b2-fam">
+            <div class="b2-vis b2-vis--plans" aria-hidden="true">
+              <div class="v-gt"><i style="--a: 0; --w: 40%"></i><i style="--a: 30%; --w: 30%; --c: #2ba8f0"></i><i style="--a: 52%; --w: 44%; --c: #ff4d47"></i></div>
+              <svg class="v-shapes" viewBox="0 0 120 60"><circle cx="18" cy="30" r="14" /><rect x="46" y="16" width="28" height="28" rx="6" /><path d="M104 16l14 28H90z" /></svg>
+            </div>
+            <h3 class="b2-fam__title">Plans &amp; visuals <span>3 blocks</span></h3>
+            <ul class="b2-fam__list">
+              <li><strong>Gantt Chart</strong>Schedules, milestones, deliverables and dependencies that keep stakeholders aligned.</li>
+              <li><strong>Diagram</strong>Process flows, org charts, solution architectures and mind maps.</li>
+              <li><strong>Shapes</strong>A shape library with custom colours, borders, backgrounds and images inside shapes. <a href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas mode</a></li>
+            </ul>
+          </li>
+          <li class="b2-fam">
+            <div class="b2-vis b2-vis--media" aria-hidden="true">
+              <div class="v-gal"><i></i><i></i><i></i><i></i></div>
+              <span class="v-play"></span>
+              <span class="v-pdf">PDF</span>
+            </div>
+            <h3 class="b2-fam__title">Media <span>4 blocks</span></h3>
+            <ul class="b2-fam__list">
+              <li><strong>Image</strong>Single images for storytelling, branding and product shots.</li>
+              <li><strong>Gallery</strong>Image collages with a choice of layouts for products, destinations and portfolios.</li>
+              <li><strong>Video</strong>Product demos, destination showcases, training and executive messages.</li>
+              <li><strong>PDF</strong>Embed contracts, brochures and reports inside the document.</li>
+            </ul>
+          </li>
+          <li class="b2-fam">
+            <div class="b2-vis b2-vis--act" aria-hidden="true">
+              <svg class="v-qr" viewBox="0 0 21 21" data-b2-qr></svg>
+              <div class="v-side">
+                <span class="v-btn">Pay deposit</span>
+                <span class="v-bar" data-b2-barcode></span>
+              </div>
+            </div>
+            <h3 class="b2-fam__title">Interaction <span>5 blocks</span></h3>
+            <ul class="b2-fam__list">
+              <li><strong>Forms</strong>Collect details, feedback and approvals without leaving the document.</li>
+              <li><strong>eSignature</strong>Legally binding signatures with tracked signing status. <a href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures</a></li>
+              <li><strong>Button</strong>Calls to action for websites, bookings, downloads and payments.</li>
+              <li><strong>QR Code</strong>Send readers from print to websites, videos, forms and apps.</li>
+              <li><strong>Barcode</strong>For ticketing, inventory, asset tracking and product IDs.</li>
+            </ul>
+          </li>
+          <li class="b2-fam">
+            <div class="b2-vis b2-vis--layout" aria-hidden="true">
+              <div class="v-toc"><span class="v-toc__hl"></span><i>1 Summary</i><i>2 Pricing</i><i>3 Timeline</i><i>4 Terms</i></div>
+              <div class="v-page"><i></i><i></i><span class="v-gap"></span><i></i><i class="s"></i></div>
+            </div>
+            <h3 class="b2-fam__title">Layout &amp; navigation <span>3 blocks</span></h3>
+            <ul class="b2-fam__list">
+              <li><strong>Text</strong>Headings, columns, lists, tables, links and rich formatting.</li>
+              <li><strong>Table of Contents</strong>Generated automatically, so readers jump to any section in one click.</li>
+              <li><strong>Empty Space</strong>Precise whitespace between blocks for clean layouts.</li>
+            </ul>
+          </li>
+          <li class="b2-fam">
+            <div class="b2-vis b2-vis--travel" aria-hidden="true">
+              <span class="v-ap">JFK</span>
+              <svg class="v-arc" viewBox="0 0 160 50"><path d="M4 46C40 2 120 2 156 46" /></svg>
+              <span class="v-plane"><svg class="b2-ico"><use href="#b2-i-plane"/></svg></span>
+              <span class="v-ap">CDG</span>
+            </div>
+            <h3 class="b2-fam__title">Travel <span>1 block</span></h3>
+            <ul class="b2-fam__list">
+              <li><strong>Itinerary</strong>Build manually, extract from PDF and Word, or import from Sabre GDS, CCTE, Tramada and PowerSuite. <a href="https://www.quote.cloud/enhanced-travel-itinerary-software">Travel itineraries</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="qc-container b2-index__foot">
+          <span class="b2-progress" aria-hidden="true"><span data-b2-progress></span></span>
+        </div>
+      </section>
+
+      <!-- ───────── Use cases ───────── -->
+      <section class="b2-uses" aria-labelledby="b2-uses-title">
+        <div class="qc-container">
+          <div class="b2-uses__head" data-reveal>
+            <h2 class="b2-h2" id="b2-uses-title">Built for every document <span class="b2-red">you send</span></h2>
+            <p class="b2-sub">Use the block that explains each idea best. Here's how teams combine them.</p>
+          </div>
+          <ul class="b2-uses__grid" data-reveal-stagger="60">
+            <li class="b2-use" data-reveal><h3><a href="https://www.quote.cloud/proposal-software">Sales proposals</a></h3><p>Text · Price Table · Video · eSignature</p></li>
+            <li class="b2-use" data-reveal><h3><a href="https://www.quote.cloud/quoting-software">Quotes</a></h3><p>Price Table · Spreadsheet · Button · eSignature</p></li>
+            <li class="b2-use" data-reveal><h3>Statements of work</h3><p>Text · Gantt Chart · Diagram · eSignature</p></li>
+            <li class="b2-use" data-reveal><h3><a href="https://www.quote.cloud/enhanced-travel-itinerary-software">Travel itineraries</a></h3><p>Itinerary · Gallery · Price Table · QR Code</p></li>
+            <li class="b2-use" data-reveal><h3>Project plans</h3><p>Gantt Chart · Diagram · Table of Contents</p></li>
+            <li class="b2-use" data-reveal><h3>Onboarding guides</h3><p>Text · Video · Forms · Table of Contents</p></li>
+            <li class="b2-use" data-reveal><h3><a href="https://www.quote.cloud/electronic-signature-software-solution">Contracts</a></h3><p>Text · PDF · Forms · eSignature</p></li>
+            <li class="b2-use" data-reveal><h3>Client presentations</h3><p>Image · Gallery · Shapes · Button</p></li>
+          </ul>
+          <div class="b2-uses__cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="use-cases">Start free 14-day trial</a>
+            <a class="b2-textlink" href="https://www.quote.cloud/templates">Browse templates <svg class="b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Proof + integrations ───────── -->
+      <section class="b2-proof" aria-labelledby="b2-proof-title">
+        <div class="qc-container b2-proof__grid">
+          <div data-reveal>
+            <h2 class="b2-h2" id="b2-proof-title">Connected to the tools <span class="b2-red">you already use</span></h2>
+            <p class="b2-sub">Bring CRM data, products and payments into your documents, then send the result back.</p>
+            <a class="b2-textlink" href="https://www.quote.cloud/all-integrations">See all integrations <svg class="b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg></a>
+          </div>
+          <dl class="b2-stats" data-reveal-stagger="90">
+            <div data-reveal><dt>Capterra rating</dt><dd><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg class="b2-ico b2-star" aria-hidden="true"><use href="#b2-i-star"/></svg></dd></div>
+            <div data-reveal><dt>Software Advice rating</dt><dd><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg class="b2-ico b2-star" aria-hidden="true"><use href="#b2-i-star"/></svg></dd></div>
+            <div data-reveal><dt>In business since</dt><dd><span data-count-to="2013" data-count-format="plain">2013</span></dd></div>
+          </dl>
+        </div>
+        <div class="b2-logos" aria-label="Integrations include">
+          <ul class="b2-logos__track">
+            <li><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="monday.com" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/xero.png" alt="Xero" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/freshbooks-accounting-logo.jpg" alt="FreshBooks" width="785" height="783" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/stripe.png" alt="Stripe" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/paypal.png" alt="PayPal" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/slack.jpg" alt="Slack" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/googlesheets.png" alt="Google Sheets" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/excel.png" alt="Excel" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/serviceM8.png" alt="ServiceM8" width="792" height="790" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- @include faq-blocks -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="b2-final" aria-labelledby="b2-final-title">
+        <div class="qc-container">
+          <div class="b2-final__panel" data-reveal="scale">
+            <div class="b2-final__drift" aria-hidden="true">
+              <p>Price Table · Text · eSignature · Forms · Gantt Chart · Diagram · Spreadsheet · PDF · Video · Price Table · Text · eSignature · Forms · Gantt Chart · Diagram · Spreadsheet · PDF · Video ·</p>
+              <p>Image · Gallery · Button · QR Code · Barcode · Shapes · Table of Contents · Itinerary · Empty Space · Image · Gallery · Button · QR Code · Barcode · Shapes · Table of Contents · Itinerary · Empty Space ·</p>
+            </div>
+            <h2 class="b2-final__title" id="b2-final-title">Send one document, not <span class="b2-red">seven attachments</span>.</h2>
+            <p class="b2-final__sub">Start your free 14-day trial with all 18 content blocks. No credit card required.</p>
+            <div class="b2-ctas b2-ctas--center">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow b2-ico" aria-hidden="true"><use href="#b2-i-arrow"/></svg></a>
+              <a class="qc-btn qc-btn--ghost b2-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

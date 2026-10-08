@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-collab -->
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="lb">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="qc-container hero__grid">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              Real-time <span class="em">document collaboration</span> for proposals that close.
+            </h1>
+            <p class="hero__lede">
+              Sales, specialists and customers in one live document. Co-edit quotes, proposals and contracts, comment in
+              context and put an end to endless email threads.
+            </p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo"
+                >Book a demo</a
+              >
+            </div>
+            <p class="hero__note">
+              <span><span class="hero__stars" aria-hidden="true">&#9733;</span> 4.2 on Capterra and Software Advice</span>
+              <span class="dot" aria-hidden="true"></span> <span>No credit card required</span>
+            </p>
+          </div>
+
+          <figure class="hero__visual" aria-label="A Project Proposal open in QuoteCloud, with Sophie and Alex typing into the Executive Summary at the same time and leaving comments">
+            <div class="doc" data-scene="hero">
+              <div class="doc__bar">
+                <span class="doc__file" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 2.5h6.5L15.5 6.5v11h-10.5z" /><path d="M11.5 2.5v4h4" /></svg>
+                </span>
+                <span class="doc__name">Project Proposal</span>
+                <span class="doc__saved"><i aria-hidden="true"></i>Saved</span>
+                <span class="doc__presence">
+                  <span class="av av--sophie" data-pop>S</span>
+                  <span class="av av--alex" data-pop>A</span>
+                  <span class="av av--taylor" data-pop>T</span>
+                </span>
+                <span class="doc__share" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M14 2 7 9M14 2l-4.5 12L7 9 2 6.5z" /></svg>
+                  Share
+                </span>
+              </div>
+              <div class="doc__tools" aria-hidden="true">
+                <span class="tool"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 4 2.5 6.5 5 9" /><path d="M2.5 6.5h7a4 4 0 0 1 0 8H7" /></svg></span>
+                <span class="tool"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 4l2.5 2.5L11 9" /><path d="M13.5 6.5h-7a4 4 0 0 0 0 8H9" /></svg></span>
+                <span class="tool tool--sep"></span>
+                <span class="tool tool--t">T</span>
+                <span class="tool tool--b">B</span>
+                <span class="tool tool--i">I</span>
+                <span class="tool tool--hide-sm"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 4h8M6 8h8M6 12h8" /><circle cx="2.5" cy="4" r=".6" fill="currentColor" /><circle cx="2.5" cy="8" r=".6" fill="currentColor" /><circle cx="2.5" cy="12" r=".6" fill="currentColor" /></svg></span>
+                <span class="tool tool--hide-sm"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 9a3 3 0 0 0 4.2 0l2-2a3 3 0 0 0-4.2-4.2l-.8.8" /><path d="M9 7a3 3 0 0 0-4.2 0l-2 2A3 3 0 0 0 7 13.2l.8-.8" /></svg></span>
+                <span class="doc__together"><i></i>Editing together <b data-live-count>3</b></span>
+              </div>
+
+              <div class="doc__body">
+                <div class="doc__main">
+                  <p class="doc__title">Project Proposal</p>
+                  <p class="doc__meta">Prepared for Acme Logistics</p>
+
+                  <p class="doc__label doc__label--hl">Executive Summary</p>
+                  <p class="doc__para">
+                    <span class="tl" data-type="sophie"
+                      ><span class="tl__ghost">We'll modernise Acme's quoting in three phases, starting with a two-week discovery.</span
+                      ><span class="tl__live" aria-hidden="true"><span class="tl__text"></span><i class="caret caret--sophie"></i></span
+                    ></span>
+                    <span class="tl" data-type="alex"
+                      ><span class="tl__ghost">Timeline and investment are summarised below.</span
+                      ><span class="tl__live" aria-hidden="true"><span class="tl__text"></span><i class="caret caret--alex"></i></span
+                    ></span>
+                  </p>
+
+                  <p class="doc__label">Project Approach</p>
+                  <span class="skel" aria-hidden="true"><i style="--w: 96%"></i><i style="--w: 88%"></i><i style="--w: 62%"></i></span>
+
+                  <p class="doc__label doc__label--table">Investment Summary</p>
+                  <div class="mini-table" aria-hidden="true">
+                    <span>Discovery workshop</span><span>$3,200</span>
+                    <span>Implementation</span><span>$10,800</span>
+                    <span>Team training</span><span>$1,300</span>
+                    <span class="mini-table__total">Total</span><span class="mini-table__total">$15,300</span>
+                  </div>
+                </div>
+
+                <div class="doc__rail">
+                  <div class="cmt" data-anim="comment">
+                    <div class="cmt__head">
+                      <span class="av av--alex av--sm" aria-hidden="true">A</span>
+                      <span class="cmt__who">Alex <small>2 min ago</small></span>
+                    </div>
+                    <p class="cmt__text">Great start! Can we add more detail on the timeline? <span class="mention" data-fx="mention">@Sophie</span></p>
+                    <div class="cmt__reply" data-anim="reply">
+                      <span class="av av--sophie av--sm" aria-hidden="true">S</span>
+                      <p><span class="typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="cmt__reply-text">Sure, I'll update this section.</span></p>
+                    </div>
+                  </div>
+                  <div class="people" aria-hidden="true">
+                    <p class="people__head">In this document</p>
+                    <p class="people__row"><span class="av av--sophie av--xs">S</span><span>Sophie <small>(You)</small></span><b>Editor</b></p>
+                    <p class="people__row"><span class="av av--alex av--xs">A</span><span>Alex</span><b>Editor</b></p>
+                    <p class="people__row"><span class="av av--taylor av--xs">T</span><span>Taylor <small>(Customer)</small></span><b>Viewer</b></p>
+                  </div>
+                </div>
+              </div>
+
+              <span class="cur cur--sophie" data-cursor="sophie" aria-hidden="true">
+                <svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg>
+                <span class="cur__flag">Sophie</span>
+              </span>
+              <span class="cur cur--alex" data-cursor="alex" aria-hidden="true">
+                <svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg>
+                <span class="cur__flag">Alex</span>
+              </span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────── Quiet proof ───────── -->
+      <section class="logos" aria-labelledby="logos-title">
+        <div class="qc-container logos__inner">
+          <p class="logos__title" id="logos-title">Join over 10,000 others benefiting from streamlined document workflows with QuoteCloud.</p>
+          <ul class="logos__row">
+            <li><img src="/assets/collab/customer-telstra.png" alt="Telstra" width="1280" height="401" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-helloworld.png" alt="helloworld" width="1280" height="401" loading="lazy" decoding="async" /></li>
+            <li><img class="is-wide" src="/assets/collab/customer-coles-group.png" alt="Coles Group" width="309" height="59" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-tramada.png" alt="Tramada" width="1280" height="401" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-bd-industrial.png" alt="B&amp;D Industrial" width="1280" height="401" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-sabre.png" alt="Sabre" width="1280" height="401" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── The Living Bento ───────── -->
+      <section class="bento-sec" id="features" aria-labelledby="bento-title">
+        <div class="qc-container">
+          <div class="sec-head" data-reveal>
+            <h2 class="sec-title" id="bento-title">One document. <span class="em">Everyone in it.</span></h2>
+            <p class="sec-lede">Every collaboration tool your deal needs, built into each quote, proposal and contract.</p>
+          </div>
+
+          <div class="bento" data-reveal-stagger="90">
+            <!-- Real-time -->
+            <article class="tile tile--rt" data-reveal tabindex="0" aria-labelledby="t-rt">
+              <div class="tile__copy">
+                <h3 id="t-rt">Edit together, in real time</h3>
+                <p>Everyone works in the same document and sees each change the moment it happens. No more drafts emailed back and forth.</p>
+              </div>
+              <div class="scene scene--rt" data-scene="rt" aria-hidden="true">
+                <div class="rt">
+                  <div class="rt__head">
+                    <span class="rt__title">Investment Summary</span>
+                    <span class="rt__live"><i></i>Live</span>
+                  </div>
+                  <div class="rt__table">
+                    <div class="rt__row rt__row--th">
+                      <span>Item</span><span>Qty</span><span class="rt__price">Price</span><span>Disc.</span><span>Total</span>
+                    </div>
+                    <div class="rt__row">
+                      <span>Discovery workshop</span><span>1</span><span class="rt__price">$3,200</span><span>0%</span><span>$3,200</span>
+                    </div>
+                    <div class="rt__row rt__row--hot">
+                      <span>Implementation <small>weeks</small></span>
+                      <span class="rt__cell" data-cell="qty">6</span>
+                      <span class="rt__price">$1,800</span>
+                      <span class="rt__cell" data-cell="disc">10%</span>
+                      <span data-line>$9,720</span>
+                    </div>
+                    <div class="rt__row">
+                      <span>Team training</span><span>2</span><span class="rt__price">$650</span><span>0%</span><span>$1,300</span>
+                    </div>
+                    <div class="rt__row rt__row--total">
+                      <span>Total <small>ex. tax</small></span><span></span><span class="rt__price"></span><span></span><span data-total>$14,220</span>
+                    </div>
+                  </div>
+                  <p class="rt__log" data-log><span class="av av--sophie av--xs">S</span><span data-log-text>Sophie set a 10% discount on Implementation</span></p>
+                </div>
+                <span class="cur cur--alex" data-cursor="alex"><svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg><span class="cur__flag">Alex</span></span>
+                <span class="cur cur--sophie" data-cursor="sophie"><svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg><span class="cur__flag">Sophie</span></span>
+              </div>
+            </article>
+
+            <!-- Comments -->
+            <article class="tile tile--cm" data-reveal tabindex="0" aria-labelledby="t-cm">
+              <div class="tile__copy">
+                <h3 id="t-cm">Comments, right where the work is</h3>
+                <p>Ask, suggest and decide on the exact section. @mention a colleague, reply, resolve and move on.</p>
+              </div>
+              <div class="scene scene--cm" data-scene="cm" aria-hidden="true">
+                <div class="cm__excerpt">
+                  <p class="cm__label">Project Approach</p>
+                  <p class="cm__para">
+                    Discovery runs for two weeks. <mark class="hl" data-fx="hl">Phase two rolls out templates and pricing to every regional team</mark>, followed by training and go-live.
+                  </p>
+                  <p class="cm__label cm__label--2">Timeline</p>
+                  <div class="gantt">
+                    <span class="gantt__row"><b>Discovery</b><span class="gantt__track"><i style="--s: 0; --e: 0.24"></i></span></span>
+                    <span class="gantt__row"><b>Rollout</b><span class="gantt__track"><i style="--s: 0.2; --e: 0.68"></i></span></span>
+                    <span class="gantt__row"><b>Training</b><span class="gantt__track"><i style="--s: 0.6; --e: 0.86"></i></span></span>
+                    <span class="gantt__go" data-anim="golive"><span>Go-live 14 Oct</span></span>
+                  </div>
+                  <span class="cm__pin" data-anim="pin">2</span>
+                </div>
+                <div class="thread" data-fx="thread">
+                  <div class="note" data-anim="note">
+                    <span class="note__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2.5l2.5 2.5L6 12.5H3.5V10z" /></svg></span>
+                    <span>Annotation <b>Strong value proposition here.</b></span>
+                  </div>
+                  <div class="msg" data-anim="m1">
+                    <span class="av av--alex av--sm">A</span>
+                    <div>
+                      <p class="msg__who">Alex <small>2 min ago</small></p>
+                      <p class="msg__text">Can we add the go-live date here? <span class="mention" data-fx="mention">@Sophie</span></p>
+                    </div>
+                  </div>
+                  <div class="msg msg--typing" data-anim="dots">
+                    <span class="av av--sophie av--sm">S</span>
+                    <span class="typing"><i></i><i></i><i></i></span>
+                  </div>
+                  <div class="msg" data-anim="m2">
+                    <span class="av av--sophie av--sm">S</span>
+                    <div>
+                      <p class="msg__who">Sophie <small>just now</small></p>
+                      <p class="msg__text">Done, go-live is on the timeline. Resolving.</p>
+                    </div>
+                  </div>
+                  <div class="thread__actions" data-anim="actions">
+                    <span class="thread__reply">Reply&hellip;</span>
+                    <span class="thread__resolve" data-fx="resolve"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 8.5 3 3 6-7" /></svg>Resolve</span>
+                  </div>
+                </div>
+                <div class="resolved" data-anim="resolved">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 8.5 3 3 6-7" /></svg>
+                  Resolved by Sophie <small>2 comments</small>
+                </div>
+              </div>
+            </article>
+
+            <!-- Version history -->
+            <article class="tile tile--vh" data-reveal tabindex="0" aria-labelledby="t-vh">
+              <div class="tile__copy">
+                <h3 id="t-vh">Every version, on record</h3>
+                <p>Versions save automatically. Compare any earlier draft and restore it in a click.</p>
+              </div>
+              <div class="scene scene--vh" data-scene="vh" aria-hidden="true">
+                <div class="vh__card">
+                  <p class="vh__meta"><span data-vh-label>Current version</span><span class="vh__restored" data-anim="restored">Restored</span></p>
+                  <div class="vh__texts">
+                    <p class="vh__text vh__text--now">Implementation runs over <ins>six weeks</ins> with <ins>weekly</ins> check-ins and a fixed fee.</p>
+                    <p class="vh__text vh__text--old">Implementation runs over <del>eight weeks</del> with <del>fortnightly</del> check-ins and a fixed fee.</p>
+                  </div>
+                </div>
+                <div class="vh__bar">
+                  <div class="vh__track">
+                    <span class="vh__fill"></span>
+                    <span class="vh__node" style="--at: 0%"><b>v1</b></span>
+                    <span class="vh__node" style="--at: 33.333%" data-node="v2"><b>v2</b></span>
+                    <span class="vh__node" style="--at: 66.666%"><b>v3</b></span>
+                    <span class="vh__node" style="--at: 100%"><b>Now</b></span>
+                    <span class="vh__scrub"><span class="vh__handle"></span></span>
+                  </div>
+                  <span class="vh__restore" data-anim="restore">Restore</span>
+                </div>
+                <ul class="audit">
+                  <li class="audit__new" data-anim="audit"><span class="av av--sophie av--xs">S</span><span>Sophie restored v2</span><time>just now</time></li>
+                  <li><span class="av av--alex av--xs">A</span><span>Alex edited Investment Summary</span><time>Wed</time></li>
+                  <li><span class="av av--sophie av--xs">S</span><span>Sophie saved v2</span><time>Tue</time></li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Permissions -->
+            <article class="tile tile--pm" data-reveal tabindex="0" aria-labelledby="t-pm">
+              <div class="tile__copy">
+                <h3 id="t-pm">The right access for everyone</h3>
+                <p>Set who can view, comment, edit, approve or restore. Pricing and terms stay with the right people.</p>
+              </div>
+              <div class="scene scene--pm" data-scene="pm" aria-hidden="true">
+                <div class="pm__panel">
+                  <p class="pm__head">In this document</p>
+                  <div class="pm__row">
+                    <span class="av av--sophie av--sm">S</span><span class="pm__name">Sophie <small>(You)</small></span><span class="role role--owner">Owner</span>
+                  </div>
+                  <div class="pm__row pm__row--active">
+                    <span class="av av--jordan av--sm">J</span><span class="pm__name">Jordan</span>
+                    <span class="role role--pick" data-role
+                      ><span data-role-text>Editor</span
+                      ><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="m3 4.5 3 3 3-3" /></svg
+                    ></span>
+                    <span class="menu" data-anim="menu">
+                      <span class="menu__hl"></span>
+                      <span class="menu__opt">Viewer</span>
+                      <span class="menu__opt">Commenter</span>
+                      <span class="menu__opt">Editor</span>
+                      <span class="menu__opt">Approver</span>
+                    </span>
+                  </div>
+                  <div class="pm__row">
+                    <span class="av av--taylor av--sm">T</span><span class="pm__name">Taylor <small>(Customer)</small></span><span class="role">Viewer</span>
+                  </div>
+                </div>
+                <div class="pm__price is-open" data-price>
+                  <span class="lock">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path class="lock__shackle" d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" /><rect x="4" y="9" width="12" height="8.5" rx="2.2" fill="currentColor" stroke="none" /></svg>
+                  </span>
+                  <span class="pm__price-label" data-price-label>Pricing &amp; terms <b>editable by Jordan</b></span>
+                  <span class="pm__price-val" data-price-val>$1,800</span>
+                </div>
+                <span class="cur cur--jordan" data-cursor="jordan"><svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg><span class="cur__flag">Jordan</span></span>
+              </div>
+            </article>
+
+            <!-- Notifications -->
+            <article class="tile tile--nt" data-reveal tabindex="0" aria-labelledby="t-nt">
+              <div class="tile__copy">
+                <h3 id="t-nt">Never miss a beat</h3>
+                <p>Alerts when a document is updated, commented on or needs action, in QuoteCloud, Slack or Microsoft&nbsp;Teams.</p>
+              </div>
+              <div class="scene scene--nt" data-scene="nt" aria-hidden="true">
+                <ul class="toasts" data-toasts>
+                  <li class="toast">
+                    <span class="src src--teams">T</span>
+                    <span class="toast__text"><b>Approval needed</b> Jordan, Investment Summary</span>
+                    <span class="toast__act">Review</span>
+                  </li>
+                  <li class="toast">
+                    <span class="src src--slack"><img src="/assets/integrations/slack.jpg" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                    <span class="toast__text"><b>Alex mentioned you</b> in Executive Summary</span>
+                    <span class="toast__time">1m</span>
+                  </li>
+                  <li class="toast">
+                    <span class="src src--qc"><img src="/assets/logos/qc-symbol-white.png" alt="" width="64" height="64" loading="lazy" decoding="async" /></span>
+                    <span class="toast__text"><b>Sophie updated</b> Project Approach</span>
+                    <span class="toast__time">4m</span>
+                  </li>
+                </ul>
+              </div>
+              <p class="tile__links">
+                <a href="https://www.quote.cloud/slack-with-quotecloud">Slack</a>
+                <a href="https://www.quote.cloud/microsoft-teams-with-quotecloud">Microsoft Teams</a>
+              </p>
+            </article>
+
+            <!-- Customer -->
+            <article class="tile tile--cu" data-reveal tabindex="0" aria-labelledby="t-cu">
+              <div class="tile__copy">
+                <h3 id="t-cu">Bring the customer in</h3>
+                <p>Clients review, comment and sign in the same document, with access you control.</p>
+                <a class="tile__more" href="https://www.quote.cloud/electronic-signature-software-solution">Explore eSignatures <span aria-hidden="true">&rarr;</span></a>
+              </div>
+              <div class="scene scene--cu" data-scene="cu" aria-hidden="true">
+                <ol class="steps">
+                  <li class="step" data-step="1"><i></i>Approved</li>
+                  <li class="step" data-step="2"><i></i>Shared with Taylor</li>
+                  <li class="step" data-step="3"><i></i>Signed</li>
+                </ol>
+                <div class="cu__grid">
+                  <div class="cu__comment" data-anim="tcomment">
+                    <div class="cmt__head">
+                      <span class="av av--taylor av--sm">T</span>
+                      <span class="cmt__who">Taylor <span class="cu__tag">Customer</span> <small>Just now</small></span>
+                    </div>
+                    <p class="cmt__text">This looks great! Thanks for including the timeline.</p>
+                  </div>
+                  <div class="sig">
+                    <p class="sig__label">Accept &amp; sign</p>
+                    <svg class="sig__svg" viewBox="0 0 240 70" fill="none">
+                      <path class="sig__path" pathLength="1" d="M8 50c8-22 18-36 22-30s-8 34-2 36 14-30 20-30-2 24 4 24 10-18 16-18 2 16 8 16 12-22 18-20-4 18 2 18 12-10 18-14c8-5 10 6 18 6s14-10 22-12 16 4 24 2 18-6 28-8" />
+                      <path class="sig__line" d="M4 62h232" />
+                    </svg>
+                    <p class="sig__name">Taylor Morgan</p>
+                    <span class="sig__stamp" data-anim="stamp">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3.5 8.5 3 3 6-7" /></svg>
+                      Signed 10:42 AM
+                    </span>
+                  </div>
+                </div>
+                <span class="cur cur--taylor" data-cursor="taylor"><svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg><span class="cur__flag">Taylor</span></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="bento-cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="bento"
+              >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+            >
+            <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="bento-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Agreements, compressed ───────── -->
+      <section class="agree" aria-labelledby="agree-title">
+        <div class="qc-container">
+          <div class="sec-head" data-reveal>
+            <h2 class="sec-title" id="agree-title">From first draft to <span class="em">signed</span>, in one place.</h2>
+            <p class="sec-lede">Collaboration lives inside the platform that builds, prices, sends, signs and gets paid.</p>
+          </div>
+
+          <div class="mini" data-reveal-stagger="80" data-mini>
+            <article class="mt mt--wide" data-reveal>
+              <div class="mt__vis mt__vis--blocks" aria-hidden="true">
+                <span class="blk blk--a"></span><span class="blk blk--b"></span><span class="blk blk--drag"><i></i>Pricing table</span><span class="blk blk--c"></span>
+              </div>
+              <h3>Accurate agreements, fast</h3>
+              <p>Templates, rich media and drag-and-drop editing. <a href="https://www.quote.cloud/templates">Browse templates</a></p>
+            </article>
+            <article class="mt" data-reveal>
+              <div class="mt__vis mt__vis--sign" aria-hidden="true">
+                <svg viewBox="0 0 160 46" fill="none"><path class="mt-sig" pathLength="1" d="M6 34c6-16 14-26 17-21s-6 24-1 25 10-20 15-20-1 16 3 16 8-12 12-12 2 11 6 11 9-14 13-13-2 12 2 12 10-8 16-9 12 3 18 1 14-5 22-6" /><path d="M4 42h152" stroke="#d9d9df" /></svg>
+              </div>
+              <h3>eSignatures you can trust</h3>
+              <p>Legally binding, eIDAS compliant, 256-bit encryption and a full audit trail. <a href="https://www.quote.cloud/electronic-signature-software-solution">About eSign</a></p>
+            </article>
+            <article class="mt" data-reveal>
+              <div class="mt__vis mt__vis--insight" aria-hidden="true">
+                <span class="bars"><i style="--h: 0.35"></i><i style="--h: 0.6"></i><i style="--h: 0.45"></i><i style="--h: 0.8"></i><i style="--h: 1"></i></span>
+                <span class="chip"><i></i>Reminder sent</span>
+              </div>
+              <h3>Insights that keep deals moving</h3>
+              <p>Timely alerts, reports and reminders.</p>
+            </article>
+            <article class="mt" data-reveal>
+              <div class="mt__vis mt__vis--search" aria-hidden="true">
+                <span class="search"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="7" cy="7" r="4.5" /><path d="m10.5 10.5 3 3" /></svg><span class="search__q">Acme</span></span>
+                <span class="res"><b>Acme</b> Project Proposal <em>Signed</em></span>
+                <span class="res"><b>Acme</b> Renewal Quote <em class="is-amber">Sent</em></span>
+              </div>
+              <h3>Every agreement, one search away</h3>
+              <p>Cloud storage, search and advanced filtering.</p>
+            </article>
+            <article class="mt" data-reveal>
+              <div class="mt__vis mt__vis--buy" aria-hidden="true">
+                <span class="opt"><span class="sw"><i></i></span>Add premium support</span>
+                <span class="pay">
+                  <img src="/assets/integrations/stripe.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                  <img src="/assets/integrations/paypal.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                  <b>Pay deposit</b>
+                </span>
+              </div>
+              <h3>A buying experience they enjoy</h3>
+              <p>Product catalogues, CPQ and payments with Stripe and PayPal. <a href="https://www.quote.cloud/cpq-software">See CPQ</a></p>
+            </article>
+            <article class="mt mt--wide" data-reveal>
+              <div class="mt__vis mt__vis--flow" aria-hidden="true">
+                <span class="node is-1"><i></i>Sales</span>
+                <span class="wire"><b></b></span>
+                <span class="node is-2"><i></i>Manager</span>
+                <span class="wire wire--2"><b></b></span>
+                <span class="node is-3"><i></i>Finance</span>
+              </div>
+              <h3>Approvals without the chase</h3>
+              <p>Visual approval flows with hierarchies, conditional rules and escalation. No code required.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-collab -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="close__panel" data-scene="close">
+            <div class="close__copy">
+              <h2 class="close__title" id="close-title">Stop emailing drafts. <span class="em">Start closing together.</span></h2>
+              <p class="close__lede">Invite your team to one live document today. Free for 14 days, no credit card required.</p>
+              <div class="close__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing"
+                  >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+                >
+                <a class="qc-btn qc-btn--ghost qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+              </div>
+              <p class="close__links">
+                <a href="https://www.quote.cloud/proposal-software">Proposal software</a>
+                <a href="https://www.quote.cloud/quoting-software">Quoting software</a>
+                <a href="https://www.quote.cloud/pricing">Pricing</a>
+              </p>
+            </div>
+            <div class="close__deco" aria-hidden="true">
+              <span class="close__stack">
+                <span class="av av--sophie av--lg">S</span>
+                <span class="av av--alex av--lg">A</span>
+                <span class="av av--jordan av--lg">J</span>
+                <span class="av av--taylor av--lg">T</span>
+                <span class="av av--you av--lg">+</span>
+              </span>
+              <span class="cur cur--sophie close__cur close__cur--1"><svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg><span class="cur__flag">Sophie</span></span>
+              <span class="cur cur--alex close__cur close__cur--2"><svg viewBox="0 0 18 20"><path d="M2 1.5v15.2l4.3-4.1 2.9 6.3 2.7-1.2-2.8-6.1 6-.4z" /></svg><span class="cur__flag">Alex</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

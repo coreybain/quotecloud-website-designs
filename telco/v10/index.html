@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-telco -->
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="lp">
+      <svg class="lp-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+        <symbol id="i-chev" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+        <symbol id="i-template" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2.5" /><path d="M4 9h16M9 9v12" /></g></symbol>
+        <symbol id="i-library" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H9v16H5.5A1.5 1.5 0 0 1 4 18.5z" /><path d="M9 4h4v16H9zM15.2 5.3l3.3-.9 3 11.6-3.3.9z" /></g></symbol>
+        <symbol id="i-diagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="3" width="7" height="6" rx="1.5" /><rect x="14" y="15" width="7" height="6" rx="1.5" /><rect x="14" y="3" width="7" height="6" rx="1.5" /><path d="M10 6h4M17.5 9v6" /></g></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></g></symbol>
+        <symbol id="i-catalogue" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><path d="M17 13.5v7M13.5 17h7" stroke-linecap="round" /></g></symbol>
+        <symbol id="i-eyeoff" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18M10.6 5.1A9.8 9.8 0 0 1 12 5c5.5 0 9 7 9 7a16.6 16.6 0 0 1-2.6 3.4M6.6 6.6C4.2 8.2 3 12 3 12s3.5 7 9 7a9 9 0 0 0 5.4-1.6" /><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" /></g></symbol>
+        <symbol id="i-approve" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 1.7 2.9-.1.9 2.8 2.3 1.8-.9 2.8.9 2.8-2.3 1.8-.9 2.8-2.9-.1L12 21l-2.4-1.7-2.9.1-.9-2.8-2.3-1.8.9-2.8-.9-2.8 2.3-1.8.9-2.8 2.9.1z" /><path d="m8.8 12.2 2.2 2.2 4.3-4.6" /></g></symbol>
+        <symbol id="i-gantt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h7M8 12h8M13 18h7" /><path d="M3 3v18" stroke-width="1.4" /></g></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" /><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" /></g></symbol>
+        <symbol id="i-sign" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5l5 5L9 20H4v-5z" /><path d="M12.5 6.5l5 5" /></g></symbol>
+        <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M5 21V4.5A1.5 1.5 0 0 1 6.5 3h8A1.5 1.5 0 0 1 16 4.5V21M16 9h2.5A1.5 1.5 0 0 1 20 10.5V21M3 21h18" /><path d="M8.5 7h4M8.5 11h4M8.5 15h4" stroke-linecap="round" /></g></symbol>
+        <symbol id="i-warehouse" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 21V9l9-5 9 5v12" /><path d="M7 21v-8h10v8M7 17h10" /></g></symbol>
+        <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7" /><circle cx="7" cy="17.5" r="1.8" /><circle cx="17" cy="17.5" r="1.8" /></g></symbol>
+        <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5" /><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5s1.1-5.9 3.6-8.5z" /></g></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6.6 3.5h2.6l1.4 4.3-2 1.4a11.5 11.5 0 0 0 6.2 6.2l1.4-2 4.3 1.4v2.6a2 2 0 0 1-2.2 2A16 16 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" /></symbol>
+        <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M7 18.5h10.5a4 4 0 0 0 .6-8A6 6 0 0 0 6.5 9a4.8 4.8 0 0 0 .5 9.5z" /></symbol>
+        <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.3a9.5 9.5 0 0 1 13 0M8.6 15.6a5 5 0 0 1 6.8 0" /><circle cx="12" cy="19" r="1" fill="currentColor" /></g></symbol>
+        <symbol id="i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M10.5 18.5h3" stroke-linecap="round" /></g></symbol>
+        <symbol id="i-fabric" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3" /><circle cx="4.5" cy="6" r="1.8" /><circle cx="19.5" cy="6" r="1.8" /><circle cx="4.5" cy="18" r="1.8" /><circle cx="19.5" cy="18" r="1.8" /><path d="M6 7.2l3.6 3M18 7.2l-3.6 3M6 16.8l3.6-3M18 16.8l-3.6-3" /></g></symbol>
+        <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" /></symbol>
+        <symbol id="i-cursor" viewBox="0 0 24 24"><path fill="currentColor" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" d="M4 3l15 6.5-6.4 1.9-2.3 6.6z" /></symbol>
+      </svg>
+
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner qc-container">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">Telecom quoting software that turns complex deals into <em>signed proposals</em></h1>
+            <p class="hero__lede">Connectivity, voice, mobile and managed services, priced monthly and once-off on any contract term, in one interactive proposal your customer accepts online.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">No credit card required · <a href="#proposal">Open the sample proposal</a></p>
+          </div>
+
+          <div class="hero__visual" role="img" aria-label="Cover of a sample Connectivity and Voice Proposal for a fictional freight company with three sites, priced at 3,939 dollars a month on a 36-month term, with notes showing it came from a branded template and that the 36 percent margin is hidden from the customer.">
+            <div class="cv-stack">
+              <div class="cv-page cv-page--b2" aria-hidden="true">
+                <span class="cv-skel cv-skel--h"></span><span class="cv-skel"></span><span class="cv-skel cv-skel--s"></span>
+              </div>
+              <div class="cv-page cv-page--b1" aria-hidden="true">
+                <span class="cv-skel cv-skel--h"></span>
+                <span class="cv-row"><i></i><b></b></span><span class="cv-row"><i></i><b></b></span><span class="cv-row"><i></i><b></b></span><span class="cv-row"><i></i><b></b></span>
+              </div>
+              <div class="cv">
+                <div class="cv__art" aria-hidden="true">
+                  <svg class="fibre" viewBox="0 0 460 420" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                      <linearGradient id="fg-red" x1="0" x2="1"><stop offset="0" stop-color="#ff4d47" stop-opacity="0" /><stop offset=".55" stop-color="#ff4d47" /><stop offset="1" stop-color="#ffb199" /></linearGradient>
+                      <linearGradient id="fg-vio" x1="0" x2="1"><stop offset="0" stop-color="#7c64ff" stop-opacity="0" /><stop offset=".6" stop-color="#7c64ff" /><stop offset="1" stop-color="#c8bdff" /></linearGradient>
+                      <radialGradient id="fg-glow"><stop offset="0" stop-color="#5b3df5" stop-opacity=".38" /><stop offset="1" stop-color="#5b3df5" stop-opacity="0" /></radialGradient>
+                    </defs>
+                    <g class="fibre__grid"><path d="M0 60H460M0 120H460M0 180H460M0 240H460M0 300H460M0 360H460M60 0V420M120 0V420M180 0V420M240 0V420M300 0V420M360 0V420M420 0V420" /></g>
+                    <ellipse class="fibre__glow" cx="300" cy="150" rx="210" ry="120" fill="url(#fg-glow)" />
+                    <g class="fibre__base">
+                      <path d="M-20 262C100 254 165 196 245 168S392 92 480 64" />
+                      <path d="M-20 281C100 272 165 208 245 176S392 98 480 68" />
+                      <path d="M-20 300C100 290 165 220 245 184S392 103 480 73" />
+                      <path d="M-20 318C100 308 165 232 245 193S392 109 480 78" />
+                      <path d="M-20 337C100 326 165 244 245 201S392 115 480 82" />
+                      <path d="M-20 356C100 344 165 256 245 209S392 120 480 86" />
+                      <path d="M-20 374C100 362 165 268 245 218S392 126 480 91" />
+                      <path d="M-20 393C100 380 165 280 245 226S392 132 480 96" />
+                    </g>
+                    <g class="fibre__glints">
+                      <path class="g g1" pathLength="100" stroke="url(#fg-red)" d="M-20 281C100 272 165 208 245 176S392 98 480 68" />
+                      <path class="g g2" pathLength="100" stroke="url(#fg-vio)" d="M-20 318C100 308 165 232 245 193S392 109 480 78" />
+                      <path class="g g3" pathLength="100" stroke="url(#fg-vio)" d="M-20 356C100 344 165 256 245 209S392 120 480 86" />
+                      <path class="g g4" pathLength="100" stroke="url(#fg-red)" d="M-20 374C100 362 165 268 245 218S392 126 480 91" />
+                      <path class="g g5" pathLength="100" stroke="url(#fg-vio)" d="M-20 262C100 254 165 196 245 168S392 92 480 64" />
+                    </g>
+                    <circle class="fibre__node" cx="245" cy="193" r="3" />
+                  </svg>
+                </div>
+                <div class="cv__top">
+                  <span class="cv__brand"><span class="cv__mark">A</span>Arcline Communications</span>
+                  <span class="cv__ref">PR-2417</span>
+                </div>
+                <div class="cv__body">
+                  <p class="cv__title">Connectivity &amp;<br />Voice Proposal</p>
+                  <p class="cv__for">Prepared for Larkspur Freight Co.</p>
+                  <dl class="cv__meta">
+                    <div><dt>Sites</dt><dd>3</dd></div>
+                    <div><dt>Term</dt><dd>36 months</dd></div>
+                    <div><dt>Valid until</dt><dd>31 Oct</dd></div>
+                  </dl>
+                </div>
+                <div class="cv__foot">
+                  <div><span>Monthly</span><strong>$3,939</strong></div>
+                  <div><span>Once-off</span><strong>$10,302</strong></div>
+                  <span class="cv__accept">Review &amp; accept</span>
+                </div>
+              </div>
+              <div class="hnote hnote--tpl" aria-hidden="true"><span class="hnote__n">1</span>Branded telco template</div>
+              <div class="hnote hnote--mgn" aria-hidden="true"><svg width="16" height="16"><use href="#i-eyeoff" /></svg>Margin 36% · hidden from customer</div>
+              <div class="hnote hnote--view" aria-hidden="true"><span class="hnote__dot"></span>Opened by Larkspur · 9:41</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── The live proposal ───────── -->
+      <section class="pp-intro" id="proposal" aria-labelledby="pp-title">
+        <div class="qc-container pp-intro__inner" data-reveal>
+          <h2 id="pp-title">One proposal for every site, service and contract term</h2>
+          <p>Scroll the proposal your customer receives. Notes in the margin show how each part was built in QuoteCloud.</p>
+        </div>
+      </section>
+
+      <div class="pp qc-container" data-pp>
+        <div class="pp-barrow">
+          <div class="pp-bar" role="navigation" aria-label="Proposal sections">
+            <span class="pp-bar__doc"><span class="pp-bar__mark" aria-hidden="true">A</span><span class="pp-bar__name">Larkspur Freight Co.<small>PR-2417 · Voice &amp; data</small></span></span>
+            <ol class="pp-bar__tabs">
+              <li><a href="#pp-summary">Summary</a></li>
+              <li><a href="#pp-network">Network</a></li>
+              <li><a href="#pp-sites">Sites</a></li>
+              <li><a href="#pp-pricing">Pricing</a></li>
+              <li><a href="#pp-timeline">Timeline</a></li>
+              <li><a href="#pp-terms">Terms</a></li>
+            </ol>
+            <span class="pp-bar__total" aria-live="off"><small data-bar-term>36-month</small><strong data-total="mrc-bar">$3,939</strong><small>/mo</small></span>
+            <a class="pp-bar__accept" href="#pp-accept">Accept</a>
+            <span class="pp-bar__progress" aria-hidden="true"><span></span></span>
+          </div>
+        </div>
+
+        <!-- Cover band -->
+        <section class="pp-sec pp-sec--cover" aria-labelledby="pp-cover-title">
+          <div class="pp-sec__doc">
+            <div class="pp-cover">
+              <div class="pp-cover__art" aria-hidden="true">
+                <svg class="fibre" viewBox="0 0 900 260" preserveAspectRatio="xMidYMid slice">
+                  <g class="fibre__grid"><path d="M0 52H900M0 104H900M0 156H900M0 208H900M90 0V260M180 0V260M270 0V260M360 0V260M450 0V260M540 0V260M630 0V260M720 0V260M810 0V260" /></g>
+                  <g class="fibre__base">
+                    <path d="M-20 220C200 210 330 140 470 110S760 40 920 30" />
+                    <path d="M-20 245C230 240 360 180 500 150S780 90 920 85" />
+                    <path d="M-20 200C170 190 300 100 440 70S730 0 920 -10" />
+                  </g>
+                  <g class="fibre__glints">
+                    <path class="g g1" pathLength="100" stroke="url(#fg-red)" d="M-20 220C200 210 330 140 470 110S760 40 920 30" />
+                    <path class="g g2" pathLength="100" stroke="url(#fg-vio)" d="M-20 245C230 240 360 180 500 150S780 90 920 85" />
+                    <path class="g g3" pathLength="100" stroke="url(#fg-vio)" d="M-20 200C170 190 300 100 440 70S730 0 920 -10" />
+                  </g>
+                </svg>
+              </div>
+              <div class="pp-cover__top"><span class="cv__brand"><span class="cv__mark">A</span>Arcline Communications</span><span class="cv__ref">PR-2417 · v3</span></div>
+              <h3 class="pp-cover__title" id="pp-cover-title">Connectivity &amp; Voice Proposal</h3>
+              <p class="pp-cover__for">Prepared for Dana Whitfield, Operations Director, Larkspur Freight Co.</p>
+            </div>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">1</span><span class="anno__t">Branded telco template</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-template" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">1</span>Branded telco template</p>
+                <p class="anno__text">Cover, colours and layout come from a company template set up once by marketing. Sales just picks it.</p>
+                <a class="anno__link" href="https://www.quote.cloud/templates/telecommunications">Telco templates</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="pp-sec" id="pp-summary" aria-labelledby="pp-summary-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">01 · Solution summary</p>
+            <h3 class="pp-h" id="pp-summary-title">One managed network for every Larkspur site</h3>
+            <p class="pp-p">Head office, warehouse and depot move onto a single SD-WAN fabric with business fibre, hosted voice for every desk and a managed mobile fleet, all supported by one team and one monthly bill.</p>
+            <ul class="pp-kpis" data-reveal-stagger="90">
+              <li data-reveal><svg width="20" height="20" aria-hidden="true"><use href="#i-pin" /></svg><strong data-count-to="3">3</strong><span>sites connected</span></li>
+              <li data-reveal><svg width="20" height="20" aria-hidden="true"><use href="#i-phone" /></svg><strong data-count-to="48">48</strong><span>hosted voice seats</span></li>
+              <li data-reveal><svg width="20" height="20" aria-hidden="true"><use href="#i-mobile" /></svg><strong data-count-to="22">22</strong><span>mobiles with handsets</span></li>
+              <li data-reveal><svg width="20" height="20" aria-hidden="true"><use href="#i-fabric" /></svg><strong data-count-to="1">1</strong><span>managed SD-WAN</span></li>
+            </ul>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">2</span><span class="anno__t">Pulled from the Content Library</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-library" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">2</span>Pulled from the Content Library</p>
+                <p class="anno__text">Approved service descriptions drop in from the Telecom Library. Customer, contact and sites merge from the CRM opportunity.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Network -->
+        <section class="pp-sec" id="pp-network" aria-labelledby="pp-network-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">02 · Network design</p>
+            <h3 class="pp-h" id="pp-network-title">How your sites connect</h3>
+            <figure class="net" data-net>
+              <div class="net__stage">
+                <svg class="net__lines" aria-hidden="true"></svg>
+                <div class="net__pulses" aria-hidden="true"></div>
+                <div class="net__node net__node--site" data-node="hq" style="--a: hq"><svg width="20" height="20" aria-hidden="true"><use href="#i-building" /></svg><span><b>Head office</b>1 Gbps fibre · 48 seats</span></div>
+                <div class="net__node net__node--site" data-node="wh" style="--a: wh"><svg width="20" height="20" aria-hidden="true"><use href="#i-warehouse" /></svg><span><b>Warehouse</b>500 Mbps · managed Wi‑Fi</span></div>
+                <div class="net__node net__node--site" data-node="dp" style="--a: dp"><svg width="20" height="20" aria-hidden="true"><use href="#i-truck" /></svg><span><b>Depot</b>5G + SD-WAN edge</span></div>
+                <div class="net__node net__node--core" data-node="core"><svg width="26" height="26" aria-hidden="true"><use href="#i-fabric" /></svg><span><b>SD-WAN fabric</b>Managed 24/7 by Arcline</span></div>
+                <div class="net__node net__node--svc" data-node="inet"><svg width="20" height="20" aria-hidden="true"><use href="#i-globe" /></svg><span><b>Internet</b>Secure breakout</span></div>
+                <div class="net__node net__node--svc" data-node="pbx"><svg width="20" height="20" aria-hidden="true"><use href="#i-phone" /></svg><span><b>Hosted PBX</b>SIP trunks</span></div>
+                <div class="net__node net__node--svc" data-node="m365"><svg width="20" height="20" aria-hidden="true"><use href="#i-cloud" /></svg><span><b>Microsoft 365</b>48 users</span></div>
+                <div class="net__cursor" aria-hidden="true"><svg width="18" height="18"><use href="#i-cursor" /></svg><span>Sam · Engineering</span></div>
+              </div>
+              <figcaption class="net__cap"><span class="net__item"><span class="net__key net__key--p"></span>Primary fibre</span> <span class="net__item"><span class="net__key net__key--b"></span>5G failover</span> <span class="net__item"><span class="net__key net__key--s"></span>Cloud services</span></figcaption>
+            </figure>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">3</span><span class="anno__t">Drawn by engineering, in the same proposal</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-diagram" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">3</span>Drawn by engineering, in the same proposal</p>
+                <p class="anno__text">Pre-sales added this with the built-in network diagram block while sales priced the deal. One live document, no versions emailed around.</p>
+                <a class="anno__link" href="https://www.quote.cloud/collaboration">Real-time collaboration</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Sites -->
+        <section class="pp-sec" id="pp-sites" aria-labelledby="pp-sites-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">03 · Sites &amp; services</p>
+            <h3 class="pp-h" id="pp-sites-title">What each site gets</h3>
+            <ul class="sites" data-reveal-stagger="110">
+              <li class="site" data-reveal>
+                <p class="site__head"><svg width="20" height="20" aria-hidden="true"><use href="#i-building" /></svg><span><b>Head office</b>Level 4, 120 Harbour Rd</span></p>
+                <ul class="site__list">
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-globe" /></svg>Business Fibre 1 Gbps</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-phone" /></svg>Hosted PBX · 30 seats</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-fabric" /></svg>SD-WAN edge</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-cloud" /></svg>Microsoft 365 · 30 users</li>
+                </ul>
+                <p class="site__sum"><span>Site monthly</span><strong data-site="hq">$1,569</strong></p>
+              </li>
+              <li class="site" data-reveal>
+                <p class="site__head"><svg width="20" height="20" aria-hidden="true"><use href="#i-warehouse" /></svg><span><b>Warehouse</b>14 Dock St</span></p>
+                <ul class="site__list">
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-globe" /></svg>Business Fibre 500 Mbps</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-wifi" /></svg>Managed Wi-Fi · 12 APs</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-phone" /></svg>Hosted PBX · 12 seats</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-fabric" /></svg>SD-WAN edge</li>
+                </ul>
+                <p class="site__sum"><span>Site monthly</span><strong data-site="wh">$812</strong></p>
+              </li>
+              <li class="site" data-reveal>
+                <p class="site__head"><svg width="20" height="20" aria-hidden="true"><use href="#i-truck" /></svg><span><b>Depot</b>3 Rail Yard Ln</span></p>
+                <ul class="site__list">
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-fabric" /></svg>SD-WAN edge · 5G</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-phone" /></svg>Hosted PBX · 6 seats</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-mobile" /></svg>22 mobiles on fleet plan</li>
+                  <li><svg width="16" height="16" aria-hidden="true"><use href="#i-cloud" /></svg>Microsoft 365 · 18 users</li>
+                </ul>
+                <p class="site__sum"><span>Site monthly</span><strong data-site="dp">$1,558</strong></p>
+              </li>
+            </ul>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">4</span><span class="anno__t">Organised by location</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-pin" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">4</span>Organised by location</p>
+                <p class="anno__text">Multi-site proposals keep connectivity, hardware and services per site, and every site rolls up into one total.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pp-sec pp-sec--pricing" id="pp-pricing" aria-labelledby="pp-pricing-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">04 · Investment</p>
+            <div class="pt-head">
+              <h3 class="pp-h" id="pp-pricing-title">Monthly and once-off pricing</h3>
+              <fieldset class="seg" data-term>
+                <legend class="qc-sr-only">Contract term</legend>
+                <label><input type="radio" name="pp-term" value="12" /><span>12 months</span></label>
+                <label><input type="radio" name="pp-term" value="24" /><span>24 months</span></label>
+                <label><input type="radio" name="pp-term" value="36" checked /><span>36 months</span></label>
+                <span class="seg__thumb" aria-hidden="true"></span>
+              </fieldset>
+            </div>
+
+            <div class="pt-wrap">
+              <table class="pt" data-pt>
+                <caption class="qc-sr-only">Services, quantities, monthly recurring and once-off charges for the selected contract term</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Service</th>
+                    <th scope="col" class="pt-qty">Qty</th>
+                    <th scope="col" class="pt-int">Buy rate</th>
+                    <th scope="col" class="pt-int">Margin</th>
+                    <th scope="col" class="pt-num">Monthly</th>
+                    <th scope="col" class="pt-num">Once-off</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="pt-group"><th scope="colgroup" colspan="6"><svg width="16" height="16" aria-hidden="true"><use href="#i-globe" /></svg>Connectivity</th></tr>
+                  <tr data-line="fib1g">
+                    <th scope="row"><span class="pt-name">Business Fibre 1 Gbps</span><span class="pt-sub">Head office · <span data-cell="unit">$549.00</span> each</span></th>
+                    <td class="pt-qty" data-label="Qty">1</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$318</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">42%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$549</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">—</td>
+                  </tr>
+                  <tr data-line="fib500">
+                    <th scope="row"><span class="pt-name">Business Fibre 500 Mbps</span><span class="pt-sub">Warehouse · <span data-cell="unit">$359.00</span> each</span></th>
+                    <td class="pt-qty" data-label="Qty">1</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$214</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">40%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$359</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">—</td>
+                  </tr>
+                  <tr data-line="sdwan">
+                    <th scope="row"><span class="pt-name">SD-WAN edge service + appliance</span><span class="pt-sub">All sites · <span data-cell="unit">$75.00</span> per site</span></th>
+                    <td class="pt-qty" data-label="Qty">3</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$123</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">45%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$225</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">$2,070</td>
+                  </tr>
+                  <tr class="pt-group"><th scope="colgroup" colspan="6"><svg width="16" height="16" aria-hidden="true"><use href="#i-phone" /></svg>Voice &amp; mobile</th></tr>
+                  <tr data-line="pbx">
+                    <th scope="row"><span class="pt-name">Hosted PBX seat + SIP</span><span class="pt-sub">Bundle · <span data-cell="unit">$19.00</span> per seat</span></th>
+                    <td class="pt-qty" data-label="Qty">48</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$547</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">40%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$912</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">—</td>
+                  </tr>
+                  <tr data-line="phones">
+                    <th scope="row"><span class="pt-name">IP desk phones</span><span class="pt-sub">Hardware · <span data-cell="unit">$99.00</span> each</span></th>
+                    <td class="pt-qty" data-label="Qty">48</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$3,552</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">25%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">—</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">$4,752</td>
+                  </tr>
+                  <tr data-line="mobile">
+                    <th scope="row"><span class="pt-name">Mobile 40 GB plan + handset</span><span class="pt-sub">Device on plan · <span data-cell="unit">$52.00</span> per service</span></th>
+                    <td class="pt-qty" data-label="Qty">22</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$726</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">37%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$1,144</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">—</td>
+                  </tr>
+                  <tr class="pt-group"><th scope="colgroup" colspan="6"><svg width="16" height="16" aria-hidden="true"><use href="#i-cloud" /></svg>Cloud &amp; managed services</th></tr>
+                  <tr data-line="m365">
+                    <th scope="row"><span class="pt-name">Microsoft 365 Business Standard</span><span class="pt-sub">Subscription · <span data-cell="unit">$12.50</span> per user</span></th>
+                    <td class="pt-qty" data-label="Qty">48</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$509</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">15%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$600</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">—</td>
+                  </tr>
+                  <tr data-line="wifi">
+                    <th scope="row"><span class="pt-name">Managed Wi-Fi + access points</span><span class="pt-sub">Warehouse · <span data-cell="unit">$12.50</span> per AP</span></th>
+                    <td class="pt-qty" data-label="Qty">12</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$74</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">50%</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">$150</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">$3,480</td>
+                  </tr>
+                  <tr data-line="install">
+                    <th scope="row"><span class="pt-name">Installation &amp; project setup</span><span class="pt-sub">3 sites, project managed <span class="pt-flag" data-cell="flag">Approved waiver</span></span></th>
+                    <td class="pt-qty" data-label="Qty">1</td>
+                    <td class="pt-int" data-label="Buy rate" data-cell="buy">$1,450</td>
+                    <td class="pt-int" data-label="Margin" data-cell="margin">—</td>
+                    <td class="pt-num" data-label="Monthly" data-cell="mrc">—</td>
+                    <td class="pt-num" data-label="Once-off" data-cell="nrc">Waived</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pt-foot">
+              <fieldset class="opts">
+                <legend>Optional upgrades</legend>
+                <label class="opt"><input type="checkbox" data-opt="fail5g" /><span class="opt__box" aria-hidden="true"><svg width="14" height="14"><use href="#i-check" /></svg></span><span class="opt__body"><span class="opt__name">5G failover, head office</span><span class="opt__sub">Automatic backup if the fibre drops</span></span><span class="opt__price" data-optprice="fail5g">+$49/mo</span></label>
+                <label class="opt"><input type="checkbox" data-opt="support" /><span class="opt__box" aria-hidden="true"><svg width="14" height="14"><use href="#i-check" /></svg></span><span class="opt__body"><span class="opt__name">24/7 premium support</span><span class="opt__sub">1-hour response, named engineer</span></span><span class="opt__price" data-optprice="support">+$240/mo</span></label>
+                <label class="opt"><input type="checkbox" data-opt="rec" /><span class="opt__box" aria-hidden="true"><svg width="14" height="14"><use href="#i-check" /></svg></span><span class="opt__body"><span class="opt__name">Call recording, all seats</span><span class="opt__sub">90-day retention</span></span><span class="opt__price" data-optprice="rec">+$168/mo</span></label>
+              </fieldset>
+
+              <div class="totals" aria-live="polite">
+                <div class="totals__row"><span>Monthly recurring</span><strong data-total="mrc">$3,939</strong></div>
+                <div class="totals__row"><span>Once-off</span><strong data-total="nrc">$10,302</strong></div>
+                <div class="totals__row totals__row--tcv"><span>Contract value, <span data-term-label>36 months</span></span><strong data-total="tcv">$152,106</strong></div>
+                <p class="totals__save" data-save>Saving $874/mo against the 12‑month term</p>
+              </div>
+            </div>
+
+            <div class="internal">
+              <button class="internal__toggle" type="button" aria-pressed="false" data-internal-toggle><span class="internal__switch" aria-hidden="true"></span>Show sales view</button>
+              <p class="internal__msg" data-internal-msg>Sales view: blended margin <strong data-total="margin">36%</strong> against a 30% floor. Buy rates and margins never appear in the customer's copy.</p>
+            </div>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">5</span><span class="anno__t">Priced by catalogue rules</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-catalogue" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">5</span>Priced by catalogue rules</p>
+                <p class="anno__text">SKUs, bundles, devices on plans and 12/24/36-month price tables come straight from your product catalogue. Try the term switch.</p>
+                <a class="anno__link" href="https://www.quote.cloud/cpq-software">CPQ for telecom</a>
+              </div>
+            </aside>
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">6</span><span class="anno__t">Carrier costs and margins hidden</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-eyeoff" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">6</span>Carrier costs and margins hidden</p>
+                <p class="anno__text">Buy rates and margin sit inside the quote for your team only. Flip to the sales view to see them.</p>
+              </div>
+            </aside>
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">7</span><span class="anno__t">Waiver approved by a manager</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-approve" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">7</span>Waiver approved by a manager</p>
+                <p class="anno__text">Waiving installation on 36 months triggered an approval workflow. Approved in QuoteCloud, not in an email thread.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="pp-sec" id="pp-timeline" aria-labelledby="pp-timeline-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">05 · Implementation</p>
+            <h3 class="pp-h" id="pp-timeline-title">Signature to go‑live in eight weeks</h3>
+            <div class="gantt" data-gantt>
+              <div class="gantt__weeks" aria-hidden="true"><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div>
+              <ol class="gantt__rows">
+                <li style="--s: 0; --e: 1"><span class="gantt__label">Discovery</span><span class="gantt__track"><span class="gantt__bar"><span class="qc-sr-only">Week 1</span></span></span></li>
+                <li style="--s: 1; --e: 2"><span class="gantt__label">Design</span><span class="gantt__track"><span class="gantt__bar"><span class="qc-sr-only">Week 2</span></span></span></li>
+                <li style="--s: 2; --e: 5"><span class="gantt__label">Provision</span><span class="gantt__track"><span class="gantt__bar"><span class="qc-sr-only">Weeks 3 to 5</span></span></span></li>
+                <li style="--s: 4; --e: 7"><span class="gantt__label">Deploy</span><span class="gantt__track"><span class="gantt__bar"><span class="qc-sr-only">Weeks 5 to 7</span></span></span></li>
+                <li class="is-live" style="--s: 7; --e: 8"><span class="gantt__label">Go live</span><span class="gantt__track"><span class="gantt__bar"><span class="qc-sr-only">Week 8</span></span></span></li>
+              </ol>
+            </div>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">8</span><span class="anno__t">Timeline block, agreed before signature</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-gantt" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">8</span>Timeline block, agreed before signature</p>
+                <p class="anno__text">The project team set delivery phases with the Gantt block, so the customer signs off on dates as well as price.</p>
+                <a class="anno__link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">18 content blocks</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Terms -->
+        <section class="pp-sec" id="pp-terms" aria-labelledby="pp-terms-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">06 · Service levels &amp; terms</p>
+            <h3 class="pp-h" id="pp-terms-title">Service levels and contract terms</h3>
+            <ul class="sla" data-reveal-stagger="90">
+              <li data-reveal><strong>99.95%</strong><span>Fibre availability target</span></li>
+              <li data-reveal><strong>4 h</strong><span>Fault response, business hours</span></li>
+              <li data-reveal><strong>24/7</strong><span>Network monitoring</span></li>
+            </ul>
+            <div class="clauses">
+              <details class="clause" open>
+                <summary>Minimum term</summary>
+                <p>Services run for a minimum of <strong data-term-label>36 months</strong> from go‑live, then continue month to month until either party gives 30 days' notice.</p>
+              </details>
+              <details class="clause">
+                <summary>Hardware and installation</summary>
+                <p>Hardware becomes Larkspur's property on payment of the once-off charges. Installation includes cabling surveys, configuration and testing at each site.</p>
+              </details>
+              <details class="clause">
+                <summary>Fair use and support</summary>
+                <p>Support covers all services in this proposal. Moves, adds and changes are quoted separately through the same portal.</p>
+              </details>
+            </div>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">9</span><span class="anno__t">Locked contract wording</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-lock" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">9</span>Locked contract wording</p>
+                <p class="anno__text">SLA and legal clauses come from the Company Library: approved once, reused as written. The term updates itself.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Accept -->
+        <section class="pp-sec pp-sec--accept" id="pp-accept" aria-labelledby="pp-accept-title">
+          <div class="pp-sec__doc">
+            <p class="pp-num" aria-hidden="true">07 · Acceptance</p>
+            <h3 class="pp-h" id="pp-accept-title">Accept and sign</h3>
+            <form class="sign" data-sign novalidate>
+              <div class="sign__summary">
+                <p class="sign__line"><span>Term</span><strong data-term-label>36 months</strong></p>
+                <p class="sign__line"><span>Monthly</span><strong data-total="mrc">$3,939</strong></p>
+                <p class="sign__line"><span>Once-off</span><strong data-total="nrc">$10,302</strong></p>
+                <p class="sign__line"><span>Upgrades</span><strong data-opts-label>None selected</strong></p>
+              </div>
+              <div class="sign__pad">
+                <label class="sign__field"><span>Full name</span><input type="text" name="name" autocomplete="off" placeholder="Type your name to sign" data-sign-name /></label>
+                <div class="sign__sig" aria-hidden="true">
+                  <span class="sign__script" data-sign-script>Dana Whitfield</span>
+                  <svg class="sign__ink" viewBox="0 0 300 40" preserveAspectRatio="none"><path pathLength="1" d="M4 30C60 34 120 22 170 28S260 36 296 22" /></svg>
+                  <span class="sign__x">×</span>
+                </div>
+                <label class="sign__agree"><input type="checkbox" data-sign-agree /><span class="opt__box" aria-hidden="true"><svg width="14" height="14"><use href="#i-check" /></svg></span><span>I accept this proposal and its terms on behalf of Larkspur Freight Co.</span></label>
+                <p class="sign__err" data-sign-err role="alert"></p>
+                <button class="sign__btn" type="submit" data-sign-btn><svg width="18" height="18" aria-hidden="true"><use href="#i-sign" /></svg>Accept &amp; sign</button>
+              </div>
+              <div class="sign__done" data-sign-done hidden tabindex="-1">
+                <p class="sign__stamp"><svg width="20" height="20" aria-hidden="true"><use href="#i-check" /></svg>Proposal accepted</p>
+                <ol class="audit">
+                  <li><span>9:41</span>Opened by Dana Whitfield</li>
+                  <li><span>9:46</span>Chose <b data-term-label>36 months</b> · <b data-opts-audit>no upgrades</b></li>
+                  <li><span data-sign-time>9:52</span>Signed by <b data-sign-who>Dana Whitfield</b> · 256-bit encrypted</li>
+                  <li><span>Next</span>Once-off invoice ready to pay by card</li>
+                </ol>
+                <button class="sign__reset" type="button" data-sign-reset>Reset the demo</button>
+              </div>
+            </form>
+          </div>
+          <div class="pp-sec__notes">
+            <aside class="anno" aria-label="How this was built">
+              <button class="anno__pin" type="button" aria-expanded="false"><span class="anno__n">10</span><span class="anno__t">Legally binding eSignature</span><svg class="anno__chev" width="18" height="18" aria-hidden="true"><use href="#i-chev" /></svg></button>
+              <div class="anno__card">
+                <span class="anno__icon" aria-hidden="true"><svg width="18" height="18"><use href="#i-sign" /></svg></span>
+                <p class="anno__title"><span class="anno__n" aria-hidden="true">10</span>Legally binding eSignature</p>
+                <p class="anno__text">eIDAS compliant, 256-bit encryption and a full audit trail. Chosen options and the signed value flow back to your CRM.</p>
+                <a class="anno__link" href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </div>
+
+      <!-- ───────── Templates + mid CTA ───────── -->
+      <section class="tpl" aria-labelledby="tpl-title">
+        <div class="qc-container tpl__inner">
+          <div class="tpl__copy" data-reveal>
+            <h2 id="tpl-title">Send your first telco proposal <em>this afternoon</em></h2>
+            <p>Start from a ready-made telecommunications template, load your catalogue, and quote.</p>
+            <div class="tpl__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="templates">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="tpl__more" href="https://www.quote.cloud/templates/telecommunications">Browse telco templates <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+          </div>
+          <ul class="tpl__covers" data-reveal-stagger="120">
+            <li data-reveal><a href="https://www.quote.cloud/templates/telecommunications"><img src="/assets/telco/template-network-rack.jpg" width="566" height="800" loading="lazy" decoding="async" alt="Network Installation Proposal template cover with a server rack photo" /><span>Network installation</span></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/templates/telecommunications"><img src="/assets/telco/template-mobile-internet-bundle.jpg" width="566" height="800" loading="lazy" decoding="async" alt="Mobile and Internet Bundle Proposal template cover with a city skyline" /><span>Mobile &amp; internet bundle</span></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/templates/telecommunications"><img src="/assets/telco/template-mobile-plan.jpg" width="566" height="800" loading="lazy" decoding="async" alt="Mobile Phone Plan proposal template cover" /><span>Mobile phone plan</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="intg" aria-labelledby="intg-title">
+        <div class="qc-container">
+          <div class="intg__head" data-reveal>
+            <h2 id="intg-title">Your CRM, billing and catalogue, <em>already in the quote</em></h2>
+            <p>Customer, product and opportunity data flow in, so nobody re-keys a deal.</p>
+          </div>
+          <div class="intg__flow" data-intg>
+            <ul class="intg__col" aria-label="CRM integrations" data-reveal-stagger="70">
+              <li data-reveal><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img class="lg lg--w" src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img class="lg lg--m" src="/assets/integrations/hub-spot.png" alt="HubSpot" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img class="lg lg--m" src="/assets/integrations/mondaydotcom-logo.jpg" alt="monday.com" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/all-integrations"><img class="lg lg--m" src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a class="intg__word" href="https://www.quote.cloud/pipedrive-integration-with-quotecloud">Pipedrive</a></li>
+              <li data-reveal><a class="intg__word" href="https://www.quote.cloud/all-integrations">Zoho</a></li>
+            </ul>
+            <div class="intg__hub" aria-hidden="true">
+              <svg class="intg__wires" viewBox="0 0 400 300" preserveAspectRatio="none">
+                <path pathLength="100" d="M0 40C120 40 110 150 200 150" /><path pathLength="100" d="M0 150H200" /><path pathLength="100" d="M0 260C120 260 110 150 200 150" />
+                <path pathLength="100" d="M200 150C290 150 280 40 400 40" /><path pathLength="100" d="M200 150H400" /><path pathLength="100" d="M200 150C290 150 280 260 400 260" />
+              </svg>
+              <div class="intg__card">
+                <span class="intg__card-top"><span class="pp-bar__mark">A</span>PR-2417</span>
+                <b>Larkspur Freight Co.</b>
+                <span class="intg__card-row"><span>Opportunity</span><span>Synced</span></span>
+                <span class="intg__card-row"><span>Products</span><span>9 SKUs</span></span>
+                <span class="intg__card-row"><span>Status</span><span class="is-ok">Signed</span></span>
+              </div>
+            </div>
+            <ul class="intg__col" aria-label="Payment, accounting and data integrations" data-reveal-stagger="70">
+              <li data-reveal><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img class="lg lg--w" src="/assets/integrations/stripe.png" alt="Stripe" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img class="lg lg--m" src="/assets/integrations/paypal.png" alt="PayPal" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/all-integrations"><img class="lg lg--c" src="/assets/integrations/xero.png" alt="Xero" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/all-integrations"><img class="lg lg--c" src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/all-integrations"><img class="lg lg--m" src="/assets/integrations/googlesheets.png" alt="Google Sheets" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal><a href="https://www.quote.cloud/all-integrations"><img class="lg lg--w" src="/assets/integrations/excel.png" alt="Microsoft Excel" width="124" height="70" loading="lazy" decoding="async" /></a></li>
+            </ul>
+          </div>
+          <p class="intg__all"><a href="https://www.quote.cloud/all-integrations">See all integrations and the API <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="proof-title">Ratings, security and compliance</h2>
+          <ul class="proof__list" data-reveal-stagger="80">
+            <li data-reveal><span class="proof__stars" aria-hidden="true"><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16" class="is-dim"><use href="#i-star" /></svg></span><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span></strong><span>on Capterra</span></li>
+            <li data-reveal><span class="proof__stars" aria-hidden="true"><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16"><use href="#i-star" /></svg><svg width="16" height="16" class="is-dim"><use href="#i-star" /></svg></span><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span></strong><span>on Software Advice</span></li>
+            <li data-reveal><strong>Since <span data-count-to="2013" data-count-format="plain">2013</span></strong><span>building document software</span></li>
+            <li data-reveal class="proof__logos">
+              <img src="/assets/compliance/eidas.svg" alt="eIDAS compliant" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" alt="256-bit encryption" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" alt="Hosted on AWS" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/gdpr.png" alt="GDPR compliant" width="64" height="40" loading="lazy" decoding="async" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- @include faq-telco -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="close__art" aria-hidden="true">
+          <svg class="fibre" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice">
+            <g class="fibre__base">
+              <path d="M-20 380C300 370 480 260 640 200S1000 80 1220 60" />
+              <path d="M-20 410C330 400 520 310 680 250S1020 140 1220 130" />
+              <path d="M-20 350C260 340 440 210 600 150S960 20 1220 0" />
+            </g>
+            <g class="fibre__glints">
+              <path class="g g1" pathLength="100" stroke="url(#fg-red)" d="M-20 380C300 370 480 260 640 200S1000 80 1220 60" />
+              <path class="g g2" pathLength="100" stroke="url(#fg-vio)" d="M-20 410C330 400 520 310 680 250S1020 140 1220 130" />
+              <path class="g g3" pathLength="100" stroke="url(#fg-vio)" d="M-20 350C260 340 440 210 600 150S960 20 1220 0" />
+            </g>
+          </svg>
+        </div>
+        <div class="qc-container close__inner" data-reveal>
+          <h2 id="close-title">Just click, quote, <em>and close.</em></h2>
+          <p>Give your team telecom quotes that are accurate, approved and ready to sign.</p>
+          <div class="close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

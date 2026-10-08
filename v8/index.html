@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="v8">
+    <!-- @include header -->
+    <div class="v8-rails" aria-hidden="true"></div>
+    <main id="main">
+      <!-- ───────── Hero ───────── -->
+      <section class="v8-hero" id="hero" aria-labelledby="hero-title">
+        <div class="qc-container">
+          <div class="g v8-hero__grid" data-grid data-reveal-stagger="90">
+            <div class="g-cell v8-hero__head" style="--c: 12">
+              <h1 id="hero-title" data-reveal>
+                Quoting software for <em>faster quotes</em> and winning proposals.
+              </h1>
+            </div>
+            <div class="g-cell v8-hero__copy" style="--c: 5; --c-md: 12">
+              <p data-reveal>
+                One editor for proposals, quotes and contracts — priced, shared and eSigned as an interactive document,
+                not a static PDF.
+              </p>
+              <div class="v8-cta" data-reveal>
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                  Start free 14-day trial
+                  <svg class="qc-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+              </div>
+              <p class="v8-note" data-reveal>No credit card required.</p>
+            </div>
+            <div class="g-cell v8-hero__win" style="--c: 7; --c-md: 12">
+              <div class="v8-parallax" data-parallax>
+                <!-- Editor product window (code-built) -->
+                <div class="v8-win v8-editor" data-scene="editor" aria-hidden="true">
+                  <div class="v8-win__bar">
+                    <span class="v8-win__dots"><i></i><i></i><i></i></span>
+                    <span class="v8-win__title">Acme Fit-out — Proposal</span>
+                    <span class="v8-win__people"><i>JD</i><i class="v8-win__mia">MK</i></span>
+                    <span class="v8-win__share">Share</span>
+                  </div>
+                  <div class="v8-editor__body">
+                    <aside class="v8-palette">
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><path d="M4 5h12M10 5v11" /></svg><span>Text</span></div>
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M5 14l4-5 3 3 2-2 3 4"/></svg><span>Image</span></div>
+                      <div class="v8-palette__item v8-palette__item--pricing"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M3 9h14M8 9v7"/></svg><span>Pricing</span></div>
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M6 8h8M6 12h5"/></svg><span>Form</span></div>
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><path d="M3 6h7M7 10h8M5 14h6"/></svg><span>Gantt</span></div>
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><rect x="7" y="2" width="6" height="4" rx="1"/><rect x="2" y="13" width="6" height="4" rx="1"/><rect x="12" y="13" width="6" height="4" rx="1"/><path d="M10 6v4M10 10H5v3M10 10h5v3"/></svg><span>Diagram</span></div>
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M8 7.5v5l4.5-2.5z"/></svg><span>Video</span></div>
+                      <div class="v8-palette__item"><svg viewBox="0 0 20 20"><path d="M3 15c3-6 5-7 6-5s1 4 3 2 3-3 5-1"/></svg><span>Sign</span></div>
+                    </aside>
+                    <div class="v8-page">
+                      <div class="v8-page__title">Fit-out proposal</div>
+                      <div class="v8-page__sub">Prepared for Acme Pty Ltd</div>
+                      <div class="v8-lines"><i style="--w: 100%"></i><i style="--w: 86%"></i><i style="--w: 93%"></i></div>
+                      <div class="v8-page__media"></div>
+                      <div class="v8-price">
+                        <div class="v8-price__row v8-price__row--h"><span>Item</span><span>Qty</span><span>Total</span></div>
+                        <div class="v8-price__row"><span>Workstations &amp; seating</span><span>24</span><span>$12,400</span></div>
+                        <div class="v8-price__row"><span>Install &amp; cabling</span><span>1</span><span>$6,000</span></div>
+                        <div class="v8-price__row v8-price__row--opt"><span><i class="v8-check"></i>Acoustic panels <small>optional</small></span><span>8</span><span>$3,500</span></div>
+                        <div class="v8-price__row v8-price__row--total"><span>Total</span><span></span><span class="v8-total"><b>$18,400</b><b>$21,900</b></span></div>
+                      </div>
+                      <div class="v8-comment">Add the project timeline here?</div>
+                    </div>
+                  </div>
+                  <div class="v8-cursor v8-cursor--me"></div>
+                  <div class="v8-cursor v8-cursor--mia"><span>Mia</span></div>
+                  <div class="v8-ghost">Pricing table</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Features 01–08 ───────── -->
+      <section class="v8-features" id="features" aria-labelledby="features-title">
+        <div class="qc-container">
+          <div class="g" data-grid data-reveal-stagger="70">
+            <div class="g-cell v8-sechead" style="--c: 12">
+              <h2 id="features-title" data-reveal>Everything a deal document needs, <em>in one editor.</em></h2>
+            </div>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud" data-feat>
+              <span class="v8-feat__n">01</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <rect x="40" y="6" width="120" height="108" rx="4" class="ln"/>
+                  <g class="mv-blk" style="--del: 0s"><rect x="52" y="18" width="48" height="7" rx="2" class="fl-ink"/></g>
+                  <g class="mv-blk" style="--del: .45s"><rect x="52" y="31" width="96" height="2.5" rx="1" class="fl-mute"/><rect x="52" y="37" width="80" height="2.5" rx="1" class="fl-mute"/></g>
+                  <g class="mv-blk" style="--del: .9s"><rect x="52" y="48" width="44" height="30" rx="3" class="ln"/><path d="M57 72l10-12 8 8 6-5 10 9" class="ln"/></g>
+                  <g class="mv-blk" style="--del: 1.35s"><rect x="104" y="48" width="44" height="30" rx="3" class="ln"/><path d="M104 58h44M104 68h44M126 48v30" class="ln"/></g>
+                  <g class="mv-blk" style="--del: 1.8s"><rect x="52" y="86" width="96" height="18" rx="3" class="ln"/><rect x="58" y="91" width="30" height="3" rx="1.5" class="fl-accent"/><rect x="80" y="97" width="40" height="3" rx="1.5" class="fl-violet"/><rect x="112" y="91" width="28" height="3" rx="1.5" class="fl-mute"/></g>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">18 content blocks</h3>
+              <p class="v8-feat__p">Text, images, video, diagrams, forms, spreadsheets, Gantt charts and more.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/canvas-and-grid-mode-document-editing" data-feat>
+              <span class="v8-feat__n">02</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <g class="mv-mode" style="--ax: -10px; --ay: 8px; --ar: -9deg"><rect x="52" y="30" width="42" height="26" rx="3" class="ln"/></g>
+                  <g class="mv-mode" style="--ax: 12px; --ay: -6px; --ar: 7deg"><rect x="106" y="30" width="42" height="26" rx="3" class="ln"/></g>
+                  <g class="mv-mode" style="--ax: 6px; --ay: 10px; --ar: 5deg"><rect x="52" y="64" width="42" height="26" rx="3" class="ln"/></g>
+                  <g class="mv-mode" style="--ax: -14px; --ay: -4px; --ar: -6deg"><rect x="106" y="64" width="42" height="26" rx="3" class="ln"/></g>
+                  <g class="mv-toggle"><rect x="70" y="100" width="60" height="14" rx="7" class="ln"/><rect x="72" y="102" width="28" height="10" rx="5" class="mv-knob fl-ink"/><text x="86" y="110" class="mv-txt mv-txt--a">Canvas</text><text x="114" y="110" class="mv-txt mv-txt--b">Grid</text></g>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">Canvas &amp; Grid modes</h3>
+              <p class="v8-feat__p">Freeform like Canva or structured rows and columns. Switch anytime.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/cpq-software" data-feat>
+              <span class="v8-feat__n">03</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <rect x="30" y="14" width="140" height="92" rx="4" class="ln"/>
+                  <path d="M30 36h140M30 58h140M30 80h140M126 14v66" class="ln-soft"/>
+                  <rect x="40" y="22" width="52" height="4" rx="2" class="fl-ink"/><rect x="134" y="22" width="26" height="4" rx="2" class="fl-ink"/>
+                  <rect x="40" y="44" width="60" height="4" rx="2" class="fl-mute"/><rect x="136" y="44" width="24" height="4" rx="2" class="fl-mute"/>
+                  <rect x="40" y="64" width="10" height="10" rx="2" class="ln"/><path d="M42.5 69l3 3 5-6" class="mv-tick" pathLength="1"/>
+                  <rect x="56" y="66" width="44" height="4" rx="2" class="fl-mute"/><rect x="136" y="66" width="24" height="4" rx="2" class="mv-optprice fl-mute"/>
+                  <rect x="40" y="90" width="28" height="5" rx="2" class="fl-ink"/>
+                  <text x="162" y="97" text-anchor="end" class="mv-total mv-total--a">$18,400</text>
+                  <text x="162" y="97" text-anchor="end" class="mv-total mv-total--b">$21,900</text>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">Configurable pricing</h3>
+              <p class="v8-feat__p">Options, quantities, discounts, tax and formulas. Totals update live.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/collaboration" data-feat>
+              <span class="v8-feat__n">04</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <rect x="40" y="10" width="120" height="100" rx="4" class="ln"/>
+                  <rect x="52" y="24" width="56" height="6" rx="2" class="fl-ink"/>
+                  <rect x="52" y="38" width="96" height="2.5" rx="1" class="fl-mute"/>
+                  <rect x="52" y="45" width="96" height="2.5" rx="1" class="fl-mute"/>
+                  <rect x="52" y="52" width="70" height="2.5" rx="1" class="mv-typeline fl-mute"/>
+                  <rect x="52" y="66" width="96" height="2.5" rx="1" class="fl-mute"/>
+                  <rect x="52" y="73" width="54" height="2.5" rx="1" class="fl-mute"/>
+                  <g class="mv-cur mv-cur--a"><path d="M0 0l12 5-5 1.6-1.6 5z" class="fl-violet"/><rect x="10" y="7" width="26" height="11" rx="5.5" class="fl-violet"/><text x="23" y="15" class="mv-curtxt">Mia</text></g>
+                  <g class="mv-cur mv-cur--b"><path d="M0 0l12 5-5 1.6-1.6 5z" class="fl-accent"/><rect x="10" y="7" width="26" height="11" rx="5.5" class="fl-accent"/><text x="23" y="15" class="mv-curtxt">Sam</text></g>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">Real-time collaboration</h3>
+              <p class="v8-feat__p">Edit together, comment and mention teammates — like Google Docs.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/templates" data-feat>
+              <span class="v8-feat__n">05</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <rect x="22" y="18" width="56" height="84" rx="4" class="ln"/>
+                  <rect x="30" y="26" width="24" height="4" rx="2" class="fl-ink"/>
+                  <rect x="30" y="38" width="40" height="14" rx="2" class="ln-soft"/>
+                  <rect x="30" y="56" width="40" height="14" rx="2" class="ln-soft"/>
+                  <rect x="30" y="74" width="40" height="14" rx="2" class="ln-soft"/>
+                  <rect x="100" y="18" width="78" height="84" rx="4" class="ln"/>
+                  <rect x="110" y="28" width="40" height="5" rx="2" class="fl-ink"/>
+                  <rect x="110" y="40" width="58" height="2.5" rx="1" class="fl-mute"/>
+                  <rect x="110" y="46" width="48" height="2.5" rx="1" class="fl-mute"/>
+                  <rect x="110" y="58" width="58" height="34" rx="3" class="mv-drop ln-dash"/>
+                  <g class="mv-card"><rect x="30" y="56" width="40" height="14" rx="2" class="fl-white ln-accent"/><rect x="36" y="61" width="18" height="2.5" rx="1" class="fl-accent"/><rect x="36" y="65" width="12" height="1.6" rx="0.8" class="fl-mute"/></g>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">Content libraries</h3>
+              <p class="v8-feat__p">Approved, on-brand content for you, your team and the company.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/product-overview#features" data-feat>
+              <span class="v8-feat__n">06</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <path d="M58 60h24M118 60h24" class="ln-soft"/>
+                  <path d="M100 42V30H132M100 78V90h32" class="ln-soft"/>
+                  <g class="mv-node" style="--del: 0s"><rect x="18" y="48" width="40" height="24" rx="4" class="ln"/><text x="38" y="63" class="mv-lbl">Draft</text></g>
+                  <g class="mv-node" style="--del: .9s"><path d="M100 42l18 18-18 18-18-18z" class="ln"/><text x="100" y="63" class="mv-lbl">Rule</text></g>
+                  <g class="mv-node" style="--del: 1.8s"><rect x="132" y="20" width="48" height="20" rx="4" class="ln"/><text x="156" y="33" class="mv-lbl">Manager</text></g>
+                  <g class="mv-node" style="--del: 1.8s"><rect x="132" y="80" width="48" height="20" rx="4" class="ln"/><text x="156" y="93" class="mv-lbl">Director</text></g>
+                  <g class="mv-node mv-node--ok" style="--del: 2.7s"><rect x="142" y="50" width="38" height="20" rx="10" class="ln-accent"/><text x="161" y="63" class="mv-lbl mv-lbl--accent">Sent</text></g>
+                  <circle r="3" class="mv-dot fl-accent"/>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">Approval workflows</h3>
+              <p class="v8-feat__p">Visual approval flows with rules, hierarchies and escalation. No code.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/ai-coworker-in-quotecloud" data-feat>
+              <span class="v8-feat__n">07</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <rect x="40" y="10" width="120" height="100" rx="4" class="ln"/>
+                  <path class="mv-spark fl-violet" d="M58 26l2.6 6.4L67 35l-6.4 2.6L58 44l-2.6-6.4L49 35l6.4-2.6z"/>
+                  <rect x="74" y="31" width="46" height="6" rx="2" class="fl-ink"/>
+                  <rect x="52" y="54" width="96" height="3" rx="1.5" class="mv-write fl-mute" style="--del: 0s"/>
+                  <rect x="52" y="62" width="96" height="3" rx="1.5" class="mv-write fl-mute" style="--del: .5s"/>
+                  <rect x="52" y="70" width="80" height="3" rx="1.5" class="mv-write fl-mute" style="--del: 1s"/>
+                  <rect x="52" y="78" width="90" height="3" rx="1.5" class="mv-write fl-mute" style="--del: 1.5s"/>
+                  <g class="mv-chip"><rect x="52" y="90" width="52" height="12" rx="6" class="fl-violet"/><text x="78" y="98.5" class="mv-chiptxt">Rewrite</text></g>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">AI Co-worker</h3>
+              <p class="v8-feat__p">Drafts and rewrites introductions, value propositions and more.</p>
+            </a>
+
+            <a class="g-cell v8-feat" style="--c: 3; --c-md: 6; --c-sm: 6" href="https://www.quote.cloud/electronic-signature-software-solution" data-feat>
+              <span class="v8-feat__n">08</span>
+              <div class="v8-feat__vis" data-reveal>
+                <svg viewBox="0 0 200 120" aria-hidden="true" class="mv">
+                  <rect x="34" y="18" width="132" height="84" rx="4" class="ln"/>
+                  <path d="M48 84h104" class="ln-soft"/>
+                  <path class="mv-sig" pathLength="1" d="M52 76c8-22 14-30 18-26s-2 20 4 20 8-22 14-22 2 24 8 24 10-20 16-18 2 16 8 16 8-10 14-10 6 6 10 4"/>
+                  <g class="mv-sealed"><circle cx="146" cy="36" r="9" class="fl-accent"/><path d="M141.5 36.5l3 3 6-7" class="mv-sealtick" pathLength="1"/></g>
+                  <text x="48" y="95" class="mv-lbl mv-lbl--left">Signed · eIDAS · 256-bit</text>
+                </svg>
+              </div>
+              <h3 class="v8-feat__t">eSignatures</h3>
+              <p class="v8-feat__p">Legally binding, eIDAS compliant, with a full audit trail.</p>
+            </a>
+
+            <div class="g-cell v8-midcta" style="--c: 12">
+              <p data-reveal>See it with your own documents.</p>
+              <div class="v8-cta" data-reveal>
+                <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="features">Start free 14-day trial</a>
+                <a class="qc-btn qc-btn--ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="features-demo">Book a demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Full-bleed band: customer experience ───────── -->
+      <section class="v8-band" id="experience" aria-labelledby="experience-title">
+        <div class="qc-container">
+          <div class="g g--dark" data-grid data-reveal-stagger="90">
+            <div class="g-cell v8-sechead" style="--c: 12">
+              <h2 id="experience-title" data-reveal>Your customer gets an <em>interactive document</em>, not a PDF.</h2>
+              <p data-reveal>They choose options, comment, sign and pay in one place — and you see every step.</p>
+            </div>
+            <div class="g-cell v8-band__doc" style="--c: 8; --c-md: 12">
+              <div class="v8-win v8-customer" data-scene="customer" aria-hidden="true" data-reveal="scale">
+                <div class="v8-win__bar">
+                  <span class="v8-win__dots"><i></i><i></i><i></i></span>
+                    <span class="v8-win__title">quote.cloud/d/acme-fit-out</span>
+                  <span class="v8-win__share v8-win__share--accept">Accept &amp; sign</span>
+                </div>
+                <div class="v8-customer__body">
+                  <div class="v8-page v8-page--customer">
+                    <div class="v8-page__title">Fit-out proposal</div>
+                    <div class="v8-page__sub">Acme Pty Ltd · Valid until 30 Nov</div>
+                    <div class="v8-page__media v8-page__media--wide"></div>
+                    <div class="v8-lines"><i style="--w: 100%"></i><i style="--w: 72%"></i></div>
+                    <div class="v8-opts">
+                      <div class="v8-opt"><i class="v8-radio"></i><span>Essential</span><b>$18,400</b></div>
+                      <div class="v8-opt v8-opt--pick"><i class="v8-radio"></i><span>Premium</span><b>$21,900</b></div>
+                      <div class="v8-opt"><i class="v8-radio"></i><span>Premium + maintenance</span><b>$24,300</b></div>
+                    </div>
+                    <div class="v8-price__row v8-price__row--total v8-price__row--customer"><span>Your total</span><span></span><span class="v8-total"><b>$18,400</b><b>$21,900</b></span></div>
+                    <div class="v8-sigpad">
+                      <svg viewBox="0 0 220 60" preserveAspectRatio="xMinYMid meet" aria-hidden="true"><path class="v8-sigpath" pathLength="1" d="M12 44c8-22 14-30 18-26s-2 20 4 20 8-22 14-22 2 24 8 24 10-20 16-18 2 16 8 16 8-10 14-10 6 6 10 4 12-10 20-8 10 10 18 6 16-6 22-10"/></svg>
+                      <span class="v8-sigpad__lbl">Sign here</span>
+                      <span class="v8-sigpad__done">Signed · 256-bit encrypted · AWS</span>
+                    </div>
+                    <div class="v8-pay"><i class="v8-check v8-check--on"></i>Paid $21,900 via Stripe</div>
+                  </div>
+                  <div class="v8-annot">Can we start in May?</div>
+                  <div class="v8-cursor v8-cursor--cust"><span>Customer</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="g-cell v8-band__track" style="--c: 4; --c-md: 12">
+              <ol class="v8-track" data-reveal>
+                <li class="v8-track__step" data-step="opened"><span>Opened</span><time>9:41</time></li>
+                <li class="v8-track__step" data-step="select"><span>Chose Premium</span><time>9:43</time></li>
+                <li class="v8-track__step" data-step="comment"><span>Commented</span><time>9:44</time></li>
+                <li class="v8-track__step" data-step="sign"><span>Signed</span><time>9:47</time></li>
+                <li class="v8-track__step" data-step="paid"><span>Paid via Stripe</span><time>9:48</time></li>
+              </ol>
+              <p class="v8-track__note" data-reveal>Opens, choices, comments, signatures and payments — tracked live.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Problem → Solution ───────── -->
+      <section class="v8-why" id="why" aria-labelledby="why-title">
+        <div class="qc-container">
+          <div class="g" data-grid data-reveal-stagger="70">
+            <div class="g-cell v8-sechead" style="--c: 12">
+              <h2 id="why-title" data-reveal>Six tools. <em>One platform.</em></h2>
+            </div>
+            <div class="g-cell v8-why__before" style="--c: 6; --c-md: 12">
+              <ul class="v8-strike" data-strike>
+                <li>Word / Google Docs</li>
+                <li>Excel</li>
+                <li>PowerPoint / Canva</li>
+                <li>Diagram tools</li>
+                <li>Email approvals</li>
+                <li>Separate eSign app</li>
+              </ul>
+              <p class="v8-why__stat" data-reveal>Inefficient document management can cost companies over <strong><span data-count-to="20" data-count-suffix="%">20%</span></strong> of productivity.</p>
+            </div>
+            <div class="g-cell v8-why__after" style="--c: 6; --c-md: 12">
+              <div class="v8-why__card" data-reveal>
+                <img src="/assets/logos/qc-symbol-white.png" width="28" height="28" alt="" loading="lazy" decoding="async" />
+                <p class="v8-why__lead">Write, price, design, diagram, approve and sign — one document, one link.</p>
+                <ul class="v8-why__list">
+                  <li>Proposals, quotes, contracts, SOWs</li>
+                  <li>Existing PDFs become interactive and signable</li>
+                  <li>Works on tablets in the field</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="v8-int" id="integrations" aria-labelledby="int-title">
+        <div class="qc-container">
+          <div class="g" data-grid data-reveal-stagger="40">
+            <div class="g-cell v8-sechead v8-sechead--row" style="--c: 12">
+              <h2 id="int-title" data-reveal>Connects to the tools you already run.</h2>
+              <a class="v8-link" href="https://www.quote.cloud/all-integrations" data-reveal>All integrations<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/salesforce-cpq.png" width="64" height="64" alt="Salesforce" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/hub-spot.png" width="64" height="64" alt="HubSpot" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/microsoft-dynamics.jpg" width="64" height="64" alt="Microsoft Dynamics" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="64" height="64" alt="monday.com" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/zendesk-logo.jpg" width="64" height="64" alt="Zendesk" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/slack.jpg" width="64" height="64" alt="Slack" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/xero.png" width="64" height="64" alt="Xero" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/quickbooks.png" width="64" height="64" alt="QuickBooks" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="64" height="64" alt="FreshBooks" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/stripe.png" width="64" height="64" alt="Stripe" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/paypal.png" width="64" height="64" alt="PayPal" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/googlesheets.png" width="64" height="64" alt="Google Sheets" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/googledocs.jpg" width="64" height="64" alt="Google Docs" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/calendar.jpg" width="64" height="64" alt="Google Calendar" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/excel.png" width="64" height="64" alt="Microsoft Excel" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo" style="--c: 2; --c-md: 3; --c-sm: 4"><img src="/assets/integrations/serviceM8.png" width="64" height="64" alt="ServiceM8" loading="lazy" decoding="async" data-reveal="fade" /></div>
+            <div class="g-cell v8-logo v8-logo--txt" style="--c: 2; --c-md: 3; --c-sm: 4"><span data-reveal="fade">Pipedrive · Zoho · Teams</span></div>
+            <div class="g-cell v8-logo v8-logo--txt" style="--c: 2; --c-md: 3; --c-sm: 4"><span data-reveal="fade">OneDrive · simPRO · Sabre</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Proof strip ───────── -->
+      <section class="v8-proof" id="proof" aria-labelledby="proof-title">
+        <h2 class="qc-sr-only" id="proof-title">Trusted since 2013</h2>
+        <div class="qc-container">
+          <div class="g" data-grid data-reveal-stagger="80">
+            <div class="g-cell v8-proof__cell" style="--c: 3; --c-md: 6; --c-sm: 6"><strong data-reveal>2013</strong><span data-reveal>In business since</span></div>
+            <div class="g-cell v8-proof__cell" style="--c: 3; --c-md: 6; --c-sm: 6"><strong data-reveal><span data-count-to="4.2" data-count-decimals="1">4.2</span><i class="v8-star" aria-hidden="true"></i></strong><span data-reveal>Rated on Capterra</span></div>
+            <div class="g-cell v8-proof__cell" style="--c: 3; --c-md: 6; --c-sm: 6"><strong data-reveal><span data-count-to="4.2" data-count-decimals="1">4.2</span><i class="v8-star" aria-hidden="true"></i></strong><span data-reveal>Rated on Software Advice</span></div>
+            <div class="g-cell v8-proof__cell" style="--c: 3; --c-md: 6; --c-sm: 6"><strong data-reveal><span data-count-to="14">14</span> days</strong><span data-reveal>Free trial, no credit card</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── FAQ (shared partial, restyled) ───────── -->
+      <div class="v8-faqwrap">
+        <div class="qc-container">
+          <div class="g" data-grid>
+            <div class="g-cell" style="--c: 12">
+              <!-- @include faq -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="v8-close" id="start" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="g" data-grid data-reveal-stagger="90">
+            <div class="g-cell v8-close__cell" style="--c: 12">
+              <h2 id="close-title" data-reveal>Start closing <em>faster.</em></h2>
+              <p data-reveal>Free 14-day trial. No credit card required.</p>
+              <div class="v8-cta v8-cta--center" data-reveal>
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+                  Start free 14-day trial
+                  <svg class="qc-btn__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="v8-sticky" data-sticky aria-hidden="true">
+      <a class="qc-btn qc-btn--primary qc-btn--block" href="https://app.quote.cloud/register" data-qc-cta="sticky" tabindex="-1">Start free 14-day trial</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

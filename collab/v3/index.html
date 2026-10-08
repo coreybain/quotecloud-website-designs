@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-collab -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="tt-sprite" aria-hidden="true" focusable="false">
+      <symbol id="tt-i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /><path d="M14 3v5h5M9 13h6M9 17h4" /></symbol>
+      <symbol id="tt-i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></symbol>
+      <symbol id="tt-i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.5 2h-15l1.5-2ZM10 20.5a2.2 2.2 0 0 0 4 0" /></symbol>
+      <symbol id="tt-i-share" viewBox="0 0 24 24"><path d="M12 15V4M7.5 8.5 12 4l4.5 4.5M5 13v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6" /></symbol>
+      <symbol id="tt-i-comment" viewBox="0 0 24 24"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4.5 3.5V16H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></symbol>
+      <symbol id="tt-i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="tt-i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+      <symbol id="tt-i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" /></symbol>
+      <symbol id="tt-i-unlock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 6.8-1.2" /></symbol>
+      <symbol id="tt-i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="tt-i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="tt-i-pen" viewBox="0 0 24 24"><path d="m14.5 5.5 4 4L8 20H4v-4L14.5 5.5ZM12.5 7.5l4 4" /></symbol>
+      <symbol id="tt-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="tt-i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+      <symbol id="tt-i-restore" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5M4 4v4.5h4.5" /><path d="M12 8v4.5l3 1.8" /></symbol>
+      <symbol id="tt-i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+      <symbol id="tt-i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m3.5 7 8.5 6 8.5-6" /></symbol>
+      <symbol id="tt-i-clip" viewBox="0 0 24 24"><path d="m20 11.5-7.8 7.8a4.6 4.6 0 0 1-6.5-6.5l7.9-7.9a3 3 0 0 1 4.3 4.3l-7.9 7.9a1.5 1.5 0 0 1-2.1-2.1l7.3-7.3" /></symbol>
+      <symbol id="tt-i-template" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 9.5h16M9.5 9.5V20" /></symbol>
+      <symbol id="tt-i-sign" viewBox="0 0 24 24"><path d="M3.5 17.5c2.5 0 3.5-9 6-9s1 7 3.5 7 2-3 3.5-3 1.5 2 4 2M3.5 21h17" /></symbol>
+      <symbol id="tt-i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6" /></symbol>
+      <symbol id="tt-i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m15.5 15.5 5 5" /></symbol>
+      <symbol id="tt-i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="M3 10h18M7 15h4" /></symbol>
+      <symbol id="tt-i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" /></symbol>
+      <symbol id="tt-i-cursor" viewBox="0 0 20 22"><path d="M2.5 2.2v15.6l4.3-4.1 3 6.6 2.9-1.3-3-6.5 6-.3L2.5 2.2Z" /></symbol>
+      <symbol id="tt-i-chat" viewBox="0 0 24 24"><path d="M4.5 6.5h11v8h-6l-3.5 3v-3H4.5v-8ZM15.5 9.5h4v8h-1.5v2.5l-3-2.5h-4" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: the playable document ───────── -->
+      <section class="tt-hero" aria-labelledby="tt-hero-title">
+        <div class="qc-container tt-hero__top">
+          <h1 class="tt-hero__title" id="tt-hero-title">
+            Real-time document collaboration <span class="tt-em">for proposals that close</span>
+          </h1>
+          <div class="tt-hero__side">
+            <p class="tt-hero__lead">
+              Write, price, review and approve quotes and proposals together, in one live document. Sophie and Alex are already in
+              this one. Jump in.
+            </p>
+            <div class="tt-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="tt-hero__note">No credit card required</p>
+          </div>
+        </div>
+
+        <div class="qc-container tt-stage">
+          <p class="tt-hint">
+            <span class="tt-hint__head"><span class="tt-hint__live" aria-hidden="true"></span><span><span class="tt-hint__lead">Live demo.</span> Try to</span></span>
+            <button type="button" class="tt-hint__btn" data-try="comment">leave a comment</button><span class="tt-hint__glue">, </span>
+            <button type="button" class="tt-hint__btn" data-try="qty">change a quantity</button><span class="tt-hint__glue">, </span>
+            <button type="button" class="tt-hint__btn" data-try="role">switch a role</button><span class="tt-hint__glue"> or </span>
+            <button type="button" class="tt-hint__btn" data-try="history">restore a version</button><span class="tt-hint__glue">.</span>
+          </p>
+
+          <div class="tt-demo" id="tt-demo" role="region" aria-label="Interactive demo: a proposal you are editing with Sophie and Alex" data-demo>
+            <!-- App bar -->
+            <div class="tt-bar">
+              <div class="tt-bar__file">
+                <span class="tt-bar__icon" aria-hidden="true"><svg class="tt-ico" width="18" height="18"><use href="#tt-i-doc" /></svg></span>
+                <span class="tt-bar__name">Project Proposal</span>
+                <span class="tt-bar__saved" data-saved>Saved</span>
+              </div>
+              <div class="tt-bar__right">
+                <div class="tt-presence" aria-label="In this document: you, Sophie and Alex">
+                  <span class="tt-av tt-av--sophie" title="Sophie">S</span>
+                  <span class="tt-av tt-av--alex" title="Alex">A</span>
+                  <span class="tt-av tt-av--you" title="You">You</span>
+                </div>
+                <button type="button" class="tt-iconbtn" data-open-tab="history" aria-label="Version history">
+                  <svg class="tt-ico" width="20" height="20" aria-hidden="true"><use href="#tt-i-clock" /></svg>
+                </button>
+                <button type="button" class="tt-iconbtn" data-open-tab="activity" data-bell aria-label="Activity">
+                  <svg class="tt-ico" width="20" height="20" aria-hidden="true"><use href="#tt-i-bell" /></svg>
+                  <span class="tt-badge" data-badge hidden>0</span>
+                </button>
+                <button type="button" class="tt-share" data-open-tab="people">
+                  <svg class="tt-ico" width="16" height="16" aria-hidden="true"><use href="#tt-i-share" /></svg>
+                  <span>Share</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Decorative formatting toolbar -->
+            <div class="tt-toolbar" aria-hidden="true">
+              <span class="tt-toolbar__group"><i>B</i><i class="is-i">I</i><i class="is-u">U</i></span>
+              <span class="tt-toolbar__sep"></span>
+              <span class="tt-toolbar__group"><i class="is-h">H1</i><i class="is-h">H2</i></span>
+              <span class="tt-toolbar__sep"></span>
+              <span class="tt-toolbar__group"><i class="is-list"></i><i class="is-img"></i><i class="is-table"></i></span>
+              <span class="tt-toolbar__status"><span class="tt-toolbar__dot"></span>Editing together · 3</span>
+            </div>
+
+            <div class="tt-body">
+              <div class="tt-canvas" data-canvas>
+                <div class="tt-preview" data-preview hidden>
+                  <p class="tt-preview__text">
+                    <svg class="tt-ico" width="16" height="16" aria-hidden="true"><use href="#tt-i-clock" /></svg>
+                    <span>Previewing <b data-preview-label>v2</b>. Changed sections are marked.</span>
+                  </p>
+                  <div class="tt-preview__actions">
+                    <button type="button" class="tt-btn tt-btn--violet" data-restore>Restore this version</button>
+                    <button type="button" class="tt-btn" data-preview-exit>Back to current</button>
+                  </div>
+                </div>
+
+                <article class="tt-page" data-page aria-label="Project Proposal document">
+                  <p class="tt-page__kicker">Prepared for Northwind · Website rebuild</p>
+                  <p class="tt-page__title">Project Proposal</p>
+
+                  <div class="tt-block" data-block="summary">
+                    <div class="tt-block__head">
+                      <p class="tt-block__h">Executive Summary</p>
+                      <button type="button" class="tt-cbtn" data-comment="summary" aria-label="Comment on Executive Summary">
+                        <svg class="tt-ico" width="16" height="16" aria-hidden="true"><use href="#tt-i-comment" /></svg>
+                        <span class="tt-cbtn__n" data-pin="summary">1</span>
+                      </button>
+                    </div>
+                    <p class="tt-block__text" data-text="summary">Northwind needs a faster website that turns visitors into enquiries. We'll rebuild it in six weeks, with your team involved at every step.</p>
+                    <span class="tt-diff" aria-hidden="true">Changed</span>
+                  </div>
+
+                  <div class="tt-block" data-block="approach">
+                    <div class="tt-block__head">
+                      <p class="tt-block__h">Project Approach</p>
+                      <button type="button" class="tt-cbtn" data-comment="approach" aria-label="Comment on Project Approach">
+                        <svg class="tt-ico" width="16" height="16" aria-hidden="true"><use href="#tt-i-comment" /></svg>
+                        <span class="tt-cbtn__n" data-pin="approach" hidden>0</span>
+                      </button>
+                    </div>
+                    <p class="tt-block__text" data-text="approach">We'll work in two-week sprints, starting with a discovery workshop. Each sprint ends with a live review.</p>
+                    <span class="tt-diff" aria-hidden="true">Changed</span>
+                  </div>
+
+                  <div class="tt-block tt-block--pricing" data-block="pricing">
+                    <div class="tt-block__head">
+                      <p class="tt-block__h">Investment Summary</p>
+                      <span class="tt-approval" data-approval data-state="approved">
+                        <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-check" /></svg>
+                        <span data-approval-text>Approved by Alex</span>
+                      </span>
+                      <button type="button" class="tt-cbtn" data-comment="pricing" aria-label="Comment on Investment Summary">
+                        <svg class="tt-ico" width="16" height="16" aria-hidden="true"><use href="#tt-i-comment" /></svg>
+                        <span class="tt-cbtn__n" data-pin="pricing" hidden>0</span>
+                      </button>
+                    </div>
+                    <table class="tt-price">
+                      <caption class="qc-sr-only">Investment Summary pricing table</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col" class="tt-price__qty">Qty</th>
+                          <th scope="col" class="tt-price__unit">
+                            <span class="tt-price__lockhead">Unit price <svg class="tt-ico" width="13" height="13" aria-hidden="true"><use href="#tt-i-lock" /></svg></span>
+                          </th>
+                          <th scope="col" class="tt-price__amt">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr data-row="0">
+                          <th scope="row">Discovery workshop<span class="tt-price__each">$2,400 each</span></th>
+                          <td class="tt-price__qty">
+                            <span class="tt-step">
+                              <button type="button" data-step="-1" aria-label="Fewer Discovery workshop">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-minus" /></svg>
+                              </button>
+                              <output data-qty aria-live="off">1</output>
+                              <button type="button" data-step="1" aria-label="More Discovery workshop">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-plus" /></svg>
+                              </button>
+                            </span>
+                          </td>
+                          <td class="tt-price__unit" data-unit>$2,400</td>
+                          <td class="tt-price__amt" data-amount>$2,400</td>
+                        </tr>
+                        <tr data-row="1">
+                          <th scope="row">Design &amp; build sprint<span class="tt-price__each">$6,800 each</span></th>
+                          <td class="tt-price__qty">
+                            <span class="tt-step">
+                              <button type="button" data-step="-1" aria-label="Fewer Design and build sprints">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-minus" /></svg>
+                              </button>
+                              <output data-qty>3</output>
+                              <button type="button" data-step="1" aria-label="More Design and build sprints">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-plus" /></svg>
+                              </button>
+                            </span>
+                          </td>
+                          <td class="tt-price__unit" data-unit>$6,800</td>
+                          <td class="tt-price__amt" data-amount>$20,400</td>
+                        </tr>
+                        <tr data-row="2">
+                          <th scope="row">Team training session<span class="tt-price__each">$950 each</span></th>
+                          <td class="tt-price__qty">
+                            <span class="tt-step">
+                              <button type="button" data-step="-1" aria-label="Fewer Team training sessions">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-minus" /></svg>
+                              </button>
+                              <output data-qty>2</output>
+                              <button type="button" data-step="1" aria-label="More Team training sessions">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-plus" /></svg>
+                              </button>
+                            </span>
+                          </td>
+                          <td class="tt-price__unit" data-unit>$950</td>
+                          <td class="tt-price__amt" data-amount>$1,900</td>
+                        </tr>
+                        <tr data-row="3">
+                          <th scope="row">Support plan, 12 months<span class="tt-price__each">$3,600 each</span></th>
+                          <td class="tt-price__qty">
+                            <span class="tt-step">
+                              <button type="button" data-step="-1" aria-label="Fewer Support plans">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-minus" /></svg>
+                              </button>
+                              <output data-qty>1</output>
+                              <button type="button" data-step="1" aria-label="More Support plans">
+                                <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-plus" /></svg>
+                              </button>
+                            </span>
+                          </td>
+                          <td class="tt-price__unit" data-unit>$3,600</td>
+                          <td class="tt-price__amt" data-amount>$3,600</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr class="tt-price__sub">
+                          <th scope="row" colspan="3">Subtotal</th>
+                          <td class="tt-price__amt" data-subtotal>$28,300</td>
+                        </tr>
+                        <tr class="tt-price__sub">
+                          <th scope="row" colspan="3">GST (10%)</th>
+                          <td class="tt-price__amt" data-tax>$2,830</td>
+                        </tr>
+                        <tr class="tt-price__total">
+                          <th scope="row" colspan="3">Total</th>
+                          <td class="tt-price__amt" data-total>$31,130</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                    <span class="tt-diff" aria-hidden="true">Changed</span>
+                  </div>
+
+                  <!-- Simulated teammates (decorative; their actions are announced via the live region) -->
+                  <div class="tt-cursor tt-cursor--sophie" data-cursor="sophie" aria-hidden="true">
+                    <svg class="tt-cursor__arrow" width="20" height="22" viewBox="0 0 20 22"><use href="#tt-i-cursor" /></svg>
+                    <span class="tt-cursor__flag">Sophie<span class="tt-cursor__role" data-flag-role></span></span>
+                  </div>
+                  <div class="tt-cursor tt-cursor--alex" data-cursor="alex" aria-hidden="true">
+                    <svg class="tt-cursor__arrow" width="20" height="22" viewBox="0 0 20 22"><use href="#tt-i-cursor" /></svg>
+                    <span class="tt-cursor__flag">Alex<span class="tt-cursor__role" data-flag-role></span></span>
+                  </div>
+                  <div class="tt-perm-layer" data-perm-layer aria-hidden="true"></div>
+                </article>
+
+                <div class="tt-toast" data-toast aria-hidden="true"></div>
+              </div>
+
+              <!-- Panels: side rail on desktop, bottom sheet on smaller screens -->
+              <div class="tt-rail" data-rail>
+                <div class="tt-tabs" role="tablist" aria-label="Document panels">
+                  <button type="button" role="tab" class="tt-tab" id="tt-tab-comments" aria-controls="tt-panel-comments" aria-selected="true" data-tab="comments">
+                    <svg class="tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-comment" /></svg>
+                    <span>Comments</span>
+                  </button>
+                  <button type="button" role="tab" class="tt-tab" id="tt-tab-people" aria-controls="tt-panel-people" aria-selected="false" tabindex="-1" data-tab="people">
+                    <svg class="tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-share" /></svg>
+                    <span>People</span>
+                  </button>
+                  <button type="button" role="tab" class="tt-tab" id="tt-tab-history" aria-controls="tt-panel-history" aria-selected="false" tabindex="-1" data-tab="history">
+                    <svg class="tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-clock" /></svg>
+                    <span>History</span>
+                  </button>
+                  <button type="button" role="tab" class="tt-tab" id="tt-tab-activity" aria-controls="tt-panel-activity" aria-selected="false" tabindex="-1" data-tab="activity">
+                    <svg class="tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-bell" /></svg>
+                    <span>Activity</span>
+                  </button>
+                </div>
+
+                <div class="tt-panels" data-panels>
+                  <div class="tt-panels__grab" aria-hidden="true"></div>
+                  <button type="button" class="tt-panels__close" data-sheet-close aria-label="Close panel">
+                    <svg class="tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-close" /></svg>
+                  </button>
+
+                  <!-- Comments -->
+                  <div class="tt-panel" role="tabpanel" id="tt-panel-comments" aria-labelledby="tt-tab-comments" data-panel="comments" tabindex="0">
+                    <form class="tt-composer" data-composer hidden>
+                      <label class="tt-composer__label" for="tt-composer-input">Comment on <b data-composer-target>Executive Summary</b></label>
+                      <div class="tt-composer__row">
+                        <span class="tt-av tt-av--you tt-av--sm" aria-hidden="true">You</span>
+                        <textarea id="tt-composer-input" rows="2" data-composer-input maxlength="160"></textarea>
+                      </div>
+                      <div class="tt-composer__actions">
+                        <button type="button" class="tt-btn" data-composer-cancel>Cancel</button>
+                        <button type="submit" class="tt-btn tt-btn--violet">Post comment</button>
+                      </div>
+                    </form>
+                    <ol class="tt-threads" data-threads>
+                      <li class="tt-thread" data-thread-block="summary">
+                        <p class="tt-thread__on">On <b>Executive Summary</b></p>
+                        <div class="tt-msg">
+                          <span class="tt-av tt-av--alex tt-av--sm" aria-hidden="true">A</span>
+                          <div class="tt-msg__body">
+                            <p class="tt-msg__meta"><b>Alex</b> <span>2 min ago</span></p>
+                            <p class="tt-msg__text">Great start! Can we add more details here? <span class="tt-mention">@Sophie</span></p>
+                          </div>
+                        </div>
+                        <div class="tt-msg">
+                          <span class="tt-av tt-av--sophie tt-av--sm" aria-hidden="true">S</span>
+                          <div class="tt-msg__body">
+                            <p class="tt-msg__meta"><b>Sophie</b> <span>1 min ago</span></p>
+                            <p class="tt-msg__text">Sure, I'll update this section.</p>
+                          </div>
+                        </div>
+                        <button type="button" class="tt-thread__resolve" data-resolve>
+                          <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-check" /></svg>
+                          Resolve
+                        </button>
+                      </li>
+                    </ol>
+                    <p class="tt-panel__empty" data-comments-hint>Use the comment button beside any section to start a thread.</p>
+                  </div>
+
+                  <!-- People and roles -->
+                  <div class="tt-panel" role="tabpanel" id="tt-panel-people" aria-labelledby="tt-tab-people" data-panel="people" tabindex="0" hidden>
+                    <p class="tt-panel__title">In this document</p>
+                    <ul class="tt-people">
+                      <li class="tt-person">
+                        <div class="tt-person__head">
+                          <span class="tt-av tt-av--you" aria-hidden="true">You</span>
+                          <p class="tt-person__name">You <span>Owner</span></p>
+                        </div>
+                        <p class="tt-person__perm">Full access, including restoring versions.</p>
+                      </li>
+                      <li class="tt-person" data-person="sophie">
+                        <div class="tt-person__head">
+                          <span class="tt-av tt-av--sophie" aria-hidden="true">S</span>
+                          <p class="tt-person__name">Sophie <span>Sales</span></p>
+                        </div>
+                        <fieldset class="tt-roles" data-roles="sophie">
+                          <legend class="qc-sr-only">Sophie's role</legend>
+                          <label><input type="radio" name="tt-role-sophie" value="viewer" /><span>Viewer</span></label>
+                          <label><input type="radio" name="tt-role-sophie" value="commenter" /><span>Commenter</span></label>
+                          <label><input type="radio" name="tt-role-sophie" value="editor" checked /><span>Editor</span></label>
+                          <label><input type="radio" name="tt-role-sophie" value="approver" /><span>Approver</span></label>
+                        </fieldset>
+                        <p class="tt-person__perm" data-perm-text="sophie">Can edit text and quantities. Pricing is locked.</p>
+                      </li>
+                      <li class="tt-person" data-person="alex">
+                        <div class="tt-person__head">
+                          <span class="tt-av tt-av--alex" aria-hidden="true">A</span>
+                          <p class="tt-person__name">Alex <span>Sales manager</span></p>
+                        </div>
+                        <fieldset class="tt-roles" data-roles="alex">
+                          <legend class="qc-sr-only">Alex's role</legend>
+                          <label><input type="radio" name="tt-role-alex" value="viewer" /><span>Viewer</span></label>
+                          <label><input type="radio" name="tt-role-alex" value="commenter" /><span>Commenter</span></label>
+                          <label><input type="radio" name="tt-role-alex" value="editor" /><span>Editor</span></label>
+                          <label><input type="radio" name="tt-role-alex" value="approver" checked /><span>Approver</span></label>
+                        </fieldset>
+                        <p class="tt-person__perm" data-perm-text="alex">Can edit, change pricing and approve.</p>
+                      </li>
+                      <li class="tt-person tt-person--guest">
+                        <div class="tt-person__head">
+                          <span class="tt-av tt-av--taylor" aria-hidden="true">T</span>
+                          <p class="tt-person__name">Taylor (Customer) <span>Viewer · invited</span></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Version history -->
+                  <div class="tt-panel" role="tabpanel" id="tt-panel-history" aria-labelledby="tt-tab-history" data-panel="history" tabindex="0" hidden>
+                    <p class="tt-panel__title">Version history</p>
+                    <ol class="tt-versions" data-versions>
+                      <li><div class="tt-ver is-current"><span class="tt-ver__dot"></span><span class="tt-ver__title">Current draft</span><span class="tt-ver__meta">Sophie, Alex and you</span></div></li>
+                      <li><button type="button" class="tt-ver"><span class="tt-ver__dot"></span><span class="tt-ver__title">v3 · Updated pricing</span><span class="tt-ver__meta">Alex · Today 9:12 am</span></button></li>
+                      <li><button type="button" class="tt-ver"><span class="tt-ver__dot"></span><span class="tt-ver__title">v2 · Rewrote Executive Summary</span><span class="tt-ver__meta">Sophie · Yesterday 11:20 am</span></button></li>
+                      <li><button type="button" class="tt-ver"><span class="tt-ver__dot"></span><span class="tt-ver__title">v1 · Created from template</span><span class="tt-ver__meta">You · Monday 4:05 pm</span></button></li>
+                    </ol>
+                  </div>
+
+                  <!-- Activity / notifications -->
+                  <div class="tt-panel" role="tabpanel" id="tt-panel-activity" aria-labelledby="tt-tab-activity" data-panel="activity" tabindex="0" hidden>
+                    <p class="tt-panel__title">Activity</p>
+                    <ol class="tt-activity" data-activity>
+                      <li class="tt-act"><span class="tt-av tt-av--alex tt-av--sm" aria-hidden="true">A</span><p><b>Alex</b> approved Investment Summary <span>Today 9:20 am</span></p></li>
+                      <li class="tt-act"><span class="tt-av tt-av--alex tt-av--sm" aria-hidden="true">A</span><p><b>Alex</b> updated pricing <span>Today 9:12 am</span></p></li>
+                      <li class="tt-act"><span class="tt-av tt-av--sophie tt-av--sm" aria-hidden="true">S</span><p><b>Sophie</b> rewrote Executive Summary <span>Yesterday</span></p></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="qc-sr-only" aria-live="polite" data-live></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── One document instead of email threads ───────── -->
+      <section class="tt-sec tt-inbox" aria-labelledby="tt-inbox-title">
+        <div class="qc-container tt-inbox__grid">
+          <div class="tt-inbox__copy" data-reveal>
+            <h2 class="tt-h2" id="tt-inbox-title">Put an end to <span class="tt-em">endless email threads</span></h2>
+            <p class="tt-sub">
+              Everyone works in the same live quote or proposal and sees each change the moment it happens. No more attachments, no more
+              "FINAL_v4", no more guessing which copy is right.
+            </p>
+          </div>
+          <div class="tt-inbox__visual" data-inbox aria-hidden="true">
+            <ol class="tt-mails">
+              <li class="tt-mail" style="--i: 0"><svg class="tt-ico" width="16" height="16"><use href="#tt-i-mail" /></svg><span class="tt-mail__subj">RE: RE: Proposal v3, comments</span><span class="tt-mail__file"><svg class="tt-ico" width="12" height="12"><use href="#tt-i-clip" /></svg>Proposal_v3.docx</span></li>
+              <li class="tt-mail" style="--i: 1"><svg class="tt-ico" width="16" height="16"><use href="#tt-i-mail" /></svg><span class="tt-mail__subj">FW: Pricing update</span><span class="tt-mail__file"><svg class="tt-ico" width="12" height="12"><use href="#tt-i-clip" /></svg>Pricing_FINAL.xlsx</span></li>
+              <li class="tt-mail" style="--i: 2"><svg class="tt-ico" width="16" height="16"><use href="#tt-i-mail" /></svg><span class="tt-mail__subj">RE: Proposal v4 (Sophie's edits)</span><span class="tt-mail__file"><svg class="tt-ico" width="12" height="12"><use href="#tt-i-clip" /></svg>Proposal_v4_SE.docx</span></li>
+              <li class="tt-mail" style="--i: 3"><svg class="tt-ico" width="16" height="16"><use href="#tt-i-mail" /></svg><span class="tt-mail__subj">Proposal FINAL, please check</span><span class="tt-mail__file"><svg class="tt-ico" width="12" height="12"><use href="#tt-i-clip" /></svg>Proposal_FINAL_v2.pdf</span></li>
+            </ol>
+            <svg class="tt-inbox__link" viewBox="0 0 120 40" preserveAspectRatio="none"><path pathLength="1" d="M2 20 C 40 20, 80 20, 118 20" /></svg>
+            <div class="tt-livecard">
+              <div class="tt-livecard__head">
+                <span class="tt-bar__icon"><svg class="tt-ico" width="16" height="16"><use href="#tt-i-doc" /></svg></span>
+                <span class="tt-livecard__name">Project Proposal</span>
+                <span class="tt-livecard__avs"><span class="tt-av tt-av--sm tt-av--sophie">S</span><span class="tt-av tt-av--sm tt-av--alex">A</span><span class="tt-av tt-av--sm tt-av--you">You</span></span>
+              </div>
+              <span class="tt-livecard__line" style="--w: 92%"></span>
+              <span class="tt-livecard__line is-hl" style="--w: 78%"></span>
+              <span class="tt-livecard__line" style="--w: 84%"></span>
+              <span class="tt-livecard__line" style="--w: 56%"></span>
+              <span class="tt-livecard__foot"><span class="tt-toolbar__dot"></span>One link · always the latest version</span>
+              <span class="tt-mini-cursor tt-mini-cursor--sophie" style="--x: 64%; --y: 46%"><svg width="14" height="16" viewBox="0 0 20 22"><use href="#tt-i-cursor" /></svg><b>Sophie</b></span>
+              <span class="tt-mini-cursor tt-mini-cursor--alex" style="--x: 24%; --y: 50%"><svg width="14" height="16" viewBox="0 0 20 22"><use href="#tt-i-cursor" /></svg><b>Alex</b></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── The five capabilities ───────── -->
+      <section class="tt-sec tt-caps" aria-labelledby="tt-caps-title">
+        <div class="qc-container">
+          <div class="tt-caps__head" data-reveal>
+            <h2 class="tt-h2" id="tt-caps-title">Every way your team collaborates, <span class="tt-em">built into the document</span></h2>
+          </div>
+
+          <ol class="tt-caplist">
+            <li class="tt-cap" data-reveal>
+              <div class="tt-cap__copy">
+                <h3 class="tt-cap__title">Real-time co-editing</h3>
+                <p>Several people edit the same quote or proposal at once and see each change instantly, so iterations take minutes, not days.</p>
+                <button type="button" class="tt-try" data-try="qty">Try it: change a quantity <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-up" /></svg></button>
+              </div>
+              <div class="tt-cap__viz tt-viz tt-viz--rt" aria-hidden="true" data-loop>
+                <div class="tt-viz__row"><span>Design &amp; build sprint</span><span class="tt-viz__swap"><b>3</b><b>4</b></span></div>
+                <div class="tt-viz__row tt-viz__row--total"><span>Total</span><span class="tt-viz__swap"><b>$31,130</b><b>$38,610</b></span></div>
+                <span class="tt-mini-cursor tt-mini-cursor--alex tt-viz__c1"><svg width="14" height="16" viewBox="0 0 20 22"><use href="#tt-i-cursor" /></svg><b>Alex</b></span>
+                <span class="tt-mini-cursor tt-mini-cursor--sophie tt-viz__c2"><svg width="14" height="16" viewBox="0 0 20 22"><use href="#tt-i-cursor" /></svg><b>Sophie</b></span>
+              </div>
+            </li>
+
+            <li class="tt-cap" data-reveal>
+              <div class="tt-cap__copy">
+                <h3 class="tt-cap__title">Comments, replies and @mentions</h3>
+                <p>Ask questions, suggest revisions and highlight text right on the section it's about. Mention a teammate, get an answer, resolve and move on.</p>
+                <button type="button" class="tt-try" data-try="comment">Try it: leave a comment <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-up" /></svg></button>
+              </div>
+              <div class="tt-cap__viz tt-viz tt-viz--cm" aria-hidden="true" data-loop>
+                <div class="tt-viz__bubble tt-viz__b1"><span class="tt-av tt-av--sm tt-av--you">You</span><p>Could we add a timeline? <span class="tt-mention">@Alex</span></p></div>
+                <div class="tt-viz__bubble tt-viz__b2"><span class="tt-av tt-av--sm tt-av--alex">A</span><p>Good call, adding it now.</p></div>
+                <span class="tt-viz__resolved"><svg class="tt-ico" width="14" height="14"><use href="#tt-i-check" /></svg>Resolved</span>
+              </div>
+            </li>
+
+            <li class="tt-cap" data-reveal>
+              <div class="tt-cap__copy">
+                <h3 class="tt-cap__title">Version history</h3>
+                <p>Every version is saved automatically. Preview earlier drafts, compare what changed and restore in a click, with a clear record of who did what.</p>
+                <button type="button" class="tt-try" data-try="history">Try it: restore a version <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-up" /></svg></button>
+              </div>
+              <div class="tt-cap__viz tt-viz tt-viz--vh" aria-hidden="true" data-loop>
+                <div class="tt-viz__track"><i></i><i></i><i></i><i></i><span class="tt-viz__knob"></span></div>
+                <div class="tt-viz__labels"><span>v1</span><span>v2</span><span>v3</span><span>Now</span></div>
+                <div class="tt-viz__restore"><svg class="tt-ico" width="14" height="14"><use href="#tt-i-restore" /></svg>Restore v2</div>
+              </div>
+            </li>
+
+            <li class="tt-cap" data-reveal>
+              <div class="tt-cap__copy">
+                <h3 class="tt-cap__title">Roles and permissions</h3>
+                <p>Give each collaborator view, comment, edit or approve access, so only the right people can change pricing and contract terms.</p>
+                <button type="button" class="tt-try" data-try="role">Try it: switch a role <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-up" /></svg></button>
+              </div>
+              <div class="tt-cap__viz tt-viz tt-viz--rp" aria-hidden="true" data-loop>
+                <div class="tt-viz__seg"><span class="tt-viz__ind"></span><b>Viewer</b><b>Commenter</b><b>Editor</b><b>Approver</b></div>
+                <div class="tt-viz__lockrow">
+                  <span>Pricing</span>
+                  <span class="tt-viz__lock"><svg class="tt-ico tt-viz__l1" width="16" height="16"><use href="#tt-i-lock" /></svg><svg class="tt-ico tt-viz__l2" width="16" height="16"><use href="#tt-i-unlock" /></svg></span>
+                </div>
+              </div>
+            </li>
+
+            <li class="tt-cap" data-reveal>
+              <div class="tt-cap__copy">
+                <h3 class="tt-cap__title">Notifications and alerts</h3>
+                <p>
+                  Know when a document is updated, commented on or needs your action, in QuoteCloud,
+                  <a href="https://www.quote.cloud/slack-with-quotecloud">Slack</a> or
+                  <a href="https://www.quote.cloud/microsoft-teams-with-quotecloud">Microsoft Teams</a>.
+                </p>
+                <button type="button" class="tt-try" data-try="activity">Try it: open the activity feed <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-up" /></svg></button>
+              </div>
+              <div class="tt-cap__viz tt-viz tt-viz--nt" aria-hidden="true" data-loop>
+                <div class="tt-viz__toast tt-viz__t1"><span class="tt-viz__src tt-viz__src--qc"><svg class="tt-ico" width="14" height="14"><use href="#tt-i-bell" /></svg></span><p><b>Sophie</b> commented on Executive Summary</p></div>
+                <div class="tt-viz__toast tt-viz__t2"><span class="tt-viz__src"><img src="/assets/integrations/slack.jpg" width="20" height="20" alt="" loading="lazy" decoding="async" /></span><p><b>Alex</b> approved Investment Summary</p></div>
+                <div class="tt-viz__toast tt-viz__t3"><span class="tt-viz__src tt-viz__src--teams"><svg class="tt-ico" width="14" height="14"><use href="#tt-i-chat" /></svg></span><p><b>Taylor</b> opened the proposal</p></div>
+              </div>
+            </li>
+          </ol>
+
+          <div class="tt-midcta" data-reveal>
+            <p>See it with your own team and your own documents.</p>
+            <div class="tt-midcta__btns">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="capabilities">Start free 14-day trial</a>
+              <a class="qc-btn qc-btn--ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="capabilities-demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Customer collaboration + eSign ───────── -->
+      <section class="tt-sec tt-cust" aria-labelledby="tt-cust-title">
+        <div class="qc-container tt-cust__grid">
+          <div class="tt-cust__copy" data-reveal>
+            <h2 class="tt-h2" id="tt-cust-title">Bring your customer into <span class="tt-em">the same document</span></h2>
+            <p class="tt-sub">
+              Clients and partners review, comment and e-sign where your team did the work, with permission controls limiting what they can
+              see and change. Approval workflows make sure the right people sign off first.
+            </p>
+            <ul class="tt-cust__links">
+              <li><a href="https://www.quote.cloud/electronic-signature-software-solution">eSignature software <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-arrow" /></svg></a></li>
+              <li><a href="https://www.quote.cloud/free-esignature-software">Free eSignatures <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-arrow" /></svg></a></li>
+              <li><a href="https://www.quote.cloud/proposal-software">Proposal software <svg class="tt-ico" width="14" height="14" aria-hidden="true"><use href="#tt-i-arrow" /></svg></a></li>
+            </ul>
+            <div class="tt-trust">
+              <img src="/assets/compliance/eidas.svg" width="88" height="40" alt="eIDAS compliant eSignatures" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" width="42" height="40" alt="256-bit encryption" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" width="60" height="36" alt="Hosted on AWS" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div class="tt-sign" data-sign aria-hidden="true">
+            <ol class="tt-flow">
+              <li style="--i: 0"><span class="tt-flow__dot"></span>Drafted</li>
+              <li style="--i: 1"><span class="tt-flow__dot"></span>Approved</li>
+              <li style="--i: 2"><span class="tt-flow__dot"></span>Sent</li>
+              <li style="--i: 3"><span class="tt-flow__dot"></span>Viewed</li>
+              <li style="--i: 4"><span class="tt-flow__dot"></span>Signed</li>
+            </ol>
+            <div class="tt-sign__card">
+              <div class="tt-sign__comment">
+                <span class="tt-av tt-av--taylor">T</span>
+                <div>
+                  <p class="tt-msg__meta"><b>Taylor (Customer)</b> <span>Just now</span></p>
+                  <p class="tt-msg__text">This looks great! Thanks for including the timeline.</p>
+                </div>
+              </div>
+              <div class="tt-sign__total"><span>Total accepted</span><b>$31,130</b></div>
+              <div class="tt-sign__pad">
+                <svg class="tt-sign__ink" viewBox="0 0 260 70" fill="none">
+                  <path pathLength="1" d="M8 48c10-2 16-30 24-30 7 0-2 34 6 34 7 0 10-22 16-22 5 0 3 16 9 16 7 0 9-18 16-18 6 0 2 18 9 18 9 0 12-26 20-26 6 0 1 26 9 26 8 0 11-12 18-12 7 0 6 10 14 10 12 0 30-8 54-14" />
+                </svg>
+                <span class="tt-sign__line"></span>
+                <span class="tt-sign__who">Taylor, Northwind</span>
+              </div>
+              <span class="tt-sign__stamp"><svg class="tt-ico" width="16" height="16"><use href="#tt-i-check" /></svg>Signed · audit trail recorded</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Supporting run: the agreement benefits ───────── -->
+      <section class="tt-sec tt-run" aria-labelledby="tt-run-title">
+        <div class="qc-container">
+          <h2 class="tt-h2 tt-run__title" id="tt-run-title" data-reveal>From first draft <span class="tt-em">to signed agreement</span></h2>
+          <ul class="tt-run__list" data-reveal-stagger="70">
+            <li class="tt-run__item" data-reveal>
+              <svg class="tt-ico tt-run__ico" width="24" height="24" aria-hidden="true"><use href="#tt-i-template" /></svg>
+              <h3>Templates and drag-and-drop</h3>
+              <p>Produce accurate agreements quickly with <a href="https://www.quote.cloud/templates">templates</a>, rich media and <a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">content blocks</a>.</p>
+            </li>
+            <li class="tt-run__item" data-reveal>
+              <svg class="tt-ico tt-run__ico" width="24" height="24" aria-hidden="true"><use href="#tt-i-sign" /></svg>
+              <h3>Secure eSignatures</h3>
+              <p>Legally binding, eIDAS compliant signatures with 256-bit encryption and an audit trail.</p>
+            </li>
+            <li class="tt-run__item" data-reveal>
+              <svg class="tt-ico tt-run__ico" width="24" height="24" aria-hidden="true"><use href="#tt-i-chart" /></svg>
+              <h3>Instant insights</h3>
+              <p>Timely alerts, reports and reminders keep every agreement moving.</p>
+            </li>
+            <li class="tt-run__item" data-reveal>
+              <svg class="tt-ico tt-run__ico" width="24" height="24" aria-hidden="true"><use href="#tt-i-search" /></svg>
+              <h3>Every agreement, one search away</h3>
+              <p>Cloud storage with search and advanced filtering, from any device.</p>
+            </li>
+            <li class="tt-run__item" data-reveal>
+              <svg class="tt-ico tt-run__ico" width="24" height="24" aria-hidden="true"><use href="#tt-i-card" /></svg>
+              <h3>CPQ and online payments</h3>
+              <p>Visual catalogues, <a href="https://www.quote.cloud/cpq-software">configurable pricing</a> and Stripe or PayPal payments in the document.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="tt-sec tt-proof" aria-labelledby="tt-proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="tt-proof-title">Rated by QuoteCloud customers</h2>
+          <ul class="tt-proof__stats" data-reveal-stagger="90">
+            <li data-reveal>
+              <span class="tt-proof__big"><span data-count-to="4.2" data-count-decimals="1">4.2</span></span>
+              <span class="tt-stars" aria-hidden="true" style="--rating: 4.2"></span>
+              <span class="tt-proof__label">Capterra rating</span>
+            </li>
+            <li data-reveal>
+              <span class="tt-proof__big"><span data-count-to="4.2" data-count-decimals="1">4.2</span></span>
+              <span class="tt-stars" aria-hidden="true" style="--rating: 4.2"></span>
+              <span class="tt-proof__label">Software Advice rating</span>
+            </li>
+            <li data-reveal>
+              <span class="tt-proof__big"><span data-count-to="2013" data-count-format="plain">2013</span></span>
+              <span class="tt-proof__label">Helping teams quote since</span>
+            </li>
+            <li data-reveal>
+              <span class="tt-proof__big"><span data-count-to="14">14</span><small>days</small></span>
+              <span class="tt-proof__label">Free trial, no credit card</span>
+            </li>
+          </ul>
+          <ul class="tt-logos" aria-label="Some of the companies using QuoteCloud">
+            <li><img src="/assets/collab/customer-telstra.png" width="1280" height="401" alt="Telstra" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-helloworld.png" width="1280" height="401" alt="helloworld" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-coles-group.png" width="309" height="59" alt="Coles Group" loading="lazy" decoding="async" class="tt-logos__tight" /></li>
+            <li><img src="/assets/collab/customer-tramada.png" width="1280" height="401" alt="Tramada" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-bd-industrial.png" width="1280" height="401" alt="B&amp;D Industrial" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/collab/customer-sabre.png" width="1280" height="401" alt="Sabre" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="tt-faq-wrap">
+        <!-- @include faq-collab -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="tt-close" aria-labelledby="tt-close-title">
+        <div class="qc-container tt-close__inner" data-reveal>
+          <div class="tt-close__avs" aria-hidden="true">
+            <span class="tt-av tt-av--sophie">S</span>
+            <span class="tt-av tt-av--alex">A</span>
+            <span class="tt-av tt-av--taylor">T</span>
+            <span class="tt-av tt-av--open">You</span>
+          </div>
+          <h2 class="tt-close__title" id="tt-close-title">Your next proposal, <span class="tt-em">written together</span></h2>
+          <p class="tt-close__sub">Start a free 14-day trial, invite your team and see how fast a document moves when everyone is in it.</p>
+          <div class="tt-close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow tt-ico" width="18" height="18" aria-hidden="true"><use href="#tt-i-arrow" /></svg>
+            </a>
+            <a class="qc-btn tt-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="tt-close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

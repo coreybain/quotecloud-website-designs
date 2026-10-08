@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="v1">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" id="hero" aria-labelledby="hero-title" data-hero>
+        <div class="qc-container hero__inner">
+          <h1 class="hero__title" id="hero-title">
+            One document platform for <em class="hl">faster quotes</em> and winning proposals.
+          </h1>
+          <p class="hero__lead">
+            Create, price, share and eSign proposals, quotes and contracts in one interactive editor. No PDFs, no patchwork.
+          </p>
+          <div class="hero__cta">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+          </div>
+          <p class="hero__note">No credit card required</p>
+        </div>
+
+        <!-- Code-built product window: assembles itself on load -->
+        <div class="hero__stage">
+          <div class="win" aria-hidden="true">
+            <div class="win__bar">
+              <span class="win__dots"><i></i><i></i><i></i></span>
+              <span class="win__url">app.quote.cloud/documents/acme-logistics-proposal</span>
+              <span class="win__saved">Saved just now</span>
+              <span class="win__people"><i class="av av--a">PN</i><i class="av av--b">SL</i><i class="av av--c">JW</i></span>
+              <span class="win__send">Send to customer</span>
+            </div>
+            <div class="win__body">
+              <div class="win__rail">
+                <i class="rail__i rail__i--on"><svg viewBox="0 0 20 20"><path d="M4 5h12M4 10h12M4 15h8"/></svg></i>
+                <i class="rail__i"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M3 13l4-4 4 4 2-2 4 4"/></svg></i>
+                <i class="rail__i"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="1.5"/><path d="M3 9h14M8 4v12"/></svg></i>
+                <i class="rail__i"><svg viewBox="0 0 20 20"><path d="M4 16V9M9 16V5M14 16v-6"/></svg></i>
+                <i class="rail__i"><svg viewBox="0 0 20 20"><rect x="3" y="5" width="14" height="4" rx="1.5"/><rect x="3" y="11" width="9" height="4" rx="1.5"/></svg></i>
+                <i class="rail__i"><svg viewBox="0 0 20 20"><path d="M3 15c3-6 5-7 6-4s2 3 4-2 3-2 4 1"/></svg></i>
+                <i class="rail__i"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="6"/><path d="M10 7v6M7 10h6"/></svg></i>
+              </div>
+
+              <div class="win__doc">
+                <div class="blk blk--title">
+                  <strong>Proposal for Acme Logistics</strong>
+                  <span>Prepared by Priya Nair &middot; Valid for 30 days</span>
+                </div>
+                <div class="blk blk--cover">
+                  <span class="cover__brand">Northwind Fleet Solutions</span>
+                  <span class="cover__chip">Fleet upgrade &middot; 2026</span>
+                </div>
+                <div class="blk blk--text">
+                  <b>Overview</b>
+                  <span class="ln ln--100"></span><span class="ln ln--92"></span><span class="ln ln--64"></span>
+                </div>
+                <div class="blk blk--price">
+                  <div class="pt__row pt__row--head"><span>Item</span><span>Qty</span><span>Amount</span></div>
+                  <div class="pt__row"><span>Platform licences</span><span>12</span><span>$14,400</span></div>
+                  <div class="pt__row"><span>Onboarding &amp; setup</span><span>1</span><span>$2,400</span></div>
+                  <div class="pt__row pt__row--opt"><span><i class="pt__check"></i>Priority support <small>optional</small></span><span>1</span><span>$3,600</span></div>
+                  <div class="pt__row pt__row--total"><span>Total incl. GST</span><span></span><span class="pt__total" data-hero-total>$0</span></div>
+                </div>
+                <div class="blk blk--sign">
+                  <span class="sign__label">Signature</span>
+                  <span class="sign__line">Sign here</span>
+                </div>
+              </div>
+
+              <div class="win__side">
+                <div class="side__h">Activity</div>
+                <div class="side__item"><i class="av av--b">SL</i><span><b>Sam</b> commented on pricing</span></div>
+                <div class="side__item"><i class="av av--c">JW</i><span><b>Jordan</b> approved the draft</span></div>
+                <div class="side__item side__item--live"><i class="dot"></i><span>Acme opened the last version</span></div>
+                <div class="side__h">Content library</div>
+                <div class="side__lib"><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+
+            <div class="cur cur--hero"><svg viewBox="0 0 20 20"><path d="M4 2l0 14 3.6-3.4 2.4 5.6 2.4-1-2.4-5.5 4.8-.2z"/></svg><span class="cur__tag cur__tag--a">Priya</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento ───────── -->
+      <section class="bento" id="features" aria-labelledby="bento-title">
+        <div class="qc-container">
+          <h2 class="sec__title" id="bento-title" data-reveal>Everything a deal needs, <em class="hl">in one editor</em>.</h2>
+          <p class="sec__lead" data-reveal>Pricing, signatures, collaboration, approvals and AI. Built in, not bolted on.</p>
+
+          <div class="grid" data-reveal-stagger="70" data-spotlight>
+            <!-- Pricing 2x2 -->
+            <article class="tile tile--2x2" data-reveal data-live data-demo="price">
+              <h3 class="tile__title"><a href="https://www.quote.cloud/cpq-software">Interactive pricing <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage price">
+                <div class="price__head"><span>Fleet upgrade quote</span><span class="price__cur">AUD</span></div>
+                <div class="price__row"><span>Platform licences &times; 12</span><span>$14,400</span></div>
+                <div class="price__row"><span>Onboarding &amp; setup</span><span>$2,400</span></div>
+                <div class="price__row price__row--choice"><span>Rollout plan</span><span class="price__opts"><i>Standard</i><i class="is-on">Accelerated</i></span><span>$1,200</span></div>
+                <label class="price__row price__row--opt">
+                  <input class="price__check qc-sr-only" type="checkbox" data-price-opt aria-label="Add optional priority support, $3,600" />
+                  <span class="price__box" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.4 2.4L9.6 3.8"/></svg></span>
+                  <span>Priority support <small>optional</small></span>
+                  <span>$3,600</span>
+                </label>
+                <div class="price__row price__row--muted"><span>Partner discount 5%</span><span data-price-disc>&minus;$900</span></div>
+                <div class="price__row price__row--muted"><span>GST 10%</span><span data-price-tax>$1,710</span></div>
+                <div class="price__total"><span>Total</span><strong data-price-total aria-live="polite">$18,810</strong></div>
+                <div class="price__pay"><span>Pay deposit online</span><i>Stripe &middot; PayPal</i></div>
+                <div class="cur cur--price" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 2l0 14 3.6-3.4 2.4 5.6 2.4-1-2.4-5.5 4.8-.2z"/></svg><span class="cur__tag cur__tag--d">Acme</span></div>
+              </div>
+            </article>
+
+            <!-- Signature 1x2 -->
+            <article class="tile tile--1x2" data-reveal data-live>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/electronic-signature-software-solution">Legally binding eSign <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage sig" aria-hidden="true">
+                <div class="sig__doc">
+                  <span class="ln ln--80"></span><span class="ln ln--100"></span><span class="ln ln--56"></span>
+                  <div class="sig__box">
+                    <svg class="sig__path" viewBox="0 0 200 80" preserveAspectRatio="xMidYMid meet">
+                      <path d="M12 58 C18 30 28 22 34 30 C42 42 30 64 24 60 C20 56 40 38 52 40 C60 42 54 58 60 54 C68 48 72 36 78 44 C84 54 90 44 96 40 C104 36 100 52 108 50 C118 46 124 30 128 36 C132 44 126 60 134 58 C146 54 150 36 160 40 C170 46 176 58 190 48"/>
+                    </svg>
+                    <span class="sig__hint">Sign here</span>
+                    <span class="sig__stamp">Signed</span>
+                  </div>
+                  <div class="sig__meta"><i></i><span>Dana Whitfield &middot; 10:42 AM &middot; audit trail recorded</span></div>
+                </div>
+                <div class="sig__badges"><span>eIDAS</span><span>256-bit</span><span>AWS</span></div>
+              </div>
+            </article>
+
+            <!-- AI 1x2 -->
+            <article class="tile tile--1x2" data-reveal data-live data-demo="ai">
+              <h3 class="tile__title"><a href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage ai" aria-hidden="true">
+                <div class="ai__prompt"><svg viewBox="0 0 20 20"><path d="M10 2l1.8 5.2L17 9l-5.2 1.8L10 16l-1.8-5.2L3 9l5.2-1.8z"/></svg>Write an introduction for Acme Logistics</div>
+                <p class="ai__out"><span data-ai-out></span><i class="ai__caret"></i></p>
+                <div class="ai__actions"><span class="ai__btn">Insert</span><span class="ai__btn ai__btn--ghost">Rewrite</span></div>
+              </div>
+            </article>
+
+            <!-- Collaboration 2x1 -->
+            <article class="tile tile--2x1" data-reveal data-live>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/collaboration">Real-time collaboration <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage collab" aria-hidden="true">
+                <div class="collab__people"><i class="av av--a">PN</i><i class="av av--b">SL</i><i class="av av--c">JW</i><span>3 editing</span></div>
+                <p class="collab__text">
+                  Our phased rollout covers all three depots within 90 days. <mark class="collab__sel">Each phase includes training, data migration and go-live support</mark>, so drivers see no downtime.
+                  <span class="collab__typed">Pricing is fixed for 12 months.</span>
+                </p>
+                <div class="cur cur--c1"><svg viewBox="0 0 20 20"><path d="M4 2l0 14 3.6-3.4 2.4 5.6 2.4-1-2.4-5.5 4.8-.2z"/></svg><span class="cur__tag cur__tag--b">Sam</span></div>
+                <div class="cur cur--c2"><svg viewBox="0 0 20 20"><path d="M4 2l0 14 3.6-3.4 2.4 5.6 2.4-1-2.4-5.5 4.8-.2z"/></svg><span class="cur__tag cur__tag--c">Jordan</span></div>
+                <div class="collab__comment"><i class="av av--b">SL</i><span>Can we mention the 12-month price lock?</span></div>
+              </div>
+            </article>
+
+            <!-- Approval 2x1 -->
+            <article class="tile tile--2x1" data-reveal data-live>
+              <h3 class="tile__title">Approval workflows</h3>
+              <div class="tile__stage flow" aria-hidden="true">
+                <div class="flow__track">
+                  <div class="flow__node flow__node--1"><i class="flow__dot"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.4 2.4L9.6 3.8"/></svg></i><b>Draft</b><span>Priya</span></div>
+                  <div class="flow__link flow__link--1"><i></i></div>
+                  <div class="flow__node flow__node--2"><i class="flow__dot"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.4 2.4L9.6 3.8"/></svg></i><b>Sales lead</b><span>Discount &gt; 5%</span></div>
+                  <div class="flow__link flow__link--2"><i></i></div>
+                  <div class="flow__node flow__node--3"><i class="flow__dot"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.4 2.4L9.6 3.8"/></svg></i><b>Finance</b><span>Over $15k</span></div>
+                  <div class="flow__link flow__link--3"><i></i></div>
+                  <div class="flow__node flow__node--4"><i class="flow__dot"><svg viewBox="0 0 12 12"><path d="M2.5 6.2l2.4 2.4L9.6 3.8"/></svg></i><b>Sent</b><span>To customer</span></div>
+                </div>
+                <div class="flow__toast">Approved by Finance &middot; rule: total over $15,000</div>
+              </div>
+            </article>
+
+            <!-- Gantt 2x1 -->
+            <article class="tile tile--2x1" data-reveal data-live>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Gantt charts &amp; timelines <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage gantt" aria-hidden="true">
+                <div class="gantt__months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+                <div class="gantt__row"><span>Discovery</span><i class="gantt__bar gantt__bar--1"></i></div>
+                <div class="gantt__row"><span>Depot 1 rollout</span><i class="gantt__bar gantt__bar--2"></i></div>
+                <div class="gantt__row"><span>Depot 2 &amp; 3</span><i class="gantt__bar gantt__bar--3"></i></div>
+                <div class="gantt__row"><span>Training</span><i class="gantt__bar gantt__bar--4"></i></div>
+                <div class="gantt__row"><span>Go-live</span><i class="gantt__ms"></i></div>
+                <i class="gantt__today"></i>
+              </div>
+            </article>
+
+            <!-- Form 1x1 -->
+            <article class="tile tile--1x1" data-reveal data-live>
+              <h3 class="tile__title">Forms customers complete</h3>
+              <div class="tile__stage form" aria-hidden="true">
+                <div class="form__field form__field--1"><span>Company</span><b><span class="form__val">Acme Logistics Pty Ltd</span></b><i></i></div>
+                <div class="form__field form__field--2"><span>Signatory</span><b><span class="form__val">Dana Whitfield</span></b><i></i></div>
+                <div class="form__field form__field--3"><span>PO number</span><b><span class="form__val">PO-20419</span></b><i></i></div>
+                <div class="form__submit"><span>Submit</span><span>Submitted</span></div>
+              </div>
+            </article>
+
+            <!-- Canvas / Grid 1x1 -->
+            <article class="tile tile--1x1" data-reveal data-live data-demo="mode">
+              <h3 class="tile__title"><a href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas or Grid <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage mode">
+                <div class="mode__seg" role="group" aria-label="Editor mode">
+                  <i class="mode__thumb" aria-hidden="true"></i>
+                  <button type="button" class="mode__btn" data-mode="canvas" aria-pressed="true">Canvas</button>
+                  <button type="button" class="mode__btn" data-mode="grid" aria-pressed="false">Grid</button>
+                </div>
+                <div class="mode__page" aria-hidden="true">
+                  <i class="mode__b mode__b--1"></i><i class="mode__b mode__b--2"></i><i class="mode__b mode__b--3"></i><i class="mode__b mode__b--4"></i>
+                </div>
+              </div>
+            </article>
+
+            <!-- Integrations 2x1 -->
+            <article class="tile tile--2x1" data-reveal data-live>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/all-integrations">Connects to your stack <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <div class="tile__stage marq">
+                <div class="marq__row">
+                  <div class="marq__track">
+                    <img src="/assets/integrations/salesforce-cpq.png" width="44" height="44" alt="Salesforce" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/hub-spot.png" width="44" height="44" alt="HubSpot" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/xero.png" width="44" height="44" alt="Xero" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/quickbooks.png" width="44" height="44" alt="QuickBooks" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/stripe.png" width="44" height="44" alt="Stripe" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/mondaydotcom-logo.jpg" width="44" height="44" alt="Monday.com" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/microsoft-dynamics.jpg" width="44" height="44" alt="Microsoft Dynamics" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/slack.jpg" width="44" height="44" alt="Slack" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/paypal.png" width="44" height="44" alt="PayPal" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googlesheets.png" width="44" height="44" alt="Google Sheets" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/excel.png" width="44" height="44" alt="Microsoft Excel" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="44" height="44" alt="FreshBooks" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/zendesk-logo.jpg" width="44" height="44" alt="Zendesk" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/calendar.jpg" width="44" height="44" alt="Google Calendar" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/serviceM8.png" width="44" height="44" alt="ServiceM8" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googledocs.jpg" width="44" height="44" alt="Google Docs" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="marq__track" aria-hidden="true">
+                    <img src="/assets/integrations/salesforce-cpq.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/hub-spot.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/xero.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/quickbooks.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/stripe.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/mondaydotcom-logo.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/microsoft-dynamics.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/slack.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/paypal.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googlesheets.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/excel.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/zendesk-logo.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/calendar.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/serviceM8.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googledocs.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div class="marq__row marq__row--rev">
+                  <div class="marq__track">
+                    <img src="/assets/integrations/paypal.png" width="44" height="44" alt="PayPal" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googlesheets.png" width="44" height="44" alt="Google Sheets" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/excel.png" width="44" height="44" alt="Microsoft Excel" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="44" height="44" alt="FreshBooks" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/zendesk-logo.jpg" width="44" height="44" alt="Zendesk" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/calendar.jpg" width="44" height="44" alt="Google Calendar" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/serviceM8.png" width="44" height="44" alt="ServiceM8" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googledocs.jpg" width="44" height="44" alt="Google Docs" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/salesforce-cpq.png" width="44" height="44" alt="Salesforce" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/hub-spot.png" width="44" height="44" alt="HubSpot" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/xero.png" width="44" height="44" alt="Xero" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/quickbooks.png" width="44" height="44" alt="QuickBooks" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/stripe.png" width="44" height="44" alt="Stripe" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/mondaydotcom-logo.jpg" width="44" height="44" alt="Monday.com" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/microsoft-dynamics.jpg" width="44" height="44" alt="Microsoft Dynamics" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/slack.jpg" width="44" height="44" alt="Slack" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="marq__track" aria-hidden="true">
+                    <img src="/assets/integrations/paypal.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googlesheets.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/excel.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/zendesk-logo.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/calendar.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/serviceM8.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/googledocs.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/salesforce-cpq.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/hub-spot.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/xero.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/quickbooks.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/stripe.png" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/mondaydotcom-logo.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/microsoft-dynamics.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/slack.jpg" width="44" height="44" alt="" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Content blocks 2x1 -->
+            <article class="tile tile--2x1" data-reveal data-live>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">18 content blocks <span class="tile__arrow" aria-hidden="true">&rarr;</span></a></h3>
+              <ul class="tile__stage blocks">
+                <li><svg viewBox="0 0 20 20"><path d="M4 5h12M4 10h12M4 15h8"/></svg>Rich text</li>
+                <li><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M3 13l4-4 4 4 2-2 4 4"/></svg>Images</li>
+                <li><svg viewBox="0 0 20 20"><path d="M5 3h7l4 4v10H5z"/><path d="M12 3v4h4"/></svg>PDF</li>
+                <li><svg viewBox="0 0 20 20"><rect x="3" y="5" width="14" height="10" rx="2"/><path d="M9 8l3 2-3 2z"/></svg>Video</li>
+                <li><svg viewBox="0 0 20 20"><rect x="3" y="3" width="5" height="4" rx="1"/><rect x="12" y="3" width="5" height="4" rx="1"/><rect x="7.5" y="13" width="5" height="4" rx="1"/><path d="M5.5 7v3h9V7M10 10v3"/></svg>Diagrams</li>
+                <li><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="4" rx="1.5"/><rect x="3" y="12" width="9" height="4" rx="1.5"/></svg>Forms</li>
+                <li><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="1.5"/><path d="M3 8h14M3 12h14M8 4v12M13 4v12"/></svg>Spreadsheet</li>
+                <li><svg viewBox="0 0 20 20"><path d="M3 5h8M7 10h8M5 15h9" stroke-width="2.4"/></svg>Gantt</li>
+                <li><svg viewBox="0 0 20 20"><path d="M3 10h14"/><circle cx="6" cy="10" r="2"/><circle cx="14" cy="10" r="2"/></svg>Timeline</li>
+                <li><svg viewBox="0 0 20 20"><path d="M10 17s-5-4.5-5-8a5 5 0 0 1 10 0c0 3.5-5 8-5 8z"/><circle cx="10" cy="9" r="1.6"/></svg>Itinerary</li>
+                <li><svg viewBox="0 0 20 20"><path d="M10 3v14M6 7h5a2.5 2.5 0 0 1 0 5H8a2.5 2.5 0 0 0 0 5h6"/></svg>Pricing tables</li>
+                <li><svg viewBox="0 0 20 20"><rect x="3" y="6" width="14" height="8" rx="4"/><path d="M7 10h6"/></svg>Buttons</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="bento__cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-features">Start free 14-day trial</a>
+            <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="after-features-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Replace the patchwork ───────── -->
+      <section class="swap" id="replace" aria-labelledby="swap-title">
+        <div class="qc-container swap__inner">
+          <div class="swap__copy">
+            <h2 class="sec__title sec__title--left" id="swap-title" data-reveal>Replace the <em class="hl">patchwork</em>.</h2>
+            <p class="sec__lead sec__lead--left" data-reveal>Word, Excel, slides, diagram tools, email approvals and a separate eSign app. One platform now does the lot.</p>
+            <a class="swap__link" href="https://www.quote.cloud/templates" data-reveal>Browse templates <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <div class="swap__visual" data-reveal="scale" aria-hidden="true">
+            <ul class="swap__old">
+              <li><i class="swap__ic swap__ic--doc"></i>Word processor</li>
+              <li><i class="swap__ic swap__ic--sheet"></i>Spreadsheet</li>
+              <li><i class="swap__ic swap__ic--slide"></i>Slides &amp; design</li>
+              <li><i class="swap__ic swap__ic--diag"></i>Diagram tool</li>
+              <li><i class="swap__ic swap__ic--mail"></i>Email approvals</li>
+              <li><i class="swap__ic swap__ic--pen"></i>eSign app</li>
+            </ul>
+            <div class="swap__beam"><i></i><b></b></div>
+            <div class="swap__new">
+              <div class="swap__newhead"><img src="/assets/logos/qc-symbol-white.png" width="18" height="19" alt="" loading="lazy" decoding="async" /> QuoteCloud document</div>
+              <ul>
+                <li>Rich text &amp; images</li>
+                <li>Spreadsheet-linked pricing</li>
+                <li>Canvas design mode</li>
+                <li>Flowcharts &amp; org charts</li>
+                <li>Approval workflow</li>
+                <li>eSign &amp; online payment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Proof strip ───────── -->
+      <section class="proof" id="proof" aria-labelledby="proof-title">
+        <h2 class="qc-sr-only" id="proof-title">Rated and trusted</h2>
+        <div class="qc-container proof__inner" data-reveal-stagger="90">
+          <div class="proof__item" data-reveal>
+            <svg class="stars" viewBox="0 0 120 22" aria-hidden="true"><defs><linearGradient id="st5" x1="0" x2="1"><stop offset="0.2" stop-color="currentColor"/><stop offset="0.2" stop-color="#d9d9df"/></linearGradient></defs><path d="M11 1l3 6.4 7 .9-5.1 4.8 1.3 7L11 16.6 4.8 20l1.3-7L1 8.3l7-.9z"/><path d="M35 1l3 6.4 7 .9-5.1 4.8 1.3 7L35 16.6 28.8 20l1.3-7L25 8.3l7-.9z"/><path d="M59 1l3 6.4 7 .9-5.1 4.8 1.3 7L59 16.6 52.8 20l1.3-7L49 8.3l7-.9z"/><path d="M83 1l3 6.4 7 .9-5.1 4.8 1.3 7L83 16.6 76.8 20l1.3-7L73 8.3l7-.9z"/><path fill="url(#st5)" d="M107 1l3 6.4 7 .9-5.1 4.8 1.3 7-6.2-3.5L100.8 20l1.3-7L97 8.3l7-.9z"/></svg>
+            <strong><span data-count-to="4.2" data-count-decimals="1">4.2</span> on Capterra</strong>
+          </div>
+          <div class="proof__item" data-reveal>
+            <svg class="stars" viewBox="0 0 120 22" aria-hidden="true"><path d="M11 1l3 6.4 7 .9-5.1 4.8 1.3 7L11 16.6 4.8 20l1.3-7L1 8.3l7-.9z"/><path d="M35 1l3 6.4 7 .9-5.1 4.8 1.3 7L35 16.6 28.8 20l1.3-7L25 8.3l7-.9z"/><path d="M59 1l3 6.4 7 .9-5.1 4.8 1.3 7L59 16.6 52.8 20l1.3-7L49 8.3l7-.9z"/><path d="M83 1l3 6.4 7 .9-5.1 4.8 1.3 7L83 16.6 76.8 20l1.3-7L73 8.3l7-.9z"/><path fill="url(#st5)" d="M107 1l3 6.4 7 .9-5.1 4.8 1.3 7-6.2-3.5L100.8 20l1.3-7L97 8.3l7-.9z"/></svg>
+            <strong><span data-count-to="4.2" data-count-decimals="1">4.2</span> on Software Advice</strong>
+          </div>
+          <div class="proof__item proof__item--logo" data-reveal>
+            <img src="/assets/compliance/eidas.svg" width="66" height="30" alt="eIDAS compliant eSignatures" loading="lazy" decoding="async" />
+            <strong>eIDAS compliant</strong>
+          </div>
+          <div class="proof__item proof__item--logo" data-reveal>
+            <img src="/assets/compliance/encryption-256.png" width="36" height="36" alt="AES 256-bit encryption" loading="lazy" decoding="async" />
+            <strong>256-bit encryption</strong>
+          </div>
+          <div class="proof__item proof__item--logo" data-reveal>
+            <img src="/assets/compliance/aws.svg" width="48" height="29" alt="Hosted on AWS" loading="lazy" decoding="async" />
+            <strong>Hosted on AWS</strong>
+          </div>
+          <div class="proof__item" data-reveal>
+            <strong class="proof__since">Since 2013</strong>
+            <span>Helping teams quote faster</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="cta" id="start" aria-labelledby="cta-title">
+        <div class="qc-container">
+          <div class="cta__panel" data-reveal="scale" data-live>
+            <i class="cta__glow cta__glow--a" aria-hidden="true"></i>
+            <i class="cta__glow cta__glow--b" aria-hidden="true"></i>
+            <h2 class="cta__title" id="cta-title">Send your best proposal <em class="hl">this week</em>.</h2>
+            <p class="cta__lead">14-day free trial. No credit card required.</p>
+            <div class="cta__btns">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial</a>
+              <a class="qc-btn qc-btn--lg cta__ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="sticky" data-sticky>
+      <span>14-day free trial</span>
+      <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile">Start free trial</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

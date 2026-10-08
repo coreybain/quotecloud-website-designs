@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-docgen -->
+  </head>
+  <body class="dg2">
+    <!-- @include header -->
+
+    <svg class="dg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="dg-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="dg-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="dg-lock" viewBox="0 0 24 24"><rect x="4.5" y="11" width="15" height="10" rx="2.2" /><path d="M8 11V7.5a4 4 0 0 1 8 0V11" /></symbol>
+      <symbol id="dg-spark" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2z" /></symbol>
+      <symbol id="dg-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5" /></symbol>
+      <symbol id="dg-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" /></symbol>
+      <symbol id="dg-cursor" viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L10 19z" /></symbol>
+      <symbol id="dg-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3" /><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────────── Hero ───────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid qc-container">
+          <div class="hero__copy">
+            <h1 id="hero-title" class="hero__title">Document generation software that goes from <em>blank page to signed</em></h1>
+            <p class="hero__lede">Branded templates, live CRM data and locked-in terms assemble every quote, proposal and contract for you. One at a time, or thousands at once.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow dg-i" width="18" height="18" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">
+              <span>No credit card required</span>
+              <span class="hero__rating"><svg class="dg-i" width="14" height="14" aria-hidden="true"><use href="#dg-star" /></svg> 4.2 on Capterra</span>
+            </p>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true" data-loop>
+            <div class="hero__stack">
+              <span class="hero__sheet hero__sheet--a"></span>
+              <span class="hero__sheet hero__sheet--b"></span>
+            </div>
+            <div class="hero__doc" data-hero-doc>
+              <!-- The one document every section on this page is built around. JS clones it for the story, the wall and the closing CTA. -->
+              <div class="doc" data-doc data-step="6" data-s1 data-s2 data-s3 data-s4 data-s5 data-s6>
+                <div class="doc__page">
+                  <div class="doc__band blk">
+                    <span class="gh-row" data-off="2"><i class="gh gh--sq"></i><i class="gh" style="--w: 36%"></i><i class="gh gh--end" style="--w: 20%"></i></span>
+                    <span class="doc__brand" data-on="2"><span class="doc__mark">N</span><b>Northwind Studio</b><span class="doc__no">Proposal · NS-2041</span></span>
+                  </div>
+
+                  <div class="doc__cover blk">
+                    <span class="gh-box" data-off="2"></span>
+                    <div class="doc__cover-real" data-on="2">
+                      <span class="doc__kicker">Website &amp; brand refresh</span>
+                      <span class="doc__title">Proposal for <span class="tok"><span class="tok__key" data-off="3">{{client.company}}</span><span class="tok__val" data-on="3" data-f="company">Harbour &amp; Co.</span></span></span>
+                      <span class="doc__meta"><span>Investment <span class="tok"><span class="tok__key" data-off="3">{{deal.total}}</span><span class="tok__val" data-on="3" data-f="total">$53,460</span></span></span><span>Valid 30 days</span></span>
+                    </div>
+                  </div>
+
+                  <div class="doc__intro">
+                    <div class="blk">
+                      <i class="gh" data-off="2" style="--w: 26%"></i>
+                      <p class="doc__hi" data-on="2">Hi <span class="tok"><span class="tok__key" data-off="3">{{contact.first_name}}</span><span class="tok__val" data-on="3" data-f="first">Ava</span></span></p>
+                    </div>
+                    <div class="blk">
+                      <span class="gh-lines" data-off="3"><i class="gh"></i><i class="gh" style="--w: 94%"></i><i class="gh" style="--w: 58%"></i></span>
+                      <p class="doc__p" data-on="3">Thanks for your time last week. Here is how we will refresh the <span data-f="company">Harbour &amp; Co.</span> website and brand in eight weeks, for one fixed price. <span class="doc__ai"><svg class="dg-i" aria-hidden="true"><use href="#dg-spark" /></svg>AI Co-worker</span></p>
+                    </div>
+                  </div>
+
+                  <div class="doc__price">
+                    <div class="blk">
+                      <span class="gh-row" data-off="2"><i class="gh" style="--w: 22%"></i><i class="gh gh--end" style="--w: 14%"></i></span>
+                      <div class="doc__th" data-on="2"><span>Item</span><span>Qty</span><span>Amount</span></div>
+                    </div>
+                    <div class="doc__tr blk">
+                      <span class="gh-row" data-off="4"><i class="gh" style="--w: 44%"></i><i class="gh gh--end" style="--w: 16%"></i></span>
+                      <div class="doc__row" data-on="4" style="--d: 0"><span data-f="r1">Discovery &amp; strategy</span><span>1</span><span data-f="a1">$6,400</span></div>
+                    </div>
+                    <div class="doc__tr blk">
+                      <span class="gh-row" data-off="4"><i class="gh" style="--w: 52%"></i><i class="gh gh--end" style="--w: 18%"></i></span>
+                      <div class="doc__row" data-on="4" style="--d: 140"><span data-f="r2">Website design &amp; build</span><span>1</span><span data-f="a2">$32,000</span></div>
+                    </div>
+                    <div class="doc__tr blk">
+                      <span class="gh-row" data-off="4"><i class="gh" style="--w: 38%"></i><i class="gh gh--end" style="--w: 16%"></i></span>
+                      <div class="doc__row" data-on="4" style="--d: 280"><span data-f="r3">Brand guidelines</span><span>1</span><span data-f="a3">$10,200</span></div>
+                    </div>
+                    <div class="doc__tr doc__tr--opt blk">
+                      <span class="gh-row" data-off="4"><i class="gh" style="--w: 46%"></i><i class="gh gh--end" style="--w: 14%"></i></span>
+                      <div class="doc__row" data-on="4" style="--d: 420"><span class="doc__opt"><span class="tgl"></span>Care plan <em>optional</em></span><span>12 mo</span><span data-f="a4">$2,400</span></div>
+                      <span class="ov-cursor" data-only="4"><svg class="dg-i" aria-hidden="true"><use href="#dg-cursor" /></svg></span>
+                    </div>
+                    <div class="doc__tot blk">
+                      <span class="gh-row" data-off="4"><i class="gh" style="--w: 30%"></i><i class="gh gh--end gh--fat" style="--w: 24%"></i></span>
+                      <div class="doc__total" data-on="4" style="--d: 560"><span>Total <small>inc. GST</small></span><b data-f="total">$53,460</b></div>
+                    </div>
+                  </div>
+
+                  <div class="doc__terms blk">
+                    <span class="gh-lines" data-off="5"><i class="gh" style="--w: 34%"></i><i class="gh"></i><i class="gh" style="--w: 72%"></i></span>
+                    <div class="doc__terms-real" data-on="5">
+                      <b><svg class="dg-i" aria-hidden="true"><use href="#dg-lock" /></svg>Terms &amp; conditions</b>
+                      <span>50% deposit on acceptance, balance on delivery. Prices in AUD, valid for 30 days.</span>
+                      <small>Confidential. Issued under Northwind Studio standard terms, version 3.</small>
+                    </div>
+                    <span class="doc__seal" data-on="5"><svg class="dg-i" aria-hidden="true"><use href="#dg-check" /></svg></span>
+                  </div>
+
+                  <div class="doc__sign blk">
+                    <span class="gh-row" data-off="2"><i class="gh" style="--w: 40%"></i><i class="gh gh--end gh--pill" style="--w: 22%"></i></span>
+                    <div class="doc__sign-real" data-on="2">
+                      <div class="doc__sig">
+                        <svg viewBox="0 0 220 56" aria-hidden="true"><path pathLength="1" d="M6 40c10-26 24-30 22-8s-8 22 10 8c12-10 18-18 22-10 4 10 8 14 18 2 8-10 16-10 18 2 2 10 10 8 18-4 6-8 12-6 12 4 0 8 8 6 18-4 10-10 26-8 40-4 10 2 20 0 28-6" /></svg>
+                        <span class="doc__sig-name"><span data-f="contact">Ava Chen</span>, <span data-f="company">Harbour &amp; Co.</span></span>
+                      </div>
+                      <span class="doc__status"><span class="st st--wait" data-off="6">Awaiting signature</span><span class="st st--ok" data-on="6"><svg class="dg-i" aria-hidden="true"><use href="#dg-check" /></svg>Signed</span></span>
+                    </div>
+                  </div>
+                  <span class="doc__shine"></span>
+                </div>
+
+                <!-- Per-step annotations around the page (shown only while that step is active) -->
+                <div class="ov ov--file" data-only="1"><svg class="dg-i" aria-hidden="true"><use href="#dg-file" /></svg>Copy of Proposal_FINAL_v7.docx</div>
+                <div class="ov ov--theme" data-only="2">
+                  <span class="ov__label">Theme</span>
+                  <span class="sw sw--on"></span><span class="sw sw--b"></span><span class="sw sw--c"></span>
+                  <span class="ov__lock"><svg class="dg-i" aria-hidden="true"><use href="#dg-lock" /></svg>Layout locked</span>
+                </div>
+                <div class="ov ov--crm" data-only="3">
+                  <span class="ov__head"><svg class="dg-i" aria-hidden="true"><use href="#dg-db" /></svg>CRM record</span>
+                  <span class="ov__kv"><i>Company</i><b data-f="company">Harbour &amp; Co.</b></span>
+                  <span class="ov__kv"><i>Contact</i><b data-f="contact">Ava Chen</b></span>
+                  <span class="ov__kv"><i>Deal</i><b>Website &amp; brand</b></span>
+                  <span class="ov__kv"><i>Amount</i><b data-f="total">$53,460</b></span>
+                  <span class="ov__flow"><i></i><i></i><i></i></span>
+                </div>
+                <div class="ov ov--lockchip" data-only="5"><svg class="dg-i" aria-hidden="true"><use href="#dg-lock" /></svg>Approved clauses · v3</div>
+                <div class="ov ov--sent" data-only="6">
+                  <span><svg class="dg-i" aria-hidden="true"><use href="#dg-check" /></svg>Sent</span>
+                  <span><svg class="dg-i" aria-hidden="true"><use href="#dg-check" /></svg>Opened</span>
+                  <span><svg class="dg-i" aria-hidden="true"><use href="#dg-check" /></svg>Signed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── The story: one document, six steps ───────────── -->
+      <section class="story" id="how-it-works" aria-labelledby="story-title">
+        <div class="story__head qc-container" data-reveal>
+          <h2 id="story-title">One document, <em>built for you</em> in six moves</h2>
+          <p>Scroll and watch a single proposal go from an empty page to a signed agreement, without anyone retyping a thing.</p>
+        </div>
+
+        <div class="story__grid qc-container">
+          <ol class="story__steps">
+            <li class="step" id="step-1" data-step="1">
+              <div class="step__copy">
+                <span class="step__num">01</span>
+                <h3>No more blank pages</h3>
+                <p>Most proposals still start here: an empty page, a copy of an old file and an afternoon of retyping and proofreading.</p>
+              </div>
+              <div class="step__visual" aria-hidden="true" data-loop></div>
+            </li>
+            <li class="step" id="step-2" data-step="2">
+              <div class="step__copy">
+                <span class="step__num">02</span>
+                <h3>A branded template drops in</h3>
+                <p>Your theme, logo and layout blocks land in the right places, with placeholders ready for data. Every document looks like your company, whoever creates it.</p>
+                <a class="step__link" href="https://www.quote.cloud/templates">Explore templates <svg class="dg-i" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+              </div>
+              <div class="step__visual" aria-hidden="true" data-loop></div>
+            </li>
+            <li class="step" id="step-3" data-step="3">
+              <div class="step__copy">
+                <span class="step__num">03</span>
+                <h3>Your CRM fills in the details</h3>
+                <p>Client, contact and deal data flow straight from your CRM into every placeholder, and AI Co-worker drafts the introduction. No re-keying, no typos.</p>
+                <a class="step__link" href="https://www.quote.cloud/ai-coworker-in-quotecloud">Meet AI Co-worker <svg class="dg-i" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+              </div>
+              <div class="step__visual" aria-hidden="true" data-loop></div>
+            </li>
+            <li class="step" id="step-4" data-step="4">
+              <div class="step__copy">
+                <span class="step__num">04</span>
+                <h3>Pricing builds itself</h3>
+                <p>Line items, quantities, tax and totals calculate as the table assembles, with optional items your client can switch on inside the document.</p>
+                <a class="step__link" href="https://www.quote.cloud/cpq-software">See CPQ pricing tables <svg class="dg-i" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+              </div>
+              <div class="step__visual" aria-hidden="true" data-loop></div>
+            </li>
+            <li class="step" id="step-5" data-step="5">
+              <div class="step__copy">
+                <span class="step__num">05</span>
+                <h3>Approved terms, locked in</h3>
+                <p>Disclaimers and compliance clauses are part of the template, so they can't be forgotten or edited out. Access permissions and version control do the rest.</p>
+              </div>
+              <div class="step__visual" aria-hidden="true" data-loop></div>
+            </li>
+            <li class="step" id="step-6" data-step="6">
+              <div class="step__copy">
+                <span class="step__num">06</span>
+                <h3>Sent, opened, signed</h3>
+                <p>Delivered to your client's inbox as an interactive web document or a PDF, then accepted and e-signed in the same place.</p>
+                <a class="step__link" href="https://www.quote.cloud/electronic-signature-software-solution">About eSignatures <svg class="dg-i" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+              </div>
+              <div class="step__visual" aria-hidden="true" data-loop></div>
+            </li>
+          </ol>
+
+          <div class="stage" aria-hidden="true" data-loop>
+            <div class="stage__pin">
+              <nav class="rail" aria-label="Story steps">
+                <span class="rail__track"><span class="rail__fill"></span></span>
+                <a class="rail__dot" href="#step-1" tabindex="-1"><span>1</span></a>
+                <a class="rail__dot" href="#step-2" tabindex="-1"><span>2</span></a>
+                <a class="rail__dot" href="#step-3" tabindex="-1"><span>3</span></a>
+                <a class="rail__dot" href="#step-4" tabindex="-1"><span>4</span></a>
+                <a class="rail__dot" href="#step-5" tabindex="-1"><span>5</span></a>
+                <a class="rail__dot" href="#step-6" tabindex="-1"><span>6</span></a>
+              </nav>
+              <div class="stage__doc" data-stage-doc></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── At scale: the document multiplies ───────────── -->
+      <section class="wall" id="api" aria-labelledby="wall-title">
+        <div class="wall__head qc-container" data-reveal>
+          <h2 id="wall-title">One template. <em>Thousands of documents.</em></h2>
+          <p>Through the GraphQL/REST API, any system that speaks HTTPS can send data to QuoteCloud and get finished, personalised documents back, around the clock: for archiving, email marketing, invoicing and more.</p>
+        </div>
+
+        <div class="wall__scrub" data-wall>
+          <div class="wall__pin">
+            <div class="wall__field" aria-hidden="true"><div class="wall__grid" data-wall-grid></div></div>
+            <div class="wall__api" data-loop>
+              <div class="api">
+                <div class="api__bar"><span class="api__dots"><i></i><i></i><i></i></span><span>Illustrative request body</span></div>
+<pre class="api__code"><code>{
+  <span class="k">"template"</span>: <span class="s">"proposal-standard"</span>,
+  <span class="k">"client"</span>: {
+    <span class="k">"company"</span>: <span class="s">"Harbour &amp; Co."</span>,
+    <span class="k">"contact"</span>: <span class="s">"Ava Chen"</span>
+  },
+  <span class="k">"fields"</span>: { <span class="k">"deal.total"</span>: <span class="n">53460</span> },
+  <span class="k">"deliver"</span>: [<span class="s">"web"</span>, <span class="s">"pdf"</span>, <span class="s">"email"</span>]
+}</code></pre>
+                <div class="api__status"><span class="api__pulse"></span><span>Generating batch</span><span class="api__bar-track"><span class="api__bar-fill"></span></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wall__foot qc-container">
+          <p>Every document in the right format, at the right moment: a live web link, a PDF, or straight to the client's inbox.</p>
+          <div class="wall__ctas">
+            <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="api">Start free 14-day trial <svg class="qc-btn__arrow dg-i" width="18" height="18" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+            <a class="dg-link" href="https://support.quote.cloud/">Read the developer guide <svg class="dg-i" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Connected ───────────── -->
+      <section class="connect" aria-labelledby="connect-title">
+        <div class="connect__head qc-container" data-reveal>
+          <h2 id="connect-title">Your data is already somewhere. <em>Plug it in.</em></h2>
+          <p>Salesforce, HubSpot, Pipedrive, Zoho, Monday and Microsoft Dynamics feed documents directly, alongside accounting, payment and productivity tools from across your stack.</p>
+        </div>
+        <div class="marquee" data-marquee data-loop>
+          <div class="marquee__row">
+            <ul class="marquee__track">
+              <li><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" width="792" height="790" loading="lazy" decoding="async" alt="" />Salesforce</a></li>
+              <li><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" width="792" height="790" loading="lazy" decoding="async" alt="" />HubSpot</a></li>
+              <li><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="792" height="790" loading="lazy" decoding="async" alt="" />Monday</a></li>
+              <li><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" width="792" height="790" loading="lazy" decoding="async" alt="" />Microsoft Dynamics</a></li>
+              <li><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" width="792" height="790" loading="lazy" decoding="async" alt="" />Xero</a></li>
+              <li><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" width="792" height="790" loading="lazy" decoding="async" alt="" />QuickBooks</a></li>
+              <li><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/freshbooks-accounting-logo.jpg" width="785" height="783" loading="lazy" decoding="async" alt="" />FreshBooks</a></li>
+              <li><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/zendesk-logo.jpg" width="792" height="790" loading="lazy" decoding="async" alt="" />Zendesk</a></li>
+            </ul>
+          </div>
+          <div class="marquee__row marquee__row--rev">
+            <ul class="marquee__track">
+              <li><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="792" height="790" loading="lazy" decoding="async" alt="" />Stripe</a></li>
+              <li><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="792" height="790" loading="lazy" decoding="async" alt="" />PayPal</a></li>
+              <li><a href="https://www.quote.cloud/googlesheets-with-quotecloud"><img src="/assets/integrations/googlesheets.png" width="792" height="790" loading="lazy" decoding="async" alt="" />Google Sheets</a></li>
+              <li><a href="https://www.quote.cloud/microsoft-excel-with-quotecloud"><img src="/assets/integrations/excel.png" width="792" height="790" loading="lazy" decoding="async" alt="" />Excel</a></li>
+              <li><a href="https://www.quote.cloud/slack-with-quotecloud"><img src="/assets/integrations/slack.jpg" width="792" height="790" loading="lazy" decoding="async" alt="" />Slack</a></li>
+              <li><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/googledocs.jpg" width="792" height="790" loading="lazy" decoding="async" alt="" />Google Docs</a></li>
+              <li><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/calendar.jpg" width="792" height="790" loading="lazy" decoding="async" alt="" />Google Calendar</a></li>
+              <li><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/serviceM8.png" width="792" height="790" loading="lazy" decoding="async" alt="" />ServiceM8</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="connect__more qc-container"><a class="dg-link" href="https://www.quote.cloud/all-integrations">Browse all integrations <svg class="dg-i" aria-hidden="true"><use href="#dg-arrow" /></svg></a></p>
+      </section>
+
+      <!-- ───────────── Proof ───────────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="proof__inner qc-container">
+          <h2 id="proof-title" class="proof__title">Trusted with the documents <em>that close deals</em></h2>
+          <ul class="proof__grid" data-reveal-stagger="90">
+            <li class="proof__card" data-reveal>
+              <span class="proof__score"><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></span>
+              <span class="proof__stars" aria-hidden="true"><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i proof__star-part"><use href="#dg-star" /></svg></span>
+              <span class="proof__label">Rated on Capterra</span>
+            </li>
+            <li class="proof__card" data-reveal>
+              <span class="proof__score"><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></span>
+              <span class="proof__stars" aria-hidden="true"><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i"><use href="#dg-star" /></svg><svg class="dg-i proof__star-part"><use href="#dg-star" /></svg></span>
+              <span class="proof__label">Rated on Software Advice</span>
+            </li>
+            <li class="proof__card proof__card--wide" data-reveal>
+              <span class="proof__logos">
+                <img src="/assets/compliance/eidas.svg" width="91" height="90" loading="lazy" decoding="async" alt="eIDAS compliant" />
+                <img src="/assets/compliance/encryption-256.png" width="320" height="305" loading="lazy" decoding="async" alt="256-bit encryption" />
+                <img src="/assets/compliance/aws.svg" width="91" height="90" loading="lazy" decoding="async" alt="Hosted on AWS" />
+                <img src="/assets/compliance/gdpr.png" width="319" height="320" loading="lazy" decoding="async" alt="GDPR" />
+              </span>
+              <span class="proof__label">eIDAS-compliant eSignatures, 256-bit encryption, AWS hosting and GDPR. Building business documents since 2013.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- @include faq-docgen -->
+
+      <!-- ───────────── Closing CTA ───────────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="close__panel qc-container">
+          <div class="close__copy" data-reveal>
+            <h2 id="close-title">Skip the blank page on <em>your next proposal</em></h2>
+            <p>Start from a premade template, connect your CRM and generate your first branded document today.</p>
+            <div class="close__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow dg-i" width="18" height="18" aria-hidden="true"><use href="#dg-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+          </div>
+          <div class="close__visual" aria-hidden="true" data-close-doc></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

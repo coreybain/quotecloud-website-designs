@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-quoting -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid-lines" aria-hidden="true"></div>
+        <div class="qc-container hero__inner">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span class="em">Quoting software</span> <span class="hero__rest">built for speed, accuracy and control</span>
+            </h1>
+            <p class="hero__lede">
+              Create precise, professional sales quotes in minutes. From pricing to approval to signature, all in one platform.
+            </p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo"
+                >Book a demo</a
+              >
+            </div>
+            <p class="hero__note">No credit card required</p>
+          </div>
+
+          <div class="hero__visual">
+            <div
+              class="hq"
+              data-hero-quote
+              role="img"
+              aria-label="A QuoteCloud sales quote for Harbour Logistics: enterprise software licence $15,000, implementation services $6,500, an optional training package $1,200 and premium support $2,400, totalling $27,610 including tax, marked ready to send."
+            >
+              <div class="hq__head">
+                <span class="hq__logo" aria-hidden="true"></span>
+                <div class="hq__meta">
+                  <span class="hq__id">Quote Q-1024</span>
+                  <span class="hq__client">Harbour Logistics · valid 30 days</span>
+                </div>
+                <span class="hq__status">
+                  <span class="hq__pill hq__pill--draft" aria-hidden="true"><i></i>Draft</span>
+                  <span class="hq__pill hq__pill--ready"><i></i>Ready to send</span>
+                </span>
+              </div>
+
+              <div class="hq__cols">
+                <span>Item</span><span>Qty</span><span>Amount</span>
+              </div>
+              <ul class="hq__rows">
+                <li class="hq__row" style="--i: 0">
+                  <span class="hq__item"><b>Enterprise software licence</b><small>Annual subscription</small></span>
+                  <span class="hq__qty">1</span>
+                  <span class="hq__amt">$15,000.00</span>
+                </li>
+                <li class="hq__row" style="--i: 1">
+                  <span class="hq__item"><b>Implementation services</b><small>40 hrs · $162.50</small></span>
+                  <span class="hq__qty">40</span>
+                  <span class="hq__amt">$6,500.00</span>
+                </li>
+                <li class="hq__row hq__row--opt" style="--i: 2">
+                  <span class="hq__item">
+                    <b><span class="hq__check" aria-hidden="true"
+                      ><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" pathLength="1" /></svg></span
+                    >Training package</b>
+                    <small>Optional · customer can choose</small>
+                  </span>
+                  <span class="hq__qty">1</span>
+                  <span class="hq__amt">$1,200.00</span>
+                </li>
+                <li class="hq__row" style="--i: 3">
+                  <span class="hq__item"><b>Premium support</b><small>12 months · $200</small></span>
+                  <span class="hq__qty">12</span>
+                  <span class="hq__amt">$2,400.00</span>
+                </li>
+              </ul>
+
+              <div class="hq__sums">
+                <div><span>Subtotal</span><span data-hq-sub>$25,100.00</span></div>
+                <div><span>Tax (10%)</span><span data-hq-tax>$2,510.00</span></div>
+              </div>
+              <div class="hq__total">
+                <span>Total</span>
+                <strong data-hq-total>$27,610.00</strong>
+              </div>
+              <div class="hq__foot">
+                <span class="hq__avatars" aria-hidden="true"><i>SK</i><i>DR</i></span>
+                <span class="hq__approved">Approved by Dana R.</span>
+                <span class="hq__send">Send quote</span>
+              </div>
+            </div>
+            <div class="hero__glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento 1: price, protect, approve ───────── -->
+      <section class="bento-sec" id="price-tables" aria-labelledby="bento1-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="bento1-title">Sales quotes priced <span class="em">by your rules</span></h2>
+            <p>
+              Catalogue, price tables, discounts, currencies, margins and approval workflows, all calculated live. Need full
+              <a class="inline-link inline-link--short" href="https://www.quote.cloud/cpq-software">CPQ</a>? It's built in.
+            </p>
+          </header>
+
+          <div class="bento bento--one" data-reveal-stagger="70">
+            <!-- Catalogue -->
+            <article class="tile tile--cat" data-reveal data-demo="catalogue" aria-labelledby="t-cat">
+              <div class="tile__copy">
+                <h3 id="t-cat">From catalogue to quote in minutes</h3>
+                <p>Search your product catalogue and drop items in. Prices and descriptions fill themselves.</p>
+              </div>
+              <div
+                class="tile__stage cat"
+                role="img"
+                aria-label="Searching a product catalogue for lighting and adding LED downlights, a dimmer switch and a motion sensor to a quote, which totals $724.00."
+              >
+                <div class="cat__search">
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5" /><path d="M13 13l4 4" /></svg>
+                  <span class="cat__query" data-cat-query>Lighting</span><span class="cat__caret"></span>
+                </div>
+                <ul class="cat__results">
+                  <li data-cat-item="0"><i class="sw sw--a"></i><span><b>LED downlight 10W</b><small>LD-10</small></span><em>$41.50</em><span class="cat__add">+</span></li>
+                  <li data-cat-item="1"><i class="sw sw--b"></i><span><b>Dimmer switch</b><small>DS-2</small></span><em>$68.00</em><span class="cat__add">+</span></li>
+                  <li data-cat-item="2"><i class="sw sw--c"></i><span><b>Motion sensor</b><small>MS-1</small></span><em>$90.00</em><span class="cat__add">+</span></li>
+                </ul>
+                <div class="cat__quote">
+                  <div class="cat__qhead"><span>Quote · Spark Electrical</span><span>Amount</span></div>
+                  <ul class="cat__lines">
+                    <li data-cat-line="0"><i class="sw sw--a"></i><span>LED downlight 10W <small>× 12</small></span><b>$498.00</b></li>
+                    <li data-cat-line="1"><i class="sw sw--b"></i><span>Dimmer switch <small>× 2</small></span><b>$136.00</b></li>
+                    <li data-cat-line="2"><i class="sw sw--c"></i><span>Motion sensor <small>× 1</small></span><b>$90.00</b></li>
+                  </ul>
+                  <div class="cat__drop" aria-hidden="true">Drop items here or keep searching</div>
+                  <div class="cat__total"><span>Total</span><b data-cat-total>$724.00</b></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Discount -->
+            <article class="tile tile--dis" data-reveal data-demo="discount" aria-labelledby="t-dis">
+              <div class="tile__copy">
+                <h3 id="t-dis">Discounts that re-flow every total</h3>
+                <p>Percentage or fixed value, with a default applied consistently across line items.</p>
+              </div>
+              <div
+                class="tile__stage dis"
+                role="img"
+                aria-label="A price table with a discount column. A default 10% discount is applied to three line items and the total updates from $5,400.00 to $4,860.00."
+              >
+                <div class="dis__bar">
+                  <span class="dis__chip">Default discount <b data-dis-default>10%</b></span>
+                  <span class="dis__save">You save <b data-dis-save>$540.00</b></span>
+                </div>
+                <div class="ptable">
+                  <div class="ptable__row ptable__row--head">
+                    <span>Item</span><span class="c-qty">Qty</span><span class="c-unit">Unit</span><span>Disc.</span><span>Total</span>
+                  </div>
+                  <div class="ptable__row" data-dis-row data-base="1200">
+                    <span>Cloud licence seats</span><span class="c-qty">25</span><span class="c-unit">$48.00</span
+                    ><span class="ptable__disc" data-dis-pct>10%</span><span data-dis-line>$1,080.00</span>
+                  </div>
+                  <div class="ptable__row" data-dis-row data-base="2400">
+                    <span>Onboarding workshop</span><span class="c-qty">1</span><span class="c-unit">$2,400.00</span
+                    ><span class="ptable__disc" data-dis-pct>10%</span><span data-dis-line>$2,160.00</span>
+                  </div>
+                  <div class="ptable__row" data-dis-row data-base="1800">
+                    <span>Data migration</span><span class="c-qty">1</span><span class="c-unit">$1,800.00</span
+                    ><span class="ptable__disc" data-dis-pct>10%</span><span data-dis-line>$1,620.00</span>
+                  </div>
+                  <div class="ptable__row ptable__row--total">
+                    <span>Total</span><span class="c-qty"></span><span class="c-unit"></span><span></span><b data-dis-total>$4,860.00</b>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Optional items -->
+            <article class="tile tile--opt" data-reveal data-demo="optional" aria-labelledby="t-opt">
+              <div class="tile__copy">
+                <h3 id="t-opt">Optional items customers choose</h3>
+                <p>They tick the add-ons they want. Totals recalculate on the spot.</p>
+              </div>
+              <div
+                class="tile__stage opt"
+                role="img"
+                aria-label="A customer ticks an optional training day worth $1,200, and the quote total rises from $4,860.00 to $6,060.00."
+              >
+                <div class="opt__card">
+                  <div class="opt__row" data-opt-row>
+                    <span class="opt__box" aria-hidden="true"
+                      ><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" pathLength="1" /></svg
+                    ></span>
+                    <span class="opt__name"><b>Training day</b><small>Optional</small></span>
+                    <span class="opt__price">$1,200.00</span>
+                  </div>
+                  <div class="opt__total"><span>Total</span><b data-opt-total>$6,060.00</b></div>
+                </div>
+                <span class="cursor opt__cursor" aria-hidden="true"
+                  ><svg viewBox="0 0 20 20"><path d="M4 2.5l11.5 8.2-5.2.9 3 6-2.4 1.1-2.9-6.1L4 16.2z" /></svg
+                ></span>
+              </div>
+            </article>
+
+            <!-- Currency -->
+            <article class="tile tile--cur tile--dark" data-reveal data-demo="currency" aria-labelledby="t-cur">
+              <div class="tile__copy">
+                <h3 id="t-cur">Any currency, every symbol right</h3>
+                <p>Dollars, euros, pounds and more, across line items, subtotals and totals.</p>
+              </div>
+              <div
+                class="tile__stage cur"
+                role="img"
+                aria-label="A quote total shown in US dollars, euros and British pounds with the correct currency symbol on every line, using illustrative exchange rates."
+              >
+                <div class="cur__switch" aria-hidden="true">
+                  <span data-cur-opt="0" class="is-on">USD</span><span data-cur-opt="1">EUR</span><span data-cur-opt="2">GBP</span>
+                  <i class="cur__pill" data-cur-pill></i>
+                </div>
+                <ul class="cur__lines">
+                  <li><span>Design &amp; build</span><b data-cur-val="9600">$9,600.00</b></li>
+                  <li><span>Hosting · 12 months</span><b data-cur-val="2880">$2,880.00</b></li>
+                </ul>
+                <div class="cur__total">
+                  <span class="cur__sym"><span data-cur-sym>$</span></span><span class="cur__num" data-cur-total data-cur-base="12480">12,480.00</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Hidden margins -->
+            <article class="tile tile--mar" data-reveal data-demo="margins" aria-labelledby="t-mar">
+              <div class="tile__copy">
+                <h3 id="t-mar">Costs and margins only your team sees</h3>
+                <p>Keep supplier pricing, markups and margins internal. Customers see a clean selling price.</p>
+              </div>
+              <div
+                class="tile__stage mar"
+                role="img"
+                aria-label="A price table in internal view shows cost and margin columns. Switching to customer view frosts and hides those columns, leaving only items and selling prices totalling $750.00."
+              >
+                <div class="mar__toggle">
+                  <span class="mar__label" data-mar-int>Internal view</span>
+                  <span class="switch" data-mar-switch><i></i></span>
+                  <span class="mar__label" data-mar-cust>Customer view</span>
+                </div>
+                <div class="mtable" data-mar-table>
+                  <div class="mtable__row mtable__row--head">
+                    <span>Item</span><span class="m-int">Cost</span><span class="m-int">Margin</span><span>Price</span>
+                  </div>
+                  <div class="mtable__row">
+                    <span>LED downlights × 12</span><span class="m-int">$300.00</span><span class="m-int">40%</span><span>$500.00</span>
+                  </div>
+                  <div class="mtable__row">
+                    <span>Cable &amp; fittings</span><span class="m-int">$120.00</span><span class="m-int">25%</span><span>$160.00</span>
+                  </div>
+                  <div class="mtable__row">
+                    <span>Motion sensor</span><span class="m-int">$54.00</span><span class="m-int">40%</span><span>$90.00</span>
+                  </div>
+                  <div class="mtable__row mtable__row--total">
+                    <span>Total</span><span class="m-int">$474.00</span><span class="m-int">36.8%</span><b>$750.00</b>
+                  </div>
+                  <div class="mtable__frost" aria-hidden="true">
+                    <span class="mtable__lock"
+                      ><svg viewBox="0 0 16 16"><rect x="3" y="7" width="10" height="7" rx="2" /><path d="M5.5 7V5.2a2.5 2.5 0 015 0V7" /></svg
+                      >Hidden<span class="mtable__lock-more">from customer</span></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Approvals -->
+            <article class="tile tile--app" data-reveal data-demo="approvals" aria-labelledby="t-app">
+              <div class="tile__copy">
+                <h3 id="t-app">Approval workflows on your thresholds</h3>
+                <p>A discount over your limit routes itself to the right manager before it goes out.</p>
+              </div>
+              <div
+                class="tile__stage app"
+                role="img"
+                aria-label="An approval rule flags a 15% discount over the 10% limit. The quote moves from submitted, to manager approval by Dana R., to approved and ready to send."
+              >
+                <div class="app__rule" data-app-rule>
+                  <span class="app__warn" aria-hidden="true">!</span>
+                  <span><b>Discount 15%</b> is over the 10% limit</span>
+                </div>
+                <ol class="app__chain">
+                  <li data-app-step="0">
+                    <span class="app__dot"><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" pathLength="1" /></svg></span>
+                    <span><b>Submitted</b><small>Sophie K. · Sales</small></span>
+                  </li>
+                  <li data-app-step="1">
+                    <span class="app__dot"><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" pathLength="1" /></svg></span>
+                    <span><b>Manager approval</b><small>Dana R. · Sales manager</small></span>
+                  </li>
+                  <li data-app-step="2">
+                    <span class="app__dot"><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" pathLength="1" /></svg></span>
+                    <span><b>Ready to send</b><small>Approved 10:42</small></span>
+                  </li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- Versions -->
+            <article class="tile tile--ver" data-reveal data-demo="versions" aria-labelledby="t-ver">
+              <div class="tile__copy">
+                <h3 id="t-ver">Every version, on the record</h3>
+                <p>Full history and audit trail. Customers always get the latest quote.</p>
+              </div>
+              <div
+                class="tile__stage ver"
+                role="img"
+                aria-label="A version history stack: version 1.0 quote created, version 1.1 training added, version 1.2 discount approved and marked as the latest version the customer sees."
+              >
+                <div class="ver__stack">
+                  <div class="ver__card" data-ver="2">
+                    <span class="ver__tag">v1.0</span>
+                    <span><b>Quote created</b><small>Sophie K. · Mon 16:05</small></span>
+                  </div>
+                  <div class="ver__card" data-ver="1">
+                    <span class="ver__tag">v1.1</span>
+                    <span><b>Training added</b><small>Alex M. · Tue 09:15</small></span>
+                  </div>
+                  <div class="ver__card ver__card--top" data-ver="0">
+                    <span class="ver__tag ver__tag--live">v1.2</span>
+                    <span><b>Discount approved</b><small>Dana R. · Tue 10:42</small></span>
+                    <span class="ver__latest">Latest</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Formula -->
+            <article class="tile tile--for" data-reveal data-demo="formula" aria-labelledby="t-for">
+              <div class="tile__copy">
+                <h3 id="t-for">Custom pricing formulas, no spreadsheets</h3>
+                <p>Rules for quantities, markups and margins run inside the price table.</p>
+              </div>
+              <div
+                class="tile__stage for"
+                role="img"
+                aria-label="A pricing formula, sell price equals cost times one plus markup, calculating a $480.00 item with a 35% markup to a $648.00 sell price."
+              >
+                <div class="for__bar">
+                  <span class="for__fx">fx</span>
+                  <code>Sell price = Cost × (1 + Markup)</code>
+                </div>
+                <div class="for__eq">
+                  <div class="for__cell" data-for-cell="0"><small>Cost</small><b data-for-cost>$480.00</b></div>
+                  <span class="for__op" aria-hidden="true">×</span>
+                  <div class="for__cell" data-for-cell="1"><small>1 + Markup</small><b data-for-mk>1.35</b></div>
+                  <span class="for__op" aria-hidden="true">=</span>
+                  <div class="for__cell for__cell--out" data-for-cell="2"><small>Sell price</small><b data-for-out>$648.00</b></div>
+                </div>
+                <div class="for__item"><span data-for-name>Solar inverter 5kW</span><span class="for__hint">Applied to every line</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Mid CTA ───────── -->
+      <section class="mid-cta" aria-labelledby="mid-cta-title">
+        <div class="qc-container">
+          <div class="mid-cta__card" data-reveal="scale">
+            <div>
+              <h2 id="mid-cta-title">Build your first quote <span class="em">in minutes.</span></h2>
+              <p>Free for 14 days with your own price list. No credit card required.</p>
+            </div>
+            <div class="mid-cta__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="mid"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo"
+                >Book a demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento 2: send, sign, get paid ───────── -->
+      <section class="bento-sec bento-sec--two" id="esignatures" aria-labelledby="bento2-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="bento2-title">Send it, e-sign it, <span class="em">get paid</span></h2>
+            <p>An interactive quote with eSignatures, online payment and alerts at every step.</p>
+          </header>
+
+          <div class="bento bento--two" data-reveal-stagger="70">
+            <!-- eSign + pay -->
+            <article class="tile tile--sig" data-reveal data-demo="sign" aria-labelledby="t-sig">
+              <div class="tile__copy">
+                <h3 id="t-sig">eSignatures and payment in the same quote</h3>
+                <p>
+                  Legally binding signatures, then pay online with Stripe or PayPal.
+                  <a class="inline-link" href="https://www.quote.cloud/electronic-signature-software-solution">About eSignatures</a>
+                </p>
+              </div>
+              <div
+                class="tile__stage sig"
+                role="img"
+                aria-label="The customer signs quote Q-1024 for $27,610.00, then pays a 20% deposit of $5,522.00 online via Stripe, and the quote is marked signed and paid."
+              >
+                <div class="sig__doc">
+                  <div class="sig__top">
+                    <span><small>Acceptance</small><b>Quote Q-1024 · Harbour Logistics</b></span>
+                    <span class="sig__amt"><small>Total</small><b>$27,610.00</b></span>
+                  </div>
+                  <div class="sig__line">
+                    <svg class="sig__ink" viewBox="0 0 300 70" aria-hidden="true" preserveAspectRatio="xMinYMid meet">
+                      <path
+                        pathLength="1"
+                        d="M10 48c10-22 22-36 30-30 7 5-6 30-2 32 6 3 14-26 22-24 6 2-2 22 4 22 7 0 10-16 17-16 5 0 3 12 9 12 8 0 12-20 21-20 6 0 2 16 9 16 9 0 16-14 24-14 6 0 4 10 10 10 12 0 30-8 52-14 18-5 40-8 66-8"
+                      />
+                    </svg>
+                    <span class="sig__who">Jordan Lee · Harbour Logistics</span>
+                  </div>
+                  <div class="sig__actions">
+                    <span class="sig__signed" data-sig-signed
+                      ><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4l2.9 2.8 6-6.4" /></svg>Signed 10:42</span
+                    >
+                    <span class="sig__pay" data-sig-pay>
+                      <span class="sig__pay-label">Pay 20% deposit · $5,522.00</span>
+                      <span class="sig__pay-done"
+                        ><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4l2.9 2.8 6-6.4" /></svg>Paid via Stripe</span
+                      >
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Notifications -->
+            <article class="tile tile--not" data-reveal data-demo="notify" aria-labelledby="t-not">
+              <div class="tile__copy">
+                <h3 id="t-not">Know the moment they open it</h3>
+                <p>Real-time alerts when a quote is opened, viewed, commented on or accepted.</p>
+              </div>
+              <div
+                class="tile__stage not"
+                role="img"
+                aria-label="Notifications: quote Q-1024 opened by Harbour Logistics, pricing viewed for 4 minutes, a new comment asking to add a second training day, and the quote accepted and signed."
+              >
+                <ul class="not__list" data-not-list>
+                  <li class="not__item" data-not="3">
+                    <span class="not__ico not__ico--ok"><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" /></svg></span>
+                    <span><b>Quote accepted and signed</b><small>Jordan Lee · just now</small></span>
+                  </li>
+                  <li class="not__item" data-not="2">
+                    <span class="not__ico not__ico--msg"><svg viewBox="0 0 16 16"><path d="M3 4h10v6.5H7l-3 2.5v-2.5H3z" /></svg></span>
+                    <span><b>"Can we add a second training day?"</b><small>New comment · 2 min ago</small></span>
+                  </li>
+                  <li class="not__item" data-not="1">
+                    <span class="not__ico not__ico--view"><svg viewBox="0 0 16 16"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z" /><circle cx="8" cy="8" r="2" /></svg></span>
+                    <span><b>Pricing viewed for 4 min</b><small>Harbour Logistics · 6 min ago</small></span>
+                  </li>
+                  <li class="not__item" data-not="0">
+                    <span class="not__ico"><svg viewBox="0 0 16 16"><path d="M3 2.5h7l3 3v8H3z" /><path d="M10 2.5v3h3" /></svg></span>
+                    <span><b>Quote Q-1024 opened</b><small>Harbour Logistics · 9 min ago</small></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Integrations orbit -->
+            <article class="tile tile--int tile--dark" data-reveal data-demo="orbit" aria-labelledby="t-int">
+              <div class="tile__copy">
+                <h3 id="t-int">Connected to your CRM, accounting and payments</h3>
+                <p>
+                  Salesforce, HubSpot, Xero, QuickBooks, Stripe and more, plus API access.
+                  <a class="inline-link" href="https://www.quote.cloud/all-integrations">All integrations</a>
+                </p>
+              </div>
+              <div class="tile__stage orbit" aria-hidden="true">
+                <div class="orbit__ring orbit__ring--outer">
+                  <span style="--a: 0deg"><img src="./img/logos/salesforce-cpq.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 45deg"><img src="./img/logos/xero.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 90deg"><img src="./img/logos/stripe.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 135deg"><img src="./img/logos/mondaydotcom-logo.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 180deg"><img src="./img/logos/quickbooks.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 225deg"><img src="./img/logos/slack.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 270deg"><img src="./img/logos/hub-spot.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 315deg"><img src="./img/logos/microsoft-dynamics.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                </div>
+                <div class="orbit__ring orbit__ring--inner">
+                  <span style="--a: 30deg"><img src="./img/logos/paypal.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 150deg"><img src="./img/logos/googlesheets.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                  <span style="--a: 270deg"><img src="./img/logos/serviceM8.jpg" width="128" height="128" alt="" loading="lazy" decoding="async" /></span>
+                </div>
+                <div class="orbit__core"><img src="/assets/logos/qc-symbol-white.png" width="30" height="31" alt="" /></div>
+              </div>
+            </article>
+
+            <!-- Visibility -->
+            <article class="tile tile--vis" data-reveal data-demo="pipeline" aria-labelledby="t-vis">
+              <div class="tile__copy">
+                <h3 id="t-vis">See every quote, every stage</h3>
+                <p>Track status and activity, conversion and forecast revenue across your team.</p>
+              </div>
+              <div
+                class="tile__stage vis"
+                role="img"
+                aria-label="A sample quotes dashboard: 18 quotes sent, 14 viewed and 9 accepted this month, a 50% win rate and a forecast of $184,200."
+              >
+                <div class="vis__kpis">
+                  <div><small>Forecast</small><b data-vis-fc>$184,200</b></div>
+                  <div><small>Win rate</small><b data-vis-wr>50%</b></div>
+                </div>
+                <ul class="vis__bars">
+                  <li><span>Sent</span><i style="--v: 1"><em></em></i><b data-vis-n>18</b></li>
+                  <li><span>Viewed</span><i style="--v: 0.78"><em></em></i><b data-vis-n>14</b></li>
+                  <li><span>Accepted</span><i class="is-ok" style="--v: 0.5"><em></em></i><b data-vis-n>9</b></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Sample quotes ───────── -->
+      <section class="samples" aria-labelledby="samples-title">
+        <div class="qc-container">
+          <header class="sec-head sec-head--row" data-reveal>
+            <h2 id="samples-title">Sales quotes for <span class="em">every kind of business</span></h2>
+            <a class="inline-link inline-link--arrow" href="https://www.quote.cloud/quote-templates"
+              >Browse quote templates <span aria-hidden="true">&rarr;</span></a
+            >
+          </header>
+        </div>
+        <div class="samples__track" data-reveal-stagger="90" tabindex="0" role="region" aria-label="Sample quotes">
+          <figure class="sample" data-reveal>
+            <img src="./img/sample-quote-electrician.jpg" width="600" height="900" loading="lazy" decoding="async" alt="Sample electrical contractor sales quote for Powerline Electrical: cover, scope of work, pricing and acceptance, and about us pages." />
+            <figcaption>Electrical contractor</figcaption>
+          </figure>
+          <figure class="sample" data-reveal>
+            <img src="./img/sample-quote-kitchen-designer.jpg" width="600" height="900" loading="lazy" decoding="async" alt="Sample kitchen design quote for DesignCraft Kitchens in black and gold, with cover, scope, pricing and acceptance pages." />
+            <figcaption>Kitchen designer</figcaption>
+          </figure>
+          <figure class="sample" data-reveal>
+            <img src="./img/sample-quote-landscaping.jpg" width="600" height="900" loading="lazy" decoding="async" alt="Sample landscaping quote for Greenscape Landscaping, with project scope, itemised pricing and acceptance pages." />
+            <figcaption>Landscaping</figcaption>
+          </figure>
+          <figure class="sample" data-reveal>
+            <img src="./img/sample-quote-mobile-phone-plans.jpg" width="600" height="848" loading="lazy" decoding="async" alt="Sample mobile phone plans quote for ConnectPlus Mobile, with plan cards, pricing and acceptance pages." />
+            <figcaption>Mobile plans</figcaption>
+          </figure>
+          <figure class="sample" data-reveal>
+            <img src="./img/sample-quote-app-developer.jpg" width="600" height="849" loading="lazy" decoding="async" alt="Sample app development quote for AppCraft Solutions, with project phases, pricing and acceptance pages." />
+            <figcaption>App developer</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="qc-container proof__inner">
+          <div class="proof__copy" data-reveal>
+            <h2 id="proof-title">Quoting software rated <span class="em">4.2 out of 5</span></h2>
+            <p>Reviewed on Capterra and Software Advice. Helping businesses quote since 2013.</p>
+          </div>
+          <div class="proof__cards" data-reveal-stagger="100">
+            <div class="rating" data-reveal>
+              <span class="rating__score">4.2</span>
+              <span class="rating__stars" aria-hidden="true"><span class="rating__fill"></span></span>
+              <span class="rating__src">Capterra</span>
+            </div>
+            <div class="rating" data-reveal>
+              <span class="rating__score">4.2</span>
+              <span class="rating__stars" aria-hidden="true"><span class="rating__fill"></span></span>
+              <span class="rating__src">Software Advice</span>
+            </div>
+          </div>
+          <ul class="proof__trust" data-reveal>
+            <li>Legally binding eSignatures</li>
+            <li>eIDAS compliant</li>
+            <li>256-bit encryption</li>
+            <li>Hosted on AWS</li>
+            <li>GDPR</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-quoting -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="close__card" data-reveal="scale">
+            <div class="close__lines" aria-hidden="true"></div>
+            <h2 id="close-title">Your next quote, <span class="em">signed sooner.</span></h2>
+            <p>Start a free 14-day trial. No credit card required.</p>
+            <div class="close__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo"
+                >Book a demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-quoting -->
+  </head>
+  <body class="q2">
+    <!-- @include header -->
+
+    <svg class="q2-sprite" aria-hidden="true" focusable="false">
+      <symbol id="q2-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="q2-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="q2-lock" viewBox="0 0 24 24"><rect x="4.5" y="11" width="15" height="10" rx="2" /><path d="M8 11V7.5a4 4 0 0 1 8 0V11" /></symbol>
+      <symbol id="q2-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="q2-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z" /><path d="M10 20.5a2 2 0 0 0 4 0" /></symbol>
+      <symbol id="q2-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" /><path d="m20 20-4.2-4.2" /></symbol>
+      <symbol id="q2-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4z" /><path d="M12 10v4.2M12 16.8v.2" /></symbol>
+      <symbol id="q2-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.5 1.1 6.3L12 17.3l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" /></symbol>
+      <symbol id="q2-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero + the life story of one quote (shared pinned stage) ───────── -->
+      <div class="q2-life">
+        <section class="q2-hero" aria-labelledby="q2-hero-title">
+          <div class="q2-hero__copy">
+            <h1 class="q2-hero__title" id="q2-hero-title"><em>Quoting software</em> that takes every quote from draft to signed.</h1>
+            <p class="q2-hero__lede">Build precise sales quotes in minutes, then approve, send, sign and get paid, all from one platform.</p>
+            <div class="q2-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="q2-hero__note">
+              <span>No credit card required</span>
+              <span class="q2-hero__rating"><svg width="15" height="15" aria-hidden="true"><use href="#q2-star" /></svg> 4.2 on Capterra</span>
+            </p>
+          </div>
+          <a class="q2-hero__cue" href="#q2-story-title">
+            <span class="q2-hero__cue-line" aria-hidden="true"></span>
+            Scroll to watch this quote come to life
+          </a>
+        </section>
+
+        <!-- The pinned stage: one quote document whose state follows the chapters -->
+        <div class="q2-stage">
+          <div class="q2-stage__pin">
+            <nav class="q2-rail" aria-label="Quote journey chapters">
+              <ol>
+                <li><a href="#q2-ch-1" data-rail="1"><span>01</span>Draft</a></li>
+                <li><a href="#q2-ch-2" data-rail="2"><span>02</span>Price</a></li>
+                <li><a href="#q2-ch-3" data-rail="3"><span>03</span>Protect</a></li>
+                <li><a href="#q2-ch-4" data-rail="4"><span>04</span>Approve</a></li>
+                <li><a href="#q2-ch-5" data-rail="5"><span>05</span>Send</a></li>
+                <li><a href="#q2-ch-6" data-rail="6"><span>06</span>Sign</a></li>
+              </ol>
+              <span class="q2-rail__track" aria-hidden="true"><span class="q2-rail__fill"></span></span>
+            </nav>
+
+            <div class="q2-stage__scene">
+              <div class="qd" data-qd data-step="0" data-f="brand rows disc tax opt sign paid" aria-hidden="true">
+                <div class="qd__glow">
+                  <i class="qd__glow-c"></i><i class="qd__glow-v"></i><i class="qd__glow-a"></i><i class="qd__glow-m"></i>
+                </div>
+                <div class="qd__frame">
+                  <div class="qd__chrome">
+                    <i></i><i></i><i></i>
+                    <span class="qd__url"><svg width="11" height="11"><use href="#q2-lock" /></svg>brightwave.quote.cloud/q/harbour-co</span>
+                  </div>
+                </div>
+
+                <div class="qd__paper">
+                  <div class="qd__head">
+                    <span class="qd__logo"><b>B</b>Brightwave IT</span>
+                    <span class="qd__ref">Q-1042 <span class="qd__ver" data-k="ver">v1.2</span></span>
+                    <span class="qd__status" data-k="status" data-tone="mint">Signed &amp; paid</span>
+                  </div>
+
+                  <div class="qd__cover">
+                    <div class="qd__skel"><i></i><i></i><i></i></div>
+                    <div class="qd__brandband"></div>
+                    <p class="qd__kicker">Proposal &amp; quote</p>
+                    <p class="qd__title">Cloud workplace rollout</p>
+                    <p class="qd__for">Prepared for Harbour &amp; Co · Valid 30 days</p>
+                  </div>
+
+                  <div class="qd__bar">
+                    <span class="qd__cur">USD $<span class="qd__caret"></span>
+                      <span class="qd__curmenu">
+                        <span class="is-on">USD $</span><span>EUR €</span><span>GBP £</span><span>AUD $</span>
+                      </span>
+                    </span>
+                    <span class="qd__formula"><i>fx</i> Total = Qty × Unit × (1 − Disc)</span>
+                    <span class="qd__rule"><svg width="14" height="14"><use href="#q2-alert" /></svg><span><b>Discount 18% is above 15%.</b> Manager approval required.</span></span>
+                    <span class="qd__view"><svg width="12" height="12"><use href="#q2-eye" /></svg><span data-k="view">Customer view</span></span>
+                  </div>
+
+                  <div class="qd__flip">
+                    <div class="qd__face qd__face--front">
+                      <div class="qd__r qd__r--h"><span>Item</span><span>Qty</span><span class="qd__unit">Unit</span><span class="qd__disc">Disc</span><span>Total</span></div>
+                      <div class="qd__r" data-row="a"><span class="qd__item"><b>Enterprise software licence</b><small>Annual, per seat</small></span><span>10</span><span class="qd__unit">$1,500</span><span class="qd__disc"><em data-k="a-disc">18%</em></span><span data-k="a-tot">$12,300</span></div>
+                      <div class="qd__r" data-row="b"><span class="qd__item"><b>Implementation services</b><small>Per hour</small></span><span>40</span><span class="qd__unit">$165</span><span class="qd__disc"><em data-k="b-disc">10%</em></span><span data-k="b-tot">$5,940</span></div>
+                      <div class="qd__r" data-row="c"><span class="qd__item"><b>Premium support</b><small>12 months</small></span><span>1</span><span class="qd__unit">$3,600</span><span class="qd__disc"><em data-k="c-disc">10%</em></span><span data-k="c-tot">$3,240</span></div>
+                      <div class="qd__r qd__r--opt" data-row="d"><span class="qd__item"><i class="qd__tick"><svg width="10" height="10"><use href="#q2-check" /></svg></i><b>Onsite training</b><small>Optional · half-day workshop</small></span><span>1</span><span class="qd__unit">$1,200</span><span class="qd__disc"><em data-k="d-disc">10%</em></span><span data-k="d-tot">$1,080</span></div>
+                      <div class="qd__add"><span><svg width="11" height="11"><use href="#q2-plus" /></svg>Add item</span><span><svg width="11" height="11"><use href="#q2-plus" /></svg>Add section</span></div>
+                    </div>
+                    <div class="qd__face qd__face--back">
+                      <div class="qd__r qd__r--h"><span>Item</span><span>Qty</span><span class="qd__int">Cost</span><span class="qd__int">Margin</span><span>Sell</span></div>
+                      <div class="qd__r"><span class="qd__item"><b>Enterprise software licence</b><small>Supplier: Nimbus</small></span><span>10</span><span class="qd__int" data-k="a-cost">$9,000</span><span class="qd__int" data-k="a-mgn">26.8%</span><span data-k="a-sell">$12,300</span></div>
+                      <div class="qd__r"><span class="qd__item"><b>Implementation services</b><small>Internal rate $95/h</small></span><span>40</span><span class="qd__int" data-k="b-cost">$3,800</span><span class="qd__int" data-k="b-mgn">36.0%</span><span data-k="b-sell">$5,940</span></div>
+                      <div class="qd__r"><span class="qd__item"><b>Premium support</b><small>Markup 2.0×</small></span><span>1</span><span class="qd__int" data-k="c-cost">$1,800</span><span class="qd__int" data-k="c-mgn">44.4%</span><span data-k="c-sell">$3,240</span></div>
+                      <div class="qd__r qd__r--opt"><span class="qd__item"><b>Onsite training</b><small>Optional</small></span><span>1</span><span class="qd__int" data-k="d-cost">$500</span><span class="qd__int" data-k="d-mgn">53.7%</span><span data-k="d-sell">$1,080</span></div>
+                      <div class="qd__intfoot"><span><svg width="12" height="12"><use href="#q2-lock" /></svg>Internal only, hidden from the customer</span><span>Quote margin <b data-k="mgn">33.1%</b></span></div>
+                    </div>
+                  </div>
+
+                  <div class="qd__sum">
+                    <div class="qd__sum-row"><span>Subtotal</span><span data-k="sub">$22,560.00</span></div>
+                    <div class="qd__sum-row qd__tax"><span>Tax (10%)</span><span data-k="tax">$2,256.00</span></div>
+                    <div class="qd__total"><span>Total <small>USD</small></span><strong data-k="total">$24,816.00</strong></div>
+                  </div>
+
+                  <div class="qd__sign">
+                    <div class="qd__sigbox">
+                      <svg class="qd__sig" viewBox="0 0 220 60" fill="none">
+                        <path pathLength="1" d="M8 42c10-20 20-30 26-28 7 2-6 30 0 31 6 1 14-26 22-27 6-1 1 22 7 22 7 0 10-16 17-16 5 0 2 13 8 13 8 0 12-12 20-13 6 0 4 10 10 10 9 0 14-9 24-10 12-1 30 2 44-6" />
+                        <path pathLength="1" d="M70 52c30-4 70-6 120-8" />
+                      </svg>
+                      <span class="qd__signame">Dana Whitfield · Harbour &amp; Co</span>
+                    </div>
+                    <span class="qd__paid"><svg width="12" height="12"><use href="#q2-check" /></svg>Paid via Stripe</span>
+                  </div>
+                </div>
+
+                <!-- floating overlays -->
+                <div class="qd__cat">
+                  <p class="qd__cat-h">Product catalogue</p>
+                  <span class="qd__cat-search"><svg width="12" height="12"><use href="#q2-search" /></svg>Search products</span>
+                  <span class="qd__cat-i is-pick"><b>Software licence</b><em>$1,500</em><i><svg width="10" height="10"><use href="#q2-plus" /></svg></i></span>
+                  <span class="qd__cat-i"><b>Implementation</b><em>$165/h</em><i><svg width="10" height="10"><use href="#q2-plus" /></svg></i></span>
+                  <span class="qd__cat-i"><b>Premium support</b><em>$3,600</em><i><svg width="10" height="10"><use href="#q2-plus" /></svg></i></span>
+                  <span class="qd__cat-i"><b>Onsite training</b><em>$1,200</em><i><svg width="10" height="10"><use href="#q2-plus" /></svg></i></span>
+                </div>
+
+                <div class="qd__approver">
+                  <span class="qd__avatar">MC</span>
+                  <span class="qd__who"><b>Maya Chen</b><small>Sales manager</small></span>
+                  <span class="qd__approve"><span class="qd__approve-a">Approve</span><span class="qd__approve-b"><svg width="11" height="11"><use href="#q2-check" /></svg>Approved</span></span>
+                </div>
+
+                <div class="qd__hist">
+                  <p class="qd__hist-h">Version history</p>
+                  <span><b>v1.2</b> Approved by Maya Chen</span>
+                  <span><b>v1.1</b> Licence discount 10% → 18%</span>
+                  <span><b>v1.0</b> Quote created from template</span>
+                </div>
+
+                <span class="qd__stamp">Approved</span>
+
+                <div class="qd__toasts">
+                  <span class="qd__toast qd__toast--1"><svg width="13" height="13"><use href="#q2-eye" /></svg><span><b>Quote opened</b> Dana at Harbour &amp; Co</span></span>
+                  <span class="qd__toast qd__toast--2"><svg width="13" height="13"><use href="#q2-plus" /></svg><span><b>Onsite training added</b> +$1,188.00</span></span>
+                  <span class="qd__toast qd__toast--3"><svg width="13" height="13"><use href="#q2-bell" /></svg><span><b>Accepted &amp; paid</b> $24,816.00</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="q2-story" aria-labelledby="q2-story-title">
+          <header class="q2-story__intro">
+            <h2 class="q2-story__title" id="q2-story-title">Watch one sales quote go from <em>draft to signed.</em></h2>
+            <p>Pricing, control, approval and delivery: the whole quoting workflow, in one platform.</p>
+          </header>
+
+          <article class="q2-ch" id="q2-ch-1" data-step="1" aria-labelledby="q2-ch-1-t">
+            <div class="q2-ch__text">
+              <span class="q2-ch__num" aria-hidden="true">01</span>
+              <h3 id="q2-ch-1-t">Start from a template. The prices fill themselves in.</h3>
+              <p>Branded templates, reusable content and a searchable product catalogue drop in accurate descriptions and prices. Quotes in minutes, not hours.</p>
+              <a class="q2-link" href="https://www.quote.cloud/quote-templates">Browse quote templates <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+            </div>
+            <div class="q2-ch__shot" data-shot="1"></div>
+          </article>
+
+          <article class="q2-ch" id="q2-ch-2" data-step="2" aria-labelledby="q2-ch-2-t">
+            <div class="q2-ch__text">
+              <span class="q2-ch__num" aria-hidden="true">02</span>
+              <h3 id="q2-ch-2-t">Price tables that do the maths.</h3>
+              <p>Quantities, formula columns, default discounts, tax and multi-currency calculate as you build, so every total is right first time.</p>
+              <a class="q2-link" href="https://www.quote.cloud/cpq-software">Explore CPQ software <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+            </div>
+            <div class="q2-ch__shot" data-shot="2"></div>
+          </article>
+
+          <article class="q2-ch" id="q2-ch-3" data-step="3" aria-labelledby="q2-ch-3-t">
+            <div class="q2-ch__text">
+              <span class="q2-ch__num" aria-hidden="true">03</span>
+              <h3 id="q2-ch-3-t">Costs and margins your customer never sees.</h3>
+              <p>Cost, supplier pricing and markup sit right beside the selling price for your team, then drop out of the customer's view.</p>
+            </div>
+            <div class="q2-ch__shot" data-shot="3"></div>
+          </article>
+
+          <article class="q2-ch" id="q2-ch-4" data-step="4" aria-labelledby="q2-ch-4-t">
+            <div class="q2-ch__text">
+              <span class="q2-ch__num" aria-hidden="true">04</span>
+              <h3 id="q2-ch-4-t">Approval workflows that protect every deal.</h3>
+              <p>Rules on thresholds, like a discount above 15%, route the quote to the right manager. Every change is versioned with a full audit trail.</p>
+            </div>
+            <div class="q2-ch__shot" data-shot="4"></div>
+          </article>
+
+          <article class="q2-ch" id="q2-ch-5" data-step="5" aria-labelledby="q2-ch-5-t">
+            <div class="q2-ch__text">
+              <span class="q2-ch__num" aria-hidden="true">05</span>
+              <h3 id="q2-ch-5-t">Send an interactive quote, not a PDF.</h3>
+              <p>Customers open it in the browser, tick optional add-ons and adjust permitted quantities while totals recalculate. You're notified the moment it's opened.</p>
+              <a class="q2-link" href="https://www.quote.cloud/proposal-software">See proposal software <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+            </div>
+            <div class="q2-ch__shot" data-shot="5"></div>
+          </article>
+
+          <article class="q2-ch" id="q2-ch-6" data-step="6" aria-labelledby="q2-ch-6-t">
+            <div class="q2-ch__text">
+              <span class="q2-ch__num" aria-hidden="true">06</span>
+              <h3 id="q2-ch-6-t">eSignatures and payment close it the same day.</h3>
+              <p>Legally binding eSignatures and online payment through Stripe or PayPal turn acceptance into a single step.</p>
+              <a class="q2-link" href="https://www.quote.cloud/electronic-signature-software-solution">About eSignatures <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+            </div>
+            <div class="q2-ch__shot" data-shot="6"></div>
+          </article>
+        </section>
+      </div>
+
+      <!-- ───────── Mid CTA ───────── -->
+      <section class="q2-mid" aria-labelledby="q2-mid-title">
+        <div class="qc-container q2-mid__inner" data-reveal>
+          <h2 id="q2-mid-title">Your next quote can be out the door <em>in minutes.</em></h2>
+          <div class="q2-mid__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Visibility + integrations ───────── -->
+      <section class="q2-sec q2-hub" aria-labelledby="q2-hub-title">
+        <div class="qc-container">
+          <header class="q2-sec__head" data-reveal>
+            <h2 id="q2-hub-title">Every quote tracked. <em>Synced with your CRM and accounting.</em></h2>
+            <p>Pull deal data from your CRM, push accepted quotes to accounting, take payment online and follow every quote's status in one place.</p>
+          </header>
+
+          <div class="q2-hub__grid" data-hub>
+            <ul class="q2-hub__col q2-hub__col--l" aria-label="CRM integrations" data-reveal-stagger="70">
+              <li data-reveal="left"><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="left"><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="left"><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="left"><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="monday.com" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="left"><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/zendesk-logo.jpg" alt="Zendesk Sell" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+            </ul>
+
+            <div class="q2-board" data-reveal="scale" aria-hidden="true">
+              <div class="q2-board__head">
+                <b>Quote activity</b>
+                <span class="q2-board__live"><i></i>Live</span>
+              </div>
+              <div class="q2-board__kpis">
+                <span><small>Open pipeline</small><b>$53,500</b></span>
+                <span><small>Won this week</small><b>$24,816</b></span>
+              </div>
+              <ul class="q2-board__list">
+                <li data-tone="mint"><span><b>Harbour &amp; Co</b><small>Q-1042</small></span><em>$24,816.00</em><i>Signed &amp; paid</i></li>
+                <li data-tone="sky"><span><b>Lumen Dental</b><small>Q-1041</small></span><em>$8,340.00</em><i>Viewed</i></li>
+                <li data-tone="amber"><span><b>Kestrel Freight</b><small>Q-1040</small></span><em>$41,200.00</em><i>Approval</i></li>
+                <li data-tone="ink"><span><b>Orchard Studio</b><small>Q-1039</small></span><em>$3,960.00</em><i>Sent</i></li>
+              </ul>
+              <div class="q2-board__feed">
+                <span class="is-on"><svg width="13" height="13"><use href="#q2-eye" /></svg>Lumen Dental opened Q-1041</span>
+                <span><svg width="13" height="13"><use href="#q2-bell" /></svg>Kestrel Freight left a comment</span>
+                <span><svg width="13" height="13"><use href="#q2-check" /></svg>Q-1042 synced to Xero</span>
+              </div>
+            </div>
+
+            <ul class="q2-hub__col q2-hub__col--r" aria-label="Accounting and payment integrations" data-reveal-stagger="70">
+              <li data-reveal="right"><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" alt="Xero" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="right"><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="right"><a href="https://www.quote.cloud/all-integrations"><img src="/assets/integrations/freshbooks-accounting-logo.jpg" alt="FreshBooks" width="785" height="783" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="right"><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" alt="Stripe" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+              <li data-reveal="right"><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" alt="PayPal" width="792" height="790" loading="lazy" decoding="async" /></a></li>
+            </ul>
+          </div>
+          <p class="q2-hub__more"><a class="q2-link" href="https://www.quote.cloud/all-integrations">See all integrations and the API <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Sample quotes ───────── -->
+      <section class="q2-sec q2-samples" aria-labelledby="q2-samples-title">
+        <div class="qc-container">
+          <header class="q2-sec__head" data-reveal>
+            <h2 id="q2-samples-title">Sales quotes for <em>every kind of business.</em></h2>
+            <p>Start from a proven layout for your industry, then make it yours.</p>
+          </header>
+          <ul class="q2-samples__list" data-reveal-stagger="110">
+            <li data-reveal>
+              <a href="https://www.quote.cloud/sales-quotes-for-trade-services">
+                <span class="q2-samples__img"><img src="/assets/quoting/sample-quote-electrician.png" alt="Sample electrical services sales quote from Powerline Electrical: cover page and scope of work" width="1024" height="1536" loading="lazy" decoding="async" /></span>
+                <span class="q2-samples__cap">Trade services <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://www.quote.cloud/sales-quotes-for-it-services">
+                <span class="q2-samples__img"><img src="/assets/quoting/sample-quote-app-developer.png" alt="Sample app development sales quote from AppCraft Solutions: cover page and scope of work" width="1054" height="1492" loading="lazy" decoding="async" /></span>
+                <span class="q2-samples__cap">IT services <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://www.quote.cloud/sales-quotes-for-telco">
+                <span class="q2-samples__img"><img src="/assets/quoting/sample-quote-mobile-phone-plans.png" alt="Sample mobile phone plan sales quote from ConnectPlus Mobile: cover page and plan options" width="1055" height="1491" loading="lazy" decoding="async" /></span>
+                <span class="q2-samples__cap">Telco <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></span>
+              </a>
+            </li>
+          </ul>
+          <p class="q2-samples__more"><a class="q2-link" href="https://www.quote.cloud/quote-templates">Browse all quote templates <svg width="16" height="16" aria-hidden="true"><use href="#q2-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="q2-sec q2-proof" aria-labelledby="q2-proof-title">
+        <div class="qc-container">
+          <h2 class="q2-proof__title" id="q2-proof-title" data-reveal>Rated, secure and <em>quoting since 2013.</em></h2>
+          <ul class="q2-proof__row" data-reveal-stagger="90">
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg width="22" height="22" aria-hidden="true"><use href="#q2-star" /></svg></b><span>Capterra rating</span></li>
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg width="22" height="22" aria-hidden="true"><use href="#q2-star" /></svg></b><span>Software Advice rating</span></li>
+            <li data-reveal><b data-count-to="2013" data-count-format="plain">2013</b><span>Building quoting software since</span></li>
+          </ul>
+          <ul class="q2-proof__badges" data-reveal>
+            <li><img src="/assets/compliance/eidas.svg" alt="eIDAS compliant eSignatures" width="72" height="44" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/encryption-256.png" alt="256-bit encryption" width="72" height="44" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/aws.svg" alt="Hosted on AWS" width="72" height="44" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/gdpr.png" alt="GDPR compliant" width="72" height="44" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="q2-faq-wrap">
+        <!-- @include faq-quoting -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="q2-final" aria-labelledby="q2-final-title">
+        <div class="qc-container">
+          <div class="q2-final__panel" data-reveal="scale">
+            <svg class="q2-final__sig" viewBox="0 0 900 220" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+              <path pathLength="1" d="M30 150c40-70 80-110 104-102 26 9-20 110 4 114 22 4 52-96 82-100 22-3 4 80 26 80 26 0 38-58 64-58 18 0 8 48 30 48 30 0 44-46 74-48 22-1 14 36 36 36 34 0 52-34 88-36 46-3 120 6 170-22" />
+              <path pathLength="1" d="M250 190c120-14 270-22 460-28" />
+            </svg>
+            <h2 id="q2-final-title">Your next quote, from draft to <em>signed.</em></h2>
+            <p>Free for 14 days. No credit card required.</p>
+            <div class="q2-final__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#q2-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--lg q2-btn-light" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="q2-final__links"><a href="https://www.quote.cloud/pricing">See pricing</a><a href="https://www.quote.cloud/cpq-software">CPQ software</a><a href="https://www.quote.cloud/insights/the-anatomy-of-a-high-converting-sales-quote">Anatomy of a high-converting quote</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

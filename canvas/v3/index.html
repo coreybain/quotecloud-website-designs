@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-canvas -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="te-sprite" aria-hidden="true" focusable="false">
+      <symbol id="te-i-text" viewBox="0 0 24 24"><path d="M5 7V5h14v2M12 5v14M9 19h6" /></symbol>
+      <symbol id="te-i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5" /><circle cx="9" cy="10" r="1.8" /><path d="m4 17.5 5-4.5 4 3.5 3-2.5 4 3.5" /></symbol>
+      <symbol id="te-i-price" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" /><path d="M3.5 9.5h17M3.5 14.5h17M11 9.5v10" /></symbol>
+      <symbol id="te-i-qr" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><path d="M14 14h2.5v2.5H14zM17.5 17.5H20V20h-2.5zM14 20h1M20 14v1" /></symbol>
+      <symbol id="te-i-quote" viewBox="0 0 24 24"><path d="M10 7H6.5A1.5 1.5 0 0 0 5 8.5V12h5V7Zm0 5c0 3-1.5 4.5-4 5.5M19 7h-3.5A1.5 1.5 0 0 0 14 8.5V12h5V7Zm0 5c0 3-1.5 4.5-4 5.5" /></symbol>
+      <symbol id="te-i-sign" viewBox="0 0 24 24"><path d="M3.5 16c2.5 0 3-8 5.5-8s-1 8 2 8 2.5-4.5 4.5-4.5 1 3.5 3 3.5h2M3.5 20h17" /></symbol>
+      <symbol id="te-i-pdf" viewBox="0 0 24 24"><path d="M14 3.5H7A1.5 1.5 0 0 0 5.5 5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8L14 3.5Z" /><path d="M14 3.5V8h4.5M8.5 15h7M8.5 12h4" /></symbol>
+      <symbol id="te-i-video" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5" /><path d="m10.5 9.5 4 2.5-4 2.5z" /></symbol>
+      <symbol id="te-i-diagram" viewBox="0 0 24 24"><rect x="9.5" y="3.5" width="5" height="4" rx="1" /><rect x="3.5" y="16.5" width="5" height="4" rx="1" /><rect x="15.5" y="16.5" width="5" height="4" rx="1" /><path d="M12 7.5v5M6 16.5v-4h12v4" /></symbol>
+      <symbol id="te-i-form" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M7.5 8.5h9M7.5 12h9M7.5 15.5h5" /></symbol>
+      <symbol id="te-i-sheet" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" /><path d="M3.5 9.5h17M3.5 14.5h17M9 4.5v15M14.5 4.5v15" /></symbol>
+      <symbol id="te-i-gantt" viewBox="0 0 24 24"><path d="M4 4.5v15h16.5" /><path d="M7.5 8h5.5M10 12h7M8.5 16h5" stroke-width="2.6" /></symbol>
+      <symbol id="te-i-itinerary" viewBox="0 0 24 24"><path d="M3.5 13.5 9 15l-2 4.5h2l4-4 4.5 1.5c1.5.5 3.5-.5 3.5-2s-2-2.5-3.5-2.5H13L9 4.5H7l2 7-4.5.5-1.5-2H1.5l2 3.5Z" /></symbol>
+      <symbol id="te-i-shape" viewBox="0 0 24 24"><circle cx="9" cy="9" r="5" /><rect x="11" y="11" width="9" height="9" rx="1.5" /></symbol>
+      <symbol id="te-i-divider" viewBox="0 0 24 24"><path d="M3.5 12h17" /><path d="M7 6.5h10M7 17.5h10" opacity=".45" /></symbol>
+      <symbol id="te-i-button" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="9" rx="4.5" /><path d="M9 12h6" /></symbol>
+      <symbol id="te-i-chart" viewBox="0 0 24 24"><path d="M4 20h16.5M7.5 16.5V11M12 16.5V6.5M16.5 16.5v-4" /></symbol>
+      <symbol id="te-i-timeline" viewBox="0 0 24 24"><path d="M3.5 12h17" /><circle cx="7" cy="12" r="2" /><circle cx="13" cy="12" r="2" /><circle cx="18.5" cy="12" r="1" /><path d="M7 6.5V10M13 14v3.5" /></symbol>
+      <symbol id="te-i-map" viewBox="0 0 24 24"><path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2-6-2ZM9 4.5v13M15 6.5v13" /></symbol>
+      <symbol id="te-i-esign" viewBox="0 0 24 24"><path d="M15.5 4.5 19.5 8.5 9 19H5v-4L15.5 4.5Z" /><path d="M13 7l4 4M4 21.5h16" /></symbol>
+      <symbol id="te-i-undo" viewBox="0 0 24 24"><path d="M8.5 5 4 9.5 8.5 14" /><path d="M4.5 9.5H14a5.5 5.5 0 0 1 0 11h-3" /></symbol>
+      <symbol id="te-i-rotl" viewBox="0 0 24 24"><path d="M4.5 4.5v5h5" /><path d="M5.2 9.5A7.5 7.5 0 1 1 4.6 14" /></symbol>
+      <symbol id="te-i-rotr" viewBox="0 0 24 24"><path d="M19.5 4.5v5h-5" /><path d="M18.8 9.5A7.5 7.5 0 1 0 19.4 14" /></symbol>
+      <symbol id="te-i-fwd" viewBox="0 0 24 24"><path d="M15.5 6V5A1.5 1.5 0 0 0 14 3.5H5A1.5 1.5 0 0 0 3.5 5v9A1.5 1.5 0 0 0 5 15.5h1" opacity=".55" /><rect x="8.5" y="8.5" width="12" height="12" rx="2" /></symbol>
+      <symbol id="te-i-back" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="12" height="12" rx="2" /><path d="M18.5 8.5h.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 8.5 19v-1" opacity=".55" /></symbol>
+      <symbol id="te-i-canvas" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5" stroke-dasharray="2.6 2.6" /><rect x="6.5" y="7" width="6.5" height="5" rx="1" /><rect x="11" y="13" width="6.5" height="4.5" rx="1" /></symbol>
+      <symbol id="te-i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5" /><path d="M3.5 9.5h17M3.5 15h17M12 9.5v11" /></symbol>
+      <symbol id="te-i-move" viewBox="0 0 24 24"><path d="M12 3.5v17M3.5 12h17M9.5 6 12 3.5 14.5 6M9.5 18l2.5 2.5 2.5-2.5M6 9.5 3.5 12 6 14.5M18 9.5l2.5 2.5-2.5 2.5" /></symbol>
+      <symbol id="te-i-c1" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" /></symbol>
+      <symbol id="te-i-c2" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" /><path d="M12 5v14" /></symbol>
+      <symbol id="te-i-c3" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" /><path d="M9.3 5v14M14.7 5v14" /></symbol>
+      <symbol id="te-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="te-i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" /></symbol>
+      <symbol id="te-qr" viewBox="0 0 25 25"><path d="M0 0h7v1h-7zM8 0h1v1h-1zM10 0h2v1h-2zM14 0h1v1h-1zM18 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM12 1h2v1h-2zM16 1h1v1h-1zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM9 2h1v1h-1zM12 2h1v1h-1zM18 2h1v1h-1zM20 2h3v1h-3zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM11 3h2v1h-2zM14 3h3v1h-3zM18 3h1v1h-1zM20 3h3v1h-3zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h2v1h-2zM14 4h2v1h-2zM18 4h1v1h-1zM20 4h3v1h-3zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h2v1h-2zM12 5h3v1h-3zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h7v1h-7zM9 6h6v1h-6zM18 6h7v1h-7zM8 7h1v1h-1zM10 7h1v1h-1zM1 8h1v1h-1zM3 8h1v1h-1zM5 8h3v1h-3zM10 8h1v1h-1zM12 8h4v1h-4zM17 8h1v1h-1zM19 8h2v1h-2zM22 8h1v1h-1zM4 9h5v1h-5zM10 9h1v1h-1zM14 9h1v1h-1zM16 9h2v1h-2zM19 9h1v1h-1zM21 9h1v1h-1zM0 10h1v1h-1zM2 10h1v1h-1zM6 10h3v1h-3zM10 10h1v1h-1zM15 10h2v1h-2zM18 10h1v1h-1zM21 10h1v1h-1zM2 11h2v1h-2zM6 11h3v1h-3zM11 11h1v1h-1zM14 11h1v1h-1zM16 11h3v1h-3zM24 11h1v1h-1zM1 12h1v1h-1zM7 12h3v1h-3zM15 12h1v1h-1zM17 12h2v1h-2zM20 12h1v1h-1zM22 12h2v1h-2zM0 13h2v1h-2zM8 13h1v1h-1zM13 13h6v1h-6zM21 13h3v1h-3zM0 14h2v1h-2zM3 14h1v1h-1zM6 14h4v1h-4zM12 14h1v1h-1zM15 14h2v1h-2zM18 14h3v1h-3zM0 15h8v1h-8zM11 15h1v1h-1zM17 15h2v1h-2zM4 16h1v1h-1zM8 16h3v1h-3zM16 16h5v1h-5zM8 17h1v1h-1zM12 17h1v1h-1zM14 17h3v1h-3zM20 17h2v1h-2zM24 17h1v1h-1zM0 18h7v1h-7zM8 18h1v1h-1zM10 18h4v1h-4zM16 18h1v1h-1zM18 18h1v1h-1zM20 18h2v1h-2zM23 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM10 19h2v1h-2zM16 19h1v1h-1zM20 19h2v1h-2zM23 19h1v1h-1zM0 20h1v1h-1zM2 20h3v1h-3zM6 20h1v1h-1zM8 20h2v1h-2zM13 20h1v1h-1zM15 20h7v1h-7zM0 21h1v1h-1zM2 21h3v1h-3zM6 21h1v1h-1zM8 21h1v1h-1zM14 21h1v1h-1zM16 21h2v1h-2zM20 21h3v1h-3zM0 22h1v1h-1zM2 22h3v1h-3zM6 22h1v1h-1zM9 22h4v1h-4zM14 22h2v1h-2zM17 22h4v1h-4zM22 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM10 23h1v1h-1zM18 23h2v1h-2zM22 23h1v1h-1zM24 23h1v1h-1zM0 24h7v1h-7zM9 24h6v1h-6zM16 24h3v1h-3zM21 24h1v1h-1zM23 24h2v1h-2z" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: the working editor ───────── -->
+      <section class="te-hero" aria-labelledby="te-hero-title">
+        <div class="te-hero__inner">
+          <div class="te-hero__copy">
+            <h1 class="te-hero__title" id="te-hero-title">
+              Build documents on a free <span class="te-em">Canvas</span> or a structured <span class="te-em">Grid</span>
+            </h1>
+            <p class="te-hero__lead">
+              Some documents need the freedom of a design canvas. Others need rows and columns. QuoteCloud’s document editor gives you both.
+            </p>
+            <div class="te-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="te-hero__note">No credit card required</p>
+            <p class="te-hero__try" aria-hidden="true">
+              <span class="te-hero__try-fine">Go ahead: drag a block, then switch to Grid.</span>
+              <span class="te-hero__try-touch">Tap a block, tap a spot, then switch to Grid.</span>
+            </p>
+          </div>
+
+          <div class="te-editor" id="te-editor" data-mode="canvas" role="group" aria-label="Interactive demo of the QuoteCloud document editor">
+            <div class="te-bar">
+              <p class="te-bar__doc"><span class="te-bar__file" aria-hidden="true"></span>Switzerland proposal</p>
+              <div class="te-switch" role="group" aria-label="Editing mode">
+                <span class="te-switch__thumb" aria-hidden="true"></span>
+                <button type="button" class="te-switch__btn" data-mode-btn="canvas" aria-pressed="true">
+                  <svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-canvas" /></svg>Canvas
+                </button>
+                <button type="button" class="te-switch__btn" data-mode-btn="grid" aria-pressed="false">
+                  <svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-grid" /></svg>Grid
+                </button>
+              </div>
+              <div class="te-bar__end">
+                <button type="button" class="te-tool" data-undo aria-label="Undo" title="Undo" disabled>
+                  <svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-undo" /></svg>
+                </button>
+                <span class="te-bar__publish" aria-hidden="true">Publish</span>
+              </div>
+            </div>
+
+            <div class="te-body">
+              <div class="te-palette">
+                <p class="te-palette__title">Blocks</p>
+                <ul class="te-palette__list">
+                  <li><button type="button" class="te-palette__item" data-pick="heading"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-text" /></svg><span>Text</span></button></li>
+                  <li><button type="button" class="te-palette__item" data-pick="image"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-image" /></svg><span>Image</span></button></li>
+                  <li><button type="button" class="te-palette__item" data-pick="quote"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-quote" /></svg><span>Quote</span></button></li>
+                  <li><button type="button" class="te-palette__item" data-pick="price"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-price" /></svg><span>Price table</span></button></li>
+                  <li><button type="button" class="te-palette__item" data-pick="qr"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-qr" /></svg><span>QR code</span></button></li>
+                  <li><button type="button" class="te-palette__item" data-pick="sign"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-esign" /></svg><span>eSignature</span></button></li>
+                </ul>
+                <a class="te-palette__more" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">+12 more blocks</a>
+              </div>
+
+              <div class="te-stage">
+                <div class="te-pagewrap">
+                  <div class="te-page" data-show-grid="false">
+                    <div class="te-page__deco" aria-hidden="true"></div>
+                    <div class="te-page__dots" aria-hidden="true"></div>
+
+                    <div class="te-free">
+                      <div class="te-blk te-blk--image" data-blk="image" tabindex="0" role="button" aria-label="Image block" aria-describedby="te-help" style="--x: 196; --y: 20; --w: 204; --h: 262; --r: 0; --z: 1">
+                        <div class="te-blk__in">
+                          <svg class="te-art" viewBox="0 0 200 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                            <defs>
+                              <linearGradient id="te-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9d7ff" /><stop offset=".55" stop-color="#efe7ff" /><stop offset="1" stop-color="#ffe4dc" /></linearGradient>
+                              <linearGradient id="te-ridge1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f86e8" /><stop offset="1" stop-color="#6b5fdc" /></linearGradient>
+                              <linearGradient id="te-ridge2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3ccf" /><stop offset="1" stop-color="#2e2390" /></linearGradient>
+                              <linearGradient id="te-lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fa8ff" /><stop offset="1" stop-color="#3d6fe0" /></linearGradient>
+                            </defs>
+                            <rect width="200" height="260" fill="url(#te-sky)" />
+                            <circle cx="148" cy="62" r="20" fill="#fff" opacity=".85" />
+                            <path d="M0 150 38 96l22 26 34-58 30 40 18-18 58 70v104H0Z" fill="url(#te-ridge1)" opacity=".55" />
+                            <path d="M94 64 82 84l10-4 8 8 6-6Z" fill="#fff" opacity=".9" />
+                            <path d="M0 176 46 128l24 22 40-44 34 36 22-14 34 34v118H0Z" fill="url(#te-ridge2)" />
+                            <path d="M110 106 96 122l10-2 6 7 8-8Z" fill="#fff" opacity=".85" />
+                            <path d="M0 200c40-8 80-6 120-2s60 4 80 0v62H0Z" fill="url(#te-lake)" />
+                            <path d="M18 214h40M90 222h56M30 232h30M120 238h50" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".55" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="te-blk te-blk--heading" data-blk="heading" tabindex="0" role="button" aria-label="Heading block" aria-describedby="te-help" style="--x: 22; --y: 40; --w: 166; --h: 136; --r: 0; --z: 2">
+                        <div class="te-blk__in">
+                          <span class="te-hd__kicker">Experience</span>
+                          <span class="te-hd__title">Switzerland</span>
+                          <span class="te-hd__sub">Travel proposal · 8 days</span>
+                        </div>
+                      </div>
+
+                      <div class="te-blk te-blk--quote" data-blk="quote" tabindex="0" role="button" aria-label="Quote block" aria-describedby="te-help" style="--x: 22; --y: 194; --w: 158; --h: 126; --r: 0; --z: 3">
+                        <div class="te-blk__in">
+                          <svg class="te-ico te-qt__mark" width="22" height="22" aria-hidden="true"><use href="#te-i-quote" /></svg>
+                          <span class="te-qt__text">A breathtaking journey through stunning landscapes, charming towns and unforgettable experiences.</span>
+                        </div>
+                      </div>
+
+                      <div class="te-blk te-blk--price" data-blk="price" tabindex="0" role="button" aria-label="Price table block" aria-describedby="te-help" style="--x: 210; --y: 252; --w: 180; --h: 158; --r: -4; --z: 4">
+                        <div class="te-blk__in">
+                          <span class="te-pr__label">Total investment</span>
+                          <span class="te-pr__total">$4,250</span>
+                          <span class="te-pr__per">per person, excl. flights</span>
+                          <span class="te-pr__lines">
+                            <span><i>Hotels</i><b>$2,450</b></span>
+                            <span><i>Scenic rail pass</i><b>$980</b></span>
+                            <span><i>Activities</i><b>$820</b></span>
+                          </span>
+                        </div>
+                      </div>
+
+                      <div class="te-blk te-blk--qr" data-blk="qr" tabindex="0" role="button" aria-label="QR code block" aria-describedby="te-help" style="--x: 22; --y: 334; --w: 164; --h: 108; --r: 0; --z: 5">
+                        <div class="te-blk__in">
+                          <svg class="te-qr__code" viewBox="0 0 25 25" shape-rendering="crispEdges" aria-hidden="true"><use href="#te-qr" /></svg>
+                          <span class="te-qr__text">Scan to view the full itinerary</span>
+                        </div>
+                      </div>
+
+                      <div class="te-blk te-blk--sign" data-blk="sign" tabindex="0" role="button" aria-label="eSignature block" aria-describedby="te-help" style="--x: 22; --y: 466; --w: 376; --h: 100; --r: 0; --z: 6">
+                        <div class="te-blk__in">
+                          <span class="te-sg__meta">
+                            <span class="te-sg__label">Approve &amp; sign</span>
+                            <span class="te-sg__hint">Client signature</span>
+                          </span>
+                          <svg class="te-sg__ink" viewBox="0 0 150 46" aria-hidden="true">
+                            <path d="M6 34c8-1 12-24 19-24 6 0-5 27 2 27 6 0 8-17 13-17 4 0 0 13 6 13 5 0 7-9 11-9 3 0 1 7 5 7 6 0 9-6 15-8 10-3 22 1 34-2 10-2 18-5 31-6" pathLength="1" />
+                            <path d="M2 42h146" class="te-sg__line" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <div class="te-sel" aria-hidden="true" hidden>
+                        <span class="te-sel__h te-sel__h--nw"></span>
+                        <span class="te-sel__h te-sel__h--ne"></span>
+                        <span class="te-sel__h te-sel__h--sw"></span>
+                        <span class="te-sel__h te-sel__h--se" data-handle="resize"></span>
+                        <span class="te-sel__rot" data-handle="rotate"><span></span></span>
+                        <span class="te-sel__move" data-handle="move"><svg class="te-ico" width="14" height="14"><use href="#te-i-move" /></svg></span>
+                        <span class="te-sel__chip" data-sel-chip></span>
+                      </div>
+                    </div>
+
+                    <div class="te-rows">
+                      <div class="te-row" data-row="0" style="--i: 0"><button type="button" class="te-row__tag" data-row-tag="0" tabindex="-1" aria-hidden="true">Row 1</button><div class="te-row__cols"></div></div>
+                      <div class="te-row" data-row="1" style="--i: 1"><button type="button" class="te-row__tag" data-row-tag="1" tabindex="-1" aria-hidden="true">Row 2</button><div class="te-row__cols"></div></div>
+                      <div class="te-row" data-row="2" style="--i: 2"><button type="button" class="te-row__tag" data-row-tag="2" tabindex="-1" aria-hidden="true">Row 3</button><div class="te-row__cols"></div></div>
+                      <div class="te-row" data-row="3" style="--i: 3"><button type="button" class="te-row__tag" data-row-tag="3" tabindex="-1" aria-hidden="true">Row 4</button><div class="te-row__cols"></div></div>
+                    </div>
+
+                    <div class="te-guides" aria-hidden="true">
+                      <span class="te-guide te-guide--v"></span>
+                      <span class="te-guide te-guide--h"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="te-insp">
+                <div class="te-insp__panel" data-panel="canvas">
+                  <div class="te-insp__group te-insp__group--page">
+                    <p class="te-insp__label">Page</p>
+                    <p class="te-insp__val">A4 · 210 × 297 mm</p>
+                  </div>
+                  <div class="te-insp__group te-insp__group--switches">
+                    <button type="button" class="te-sw" role="switch" aria-checked="false" data-opt="showGrid"><span class="te-sw__label">Show grid</span><span class="te-sw__track" aria-hidden="true"><span class="te-sw__knob"></span></span></button>
+                    <button type="button" class="te-sw" role="switch" aria-checked="true" data-opt="snap"><span class="te-sw__label">Snap to grid</span><span class="te-sw__track" aria-hidden="true"><span class="te-sw__knob"></span></span></button>
+                  </div>
+                  <div class="te-insp__group te-insp__group--sel">
+                    <p class="te-insp__label">Selected</p>
+                    <p class="te-insp__val" data-sel-name>Nothing selected</p>
+                    <p class="te-insp__xy"><span>X <b data-sel-x>–</b></span><span>Y <b data-sel-y>–</b></span><span>∠ <b data-sel-r>–</b></span></p>
+                    <div class="te-insp__tools">
+                      <button type="button" class="te-tool" data-act="rotl" aria-label="Rotate left" title="Rotate left"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-rotl" /></svg></button>
+                      <button type="button" class="te-tool" data-act="rotr" aria-label="Rotate right" title="Rotate right"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-rotr" /></svg></button>
+                      <button type="button" class="te-tool" data-act="fwd" aria-label="Bring forward" title="Bring forward"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-fwd" /></svg></button>
+                      <button type="button" class="te-tool" data-act="back" aria-label="Send backward" title="Send backward"><svg class="te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-back" /></svg></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="te-insp__panel" data-panel="grid" hidden>
+                  <div class="te-insp__group">
+                    <p class="te-insp__label" id="te-lbl-row">Row</p>
+                    <div class="te-seg" role="group" aria-labelledby="te-lbl-row">
+                      <button type="button" data-row-pick="0" aria-pressed="false" aria-label="Row 1">1</button>
+                      <button type="button" data-row-pick="1" aria-pressed="true" aria-label="Row 2">2</button>
+                      <button type="button" data-row-pick="2" aria-pressed="false" aria-label="Row 3">3</button>
+                      <button type="button" data-row-pick="3" aria-pressed="false" aria-label="Row 4">4</button>
+                    </div>
+                  </div>
+                  <div class="te-insp__group">
+                    <p class="te-insp__label" id="te-lbl-cols">Columns</p>
+                    <div class="te-seg te-seg--icons" role="group" aria-labelledby="te-lbl-cols">
+                      <button type="button" data-cols="1" aria-pressed="false" aria-label="1 column"><svg class="te-ico" width="20" height="20" aria-hidden="true"><use href="#te-i-c1" /></svg></button>
+                      <button type="button" data-cols="2" aria-pressed="true" aria-label="2 columns"><svg class="te-ico" width="20" height="20" aria-hidden="true"><use href="#te-i-c2" /></svg></button>
+                      <button type="button" data-cols="3" aria-pressed="false" aria-label="3 columns"><svg class="te-ico" width="20" height="20" aria-hidden="true"><use href="#te-i-c3" /></svg></button>
+                    </div>
+                  </div>
+                  <div class="te-insp__group">
+                    <p class="te-insp__label"><label for="te-width">Column width</label><output class="te-insp__out" for="te-width" data-width-out>58 / 42</output></p>
+                    <input class="te-range" id="te-width" type="range" min="25" max="75" step="1" value="58" data-width />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="te-status">
+              <p class="te-status__msg" data-status aria-live="polite">Canvas mode: place blocks anywhere on the page.</p>
+              <p class="te-status__zoom" aria-hidden="true">A4 · <span data-zoom>100</span>%</p>
+            </div>
+
+            <div class="te-ghost" aria-hidden="true">
+              <svg class="te-ghost__arrow" viewBox="0 0 24 24" width="22" height="22"><path d="M5 3.5v15.2l4.1-3.9 2.7 6 2.6-1.1-2.6-5.9h5.7L5 3.5Z" /></svg>
+            </div>
+            <p id="te-help" class="qc-sr-only">In Canvas mode, select a block and use the arrow keys to move it, Shift plus arrow keys for larger steps, and the R key to rotate it. In Grid mode, pick a row, then choose its columns and column width in the panel.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Canvas is for / Grid is for ───────── -->
+      <section class="te-modes" aria-labelledby="te-modes-title">
+        <div class="qc-container">
+          <h2 class="te-h2" id="te-modes-title" data-reveal>Freedom when it matters. <span class="te-em">Structure when it counts.</span></h2>
+          <div class="te-modes__grid" data-reveal-stagger="140">
+            <article class="te-mode te-mode--canvas" aria-labelledby="te-canvas-title" data-reveal>
+              <div class="te-mini te-mini--canvas" aria-hidden="true">
+                <div class="te-mini__page">
+                  <span class="te-mini__b te-mini__b--img"></span>
+                  <span class="te-mini__b te-mini__b--title"><i></i><i></i></span>
+                  <span class="te-mini__b te-mini__b--price"><i></i><i></i></span>
+                  <span class="te-mini__b te-mini__b--qr"></span>
+                  <span class="te-mini__guide"></span>
+                  <span class="te-mini__sel"></span>
+                </div>
+              </div>
+              <h3 class="te-mode__title" id="te-canvas-title">Canvas Mode: <span>complete creative freedom</span></h3>
+              <p class="te-mode__text">
+                Place text, images, price tables, diagrams, shapes, videos and QR codes exactly where you want them. Layered, visual layouts that look like a designed brochure, presentation or proposal, much like working in Canva or PowerPoint.
+              </p>
+              <p class="te-mode__caps">Drag &amp; drop <i></i> Resize <i></i> Rotate <i></i> Layer <i></i> Snap to grid <i></i> Align to guides</p>
+              <p class="te-mode__for" id="te-canvas-for">Perfect for</p>
+              <ul class="te-covers" aria-labelledby="te-canvas-for">
+                <li class="te-cover te-cover--a"><span class="te-cover__art" aria-hidden="true"></span><span class="te-cover__name">Visual sales proposals</span></li>
+                <li class="te-cover te-cover--b"><span class="te-cover__art" aria-hidden="true"></span><span class="te-cover__name">Executive presentations</span></li>
+                <li class="te-cover te-cover--c"><span class="te-cover__art" aria-hidden="true"></span><span class="te-cover__name">Destination presentations</span></li>
+                <li class="te-cover te-cover--d"><span class="te-cover__art" aria-hidden="true"></span><span class="te-cover__name">Product showcases</span></li>
+                <li class="te-cover te-cover--e"><span class="te-cover__art" aria-hidden="true"></span><span class="te-cover__name">One-page summaries</span></li>
+              </ul>
+              <p class="te-mode__more">Also marketing documents, designed cover pages, branded client-facing documents and visual pitch documents.</p>
+            </article>
+
+            <article class="te-mode te-mode--grid" aria-labelledby="te-grid-title" data-reveal>
+              <div class="te-mini te-mini--grid" aria-hidden="true">
+                <div class="te-mini__page">
+                  <span class="te-mini__row te-mini__row--1"><i></i></span>
+                  <span class="te-mini__row te-mini__row--2"><i></i><i></i></span>
+                  <span class="te-mini__row te-mini__row--3"><i></i><i></i><i></i></span>
+                  <span class="te-mini__row te-mini__row--4"><i></i></span>
+                </div>
+              </div>
+              <h3 class="te-mode__title" id="te-grid-title">Grid Mode: <span>structured rows and columns</span></h3>
+              <p class="te-mode__text">
+                Each row is a container. Choose how many columns it needs, set each column’s width and stack content blocks inside. The control of a professional layout system, still easy to edit, organise and maintain.
+              </p>
+              <ol class="te-steps">
+                <li><b>1</b>Add a row</li>
+                <li><b>2</b>Choose columns</li>
+                <li><b>3</b>Set widths</li>
+                <li><b>4</b>Stack blocks</li>
+              </ol>
+              <p class="te-mode__for" id="te-grid-for">Perfect for</p>
+              <ul class="te-doclist" aria-labelledby="te-grid-for">
+                <li>Business proposals</li>
+                <li>Quotes and pricing documents</li>
+                <li>Statements of work</li>
+                <li>Client reports</li>
+                <li>Project plans</li>
+                <li><a href="https://www.quote.cloud/enhanced-travel-itinerary-software">Travel itineraries</a></li>
+                <li>Internal documentation</li>
+                <li>Structured sales templates</li>
+                <li>Repeatable document layouts</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="te-decide" data-reveal>
+            <p class="te-decide__text">Try both modes on your own proposals, quotes and itineraries.</p>
+            <div class="te-decide__ctas">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="modes">Start free 14-day trial</a>
+              <a class="te-link" href="https://www.quote.cloud/document-editor-quick-start-guide">Editor quick-start guide <svg class="te-ico" width="16" height="16" aria-hidden="true"><use href="#te-i-arrow" /></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Same blocks, both modes ───────── -->
+      <section class="te-blocks" aria-labelledby="te-blocks-title">
+        <div class="qc-container">
+          <div class="te-blocks__head" data-reveal>
+            <h2 class="te-h2" id="te-blocks-title">Same blocks. <span class="te-em">Either mode.</span></h2>
+            <p class="te-lead">
+              Price tables, diagrams, video, QR codes and eSignatures work on the canvas and in the grid alike. It is far more than a traditional word processor.
+            </p>
+          </div>
+
+          <div class="te-blocks__body">
+            <div class="te-twin" aria-hidden="true" data-reveal="scale">
+              <div class="te-twin__page te-twin__page--canvas">
+                <span class="te-twin__tag">Canvas</span>
+                <span class="te-twin__ghost te-twin__ghost--a"></span>
+                <span class="te-twin__ghost te-twin__ghost--b"></span>
+                <span class="te-twin__blk" data-twin><svg class="te-ico" width="22" height="22"><use href="#te-i-price" /></svg><span data-twin-name>Price Table</span></span>
+              </div>
+              <div class="te-twin__page te-twin__page--grid">
+                <span class="te-twin__tag">Grid</span>
+                <span class="te-twin__r"><i></i></span>
+                <span class="te-twin__r te-twin__r--two"><i></i><span class="te-twin__cell"><span class="te-twin__blk" data-twin><svg class="te-ico" width="22" height="22"><use href="#te-i-price" /></svg><span data-twin-name>Price Table</span></span></span></span>
+                <span class="te-twin__r"><i></i><i></i><i></i></span>
+              </div>
+            </div>
+
+            <div class="te-palette18">
+              <ul class="te-palette18__list" data-reveal-stagger="30">
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="text" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-text" /></svg>Text</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="image" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-image" /></svg>Image</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="pdf" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-pdf" /></svg>PDF</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="video" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-video" /></svg>Video</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="diagram" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-diagram" /></svg>Diagram</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="form" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-form" /></svg>Form</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="sheet" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-sheet" /></svg>Spreadsheet</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="gantt" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-gantt" /></svg>Gantt Chart</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="itinerary" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-itinerary" /></svg>Travel Itinerary</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="shape" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-shape" /></svg>Shape</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="divider" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-divider" /></svg>Divider</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="button" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-button" /></svg>Button</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="qr" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-qr" /></svg>QR Code</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="price" aria-pressed="true"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-price" /></svg>Price Table</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="chart" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-chart" /></svg>Chart</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="timeline" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-timeline" /></svg>Timeline</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="map" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-map" /></svg>Map</button></li>
+                <li data-reveal="fade"><button type="button" class="te-tile" data-tile="esign" aria-pressed="false"><svg class="te-ico" width="22" height="22" aria-hidden="true"><use href="#te-i-esign" /></svg>eSignature</button></li>
+              </ul>
+              <p class="te-palette18__links">
+                <a class="te-link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Explore all 18 content blocks <svg class="te-ico" width="16" height="16" aria-hidden="true"><use href="#te-i-arrow" /></svg></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Proof + integrations ───────── -->
+      <section class="te-proof" aria-labelledby="te-proof-title">
+        <div class="qc-container te-proof__inner" data-reveal>
+          <h2 class="te-proof__title" id="te-proof-title">One editor for every document your team sends</h2>
+          <ul class="te-proof__stats">
+            <li><span class="te-stars" aria-hidden="true"><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico te-star--part" width="16" height="16"><use href="#te-i-star" /></svg></span><b>4.2</b> on Capterra</li>
+            <li><span class="te-stars" aria-hidden="true"><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico" width="16" height="16"><use href="#te-i-star" /></svg><svg class="te-ico te-star--part" width="16" height="16"><use href="#te-i-star" /></svg></span><b>4.2</b> on Software Advice</li>
+            <li><b>Since 2013</b> building business documents</li>
+          </ul>
+          <div class="te-proof__int">
+            <ul class="te-logos">
+              <li><img src="/assets/integrations/salesforce-cpq.png" width="56" height="56" alt="Salesforce" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/hub-spot.png" width="56" height="56" alt="HubSpot" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/xero.png" width="56" height="56" alt="Xero" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/quickbooks.png" width="56" height="56" alt="QuickBooks" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/stripe.png" width="56" height="56" alt="Stripe" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/paypal.png" width="56" height="56" alt="PayPal" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/googlesheets.png" width="56" height="56" alt="Google Sheets" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/slack.jpg" width="56" height="56" alt="Slack" loading="lazy" decoding="async" /></li>
+            </ul>
+            <p class="te-proof__int-text">
+              Connects with your CRM, accounting and payment tools. <a class="te-link" href="https://www.quote.cloud/all-integrations">All integrations <svg class="te-ico" width="16" height="16" aria-hidden="true"><use href="#te-i-arrow" /></svg></a>
+            </p>
+          </div>
+          <nav class="te-explore" aria-label="Related features">
+            <a href="https://www.quote.cloud/proposal-software">Proposal software</a>
+            <a href="https://www.quote.cloud/quoting-software">Quoting software</a>
+            <a href="https://www.quote.cloud/cpq-software">CPQ software</a>
+            <a href="https://www.quote.cloud/electronic-signature-software-solution">Electronic signatures</a>
+            <a href="https://www.quote.cloud/collaboration">Collaboration</a>
+            <a href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker</a>
+            <a href="https://www.quote.cloud/templates">Templates</a>
+          </nav>
+        </div>
+      </section>
+
+      <div class="te-faq-wrap">
+        <!-- @include faq-canvas -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="te-close" aria-labelledby="te-close-title">
+        <div class="te-close__inner qc-container">
+          <div class="te-close__switch" aria-hidden="true">
+            <span class="te-close__thumb"></span>
+            <span class="te-close__opt">Canvas</span>
+            <span class="te-close__opt">Grid</span>
+          </div>
+          <h2 class="te-close__title" id="te-close-title">Design it freely. Build it on a grid. <span class="te-em">Send it today.</span></h2>
+          <p class="te-close__text">Your next proposal, quote or itinerary in one document editor, with pricing and eSignatures built in.</p>
+          <div class="te-close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow te-ico" width="18" height="18" aria-hidden="true"><use href="#te-i-arrow" /></svg>
+            </a>
+            <a class="qc-btn te-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="te-close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

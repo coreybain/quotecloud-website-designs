@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-esign -->
+  </head>
+  <body>
+    <script>
+      /* Hide the hero's "to be drawn" ink until main.ts takes over (falls back to the finished state). */
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("es-pre");
+        setTimeout(() => document.documentElement.classList.remove("es-pre"), 3000);
+      }
+    </script>
+    <!-- @include header -->
+    <main id="main" class="es">
+      <!-- ───────── Hero ───────── -->
+      <section class="es-hero" aria-labelledby="hero-title">
+        <div class="es-hero__bg" aria-hidden="true"></div>
+        <div class="qc-container es-hero__grid">
+          <div class="es-hero__copy">
+            <h1 class="es-hero__title" id="hero-title">
+              Free e-signature software, <span class="t-em">built into every plan.</span>
+            </h1>
+            <p class="es-hero__lede">
+              Create it, send it and collect electronic signatures in the same QuoteCloud document. One workflow, no
+              separate signing software.
+            </p>
+            <div class="es-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo"
+                >Book a demo</a
+              >
+            </div>
+            <p class="es-hero__note">No credit card required</p>
+          </div>
+
+          <div class="es-hero__stage" data-hero>
+            <div
+              class="doc"
+              role="img"
+              aria-label="A QuoteCloud service agreement: clauses initialled, the client signature drawn in ink, then marked as electronically signed with a timestamp"
+            >
+              <div class="doc__chrome" aria-hidden="true">
+                <span class="doc__dots"><i></i><i></i><i></i></span>
+                <span class="doc__file">Service Agreement</span>
+                <span class="doc__secure"
+                  ><svg viewBox="0 0 16 16" width="12" height="12"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2" fill="none" stroke="currentColor" stroke-width="1.6" /><rect x="3" y="7" width="10" height="7" rx="2" fill="currentColor" /></svg
+                  >Secure</span
+                >
+              </div>
+              <div class="doc__page" aria-hidden="true">
+                <div class="doc__head">
+                  <span class="doc__logo">A</span>
+                  <span class="doc__co"><b>Acme Solutions</b><span>Business consulting</span></span>
+                  <span class="doc__ref">SA-2041</span>
+                </div>
+                <div class="doc__title">Service Agreement</div>
+                <div class="doc__sub">Prepared for Blue Horizon Ltd</div>
+
+                <div class="clause">
+                  <span class="clause__no">1</span>
+                  <div class="clause__body">
+                    <b>Scope of services</b>
+                    <i class="sk" style="--w: 96%"></i><i class="sk" style="--w: 78%"></i>
+                  </div>
+                  <span class="initial" data-h-initial><span class="initial__label">Initial</span><svg class="sig sig--initials" data-sig="initials" viewBox="-4.2 -31.8 57 37.7" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.412" d="M25.3 -21.4C25.6 -22.1 27.5 -24.4 27.3 -25.4C27 -26.4 25.4 -27.2 23.8 -27.3C22.1 -27.5 19.6 -27.3 17.5 -26.2C15.4 -25.2 12.4 -23 11.3 -21.1C10.1 -19.3 10.2 -17 10.8 -15.1C11.3 -13.3 13.6 -11.9 14.5 -10.2C15.4 -8.6 16.5 -7 16.3 -5.3C16 -3.6 14.6 -1.5 13 -0.3C11.4 0.9 8.5 1.8 6.5 1.9C4.5 1.9 2.1 0.8 1 0C-0.1 -0.8 0 -2.5 -0.2 -3"/><path pathLength="1" style="--o:0.449;--l:0.166" d="M24.5 -22.4C26 -22.9 30.3 -25 33.3 -25.5C36.2 -26.1 39.7 -25.3 42.3 -25.7C44.8 -26.1 47.7 -27.5 48.8 -27.8"/><path pathLength="1" style="--o:0.652;--l:0.348" d="M37.3 -25.6C36.5 -23.9 34.2 -18.8 32.8 -15.6C31.3 -12.4 30 -9.2 28.5 -6.5C27 -3.9 25.3 -0.8 23.8 0.5C22.3 1.9 20.3 1.9 19.5 1.6C18.8 1.3 18.3 -0.7 19.3 -1.4C20.3 -2.1 23 -1.8 25.5 -2.5C28 -3.2 32.8 -5.1 34.3 -5.7"/></g></svg></span>
+                </div>
+                <div class="clause">
+                  <span class="clause__no">2</span>
+                  <div class="clause__body">
+                    <b>Fees</b>
+                    <span class="fees">
+                      <span>Monthly retainer</span><span>$4,800</span>
+                      <span>Onboarding</span><span>$2,500</span>
+                      <span class="fees__total">Total</span><span class="fees__total">$7,300</span>
+                    </span>
+                  </div>
+                  <span class="initial" data-h-initial><span class="initial__label">Initial</span><svg class="sig sig--initials" data-sig="initials" viewBox="-4.2 -31.8 57 37.7" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.412" d="M25.3 -21.4C25.6 -22.1 27.5 -24.4 27.3 -25.4C27 -26.4 25.4 -27.2 23.8 -27.3C22.1 -27.5 19.6 -27.3 17.5 -26.2C15.4 -25.2 12.4 -23 11.3 -21.1C10.1 -19.3 10.2 -17 10.8 -15.1C11.3 -13.3 13.6 -11.9 14.5 -10.2C15.4 -8.6 16.5 -7 16.3 -5.3C16 -3.6 14.6 -1.5 13 -0.3C11.4 0.9 8.5 1.8 6.5 1.9C4.5 1.9 2.1 0.8 1 0C-0.1 -0.8 0 -2.5 -0.2 -3"/><path pathLength="1" style="--o:0.449;--l:0.166" d="M24.5 -22.4C26 -22.9 30.3 -25 33.3 -25.5C36.2 -26.1 39.7 -25.3 42.3 -25.7C44.8 -26.1 47.7 -27.5 48.8 -27.8"/><path pathLength="1" style="--o:0.652;--l:0.348" d="M37.3 -25.6C36.5 -23.9 34.2 -18.8 32.8 -15.6C31.3 -12.4 30 -9.2 28.5 -6.5C27 -3.9 25.3 -0.8 23.8 0.5C22.3 1.9 20.3 1.9 19.5 1.6C18.8 1.3 18.3 -0.7 19.3 -1.4C20.3 -2.1 23 -1.8 25.5 -2.5C28 -3.2 32.8 -5.1 34.3 -5.7"/></g></svg></span>
+                </div>
+                <div class="clause clause--last">
+                  <span class="clause__no">3</span>
+                  <div class="clause__body">
+                    <b>Acceptance</b>
+                    <span class="clause__text">By signing, both parties agree to the terms of this agreement.</span>
+                  </div>
+                </div>
+
+                <div class="signrow">
+                  <div class="signbox" data-h-box>
+                    <span class="signbox__tag">Sign here</span>
+                    <span class="signbox__ink"><svg class="sig sig--hero" data-sig="sarah" viewBox="-10.9 -38.2 142.2 54.9" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.307" d="M34.7 -24.9C35.1 -25.6 37.1 -27.8 37 -29C36.8 -30.1 35.6 -31.6 33.9 -31.8C32.2 -32.1 29.1 -31.7 26.6 -30.6C24.1 -29.5 20.6 -27.4 19 -25.4C17.4 -23.3 16.6 -20.5 16.8 -18.4C16.9 -16.2 18.9 -14.3 19.8 -12.6C20.8 -10.8 22.3 -9.5 22.2 -7.7C22.2 -5.9 21 -3.2 19.3 -1.7C17.7 -0.1 14.9 1 12.4 1.5C9.9 2.1 6.4 2.2 4.4 1.8C2.4 1.4 0.8 0 0.3 -1C-0.2 -2 0.2 -3.3 1.3 -4C2.3 -4.7 4.7 -5.3 6.6 -5.2C8.5 -5.1 11.2 -4 13 -3.4C14.7 -2.8 16.1 -1.7 17.3 -1.6C18.5 -1.5 19.4 -2.2 20.3 -3C21.3 -3.7 22.3 -5.1 23 -6.1C23.7 -7.2 24.3 -8.5 24.5 -9.3C24.8 -10 24.7 -10.6 24.6 -10.6C24.5 -10.5 24 -10 23.8 -9.2C23.6 -8.5 23.3 -7.2 23.3 -6.2C23.4 -5.1 23.6 -3.8 24.1 -3.1C24.5 -2.4 25.5 -1.9 26.2 -1.9C26.9 -1.9 27.4 -2.5 28.1 -3.3C28.8 -4 29.7 -5.4 30.4 -6.5C31.1 -7.5 31.8 -8.9 32.3 -9.6C32.8 -10.4 33.1 -11 33.4 -11C33.6 -11 33.6 -10.4 33.6 -9.7C33.6 -9 33.5 -7.6 33.5 -6.6C33.5 -5.5 33.5 -4.2 33.7 -3.5C34 -2.7 34.1 -2.2 34.8 -2.2C35.5 -2.3 36.9 -2.9 37.9 -3.8C38.9 -4.6 40.1 -6.2 40.8 -7.4C41.6 -8.6 42.2 -10.1 42.4 -10.9C42.7 -11.8 42.6 -12.4 42.5 -12.4C42.3 -12.4 41.8 -11.8 41.6 -10.9C41.3 -10.1 40.9 -8.6 40.9 -7.4C40.9 -6.2 41.1 -4.7 41.6 -3.9C42 -3.1 42.6 -2.2 43.7 -2.5C44.9 -2.9 46.8 -4.1 48.4 -6.1C50 -8.1 52 -11.8 53.3 -14.6C54.6 -17.4 55.7 -21 56.2 -22.9C56.6 -24.9 56.5 -26.4 56 -26.4C55.6 -26.4 54.5 -24.8 53.7 -22.9C52.9 -20.9 51.7 -17.3 51.2 -14.5C50.7 -11.7 50.4 -8.1 50.7 -6.2C51 -4.3 52.2 -3.1 53.2 -2.9C54.2 -2.6 55.6 -4.1 56.8 -5C58.1 -5.8 60.1 -7.5 60.8 -8.1"/><path pathLength="1" style="--o:0.344;--l:0.048" d="M66.9 -27.1C68.4 -27.6 73 -29.9 75.8 -30.3C78.6 -30.8 80.8 -29.4 83.5 -29.6C86.2 -29.9 89.3 -31.1 92.1 -31.9C95 -32.7 99.3 -33.8 100.8 -34.2"/><path pathLength="1" style="--o:0.43;--l:0.57" d="M82.8 -30.6C82 -28.9 79.4 -23.9 77.6 -20.5C75.9 -17.2 74 -13.3 72.4 -10.4C70.8 -7.6 69.7 -5.1 68.2 -3.4C66.6 -1.7 64.4 -0.4 63.2 -0.2C62 0 60.6 -1.5 60.9 -2.1C61.1 -2.8 62.9 -4 64.5 -4.2C66.1 -4.5 68.7 -3.3 70.2 -3.4C71.6 -3.6 72.3 -4.1 73.3 -4.9C74.3 -5.7 75.4 -7.1 76.1 -8.2C76.8 -9.3 77.3 -10.7 77.6 -11.4C77.8 -12.2 77.7 -12.7 77.5 -12.7C77.3 -12.7 76.8 -12.1 76.6 -11.4C76.3 -10.6 76 -9.2 76 -8.2C76 -7.1 76.2 -5.7 76.7 -5C77.2 -4.3 78.3 -3.7 79 -3.8C79.6 -3.8 80.1 -4.5 80.8 -5.4C81.4 -6.3 82.3 -7.9 83.1 -9.2C83.8 -10.5 84.6 -12.2 85.1 -13.1C85.7 -14 86.1 -14.7 86.3 -14.7C86.5 -14.7 86.5 -14 86.5 -13.1C86.4 -12.2 86.2 -10.6 86.1 -9.3C86 -8.1 85.9 -6.4 86 -5.6C86.1 -4.7 87 -4.7 86.8 -4C86.5 -3.4 85.1 -3 84.4 -1.6C83.6 -0.3 82.7 2.2 82.3 4.1C82 5.9 81.9 8.4 82.2 9.7C82.6 11 83.6 11.9 84.6 11.9C85.7 11.9 87.3 10.8 88.5 9.4C89.8 8.1 91.3 5.6 92.1 3.7C93 1.8 93.6 -0.6 93.7 -1.9C93.8 -3.3 92.1 -3.2 92.8 -4.2C93.4 -5.3 96 -6.1 97.7 -8.4C99.3 -10.7 101.5 -14.9 102.9 -18.2C104.3 -21.4 105.6 -25.6 106.2 -27.9C106.7 -30.2 106.6 -31.9 106.1 -31.9C105.7 -31.8 104.5 -30.1 103.6 -27.8C102.6 -25.5 101.2 -21.3 100.6 -18.1C99.9 -14.9 99.4 -10.7 99.6 -8.5C99.9 -6.2 101 -4.9 101.9 -4.6C102.8 -4.2 104.1 -5.3 105.1 -6.1C106.1 -7 107.2 -8.5 107.9 -9.7C108.7 -10.9 109.2 -12.4 109.5 -13.2C109.7 -14 109.6 -14.7 109.4 -14.7C109.2 -14.6 108.7 -14 108.4 -13.2C108.1 -12.3 107.7 -10.8 107.7 -9.7C107.6 -8.5 107.8 -7 108.3 -6.2C108.7 -5.4 109.8 -4.8 110.5 -4.9C111.1 -4.9 111.6 -5.6 112.3 -6.5C112.9 -7.4 113.8 -9 114.5 -10.3C115.2 -11.6 116 -13.2 116.5 -14.1C117 -15 117.3 -15.7 117.5 -15.7C117.7 -15.7 117.6 -15 117.5 -14.1C117.4 -13.3 117.2 -11.6 117 -10.4C116.9 -9.1 116.8 -7.5 116.9 -6.6C117 -5.8 116.9 -4.8 117.7 -5.1C118.5 -5.4 120 -7.3 121.6 -8.2C123.2 -9.1 126.4 -10.7 127.3 -10.4C128.2 -10.1 128.3 -8.3 127 -6.4C125.8 -4.6 124 -1.5 119.8 0.8C115.6 3 110.8 5.5 101.8 7.3C92.9 9.1 77.8 10.6 65.9 11.5C54.1 12.4 41.7 12.7 30.7 12.8C19.8 12.8 6.4 12.5 0.2 11.9C-6.1 11.3 -6.1 9.9 -6.9 9.1C-7.6 8.3 -6.6 7.3 -4.2 7.1C-1.9 6.8 5.5 7.6 7.4 7.7"/></g></svg></span>
+                    <span class="signbox__line"></span>
+                    <span class="signbox__name">Sarah Taylor <span>· Blue Horizon Ltd</span></span>
+                  </div>
+                  <div class="datebox">
+                    <span class="datebox__label">Date</span>
+                    <span class="datebox__val" data-h-date data-today>08 Oct 2026</span>
+                  </div>
+                </div>
+                <div class="doc__stamp" data-h-stamp>
+                  Electronically signed by Sarah Taylor · <span data-today-time>08 Oct 2026, 10:42</span>
+                </div>
+              </div>
+              <div class="seal" data-h-seal aria-hidden="true">
+                <svg viewBox="0 0 120 120" class="seal__svg">
+                  <defs><path id="seal-ring" d="M60 60 m-43 0 a43 43 0 1 1 86 0 a43 43 0 1 1 -86 0" /></defs>
+                  <circle cx="60" cy="60" r="56" class="seal__disc" />
+                  <circle cx="60" cy="60" r="31" class="seal__inner" />
+                  <text class="seal__text"><textPath href="#seal-ring" textLength="268">SIGNED · VERIFIED · COMPLETED ·</textPath></text>
+                  <path d="M47 61l9 9 17-19" class="seal__tick" pathLength="1" />
+                </svg>
+              </div>
+            </div>
+            <div class="es-hero__toast" data-h-toast aria-hidden="true">
+              <span class="toast__icon"
+                ><svg viewBox="0 0 20 20" width="14" height="14"><path d="M5 10.5l3.2 3.2L15 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg
+              ></span>
+              <span><b>Agreement completed</b><span>Certificate of authenticity attached</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento: the feature list ───────── -->
+      <section class="es-bento" aria-labelledby="bento-title">
+        <div class="qc-container">
+          <header class="es-head" data-reveal>
+            <h2 id="bento-title">E-sign proposals and contracts <span class="t-em">without leaving the document.</span></h2>
+            <p>Signatures, initials and fields live inside your quotes, proposals, contracts and PDFs, exactly where they belong.</p>
+          </header>
+
+          <div class="bento" data-reveal-stagger="70">
+            <!-- Sign anywhere -->
+            <article class="tile tile--any" data-reveal data-tile="any">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="any">
+                  <div class="any__palette">
+                    <span class="any__ptitle">Content blocks</span>
+                    <span class="blk"><i class="blk__ic blk__ic--text"></i>Text</span>
+                    <span class="blk"><i class="blk__ic blk__ic--table"></i>Pricing table</span>
+                    <span class="blk"><i class="blk__ic blk__ic--form"></i>Form</span>
+                    <span class="blk"><i class="blk__ic blk__ic--pdf"></i>PDF</span>
+                    <span class="blk blk--esign" data-any-src><i class="blk__ic blk__ic--sign"></i>E-Sign</span>
+                  </div>
+                  <div class="any__page">
+                    <span class="any__h">Professional Services Agreement</span>
+                    <span class="any__sec">4. Deliverables</span>
+                    <i class="sk" style="--w: 92%"></i><i class="sk" style="--w: 84%"></i><i class="sk" style="--w: 60%"></i>
+                    <span class="any__sec">5. Acceptance</span>
+                    <span class="any__clause">The client accepts the scope, fees and timeline set out above.</span>
+                    <span class="any__drop" data-any-drop></span>
+                    <span class="any__block" data-any-block>
+                      <span class="any__btag">E-Sign · Client</span>
+                      <span class="any__ink"><svg class="sig sig--any" data-sig="sarah" viewBox="-10.9 -38.2 142.2 54.9" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.307" d="M34.7 -24.9C35.1 -25.6 37.1 -27.8 37 -29C36.8 -30.1 35.6 -31.6 33.9 -31.8C32.2 -32.1 29.1 -31.7 26.6 -30.6C24.1 -29.5 20.6 -27.4 19 -25.4C17.4 -23.3 16.6 -20.5 16.8 -18.4C16.9 -16.2 18.9 -14.3 19.8 -12.6C20.8 -10.8 22.3 -9.5 22.2 -7.7C22.2 -5.9 21 -3.2 19.3 -1.7C17.7 -0.1 14.9 1 12.4 1.5C9.9 2.1 6.4 2.2 4.4 1.8C2.4 1.4 0.8 0 0.3 -1C-0.2 -2 0.2 -3.3 1.3 -4C2.3 -4.7 4.7 -5.3 6.6 -5.2C8.5 -5.1 11.2 -4 13 -3.4C14.7 -2.8 16.1 -1.7 17.3 -1.6C18.5 -1.5 19.4 -2.2 20.3 -3C21.3 -3.7 22.3 -5.1 23 -6.1C23.7 -7.2 24.3 -8.5 24.5 -9.3C24.8 -10 24.7 -10.6 24.6 -10.6C24.5 -10.5 24 -10 23.8 -9.2C23.6 -8.5 23.3 -7.2 23.3 -6.2C23.4 -5.1 23.6 -3.8 24.1 -3.1C24.5 -2.4 25.5 -1.9 26.2 -1.9C26.9 -1.9 27.4 -2.5 28.1 -3.3C28.8 -4 29.7 -5.4 30.4 -6.5C31.1 -7.5 31.8 -8.9 32.3 -9.6C32.8 -10.4 33.1 -11 33.4 -11C33.6 -11 33.6 -10.4 33.6 -9.7C33.6 -9 33.5 -7.6 33.5 -6.6C33.5 -5.5 33.5 -4.2 33.7 -3.5C34 -2.7 34.1 -2.2 34.8 -2.2C35.5 -2.3 36.9 -2.9 37.9 -3.8C38.9 -4.6 40.1 -6.2 40.8 -7.4C41.6 -8.6 42.2 -10.1 42.4 -10.9C42.7 -11.8 42.6 -12.4 42.5 -12.4C42.3 -12.4 41.8 -11.8 41.6 -10.9C41.3 -10.1 40.9 -8.6 40.9 -7.4C40.9 -6.2 41.1 -4.7 41.6 -3.9C42 -3.1 42.6 -2.2 43.7 -2.5C44.9 -2.9 46.8 -4.1 48.4 -6.1C50 -8.1 52 -11.8 53.3 -14.6C54.6 -17.4 55.7 -21 56.2 -22.9C56.6 -24.9 56.5 -26.4 56 -26.4C55.6 -26.4 54.5 -24.8 53.7 -22.9C52.9 -20.9 51.7 -17.3 51.2 -14.5C50.7 -11.7 50.4 -8.1 50.7 -6.2C51 -4.3 52.2 -3.1 53.2 -2.9C54.2 -2.6 55.6 -4.1 56.8 -5C58.1 -5.8 60.1 -7.5 60.8 -8.1"/><path pathLength="1" style="--o:0.344;--l:0.048" d="M66.9 -27.1C68.4 -27.6 73 -29.9 75.8 -30.3C78.6 -30.8 80.8 -29.4 83.5 -29.6C86.2 -29.9 89.3 -31.1 92.1 -31.9C95 -32.7 99.3 -33.8 100.8 -34.2"/><path pathLength="1" style="--o:0.43;--l:0.57" d="M82.8 -30.6C82 -28.9 79.4 -23.9 77.6 -20.5C75.9 -17.2 74 -13.3 72.4 -10.4C70.8 -7.6 69.7 -5.1 68.2 -3.4C66.6 -1.7 64.4 -0.4 63.2 -0.2C62 0 60.6 -1.5 60.9 -2.1C61.1 -2.8 62.9 -4 64.5 -4.2C66.1 -4.5 68.7 -3.3 70.2 -3.4C71.6 -3.6 72.3 -4.1 73.3 -4.9C74.3 -5.7 75.4 -7.1 76.1 -8.2C76.8 -9.3 77.3 -10.7 77.6 -11.4C77.8 -12.2 77.7 -12.7 77.5 -12.7C77.3 -12.7 76.8 -12.1 76.6 -11.4C76.3 -10.6 76 -9.2 76 -8.2C76 -7.1 76.2 -5.7 76.7 -5C77.2 -4.3 78.3 -3.7 79 -3.8C79.6 -3.8 80.1 -4.5 80.8 -5.4C81.4 -6.3 82.3 -7.9 83.1 -9.2C83.8 -10.5 84.6 -12.2 85.1 -13.1C85.7 -14 86.1 -14.7 86.3 -14.7C86.5 -14.7 86.5 -14 86.5 -13.1C86.4 -12.2 86.2 -10.6 86.1 -9.3C86 -8.1 85.9 -6.4 86 -5.6C86.1 -4.7 87 -4.7 86.8 -4C86.5 -3.4 85.1 -3 84.4 -1.6C83.6 -0.3 82.7 2.2 82.3 4.1C82 5.9 81.9 8.4 82.2 9.7C82.6 11 83.6 11.9 84.6 11.9C85.7 11.9 87.3 10.8 88.5 9.4C89.8 8.1 91.3 5.6 92.1 3.7C93 1.8 93.6 -0.6 93.7 -1.9C93.8 -3.3 92.1 -3.2 92.8 -4.2C93.4 -5.3 96 -6.1 97.7 -8.4C99.3 -10.7 101.5 -14.9 102.9 -18.2C104.3 -21.4 105.6 -25.6 106.2 -27.9C106.7 -30.2 106.6 -31.9 106.1 -31.9C105.7 -31.8 104.5 -30.1 103.6 -27.8C102.6 -25.5 101.2 -21.3 100.6 -18.1C99.9 -14.9 99.4 -10.7 99.6 -8.5C99.9 -6.2 101 -4.9 101.9 -4.6C102.8 -4.2 104.1 -5.3 105.1 -6.1C106.1 -7 107.2 -8.5 107.9 -9.7C108.7 -10.9 109.2 -12.4 109.5 -13.2C109.7 -14 109.6 -14.7 109.4 -14.7C109.2 -14.6 108.7 -14 108.4 -13.2C108.1 -12.3 107.7 -10.8 107.7 -9.7C107.6 -8.5 107.8 -7 108.3 -6.2C108.7 -5.4 109.8 -4.8 110.5 -4.9C111.1 -4.9 111.6 -5.6 112.3 -6.5C112.9 -7.4 113.8 -9 114.5 -10.3C115.2 -11.6 116 -13.2 116.5 -14.1C117 -15 117.3 -15.7 117.5 -15.7C117.7 -15.7 117.6 -15 117.5 -14.1C117.4 -13.3 117.2 -11.6 117 -10.4C116.9 -9.1 116.8 -7.5 116.9 -6.6C117 -5.8 116.9 -4.8 117.7 -5.1C118.5 -5.4 120 -7.3 121.6 -8.2C123.2 -9.1 126.4 -10.7 127.3 -10.4C128.2 -10.1 128.3 -8.3 127 -6.4C125.8 -4.6 124 -1.5 119.8 0.8C115.6 3 110.8 5.5 101.8 7.3C92.9 9.1 77.8 10.6 65.9 11.5C54.1 12.4 41.7 12.7 30.7 12.8C19.8 12.8 6.4 12.5 0.2 11.9C-6.1 11.3 -6.1 9.9 -6.9 9.1C-7.6 8.3 -6.6 7.3 -4.2 7.1C-1.9 6.8 5.5 7.6 7.4 7.7"/></g></svg></span>
+                      <span class="any__bline"></span>
+                    </span>
+                    <span class="any__sec">6. Approval</span>
+                    <i class="sk" style="--w: 70%"></i>
+                  </div>
+                  <span class="any__ghost" data-any-ghost><i class="blk__ic blk__ic--sign"></i>E-Sign</span>
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Signatures that sit anywhere</h3>
+                <p>Drop the E-Sign block beside an acceptance clause, inside an approval section or at the end of a contract. No fixed signature page.</p>
+              </div>
+            </article>
+
+            <!-- Included in every plan -->
+            <article class="tile tile--plan" data-reveal data-tile="plan">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="plan">
+                  <span class="plan__title">Your QuoteCloud plan</span>
+                  <span class="plan__row"><i class="tick"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" pathLength="1" /></svg></i>Quotes &amp; proposals</span>
+                  <span class="plan__row"><i class="tick"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" pathLength="1" /></svg></i>Contracts &amp; agreements</span>
+                  <span class="plan__row"><i class="tick"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" pathLength="1" /></svg></i>Pricing tables &amp; forms</span>
+                  <span class="plan__row plan__row--hi"
+                    ><i class="tick"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" pathLength="1" /></svg></i>E-signatures &amp; initials<em>Included</em></span
+                  >
+                  <span class="plan__row plan__row--no"
+                    ><i class="tick tick--no"></i><span class="plan__strike">Separate signing app<s data-plan-strike></s></span><em>Not needed</em></span
+                  >
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Included in every plan</h3>
+                <p>E-signatures come with every QuoteCloud subscription. No second product to buy.</p>
+              </div>
+            </article>
+
+            <!-- Electronic initials -->
+            <article class="tile tile--init" data-reveal data-tile="init">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="init">
+                  <div class="init__page">
+                    <div class="init__row">
+                      <span class="init__no">7.1</span>
+                      <span class="init__lines"><i class="sk" style="--w: 100%"></i><i class="sk" style="--w: 70%"></i></span>
+                      <span class="init__box" data-init><svg class="sig sig--init" data-sig="initials" viewBox="-4.2 -31.8 57 37.7" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.412" d="M25.3 -21.4C25.6 -22.1 27.5 -24.4 27.3 -25.4C27 -26.4 25.4 -27.2 23.8 -27.3C22.1 -27.5 19.6 -27.3 17.5 -26.2C15.4 -25.2 12.4 -23 11.3 -21.1C10.1 -19.3 10.2 -17 10.8 -15.1C11.3 -13.3 13.6 -11.9 14.5 -10.2C15.4 -8.6 16.5 -7 16.3 -5.3C16 -3.6 14.6 -1.5 13 -0.3C11.4 0.9 8.5 1.8 6.5 1.9C4.5 1.9 2.1 0.8 1 0C-0.1 -0.8 0 -2.5 -0.2 -3"/><path pathLength="1" style="--o:0.449;--l:0.166" d="M24.5 -22.4C26 -22.9 30.3 -25 33.3 -25.5C36.2 -26.1 39.7 -25.3 42.3 -25.7C44.8 -26.1 47.7 -27.5 48.8 -27.8"/><path pathLength="1" style="--o:0.652;--l:0.348" d="M37.3 -25.6C36.5 -23.9 34.2 -18.8 32.8 -15.6C31.3 -12.4 30 -9.2 28.5 -6.5C27 -3.9 25.3 -0.8 23.8 0.5C22.3 1.9 20.3 1.9 19.5 1.6C18.8 1.3 18.3 -0.7 19.3 -1.4C20.3 -2.1 23 -1.8 25.5 -2.5C28 -3.2 32.8 -5.1 34.3 -5.7"/></g></svg></span>
+                    </div>
+                    <div class="init__row">
+                      <span class="init__no">7.2</span>
+                      <span class="init__lines"><i class="sk" style="--w: 90%"></i><i class="sk" style="--w: 82%"></i></span>
+                      <span class="init__box" data-init><svg class="sig sig--init" data-sig="initials" viewBox="-4.2 -31.8 57 37.7" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.412" d="M25.3 -21.4C25.6 -22.1 27.5 -24.4 27.3 -25.4C27 -26.4 25.4 -27.2 23.8 -27.3C22.1 -27.5 19.6 -27.3 17.5 -26.2C15.4 -25.2 12.4 -23 11.3 -21.1C10.1 -19.3 10.2 -17 10.8 -15.1C11.3 -13.3 13.6 -11.9 14.5 -10.2C15.4 -8.6 16.5 -7 16.3 -5.3C16 -3.6 14.6 -1.5 13 -0.3C11.4 0.9 8.5 1.8 6.5 1.9C4.5 1.9 2.1 0.8 1 0C-0.1 -0.8 0 -2.5 -0.2 -3"/><path pathLength="1" style="--o:0.449;--l:0.166" d="M24.5 -22.4C26 -22.9 30.3 -25 33.3 -25.5C36.2 -26.1 39.7 -25.3 42.3 -25.7C44.8 -26.1 47.7 -27.5 48.8 -27.8"/><path pathLength="1" style="--o:0.652;--l:0.348" d="M37.3 -25.6C36.5 -23.9 34.2 -18.8 32.8 -15.6C31.3 -12.4 30 -9.2 28.5 -6.5C27 -3.9 25.3 -0.8 23.8 0.5C22.3 1.9 20.3 1.9 19.5 1.6C18.8 1.3 18.3 -0.7 19.3 -1.4C20.3 -2.1 23 -1.8 25.5 -2.5C28 -3.2 32.8 -5.1 34.3 -5.7"/></g></svg></span>
+                    </div>
+                    <div class="init__row">
+                      <span class="init__no">7.3</span>
+                      <span class="init__lines"><i class="sk" style="--w: 96%"></i><i class="sk" style="--w: 54%"></i></span>
+                      <span class="init__box" data-init><svg class="sig sig--init" data-sig="initials" viewBox="-4.2 -31.8 57 37.7" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.412" d="M25.3 -21.4C25.6 -22.1 27.5 -24.4 27.3 -25.4C27 -26.4 25.4 -27.2 23.8 -27.3C22.1 -27.5 19.6 -27.3 17.5 -26.2C15.4 -25.2 12.4 -23 11.3 -21.1C10.1 -19.3 10.2 -17 10.8 -15.1C11.3 -13.3 13.6 -11.9 14.5 -10.2C15.4 -8.6 16.5 -7 16.3 -5.3C16 -3.6 14.6 -1.5 13 -0.3C11.4 0.9 8.5 1.8 6.5 1.9C4.5 1.9 2.1 0.8 1 0C-0.1 -0.8 0 -2.5 -0.2 -3"/><path pathLength="1" style="--o:0.449;--l:0.166" d="M24.5 -22.4C26 -22.9 30.3 -25 33.3 -25.5C36.2 -26.1 39.7 -25.3 42.3 -25.7C44.8 -26.1 47.7 -27.5 48.8 -27.8"/><path pathLength="1" style="--o:0.652;--l:0.348" d="M37.3 -25.6C36.5 -23.9 34.2 -18.8 32.8 -15.6C31.3 -12.4 30 -9.2 28.5 -6.5C27 -3.9 25.3 -0.8 23.8 0.5C22.3 1.9 20.3 1.9 19.5 1.6C18.8 1.3 18.3 -0.7 19.3 -1.4C20.3 -2.1 23 -1.8 25.5 -2.5C28 -3.2 32.8 -5.1 34.3 -5.7"/></g></svg></span>
+                    </div>
+                  </div>
+                  <span class="init__count" data-init-count>3 of 3 initialled</span>
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Electronic initials</h3>
+                <p>Ask for initials on the clauses, pages or sections that need acknowledging.</p>
+              </div>
+            </article>
+
+            <!-- Sign existing PDFs -->
+            <article class="tile tile--pdf" data-reveal data-tile="pdf">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="pdf">
+                  <div class="pdf__file" data-pdf-file>
+                    <span class="pdf__badge">PDF</span>
+                    <span><b>Service-Agreement.pdf</b><span>Original design kept</span></span>
+                  </div>
+                  <div class="pdf__page" data-pdf-page>
+                    <span class="pdf__logo"></span>
+                    <i class="pk" style="--w: 46%; --h: 9px"></i>
+                    <i class="pk" style="--w: 92%"></i><i class="pk" style="--w: 88%"></i><i class="pk" style="--w: 94%"></i
+                    ><i class="pk" style="--w: 64%"></i>
+                    <span class="pdf__gap"></span>
+                    <i class="pk" style="--w: 90%"></i><i class="pk" style="--w: 76%"></i>
+                    <span class="pdf__gap"></span>
+                    <span class="pdf__cols"><i class="pk"></i><i class="pk"></i></span>
+                    <span class="pdf__cols"><i class="pk pk--line"></i><i class="pk pk--line"></i></span>
+
+                    <span class="pdf__guide pdf__guide--h" data-pdf-guide></span>
+                    <span class="pdf__guide pdf__guide--v" data-pdf-guide></span>
+
+                    <span class="fld fld--name" data-fld style="--x: 6%; --y: 38%"><i>Text</i>Full name</span>
+                    <span class="fld fld--date" data-fld style="--x: 56%; --y: 38%"><i>Date</i>DD / MM / YYYY</span>
+                    <span class="fld fld--init" data-fld style="--x: 79%; --y: 54%"><i>Initials</i>ST</span>
+                    <span class="fld fld--sig" data-fld style="--x: 6%; --y: 72%"><i>Signature</i>Sign here</span>
+                    <span class="fld fld--sig2" data-fld style="--x: 54%; --y: 72%"><i>Signature</i>Sign here</span>
+                  </div>
+                  <div class="pdf__tools">
+                    <span class="pdf__tt">Add fields</span>
+                    <span class="tool tool--sig">E-Signature</span>
+                    <span class="tool tool--init">E-Initials</span>
+                    <span class="tool tool--text">Text field</span>
+                    <span class="tool tool--date">Date</span>
+                    <span class="tool tool--check">Checkbox</span>
+                    <span class="pdf__send" data-pdf-send>Send for signature</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Add fields to a PDF and sign it online</h3>
+                <p>Upload a contract, agreement or form and place signature, initial, text and form fields directly over the original pages.</p>
+              </div>
+            </article>
+
+            <!-- Multiple signers -->
+            <article class="tile tile--signers" data-reveal data-tile="signers">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="signers">
+                  <div class="signer" data-signer style="--c: var(--qc-violet)">
+                    <span class="signer__who"><span class="av">ST</span><span><b>Sarah Taylor</b><span>Customer</span></span></span>
+                    <span class="signer__box"><svg class="sig sig--mini" data-sig="sarah" viewBox="-10.9 -38.2 142.2 54.9" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.307" d="M34.7 -24.9C35.1 -25.6 37.1 -27.8 37 -29C36.8 -30.1 35.6 -31.6 33.9 -31.8C32.2 -32.1 29.1 -31.7 26.6 -30.6C24.1 -29.5 20.6 -27.4 19 -25.4C17.4 -23.3 16.6 -20.5 16.8 -18.4C16.9 -16.2 18.9 -14.3 19.8 -12.6C20.8 -10.8 22.3 -9.5 22.2 -7.7C22.2 -5.9 21 -3.2 19.3 -1.7C17.7 -0.1 14.9 1 12.4 1.5C9.9 2.1 6.4 2.2 4.4 1.8C2.4 1.4 0.8 0 0.3 -1C-0.2 -2 0.2 -3.3 1.3 -4C2.3 -4.7 4.7 -5.3 6.6 -5.2C8.5 -5.1 11.2 -4 13 -3.4C14.7 -2.8 16.1 -1.7 17.3 -1.6C18.5 -1.5 19.4 -2.2 20.3 -3C21.3 -3.7 22.3 -5.1 23 -6.1C23.7 -7.2 24.3 -8.5 24.5 -9.3C24.8 -10 24.7 -10.6 24.6 -10.6C24.5 -10.5 24 -10 23.8 -9.2C23.6 -8.5 23.3 -7.2 23.3 -6.2C23.4 -5.1 23.6 -3.8 24.1 -3.1C24.5 -2.4 25.5 -1.9 26.2 -1.9C26.9 -1.9 27.4 -2.5 28.1 -3.3C28.8 -4 29.7 -5.4 30.4 -6.5C31.1 -7.5 31.8 -8.9 32.3 -9.6C32.8 -10.4 33.1 -11 33.4 -11C33.6 -11 33.6 -10.4 33.6 -9.7C33.6 -9 33.5 -7.6 33.5 -6.6C33.5 -5.5 33.5 -4.2 33.7 -3.5C34 -2.7 34.1 -2.2 34.8 -2.2C35.5 -2.3 36.9 -2.9 37.9 -3.8C38.9 -4.6 40.1 -6.2 40.8 -7.4C41.6 -8.6 42.2 -10.1 42.4 -10.9C42.7 -11.8 42.6 -12.4 42.5 -12.4C42.3 -12.4 41.8 -11.8 41.6 -10.9C41.3 -10.1 40.9 -8.6 40.9 -7.4C40.9 -6.2 41.1 -4.7 41.6 -3.9C42 -3.1 42.6 -2.2 43.7 -2.5C44.9 -2.9 46.8 -4.1 48.4 -6.1C50 -8.1 52 -11.8 53.3 -14.6C54.6 -17.4 55.7 -21 56.2 -22.9C56.6 -24.9 56.5 -26.4 56 -26.4C55.6 -26.4 54.5 -24.8 53.7 -22.9C52.9 -20.9 51.7 -17.3 51.2 -14.5C50.7 -11.7 50.4 -8.1 50.7 -6.2C51 -4.3 52.2 -3.1 53.2 -2.9C54.2 -2.6 55.6 -4.1 56.8 -5C58.1 -5.8 60.1 -7.5 60.8 -8.1"/><path pathLength="1" style="--o:0.344;--l:0.048" d="M66.9 -27.1C68.4 -27.6 73 -29.9 75.8 -30.3C78.6 -30.8 80.8 -29.4 83.5 -29.6C86.2 -29.9 89.3 -31.1 92.1 -31.9C95 -32.7 99.3 -33.8 100.8 -34.2"/><path pathLength="1" style="--o:0.43;--l:0.57" d="M82.8 -30.6C82 -28.9 79.4 -23.9 77.6 -20.5C75.9 -17.2 74 -13.3 72.4 -10.4C70.8 -7.6 69.7 -5.1 68.2 -3.4C66.6 -1.7 64.4 -0.4 63.2 -0.2C62 0 60.6 -1.5 60.9 -2.1C61.1 -2.8 62.9 -4 64.5 -4.2C66.1 -4.5 68.7 -3.3 70.2 -3.4C71.6 -3.6 72.3 -4.1 73.3 -4.9C74.3 -5.7 75.4 -7.1 76.1 -8.2C76.8 -9.3 77.3 -10.7 77.6 -11.4C77.8 -12.2 77.7 -12.7 77.5 -12.7C77.3 -12.7 76.8 -12.1 76.6 -11.4C76.3 -10.6 76 -9.2 76 -8.2C76 -7.1 76.2 -5.7 76.7 -5C77.2 -4.3 78.3 -3.7 79 -3.8C79.6 -3.8 80.1 -4.5 80.8 -5.4C81.4 -6.3 82.3 -7.9 83.1 -9.2C83.8 -10.5 84.6 -12.2 85.1 -13.1C85.7 -14 86.1 -14.7 86.3 -14.7C86.5 -14.7 86.5 -14 86.5 -13.1C86.4 -12.2 86.2 -10.6 86.1 -9.3C86 -8.1 85.9 -6.4 86 -5.6C86.1 -4.7 87 -4.7 86.8 -4C86.5 -3.4 85.1 -3 84.4 -1.6C83.6 -0.3 82.7 2.2 82.3 4.1C82 5.9 81.9 8.4 82.2 9.7C82.6 11 83.6 11.9 84.6 11.9C85.7 11.9 87.3 10.8 88.5 9.4C89.8 8.1 91.3 5.6 92.1 3.7C93 1.8 93.6 -0.6 93.7 -1.9C93.8 -3.3 92.1 -3.2 92.8 -4.2C93.4 -5.3 96 -6.1 97.7 -8.4C99.3 -10.7 101.5 -14.9 102.9 -18.2C104.3 -21.4 105.6 -25.6 106.2 -27.9C106.7 -30.2 106.6 -31.9 106.1 -31.9C105.7 -31.8 104.5 -30.1 103.6 -27.8C102.6 -25.5 101.2 -21.3 100.6 -18.1C99.9 -14.9 99.4 -10.7 99.6 -8.5C99.9 -6.2 101 -4.9 101.9 -4.6C102.8 -4.2 104.1 -5.3 105.1 -6.1C106.1 -7 107.2 -8.5 107.9 -9.7C108.7 -10.9 109.2 -12.4 109.5 -13.2C109.7 -14 109.6 -14.7 109.4 -14.7C109.2 -14.6 108.7 -14 108.4 -13.2C108.1 -12.3 107.7 -10.8 107.7 -9.7C107.6 -8.5 107.8 -7 108.3 -6.2C108.7 -5.4 109.8 -4.8 110.5 -4.9C111.1 -4.9 111.6 -5.6 112.3 -6.5C112.9 -7.4 113.8 -9 114.5 -10.3C115.2 -11.6 116 -13.2 116.5 -14.1C117 -15 117.3 -15.7 117.5 -15.7C117.7 -15.7 117.6 -15 117.5 -14.1C117.4 -13.3 117.2 -11.6 117 -10.4C116.9 -9.1 116.8 -7.5 116.9 -6.6C117 -5.8 116.9 -4.8 117.7 -5.1C118.5 -5.4 120 -7.3 121.6 -8.2C123.2 -9.1 126.4 -10.7 127.3 -10.4C128.2 -10.1 128.3 -8.3 127 -6.4C125.8 -4.6 124 -1.5 119.8 0.8C115.6 3 110.8 5.5 101.8 7.3C92.9 9.1 77.8 10.6 65.9 11.5C54.1 12.4 41.7 12.7 30.7 12.8C19.8 12.8 6.4 12.5 0.2 11.9C-6.1 11.3 -6.1 9.9 -6.9 9.1C-7.6 8.3 -6.6 7.3 -4.2 7.1C-1.9 6.8 5.5 7.6 7.4 7.7"/></g></svg></span>
+                    <span class="signer__state" data-signer-state><span>Waiting</span><span>Signed</span></span>
+                  </div>
+                  <div class="signer" data-signer style="--c: var(--qc-sky)">
+                    <span class="signer__who"><span class="av">MC</span><span><b>Michael Chen</b><span>Internal approver</span></span></span>
+                    <span class="signer__box"><svg class="sig sig--mini" data-sig="chen" viewBox="-4.7 -33.6 103.8 46.6" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.271" d="M-0.3 1C0.6 -0.8 3 -6.2 5 -10.1C7 -13.9 9.7 -19 11.6 -22.1C13.6 -25.3 15.8 -28.9 16.7 -29.2C17.6 -29.6 17.5 -26.8 17.2 -24.3C17 -21.8 15.7 -17 15.2 -14.3C14.7 -11.7 13.8 -8 14.4 -8.4C15 -8.7 16.9 -13.2 18.8 -16.4C20.8 -19.6 24.3 -25.3 26.1 -27.5C27.9 -29.7 29.4 -30.8 29.7 -29.6C30 -28.5 29.1 -24.2 28 -20.7C27 -17.2 24.6 -12 23.4 -8.6C22.2 -5.3 20.8 -1.4 21 -0.6C21.3 0.2 24.3 -3.2 24.9 -3.7"/><path pathLength="1" style="--o:0.307;--l:0.009" d="M29.3 -1.9C29.5 -2 30.4 -2.6 30.7 -2.5C30.9 -2.4 31 -1.8 30.8 -1.5C30.6 -1.3 29.8 -1.2 29.7 -1.1"/><path pathLength="1" style="--o:0.351;--l:0.396" d="M57.2 -25.5C56.7 -26.1 55.9 -28.9 54.4 -29.4C52.9 -29.8 50.3 -29.6 48.1 -28.2C45.9 -26.8 43 -23.9 41 -21C39 -18.2 36.9 -14 36 -11C35.1 -8 34.8 -4.8 35.6 -3C36.4 -1.3 38.7 -0.2 40.7 -0.2C42.7 -0.3 45.9 -2.5 47.6 -3.4C49.4 -4.3 49.9 -4.6 51.2 -5.5C52.5 -6.4 54 -7 55.5 -8.8C56.9 -10.7 58.7 -14.1 59.8 -16.7C61 -19.3 62 -22.6 62.4 -24.4C62.8 -26.3 62.7 -27.6 62.3 -27.6C62 -27.6 61 -26.2 60.3 -24.4C59.6 -22.5 58.6 -19.2 58.2 -16.6C57.8 -14 57.6 -10.7 57.9 -8.9C58.2 -7.1 59.4 -6.1 60.3 -5.8C61.1 -5.5 62.2 -6.4 63.1 -7.2C64 -8 64.9 -9.4 65.6 -10.4C66.2 -11.5 66.7 -12.9 66.9 -13.7C67.1 -14.4 67 -15 66.8 -15C66.6 -15 66.1 -14.4 65.9 -13.6C65.6 -12.9 65.3 -11.5 65.3 -10.4C65.2 -9.4 65.4 -8 65.8 -7.3C66.3 -6.5 67.2 -6 67.9 -6C68.5 -6 69 -6.6 69.7 -7.4C70.4 -8.1 71.2 -9.5 71.9 -10.6C72.6 -11.7 73.4 -13 73.9 -13.8C74.4 -14.6 74.9 -15.1 75.2 -15.1C75.4 -15.1 75.5 -14.6 75.6 -13.8C75.7 -13.1 75.6 -11.7 75.7 -10.7C75.8 -9.6 75.8 -8.3 76 -7.6C76.2 -6.8 76.2 -6.3 77.1 -6.3C78 -6.3 79.4 -6.5 81.4 -7.4C83.3 -8.3 86.3 -10 88.6 -11.6C90.8 -13.1 94 -15.9 95.1 -16.7"/><path pathLength="1" style="--o:0.782;--l:0.218" d="M-0.7 8.9C2.4 8.5 9.7 7.1 17.9 6.4C26.1 5.7 38.1 5.1 48.2 4.5C58.3 3.9 70.9 3.5 78.4 2.6C85.9 1.7 90.8 -0.2 93.3 -0.8"/></g></svg></span>
+                    <span class="signer__state" data-signer-state><span>Waiting</span><span>Signed</span></span>
+                  </div>
+                  <div class="signer" data-signer style="--c: var(--qc-mint)">
+                    <span class="signer__who"><span class="av">JW</span><span><b>James Wilson</b><span>Supplier</span></span></span>
+                    <span class="signer__box"><svg class="sig sig--mini" data-sig="wilson" viewBox="-7.3 -35.3 169.8 54.3" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.363" d="M12 -20.1C13.4 -21.3 17.3 -25.7 20.1 -27.2C22.9 -28.8 26.8 -29.5 28.7 -29.4C30.7 -29.3 32.4 -28.3 31.8 -26.5C31.3 -24.6 27.7 -21.8 25.4 -18.4C23.1 -15 20.3 -10.3 17.8 -6.3C15.3 -2.3 12.7 2.4 10.2 5.8C7.7 9.1 4.9 12.3 2.8 13.9C0.7 15.4 -1.5 15.4 -2.5 15C-3.5 14.5 -4.3 12.7 -3.3 11C-2.3 9.3 0.8 6.6 3.5 4.9C6.2 3.2 10.3 1.6 12.7 0.7C15.1 -0.1 16.5 0.2 18 -0.4C19.5 -0.9 20.5 -1.8 21.6 -2.7C22.6 -3.6 23.7 -4.8 24.3 -5.9C25 -6.9 25.5 -8.2 25.6 -9C25.8 -9.7 25.6 -10.3 25.3 -10.2C25.1 -10.2 24.6 -9.7 24.3 -8.9C24 -8.2 23.7 -6.9 23.7 -5.8C23.8 -4.8 24 -3.5 24.6 -2.8C25.2 -2 26.4 -1.5 27.1 -1.5C27.8 -1.6 28.3 -2.2 29 -3.1C29.7 -4 30.6 -5.7 31.3 -7C32 -8.2 32.8 -9.9 33.4 -10.8C33.9 -11.7 34.4 -12.3 34.6 -12.4C34.9 -12.4 34.9 -11.7 34.9 -10.8C34.9 -9.9 34.7 -8.3 34.7 -7C34.6 -5.8 34.6 -4.1 34.7 -3.3C34.9 -2.4 34.9 -1.7 35.7 -1.7C36.4 -1.7 38 -2.4 39 -3.2C40.1 -4.1 41.2 -5.6 41.9 -6.8C42.6 -7.9 43.1 -9.5 43.3 -10.3C43.4 -11.1 43.2 -11.7 42.9 -11.7C42.6 -11.7 42 -11.1 41.7 -10.2C41.3 -9.4 40.9 -7.9 40.9 -6.7C40.9 -5.6 41.1 -4.1 41.7 -3.3C42.2 -2.5 43.4 -1.9 44.2 -1.9C45 -1.9 45.8 -2.5 46.6 -3.3C47.4 -4.1 48.3 -5.6 49 -6.7C49.7 -7.9 50.3 -9.3 50.7 -10.1C51.1 -10.9 51.2 -11.5 51.2 -11.5C51.3 -11.5 51 -10.9 50.9 -10.1C50.8 -9.3 50.6 -7.9 50.6 -6.8C50.6 -5.6 50.7 -4.2 51 -3.4C51.3 -2.6 52.3 -2.3 52.5 -2"/><path pathLength="1" style="--o:0.4;--l:0.556" d="M68.3 -28.2C67.9 -26 66.5 -19.7 65.4 -15.2C64.4 -10.7 61.5 -1.6 62.2 -1.2C63 -0.9 67.7 -10.1 69.8 -13.3C72 -16.5 74.4 -20.9 74.9 -20.4C75.5 -19.9 73.4 -13.6 72.9 -10.4C72.5 -7.2 70.9 -0.8 72.2 -1.4C73.6 -2.1 78.3 -10.2 81.1 -14.5C83.9 -18.9 87.4 -25.6 89 -27.6C90.6 -29.6 91.4 -29 90.7 -26.7C90 -24.3 86.1 -17.1 84.8 -13.6C83.6 -10.1 83.3 -7.3 83.4 -5.6C83.6 -4 85.2 -3.8 85.8 -3.7C86.5 -3.6 86.8 -4.2 87.3 -4.9C87.9 -5.6 88.6 -6.8 89.1 -7.8C89.7 -8.7 90.3 -10 90.8 -10.7C91.2 -11.3 91.5 -11.8 91.7 -11.8C91.9 -11.8 91.9 -11.3 92 -10.7C92 -10 91.9 -8.8 91.9 -7.8C91.9 -6.9 91.8 -5.7 92 -5C92.1 -4.3 91.8 -3.4 92.7 -3.8C93.6 -4.3 95.7 -5.6 97.3 -7.9C98.9 -10.2 101 -14.4 102.3 -17.6C103.6 -20.9 104.9 -25 105.4 -27.3C105.9 -29.6 105.8 -31.3 105.5 -31.3C105.1 -31.3 104 -29.5 103.1 -27.3C102.3 -25 101 -20.8 100.4 -17.6C99.8 -14.4 99.3 -10.2 99.6 -8C99.8 -5.7 101 -4.4 101.8 -4C102.5 -3.6 103.3 -4.7 104.2 -5.6C105 -6.5 106 -8.1 106.7 -9.4C107.4 -10.6 108.1 -12.2 108.5 -13.1C108.9 -14 109.1 -14.6 109.1 -14.6C109.2 -14.6 108.9 -14 108.8 -13.1C108.7 -12.2 108.4 -10.6 108.4 -9.4C108.4 -8.2 108.4 -6.6 108.7 -5.7C109 -4.8 109.4 -4.2 110.1 -4.2C110.9 -4.2 112.2 -4.8 113.1 -5.6C114.1 -6.4 115.1 -7.8 115.8 -8.9C116.4 -10 116.9 -11.4 117.2 -12.1C117.4 -12.9 117.2 -13.5 117.1 -13.5C116.9 -13.4 116.4 -12.9 116.2 -12.1C116 -11.3 115.6 -9.9 115.7 -8.9C115.7 -7.8 115.9 -6.4 116.4 -5.7C116.8 -4.9 117.8 -4.3 118.5 -4.4C119.2 -4.4 119.7 -5 120.4 -5.9C121.1 -6.8 122.1 -8.4 122.8 -9.6C123.6 -10.9 124.4 -12.5 124.9 -13.4C125.5 -14.2 126 -14.9 126.2 -14.9C126.5 -14.9 126.6 -14.3 126.6 -13.4C126.7 -12.5 126.5 -10.9 126.5 -9.7C126.6 -8.5 126.5 -6.9 126.7 -6C126.9 -5.2 126.3 -4.1 127.7 -4.5C129.1 -5 131.3 -6.6 134.9 -8.7C138.5 -10.7 145.4 -14.8 149.3 -16.9C153.2 -19 157 -20.4 158.5 -21.1"/><path pathLength="1" style="--o:0.993;--l:0.007" d="M96.7 -16.8C97 -17 97.8 -17.9 98 -17.9C98.3 -17.9 98.4 -17.1 98.2 -16.9C98.1 -16.6 97.3 -16.5 97.1 -16.5"/></g></svg></span>
+                    <span class="signer__state" data-signer-state><span>Waiting</span><span>Signed</span></span>
+                  </div>
+                  <div class="signers__bar"><i data-signers-bar></i></div>
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Multiple signers, one document</h3>
+                <p>Assign signatures to customers, suppliers and internal approvers, each with as many signing locations as you need.</p>
+              </div>
+            </article>
+
+            <!-- Draw / Type / Upload -->
+            <article class="tile tile--tabs" data-reveal data-tile="tabs">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="pad">
+                  <span class="pad__title">Create your signature</span>
+                  <span class="pad__tabs">
+                    <span class="pad__tab is-on" data-pad-tab>Draw</span><span class="pad__tab" data-pad-tab>Type</span
+                    ><span class="pad__tab" data-pad-tab>Upload</span><i class="pad__ind" data-pad-ind></i>
+                  </span>
+                  <span class="pad__area">
+                    <span class="pad__pane pad__pane--draw" data-pad-pane><svg class="sig sig--pad" data-sig="wilson" viewBox="-7.3 -35.3 169.8 54.3" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.363" d="M12 -20.1C13.4 -21.3 17.3 -25.7 20.1 -27.2C22.9 -28.8 26.8 -29.5 28.7 -29.4C30.7 -29.3 32.4 -28.3 31.8 -26.5C31.3 -24.6 27.7 -21.8 25.4 -18.4C23.1 -15 20.3 -10.3 17.8 -6.3C15.3 -2.3 12.7 2.4 10.2 5.8C7.7 9.1 4.9 12.3 2.8 13.9C0.7 15.4 -1.5 15.4 -2.5 15C-3.5 14.5 -4.3 12.7 -3.3 11C-2.3 9.3 0.8 6.6 3.5 4.9C6.2 3.2 10.3 1.6 12.7 0.7C15.1 -0.1 16.5 0.2 18 -0.4C19.5 -0.9 20.5 -1.8 21.6 -2.7C22.6 -3.6 23.7 -4.8 24.3 -5.9C25 -6.9 25.5 -8.2 25.6 -9C25.8 -9.7 25.6 -10.3 25.3 -10.2C25.1 -10.2 24.6 -9.7 24.3 -8.9C24 -8.2 23.7 -6.9 23.7 -5.8C23.8 -4.8 24 -3.5 24.6 -2.8C25.2 -2 26.4 -1.5 27.1 -1.5C27.8 -1.6 28.3 -2.2 29 -3.1C29.7 -4 30.6 -5.7 31.3 -7C32 -8.2 32.8 -9.9 33.4 -10.8C33.9 -11.7 34.4 -12.3 34.6 -12.4C34.9 -12.4 34.9 -11.7 34.9 -10.8C34.9 -9.9 34.7 -8.3 34.7 -7C34.6 -5.8 34.6 -4.1 34.7 -3.3C34.9 -2.4 34.9 -1.7 35.7 -1.7C36.4 -1.7 38 -2.4 39 -3.2C40.1 -4.1 41.2 -5.6 41.9 -6.8C42.6 -7.9 43.1 -9.5 43.3 -10.3C43.4 -11.1 43.2 -11.7 42.9 -11.7C42.6 -11.7 42 -11.1 41.7 -10.2C41.3 -9.4 40.9 -7.9 40.9 -6.7C40.9 -5.6 41.1 -4.1 41.7 -3.3C42.2 -2.5 43.4 -1.9 44.2 -1.9C45 -1.9 45.8 -2.5 46.6 -3.3C47.4 -4.1 48.3 -5.6 49 -6.7C49.7 -7.9 50.3 -9.3 50.7 -10.1C51.1 -10.9 51.2 -11.5 51.2 -11.5C51.3 -11.5 51 -10.9 50.9 -10.1C50.8 -9.3 50.6 -7.9 50.6 -6.8C50.6 -5.6 50.7 -4.2 51 -3.4C51.3 -2.6 52.3 -2.3 52.5 -2"/><path pathLength="1" style="--o:0.4;--l:0.556" d="M68.3 -28.2C67.9 -26 66.5 -19.7 65.4 -15.2C64.4 -10.7 61.5 -1.6 62.2 -1.2C63 -0.9 67.7 -10.1 69.8 -13.3C72 -16.5 74.4 -20.9 74.9 -20.4C75.5 -19.9 73.4 -13.6 72.9 -10.4C72.5 -7.2 70.9 -0.8 72.2 -1.4C73.6 -2.1 78.3 -10.2 81.1 -14.5C83.9 -18.9 87.4 -25.6 89 -27.6C90.6 -29.6 91.4 -29 90.7 -26.7C90 -24.3 86.1 -17.1 84.8 -13.6C83.6 -10.1 83.3 -7.3 83.4 -5.6C83.6 -4 85.2 -3.8 85.8 -3.7C86.5 -3.6 86.8 -4.2 87.3 -4.9C87.9 -5.6 88.6 -6.8 89.1 -7.8C89.7 -8.7 90.3 -10 90.8 -10.7C91.2 -11.3 91.5 -11.8 91.7 -11.8C91.9 -11.8 91.9 -11.3 92 -10.7C92 -10 91.9 -8.8 91.9 -7.8C91.9 -6.9 91.8 -5.7 92 -5C92.1 -4.3 91.8 -3.4 92.7 -3.8C93.6 -4.3 95.7 -5.6 97.3 -7.9C98.9 -10.2 101 -14.4 102.3 -17.6C103.6 -20.9 104.9 -25 105.4 -27.3C105.9 -29.6 105.8 -31.3 105.5 -31.3C105.1 -31.3 104 -29.5 103.1 -27.3C102.3 -25 101 -20.8 100.4 -17.6C99.8 -14.4 99.3 -10.2 99.6 -8C99.8 -5.7 101 -4.4 101.8 -4C102.5 -3.6 103.3 -4.7 104.2 -5.6C105 -6.5 106 -8.1 106.7 -9.4C107.4 -10.6 108.1 -12.2 108.5 -13.1C108.9 -14 109.1 -14.6 109.1 -14.6C109.2 -14.6 108.9 -14 108.8 -13.1C108.7 -12.2 108.4 -10.6 108.4 -9.4C108.4 -8.2 108.4 -6.6 108.7 -5.7C109 -4.8 109.4 -4.2 110.1 -4.2C110.9 -4.2 112.2 -4.8 113.1 -5.6C114.1 -6.4 115.1 -7.8 115.8 -8.9C116.4 -10 116.9 -11.4 117.2 -12.1C117.4 -12.9 117.2 -13.5 117.1 -13.5C116.9 -13.4 116.4 -12.9 116.2 -12.1C116 -11.3 115.6 -9.9 115.7 -8.9C115.7 -7.8 115.9 -6.4 116.4 -5.7C116.8 -4.9 117.8 -4.3 118.5 -4.4C119.2 -4.4 119.7 -5 120.4 -5.9C121.1 -6.8 122.1 -8.4 122.8 -9.6C123.6 -10.9 124.4 -12.5 124.9 -13.4C125.5 -14.2 126 -14.9 126.2 -14.9C126.5 -14.9 126.6 -14.3 126.6 -13.4C126.7 -12.5 126.5 -10.9 126.5 -9.7C126.6 -8.5 126.5 -6.9 126.7 -6C126.9 -5.2 126.3 -4.1 127.7 -4.5C129.1 -5 131.3 -6.6 134.9 -8.7C138.5 -10.7 145.4 -14.8 149.3 -16.9C153.2 -19 157 -20.4 158.5 -21.1"/><path pathLength="1" style="--o:0.993;--l:0.007" d="M96.7 -16.8C97 -17 97.8 -17.9 98 -17.9C98.3 -17.9 98.4 -17.1 98.2 -16.9C98.1 -16.6 97.3 -16.5 97.1 -16.5"/></g></svg></span>
+                    <span class="pad__pane pad__pane--type" data-pad-pane><span class="pad__typed">James Wilson</span></span>
+                    <span class="pad__pane pad__pane--up" data-pad-pane
+                      ><span class="pad__upfile"><span class="pad__upic">PNG</span><span><b>signature.png</b><i class="pad__prog"><i data-pad-prog></i></i></span></span
+                    ></span>
+                    <span class="pad__x">&times;</span>
+                    <span class="pad__base"></span>
+                  </span>
+                  <span class="pad__foot"><span class="pad__inks"><i></i><i></i><i></i></span><span class="pad__btn">Adopt and sign</span></span>
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Draw it, type it or upload it</h3>
+                <p>Recipients sign on any device without printing, scanning or leaving your document.</p>
+              </div>
+            </article>
+
+            <!-- One-time passcode -->
+            <article class="tile tile--otp" data-reveal data-tile="otp">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="otp">
+                  <span class="otp__title">Verify it&rsquo;s you</span>
+                  <span class="otp__sub">Code sent to s&bull;&bull;&bull;&bull;@bluehorizon.com</span>
+                  <span class="otp__digits">
+                    <span class="otp__d" data-otp>4</span><span class="otp__d" data-otp>8</span><span class="otp__d" data-otp>2</span
+                    ><span class="otp__d" data-otp>9</span><span class="otp__d" data-otp>1</span><span class="otp__d" data-otp>6</span>
+                  </span>
+                  <span class="otp__ok" data-otp-ok
+                    ><svg viewBox="0 0 16 16" width="14" height="14"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg
+                    >Verified</span
+                  >
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Optional one-time passcode</h3>
+                <p>Verify each signatory with a code before they sign.</p>
+              </div>
+            </article>
+
+            <!-- Certificate of authenticity -->
+            <article class="tile tile--cert" data-reveal data-tile="cert">
+              <div class="tile__visual" aria-hidden="true">
+                <div class="cert">
+                  <div class="cert__card">
+                    <span class="cert__top">
+                      <span><b>Certificate of authenticity</b><span>Service Agreement · SA-2041</span></span>
+                      <svg class="cert__seal" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" pathLength="1" class="cert__ring" data-cert-ring />
+                        <path d="M16 24.5l5.5 5.5 11-12" pathLength="1" class="cert__tick" data-cert-tick />
+                      </svg>
+                    </span>
+                    <span class="cert__row" data-cert-row
+                      ><span class="av av--sm" style="--c: var(--qc-violet)">ST</span><b>Sarah Taylor</b><span>Signed</span><time>10:42</time></span
+                    >
+                    <span class="cert__row" data-cert-row
+                      ><span class="av av--sm" style="--c: var(--qc-sky)">MC</span><b>Michael Chen</b><span>Signed</span><time>11:05</time></span
+                    >
+                    <span class="cert__row" data-cert-row
+                      ><span class="av av--sm" style="--c: var(--qc-mint)">JW</span><b>James Wilson</b><span>Signed</span><time>11:18</time></span
+                    >
+                    <span class="cert__hash" data-cert-hash>Document ID 7f3a·91c2·e04b·5d68</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tile__text">
+                <h3>Certificate of authenticity</h3>
+                <p>Every completed e-signature document comes with a certificate and an audit trail of the signing.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="es-mid" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="bento"
+              >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+            >
+            <a class="es-link" href="https://www.quote.cloud/electronic-signature-software-solution">Explore every e-signature feature <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── One app vs two ───────── -->
+      <section class="es-flow" aria-labelledby="flow-title">
+        <div class="qc-container">
+          <header class="es-head" data-reveal>
+            <h2 id="flow-title">Create it, send it, sign it. <span class="t-em">No extra subscription.</span></h2>
+            <p>No exporting, re-uploading into a second signing platform or keeping another version of the same file.</p>
+          </header>
+
+          <div class="flow" data-flow data-reveal>
+            <div class="lane lane--two" style="--n: 6" data-lane>
+              <span class="lane__label">Document app + separate signing app<span class="lane__meta">6 steps · 2 apps</span></span>
+              <div class="lane__rail">
+                <span class="lane__track" aria-hidden="true"><i class="lane__fill" data-lane-fill></i></span>
+                <ol class="lane__steps">
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Create</li>
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Export PDF</li>
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Upload to signing app</li>
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Manage another version</li>
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Send</li>
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Signed</li>
+                </ol>
+              </div>
+            </div>
+            <div class="lane lane--qc" style="--n: 3" data-lane>
+              <span class="lane__label">QuoteCloud<span class="lane__meta">3 steps · 1 app</span></span>
+              <div class="lane__rail">
+                <span class="lane__track" aria-hidden="true"><i class="lane__fill" data-lane-fill></i></span>
+                <ol class="lane__steps">
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Create</li>
+                  <li><i class="pip" aria-hidden="true"><i></i></i>Send</li>
+                  <li class="lane__done"><i class="pip" aria-hidden="true"><i></i></i>Signed</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── More than e-signature ───────── -->
+      <section class="es-more" aria-labelledby="more-title">
+        <div class="qc-container">
+          <header class="es-head" data-reveal>
+            <h2 id="more-title">More than <span class="t-em"><span class="es-nw">e-signature</span> software.</span></h2>
+            <p>Pricing, forms, approvals, payment and signatures can all be part of one customer interaction, from creation through to completion.</p>
+          </header>
+
+          <div class="more" data-reveal-stagger="80">
+            <a class="mcard" href="https://www.quote.cloud/cpq-software" data-reveal>
+              <span class="mcard__ui" aria-hidden="true">
+                <span class="mt">
+                  <span class="mt__r"><span>Strategy workshop</span><b>$2,400</b></span>
+                  <span class="mt__r mt__r--opt"><span><i class="cb is-on"></i>Training add-on</span><b>$900</b></span>
+                  <span class="mt__r mt__r--tot"><span>Total</span><b>$3,300</b></span>
+                </span>
+              </span>
+              <h3 class="mcard__t">Pricing tables</h3>
+              <span class="mcard__p">Options and optional items your customer can select before signing.</span>
+              <span class="mcard__go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="mcard" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud" data-reveal>
+              <span class="mcard__ui" aria-hidden="true">
+                <span class="mf">
+                  <span class="mf__l">Company</span><span class="mf__i">Blue Horizon Ltd<i class="mf__caret"></i></span>
+                  <span class="mf__l">Start date</span><span class="mf__i">01 / 11 / 2026</span>
+                </span>
+              </span>
+              <h3 class="mcard__t">Forms &amp; input fields</h3>
+              <span class="mcard__p">Collect customer information in the same document they sign.</span>
+              <span class="mcard__go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="mcard" href="https://www.quote.cloud/collaboration" data-reveal>
+              <span class="mcard__ui" aria-hidden="true">
+                <span class="mc">
+                  <span class="mc__bubble"><span class="av av--sm" style="--c: var(--qc-sky)">MC</span>Approved, ready to send.</span>
+                  <span class="mc__cursor" style="--c: var(--qc-violet)"><svg viewBox="0 0 12 14" width="12" height="14"><path d="M1 1l10 6-4.5 1.2L4.2 13z" fill="currentColor" /></svg><i>Sarah</i></span>
+                </span>
+              </span>
+              <h3 class="mcard__t">Collaboration &amp; approvals</h3>
+              <span class="mcard__p">Work on documents together and collect internal approvals before you send.</span>
+              <span class="mcard__go" aria-hidden="true">&rarr;</span>
+            </a>
+            <a class="mcard" href="https://www.quote.cloud/stripe-integration-with-quotecloud" data-reveal>
+              <span class="mcard__ui" aria-hidden="true">
+                <span class="mp">
+                  <span class="mp__logos"
+                    ><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" /><img
+                      src="/assets/integrations/paypal.png"
+                      width="792"
+                      height="790"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                  /></span>
+                  <span class="mp__btn">Pay $3,300</span>
+                </span>
+              </span>
+              <h3 class="mcard__t">Pay online</h3>
+              <span class="mcard__p">Customers can pay with Stripe or PayPal in the same document.</span>
+              <span class="mcard__go" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+          <p class="es-more__foot" data-reveal>
+            <a class="es-link" href="https://www.quote.cloud/product-overview">See the whole QuoteCloud platform <span aria-hidden="true">&rarr;</span></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────── Trust + proof ───────── -->
+      <section class="es-trust" aria-labelledby="trust-title">
+        <div class="qc-container es-trust__grid">
+          <div class="es-trust__copy" data-reveal>
+            <h2 id="trust-title">Legally binding, <span class="t-em">secure by design.</span></h2>
+            <p>eIDAS-compliant electronic signatures with 256-bit encryption, AWS hosting and a full audit trail.</p>
+            <ul class="badges">
+              <li><img src="/assets/compliance/eidas.svg" width="91" height="90" alt="" loading="lazy" decoding="async" /><span>eIDAS compliant</span></li>
+              <li><img src="/assets/compliance/encryption-256.png" width="320" height="305" alt="" loading="lazy" decoding="async" /><span>256-bit encryption</span></li>
+              <li><img src="/assets/compliance/aws.svg" width="91" height="90" alt="" loading="lazy" decoding="async" /><span>Hosted on AWS</span></li>
+              <li><img src="/assets/compliance/gdpr.png" width="319" height="320" alt="" loading="lazy" decoding="async" /><span>GDPR</span></li>
+            </ul>
+          </div>
+          <div class="proof" data-reveal-stagger="90">
+            <div class="proof__card" data-reveal>
+              <span class="proof__num"><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></span>
+              <span class="stars" style="--r: 4.2" aria-hidden="true"></span>
+              <span class="proof__src">Rated on Capterra</span>
+            </div>
+            <div class="proof__card" data-reveal>
+              <span class="proof__num"><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></span>
+              <span class="stars" style="--r: 4.2" aria-hidden="true"></span>
+              <span class="proof__src">Rated on Software Advice</span>
+            </div>
+            <div class="proof__card" data-reveal>
+              <span class="proof__num"><span data-count-to="2013" data-count-format="plain">2013</span></span>
+              <span class="proof__src">Helping businesses since</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-esign -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="es-close" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="es-close__panel" data-close>
+            <div class="es-close__copy">
+              <h2 id="close-title">Your next agreement, <span class="t-em">signed today.</span></h2>
+              <p>Free e-signatures in every plan. Start your 14-day trial, no credit card required.</p>
+              <div class="es-hero__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing"
+                  >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+                >
+                <a class="qc-btn qc-btn--ghost es-close__demo qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo"
+                  >Book a demo</a
+                >
+              </div>
+            </div>
+            <div class="es-close__sign" aria-hidden="true">
+              <span class="es-close__ink"><svg class="sig sig--close" data-sig="sarah" viewBox="-10.9 -38.2 142.2 54.9" focusable="false" aria-hidden="true"><g class="sig__ink"><path pathLength="1" style="--o:0;--l:0.307" d="M34.7 -24.9C35.1 -25.6 37.1 -27.8 37 -29C36.8 -30.1 35.6 -31.6 33.9 -31.8C32.2 -32.1 29.1 -31.7 26.6 -30.6C24.1 -29.5 20.6 -27.4 19 -25.4C17.4 -23.3 16.6 -20.5 16.8 -18.4C16.9 -16.2 18.9 -14.3 19.8 -12.6C20.8 -10.8 22.3 -9.5 22.2 -7.7C22.2 -5.9 21 -3.2 19.3 -1.7C17.7 -0.1 14.9 1 12.4 1.5C9.9 2.1 6.4 2.2 4.4 1.8C2.4 1.4 0.8 0 0.3 -1C-0.2 -2 0.2 -3.3 1.3 -4C2.3 -4.7 4.7 -5.3 6.6 -5.2C8.5 -5.1 11.2 -4 13 -3.4C14.7 -2.8 16.1 -1.7 17.3 -1.6C18.5 -1.5 19.4 -2.2 20.3 -3C21.3 -3.7 22.3 -5.1 23 -6.1C23.7 -7.2 24.3 -8.5 24.5 -9.3C24.8 -10 24.7 -10.6 24.6 -10.6C24.5 -10.5 24 -10 23.8 -9.2C23.6 -8.5 23.3 -7.2 23.3 -6.2C23.4 -5.1 23.6 -3.8 24.1 -3.1C24.5 -2.4 25.5 -1.9 26.2 -1.9C26.9 -1.9 27.4 -2.5 28.1 -3.3C28.8 -4 29.7 -5.4 30.4 -6.5C31.1 -7.5 31.8 -8.9 32.3 -9.6C32.8 -10.4 33.1 -11 33.4 -11C33.6 -11 33.6 -10.4 33.6 -9.7C33.6 -9 33.5 -7.6 33.5 -6.6C33.5 -5.5 33.5 -4.2 33.7 -3.5C34 -2.7 34.1 -2.2 34.8 -2.2C35.5 -2.3 36.9 -2.9 37.9 -3.8C38.9 -4.6 40.1 -6.2 40.8 -7.4C41.6 -8.6 42.2 -10.1 42.4 -10.9C42.7 -11.8 42.6 -12.4 42.5 -12.4C42.3 -12.4 41.8 -11.8 41.6 -10.9C41.3 -10.1 40.9 -8.6 40.9 -7.4C40.9 -6.2 41.1 -4.7 41.6 -3.9C42 -3.1 42.6 -2.2 43.7 -2.5C44.9 -2.9 46.8 -4.1 48.4 -6.1C50 -8.1 52 -11.8 53.3 -14.6C54.6 -17.4 55.7 -21 56.2 -22.9C56.6 -24.9 56.5 -26.4 56 -26.4C55.6 -26.4 54.5 -24.8 53.7 -22.9C52.9 -20.9 51.7 -17.3 51.2 -14.5C50.7 -11.7 50.4 -8.1 50.7 -6.2C51 -4.3 52.2 -3.1 53.2 -2.9C54.2 -2.6 55.6 -4.1 56.8 -5C58.1 -5.8 60.1 -7.5 60.8 -8.1"/><path pathLength="1" style="--o:0.344;--l:0.048" d="M66.9 -27.1C68.4 -27.6 73 -29.9 75.8 -30.3C78.6 -30.8 80.8 -29.4 83.5 -29.6C86.2 -29.9 89.3 -31.1 92.1 -31.9C95 -32.7 99.3 -33.8 100.8 -34.2"/><path pathLength="1" style="--o:0.43;--l:0.57" d="M82.8 -30.6C82 -28.9 79.4 -23.9 77.6 -20.5C75.9 -17.2 74 -13.3 72.4 -10.4C70.8 -7.6 69.7 -5.1 68.2 -3.4C66.6 -1.7 64.4 -0.4 63.2 -0.2C62 0 60.6 -1.5 60.9 -2.1C61.1 -2.8 62.9 -4 64.5 -4.2C66.1 -4.5 68.7 -3.3 70.2 -3.4C71.6 -3.6 72.3 -4.1 73.3 -4.9C74.3 -5.7 75.4 -7.1 76.1 -8.2C76.8 -9.3 77.3 -10.7 77.6 -11.4C77.8 -12.2 77.7 -12.7 77.5 -12.7C77.3 -12.7 76.8 -12.1 76.6 -11.4C76.3 -10.6 76 -9.2 76 -8.2C76 -7.1 76.2 -5.7 76.7 -5C77.2 -4.3 78.3 -3.7 79 -3.8C79.6 -3.8 80.1 -4.5 80.8 -5.4C81.4 -6.3 82.3 -7.9 83.1 -9.2C83.8 -10.5 84.6 -12.2 85.1 -13.1C85.7 -14 86.1 -14.7 86.3 -14.7C86.5 -14.7 86.5 -14 86.5 -13.1C86.4 -12.2 86.2 -10.6 86.1 -9.3C86 -8.1 85.9 -6.4 86 -5.6C86.1 -4.7 87 -4.7 86.8 -4C86.5 -3.4 85.1 -3 84.4 -1.6C83.6 -0.3 82.7 2.2 82.3 4.1C82 5.9 81.9 8.4 82.2 9.7C82.6 11 83.6 11.9 84.6 11.9C85.7 11.9 87.3 10.8 88.5 9.4C89.8 8.1 91.3 5.6 92.1 3.7C93 1.8 93.6 -0.6 93.7 -1.9C93.8 -3.3 92.1 -3.2 92.8 -4.2C93.4 -5.3 96 -6.1 97.7 -8.4C99.3 -10.7 101.5 -14.9 102.9 -18.2C104.3 -21.4 105.6 -25.6 106.2 -27.9C106.7 -30.2 106.6 -31.9 106.1 -31.9C105.7 -31.8 104.5 -30.1 103.6 -27.8C102.6 -25.5 101.2 -21.3 100.6 -18.1C99.9 -14.9 99.4 -10.7 99.6 -8.5C99.9 -6.2 101 -4.9 101.9 -4.6C102.8 -4.2 104.1 -5.3 105.1 -6.1C106.1 -7 107.2 -8.5 107.9 -9.7C108.7 -10.9 109.2 -12.4 109.5 -13.2C109.7 -14 109.6 -14.7 109.4 -14.7C109.2 -14.6 108.7 -14 108.4 -13.2C108.1 -12.3 107.7 -10.8 107.7 -9.7C107.6 -8.5 107.8 -7 108.3 -6.2C108.7 -5.4 109.8 -4.8 110.5 -4.9C111.1 -4.9 111.6 -5.6 112.3 -6.5C112.9 -7.4 113.8 -9 114.5 -10.3C115.2 -11.6 116 -13.2 116.5 -14.1C117 -15 117.3 -15.7 117.5 -15.7C117.7 -15.7 117.6 -15 117.5 -14.1C117.4 -13.3 117.2 -11.6 117 -10.4C116.9 -9.1 116.8 -7.5 116.9 -6.6C117 -5.8 116.9 -4.8 117.7 -5.1C118.5 -5.4 120 -7.3 121.6 -8.2C123.2 -9.1 126.4 -10.7 127.3 -10.4C128.2 -10.1 128.3 -8.3 127 -6.4C125.8 -4.6 124 -1.5 119.8 0.8C115.6 3 110.8 5.5 101.8 7.3C92.9 9.1 77.8 10.6 65.9 11.5C54.1 12.4 41.7 12.7 30.7 12.8C19.8 12.8 6.4 12.5 0.2 11.9C-6.1 11.3 -6.1 9.9 -6.9 9.1C-7.6 8.3 -6.6 7.3 -4.2 7.1C-1.9 6.8 5.5 7.6 7.4 7.7"/></g></svg></span>
+              <span class="es-close__line"><span>&times;</span></span>
+              <span class="es-close__cap">Sign here</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

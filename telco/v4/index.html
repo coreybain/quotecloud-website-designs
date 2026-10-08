@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-telco -->
+  </head>
+  <body class="sg">
+    <!-- @include header -->
+
+    <svg class="sg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="sg-i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+      <symbol id="sg-i-fibre" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.2 3.8 8.5s-1.2 6.1-3.8 8.5c-2.6-2.4-3.8-5.2-3.8-8.5S9.4 5.9 12 3.5Z"/></g></symbol>
+      <symbol id="sg-i-voice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3.5" y="13" width="4" height="6.5" rx="1.6"/><rect x="16.5" y="13" width="4" height="6.5" rx="1.6"/></g></symbol>
+      <symbol id="sg-i-mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6.5" y="2.8" width="11" height="18.4" rx="2.6"/><path d="M10.5 18h3"/></g></symbol>
+      <symbol id="sg-i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M7.2 18.5h10a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.3 9.4 4.55 4.55 0 0 0 7.2 18.5Z"/></symbol>
+      <symbol id="sg-i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9.5a13 13 0 0 1 18 0M6 12.8a8.6 8.6 0 0 1 12 0M9 16a4.2 4.2 0 0 1 6 0"/><circle cx="12" cy="19" r="0.9" fill="currentColor"/></g></symbol>
+      <symbol id="sg-i-tools" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M14.5 6.5 17 4l3 3-2.5 2.5"/></g></symbol>
+      <symbol id="sg-i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.4"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
+      <symbol id="sg-i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+      <symbol id="sg-i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.3-4.4" stroke-linecap="round"/></g></symbol>
+      <symbol id="sg-i-trail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></g></symbol>
+      <symbol id="sg-i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+      <symbol id="sg-i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="sg-i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></g></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ═════════ HERO ═════════ -->
+      <section class="sg-hero sg-dark" aria-labelledby="sg-hero-title" data-sg-hero data-sg-live>
+        <div class="sg-hero__bg" aria-hidden="true">
+          <div class="sg-grid"></div>
+          <span class="sg-glow sg-glow--red"></span>
+          <span class="sg-glow sg-glow--violet"></span>
+          <svg class="sg-fibres" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="sg-fibre-g" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#8b7bff" stop-opacity="0" />
+                <stop offset="0.5" stop-color="#8b7bff" stop-opacity="0.5" />
+                <stop offset="1" stop-color="#ff6b66" stop-opacity="0.15" />
+              </linearGradient>
+            </defs>
+            <g class="sg-fibres__base" stroke="url(#sg-fibre-g)" fill="none" stroke-width="1">
+              <path d="M-40 640 C 320 600, 520 420, 820 430 S 1260 520, 1500 300" />
+              <path d="M-40 700 C 360 680, 600 520, 900 520 S 1280 600, 1500 420" />
+              <path d="M-40 560 C 260 520, 520 300, 860 330 S 1300 380, 1500 160" />
+              <path d="M-40 760 C 420 760, 700 640, 1000 610 S 1320 650, 1500 560" />
+            </g>
+            <g class="sg-fibres__pulse" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <path pathLength="100" d="M-40 640 C 320 600, 520 420, 820 430 S 1260 520, 1500 300" />
+              <path pathLength="100" d="M-40 700 C 360 680, 600 520, 900 520 S 1280 600, 1500 420" />
+              <path pathLength="100" d="M-40 560 C 260 520, 520 300, 860 330 S 1300 380, 1500 160" />
+              <path pathLength="100" d="M-40 760 C 420 760, 700 640, 1000 610 S 1320 650, 1500 560" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="sg-hero__inner">
+          <div class="sg-hero__copy">
+            <h1 class="sg-h1" id="sg-hero-title">Telecom quoting software for <em class="sg-em">complex deals, signed faster.</em></h1>
+            <p class="sg-lede">Price connectivity, voice, mobile and managed services, monthly and once-off, on any contract term, in one proposal your customer can sign.</p>
+            <div class="sg-ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--lg sg-btn-glass" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="sg-note">No credit card required</p>
+          </div>
+
+          <div class="sg-hero__stage" data-sg-stage>
+            <svg class="sg-topo" viewBox="0 0 560 520" aria-hidden="true" data-depth="-0.6">
+              <g class="sg-topo__links" fill="none">
+                <path d="M90 90 L280 250 L470 110" />
+                <path d="M280 250 L120 430" />
+                <path d="M280 250 L470 420" />
+                <path d="M90 90 L120 430" />
+              </g>
+              <g class="sg-topo__pulses" fill="none">
+                <path pathLength="100" d="M90 90 L280 250 L470 110" />
+                <path pathLength="100" d="M120 430 L280 250 L470 420" />
+              </g>
+              <g class="sg-topo__nodes">
+                <circle cx="90" cy="90" r="5" /><circle cx="470" cy="110" r="5" /><circle cx="120" cy="430" r="5" /><circle cx="470" cy="420" r="5" />
+                <circle class="sg-topo__core" cx="280" cy="250" r="8" />
+              </g>
+            </svg>
+
+            <article class="sg-doc sg-hero__doc" aria-label="Sample telecom quote with monthly and once-off charges" data-depth="0.35" data-sg-hero-quote>
+              <header class="sg-doc__head">
+                <div>
+                  <p class="sg-doc__kicker">Solution proposal</p>
+                  <p class="sg-doc__title">Business connectivity · 3 sites</p>
+                </div>
+                <div class="sg-terms sg-terms--mini" aria-hidden="true">
+                  <span data-t="12">12 mo</span><span data-t="24" class="is-on">24 mo</span><span data-t="36">36 mo</span>
+                </div>
+              </header>
+              <div class="sg-doc__cols" aria-hidden="true"><span>Service</span><span>Monthly</span><span>Once-off</span></div>
+              <ul class="sg-mini-rows">
+                <li><span class="sg-ico sg-ico--sky"><svg width="14" height="14"><use href="#sg-i-fibre" /></svg></span><span class="sg-mini-rows__name">Business fibre 1 Gbps <small>× 3</small></span><b data-m="1497,1347,1197">$1,347</b><b data-n="2850,1350,0">$1,350</b></li>
+                <li><span class="sg-ico sg-ico--violet"><svg width="14" height="14"><use href="#sg-i-cloud" /></svg></span><span class="sg-mini-rows__name">SD-WAN edge <small>× 3</small></span><b data-m="387,345,297">$345</b><b data-n="4350,3450,2670">$3,450</b></li>
+                <li><span class="sg-ico sg-ico--mint"><svg width="14" height="14"><use href="#sg-i-voice" /></svg></span><span class="sg-mini-rows__name">Hosted PBX <small>× 40 seats</small></span><b data-m="1120,1000,880">$1,000</b><b data-n="0,0,0">—</b></li>
+                <li><span class="sg-ico sg-ico--amber"><svg width="14" height="14"><use href="#sg-i-mobile" /></svg></span><span class="sg-mini-rows__name">5G plans + handsets <small>× 25</small></span><b data-m="1975,1725,1475">$1,725</b><b data-n="16000,5500,0">$5,500</b></li>
+                <li><span class="sg-ico sg-ico--red"><svg width="14" height="14"><use href="#sg-i-tools" /></svg></span><span class="sg-mini-rows__name">Installation &amp; setup</span><b data-m="0,0,0">—</b><b data-n="4800,3600,2400">$3,600</b></li>
+              </ul>
+              <footer class="sg-doc__totals">
+                <div><span>Monthly recurring</span><strong data-total="m">$4,417</strong></div>
+                <div><span>Once-off</span><strong data-total="n">$13,900</strong></div>
+              </footer>
+            </article>
+
+            <div class="sg-float sg-float--margin" data-depth="1.1" aria-hidden="true">
+              <span class="sg-float__ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" /><circle class="sg-float__arc" cx="18" cy="18" r="15" pathLength="100" /></svg></span>
+              <span><b>Margin 41%</b><small><svg width="12" height="12"><use href="#sg-i-lock" /></svg> Hidden from customer</small></span>
+            </div>
+            <div class="sg-float sg-float--approve" data-depth="1.5" aria-hidden="true">
+              <span class="sg-float__check"><svg width="14" height="14"><use href="#sg-i-check" /></svg></span>
+              <span><b>Discount approved</b><small>Sales Director · 2 min ago</small></span>
+            </div>
+            <div class="sg-float sg-float--sign" data-depth="0.9" aria-hidden="true">
+              <svg class="sg-float__sig" viewBox="0 0 160 48"><path pathLength="100" d="M6 34c10-14 18-26 24-24 7 3-9 30-2 30 6 0 12-22 18-22 5 0 0 16 6 16 7 0 9-12 15-12 5 0 3 10 9 10 8 0 14-14 22-14 6 0 4 8 10 8s14-6 24-10" /></svg>
+              <small><svg width="12" height="12"><use href="#sg-i-check" /></svg> Signed · eIDAS</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ COMPLEX MADE SIMPLE ═════════ -->
+      <section class="sg-build sg-dark" aria-labelledby="sg-build-title" data-sg-live>
+        <div class="sg-wire" aria-hidden="true"><span></span></div>
+        <div class="qc-container">
+          <header class="sg-head sg-head--center" data-reveal>
+            <h2 class="sg-h2" id="sg-build-title">One proposal. Every service, <em class="sg-em">priced right.</em></h2>
+            <p class="sg-lede">Connectivity, voice, mobile, cloud and managed services in one quote, with monthly and once-off totals kept apart on every contract term.</p>
+          </header>
+
+          <div class="sg-quote-wrap" data-reveal="scale">
+            <article class="sg-doc sg-quote" aria-labelledby="sg-quote-title" data-sg-quote>
+              <header class="sg-quote__head">
+                <div class="sg-quote__id">
+                  <span class="sg-quote__logo" aria-hidden="true"><img src="/assets/logos/qc-symbol-white.png" width="18" height="19" alt="" loading="lazy" decoding="async" /></span>
+                  <div>
+                    <p class="sg-doc__kicker">Quote · Business connectivity</p>
+                    <h3 class="sg-doc__title" id="sg-quote-title">Multi-site network, voice &amp; mobile</h3>
+                  </div>
+                </div>
+                <div class="sg-terms" role="radiogroup" aria-label="Contract term">
+                  <button type="button" role="radio" aria-checked="false" data-term="12">12 months</button>
+                  <button type="button" role="radio" aria-checked="true" data-term="24" class="is-on">24 months</button>
+                  <button type="button" role="radio" aria-checked="false" data-term="36">36 months</button>
+                  <span class="sg-terms__thumb" aria-hidden="true"></span>
+                </div>
+              </header>
+
+              <table class="sg-table">
+                <caption class="qc-sr-only">Sample quote lines with quantity, monthly recurring and once-off charges</caption>
+                <thead>
+                  <tr><th scope="col">Service</th><th scope="col">Qty</th><th scope="col" class="sg-col-m">Monthly</th><th scope="col" class="sg-col-n">Once-off</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="sg-table__group"><th colspan="4" scope="colgroup"><span class="sg-ico sg-ico--sky"><svg width="14" height="14" aria-hidden="true"><use href="#sg-i-fibre" /></svg></span>Connectivity</th></tr>
+                  <tr><th scope="row">Business fibre 1000/1000 <small>per site</small></th><td data-label="Qty">3</td><td class="sg-col-m" data-label="Monthly" data-m="1497,1347,1197">$1,347</td><td class="sg-col-n" data-label="Once-off" data-n="2850,1350,0">$1,350</td></tr>
+                  <tr><th scope="row">SD-WAN licence &amp; edge appliance</th><td data-label="Qty">3</td><td class="sg-col-m" data-label="Monthly" data-m="387,345,297">$345</td><td class="sg-col-n" data-label="Once-off" data-n="4350,3450,2670">$3,450</td></tr>
+                  <tr class="sg-table__group"><th colspan="4" scope="colgroup"><span class="sg-ico sg-ico--mint"><svg width="14" height="14" aria-hidden="true"><use href="#sg-i-voice" /></svg></span>Voice</th></tr>
+                  <tr><th scope="row">Hosted PBX seat</th><td data-label="Qty">40</td><td class="sg-col-m" data-label="Monthly" data-m="1120,1000,880">$1,000</td><td class="sg-col-n" data-label="Once-off" data-n="0,0,0">—</td></tr>
+                  <tr><th scope="row">SIP trunk <small>30 channels</small></th><td data-label="Qty">1</td><td class="sg-col-m" data-label="Monthly" data-m="210,190,175">$190</td><td class="sg-col-n" data-label="Once-off" data-n="0,0,0">—</td></tr>
+                  <tr class="sg-table__group"><th colspan="4" scope="colgroup"><span class="sg-ico sg-ico--amber"><svg width="14" height="14" aria-hidden="true"><use href="#sg-i-mobile" /></svg></span>Mobile &amp; cloud</th></tr>
+                  <tr><th scope="row">5G Business 60GB plan <small>with handset</small></th><td data-label="Qty">25</td><td class="sg-col-m" data-label="Monthly" data-m="1975,1725,1475">$1,725</td><td class="sg-col-n" data-label="Once-off" data-n="16000,5500,0">$5,500</td></tr>
+                  <tr><th scope="row">Microsoft 365 Business Standard</th><td data-label="Qty">40</td><td class="sg-col-m" data-label="Monthly" data-m="748,748,748">$748</td><td class="sg-col-n" data-label="Once-off" data-n="0,0,0">—</td></tr>
+                  <tr class="sg-table__group"><th colspan="4" scope="colgroup"><span class="sg-ico sg-ico--violet"><svg width="14" height="14" aria-hidden="true"><use href="#sg-i-wifi" /></svg></span>Managed services &amp; install</th></tr>
+                  <tr><th scope="row">Managed Wi-Fi access point</th><td data-label="Qty">12</td><td class="sg-col-m" data-label="Monthly" data-m="264,228,192">$228</td><td class="sg-col-n" data-label="Once-off" data-n="5040,3600,2160">$3,600</td></tr>
+                  <tr><th scope="row">24/7 managed support &amp; monitoring</th><td data-label="Qty">1</td><td class="sg-col-m" data-label="Monthly" data-m="690,640,590">$640</td><td class="sg-col-n" data-label="Once-off" data-n="0,0,0">—</td></tr>
+                  <tr><th scope="row">Installation, configuration &amp; setup</th><td data-label="Qty">1</td><td class="sg-col-m" data-label="Monthly" data-m="0,0,0">—</td><td class="sg-col-n" data-label="Once-off" data-n="4800,3600,2400">$3,600</td></tr>
+                </tbody>
+              </table>
+
+              <footer class="sg-quote__totals" aria-live="polite">
+                <div class="sg-total sg-total--m"><span>Monthly recurring</span><strong data-total="m">$6,223</strong><small>per month</small></div>
+                <div class="sg-total sg-total--n"><span>Once-off</span><strong data-total="n">$17,500</strong><small>hardware, connection &amp; install</small></div>
+                <div class="sg-total sg-total--tcv"><span>Total contract value</span><strong data-total="tcv">$166,852</strong><small data-term-label>over 24 months</small></div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ PROTECT THE DEAL ═════════ -->
+      <section class="sg-protect sg-dark" aria-labelledby="sg-protect-title">
+        <div class="sg-wire" aria-hidden="true"><span></span></div>
+        <div class="qc-container">
+          <header class="sg-head sg-head--split" data-reveal>
+            <h2 class="sg-h2" id="sg-protect-title">Protect every margin <em class="sg-em">before it ships.</em></h2>
+            <p class="sg-lede">Approved catalogues, hidden carrier costs and approval rules keep every multi-service deal accurate and profitable. <a class="sg-link" href="https://www.quote.cloud/cpq-software">Explore CPQ for telecom <svg width="16" height="16" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a></p>
+          </header>
+
+          <div class="sg-bento" data-reveal-stagger="90">
+            <!-- Catalogue -->
+            <article class="sg-card sg-card--cat" data-reveal data-sg-live>
+              <div class="sg-card__text">
+                <h3>Catalogue, bundles and SKUs</h3>
+                <p>Plans, devices and services from one approved price book.</p>
+              </div>
+              <div class="sg-cat" data-sg-cat>
+                <ul class="sg-cat__tabs" aria-hidden="true">
+                  <li class="is-on">Connectivity</li><li>Voice</li><li>Mobile</li><li>Bundles</li>
+                </ul>
+                <div class="sg-cat__panel">
+                  <div class="sg-cat__search" aria-hidden="true"><svg width="14" height="14"><use href="#sg-i-search" /></svg><span data-sg-cat-query>fibre</span><i class="sg-caret"></i></div>
+                  <ul class="sg-cat__list" data-sg-cat-list>
+                    <li><code>FBR-1G-ENT</code><span>Business fibre 1 Gbps</span><b>$449</b></li>
+                    <li><code>FBR-500-BIZ</code><span>Business fibre 500 Mbps</span><b>$329</b></li>
+                    <li><code>SDW-EDGE-S</code><span>SD-WAN edge · small site</span><b>$115</b></li>
+                    <li><code>LTE-FAIL-01</code><span>4G failover service</span><b>$45</b></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Margins -->
+            <article class="sg-card sg-card--margin" data-reveal data-sg-live>
+              <div class="sg-card__text">
+                <h3>Carrier costs stay internal</h3>
+                <p>Buy rates and margin live in the quote, never in the customer’s view.</p>
+              </div>
+              <div class="sg-margin" data-sg-margin>
+                <button class="sg-switch" type="button" aria-pressed="false" data-sg-margin-toggle>
+                  <span class="sg-switch__track" aria-hidden="true"><span></span></span>
+                  <svg width="15" height="15" aria-hidden="true"><use href="#sg-i-eye" /></svg>
+                  Customer view
+                </button>
+                <table class="sg-mtable">
+                  <caption class="qc-sr-only">Carrier buy rates, sell prices and margins (internal)</caption>
+                  <thead><tr><th scope="col">Line</th><th scope="col" class="sg-int-col">Buy</th><th scope="col">Sell</th><th scope="col" class="sg-int-col">Margin</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">Fibre 1 Gbps</th><td class="sg-int-col">$262</td><td>$449</td><td class="sg-int-col"><span class="sg-pill">42%</span></td></tr>
+                    <tr><th scope="row">SIP trunk</th><td class="sg-int-col">$118</td><td>$190</td><td class="sg-int-col"><span class="sg-pill">38%</span></td></tr>
+                    <tr><th scope="row">5G 60GB plan</th><td class="sg-int-col">$44</td><td>$69</td><td class="sg-int-col"><span class="sg-pill">36%</span></td></tr>
+                  </tbody>
+                </table>
+                <p class="sg-margin__foot"><span class="sg-int-col">Deal margin <b>41.2%</b></span><span class="sg-margin__cust"><svg width="13" height="13" aria-hidden="true"><use href="#sg-i-lock" /></svg> Costs hidden</span></p>
+              </div>
+            </article>
+
+            <!-- Approvals -->
+            <article class="sg-card sg-card--approve" data-reveal data-sg-live>
+              <div class="sg-card__text">
+                <h3>Approvals without the email chain</h3>
+                <p>Discounts past your threshold route to the right manager automatically.</p>
+              </div>
+              <ol class="sg-flow" data-sg-flow>
+                <li><span class="sg-flow__dot"></span><div><b>Discount 18%</b><small>36-month term · 3 sites</small></div></li>
+                <li><span class="sg-flow__dot"></span><div><b>Rule: over 15% needs sign-off</b><small>Routed automatically</small></div></li>
+                <li><span class="sg-flow__dot"><span class="sg-avatar sg-avatar--sm" aria-hidden="true">SK</span></span><div><b>Sarah K. · Sales Director</b><small>Reviewing margin 41.2%</small></div></li>
+                <li class="sg-flow__end"><span class="sg-flow__dot"><svg width="14" height="14" aria-hidden="true"><use href="#sg-i-check" /></svg></span><div><b>Approved</b><small>Quote unlocked to send</small></div></li>
+              </ol>
+            </article>
+
+            <!-- Pricing rules -->
+            <article class="sg-card sg-card--tiers" data-reveal>
+              <div class="sg-card__text">
+                <h3>Tiered pricing that calculates itself</h3>
+                <p>Quantity breaks, discounts and currencies applied by rule, not by hand.</p>
+              </div>
+              <div class="sg-tiers" data-sg-tiers>
+                <label class="sg-tiers__label" for="sg-seats">Hosted PBX seats <output for="sg-seats" data-sg-seats-out>40</output></label>
+                <input class="sg-range" id="sg-seats" type="range" min="1" max="120" value="40" />
+                <ol class="sg-tiers__bars">
+                  <li data-tier="0"><span>1–9</span><b>$32</b></li>
+                  <li data-tier="1" class="is-on"><span>10–49</span><b>$25</b></li>
+                  <li data-tier="2"><span>50+</span><b>$21</b></li>
+                </ol>
+                <p class="sg-tiers__total"><span>Line total</span><strong data-sg-seats-total>$1,000<small>/mo</small></strong></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ WIN TOGETHER (light) ═════════ -->
+      <section class="sg-team sg-light" aria-labelledby="sg-team-title" data-sg-live>
+        <div class="sg-wire sg-wire--light" aria-hidden="true"><span></span></div>
+        <div class="qc-container">
+          <header class="sg-head sg-head--center" data-reveal>
+            <h2 class="sg-h2" id="sg-team-title">Sales, pre-sales and engineering. <em class="sg-em">One live proposal.</em></h2>
+            <p class="sg-lede">Engineers draw the network, pre-sales adds the rollout and SLAs, sales shapes the offer. Same document, same moment. <a class="sg-link" href="https://www.quote.cloud/collaboration">See collaboration <svg width="16" height="16" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a></p>
+          </header>
+
+          <div class="sg-editor" data-reveal="scale" data-sg-editor>
+            <div class="sg-editor__bar" aria-hidden="true">
+              <span class="sg-editor__dots"><i></i><i></i><i></i></span>
+              <span class="sg-editor__name">Solution architecture · 3 sites</span>
+              <span class="sg-editor__people">
+                <span class="sg-avatar" style="--c: var(--qc-red)">AL</span>
+                <span class="sg-avatar" style="--c: var(--qc-violet)">PR</span>
+                <span class="sg-avatar" style="--c: #0f8fd6">TM</span>
+                <small>3 editing</small>
+              </span>
+            </div>
+            <div class="sg-editor__body">
+              <figure class="sg-diagram">
+                <div class="sg-sites" aria-hidden="true" data-sg-sites>
+                  <span class="is-on">Sydney HQ</span><span>Melbourne</span><span>Brisbane</span>
+                </div>
+                <svg class="sg-net" viewBox="0 0 640 340" role="img" aria-labelledby="sg-net-title">
+                  <title id="sg-net-title">Network diagram: three sites connected over an SD-WAN fabric to a data centre, cloud services and the internet</title>
+                  <g class="sg-net__links" fill="none">
+                    <path pathLength="100" d="M110 70 C 200 70, 230 170, 320 170" />
+                    <path pathLength="100" d="M110 170 L 320 170" />
+                    <path pathLength="100" d="M110 270 C 200 270, 230 170, 320 170" />
+                    <path pathLength="100" d="M320 170 C 410 170, 440 70, 530 70" />
+                    <path pathLength="100" d="M320 170 L 530 170" />
+                    <path pathLength="100" d="M320 170 C 410 170, 440 270, 530 270" />
+                    <path class="sg-net__backup" pathLength="100" d="M110 270 C 60 220, 60 120, 110 70" />
+                  </g>
+                  <g class="sg-net__pulses" fill="none">
+                    <path pathLength="100" d="M110 70 C 200 70, 230 170, 320 170" />
+                    <path pathLength="100" d="M110 270 C 200 270, 230 170, 320 170" />
+                    <path pathLength="100" d="M320 170 C 410 170, 440 70, 530 70" />
+                    <path pathLength="100" d="M320 170 C 410 170, 440 270, 530 270" />
+                  </g>
+                  <g class="sg-net__node" data-site="0"><rect x="40" y="48" width="140" height="44" rx="12" /><text x="110" y="75">Sydney HQ</text></g>
+                  <g class="sg-net__node" data-site="1"><rect x="40" y="148" width="140" height="44" rx="12" /><text x="110" y="175">Melbourne</text></g>
+                  <g class="sg-net__node" data-site="2"><rect x="40" y="248" width="140" height="44" rx="12" /><text x="110" y="275">Brisbane</text></g>
+                  <g class="sg-net__core"><rect x="262" y="140" width="116" height="60" rx="16" /><text x="320" y="167">SD-WAN</text><text class="sg-net__sub" x="320" y="185">fabric</text></g>
+                  <g class="sg-net__node sg-net__node--dc"><rect x="460" y="48" width="140" height="44" rx="12" /><text x="530" y="75">Data centre</text></g>
+                  <g class="sg-net__node sg-net__node--dc"><rect x="460" y="148" width="140" height="44" rx="12" /><text x="530" y="175">Microsoft 365</text></g>
+                  <g class="sg-net__node sg-net__node--dc"><rect x="460" y="248" width="140" height="44" rx="12" /><text x="530" y="275">Internet</text></g>
+                </svg>
+                <figcaption class="qc-sr-only">Network diagrams are built inside the proposal with QuoteCloud’s diagram block.</figcaption>
+                <span class="sg-cursor sg-cursor--a" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M1 1l5.5 14 2-6 6-2z" /></svg><i>Tom · Engineering</i></span>
+                <span class="sg-cursor sg-cursor--b" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M1 1l5.5 14 2-6 6-2z" /></svg><i>Priya · Pre-sales</i></span>
+              </figure>
+
+              <aside class="sg-side" aria-label="Proposal details">
+                <div class="sg-panel sg-panel--sla">
+                  <h3 class="sg-panel__title">Service levels</h3>
+                  <ul class="sg-sla">
+                    <li><b>99.95%</b><span>network availability</span></li>
+                    <li><b>4 h</b><span>on-site response</span></li>
+                    <li><b>24/7</b><span>monitoring &amp; support</span></li>
+                  </ul>
+                </div>
+                <div class="sg-panel sg-comment" aria-hidden="true">
+                  <span class="sg-avatar" style="--c: var(--qc-red)">AL</span>
+                  <p><b>Alex · Sales</b> <span class="sg-mention">@Tom</span> can we add 4G failover at Brisbane?</p>
+                  <p class="sg-comment__reply"><svg width="13" height="13"><use href="#sg-i-check" /></svg> Tom added a backup link</p>
+                </div>
+              </aside>
+
+              <div class="sg-timeline">
+                <h3 class="sg-panel__title">Implementation timeline</h3>
+                <ol class="sg-steps">
+                  <li><b>Discovery</b><span>Week 1</span></li>
+                  <li><b>Design</b><span>Week 2</span></li>
+                  <li><b>Provision</b><span>Weeks 3–4</span></li>
+                  <li><b>Deploy</b><span>Week 5</span></li>
+                  <li><b>Go live</b><span>Week 6</span></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ CLOSE ═════════ -->
+      <section class="sg-close sg-dark" aria-labelledby="sg-close-title" data-sg-live>
+        <div class="sg-wire" aria-hidden="true"><span></span></div>
+        <div class="qc-container sg-close__inner">
+          <header class="sg-head" data-reveal>
+            <h2 class="sg-h2" id="sg-close-title">Customers choose, sign <em class="sg-em">and go live.</em></h2>
+            <p class="sg-lede">Optional upgrades with live totals, then eSignature and payment, all from one link. No PDFs passed around.</p>
+            <ul class="sg-trust">
+              <li><svg width="18" height="18" aria-hidden="true"><use href="#sg-i-shield" /></svg>Legally binding, eIDAS compliant</li>
+              <li><svg width="18" height="18" aria-hidden="true"><use href="#sg-i-lock" /></svg>256-bit encryption, hosted on AWS</li>
+              <li><svg width="18" height="18" aria-hidden="true"><use href="#sg-i-trail" /></svg>Full audit trail on every signature</li>
+            </ul>
+            <a class="sg-link" href="https://www.quote.cloud/electronic-signature-software-solution">How eSignatures work <svg width="16" height="16" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a>
+          </header>
+
+          <div class="sg-accept" data-reveal="right" data-sg-accept>
+            <article class="sg-doc sg-accept__doc" aria-labelledby="sg-accept-title">
+              <p class="sg-doc__kicker">Your proposal · 36 months</p>
+              <h3 class="sg-doc__title" id="sg-accept-title">Choose your options</h3>
+              <ul class="sg-opts">
+                <li><label><input type="checkbox" data-add="240" /><span class="sg-check" aria-hidden="true"><svg width="12" height="12"><use href="#sg-i-check" /></svg></span><span>Premium 24/7 support</span><b>+$240/mo</b></label></li>
+                <li><label><input type="checkbox" data-add="135" /><span class="sg-check" aria-hidden="true"><svg width="12" height="12"><use href="#sg-i-check" /></svg></span><span>4G failover at all 3 sites</span><b>+$135/mo</b></label></li>
+                <li><label><input type="checkbox" data-add="180" /><span class="sg-check" aria-hidden="true"><svg width="12" height="12"><use href="#sg-i-check" /></svg></span><span>Guest Wi-Fi with captive portal</span><b>+$180/mo</b></label></li>
+              </ul>
+              <p class="sg-accept__total"><span>Monthly total</span><strong data-sg-accept-total>$5,554</strong></p>
+              <div class="sg-sign" aria-hidden="true">
+                <svg class="sg-sign__ink" viewBox="0 0 260 70"><path pathLength="100" d="M10 50c14-18 26-36 34-33 9 4-12 40-3 40 8 0 15-28 23-28 7 0 0 21 8 21 9 0 12-16 20-16 7 0 4 13 12 13 11 0 18-19 29-19 8 0 5 11 13 11 9 0 18-9 30-14M150 58c30-4 62-6 98-6" /></svg>
+                <span class="sg-sign__line"></span>
+                <span class="sg-sign__who">Operations Manager · signed just now</span>
+              </div>
+              <div class="sg-accept__actions">
+                <span class="sg-accept__btn"><svg width="15" height="15" aria-hidden="true"><use href="#sg-i-check" /></svg> Accept &amp; sign</span>
+                <span class="sg-accept__pay"><img src="/assets/integrations/stripe.png" width="26" height="26" alt="" loading="lazy" decoding="async" /> Pay once-off charges</span>
+              </div>
+            </article>
+            <div class="sg-stamp" aria-hidden="true">
+              <span class="sg-stamp__check"><svg width="16" height="16"><use href="#sg-i-check" /></svg></span>
+              <span><b>Signed &amp; accepted</b><small>Audit trail recorded · 10:42</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="qc-container sg-midcta" data-reveal>
+          <p class="sg-midcta__text">Send your first telecom proposal <em class="sg-em">this week.</em></p>
+          <div class="sg-ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--lg sg-btn-glass" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ INTEGRATIONS (light) ═════════ -->
+      <section class="sg-int sg-light" aria-labelledby="sg-int-title" data-sg-live>
+        <div class="sg-wire sg-wire--light" aria-hidden="true"><span></span></div>
+        <div class="qc-container">
+          <header class="sg-head sg-head--center" data-reveal>
+            <h2 class="sg-h2" id="sg-int-title">Wired into the stack <em class="sg-em">you already run.</em></h2>
+            <p class="sg-lede">Customers, products and opportunities flow in from your CRM. Signed deals flow out to payments and accounting.</p>
+          </header>
+
+          <div class="sg-hub" data-sg-hub data-reveal="fade">
+            <svg class="sg-hub__wires" aria-hidden="true" data-sg-hub-svg></svg>
+            <div class="sg-hub__col sg-hub__col--in">
+              <p class="sg-hub__label">CRM in</p>
+              <a class="sg-logo" href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" width="64" height="64" alt="Salesforce" loading="lazy" decoding="async" /></a>
+              <a class="sg-logo" href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" width="64" height="64" alt="HubSpot" loading="lazy" decoding="async" /></a>
+              <a class="sg-logo" href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="64" height="64" alt="monday.com" loading="lazy" decoding="async" /></a>
+              <a class="sg-logo" href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" width="64" height="64" alt="Microsoft Dynamics" loading="lazy" decoding="async" /></a>
+            </div>
+            <div class="sg-hub__core">
+              <span class="sg-hub__q"><img src="/assets/logos/qc-symbol-white.png" width="40" height="41" alt="QuoteCloud" loading="lazy" decoding="async" /></span>
+              <span class="sg-hub__ring" aria-hidden="true"></span><span class="sg-hub__ring sg-hub__ring--2" aria-hidden="true"></span>
+            </div>
+            <div class="sg-hub__col sg-hub__col--out">
+              <p class="sg-hub__label">Payments &amp; accounting out</p>
+              <a class="sg-logo" href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="64" height="64" alt="Stripe" loading="lazy" decoding="async" /></a>
+              <a class="sg-logo" href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="64" height="64" alt="PayPal" loading="lazy" decoding="async" /></a>
+              <a class="sg-logo" href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" width="64" height="64" alt="Xero" loading="lazy" decoding="async" /></a>
+              <a class="sg-logo" href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" width="64" height="64" alt="QuickBooks Online" loading="lazy" decoding="async" /></a>
+            </div>
+          </div>
+          <p class="sg-int__more">Also <a href="https://www.quote.cloud/pipedrive-integration-with-quotecloud">Pipedrive</a>, <a href="https://www.quote.cloud/zoho-with-quotecloud">Zoho</a>, <a href="https://www.quote.cloud/googlesheets-with-quotecloud">Google Sheets</a>, <a href="https://www.quote.cloud/microsoft-excel-with-quotecloud">Excel</a> and an open API. <a class="sg-link sg-link--ink" href="https://www.quote.cloud/all-integrations">All integrations <svg width="16" height="16" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ═════════ TEMPLATES + PROOF (light) ═════════ -->
+      <section class="sg-tpl sg-light" aria-labelledby="sg-tpl-title">
+        <div class="qc-container sg-tpl__inner">
+          <header class="sg-head" data-reveal>
+            <h2 class="sg-h2" id="sg-tpl-title">Telco templates, <em class="sg-em">ready to send.</em></h2>
+            <p class="sg-lede">Start from a proven layout, add your branding and approved content from your team library, and quote today.</p>
+            <a class="sg-link sg-link--ink" href="https://www.quote.cloud/templates/telecommunications">Browse telecommunications templates <svg width="16" height="16" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a>
+          </header>
+          <ul class="sg-covers" data-reveal-stagger="110">
+            <li data-reveal>
+              <a href="https://www.quote.cloud/templates/telecommunications" class="sg-cover">
+                <img src="/assets/telco/template-network-rack.jpg" width="566" height="800" alt="Network Installation Proposal template cover with a server rack photo" loading="lazy" decoding="async" />
+                <span>Network installation</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://www.quote.cloud/templates/telecommunications" class="sg-cover">
+                <img src="/assets/telco/template-mobile-internet-bundle.jpg" width="566" height="800" alt="Mobile and Internet Bundle Proposal template cover with a city skyline" loading="lazy" decoding="async" />
+                <span>Mobile &amp; internet bundle</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://www.quote.cloud/templates/telecommunications" class="sg-cover">
+                <img src="/assets/telco/template-mobile-plan.jpg" width="566" height="800" alt="Mobile Phone Plan proposal template cover" loading="lazy" decoding="async" />
+                <span>Mobile phone plan</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sg-proof sg-light" aria-labelledby="sg-proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="sg-proof-title">Ratings and security</h2>
+          <ul class="sg-proof__row" data-reveal-stagger="80">
+            <li data-reveal><span class="sg-stars" aria-hidden="true"><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16" class="sg-star-part"><use href="#sg-i-star" /></svg></span><b><span data-count-to="4.2" data-count-decimals="1">4.2</span>/5</b><span>on Capterra</span></li>
+            <li data-reveal><span class="sg-stars" aria-hidden="true"><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16"><use href="#sg-i-star" /></svg><svg width="16" height="16" class="sg-star-part"><use href="#sg-i-star" /></svg></span><b><span data-count-to="4.2" data-count-decimals="1">4.2</span>/5</b><span>on Software Advice</span></li>
+            <li data-reveal><b>Since <span data-count-to="2013" data-count-format="plain">2013</span></b><span>helping sales teams quote</span></li>
+            <li data-reveal class="sg-proof__seals">
+              <img src="/assets/compliance/eidas.svg" width="88" height="40" alt="eIDAS compliant eSignatures" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" width="40" height="38" alt="256-bit encryption" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/gdpr.png" width="40" height="40" alt="GDPR compliant" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" width="54" height="32" alt="Hosted on AWS" loading="lazy" decoding="async" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="sg-faq-wrap sg-light">
+        <!-- @include faq-telco -->
+      </div>
+
+      <!-- ═════════ CLOSING CTA ═════════ -->
+      <section class="sg-final sg-dark" aria-labelledby="sg-final-title" data-sg-live data-sg-final>
+        <div class="sg-final__bg" aria-hidden="true">
+          <div class="sg-grid"></div>
+          <svg class="sg-final__lines" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice">
+            <g fill="none" class="sg-final__base">
+              <path d="M-20 80 C 300 80, 420 260, 600 260" /><path d="M-20 440 C 300 440, 420 260, 600 260" />
+              <path d="M1220 80 C 900 80, 780 260, 600 260" /><path d="M1220 440 C 900 440, 780 260, 600 260" />
+              <path d="M-20 260 L 600 260" /><path d="M1220 260 L 600 260" />
+            </g>
+            <g fill="none" class="sg-final__pulse">
+              <path pathLength="100" d="M-20 80 C 300 80, 420 260, 600 260" /><path pathLength="100" d="M-20 440 C 300 440, 420 260, 600 260" />
+              <path pathLength="100" d="M1220 80 C 900 80, 780 260, 600 260" /><path pathLength="100" d="M1220 440 C 900 440, 780 260, 600 260" />
+            </g>
+          </svg>
+          <span class="sg-glow sg-glow--center"></span>
+        </div>
+        <div class="qc-container sg-final__inner" data-reveal>
+          <h2 class="sg-h2 sg-h2--xl" id="sg-final-title">Just click, quote, <em class="sg-em">and close.</em></h2>
+          <p class="sg-lede">Build your first telecom proposal today. Free for 14 days, no credit card required.</p>
+          <div class="sg-ctas sg-ctas--center">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="final">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#sg-i-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--lg sg-btn-glass" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="final-demo">Book a demo</a>
+          </div>
+          <p class="sg-final__links"><a href="https://www.quote.cloud/pricing">See pricing</a><a href="https://www.quote.cloud/quote-templates">Quote templates</a><a href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas &amp; grid editing</a></p>
+        </div>
+      </section>
+    </main>
+
+    <div class="sg-sticky" data-sg-sticky hidden>
+      <a class="qc-btn qc-btn--primary qc-btn--block" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile">Start free 14-day trial</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

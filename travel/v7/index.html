@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-travel -->
+  </head>
+  <body>
+    <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="i-flight" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" /></symbol>
+        <symbol id="i-hotel" viewBox="0 0 24 24"><path d="M2 4v16M2 8h17a3 3 0 0 1 3 3v9M2 16h20M6 8v8" /><circle cx="6.5" cy="12" r="0" /></symbol>
+        <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 17H3.5a1 1 0 0 1-1-1v-3.2c0-.9.6-1.6 1.4-1.9l2-.6 2.2-3.8A2 2 0 0 1 9.8 5.5h4.4a2 2 0 0 1 1.7 1l2.2 3.8 2 .6c.8.3 1.4 1 1.4 1.9V16a1 1 0 0 1-1 1H19M9 17h6M6 10.5h12" /><circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" /></symbol>
+        <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3" /><path d="M5 10.5h14M12 3v7.5M8.5 21l2-4M15.5 21l-2-4" /><circle cx="8.5" cy="13.8" r=".6" /><circle cx="15.5" cy="13.8" r=".6" /></symbol>
+        <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="2.5" /><path d="M4 11h16M7.5 21v-3M16.5 21v-3M9 6.5h6" /><circle cx="8" cy="14.5" r=".6" /><circle cx="16" cy="14.5" r=".6" /></symbol>
+        <symbol id="i-cruise" viewBox="0 0 24 24"><path d="M2 20.5c1.7 1 3.3 1 5 0s3.3-1 5 0 3.3 1 5 0 3.3-1 5 0M4.5 17 3 12.5h18L19.5 17M6 12.5V8h12v4.5M10 8V4.5h4V8" /></symbol>
+        <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4 8h15l-3.5-3.5M20 16H5l3.5 3.5" /></symbol>
+        <symbol id="i-ferry" viewBox="0 0 24 24"><path d="M2 20.5c1.7 1 3.3 1 5 0s3.3-1 5 0 3.3 1 5 0 3.3-1 5 0M3 16.5h18l-2.2-5H5.2zM8.5 11.5V8h7v3.5M12 8V4" /></symbol>
+        <symbol id="i-tour" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.6 2.7 3.9 5.7 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-5.7-3.9-9S9.4 5.7 12 3z" /></symbol>
+        <symbol id="i-package" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5" /><path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7M3 12.5h18M10 12.5v2h4v-2" /></symbol>
+        <symbol id="i-surface" viewBox="0 0 24 24"><path d="M5 21 9 3M19 21 15 3M12 4v2.5M12 10.5v3M12 17.5V20" /></symbol>
+        <symbol id="i-insurance" viewBox="0 0 24 24"><path d="M12 3l7 3v5.2c0 4.6-3 8.3-7 9.8-4-1.5-7-5.2-7-9.8V6z" /><path d="m9 12 2.2 2.2L15.5 10" /></symbol>
+        <symbol id="i-activity" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.8l-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z" /></symbol>
+        <symbol id="i-misc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8 12h.01M12 12h.01M16 12h.01" stroke-width="2.6" /></symbol>
+        <symbol id="i-own" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.8" /><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0" /></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.4a7 7 0 0 1 14 0C19 14.9 12 21 12 21z" /><circle cx="12" cy="9.6" r="2.4" /></symbol>
+        <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4" /></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.2A6 6 0 0 1 21.5 20" /></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8.3 8.3 0 0 1-12 7.4L3.5 20.5l1.1-4.6A8.3 8.3 0 1 1 20.5 12z" /></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor" stroke="none" /></symbol>
+        <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17v3zM14.5 7.5l3 3" /></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.2" /><path d="M8 11V7.5a4 4 0 0 1 8 0V11" /></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" /><path d="m20 20-4.2-4.2" /></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+        <symbol id="i-book" viewBox="0 0 24 24"><path d="M4.5 5.5a2.5 2.5 0 0 1 2.5-2.5h12.5v15H7a2.5 2.5 0 0 0-2.5 2.5zM4.5 20.5A2.5 2.5 0 0 1 7 18h12.5v3H7" /></symbol>
+        <symbol id="i-passport" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.2" /><circle cx="12" cy="10.5" r="3.2" /><path d="M9 17h6" /></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.2c0 4.6-3 8.3-7 9.8-4-1.5-7-5.2-7-9.8V6z" /><path d="M12 8.5v4M12 15.5h.01" /></symbol>
+        <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0v11.5H6zM9 20.5v-5.5h6v5.5M10 4.3V3h4v1.3" /></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" /><path d="M14 3v5h5M8.5 13h7M8.5 17h4.5" /></symbol>
+        <symbol id="i-form" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2.2" /><path d="M8 8h8M8 12h8M8 16h4" /></symbol>
+        <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" /><circle cx="9" cy="10" r="1.8" /><path d="m21 16-5-5-9 9" /></symbol>
+        <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6V4.5h14V6M12 4.5v15M9 19.5h6" /></symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" /></symbol>
+        <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3.5 18.5 10l-5.6 1.7L10.3 17z" fill="currentColor" stroke="#fff" stroke-width="1.4" /></symbol>
+        <symbol id="i-handle" viewBox="0 0 24 24"><path d="M9 6h.01M15 6h.01M9 12h.01M15 12h.01M9 18h.01M15 18h.01" stroke-width="2.8" /></symbol>
+        <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 6.5v11M15 6.5v11" stroke-width="2.4" /></symbol>
+        <symbol id="i-resume" viewBox="0 0 24 24"><path d="M8.5 6v12l9.5-6z" fill="currentColor" stroke="none" /></symbol>
+        <symbol id="i-send" viewBox="0 0 24 24"><path d="m4 12 16-8-6 16-2.5-6.5z" /></symbol>
+        <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15zM10 21h4" /></symbol>
+      </defs>
+    </svg>
+
+    <!-- @include header -->
+
+    <main id="main">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__head qc-container">
+          <h1 class="hero__title" id="hero-title">
+            Travel quote &amp; itinerary software <span class="em">for both sides of the trip</span>
+          </h1>
+          <p class="hero__lede">Consultants build it from the GDS in minutes. Travellers choose, sign and pay in one link.</p>
+          <div class="hero__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+              Start free 14-day trial
+              <svg class="i qc-btn__arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+          </div>
+          <p class="hero__note">No credit card required</p>
+        </div>
+
+        <div class="hero__switch">
+          <div class="seg" role="tablist" aria-label="See the same trip from either side">
+            <span class="seg__thumb" aria-hidden="true"><span class="seg__progress"></span></span>
+            <button class="seg__tab" type="button" role="tab" id="tab-consultant" aria-selected="true" aria-controls="stage" data-side="consultant">
+              <svg class="i" aria-hidden="true"><use href="#i-pen" /></svg>Consultant
+            </button>
+            <button class="seg__tab" type="button" role="tab" id="tab-traveller" aria-selected="false" aria-controls="stage" tabindex="-1" data-side="traveller">
+              <svg class="i" aria-hidden="true"><use href="#i-flight" /></svg>Traveller
+            </button>
+          </div>
+          <button class="seg-pause" type="button" aria-label="Pause automatic switching" data-paused="false">
+            <svg class="i i--pause" aria-hidden="true"><use href="#i-pause" /></svg>
+            <svg class="i i--resume" aria-hidden="true"><use href="#i-resume" /></svg>
+          </button>
+        </div>
+
+        <div class="hero__stage-wrap qc-container">
+          <div class="stage" id="stage" role="tabpanel" aria-labelledby="tab-consultant" data-side="consultant" tabindex="0">
+            <p class="qc-sr-only" data-sr="consultant">
+              The consultant's view: the QuoteCloud editor with a Bali itinerary imported from Sabre, the Itinerary Segments palette and the content library.
+            </p>
+            <p class="qc-sr-only" data-sr="traveller" hidden>
+              The traveller's view: the same Bali itinerary as a branded online proposal with room options, a live trip total, comments and accept and sign.
+            </p>
+
+            <div class="stage__glow" aria-hidden="true"></div>
+
+            <div class="win" aria-hidden="true">
+              <div class="win__bar">
+                <span class="win__dots"><i></i><i></i><i></i></span>
+                <div class="win__ed" data-only="consultant">
+                  <span class="win__qc"><img src="/assets/logos/qc-symbol-white.png" width="30" height="31" alt="" /></span>
+                  <span class="win__doc">Bali escape <b>Proposal</b></span>
+                  <span class="win__chip"><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" />Imported from Sabre</span>
+                  <span class="win__sp"></span>
+                  <span class="win__avatars"><i class="av av--a">JM</i><i class="av av--b">SL</i></span>
+                  <span class="mbtn">Preview</span>
+                  <span class="mbtn mbtn--violet">Publish</span>
+                </div>
+                <div class="win__url" data-only="traveller">
+                  <svg class="i" aria-hidden="true"><use href="#i-lock" /></svg>quote.cloud/p/bali-escape
+                </div>
+              </div>
+
+              <div class="win__body">
+                <div class="paper" data-flip="box"></div>
+
+                <aside class="pal" data-only="consultant">
+                  <div class="pal__tabs"><span>Blocks</span><span class="is-on">Itinerary Segments</span></div>
+                  <div class="pal__grid">
+                    <span class="tile" data-seg="flight"><svg class="i"><use href="#i-flight" /></svg>Flight</span>
+                    <span class="tile" data-seg="hotel"><svg class="i"><use href="#i-hotel" /></svg>Hotel</span>
+                    <span class="tile" data-seg="car"><svg class="i"><use href="#i-car" /></svg>Car</span>
+                    <span class="tile" data-seg="train"><svg class="i"><use href="#i-train" /></svg>Train</span>
+                    <span class="tile" data-seg="bus"><svg class="i"><use href="#i-bus" /></svg>Bus</span>
+                    <span class="tile" data-seg="cruise"><svg class="i"><use href="#i-cruise" /></svg>Cruise</span>
+                    <span class="tile" data-seg="transfer"><svg class="i"><use href="#i-transfer" /></svg>Transfer</span>
+                    <span class="tile" data-seg="ferry"><svg class="i"><use href="#i-ferry" /></svg>Ferry</span>
+                    <span class="tile" data-seg="tour"><svg class="i"><use href="#i-tour" /></svg>Tour</span>
+                    <span class="tile" data-seg="package"><svg class="i"><use href="#i-package" /></svg>Package</span>
+                    <span class="tile" data-seg="surface"><svg class="i"><use href="#i-surface" /></svg>Surface</span>
+                    <span class="tile" data-seg="insurance"><svg class="i"><use href="#i-insurance" /></svg>Insurance</span>
+                    <span class="tile" data-seg="activity"><svg class="i"><use href="#i-activity" /></svg>Activity</span>
+                    <span class="tile" data-seg="misc"><svg class="i"><use href="#i-misc" /></svg>Misc.</span>
+                    <span class="tile" data-seg="own"><svg class="i"><use href="#i-own" /></svg>Own arr.</span>
+                  </div>
+                  <div class="pal__mode"><span class="is-on">Grid</span><span>Canvas</span></div>
+                </aside>
+
+                <div class="doc">
+                  <div class="doc__cover" data-flip="media">
+                    <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" fetchpriority="high" />
+                    <span class="doc__brand">Paradise Travel</span>
+                  </div>
+                  <p class="doc__title" data-flip="text">Bali, seven nights for two</p>
+                  <p class="doc__meta" data-flip="card">
+                    <span><svg class="i"><use href="#i-cal" /></svg>04 – 11 Apr</span>
+                    <span><svg class="i"><use href="#i-users" /></svg>2 adults</span>
+                    <span><svg class="i"><use href="#i-pin" /></svg>Nusa Dua, Bali</span>
+                  </p>
+                  <ol class="doc__segs">
+                    <li class="sg" data-flip="card">
+                      <svg class="i sg__h"><use href="#i-handle" /></svg>
+                      <span class="sg__ic"><svg class="i"><use href="#i-flight" /></svg></span>
+                      <span class="sg__t"><b>Sydney → Denpasar</b><small>Fri 04 Apr · 10:20 – 15:15</small></span>
+                      <span class="sg__r">Ref 7HXQ2L</span>
+                    </li>
+                    <li class="sg" data-flip="card">
+                      <svg class="i sg__h"><use href="#i-handle" /></svg>
+                      <span class="sg__ic"><svg class="i"><use href="#i-transfer" /></svg></span>
+                      <span class="sg__t"><b>Private transfer</b><small>Airport → Nusa Dua</small></span>
+                      <span class="sg__r">16:00</span>
+                    </li>
+                    <li class="sg" data-flip="card">
+                      <svg class="i sg__h"><use href="#i-handle" /></svg>
+                      <span class="sg__ic"><svg class="i"><use href="#i-hotel" /></svg></span>
+                      <span class="sg__t"><b>Beachfront resort</b><small>5 nights · breakfast</small></span>
+                      <span class="sg__r">Conf. 48213</span>
+                    </li>
+                    <li class="sg" data-flip="card">
+                      <svg class="i sg__h"><use href="#i-handle" /></svg>
+                      <span class="sg__ic"><svg class="i"><use href="#i-tour" /></svg></span>
+                      <span class="sg__t"><b>Uluwatu at sunset</b><small>Sun 06 Apr · half day</small></span>
+                      <span class="sg__r">15:30</span>
+                    </li>
+                    <li class="sg sg--drop" data-only="consultant">
+                      <span class="sg__ghost"><svg class="i"><use href="#i-tour" /></svg><b>Tour</b> added</span>
+                      <span class="sg__droptext"><svg class="i"><use href="#i-plus" /></svg>Drop segment here</span>
+                    </li>
+                  </ol>
+                  <div class="doc__guide" data-flip="card">
+                    <span class="doc__thumb">
+                      <img src="/assets/travel/template-collage.jpg" width="566" height="800" alt="" />
+                      <svg class="i"><use href="#i-play" /></svg>
+                    </span>
+                    <span class="doc__gt"><b>Bali destination guide</b><small>Culture, dining, customs and currency</small></span>
+                  </div>
+                  <div class="doc__opts" data-flip="card">
+                    <span class="opt" data-opt="garden"><i></i><b>Garden villa</b><small>Included</small></span>
+                    <span class="opt" data-opt="water"><i></i><b>Overwater villa</b><small>+ $940</small></span>
+                  </div>
+                  <p class="doc__total" data-flip="card">
+                    <span>Trip total</span><b data-total>$8,240</b>
+                  </p>
+                </div>
+
+                <aside class="lib" data-only="consultant">
+                  <p class="lib__h">Content library</p>
+                  <div class="lib__scope"><span>Mine</span><span class="is-on">Team</span><span>Company</span></div>
+                  <span class="lib__search"><svg class="i"><use href="#i-search" /></svg>Search library</span>
+                  <ul class="lib__list">
+                    <li data-lib="guide"><span class="lib__ic lib__ic--a"><svg class="i"><use href="#i-book" /></svg></span><span><b>Destination guide</b><small>Bali · 6 pages</small></span></li>
+                    <li data-lib="visa"><span class="lib__ic lib__ic--b"><svg class="i"><use href="#i-passport" /></svg></span><span><b>Visa requirements</b><small>Indonesia</small></span></li>
+                    <li data-lib="safety"><span class="lib__ic lib__ic--c"><svg class="i"><use href="#i-shield" /></svg></span><span><b>Travel safety</b><small>Updated this week</small></span></li>
+                    <li data-lib="packing"><span class="lib__ic lib__ic--d"><svg class="i"><use href="#i-bag" /></svg></span><span><b>Packing tips</b><small>Tropical</small></span></li>
+                    <li data-lib="terms"><span class="lib__ic lib__ic--e"><svg class="i"><use href="#i-file" /></svg></span><span><b>Terms &amp; conditions</b><small>Approved</small></span></li>
+                    <li data-lib="forms"><span class="lib__ic lib__ic--f"><svg class="i"><use href="#i-form" /></svg></span><span><b>Traveller details</b><small>Form</small></span></li>
+                  </ul>
+                </aside>
+
+                <aside class="act" data-only="traveller">
+                  <div class="act__who">
+                    <i class="av av--a">JM</i>
+                    <span><b>Jess, your consultant</b><small>Paradise Travel</small></span>
+                  </div>
+                  <div class="act__thread">
+                    <p class="bub bub--me" data-act="ask">Could we add a sunset dinner on the last night?</p>
+                    <p class="bub bub--typing" data-act="typing"><i></i><i></i><i></i></p>
+                    <p class="bub bub--them" data-act="reply">Of course. Adding it now.</p>
+                  </div>
+                  <div class="act__compose"><span data-act="compose">Ask Jess a question</span><svg class="i"><use href="#i-send" /></svg></div>
+                  <div class="act__sign">
+                    <div class="sigpad">
+                      <svg viewBox="0 0 200 60" class="sigpad__ink"><path d="M8 40c10-18 18-28 22-24s-8 30-2 30 12-26 18-26-2 22 4 22 10-16 16-16 0 14 6 14c8 0 10-12 18-12s4 10 12 10 14-8 22-10 24 2 34-2" /></svg>
+                      <span class="sigpad__line"></span>
+                    </div>
+                    <span class="sbtn"><span class="sbtn__a">Accept &amp; sign</span><span class="sbtn__b"><svg class="i"><use href="#i-check" /></svg>Signed &amp; deposit paid</span></span>
+                  </div>
+                </aside>
+
+                <span class="cur" aria-hidden="true"><svg class="i"><use href="#i-cursor" /></svg></span>
+                <span class="cur cur--b" aria-hidden="true"><svg class="i"><use href="#i-cursor" /></svg><em>Sam</em></span>
+                <span class="drag-ghost" aria-hidden="true"><svg class="i"><use href="#i-tour" /></svg>Tour</span>
+              </div>
+            </div>
+
+            <div class="phone phone--hero" data-only="traveller" aria-hidden="true">
+              <div class="phone__screen">
+                <div class="mp">
+                  <div class="mp__cover"><img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" /></div>
+                  <div class="mp__body">
+                    <p class="mp__title">Bali, seven nights</p>
+                    <p class="mp__row"><span>Overwater villa</span><b class="mp__pick">Selected</b></p>
+                    <p class="mp__row mp__row--total"><span>Trip total</span><b data-total>$8,240</b></p>
+                    <div class="mp__sig">
+                      <svg viewBox="0 0 200 60"><path d="M8 40c10-18 18-28 22-24s-8 30-2 30 12-26 18-26-2 22 4 22 10-16 16-16 0 14 6 14c8 0 10-12 18-12s4 10 12 10 14-8 22-10 24 2 34-2" /></svg>
+                    </div>
+                    <span class="sbtn sbtn--m"><span class="sbtn__a">Accept &amp; sign</span><span class="sbtn__b"><svg class="i"><use href="#i-check" /></svg>Signed</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── For your consultants ───────── -->
+      <section class="run run--consultant" id="consultants" aria-labelledby="run-c-title">
+        <div class="qc-container">
+          <header class="run__head" data-reveal>
+            <span class="run__side" aria-hidden="true"><svg class="i"><use href="#i-pen" /></svg></span>
+            <h2 class="run__title" id="run-c-title">For your <span class="em">consultants</span></h2>
+            <p class="run__lede">From booking to beautiful proposal, without rekeying a thing.</p>
+          </header>
+
+          <div class="bento" data-reveal-stagger="90">
+            <!-- A. Import -->
+            <article class="card card--a" data-reveal>
+              <div class="card__copy">
+                <h3>Bookings open as itineraries</h3>
+                <p>Sabre, PowerSuite and Tramada bookings arrive structured and ready to enrich. No rekeying, fewer errors.</p>
+              </div>
+              <div class="card__vis imp" data-seq="5" data-seq-ms="1100" data-seq-hold="2600" aria-hidden="true">
+                <div class="imp__src">
+                  <div class="imp__tabs">
+                    <span class="imp__tab is-on" data-src><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" />Sabre</span>
+                    <span class="imp__tab" data-src><img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" />PowerSuite</span>
+                    <span class="imp__tab" data-src><img src="/assets/travel/tramada.png" width="400" height="125" alt="" loading="lazy" decoding="async" class="wide" />Tramada</span>
+                  </div>
+                  <ol class="imp__pnr">
+                    <li data-at="1"><i>1</i>FL 715 Y 04APR SYDDPS HK2 1020 1515</li>
+                    <li data-at="2"><i>2</i>CAR TRF DPS 04APR NUSA DUA 1600</li>
+                    <li data-at="3"><i>3</i>HHL HK1 DPS 04APR-09APR 5NT BB</li>
+                    <li data-at="4"><i>4</i>TUR ULUWATU 06APR 1530 HALF DAY</li>
+                  </ol>
+                </div>
+                <div class="imp__beam"><span></span></div>
+                <div class="imp__out">
+                  <div class="imp__seg" data-at="1"><span class="sg__ic"><svg class="i"><use href="#i-flight" /></svg></span><span><b>Sydney → Denpasar</b><small>Fri 04 Apr · 10:20 – 15:15</small></span></div>
+                  <div class="imp__seg" data-at="2"><span class="sg__ic"><svg class="i"><use href="#i-transfer" /></svg></span><span><b>Private transfer</b><small>Airport → Nusa Dua · 16:00</small></span></div>
+                  <div class="imp__seg" data-at="3"><span class="sg__ic"><svg class="i"><use href="#i-hotel" /></svg></span><span><b>Beachfront resort</b><small>5 nights · breakfast</small></span></div>
+                  <div class="imp__seg" data-at="4"><span class="sg__ic"><svg class="i"><use href="#i-tour" /></svg></span><span><b>Uluwatu at sunset</b><small>Sun 06 Apr · 15:30</small></span></div>
+                  <div class="imp__done" data-at="5"><svg class="i"><use href="#i-check" /></svg>4 segments imported</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- B. Segments -->
+            <article class="card card--b" data-reveal>
+              <div class="card__copy">
+                <h3>Every segment, beautifully set</h3>
+                <p>Fifteen segment types, with dates, times, routes and confirmations in place.</p>
+              </div>
+              <div class="card__vis segs" data-seq="6" data-seq-ms="1500" data-seq-hold="0" data-seq-mode="cur" aria-hidden="true">
+                <div class="segs__grid">
+                  <span class="tile" data-at="1"><svg class="i"><use href="#i-flight" /></svg>Flight</span>
+                  <span class="tile" data-at="2"><svg class="i"><use href="#i-hotel" /></svg>Hotel</span>
+                  <span class="tile"><svg class="i"><use href="#i-car" /></svg>Car</span>
+                  <span class="tile" data-at="4"><svg class="i"><use href="#i-train" /></svg>Train</span>
+                  <span class="tile"><svg class="i"><use href="#i-bus" /></svg>Bus</span>
+                  <span class="tile" data-at="3"><svg class="i"><use href="#i-cruise" /></svg>Cruise</span>
+                  <span class="tile" data-at="6"><svg class="i"><use href="#i-transfer" /></svg>Transfer</span>
+                  <span class="tile"><svg class="i"><use href="#i-ferry" /></svg>Ferry</span>
+                  <span class="tile" data-at="5"><svg class="i"><use href="#i-tour" /></svg>Tour</span>
+                  <span class="tile"><svg class="i"><use href="#i-package" /></svg>Package</span>
+                  <span class="tile"><svg class="i"><use href="#i-surface" /></svg>Surface</span>
+                  <span class="tile"><svg class="i"><use href="#i-insurance" /></svg>Insurance</span>
+                  <span class="tile"><svg class="i"><use href="#i-activity" /></svg>Activity</span>
+                  <span class="tile"><svg class="i"><use href="#i-misc" /></svg>Misc.</span>
+                  <span class="tile"><svg class="i"><use href="#i-own" /></svg>Own arr.</span>
+                </div>
+                <div class="segs__card">
+                  <div class="segs__v" data-at="1"><span class="sg__ic"><svg class="i"><use href="#i-flight" /></svg></span><span><b>Sydney → Denpasar</b><small>Fri 04 Apr · 10:20 – 15:15 · Seat 14A</small></span><em>7HXQ2L</em></div>
+                  <div class="segs__v" data-at="2"><span class="sg__ic"><svg class="i"><use href="#i-hotel" /></svg></span><span><b>Beachfront resort, Nusa Dua</b><small>Check-in Fri 04 Apr · 5 nights</small></span><em>48213</em></div>
+                  <div class="segs__v" data-at="3"><span class="sg__ic"><svg class="i"><use href="#i-cruise" /></svg></span><span><b>Benoa → Lembongan</b><small>Tue 08 Apr · 09:00 – 10:30</small></span><em>CR-2210</em></div>
+                  <div class="segs__v" data-at="4"><span class="sg__ic"><svg class="i"><use href="#i-train" /></svg></span><span><b>Paris → Lyon</b><small>Mon 12 May · 08:04 – 10:00 · Coach 6</small></span><em>TGV 6603</em></div>
+                  <div class="segs__v" data-at="5"><span class="sg__ic"><svg class="i"><use href="#i-tour" /></svg></span><span><b>Uluwatu at sunset</b><small>Sun 06 Apr · 15:30 · Half day</small></span><em>T-118</em></div>
+                  <div class="segs__v" data-at="6"><span class="sg__ic"><svg class="i"><use href="#i-transfer" /></svg></span><span><b>Airport → Nusa Dua</b><small>Fri 04 Apr · 16:00 · Private car</small></span><em>TR-31</em></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- C. Libraries -->
+            <article class="card card--c" data-reveal>
+              <div class="card__copy">
+                <h3>Content libraries</h3>
+                <p>Destination guides, visas, safety and terms, approved once and dropped into any trip.</p>
+              </div>
+              <div class="card__vis libs" data-seq="5" data-seq-ms="1000" data-seq-hold="2400" aria-hidden="true">
+                <ul class="libs__list">
+                  <li data-at="1"><span class="lib__ic lib__ic--a"><svg class="i"><use href="#i-book" /></svg></span>Destination guide</li>
+                  <li data-at="2"><span class="lib__ic lib__ic--b"><svg class="i"><use href="#i-passport" /></svg></span>Visa requirements</li>
+                  <li data-at="3"><span class="lib__ic lib__ic--c"><svg class="i"><use href="#i-shield" /></svg></span>Travel safety</li>
+                  <li data-at="4"><span class="lib__ic lib__ic--d"><svg class="i"><use href="#i-bag" /></svg></span>Packing tips</li>
+                  <li data-at="5"><span class="lib__ic lib__ic--e"><svg class="i"><use href="#i-file" /></svg></span>Terms &amp; conditions</li>
+                </ul>
+                <div class="libs__doc">
+                  <span class="libs__head"></span>
+                  <span class="libs__blk libs__blk--a" data-at="1"><svg class="i"><use href="#i-book" /></svg><i></i></span>
+                  <span class="libs__blk libs__blk--b" data-at="2"><svg class="i"><use href="#i-passport" /></svg><i></i></span>
+                  <span class="libs__blk libs__blk--c" data-at="3"><svg class="i"><use href="#i-shield" /></svg><i></i></span>
+                  <span class="libs__blk libs__blk--d" data-at="4"><svg class="i"><use href="#i-bag" /></svg><i></i></span>
+                  <span class="libs__blk libs__blk--e" data-at="5"><svg class="i"><use href="#i-file" /></svg><i></i></span>
+                </div>
+              </div>
+            </article>
+
+            <!-- D. Templates & brand -->
+            <article class="card card--d" data-reveal>
+              <div class="card__copy">
+                <h3>Templates in your brand</h3>
+                <p>Any layout, your logo and colours, for corporate, leisure or group travel.</p>
+                <a class="card__link" href="https://www.quote.cloud/templates/travel">Explore travel templates <svg class="i" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              </div>
+              <div class="card__vis tpl" data-seq="4" data-seq-ms="2000" data-seq-hold="0" data-seq-mode="cur">
+                <div class="tpl__fan">
+                  <img data-at="1" src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="Paradise Travel proposal template cover" loading="lazy" decoding="async" />
+                  <img data-at="2" src="/assets/travel/template-african-journey.jpg" width="566" height="800" alt="African journey itinerary template cover" loading="lazy" decoding="async" />
+                  <img data-at="3" src="/assets/travel/template-travel-agency.jpg" width="566" height="800" alt="Travel agency proposal template cover" loading="lazy" decoding="async" />
+                  <img data-at="4" src="/assets/travel/template-collage.jpg" width="566" height="800" alt="Travel collage itinerary template cover" loading="lazy" decoding="async" />
+                </div>
+                <div class="tpl__brand" aria-hidden="true">
+                  <span class="tpl__sw" data-at="1"><i style="--c: #1c9aa5"></i><i style="--c: #0d2b5c"></i><i style="--c: #f3e3c3"></i></span>
+                  <span class="tpl__sw" data-at="2"><i style="--c: #c8973f"></i><i style="--c: #2a1a10"></i><i style="--c: #e85c3a"></i></span>
+                  <span class="tpl__sw" data-at="3"><i style="--c: #1257b8"></i><i style="--c: #f5a623"></i><i style="--c: #ffffff"></i></span>
+                  <span class="tpl__sw" data-at="4"><i style="--c: #d71f26"></i><i style="--c: #1b2a3a"></i><i style="--c: #9fc6dd"></i></span>
+                  <span class="tpl__logo">Your logo</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- E. Collaboration -->
+            <article class="card card--e" data-reveal>
+              <div class="card__copy">
+                <h3>Build it together</h3>
+                <p>Edit the same proposal at once, comment and mention a colleague.</p>
+              </div>
+              <div class="card__vis col" data-seq="4" data-seq-ms="1300" data-seq-hold="2600" aria-hidden="true">
+                <div class="col__doc">
+                  <div class="col__bar"><span class="win__avatars"><i class="av av--a">JM</i><i class="av av--b">SL</i><i class="av av--c">RK</i></span></div>
+                  <p class="col__h">Welcome to Bali, Sam &amp; Alex</p>
+                  <p class="col__line"><span class="col__type" data-at="1" data-type>We've planned seven slow days by the water, with one unforgettable sunset.</span><i class="col__caret"></i></p>
+                  <span class="col__sk"></span><span class="col__sk col__sk--s"></span>
+                  <div class="col__pin" data-at="2"><i class="av av--b">SL</i><p><b>@Jess</b> can we confirm the 16:00 transfer?</p></div>
+                  <div class="col__pin col__pin--r" data-at="3"><i class="av av--a">JM</i><p>Confirmed with the driver.</p></div>
+                  <span class="col__cur col__cur--a"><svg class="i"><use href="#i-cursor" /></svg><em>Jess</em></span>
+                  <span class="col__cur col__cur--b"><svg class="i"><use href="#i-cursor" /></svg><em>Sam</em></span>
+                  <span class="col__cur col__cur--c"><svg class="i"><use href="#i-cursor" /></svg><em>Rae</em></span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── For your travellers ───────── -->
+      <section class="run run--traveller" id="travellers" aria-labelledby="run-t-title">
+        <div class="qc-container">
+          <header class="run__head" data-reveal>
+            <span class="run__side" aria-hidden="true"><svg class="i"><use href="#i-flight" /></svg></span>
+            <h2 class="run__title" id="run-t-title">For your <span class="em">travellers</span></h2>
+            <p class="run__lede">A proposal they can explore, question, choose and sign. Then the trip travels with them.</p>
+          </header>
+
+          <div class="bento" data-reveal-stagger="90">
+            <!-- F. Rich media -->
+            <article class="card card--f" data-reveal>
+              <div class="card__copy">
+                <h3>Rich media and destination insights</h3>
+                <p>Video, photos, maps and local know-how that let travellers picture the trip.</p>
+              </div>
+              <div class="card__vis media" data-seq="4" data-seq-ms="2200" data-seq-hold="0" data-seq-mode="cur" aria-hidden="true">
+                <div class="media__video">
+                  <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                  <span class="media__play"><svg class="i"><use href="#i-play" /></svg></span>
+                  <span class="media__cap">Destination overview <em>02:45</em></span>
+                  <span class="media__bar"><i></i></span>
+                </div>
+                <div class="media__map">
+                  <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" /></pattern>
+                    </defs>
+                    <rect class="media__dots" width="300" height="220" fill="url(#dots)" />
+                    <path class="media__land" d="M28 120c22-18 54-26 84-20 22 4 30 18 54 18 30 0 44-22 76-18 22 3 34 16 34 30 0 20-26 26-50 24-26-2-38 14-66 16-34 2-48-14-76-14-24 0-50 2-60-10-8-10-6-18 4-26z" />
+                    <path class="media__route" d="M60 128C90 92 130 150 168 120s52-10 82 6" />
+                    <g class="media__pins">
+                      <circle cx="60" cy="128" r="5" /><circle cx="168" cy="120" r="5" /><circle cx="250" cy="126" r="5" />
+                    </g>
+                  </svg>
+                  <span class="media__lbl media__lbl--a">Uluwatu</span>
+                  <span class="media__lbl media__lbl--b">Nusa Dua</span>
+                  <span class="media__lbl media__lbl--c">Lembongan</span>
+                </div>
+                <div class="media__chips">
+                  <span class="chip" data-at="1"><b>Currency</b>Indonesian rupiah, cards widely accepted</span>
+                  <span class="chip" data-at="2"><b>Dining</b>Seafood on the sand at Jimbaran Bay</span>
+                  <span class="chip" data-at="3"><b>Customs</b>Cover shoulders and knees at temples</span>
+                  <span class="chip" data-at="4"><b>Event</b>Kecak fire dance at sunset, Uluwatu</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- G. Options (interactive) -->
+            <article class="card card--g" data-reveal>
+              <div class="card__copy">
+                <h3>Choose options, see the cost live</h3>
+                <p>Optional extras update the trip total as travellers choose. Try it.</p>
+              </div>
+              <div class="card__vis cost" data-cost>
+                <table class="cost__table">
+                  <caption class="qc-sr-only">Sample trip cost breakdown</caption>
+                  <tbody>
+                    <tr><th scope="row">Flights, 2 adults</th><td>$2,480</td></tr>
+                    <tr><th scope="row">Resort, 5 nights</th><td>$3,900</td></tr>
+                    <tr><th scope="row">Transfers</th><td>$160</td></tr>
+                    <tr><th scope="row">Tours &amp; activities</th><td>$1,700</td></tr>
+                  </tbody>
+                </table>
+                <fieldset class="cost__extras">
+                  <legend>Optional extras</legend>
+                  <label class="xtra"><input type="checkbox" value="940" /><span class="xtra__box"><svg class="i" aria-hidden="true"><use href="#i-check" /></svg></span><span class="xtra__n">Overwater villa upgrade</span><span class="xtra__p">+ $940</span></label>
+                  <label class="xtra"><input type="checkbox" value="180" /><span class="xtra__box"><svg class="i" aria-hidden="true"><use href="#i-check" /></svg></span><span class="xtra__n">Sunset dinner, Jimbaran</span><span class="xtra__p">+ $180</span></label>
+                  <label class="xtra"><input type="checkbox" value="210" /><span class="xtra__box"><svg class="i" aria-hidden="true"><use href="#i-check" /></svg></span><span class="xtra__n">Travel insurance</span><span class="xtra__p">+ $210</span></label>
+                </fieldset>
+                <p class="cost__total"><span>Trip total</span><output data-cost-total aria-live="polite">$8,240</output></p>
+              </div>
+            </article>
+
+            <!-- H. Comments -->
+            <article class="card card--h" data-reveal>
+              <div class="card__copy">
+                <h3>Questions answered in the document</h3>
+                <p>Travellers comment on any segment. You reply and update the trip in place.</p>
+              </div>
+              <div class="card__vis ask" data-seq="4" data-seq-ms="1300" data-seq-hold="2600" aria-hidden="true">
+                <div class="ask__seg">
+                  <span class="sg__ic"><svg class="i"><use href="#i-tour" /></svg></span>
+                  <span><b>Uluwatu temple tour</b><small>Sun 06 Apr</small></span>
+                  <span class="ask__time"><em class="ask__old">10:00</em><em class="ask__new" data-at="4">15:30</em></span>
+                  <span class="ask__pin"><svg class="i"><use href="#i-chat" /></svg></span>
+                </div>
+                <div class="ask__thread">
+                  <p class="bub bub--me" data-at="1">Could we do this in the afternoon instead?</p>
+                  <p class="bub bub--typing" data-at="2"><i></i><i></i><i></i></p>
+                  <p class="bub bub--them" data-at="3">Moved to 15:30, just in time for sunset.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- I. Sign & pay -->
+            <article class="card card--i" data-reveal>
+              <div class="card__copy">
+                <h3>Accept, e-sign and pay</h3>
+                <p>Legally binding e-signatures with a full audit trail, and deposits by Stripe or PayPal.</p>
+              </div>
+              <div class="card__vis sign" data-seq="4" data-seq-ms="1200" data-seq-hold="2800" aria-hidden="true">
+                <div class="sign__pad">
+                  <p class="sign__who">Signed by <b>Sam Taylor</b></p>
+                  <svg viewBox="0 0 200 60" class="sign__ink" data-at="1"><path d="M8 40c10-18 18-28 22-24s-8 30-2 30 12-26 18-26-2 22 4 22 10-16 16-16 0 14 6 14c8 0 10-12 18-12s4 10 12 10 14-8 22-10 24 2 34-2" /></svg>
+                  <span class="sign__line"></span>
+                  <span class="sign__stamp" data-at="2"><svg class="i"><use href="#i-check" /></svg>Accepted</span>
+                </div>
+                <div class="sign__side">
+                  <ul class="sign__trail">
+                    <li class="is-on"><i></i>Proposal viewed<em>09:12</em></li>
+                    <li data-at="2"><i></i>Signed &amp; accepted<em>09:14</em></li>
+                    <li data-at="3"><i></i>Deposit paid<em>09:15</em></li>
+                  </ul>
+                  <div class="sign__pay">
+                    <span class="sign__amt"><small>Deposit</small><b>$2,000</b></span>
+                    <span class="sign__logos"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" /><img src="/assets/integrations/paypal.png" width="792" height="790" alt="" loading="lazy" decoding="async" /></span>
+                    <span class="sign__paid" data-at="3"><svg class="i"><use href="#i-check" /></svg>Paid</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- J. TravelDocs -->
+            <article class="card card--j" data-reveal>
+              <div class="card__copy">
+                <img class="td__logo" src="/assets/travel/traveldocs-logo.png" width="640" height="247" alt="TravelDocs" loading="lazy" decoding="async" />
+                <h3>The trip in their pocket</h3>
+                <p>TravelDocs keeps itineraries, documents and live flight status on hand. Free for travellers on iOS and Android.</p>
+                <div class="td__stores">
+                  <a href="https://apps.apple.com/au/app/traveldocs/id6477499212" rel="noopener"><img src="/assets/travel/app-store.png" width="400" height="118" alt="Download TravelDocs on the App Store" loading="lazy" decoding="async" /></a>
+                  <a href="https://play.google.com/store/apps/details?id=com.corporateinteractive.traveldocs" rel="noopener"><img src="/assets/travel/google-play.png" width="400" height="117" alt="Get TravelDocs on Google Play" loading="lazy" decoding="async" /></a>
+                </div>
+                <a class="card__link" href="https://www.quote.cloud/traveldocs-mobile-app">About the TravelDocs app <svg class="i" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              </div>
+              <div class="card__vis td" data-seq="3" data-seq-ms="2600" data-seq-hold="0" data-seq-mode="cur">
+                <div class="phone td__lock">
+                  <div class="phone__screen">
+                    <img class="td__ls td__ls--a" src="/assets/travel/traveldocs-lockscreen-1.jpg" width="369" height="800" alt="TravelDocs live flight status on the lock screen: gate departure in 3 minutes" loading="lazy" decoding="async" />
+                    <img class="td__ls td__ls--b" src="/assets/travel/traveldocs-lockscreen-2.jpg" width="369" height="800" alt="" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <div class="phone td__main">
+                  <div class="phone__screen">
+                    <img data-at="1" src="/assets/travel/traveldocs-itineraries.jpg" width="414" height="900" alt="TravelDocs My Itineraries screen with trip countdowns" loading="lazy" decoding="async" />
+                    <img data-at="2" src="/assets/travel/traveldocs-flight.jpg" width="414" height="900" alt="TravelDocs flight detail with times, booking code and seat" loading="lazy" decoding="async" />
+                    <img data-at="3" src="/assets/travel/traveldocs-timeline.jpg" width="414" height="900" alt="TravelDocs trip timeline with flight, hotel and car hire" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+                <span class="td__live" aria-hidden="true"><i></i>Live flight status</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Both sides connected ───────── -->
+      <section class="sync" aria-labelledby="sync-title">
+        <div class="qc-container">
+          <header class="sync__head" data-reveal>
+            <h2 id="sync-title">One trip. <span class="em">Both sides in sync.</span></h2>
+            <p>A traveller's question lands in your editor. Your update lands right back.</p>
+          </header>
+
+          <div class="sync__stage" data-sync aria-hidden="true">
+            <div class="sync__side sync__side--t">
+              <span class="sync__label"><svg class="i"><use href="#i-flight" /></svg>Traveller</span>
+              <div class="phone sync__phone">
+                <div class="phone__screen">
+                  <div class="mp">
+                    <div class="mp__cover mp__cover--s"><img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" /></div>
+                    <div class="mp__body">
+                      <p class="mp__title">Bali, seven nights</p>
+                      <p class="mp__seg"><span class="sg__ic"><svg class="i"><use href="#i-tour" /></svg></span><span>Uluwatu at sunset<small>Sun 06 Apr</small></span></p>
+                      <p class="mp__seg mp__seg--new"><span class="sg__ic"><svg class="i"><use href="#i-activity" /></svg></span><span>Sunset dinner<small>Thu 10 Apr</small></span></p>
+                      <p class="mp__row mp__row--total"><span>Trip total</span><b><em class="sync__old">$8,240</em><em class="sync__new">$8,420</em></b></p>
+                      <div class="mp__compose"><span class="sync__typed">Could we add a sunset dinner?</span><svg class="i"><use href="#i-send" /></svg></div>
+                      <p class="bub bub--me sync__ask">Could we add a sunset dinner?</p>
+                      <p class="bub bub--them sync__reply">Added for Thursday night.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sync__wire">
+              <svg class="sync__svg sync__svg--h" viewBox="0 0 200 100" preserveAspectRatio="none">
+                <path class="sync__track" d="M0 34 C 70 34, 130 34, 200 34" />
+                <path class="sync__track" d="M200 66 C 130 66, 70 66, 0 66" />
+                <path class="sync__pulse sync__pulse--out" d="M0 34 C 70 34, 130 34, 200 34" />
+                <path class="sync__pulse sync__pulse--back" d="M200 66 C 130 66, 70 66, 0 66" />
+              </svg>
+              <svg class="sync__svg sync__svg--v" viewBox="0 0 100 200" preserveAspectRatio="none">
+                <path class="sync__track" d="M34 0 L34 200" />
+                <path class="sync__track" d="M66 200 L66 0" />
+                <path class="sync__pulse sync__pulse--out" d="M34 0 L34 200" />
+                <path class="sync__pulse sync__pulse--back" d="M66 200 L66 0" />
+              </svg>
+            </div>
+
+            <div class="sync__side sync__side--c">
+              <span class="sync__label"><svg class="i"><use href="#i-pen" /></svg>Consultant</span>
+              <div class="sync__ed">
+                <div class="sync__bar"><span class="win__qc"><img src="/assets/logos/qc-symbol-white.png" width="30" height="31" alt="" loading="lazy" /></span><b>Bali escape</b><span class="sync__bell"><svg class="i"><use href="#i-bell" /></svg><i>1</i></span></div>
+                <div class="sync__body">
+                  <div class="sync__segs">
+                    <p class="sync__seg"><span class="sg__ic"><svg class="i"><use href="#i-hotel" /></svg></span><span><b>Beachfront resort</b><small>5 nights · breakfast</small></span></p>
+                    <p class="sync__seg"><span class="sg__ic"><svg class="i"><use href="#i-tour" /></svg></span><span><b>Uluwatu at sunset</b><small>Sun 06 Apr · 15:30</small></span></p>
+                    <p class="sync__seg sync__seg--new"><span class="sg__ic"><svg class="i"><use href="#i-activity" /></svg></span><span><b>Sunset dinner, Jimbaran</b><small>Thu 10 Apr · 18:30 · + $180</small></span></p>
+                  </div>
+                  <div class="sync__comment">
+                    <p class="sync__c1"><i class="av av--t">ST</i><span><b>Sam Taylor</b>Could we add a sunset dinner?</span></p>
+                    <p class="sync__c2"><i class="av av--a">JM</i><span><b>Jess</b>Added for Thursday night.</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sync__cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="mid">
+              Start free 14-day trial
+              <svg class="i qc-btn__arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+            </a>
+            <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="intg" aria-labelledby="intg-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="intg-title">Plugged into how you <span class="em">already book</span></h2>
+            <p>Open bookings from your GDS or mid-office, take payment online and deliver to the TravelDocs app.</p>
+          </header>
+
+          <div class="hub" data-reveal="fade">
+            <svg class="hub__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M24 12.5 C 38 12.5, 38 50, 50 50" /><path d="M24 37.5 C 38 37.5, 38 50, 50 50" />
+              <path d="M24 62.5 C 38 62.5, 38 50, 50 50" /><path d="M24 87.5 C 38 87.5, 38 50, 50 50" />
+              <path d="M50 50 C 62 50, 62 16.7, 76 16.7" /><path d="M50 50 C 62 50, 62 50, 76 50" /><path d="M50 50 C 62 50, 62 83.3, 76 83.3" />
+            </svg>
+            <ul class="hub__col hub__col--in" aria-label="Booking systems">
+              <li><a class="hub__item" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-sabre-gds"><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" /><span><b>Sabre GDS</b><small>Global distribution system</small></span></a></li>
+              <li><a class="hub__item" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-powersuite-mid-office"><img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" /><span><b>PowerSuite</b><small>Mid-office</small></span></a></li>
+              <li><a class="hub__item" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tramada"><img class="wide" src="/assets/travel/tramada.png" width="400" height="125" alt="" loading="lazy" decoding="async" /><span><b>Tramada</b><small>Mid-office</small></span></a></li>
+              <li><a class="hub__item" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tres-ccte"><span class="hub__mono">Tres</span><span><b>Tres CCTE</b><small>CrossCheck</small></span></a></li>
+            </ul>
+            <div class="hub__core">
+              <span class="hub__q"><img src="/assets/logos/qc-symbol-white.png" width="30" height="31" alt="" loading="lazy" /></span>
+              <b>QuoteCloud</b>
+              <small>Enrich, price, sign</small>
+            </div>
+            <ul class="hub__col hub__col--out" aria-label="Payments and delivery">
+              <li><a class="hub__item" href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" /><span><b>Stripe</b><small>Card payments</small></span></a></li>
+              <li><a class="hub__item" href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="792" height="790" alt="" loading="lazy" decoding="async" /><span><b>PayPal</b><small>Online payments</small></span></a></li>
+              <li><a class="hub__item" href="https://www.quote.cloud/traveldocs-mobile-app"><img class="wide" src="/assets/travel/traveldocs-logo.png" width="640" height="247" alt="" loading="lazy" decoding="async" /><span><b>TravelDocs</b><small>iOS and Android app</small></span></a></li>
+            </ul>
+          </div>
+          <p class="intg__more"><a class="card__link" href="https://www.quote.cloud/all-integrations">See all integrations <svg class="i" aria-hidden="true"><use href="#i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="qc-container">
+          <h2 class="proof__title" id="proof-title" data-reveal>Secure, compliant and <span class="em">proven since 2013</span></h2>
+          <ul class="proof__stats" data-reveal-stagger="90">
+            <li data-reveal><b data-count-to="4.2" data-count-decimals="1">4.2</b><span>Rated on Capterra</span></li>
+            <li data-reveal><b data-count-to="4.2" data-count-decimals="1">4.2</b><span>Rated on Software Advice</span></li>
+            <li data-reveal><b data-count-to="256" data-count-suffix="-bit">256-bit</b><span>Encryption, hosted on AWS</span></li>
+            <li data-reveal><b data-count-to="2013" data-count-format="plain">2013</b><span>In business since</span></li>
+          </ul>
+          <ul class="proof__marks" aria-label="Compliance">
+            <li><img src="/assets/compliance/eidas.svg" width="88" height="40" alt="eIDAS compliant e-signatures" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/gdpr.png" width="64" height="64" alt="GDPR compliant" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/encryption-256.png" width="64" height="64" alt="256-bit encryption" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/aws.svg" width="60" height="36" alt="Hosted on AWS" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-travel -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" id="start" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="close__panel" data-reveal="scale">
+            <svg class="close__route" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M-20 330 C 220 330, 300 120, 600 140 S 980 60, 1220 90" />
+            </svg>
+            <span class="close__plane" aria-hidden="true"><svg class="i"><use href="#i-flight" /></svg></span>
+            <h2 id="close-title">Just click, quote, <span class="em">and close.</span></h2>
+            <p>Start your free 14-day trial today. No credit card required.</p>
+            <div class="close__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+                Start free 14-day trial
+                <svg class="i qc-btn__arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="close__links">
+              <a href="https://www.quote.cloud/pricing">Pricing</a>
+              <a href="https://www.quote.cloud/travel-quoting-software">Travel quoting software</a>
+              <a href="https://www.quote.cloud/enhanced-travel-itinerary-software">Enhanced itineraries</a>
+              <a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">18 content blocks</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="sticky-cta" hidden>
+      <a class="qc-btn qc-btn--primary qc-btn--block" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile">Start free 14-day trial</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

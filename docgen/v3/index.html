@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-docgen -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="gn-sprite" aria-hidden="true" focusable="false">
+      <symbol id="gn-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="gn-i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="gn-i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" /></symbol>
+      <symbol id="gn-i-spark" viewBox="0 0 24 24"><path d="M12 3.5c.6 4.3 2.7 6.9 7.5 8.5-4.8 1.6-6.9 4.2-7.5 8.5-.6-4.3-2.7-6.9-7.5-8.5 4.8-1.6 6.9-4.2 7.5-8.5Z" /></symbol>
+      <symbol id="gn-i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" /></symbol>
+      <symbol id="gn-i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><path d="m4 7 8 6 8-6" /></symbol>
+      <symbol id="gn-i-pdf" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4v13H6v-17Z" /><path d="M14 3.5v4h4M9 13h6M9 16.5h4" /></symbol>
+      <symbol id="gn-i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1" /><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" /></symbol>
+      <symbol id="gn-i-proposal" viewBox="0 0 24 24"><path d="M6 3.5h12v17H6z" /><path d="M6 9h12M9 12.5h6M9 15.5h4" /></symbol>
+      <symbol id="gn-i-quote" viewBox="0 0 24 24"><path d="M6 3.5h12v17H6z" /><path d="M9 8h6M9 11.5h6M9 15h2.5M13.5 15H15" /></symbol>
+      <symbol id="gn-i-contract" viewBox="0 0 24 24"><path d="M6 3.5h12v17H6z" /><path d="M9 8h6M9 11h6M9 16.5c1-1.4 1.8-1.4 2.4 0 .6 1.3 1.4 1.3 2.6-.3" /></symbol>
+      <symbol id="gn-i-code" viewBox="0 0 24 24"><path d="m8.5 7-5 5 5 5M15.5 7l5 5-5 5" /></symbol>
+      <symbol id="gn-i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" /></symbol>
+      <symbol id="gn-i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.5" /><path d="M5 20c.9-3.6 3.6-5.5 7-5.5s6.1 1.9 7 5.5" /></symbol>
+      <symbol id="gn-i-history" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3L4.5 9" /><path d="M4.5 4.5V9H9M12 8v4.5l3 2" /></symbol>
+      <symbol id="gn-i-palette" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0 0 17c1.4 0 1.9-1 1.4-2.1-.6-1.3.2-2.6 1.6-2.6h1.8a3.7 3.7 0 0 0 3.7-3.7c0-4.8-3.8-8.6-8.5-8.6Z" /><circle cx="8" cy="11" r="1" /><circle cx="11" cy="7.5" r="1" /><circle cx="15.5" cy="8.5" r="1" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: the playable generator ───────── -->
+      <section class="gn-hero" aria-labelledby="gn-hero-title">
+        <div class="gn-hero__head qc-container">
+          <h1 class="gn-hero__title" id="gn-hero-title">
+            Document generation software that <span class="gn-em">builds it while you&nbsp;watch</span>
+          </h1>
+          <div class="gn-hero__side">
+            <p class="gn-hero__lead">
+              Pick a template and a client, then press Generate. QuoteCloud fills every field, applies your brand and totals the price.
+            </p>
+            <div class="gn-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow gn-ico" width="18" height="18" aria-hidden="true"><use href="#gn-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="gn-hero__note">No credit card required</p>
+          </div>
+        </div>
+
+        <div class="gn-gen qc-container" data-gn-gen data-mode="editor">
+          <div class="gn-gen__bar">
+            <span class="gn-gen__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <p class="gn-gen__name">Document generator <span>· sample data</span></p>
+            <button class="gn-switch" type="button" aria-pressed="false" data-gn-api-toggle>
+              <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-code" /></svg>
+              Generate via API
+              <span class="gn-switch__track" aria-hidden="true"><span></span></span>
+            </button>
+          </div>
+
+          <div class="gn-gen__body">
+            <!-- Controls -->
+            <form class="gn-ctrl" data-gn-form aria-label="Document generator settings" novalidate>
+              <div class="gn-ctrl__editor" data-gn-editor>
+                <div class="gn-steps" role="tablist" aria-label="Generator steps" data-gn-steps>
+                  <button type="button" role="tab" id="gn-step-t" aria-controls="gn-fs-template" aria-selected="true" data-step="template">
+                    <b>1</b> Template <small data-sum="template">Proposal</small>
+                  </button>
+                  <button type="button" role="tab" id="gn-step-c" aria-controls="gn-fs-client" aria-selected="false" tabindex="-1" data-step="client">
+                    <b>2</b> Client <small data-sum="client">Lumen Solar</small>
+                  </button>
+                  <button type="button" role="tab" id="gn-step-b" aria-controls="gn-fs-theme" aria-selected="false" tabindex="-1" data-step="theme">
+                    <b>3</b> Brand <small data-sum="theme">Coral</small>
+                  </button>
+                  <button type="button" role="tab" id="gn-step-x" aria-controls="gn-fs-extra" aria-selected="false" tabindex="-1" data-step="extra">
+                    <b>4</b> Extras <small data-sum="extra">Off</small>
+                  </button>
+                </div>
+
+                <fieldset class="gn-fs" id="gn-fs-template" data-panel="template" role="tabpanel" aria-labelledby="gn-step-t">
+                  <legend class="gn-fs__legend">Template</legend>
+                  <div class="gn-tpl">
+                    <label class="gn-tpl__opt">
+                      <input type="radio" name="template" value="proposal" checked />
+                      <span><svg class="gn-ico" width="22" height="22" aria-hidden="true"><use href="#gn-i-proposal" /></svg>Proposal</span>
+                    </label>
+                    <label class="gn-tpl__opt">
+                      <input type="radio" name="template" value="quote" />
+                      <span><svg class="gn-ico" width="22" height="22" aria-hidden="true"><use href="#gn-i-quote" /></svg>Quote</span>
+                    </label>
+                    <label class="gn-tpl__opt">
+                      <input type="radio" name="template" value="contract" />
+                      <span><svg class="gn-ico" width="22" height="22" aria-hidden="true"><use href="#gn-i-contract" /></svg>Contract</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="gn-fs" id="gn-fs-client" data-panel="client" role="tabpanel" aria-labelledby="gn-step-c">
+                  <legend class="gn-fs__legend">Client record <span>from your CRM</span></legend>
+                  <div class="gn-cli">
+                    <label class="gn-cli__opt">
+                      <input type="radio" name="client" value="lumen" checked />
+                      <span class="gn-cli__row">
+                        <span class="gn-cli__av" style="--av: #f59e0b" aria-hidden="true">LS</span>
+                        <span class="gn-cli__txt"><b>Lumen Solar Co.</b><small>Maya Chen · HubSpot</small></span>
+                      </span>
+                    </label>
+                    <label class="gn-cli__opt">
+                      <input type="radio" name="client" value="harbour" />
+                      <span class="gn-cli__row">
+                        <span class="gn-cli__av" style="--av: #0f7b8a" aria-hidden="true">HP</span>
+                        <span class="gn-cli__txt"><b>Harbour &amp; Pine Architects</b><small>Tom Okafor · Salesforce</small></span>
+                      </span>
+                    </label>
+                    <label class="gn-cli__opt">
+                      <input type="radio" name="client" value="northbeam" />
+                      <span class="gn-cli__row">
+                        <span class="gn-cli__av" style="--av: #5b3df5" aria-hidden="true">NL</span>
+                        <span class="gn-cli__txt"><b>Northbeam Logistics</b><small>Priya Nair · Pipedrive</small></span>
+                      </span>
+                    </label>
+                    <label class="gn-cli__custom">
+                      <span class="qc-sr-only">Or type your own company name</span>
+                      <input type="text" name="company" maxlength="40" autocomplete="organization" placeholder="Or type your company name" data-gn-company />
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="gn-fs" id="gn-fs-theme" data-panel="theme" role="tabpanel" aria-labelledby="gn-step-b">
+                  <legend class="gn-fs__legend">Brand theme</legend>
+                  <div class="gn-sw">
+                    <label class="gn-sw__opt" style="--sw: #ff4d47">
+                      <input type="radio" name="theme" value="coral" checked />
+                      <span><i aria-hidden="true"></i>Coral</span>
+                    </label>
+                    <label class="gn-sw__opt" style="--sw: #5b3df5">
+                      <input type="radio" name="theme" value="violet" />
+                      <span><i aria-hidden="true"></i>Violet</span>
+                    </label>
+                    <label class="gn-sw__opt" style="--sw: #2b2f3a">
+                      <input type="radio" name="theme" value="graphite" />
+                      <span><i aria-hidden="true"></i>Graphite</span>
+                    </label>
+                    <label class="gn-sw__opt" style="--sw: #0f7b8a">
+                      <input type="radio" name="theme" value="ocean" />
+                      <span><i aria-hidden="true"></i>Ocean</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="gn-fs" id="gn-fs-extra" data-panel="extra" role="tabpanel" aria-labelledby="gn-step-x">
+                  <legend class="gn-fs__legend">Optional item</legend>
+                  <label class="gn-tog">
+                    <input type="checkbox" name="extra" value="onboarding" role="switch" />
+                    <span class="gn-tog__track" aria-hidden="true"><span></span></span>
+                    <span class="gn-tog__txt">Onboarding &amp; training <b>+$1,500</b></span>
+                  </label>
+                </fieldset>
+              </div>
+
+              <div class="gn-ctrl__api" data-gn-apiview>
+                <p class="gn-code__label">Illustrative request body</p>
+                <pre class="gn-code" tabindex="0" aria-label="Illustrative JSON request body"><code data-gn-json>{
+  "template": "proposal",
+  "theme": "coral",
+  "client": {
+    "company": "Lumen Solar Co.",
+    "contact": "Maya Chen",
+    "source": "hubspot"
+  },
+  "options": { "onboarding": false },
+  "records": 1,
+  "deliver": ["email", "pdf"]
+}</code></pre>
+                <fieldset class="gn-fs gn-fs--vol">
+                  <legend class="gn-fs__legend">Documents to generate</legend>
+                  <div class="gn-vol">
+                    <label><input type="radio" name="volume" value="1" checked /><span>1</span></label>
+                    <label><input type="radio" name="volume" value="10" /><span>10</span></label>
+                    <label><input type="radio" name="volume" value="100" /><span>100</span></label>
+                    <label><input type="radio" name="volume" value="1000" /><span>1,000</span></label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <button class="gn-go" type="submit" data-gn-go>
+                <svg class="gn-ico" width="18" height="18" aria-hidden="true"><use href="#gn-i-spark" /></svg>
+                <span data-gn-go-label>Generate proposal</span>
+              </button>
+            </form>
+
+            <!-- Stage -->
+            <div class="gn-stage" data-gn-stage>
+              <div class="gn-stage__single" data-gn-single>
+                <div class="gn-stage__ghost" aria-hidden="true"></div>
+                <article class="gn-doc" data-gn-doc data-theme="coral" data-template="proposal" aria-label="Generated document preview">
+                  <div class="gn-doc__page" data-gn-page>
+                    <header class="gn-doc__cover gn-blk">
+                      <span class="gn-doc__brand"><i aria-hidden="true"></i>Your Company</span>
+                      <span class="gn-doc__kind" data-gn-kind>Proposal</span>
+                      <p class="gn-doc__title"><span class="gn-f" data-k="project">Solar install program</span></p>
+                      <p class="gn-doc__for">Prepared for <span class="gn-f" data-k="company">Lumen Solar Co.</span></p>
+                    </header>
+                    <dl class="gn-doc__meta gn-blk">
+                      <div><dt>Contact</dt><dd><span class="gn-f" data-k="contact">Maya Chen</span></dd></div>
+                      <div><dt>Reference</dt><dd><span class="gn-f" data-k="ref">P-1042</span></dd></div>
+                      <div><dt>Valid until</dt><dd><span class="gn-f" data-k="valid">7 Nov 2026</span></dd></div>
+                    </dl>
+                    <p class="gn-doc__intro gn-blk" data-gn-intro>
+                      Hi <span class="gn-f" data-k="first">Maya</span>, thanks for your time last week. Here is our proposal for
+                      <span class="gn-f" data-k="project">Solar install program</span>, with pricing and next steps below.
+                    </p>
+                    <div class="gn-doc__tablewrap gn-blk">
+                      <table class="gn-doc__table">
+                        <caption class="qc-sr-only">Line items</caption>
+                        <thead>
+                          <tr><th scope="col" data-gn-thead>Investment</th><th scope="col">Qty</th><th scope="col">Amount</th></tr>
+                        </thead>
+                        <tbody data-gn-rows>
+                          <tr><td>Site survey &amp; design</td><td>1</td><td>$2,400</td></tr>
+                          <tr><td>Panel supply</td><td>24</td><td>$14,880</td></tr>
+                          <tr><td>Installation</td><td>1</td><td>$6,200</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="gn-doc__totals gn-blk">
+                      <p><span>Subtotal</span><span data-gn-sub>$23,480</span></p>
+                      <p><span>Tax (10%)</span><span data-gn-tax>$2,348</span></p>
+                      <p class="gn-doc__total"><span>Total</span><span class="gn-f gn-f--total" data-k="total">$25,828</span></p>
+                    </div>
+                    <div class="gn-doc__clause gn-blk">
+                      <svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-lock" /></svg>
+                      <p><b data-gn-clause-title>Terms &amp; disclaimer</b> <span data-gn-clause>Prices valid for 30 days. Delivery subject to site survey. Standard terms apply.</span></p>
+                    </div>
+                    <div class="gn-doc__sign gn-blk" data-gn-sign>
+                      <div><span class="gn-doc__line"></span><small>Accept &amp; sign · <span class="gn-f" data-k="contact">Maya Chen</span></small></div>
+                    </div>
+                  </div>
+                </article>
+                <p class="gn-pull" data-gn-pull aria-hidden="true"><i></i><span data-gn-pull-txt>Pulling record from HubSpot</span></p>
+              </div>
+
+              <div class="gn-batch" data-gn-batch hidden>
+                <div class="gn-batch__head">
+                  <p><b data-gn-batch-count>0</b> of <span data-gn-batch-total>100</span> documents generated</p>
+                  <p class="gn-batch__dest"><span><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-mail" /></svg>Emailed</span><span><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-pdf" /></svg>PDF archived</span></p>
+                </div>
+                <div class="gn-batch__grid" data-gn-grid aria-hidden="true"></div>
+              </div>
+
+              <p class="gn-status" data-gn-status><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-check" /></svg><span data-gn-status-txt>Ready to send</span></p>
+              <button class="gn-stale" type="button" data-gn-stale hidden>
+                <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-spark" /></svg>Settings changed · Generate again
+              </button>
+              <p class="qc-sr-only" aria-live="polite" data-gn-live></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Brand & compliance ───────── -->
+      <section class="gn-sec gn-brand" aria-labelledby="gn-brand-title">
+        <div class="qc-container gn-brand__grid">
+          <div class="gn-brand__copy" data-reveal>
+            <h2 class="gn-h2" id="gn-brand-title">On brand and <span class="gn-em">compliant</span>, every single time</h2>
+            <p class="gn-lead">Themes, locked layout blocks and approved wording live in the template, so every document leaves looking right and saying the right thing.</p>
+            <div class="gn-tabs" role="tablist" aria-label="Brand and compliance features" data-gn-tabs>
+              <button type="button" role="tab" id="gn-tab-theme" aria-controls="gn-view-theme" aria-selected="true">
+                <svg class="gn-ico" width="20" height="20" aria-hidden="true"><use href="#gn-i-palette" /></svg>
+                <span><b>Brand themes</b><small>One theme styles every template: colours, fonts, logo and layout blocks.</small></span>
+                <i class="gn-tabs__bar" aria-hidden="true"></i>
+              </button>
+              <button type="button" role="tab" id="gn-tab-lock" aria-controls="gn-view-lock" aria-selected="false" tabindex="-1">
+                <svg class="gn-ico" width="20" height="20" aria-hidden="true"><use href="#gn-i-lock" /></svg>
+                <span><b>Locked clauses</b><small>Disclaimers and approved wording sit in locked blocks, always present.</small></span>
+                <i class="gn-tabs__bar" aria-hidden="true"></i>
+              </button>
+              <button type="button" role="tab" id="gn-tab-perm" aria-controls="gn-view-perm" aria-selected="false" tabindex="-1">
+                <svg class="gn-ico" width="20" height="20" aria-hidden="true"><use href="#gn-i-history" /></svg>
+                <span><b>Permissions &amp; versions</b><small>Control who edits what, and keep every version on record.</small></span>
+                <i class="gn-tabs__bar" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="gn-views" data-reveal="scale" data-gn-views>
+            <!-- View 1: themes -->
+            <div class="gn-view gn-view--theme is-active" id="gn-view-theme" role="tabpanel" aria-labelledby="gn-tab-theme" data-gn-themeview>
+              <div class="gn-tpanel" aria-hidden="true">
+                <p class="gn-tpanel__h">Theme</p>
+                <div class="gn-tpanel__sw"><i style="--sw: #ff4d47"></i><i style="--sw: #5b3df5"></i><i style="--sw: #2b2f3a"></i><i style="--sw: #0f7b8a"></i></div>
+                <p class="gn-tpanel__h">Typography</p>
+                <p class="gn-tpanel__font"><b>Aa</b> Quicksand <span>Headings</span></p>
+                <p class="gn-tpanel__font gn-tpanel__font--body"><b>Aa</b> Open Sans <span>Body</span></p>
+                <p class="gn-tpanel__h">Applies to</p>
+                <p class="gn-tpanel__count"><b>All templates</b></p>
+              </div>
+              <div class="gn-trio" aria-hidden="true">
+                <div class="gn-mini"><span class="gn-mini__cover"><i></i><b>Proposal</b></span><span class="gn-mini__l"></span><span class="gn-mini__l gn-mini__l--s"></span><span class="gn-mini__tbl"></span><span class="gn-mini__tot"></span></div>
+                <div class="gn-mini"><span class="gn-mini__cover"><i></i><b>Quote</b></span><span class="gn-mini__l"></span><span class="gn-mini__tbl"></span><span class="gn-mini__tbl"></span><span class="gn-mini__tot"></span></div>
+                <div class="gn-mini"><span class="gn-mini__cover"><i></i><b>Contract</b></span><span class="gn-mini__l"></span><span class="gn-mini__l"></span><span class="gn-mini__l gn-mini__l--s"></span><span class="gn-mini__sig"></span></div>
+              </div>
+              <p class="qc-sr-only">A single brand theme re-styles proposal, quote and contract templates together.</p>
+            </div>
+
+            <!-- View 2: locked clauses -->
+            <div class="gn-view gn-view--lock" id="gn-view-lock" role="tabpanel" aria-labelledby="gn-tab-lock">
+              <div class="gn-lockdoc" aria-hidden="true">
+                <div class="gn-lb"><span>Cover</span></div>
+                <div class="gn-lb"><span>Introduction</span><em>Editable</em></div>
+                <div class="gn-lb"><span>Pricing table</span><em>Editable</em></div>
+                <div class="gn-lb gn-lb--locked" data-gn-target><span><svg class="gn-ico" width="13" height="13"><use href="#gn-i-lock" /></svg>Disclaimer</span><em>Locked</em>
+                  <span class="gn-lb__tip">Locked by template admin</span>
+                </div>
+                <div class="gn-lb gn-lb--locked"><span><svg class="gn-ico" width="13" height="13"><use href="#gn-i-lock" /></svg>Payment terms</span><em>Locked</em></div>
+                <div class="gn-lb"><span>Signature block</span></div>
+                <span class="gn-cursor"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 3.5 18.5 12l-6 1.6-3.2 5.4L5 3.5Z" /></svg></span>
+              </div>
+              <ul class="gn-checks">
+                <li><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-check" /></svg>Disclaimer present</li>
+                <li><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-check" /></svg>Approved payment terms</li>
+                <li><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-check" /></svg>Brand theme applied</li>
+                <li><svg class="gn-ico" width="14" height="14" aria-hidden="true"><use href="#gn-i-check" /></svg>Signature block in place</li>
+              </ul>
+            </div>
+
+            <!-- View 3: permissions & versions -->
+            <div class="gn-view gn-view--perm" id="gn-view-perm" role="tabpanel" aria-labelledby="gn-tab-perm">
+              <ul class="gn-roles">
+                <li><span class="gn-roles__av" style="--av: #ff4d47" aria-hidden="true">SR</span><b>Sales rep</b><small>Edits intro &amp; pricing</small></li>
+                <li><span class="gn-roles__av" style="--av: #5b3df5" aria-hidden="true">LG</span><b>Legal</b><small>Owns clauses</small></li>
+                <li><span class="gn-roles__av" style="--av: #0f7b8a" aria-hidden="true">MG</span><b>Manager</b><small>Approves</small></li>
+              </ul>
+              <ol class="gn-vers" reversed>
+                <li class="gn-vers__new"><b>v4</b><span>Approved by manager</span><em>Current</em></li>
+                <li><b>v3</b><span>Pricing updated</span></li>
+                <li><b>v2</b><span>Legal review</span></li>
+                <li><b>v1</b><span>Generated from template</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Connected: CRM + API ───────── -->
+      <section class="gn-sec gn-conn" aria-labelledby="gn-conn-title">
+        <div class="qc-container">
+          <div class="gn-sechead" data-reveal>
+            <h2 class="gn-h2" id="gn-conn-title">Your CRM fills it in. <span class="gn-em">Nobody re&#8209;keys a&nbsp;thing.</span></h2>
+            <p class="gn-lead">Connect the CRM and apps you already use. Client details, contacts and line items land in the right placeholders, with no redundant data entry or proofreading.</p>
+          </div>
+
+          <div class="gn-flow" data-reveal="scale" data-gn-flow>
+            <div class="gn-rec">
+              <div class="gn-src" role="radiogroup" aria-label="Choose a CRM" data-gn-src>
+                <button type="button" role="radio" aria-checked="true" data-src="salesforce"><img src="/assets/integrations/salesforce-cpq.png" width="28" height="28" alt="" loading="lazy" decoding="async" />Salesforce</button>
+                <button type="button" role="radio" aria-checked="false" tabindex="-1" data-src="hubspot"><img src="/assets/integrations/hub-spot.png" width="28" height="28" alt="" loading="lazy" decoding="async" />HubSpot</button>
+                <button type="button" role="radio" aria-checked="false" tabindex="-1" data-src="dynamics"><img src="/assets/integrations/microsoft-dynamics.jpg" width="28" height="28" alt="" loading="lazy" decoding="async" />Dynamics</button>
+                <button type="button" role="radio" aria-checked="false" tabindex="-1" data-src="monday"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="28" height="28" alt="" loading="lazy" decoding="async" />monday.com</button>
+              </div>
+              <dl class="gn-rec__fields" data-gn-recfields>
+                <div data-src-field="company"><dt>Account</dt><dd>Harbour &amp; Pine Architects</dd></div>
+                <div data-src-field="contact"><dt>Contact</dt><dd>Tom Okafor</dd></div>
+                <div data-src-field="deal"><dt>Opportunity</dt><dd>Office fit-out</dd></div>
+                <div data-src-field="items"><dt>Products</dt><dd>3 line items</dd></div>
+                <div data-src-field="amount"><dt>Amount</dt><dd>$26,850</dd></div>
+              </dl>
+            </div>
+
+            <svg class="gn-wires" data-gn-wires aria-hidden="true"></svg>
+
+            <div class="gn-frag" aria-label="Document placeholders filled from the CRM record">
+              <p class="gn-frag__kind">Proposal</p>
+              <p class="gn-frag__title" data-dst="deal"><span class="gn-f">Office fit-out</span></p>
+              <p class="gn-frag__line" data-dst="company">Prepared for <span class="gn-f">Harbour &amp; Pine Architects</span></p>
+              <p class="gn-frag__line" data-dst="contact">Attention <span class="gn-f">Tom Okafor</span></p>
+              <div class="gn-frag__rows" data-dst="items"><span></span><span></span><span></span></div>
+              <p class="gn-frag__total" data-dst="amount"><span>Total</span><span class="gn-f">$26,850</span></p>
+            </div>
+          </div>
+
+          <ul class="gn-logos" data-reveal data-reveal-stagger="40">
+            <li data-reveal><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Salesforce</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" width="40" height="40" alt="" loading="lazy" decoding="async" />HubSpot</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" width="40" height="40" alt="" loading="lazy" decoding="async" />Dynamics</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="40" height="40" alt="" loading="lazy" decoding="async" />monday.com</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Xero</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" width="40" height="40" alt="" loading="lazy" decoding="async" />QuickBooks</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Stripe</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="40" height="40" alt="" loading="lazy" decoding="async" />PayPal</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/googlesheets-with-quotecloud"><img src="/assets/integrations/googlesheets.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Google Sheets</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/microsoft-excel-with-quotecloud"><img src="/assets/integrations/excel.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Excel</a></li>
+            <li data-reveal><a href="https://www.quote.cloud/slack-with-quotecloud"><img src="/assets/integrations/slack.jpg" width="40" height="40" alt="" loading="lazy" decoding="async" />Slack</a></li>
+            <li data-reveal class="gn-logos__all"><a href="https://www.quote.cloud/all-integrations">All integrations <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-arrow" /></svg></a></li>
+          </ul>
+
+          <div class="gn-api" data-reveal>
+            <div class="gn-api__copy">
+              <h3 class="gn-h3">Or generate from any system, <span class="gn-em">around the&nbsp;clock</span></h3>
+              <p>Any application that can make HTTPS requests can exchange document data with your QuoteCloud account through the GraphQL/REST API, producing any quantity of documents for archiving, email marketing, invoicing and more.</p>
+              <a class="gn-link gn-link--light" href="https://support.quote.cloud/">Read the developer guide <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-arrow" /></svg></a>
+            </div>
+            <div class="gn-log" data-gn-log>
+              <p class="gn-log__head" aria-hidden="true"><span class="gn-log__dot"></span>Generation log <small>sample</small></p>
+              <ol class="gn-log__list" data-gn-loglist>
+                <li><time>02:14</time><span>Invoice INV-20418</span><em class="gn-chip gn-chip--pdf">Archived</em></li>
+                <li><time>02:14</time><span>Renewal quote Q-7731</span><em class="gn-chip gn-chip--mail">Emailed</em></li>
+                <li><time>02:13</time><span>Welcome pack · Ridgeway Dental</span><em class="gn-chip gn-chip--mail">Emailed</em></li>
+                <li><time>02:13</time><span>Service agreement C-0457</span><em class="gn-chip gn-chip--pdf">Archived</em></li>
+                <li><time>02:12</time><span>Invoice INV-20417</span><em class="gn-chip gn-chip--mail">Emailed</em></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Client side: delivery, AI, pricing, eSign ───────── -->
+      <section class="gn-sec gn-close-deal" aria-labelledby="gn-cd-title">
+        <div class="qc-container gn-cd__grid">
+          <div class="gn-cd__copy" data-reveal>
+            <h2 class="gn-h2" id="gn-cd-title">Generated, delivered, <span class="gn-em">signed</span></h2>
+            <p class="gn-lead">Every document reaches the client when they need it and in the format they prefer. Then they choose options, accept and sign online.</p>
+            <ul class="gn-deliv" data-gn-deliv>
+              <li><span class="gn-deliv__ico"><svg class="gn-ico" width="20" height="20" aria-hidden="true"><use href="#gn-i-link" /></svg></span><b>Interactive web link</b><small>Pricing options, rich media and eSign in one place</small></li>
+              <li><span class="gn-deliv__ico"><svg class="gn-ico" width="20" height="20" aria-hidden="true"><use href="#gn-i-pdf" /></svg></span><b>PDF</b><small>For attachments and archives</small></li>
+              <li><span class="gn-deliv__ico"><svg class="gn-ico" width="20" height="20" aria-hidden="true"><use href="#gn-i-mail" /></svg></span><b>Straight to the inbox</b><small>Sent the moment it is generated</small></li>
+            </ul>
+            <p class="gn-cd__links">
+              <a class="gn-link" href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-arrow" /></svg></a>
+              <a class="gn-link" href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-arrow" /></svg></a>
+            </p>
+          </div>
+
+          <div class="gn-client" data-reveal="scale" data-gn-client>
+            <div class="gn-client__bar" aria-hidden="true"><span class="gn-gen__dots"><i></i><i></i><i></i></span><span class="gn-client__url">Proposal for Lumen Solar Co.</span></div>
+            <div class="gn-client__body">
+              <div class="gn-ai" data-gn-ai>
+                <p class="gn-ai__txt" data-gn-ai-txt>we can install solar on your 3 sites, it will save money and we do the permits too.</p>
+                <button class="gn-ai__btn" type="button" data-gn-ai-btn aria-pressed="false">
+                  <svg class="gn-ico" width="15" height="15" aria-hidden="true"><use href="#gn-i-spark" /></svg><span>Polish with AI</span>
+                </button>
+              </div>
+              <div class="gn-media" aria-hidden="true">
+                <span class="gn-media__play"><svg class="gn-ico" width="18" height="18"><use href="#gn-i-play" /></svg></span>
+                <span class="gn-media__cap">Site walkthrough <small>1:24</small></span>
+              </div>
+              <fieldset class="gn-pkg">
+                <legend>Choose your package</legend>
+                <label><input type="radio" name="pkg" value="18400" checked /><span><b>Standard</b><small>16 panels</small><em>$18,400</em></span></label>
+                <label><input type="radio" name="pkg" value="25600" /><span><b>Premium</b><small>24 panels + battery</small><em>$25,600</em></span></label>
+              </fieldset>
+              <label class="gn-addon"><input type="checkbox" value="1200" data-gn-addon /><span class="gn-addon__box" aria-hidden="true"><svg class="gn-ico" width="12" height="12"><use href="#gn-i-check" /></svg></span>Monitoring app <b>+$1,200</b></label>
+              <div class="gn-client__foot">
+                <p class="gn-client__total">Total <b data-gn-client-total>$18,400</b></p>
+                <button class="gn-sign" type="button" data-gn-sign-btn>Accept &amp; sign</button>
+              </div>
+              <div class="gn-sig" data-gn-sig>
+                <svg class="gn-sig__svg" viewBox="0 0 240 70" aria-hidden="true">
+                  <path d="M8 48c10-20 22-38 30-34 8 5-12 40-6 42 8 2 16-30 26-28 8 2 0 24 8 24 10 0 14-22 24-20 9 2 4 18 12 18 12 0 18-16 30-16 10 0 8 12 18 12 14 0 28-8 44-14" pathLength="1" />
+                </svg>
+                <p class="gn-sig__txt" data-gn-sig-txt aria-live="polite">Awaiting signature</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Templates + proof ───────── -->
+      <section class="gn-sec gn-proof" aria-labelledby="gn-proof-title">
+        <div class="qc-container gn-proof__head" data-reveal>
+          <h2 class="gn-h2" id="gn-proof-title">Start from a template, <span class="gn-em">not a blank page</span></h2>
+          <p class="gn-lead">Premade templates cover popular industries and document types. Unusual case? Build your own and reuse it forever.</p>
+        </div>
+        <div class="gn-marquee" data-gn-marquee>
+          <ul class="gn-marquee__track">
+            <li class="gn-tcard" style="--t: #ff4d47"><span class="gn-tcard__cover"></span><b>Solar installation proposal</b><small>Energy</small></li>
+            <li class="gn-tcard" style="--t: #5b3df5"><span class="gn-tcard__cover"></span><b>Managed services quote</b><small>Telecommunications</small></li>
+            <li class="gn-tcard" style="--t: #0f7b8a"><span class="gn-tcard__cover"></span><b>Property management agreement</b><small>Real estate</small></li>
+            <li class="gn-tcard" style="--t: #2b2f3a"><span class="gn-tcard__cover"></span><b>Maintenance contract</b><small>Trade services</small></li>
+            <li class="gn-tcard" style="--t: #e25b01"><span class="gn-tcard__cover"></span><b>Group travel itinerary</b><small>Travel</small></li>
+            <li class="gn-tcard" style="--t: #1fbf8f"><span class="gn-tcard__cover"></span><b>Website redesign proposal</b><small>Agencies</small></li>
+          </ul>
+        </div>
+        <div class="qc-container">
+          <div class="gn-proof__row" data-reveal>
+            <a class="gn-link" href="https://www.quote.cloud/templates">Browse templates <svg class="gn-ico" width="16" height="16" aria-hidden="true"><use href="#gn-i-arrow" /></svg></a>
+            <div class="gn-proof__stats">
+              <p><b><span data-count-to="4.2" data-count-decimals="1">4.2</span></b><span class="gn-stars" aria-hidden="true"><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg></span><small>Rated on Capterra</small></p>
+              <p><b><span data-count-to="4.2" data-count-decimals="1">4.2</span></b><span class="gn-stars" aria-hidden="true"><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg><svg class="gn-ico" width="14" height="14"><use href="#gn-i-star" /></svg></span><small>Rated on Software Advice</small></p>
+              <p><b><span data-count-to="2013" data-count-format="plain">2013</span></b><small>In business since</small></p>
+            </div>
+            <ul class="gn-badges" aria-label="Security and compliance">
+              <li><img src="/assets/compliance/eidas.svg" width="80" height="36" alt="eIDAS compliant eSignatures" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/compliance/encryption-256.png" width="44" height="42" alt="256-bit encryption" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/compliance/aws.svg" width="56" height="34" alt="Hosted on AWS" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/compliance/gdpr.png" width="42" height="42" alt="GDPR compliant" loading="lazy" decoding="async" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-docgen -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="gn-end" aria-labelledby="gn-end-title" data-gn-end>
+        <div class="gn-end__inner qc-container">
+          <div class="gn-end__copy" data-reveal>
+            <h2 class="gn-end__title" id="gn-end-title">Your next proposal is <span class="gn-em">one click away</span></h2>
+            <p>Bring a template, connect your CRM and generate your first document today.</p>
+            <div class="gn-end__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow gn-ico" width="18" height="18" aria-hidden="true"><use href="#gn-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn gn-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="gn-end__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+          </div>
+          <div class="gn-fan" aria-hidden="true">
+            <div class="gn-fan__doc" style="--t: #0f7b8a; --r: -9deg; --x: -46%"><span class="gn-fan__cover"><b>Contract</b></span><span></span><span></span><span class="gn-fan__s"></span></div>
+            <div class="gn-fan__doc" style="--t: #5b3df5; --r: 8deg; --x: 46%"><span class="gn-fan__cover"><b>Quote</b></span><span></span><span></span><span class="gn-fan__s"></span></div>
+            <div class="gn-fan__doc gn-fan__doc--front" style="--t: #ff4d47; --r: 0deg; --x: 0%"><span class="gn-fan__cover"><b>Proposal</b></span><span></span><span></span><span class="gn-fan__s"></span><em><svg class="gn-ico" width="12" height="12"><use href="#gn-i-check" /></svg>Ready to send</em></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

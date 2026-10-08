@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main">
+      <!-- ───────── Hero: many tools → one document ───────── -->
+      <section class="hero" id="hero" aria-labelledby="hero-title" data-hero>
+        <div class="qc-container hero__copy">
+          <h1 class="hero__title" id="hero-title">Every proposal, quote and contract. <em>One platform.</em></h1>
+          <p class="hero__sub">
+            One interactive document replaces the Word, Excel, slides, diagram, email and eSign patchwork &mdash;
+            customers explore it, choose options, sign and pay.
+          </p>
+          <div class="hero__cta">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+              Start free 14-day trial
+            </a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+          </div>
+          <p class="hero__note">No credit card required</p>
+        </div>
+
+        <div class="stage" data-stage>
+          <div class="stage__canvas" data-canvas aria-hidden="true">
+            <!-- the one document the fragments fuse into -->
+            <div class="doc" data-doc>
+              <div class="doc__bar"><span class="doc__q">Q</span><span class="doc__name">Solar upgrade proposal</span><span class="doc__pill">Sent</span></div>
+              <div class="doc__chip" data-chip>
+                <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Signed &amp; paid
+              </div>
+            </div>
+
+            <!-- 1 · slide deck → cover -->
+            <div class="frag" data-frag="slide">
+              <div class="frag__float">
+                <div class="frag__old f-slide">
+                  <div class="f-slide__canvas">
+                    <i class="f-slide__title"></i><i class="f-slide__line"></i><i class="f-slide__line f-slide__line--s"></i>
+                    <i class="f-slide__img"></i>
+                  </div>
+                  <div class="f-slide__strip"><i></i><i></i><i></i><i></i><i></i></div>
+                  <b class="f-file">Pitch deck (final).pptx</b>
+                </div>
+                <div class="frag__new n-cover">
+                  <div class="n-cover__art"></div>
+                  <div class="n-cover__text"><b>Solar upgrade proposal</b><span>Prepared for Acme Pty Ltd · Valid 30 days</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 · word processor → text block -->
+            <div class="frag" data-frag="text">
+              <div class="frag__float">
+                <div class="frag__old f-word">
+                  <div class="f-word__bar"><i></i><i></i><i></i><b class="f-file">Proposal_v7_FINAL(2).docx</b></div>
+                  <div class="f-word__tools"><i class="is-b">B</i><i class="is-i">I</i><i class="is-u">U</i><i></i><i></i></div>
+                  <div class="f-word__ruler"></div>
+                  <div class="f-lines"><span style="--l: 60%"></span><span style="--l: 100%"></span><span style="--l: 94%"></span><span style="--l: 88%"></span><span style="--l: 70%"></span></div>
+                </div>
+                <div class="frag__new n-text">
+                  <b>Overview</b>
+                  <div class="f-lines f-lines--ink"><span style="--l: 100%"></span><span style="--l: 92%"></span><span style="--l: 96%"></span><span style="--l: 64%"></span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 · diagram app → diagram block -->
+            <div class="frag" data-frag="diagram">
+              <div class="frag__float">
+                <div class="frag__old f-dia">
+                  <svg viewBox="0 0 124 110" aria-hidden="true">
+                    <rect x="38" y="10" width="48" height="20" rx="4" />
+                    <rect x="8" y="58" width="40" height="20" rx="4" />
+                    <rect x="76" y="58" width="40" height="20" rx="4" />
+                    <path d="M62 30v12M62 42H28v16M62 42h34v16" />
+                    <rect x="42" y="86" width="40" height="18" rx="9" />
+                    <path d="M28 78v8h14M96 78v8H82" />
+                  </svg>
+                  <b class="f-file">Untitled diagram (3)</b>
+                </div>
+                <div class="frag__new n-dia">
+                  <svg viewBox="0 0 124 110" aria-hidden="true">
+                    <rect x="38" y="10" width="48" height="20" rx="4" />
+                    <rect x="8" y="58" width="40" height="20" rx="4" />
+                    <rect x="76" y="58" width="40" height="20" rx="4" />
+                    <path d="M62 30v12M62 42H28v16M62 42h34v16" />
+                    <rect class="is-accent" x="42" y="86" width="40" height="18" rx="9" />
+                    <path d="M28 78v8h14M96 78v8H82" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 · spreadsheet → pricing table -->
+            <div class="frag" data-frag="sheet">
+              <div class="frag__float">
+                <div class="frag__old f-sheet">
+                  <div class="f-sheet__bar"><b class="f-file">Pricing_v3_copy.xlsx</b><i>fx</i><span>=SUM(C2:C9)*1.1</span></div>
+                  <div class="f-sheet__grid">
+                    <i></i><i>A</i><i>B</i><i>C</i><i>D</i>
+                    <i>1</i><i></i><i></i><i></i><i></i>
+                    <i>2</i><i></i><i></i><i></i><i></i>
+                    <i>3</i><i></i><i class="is-sel"></i><i></i><i></i>
+                    <i>4</i><i></i><i></i><i></i><i></i>
+                  </div>
+                </div>
+                <div class="frag__new n-price">
+                  <div class="n-price__row n-price__row--h"><span>Item</span><span>Qty</span><span>Total</span></div>
+                  <div class="n-price__row"><span>Solar panels 440W</span><span>24</span><span>$28,800</span></div>
+                  <div class="n-price__row"><span>Installation &amp; commissioning</span><span>1</span><span>$6,400</span></div>
+                  <div class="n-price__row n-price__row--opt"><span><i class="n-toggle"></i>Battery storage 10kWh</span><span>1</span><span>$6,400</span></div>
+                  <div class="n-price__row n-price__row--t"><span>Total incl. GST</span><span></span><span>$45,760</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 · email approval thread → approval flow -->
+            <div class="frag" data-frag="mail">
+              <div class="frag__float">
+                <div class="frag__old f-mail">
+                  <div class="f-mail__row"><i></i><b>RE: RE: RE: Approval?</b><span>9:42</span></div>
+                  <div class="f-mail__row"><i></i><b>RE: RE: Approval?</b><span>Tue</span></div>
+                  <div class="f-mail__row"><i></i><b>FW: Approval needed</b><span>Mon</span></div>
+                </div>
+                <div class="frag__new n-appr">
+                  <span class="n-appr__step is-ok">Manager</span>
+                  <i class="n-appr__arrow"></i>
+                  <span class="n-appr__step is-ok">Finance</span>
+                  <i class="n-appr__arrow"></i>
+                  <span class="n-appr__step is-ok">Sent</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 · separate eSign envelope → signature block -->
+            <div class="frag" data-frag="sign">
+              <div class="frag__float">
+                <div class="frag__old f-env">
+                  <div class="f-env__flap"></div>
+                  <b class="f-env__tag">SIGN HERE</b>
+                  <span class="f-file">Please print, sign &amp; return</span>
+                </div>
+                <div class="frag__new n-sign">
+                  <svg viewBox="0 0 120 32" aria-hidden="true"><path d="M4 24c6-14 12-16 14-8s2 14 8 8 10-18 16-10-2 16 6 10 10-16 16-10 2 14 10 8 8-10 14-8 10 4 24 2" /></svg>
+                  <span>Signed · J. Hartley · 2:14 pm</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <button class="stage__replay" type="button" data-replay aria-label="Replay animation" hidden>
+            <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M4 10a6 6 0 1 1 1.8 4.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 6v4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <p class="hero__cap" aria-hidden="true">
+          <span class="hero__cap-many">Word &middot; Excel &middot; Slides &middot; Diagrams &middot; Email &middot; eSign app</span>
+          <span class="hero__cap-one">One QuoteCloud document</span>
+        </p>
+      </section>
+
+      <!-- ───────── Bento: what lives inside that one document ───────── -->
+      <section class="bento" id="inside" aria-labelledby="bento-title">
+        <div class="qc-container">
+          <h2 class="sec-title" id="bento-title" data-reveal>Everything a deal needs, <em>in one document.</em></h2>
+          <p class="sec-sub" data-reveal>Pricing, forms, diagrams, spreadsheets, approvals, signatures and AI — editable together, delivered as one link.</p>
+
+          <div class="bento__grid" data-reveal-stagger="70">
+            <!-- CPQ pricing -->
+            <article class="tile tile--cpq" data-reveal data-tile>
+              <div class="tile__visual">
+                <div class="cpq">
+                  <div class="cpq__row cpq__row--h"><span>Item</span><span>Qty</span><span>Price</span></div>
+                  <div class="cpq__row"><span>Core platform licence</span><span>1</span><span>$9,600</span></div>
+                  <div class="cpq__row"><span>Onboarding workshop</span><span class="cpq__qty"><i class="cpq__q cpq__q--2">2</i><i class="cpq__q cpq__q--3">3</i><b class="cpq__plus">+</b></span><span class="cpq__amt"><i class="cpq__a cpq__a--2">$2,800</i><i class="cpq__a cpq__a--3">$4,200</i></span></div>
+                  <div class="cpq__row cpq__row--opt"><span><i class="cpq__toggle"></i>Priority support <small>optional</small></span><span>1</span><span>$2,500</span></div>
+                  <div class="cpq__row cpq__row--d"><span>Volume discount</span><span></span><span>&minus;10%</span></div>
+                  <div class="cpq__row cpq__row--t"><span>Total</span><span></span><span class="cpq__total"><i class="cpq__t cpq__t--1">$11,160</i><i class="cpq__t cpq__t--2">$13,410</i><i class="cpq__t cpq__t--3">$14,670</i></span></div>
+                  <div class="cursor cpq__cursor"></div>
+                </div>
+              </div>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/cpq-software">Configurable pricing &amp; CPQ</a></h3>
+              <p class="tile__text">Options, quantities, discounts, tax, formulas and multi-currency. Customers choose; totals update live.</p>
+            </article>
+
+            <!-- eSign -->
+            <article class="tile tile--sign" data-reveal data-tile>
+              <div class="tile__visual">
+                <div class="esig">
+                  <svg class="esig__path" viewBox="0 0 220 60" aria-hidden="true"><path d="M8 44c10-26 22-30 26-14s4 26 14 14 18-34 30-18-4 30 10 18 18-30 30-18 4 26 18 14 14-18 26-14 18 8 44 4" /></svg>
+                  <span class="esig__line"></span>
+                  <span class="esig__stamp">Signed · 256-bit encrypted</span>
+                  <ul class="esig__audit">
+                    <li>Viewed by j.hartley@acme.com · 10:02</li>
+                    <li>Signed · 10:14 · IP verified</li>
+                    <li>Completed · certificate issued</li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/electronic-signature-software-solution">Legally binding eSignatures</a></h3>
+              <p class="tile__text">eIDAS compliant, with a full audit trail.</p>
+            </article>
+
+            <!-- Forms -->
+            <article class="tile tile--form" data-reveal data-tile>
+              <div class="tile__visual">
+                <div class="form">
+                  <label class="form__field"><span>Site address</span><i class="form__input form__input--1"><em>14 Harbour St, Sydney</em></i></label>
+                  <label class="form__field"><span>Preferred install date</span><i class="form__input form__input--2"><em>12 Nov 2026</em></i></label>
+                  <span class="form__check"><i></i>Grid-connected</span>
+                </div>
+              </div>
+              <h3 class="tile__title">Forms customers fill in</h3>
+              <p class="tile__text">Collect details inside the document itself.</p>
+            </article>
+
+            <!-- Spreadsheet ↔ price table -->
+            <article class="tile tile--link" data-reveal data-tile>
+              <div class="tile__visual">
+                <div class="link">
+                  <div class="link__sheet">
+                    <div class="link__cells">
+                      <i></i><i>A</i><i>B</i>
+                      <i>1</i><i>Panels</i><i>24</i>
+                      <i>2</i><i>Rate</i><i class="link__cell"><em class="is-a">1,100</em><em class="is-b">1,200</em></i>
+                      <i>3</i><i>Total</i><i class="link__cell"><em class="is-a">26,400</em><em class="is-b">28,800</em></i>
+                    </div>
+                  </div>
+                  <svg class="link__wire" viewBox="0 0 80 40" aria-hidden="true"><path d="M2 20h76" /><circle class="link__dot" r="4" /></svg>
+                  <div class="link__price">
+                    <div class="link__row link__row--h"><span>Price table</span></div>
+                    <div class="link__row"><span>Panels &times; 24</span><span class="link__cell"><em class="is-a">$26,400</em><em class="is-b">$28,800</em></span></div>
+                    <div class="link__row"><span>Install</span><span>$6,400</span></div>
+                    <div class="link__row link__row--t"><span>Total</span><span class="link__cell"><em class="is-a">$32,800</em><em class="is-b">$35,200</em></span></div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="tile__title">Spreadsheets linked to price tables</h3>
+              <p class="tile__text">Change a cell and the quote updates — totals flow both ways.</p>
+            </article>
+
+            <!-- Diagrams -->
+            <article class="tile tile--dia" data-reveal data-tile>
+              <div class="tile__visual">
+                <svg class="dia" viewBox="0 0 260 150" aria-hidden="true">
+                  <g class="dia__n dia__n--1"><rect x="100" y="8" width="60" height="26" rx="6" /><text x="130" y="25">Start</text></g>
+                  <path class="dia__e dia__e--1" d="M130 34v18M130 52H70v18M130 52h60v18" />
+                  <g class="dia__n dia__n--2"><rect x="38" y="70" width="64" height="26" rx="6" /><text x="70" y="87">Survey</text></g>
+                  <g class="dia__n dia__n--3"><rect x="158" y="70" width="64" height="26" rx="6" /><text x="190" y="87">Design</text></g>
+                  <path class="dia__e dia__e--2" d="M70 96v12h60v12M190 96v12h-60" />
+                  <g class="dia__n dia__n--4 is-accent"><rect x="96" y="120" width="68" height="26" rx="13" /><text x="130" y="137">Install</text></g>
+                </svg>
+              </div>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Diagrams, Gantt &amp; timelines</a></h3>
+              <p class="tile__text">Flowcharts, org charts and process maps drawn in place.</p>
+            </article>
+
+            <!-- Collaboration -->
+            <article class="tile tile--collab" data-reveal data-tile>
+              <div class="tile__visual">
+                <div class="collab">
+                  <b>Scope of work</b>
+                  <p>We will supply and install a <mark class="collab__sel">24-panel rooftop</mark> system with monitoring, commissioned within 10 working days.</p>
+                  <div class="f-lines f-lines--ink"><span style="--l: 96%"></span><span style="--l: 72%"></span></div>
+                  <div class="cursor cursor--named collab__c1" data-name="Priya"></div>
+                  <div class="cursor cursor--named collab__c2" data-name="Tom"></div>
+                  <div class="collab__comment"><i>T</i>Can we add the warranty here?</div>
+                </div>
+              </div>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/collaboration">Real-time collaboration</a></h3>
+              <p class="tile__text">Sales, technical and finance edit the same document at once.</p>
+            </article>
+
+            <!-- AI co-worker -->
+            <article class="tile tile--ai" data-reveal data-tile>
+              <div class="tile__visual">
+                <div class="ai">
+                  <div class="ai__prompt"><i class="ai__spark"></i>Write an introduction for Acme's solar upgrade</div>
+                  <div class="ai__out">
+                    <span class="ai__l ai__l--1">Acme is ready to cut energy costs by up to 60%.</span>
+                    <span class="ai__l ai__l--2">This proposal outlines a 24-panel rooftop system,</span>
+                    <span class="ai__l ai__l--3">installed and commissioned within ten working days.</span>
+                  </div>
+                  <span class="ai__insert">Insert into document</span>
+                </div>
+              </div>
+              <h3 class="tile__title"><a href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker</a></h3>
+              <p class="tile__text">Drafts introductions, value propositions and rewrites on request.</p>
+            </article>
+          </div>
+
+          <div class="bento__cta" data-reveal>
+            <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="after-bento">Start free 14-day trial</a>
+            <a class="more-link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">See all 18 content blocks<span aria-hidden="true"> &rarr;</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Before / after ───────── -->
+      <section class="compare" id="compare" aria-labelledby="compare-title">
+        <div class="qc-container">
+          <h2 class="sec-title" id="compare-title" data-reveal>A static PDF, or <em>an experience.</em></h2>
+          <p class="sec-sub" data-reveal>Drag the divider. Your customers choose options, ask questions, sign and pay — all in the document you sent.</p>
+
+          <div class="cmp" data-cmp data-reveal="scale">
+            <!-- after (QuoteCloud) sits underneath, full width -->
+            <div class="cmp__pane cmp__pane--after">
+              <div class="cmp__label cmp__label--after">QuoteCloud document</div>
+              <div class="cmp__page cmp__page--after">
+                <div class="cmp__brandbar"><span>Q</span>Solar upgrade proposal<em>Opened 2 min ago</em></div>
+                <div class="cmp__cover"><b>Solar upgrade proposal</b><span>Prepared for Acme Pty Ltd</span></div>
+                <div class="cmp__body">
+                  <div class="cmp__col">
+                    <b>Your options</b>
+                    <div class="cmp__opt"><i class="n-toggle"></i>Battery storage 10kWh<span>$6,400</span></div>
+                    <div class="cmp__opt"><i class="n-toggle is-off"></i>Extended warranty<span>$900</span></div>
+                    <div class="cmp__total"><span>Total</span><span>$45,760</span></div>
+                    <b class="cmp__wide">Scope of work</b>
+                    <div class="f-lines f-lines--ink cmp__wide"><span style="--l: 100%"></span><span style="--l: 88%"></span><span style="--l: 94%"></span><span style="--l: 56%"></span></div>
+                  </div>
+                  <div class="cmp__col">
+                    <b class="cmp__wide">Your details</b>
+                    <div class="cmp__field cmp__wide"><span>Site address</span>12 Harbour St, Sydney</div>
+                    <div class="cmp__field cmp__wide"><span>Preferred start</span>November 2026</div>
+                    <div class="cmp__bubble"><i>A</i>Can we start in November?<em>Reply</em></div>
+                    <div class="cmp__signrow">
+                      <svg viewBox="0 0 120 32" aria-hidden="true"><path d="M4 24c6-14 12-16 14-8s2 14 8 8 10-18 16-10-2 16 6 10 10-16 16-10 2 14 10 8 8-10 14-8 10 4 24 2" /></svg>
+                      <span>Sign</span>
+                    </div>
+                    <span class="cmp__pay">Pay deposit · $4,576</span>
+                    <span class="cmp__track">Viewed 3 times · Battery option selected</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- before (PDF) is clipped by --split -->
+            <div class="cmp__pane cmp__pane--before">
+              <div class="cmp__label cmp__label--before">Static PDF</div>
+              <div class="cmp__page cmp__page--before">
+                <div class="cmp__pdfbar"><i>PDF</i>proposal_final_v3.pdf<em>1 / 12</em></div>
+                <div class="cmp__pdftitle"></div>
+                <div class="f-lines"><span style="--l: 100%"></span><span style="--l: 96%"></span><span style="--l: 90%"></span><span style="--l: 60%"></span></div>
+                <div class="cmp__pdftable">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="f-lines"><span style="--l: 94%"></span><span style="--l: 80%"></span><span style="--l: 88%"></span></div>
+                <div class="cmp__pdfsteps">Print &rarr; Sign &rarr; Scan &rarr; Email back</div>
+              </div>
+            </div>
+            <div class="cmp__divider" aria-hidden="true"><span class="cmp__handle"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+            <input class="cmp__range" type="range" min="0" max="100" value="50" step="1" aria-label="Compare static PDF with the interactive QuoteCloud document" data-cmp-range />
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="integrations" id="integrations" aria-labelledby="int-title">
+        <div class="qc-container">
+          <h2 class="sec-title sec-title--sm" id="int-title" data-reveal>Plugs into <em>the tools you already use.</em></h2>
+        </div>
+        <div class="marquee" data-marquee>
+          <ul class="marquee__track">
+            <li><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/xero.png" alt="Xero" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/stripe.png" alt="Stripe" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/paypal.png" alt="PayPal" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="monday.com" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/slack.jpg" alt="Slack" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/googlesheets.png" alt="Google Sheets" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/googledocs.jpg" alt="Google Docs" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/excel.png" alt="Microsoft Excel" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/calendar.jpg" alt="Google Calendar" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/freshbooks-accounting-logo.jpg" alt="FreshBooks" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/zendesk-logo.jpg" alt="Zendesk" width="56" height="56" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/serviceM8.png" alt="ServiceM8" width="56" height="56" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+        <p class="integrations__more" data-reveal>
+          Also Pipedrive, Zoho, OneDrive, Teams, simPRO, Sabre GDS, Tramada and Tres.
+          <a href="https://www.quote.cloud/all-integrations">See all integrations<span aria-hidden="true"> &rarr;</span></a>
+        </p>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="proof" id="proof" aria-labelledby="proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="proof-title">Why teams trust QuoteCloud</h2>
+          <ul class="proof__stats" data-reveal-stagger="90">
+            <li data-reveal><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><span class="proof__star" aria-hidden="true">&#9733;</span></strong><span>Capterra rating</span></li>
+            <li data-reveal><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><span class="proof__star" aria-hidden="true">&#9733;</span></strong><span>Software Advice rating</span></li>
+            <li data-reveal><strong>2013</strong><span>Helping teams close deals since</span></li>
+            <li data-reveal><strong><span data-count-to="20" data-count-suffix="%+">20%+</span></strong><span>Productivity lost to inefficient document management</span></li>
+          </ul>
+          <ul class="proof__badges" data-reveal="fade">
+            <li><img src="/assets/compliance/eidas.svg" alt="eIDAS compliant eSignatures" width="44" height="44" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/encryption-256.png" alt="256-bit encryption" width="44" height="42" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/aws.svg" alt="Hosted on AWS" width="44" height="44" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/gdpr.png" alt="GDPR compliant" width="44" height="44" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── FAQ (shared partial) ───────── -->
+      <div class="faq-wrap">
+        <!-- @include faq -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" id="start" aria-labelledby="close-title" data-close>
+        <div class="close__glow" aria-hidden="true"></div>
+        <div class="qc-container close__inner">
+          <h2 class="close__title" id="close-title" data-reveal>Stop stitching tools together. <em>Send one document.</em></h2>
+          <div class="close__cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial</a>
+            <a class="qc-btn qc-btn--lg close__ghost" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+          </div>
+          <p class="close__note" data-reveal="fade">14-day free trial · No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+
+    <div class="sticky-cta" data-sticky hidden>
+      <a class="qc-btn qc-btn--primary qc-btn--block" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile">Start free 14-day trial</a>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

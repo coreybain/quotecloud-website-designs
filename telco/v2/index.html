@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-telco -->
+  </head>
+  <body class="t2">
+    <!-- @include header -->
+
+    <svg class="t2-sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-fibre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+      <symbol id="i-sdwan" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1.2"/><rect x="2.5" y="16" width="6" height="5" rx="1.2"/><rect x="15.5" y="16" width="6" height="5" rx="1.2"/><path d="M12 8v4M5.5 16v-2a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v2"/></symbol>
+      <symbol id="i-voice" viewBox="0 0 24 24"><path d="M21 16.4v2.8a1.9 1.9 0 0 1-2 1.9 18.6 18.6 0 0 1-8.2-2.9 18.3 18.3 0 0 1-5.6-5.6A18.6 18.6 0 0 1 2.3 4.4 1.9 1.9 0 0 1 4.2 2.3H7a1.9 1.9 0 0 1 1.9 1.6c.1.9.4 1.8.7 2.7a1.9 1.9 0 0 1-.4 2L8 9.8a15 15 0 0 0 5.6 5.6l1.2-1.2a1.9 1.9 0 0 1 2-.4c.9.3 1.8.6 2.7.7a1.9 1.9 0 0 1 1.6 1.9z"/></symbol>
+      <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.3a5 5 0 0 1 7 0"/><circle cx="12" cy="19.6" r=".9"/></symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.5 1.1 6.3L12 17.3l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: the pricing engine ───────── -->
+      <section class="t2-hero" aria-labelledby="t2-hero-title">
+        <div class="t2-hero__fibre" aria-hidden="true">
+          <svg viewBox="0 0 1440 760" preserveAspectRatio="none">
+            <path class="t2-fl t2-fl--1" d="M-20 520 C 320 520 420 300 760 300 S 1180 180 1460 160" />
+            <path class="t2-fl-light t2-fl--1" d="M-20 520 C 320 520 420 300 760 300 S 1180 180 1460 160" />
+            <path class="t2-fl t2-fl--2" d="M-20 600 C 360 600 520 420 820 420 S 1220 340 1460 330" />
+            <path class="t2-fl-light t2-fl--2" d="M-20 600 C 360 600 520 420 820 420 S 1220 340 1460 330" />
+            <path class="t2-fl t2-fl--3" d="M-20 680 C 420 680 600 560 900 560 S 1260 520 1460 520" />
+            <path class="t2-fl-light t2-fl--3" d="M-20 680 C 420 680 600 560 900 560 S 1260 520 1460 520" />
+          </svg>
+        </div>
+
+        <div class="qc-container t2-hero__inner">
+          <div class="t2-hero__copy">
+            <h1 class="t2-hero__title" id="t2-hero-title">Telecom quoting software, <em>right on every&nbsp;term.</em></h1>
+            <p class="t2-hero__lede">Price connectivity, voice, mobile and managed services on 12, 24 or 36 months. Recurring and once-off, in one proposal your customer can sign.</p>
+            <div class="t2-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="t2-hero__note">No credit card required</p>
+          </div>
+
+          <div class="t2-quote" data-quote>
+            <div class="t2-quote__bar">
+              <span class="t2-quote__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <p class="t2-quote__doc"><strong>Harbour Logistics</strong> <span>Connectivity &amp; Voice Proposal</span></p>
+              <span class="t2-quote__live" aria-hidden="true">Q-2418</span>
+            </div>
+
+            <fieldset class="t2-term" data-term>
+              <legend class="qc-sr-only">Contract term</legend>
+              <div class="t2-term__track">
+                <span class="t2-term__glide" aria-hidden="true"></span>
+                <label class="t2-term__opt">
+                  <input type="radio" name="t2-term" value="12" />
+                  <span class="t2-term__len">12 months</span>
+                  <span class="t2-term__price" data-term-price="12">$3,478/mo</span>
+                </label>
+                <label class="t2-term__opt">
+                  <input type="radio" name="t2-term" value="24" checked />
+                  <span class="t2-term__len">24 months</span>
+                  <span class="t2-term__price" data-term-price="24">$3,154/mo</span>
+                </label>
+                <label class="t2-term__opt">
+                  <input type="radio" name="t2-term" value="36" />
+                  <span class="t2-term__len">36 months</span>
+                  <span class="t2-term__price" data-term-price="36">$2,884/mo</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <table class="t2-lines">
+              <caption class="qc-sr-only">Quote lines with quantity, monthly recurring and once-off charges for the selected contract term</caption>
+              <thead>
+                <tr><th scope="col">Service</th><th scope="col">Qty</th><th scope="col">Monthly</th><th scope="col">Once-off</th></tr>
+              </thead>
+              <tbody>
+                <tr class="t2-line" data-line="fibre">
+                  <th scope="row"><span class="t2-line__svc"><span class="t2-ic t2-ic--sky" aria-hidden="true"><svg><use href="#i-fibre" /></svg></span><span class="t2-line__name">Business Fibre 1000/400<small>Per site · 99.95% SLA</small></span></span></th>
+                  <td class="t2-line__qty"><span class="t2-step" role="group" aria-label="Sites"><button type="button" data-step="-1" aria-label="Remove a site">−</button><output data-qty>3</output><button type="button" data-step="1" aria-label="Add a site">+</button></span></td>
+                  <td class="t2-num" data-label="Monthly"><span data-mrc>$897</span></td>
+                  <td class="t2-num" data-label="Once-off"><span data-nrc>$1,485</span></td>
+                </tr>
+                <tr class="t2-line" data-line="sdwan">
+                  <th scope="row"><span class="t2-line__svc"><span class="t2-ic t2-ic--violet" aria-hidden="true"><svg><use href="#i-sdwan" /></svg></span><span class="t2-line__name">Managed SD-WAN edge<small>One per site · rule-linked</small></span></span></th>
+                  <td class="t2-line__qty"><span class="t2-qty-fixed" data-qty>3</span></td>
+                  <td class="t2-num" data-label="Monthly"><span data-mrc>$405</span></td>
+                  <td class="t2-num" data-label="Once-off"><span data-nrc>$1,170</span></td>
+                </tr>
+                <tr class="t2-line" data-line="pbx">
+                  <th scope="row"><span class="t2-line__svc"><span class="t2-ic t2-ic--mint" aria-hidden="true"><svg><use href="#i-voice" /></svg></span><span class="t2-line__name">Hosted PBX seat<small>SIP · unlimited national calls</small></span></span></th>
+                  <td class="t2-line__qty"><span class="t2-step" role="group" aria-label="Hosted PBX seats"><button type="button" data-step="-5" aria-label="Remove 5 seats">−</button><output data-qty>40</output><button type="button" data-step="5" aria-label="Add 5 seats">+</button></span></td>
+                  <td class="t2-num" data-label="Monthly"><span data-mrc>$920</span></td>
+                  <td class="t2-num" data-label="Once-off"><span data-nrc>$400</span></td>
+                </tr>
+                <tr class="t2-line" data-line="mobile">
+                  <th scope="row"><span class="t2-line__svc"><span class="t2-ic t2-ic--amber" aria-hidden="true"><svg><use href="#i-mobile" /></svg></span><span class="t2-line__name">5G mobile plan + handset<small>120 GB · device on plan</small></span></span></th>
+                  <td class="t2-line__qty"><span class="t2-step" role="group" aria-label="Mobile plans"><button type="button" data-step="-1" aria-label="Remove a mobile plan">−</button><output data-qty>12</output><button type="button" data-step="1" aria-label="Add a mobile plan">+</button></span></td>
+                  <td class="t2-num" data-label="Monthly"><span data-mrc>$780</span></td>
+                  <td class="t2-num" data-label="Once-off"><span data-nrc>$2,880</span></td>
+                </tr>
+                <tr class="t2-line" data-line="wifi">
+                  <th scope="row"><span class="t2-line__svc"><span class="t2-ic t2-ic--sky" aria-hidden="true"><svg><use href="#i-wifi" /></svg></span><span class="t2-line__name">Managed Wi-Fi 6 access point<small>Monitored · cloud-managed</small></span></span></th>
+                  <td class="t2-line__qty"><span class="t2-qty-fixed" data-qty>8</span></td>
+                  <td class="t2-num" data-label="Monthly"><span data-mrc>$152</span></td>
+                  <td class="t2-num" data-label="Once-off"><span data-nrc>$1,160</span></td>
+                </tr>
+                <tr class="t2-line" data-line="install">
+                  <th scope="row"><span class="t2-line__svc"><span class="t2-ic t2-ic--ink" aria-hidden="true"><svg><use href="#i-tool" /></svg></span><span class="t2-line__name">Installation &amp; setup<small>Project managed · cut-over</small></span></span></th>
+                  <td class="t2-line__qty"><span class="t2-qty-fixed" data-qty>1</span></td>
+                  <td class="t2-num" data-label="Monthly"><span data-mrc>$0</span></td>
+                  <td class="t2-num" data-label="Once-off"><span data-nrc>$2,400</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="t2-totals">
+              <div class="t2-total">
+                <span class="t2-total__label">Monthly recurring</span>
+                <strong class="t2-total__value" data-total="mrc">$3,154</strong>
+              </div>
+              <div class="t2-total">
+                <span class="t2-total__label">Once-off</span>
+                <strong class="t2-total__value" data-total="nrc">$9,495</strong>
+              </div>
+              <div class="t2-total t2-total--tcv">
+                <span class="t2-total__label">Total contract value</span>
+                <strong class="t2-total__value" data-total="tcv">$85,191</strong>
+                <span class="t2-tcvbar" aria-hidden="true"><i class="t2-tcvbar__r"></i><i class="t2-tcvbar__o"></i></span>
+              </div>
+            </div>
+            <p class="qc-sr-only" aria-live="polite" data-live></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── One proposal, every charge ───────── -->
+      <section class="t2-section t2-clarity" aria-labelledby="t2-clarity-title">
+        <div class="qc-container">
+          <header class="t2-head" data-reveal>
+            <h2 id="t2-clarity-title">One proposal. <em>Every service, every charge.</em></h2>
+            <p>Connectivity, voice, mobile, devices and managed services sit together, with monthly and once-off totals your customer reads in seconds.</p>
+          </header>
+
+          <div class="t2-doc" data-reveal="scale">
+            <div class="t2-doc__cover">
+              <span class="t2-doc__brand" aria-hidden="true"></span>
+              <div>
+                <p class="t2-doc__kicker">Prepared for Harbour Logistics</p>
+                <p class="t2-doc__title">Your connected workplace</p>
+              </div>
+            </div>
+            <div class="t2-doc__body">
+              <div class="t2-bundle">
+                <h3 class="t2-doc__h">Included in your solution</h3>
+                <ul class="t2-bundle__list" data-reveal-stagger="90">
+                  <li data-reveal><span class="t2-ic t2-ic--sky" aria-hidden="true"><svg><use href="#i-fibre" /></svg></span><span><strong>Connectivity</strong>Business Fibre 1000/400 and managed SD-WAN at <b data-sync="sites">3</b> sites</span></li>
+                  <li data-reveal><span class="t2-ic t2-ic--mint" aria-hidden="true"><svg><use href="#i-voice" /></svg></span><span><strong>Voice</strong><b data-sync="pbx">40</b> hosted PBX seats with SIP and call recording</span></li>
+                  <li data-reveal><span class="t2-ic t2-ic--amber" aria-hidden="true"><svg><use href="#i-mobile" /></svg></span><span><strong>Mobile</strong><b data-sync="mobile">12</b> 5G plans, handsets assigned to each plan</span></li>
+                  <li data-reveal><span class="t2-ic t2-ic--violet" aria-hidden="true"><svg><use href="#i-cloud" /></svg></span><span><strong>Cloud &amp; Wi-Fi</strong>Managed Wi-Fi 6 and Microsoft 365 onboarding</span></li>
+                  <li data-reveal><span class="t2-ic t2-ic--ink" aria-hidden="true"><svg><use href="#i-tool" /></svg></span><span><strong>Services</strong>Installation, project management and 24/7 support</span></li>
+                </ul>
+              </div>
+
+              <fieldset class="t2-compare" data-compare>
+                <legend class="t2-doc__h">Choose your term</legend>
+                <div class="t2-compare__grid">
+                  <label class="t2-opt" data-opt="12">
+                    <input type="radio" name="t2-compare" value="12" />
+                    <span class="t2-opt__term">12 months</span>
+                    <span class="t2-opt__row"><span>Monthly</span><b data-c="mrc">$3,478</b></span>
+                    <span class="t2-opt__row"><span>Once-off</span><b data-c="nrc">$20,470</b></span>
+                    <span class="t2-opt__row t2-opt__row--tcv"><span>Total value</span><b data-c="tcv">$62,206</b></span>
+                    <span class="t2-opt__pick" aria-hidden="true"><svg><use href="#i-check" /></svg></span>
+                  </label>
+                  <label class="t2-opt" data-opt="24">
+                    <input type="radio" name="t2-compare" value="24" checked />
+                    <span class="t2-opt__term">24 months</span>
+                    <span class="t2-opt__row"><span>Monthly</span><b data-c="mrc">$3,154</b></span>
+                    <span class="t2-opt__row"><span>Once-off</span><b data-c="nrc">$9,495</b></span>
+                    <span class="t2-opt__row t2-opt__row--tcv"><span>Total value</span><b data-c="tcv">$85,191</b></span>
+                    <span class="t2-opt__pick" aria-hidden="true"><svg><use href="#i-check" /></svg></span>
+                  </label>
+                  <label class="t2-opt" data-opt="36">
+                    <input type="radio" name="t2-compare" value="36" />
+                    <span class="t2-opt__term">36 months</span>
+                    <span class="t2-opt__row"><span>Monthly</span><b data-c="mrc">$2,884</b></span>
+                    <span class="t2-opt__row"><span>Once-off</span><b data-c="nrc">$1,600</b></span>
+                    <span class="t2-opt__row t2-opt__row--tcv"><span>Total value</span><b data-c="tcv">$105,424</b></span>
+                    <span class="t2-opt__pick" aria-hidden="true"><svg><use href="#i-check" /></svg></span>
+                  </label>
+                </div>
+                <div class="t2-split" data-split>
+                  <p class="t2-split__title">Where the <b data-split-term>24-month</b> contract value comes from</p>
+                  <span class="t2-split__bar" aria-hidden="true"><i class="t2-split__r"></i><i class="t2-split__o"></i></span>
+                  <ul class="t2-split__legend">
+                    <li><i class="t2-dot t2-dot--r" aria-hidden="true"></i>Recurring over the term <b data-split="r">$75,696</b></li>
+                    <li><i class="t2-dot t2-dot--o" aria-hidden="true"></i>Once-off <b data-split="o">$9,495</b></li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <p class="t2-more" data-reveal><a href="https://www.quote.cloud/cpq-software">How QuoteCloud CPQ handles telco pricing <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Protect the deal (bento) ───────── -->
+      <section class="t2-section t2-protect" aria-labelledby="t2-protect-title">
+        <div class="qc-container">
+          <header class="t2-head" data-reveal>
+            <h2 id="t2-protect-title">Protect the margin <em>before it leaves the building.</em></h2>
+            <p>Catalogue pricing, hidden carrier costs and approval rules keep every quote accurate and every discount accountable.</p>
+          </header>
+
+          <div class="t2-bento" data-reveal-stagger="90">
+            <article class="t2-card t2-card--cat" data-reveal data-catalogue>
+              <div class="t2-card__text">
+                <h3>Catalogue, bundles and SKUs</h3>
+                <p>Pick from categories, drop in a bundle, assign devices to plans.</p>
+              </div>
+              <div class="t2-cat" aria-hidden="true">
+                <div class="t2-cat__search"><svg><use href="#i-search" /></svg><span data-typed>branch</span><i class="t2-caret"></i></div>
+                <div class="t2-cat__tabs"><span>Connectivity</span><span>Voice</span><span>Mobile</span><span>Cloud</span><span>Managed</span></div>
+                <div class="t2-cat__bundle">
+                  <div class="t2-cat__head">
+                    <span class="t2-ic t2-ic--violet"><svg><use href="#i-box" /></svg></span>
+                    <span class="t2-cat__name">Branch-in-a-box<small>Bundle · 5 items</small></span>
+                    <span class="t2-cat__price">$489<small>/mo</small></span>
+                    <span class="t2-cat__add">Added</span>
+                  </div>
+                  <ul class="t2-cat__items">
+                    <li><code>FBR-500-36</code>Business Fibre 500/200<b>$219</b></li>
+                    <li><code>SDW-EDGE-M</code>SD-WAN edge, managed<b>$119</b></li>
+                    <li><code>PBX-SEAT</code>Hosted PBX seat × 4<b>$84</b></li>
+                    <li><code>WIFI6-AP</code>Wi-Fi 6 access point × 2<b>$34</b></li>
+                    <li><code>NOC-SUP</code>Proactive monitoring<b>$33</b></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="t2-card t2-card--margin" data-reveal data-margin>
+              <div class="t2-card__text">
+                <h3>Buy rates stay internal</h3>
+                <p>Carrier costs and margin live in the quote. Customers never see them.</p>
+              </div>
+              <div class="t2-margin">
+                <button class="t2-switch" type="button" role="switch" aria-checked="true" data-margin-switch>
+                  <span class="t2-switch__track" aria-hidden="true"><span class="t2-switch__thumb"></span></span>
+                  <span>Internal view</span>
+                </button>
+                <div class="t2-margin__table" aria-hidden="true">
+                  <div class="t2-margin__row t2-margin__row--head"><span>Service</span><span>Sell</span><span class="t2-int">Buy</span><span class="t2-int">Margin</span></div>
+                  <div class="t2-margin__row"><span>Fibre 1000/400</span><span>$299</span><span class="t2-int">$187</span><span class="t2-int"><i style="--m: 0.37"></i>37%</span></div>
+                  <div class="t2-margin__row"><span>SD-WAN edge</span><span>$135</span><span class="t2-int">$82</span><span class="t2-int"><i style="--m: 0.39"></i>39%</span></div>
+                  <div class="t2-margin__row"><span>PBX seat</span><span>$23</span><span class="t2-int">$12</span><span class="t2-int"><i style="--m: 0.48"></i>48%</span></div>
+                  <div class="t2-margin__row"><span>5G plan</span><span>$65</span><span class="t2-int">$47</span><span class="t2-int"><i style="--m: 0.28"></i>28%</span></div>
+                </div>
+                <p class="t2-margin__hidden" aria-hidden="true"><svg><use href="#i-lock" /></svg><span class="t2-margin__in">Internal columns, visible to your team only</span><span class="t2-margin__out">Buy rates and margins hidden from customer</span></p>
+              </div>
+            </article>
+
+            <article class="t2-card t2-card--approve" data-reveal data-approve>
+              <div class="t2-card__text">
+                <h3>Discounts that need a yes</h3>
+                <p>Rules route big discounts to the right approver. No email chains.</p>
+              </div>
+              <ol class="t2-route" aria-hidden="true">
+                <li class="t2-route__n t2-route__n--rep"><i>SR</i><span>Sales rep</span></li>
+                <li class="t2-route__n t2-route__n--mgr"><i>MC</i><span>Sales manager</span></li>
+                <li class="t2-route__n t2-route__n--cust"><i><svg><use href="#i-check" /></svg></i><span>Customer</span></li>
+              </ol>
+              <div class="t2-approve" aria-hidden="true">
+                <div class="t2-approve__top"><span>Discount</span><b data-disc>6%</b></div>
+                <div class="t2-approve__rail"><i class="t2-approve__fill"></i><i class="t2-approve__limit"><span>10% limit</span></i></div>
+                <div class="t2-approve__steps">
+                  <span class="t2-chip t2-chip--ok" data-s="ok"><svg><use href="#i-check" /></svg>Within policy</span>
+                  <span class="t2-chip t2-chip--wait" data-s="wait"><i class="t2-spin"></i>Sent to sales manager</span>
+                  <span class="t2-chip t2-chip--done" data-s="done"><svg><use href="#i-check" /></svg>Approved by M. Chen</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="t2-card t2-card--sites" data-reveal data-sites>
+              <div class="t2-card__text">
+                <h3>Every site, priced on its own</h3>
+                <p>Connectivity, hardware and services organised by location.</p>
+              </div>
+              <ul class="t2-sites" aria-hidden="true">
+                <li><svg><use href="#i-pin" /></svg><span>Head office<small>Fibre 1000 · SD-WAN · 24 seats</small></span><b>$1,349</b></li>
+                <li><svg><use href="#i-pin" /></svg><span>Distribution centre<small>Fibre 1000 · SD-WAN · Wi-Fi × 6</small></span><b>$1,025</b></li>
+                <li><svg><use href="#i-pin" /></svg><span>Retail store<small>Fibre 1000 · SD-WAN · 4G failover</small></span><b>$780</b></li>
+              </ul>
+            </article>
+
+            <article class="t2-card t2-card--tiers" data-reveal data-tiers>
+              <div class="t2-card__text">
+                <h3>Tiered pricing, applied for you</h3>
+                <p>Quantity breaks and calculation rules, in any currency.</p>
+              </div>
+              <div class="t2-tiers" aria-hidden="true">
+                <div class="t2-tiers__seats"><b data-seats>12</b> seats</div>
+                <ol class="t2-tiers__ladder">
+                  <li data-tier="0"><span>1–19</span><b>$26</b></li>
+                  <li data-tier="1"><span>20–49</span><b>$23</b></li>
+                  <li data-tier="2"><span>50+</span><b>$21</b></li>
+                </ol>
+                <div class="t2-tiers__fx"><span class="is-on">AUD</span><span>USD</span><span>GBP</span><span>EUR</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Win together ───────── -->
+      <section class="t2-section t2-collab" aria-labelledby="t2-collab-title">
+        <div class="qc-container">
+          <header class="t2-head" data-reveal>
+            <h2 id="t2-collab-title">Sales, pre-sales and engineering. <em>One live proposal.</em></h2>
+            <p>Design the network, plan the rollout and agree the SLA inside the document your customer signs. No versions emailed back and forth.</p>
+          </header>
+
+          <figure class="t2-canvas" data-reveal="scale" data-canvas aria-labelledby="t2-canvas-cap">
+            <div class="t2-canvas__bar">
+              <span class="t2-canvas__tabs" aria-hidden="true"><b>Solution design</b><span>Pricing</span><span>Terms &amp; SLA</span></span>
+              <span class="t2-canvas__people" aria-hidden="true">
+                <i class="t2-av t2-av--sales">SR</i><i class="t2-av t2-av--pre">PK</i><i class="t2-av t2-av--eng">EN</i>
+              </span>
+            </div>
+            <div class="t2-canvas__stage">
+              <div class="t2-net" data-net></div>
+              <span class="t2-cursor t2-cursor--eng" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 1l5.5 14 2-6 6-2z" /></svg><b>Engineering</b></span>
+              <span class="t2-cursor t2-cursor--pre" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M1 1l5.5 14 2-6 6-2z" /></svg><b>Pre-sales</b></span>
+              <div class="t2-comment" aria-hidden="true">
+                <p><i class="t2-av t2-av--pre">PK</i>Add 4G failover at the retail store?</p>
+                <p class="t2-comment__reply"><i class="t2-av t2-av--eng">EN</i>Added. Priced at $35/mo.</p>
+              </div>
+            </div>
+            <div class="t2-canvas__foot">
+              <ol class="t2-timeline" aria-hidden="true">
+                <li><b>Discovery</b><span>Week 1</span></li>
+                <li><b>Design</b><span>Week 2</span></li>
+                <li><b>Provision</b><span>Weeks 3–4</span></li>
+                <li><b>Deploy</b><span>Week 5</span></li>
+                <li><b>Go live</b><span>Week 6</span></li>
+              </ol>
+              <ul class="t2-sla" aria-hidden="true">
+                <li><b>99.95%</b>availability</li>
+                <li><b>4h</b>fault response</li>
+                <li><b>24/7</b>monitoring</li>
+              </ul>
+            </div>
+            <figcaption class="qc-sr-only" id="t2-canvas-cap">A shared proposal with a network diagram connecting head office, distribution centre and retail store through an SD-WAN fabric to internet, Microsoft 365 and hosted voice, an implementation timeline from discovery to go live, and SLA terms. Sales, pre-sales and engineering edit it together.</figcaption>
+          </figure>
+          <p class="t2-more" data-reveal><a href="https://www.quote.cloud/collaboration">Real-time collaboration <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a><a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Diagrams, timelines and 18 content blocks <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Close: options + e-sign ───────── -->
+      <section class="t2-section t2-close" aria-labelledby="t2-close-title">
+        <div class="qc-container">
+          <header class="t2-head" data-reveal>
+            <h2 id="t2-close-title">Customers choose. <em>Then they sign.</em></h2>
+            <p>Optional upgrades update the price as they click. Accept, e-sign and pay the deposit from the same link.</p>
+          </header>
+
+          <div class="t2-close__grid">
+            <fieldset class="t2-options" data-reveal="left" data-options>
+              <legend class="t2-doc__h">Optional upgrades</legend>
+              <label class="t2-check">
+                <input type="checkbox" data-add="failover" />
+                <span class="t2-check__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span>
+                <span class="t2-check__text">4G failover on every site<small>Automatic backup if fibre drops</small></span>
+                <span class="t2-check__price">+$35<small>/site/mo</small></span>
+              </label>
+              <label class="t2-check">
+                <input type="checkbox" data-add="support" checked />
+                <span class="t2-check__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span>
+                <span class="t2-check__text">Premium support, 24/7<small>1-hour response on priority faults</small></span>
+                <span class="t2-check__price">+$240<small>/mo</small></span>
+              </label>
+              <label class="t2-check">
+                <input type="checkbox" data-add="m365" />
+                <span class="t2-check__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span>
+                <span class="t2-check__text">Microsoft 365 Business Standard<small>Per mobile user, migrated for you</small></span>
+                <span class="t2-check__price">+$19<small>/user/mo</small></span>
+              </label>
+              <div class="t2-options__total">
+                <span>Monthly on <b data-opt-term>24 months</b></span>
+                <strong data-opt-mrc>$3,394</strong>
+              </div>
+              <div class="t2-options__more">
+                <span>Once-off <b data-opt-nrc>$9,495</b></span>
+                <span>Total contract value <b data-opt-tcv>$90,951</b></span>
+              </div>
+              <p class="qc-sr-only" aria-live="polite" data-opt-live></p>
+            </fieldset>
+
+            <div class="t2-sign" data-reveal="right" data-sign>
+              <p class="t2-doc__h">Accept proposal</p>
+              <div class="t2-sign__pad" aria-hidden="true">
+                <svg viewBox="0 0 320 110" class="t2-sign__sig"><path pathLength="1" d="M14 78c18-30 34-58 44-56 9 2-7 54-1 56 7 2 19-37 28-36 8 1-3 31 4 32 8 1 15-22 23-22 7 0 2 19 9 19 9 0 13-14 22-14 6 0 3 11 9 11 10 0 16-15 30-15 10 0 4 13 12 13 13 0 28-18 52-20 18-1 30 4 44 2" /></svg>
+                <span class="t2-sign__line"></span>
+                <span class="t2-sign__name">Alex Morgan · Harbour Logistics</span>
+              </div>
+              <ul class="t2-sign__trail" aria-hidden="true">
+                <li><svg><use href="#i-eye" /></svg>Viewed<time>09:12</time></li>
+                <li><svg><use href="#i-check" /></svg>Options selected<time>09:20</time></li>
+                <li><svg><use href="#i-check" /></svg>Signed &amp; accepted<time>09:24</time></li>
+              </ul>
+              <div class="t2-sign__pay" aria-hidden="true">
+                <span>Deposit paid <b>$2,500</b></span>
+                <img src="/assets/integrations/stripe.png" alt="" width="30" height="30" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/paypal.png" alt="" width="30" height="30" loading="lazy" decoding="async" />
+              </div>
+              <p class="t2-sign__trust">Legally binding · eIDAS compliant · 256-bit encryption · full audit trail</p>
+            </div>
+          </div>
+
+          <div class="t2-cta-row" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            <a class="t2-link" href="https://www.quote.cloud/electronic-signature-software-solution">How eSignatures work <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="t2-section t2-integr" aria-labelledby="t2-integr-title">
+        <div class="qc-container">
+          <header class="t2-head t2-head--center" data-reveal>
+            <h2 id="t2-integr-title">Your CRM in. <em>Signed deals out.</em></h2>
+            <p>Customer, product and opportunity data flows in from your CRM, and accepted deals flow on to payments and accounting.</p>
+          </header>
+          <div class="t2-flow" data-reveal="fade" data-flow>
+            <ul class="t2-flow__side t2-flow__side--in">
+              <li><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Salesforce</span></a></li>
+              <li><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>HubSpot</span></a></li>
+              <li><a href="https://www.quote.cloud/pipedrive-integration-with-quotecloud"><i class="t2-flow__mono" aria-hidden="true">p</i><span>Pipedrive</span></a></li>
+              <li><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>monday.com</span></a></li>
+              <li><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Microsoft Dynamics</span></a></li>
+            </ul>
+            <div class="t2-flow__core" aria-hidden="true">
+              <svg class="t2-flow__lines" viewBox="0 0 400 300" preserveAspectRatio="none">
+                <path d="M0 30 C 120 30 120 150 200 150" /><path d="M0 90 C 120 90 120 150 200 150" /><path d="M0 150 L 200 150" /><path d="M0 210 C 120 210 120 150 200 150" /><path d="M0 270 C 120 270 120 150 200 150" />
+                <path d="M200 150 C 280 150 280 30 400 30" /><path d="M200 150 C 280 150 280 90 400 90" /><path d="M200 150 L 400 150" /><path d="M200 150 C 280 150 280 210 400 210" /><path d="M200 150 C 280 150 280 270 400 270" />
+              </svg>
+              <span class="t2-flow__q"><img src="/assets/logos/qc-symbol-white.png" alt="" width="30" height="31" /></span>
+            </div>
+            <ul class="t2-flow__side t2-flow__side--out">
+              <li><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Stripe</span></a></li>
+              <li><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>PayPal</span></a></li>
+              <li><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Xero</span></a></li>
+              <li><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>QuickBooks</span></a></li>
+              <li><a href="https://www.quote.cloud/googlesheets-with-quotecloud"><img src="/assets/integrations/googlesheets.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Google Sheets</span></a></li>
+            </ul>
+          </div>
+          <p class="t2-more t2-more--center" data-reveal><a href="https://www.quote.cloud/all-integrations">All integrations and the QuoteCloud API <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Templates ───────── -->
+      <section class="t2-section t2-tpl" aria-labelledby="t2-tpl-title">
+        <div class="qc-container t2-tpl__inner">
+          <header class="t2-head" data-reveal>
+            <h2 id="t2-tpl-title">Start from a <em>telco template.</em></h2>
+            <p>Branded layouts with approved product wording, service descriptions and contract terms from your content library.</p>
+            <a class="t2-link" href="https://www.quote.cloud/templates/telecommunications">Browse telecommunications templates <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </header>
+          <ul class="t2-covers" data-reveal-stagger="110">
+            <li data-reveal><a href="https://www.quote.cloud/templates/telecommunications"><img src="/assets/telco/template-network-rack.jpg" alt="Network Installation Proposal template cover with a server rack photo" width="566" height="800" loading="lazy" decoding="async" /></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/templates/telecommunications"><img src="/assets/telco/template-mobile-plan.jpg" alt="Mobile Phone Plan proposal template cover" width="566" height="800" loading="lazy" decoding="async" /></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/templates/telecommunications"><img src="/assets/telco/template-mobile-internet-bundle.jpg" alt="Mobile and Internet Bundle Proposal template cover with a city skyline" width="566" height="800" loading="lazy" decoding="async" /></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="t2-section t2-proof" aria-labelledby="t2-proof-title">
+        <div class="qc-container">
+          <h2 class="t2-proof__title" id="t2-proof-title" data-reveal>Respond faster. Protect margins. <em>Forecast recurring revenue.</em></h2>
+          <ul class="t2-proof__row" data-reveal-stagger="80">
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg><use href="#i-star" /></svg></b><span>Capterra rating</span></li>
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg><use href="#i-star" /></svg></b><span>Software Advice rating</span></li>
+            <li data-reveal><b data-count-to="2013" data-count-format="plain">2013</b><span>Building quoting software since</span></li>
+            <li data-reveal class="t2-proof__badges">
+              <img src="/assets/compliance/eidas.svg" alt="eIDAS compliant" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" alt="256-bit encryption" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" alt="Hosted on AWS" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/gdpr.png" alt="GDPR compliant" width="64" height="40" loading="lazy" decoding="async" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="t2-faq-wrap">
+        <!-- @include faq-telco -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="t2-final" aria-labelledby="t2-final-title">
+        <div class="qc-container">
+          <div class="t2-final__panel" data-reveal="scale">
+            <svg class="t2-final__fibre" viewBox="0 0 1200 420" preserveAspectRatio="none" aria-hidden="true">
+              <path class="t2-fl t2-fl--1" d="M-20 330 C 300 330 420 160 700 160 S 1050 90 1220 80" />
+            <path class="t2-fl-light t2-fl--1" d="M-20 330 C 300 330 420 160 700 160 S 1050 90 1220 80" />
+              <path class="t2-fl t2-fl--2" d="M-20 380 C 340 380 500 250 760 250 S 1080 200 1220 196" />
+            <path class="t2-fl-light t2-fl--2" d="M-20 380 C 340 380 500 250 760 250 S 1080 200 1220 196" />
+            </svg>
+            <h2 id="t2-final-title">Just click, quote, <em>and close.</em></h2>
+            <p>Build your first telco proposal today. Free for 14 days, no credit card required.</p>
+            <div class="t2-final__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--lg t2-btn-light" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="t2-final__links"><a href="https://www.quote.cloud/pricing">See pricing</a><a href="https://www.quote.cloud/quote-templates">Quote templates</a><a href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas &amp; grid editing</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

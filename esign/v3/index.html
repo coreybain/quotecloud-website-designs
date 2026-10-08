@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-esign -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="sy-sprite" aria-hidden="true" focusable="false">
+      <symbol id="sy-i-sign" viewBox="0 0 24 24"><path d="M3 16.5c1.8-3.6 3.6-9 5.6-9 2.2 0-1.4 9.4.9 9.4 1.9 0 2.6-4.6 4.6-4.6 1.6 0 .8 3.6 2.6 3.6 1.2 0 1.9-1.4 3.3-1.4M3 20.5h18" /></symbol>
+      <symbol id="sy-i-init" viewBox="0 0 24 24"><path d="M3.5 18 7 7.5 10.5 18M4.6 14.6h4.8M13.5 7.5V18h3.6a2.6 2.6 0 0 0 0-5.2h-3.6 3a2.65 2.65 0 0 0 0-5.3h-3" /></symbol>
+      <symbol id="sy-i-text" viewBox="0 0 24 24"><path d="M5 7.5V5h14v2.5M12 5v14M9 19h6" /></symbol>
+      <symbol id="sy-i-date" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2.2" /><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" /></symbol>
+      <symbol id="sy-i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="sy-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="sy-i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" /></symbol>
+      <symbol id="sy-i-send" viewBox="0 0 24 24"><path d="M20.5 3.5 10 14M20.5 3.5l-6.6 17-3.9-6.5-6.5-3.9 17-6.6Z" /></symbol>
+      <symbol id="sy-i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.2" /><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7" /></symbol>
+      <symbol id="sy-i-shield" viewBox="0 0 24 24"><path d="M12 3 19 6v5.2c0 4.6-3 8.3-7 9.8-4-1.5-7-5.2-7-9.8V6l7-3Z" /><path d="m8.8 12 2.2 2.2 4.2-4.4" /></symbol>
+      <symbol id="sy-i-upload" viewBox="0 0 24 24"><path d="M12 15V4.5M7.8 8.5 12 4.3l4.2 4.2M4 14.5v4A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5v-4" /></symbol>
+      <symbol id="sy-i-pen" viewBox="0 0 24 24"><path d="M15.2 4.8a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4L15.2 4.8ZM13.5 6.5l3 3" /></symbol>
+      <symbol id="sy-i-cert" viewBox="0 0 24 24"><circle cx="12" cy="9.5" r="5.5" /><path d="m9.2 14.3-1.4 6.2 4.2-2 4.2 2-1.4-6.2M10 9.6l1.4 1.4 2.8-2.9" /></symbol>
+      <symbol id="sy-i-key" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="2.5" /><path d="M7 12.5h.01M10.3 12.5h.01M13.7 12.5h.01M17 12.5h.01" /></symbol>
+      <symbol id="sy-i-replay" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4.5v3.8h3.8" /></symbol>
+      <symbol id="sy-i-table" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="M3.5 10h17M3.5 14.5h17M10 10v9" /></symbol>
+      <symbol id="sy-i-form" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="5" rx="1.5" /><rect x="3.5" y="13" width="17" height="5" rx="1.5" /><path d="M6.5 7h5M6.5 15.5h3" /></symbol>
+      <symbol id="sy-i-blocks" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.6" /><rect x="13" y="4" width="7" height="7" rx="1.6" /><rect x="4" y="13" width="7" height="7" rx="1.6" /><rect x="13" y="13" width="7" height="7" rx="1.6" /></symbol>
+      <symbol id="sy-i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.5" /><path d="M2.8 19.5c.8-3.3 3.3-5 6.2-5s5.4 1.7 6.2 5M15.5 5.2a3.5 3.5 0 0 1 0 6.6M17.6 14.8c1.9.6 3.2 2.2 3.6 4.7" /></symbol>
+      <symbol id="sy-i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.2" /><path d="M3 10h18M6.5 14.5h4" /></symbol>
+      <symbol id="sy-i-doc" viewBox="0 0 24 24"><path d="M6.5 3h7.5l4.5 4.5V21h-12V3Z" /><path d="M13.5 3v5h5M9 12.5h6M9 16h6" /></symbol>
+      <symbol id="sy-i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" /><circle cx="9" cy="10" r="1.8" /><path d="m4 18 5-4.5 3.5 3 3-2.5 4.5 4" /></symbol>
+      <symbol id="sy-i-drop" viewBox="0 0 24 24"><rect x="3.5" y="6.5" width="17" height="11" rx="2" /><path d="m14.5 11 2 2 2-2" /></symbol>
+      <symbol id="sy-i-box" viewBox="0 0 24 24"><rect x="4.5" y="4.5" width="15" height="15" rx="3" /><path d="m8.5 12 2.5 2.5 4.5-5" /></symbol>
+      <symbol id="sy-i-radio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3.2" /></symbol>
+      <symbol id="sy-i-star" viewBox="0 0 24 24"><path d="m12 3.4 2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.8l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8L12 3.4Z" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: a playable signing demo ───────── -->
+      <section class="sy-hero" aria-labelledby="sy-hero-title">
+        <div class="sy-hero__grid qc-container">
+          <div class="sy-hero__copy">
+            <h1 class="sy-hero__title" id="sy-hero-title">
+              <span class="sy-em">Free <span class="sy-nw">e-signature</span> software</span>, built into every plan
+            </h1>
+            <p class="sy-hero__lead">One document. One workflow. No separate signing software.</p>
+            <div class="sy-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="sy-hero__note">No credit card required</p>
+          </div>
+
+          <div class="sy-hero__demo">
+            <div class="sy-demo" data-demo data-view="prepare" role="region" aria-label="Interactive e-signature demo: place fields, send, then sign">
+              <div class="sy-demo__bar">
+                <span class="sy-demo__logo" aria-hidden="true"><img src="/assets/logos/qc-symbol-white.png" width="15" height="15" alt="" /></span>
+                <span class="sy-demo__doc">
+                  <strong>Service Agreement</strong>
+                  <span data-demo-sub>Acme Solutions · Draft</span>
+                </span>
+                <ol class="sy-steps" aria-label="Demo progress">
+                  <li data-step="prepare" aria-current="step"><span>1</span>Prepare</li>
+                  <li data-step="sign"><span>2</span>Sign</li>
+                  <li data-step="done"><span>3</span>Done</li>
+                </ol>
+              </div>
+
+              <div class="sy-demo__body" data-demo-body>
+                <!-- Sender side: field palette -->
+                <div class="sy-palette" data-side="prepare" role="toolbar" aria-label="Signature fields">
+                  <p class="sy-palette__title">Fields</p>
+                  <button class="sy-chip" type="button" data-chip="sig" aria-label="Signature field">
+                    <svg class="sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-sign" /></svg><span>Signature</span>
+                  </button>
+                  <button class="sy-chip" type="button" data-chip="init" aria-label="Initials field">
+                    <svg class="sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-init" /></svg><span>Initials</span>
+                  </button>
+                  <button class="sy-chip" type="button" data-chip="date" aria-label="Date field">
+                    <svg class="sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-date" /></svg><span>Date</span>
+                  </button>
+                  <button class="sy-chip" type="button" data-chip="text" aria-label="Text field">
+                    <svg class="sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-text" /></svg><span>Text</span>
+                  </button>
+                  <p class="sy-palette__tip">
+                    <span class="sy-fine">Drag a field onto the contract</span><span class="sy-touch">Tap a field, then tap a spot</span>
+                  </p>
+                </div>
+
+                <!-- Signer side: who is signing + checklist -->
+                <div class="sy-signer" data-side="sign" hidden>
+                  <span class="sy-signer__avatar" aria-hidden="true">JL</span>
+                  <span class="sy-signer__who"><strong>Jordan Lee</strong><span>Northwind Studio</span></span>
+                  <span class="sy-signer__count" data-sign-count>0 of 0</span>
+                  <ul class="sy-signer__list" data-sign-list></ul>
+                </div>
+
+                <!-- The contract page (shared by both sides) -->
+                <div class="sy-canvas" data-canvas>
+                  <div class="sy-page" data-page>
+                    <div class="sy-page__head">
+                      <span class="sy-page__brand"><span class="sy-page__mark" aria-hidden="true"></span>Acme Solutions</span>
+                      <span class="sy-page__title"><b>Service Agreement</b><span>No. SA-2048</span></span>
+                    </div>
+                    <div class="sy-page__meta">
+                      <span>Prepared for <b>Northwind Studio</b></span>
+                      <span class="sy-page__labelled">
+                        <span class="sy-page__label">Effective date</span>
+                        <span class="sy-slot sy-slot--date" data-slot="d1" data-type="date" data-name="effective date"></span>
+                      </span>
+                    </div>
+                    <div class="sy-clause">
+                      <span class="sy-clause__n">1</span>
+                      <div class="sy-clause__body">
+                        <b>Services</b>
+                        <span class="sy-bars"><i></i><i></i><i style="--w: 62%"></i></span>
+                      </div>
+                      <span class="sy-slot sy-slot--init" data-slot="i1" data-type="init" data-name="clause 1"></span>
+                    </div>
+                    <div class="sy-clause">
+                      <span class="sy-clause__n">2</span>
+                      <div class="sy-clause__body">
+                        <b>Fees</b>
+                        <span class="sy-fees">
+                          <span><span>Implementation</span><span>$12,500</span></span>
+                          <span><span>Support, 12 months</span><span>$4,800</span></span>
+                          <span class="sy-fees__total"><span>Total</span><span>$17,300</span></span>
+                        </span>
+                        <span class="sy-page__labelled sy-page__labelled--inline">
+                          <span class="sy-page__label">PO number</span>
+                          <span class="sy-slot sy-slot--text" data-slot="t1" data-type="text" data-name="PO number"></span>
+                        </span>
+                      </div>
+                      <span class="sy-slot sy-slot--init" data-slot="i2" data-type="init" data-name="clause 2"></span>
+                    </div>
+                    <div class="sy-clause">
+                      <span class="sy-clause__n">3</span>
+                      <div class="sy-clause__body">
+                        <b>Acceptance</b>
+                        <span class="sy-bars"><i style="--w: 88%"></i></span>
+                        <span class="sy-page__labelled sy-page__labelled--inline">
+                          <span class="sy-page__label">Accepted by</span>
+                          <span class="sy-slot sy-slot--sig sy-slot--sm" data-slot="s1" data-type="sig" data-name="acceptance clause"></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="sy-page__sign">
+                      <span class="sy-page__labelled sy-page__labelled--line">
+                        <span class="sy-slot sy-slot--sig" data-slot="s2" data-type="sig" data-name="client signature line"></span>
+                        <span class="sy-page__label">Client signature</span>
+                      </span>
+                      <span class="sy-page__labelled sy-page__labelled--line">
+                        <span class="sy-slot sy-slot--date" data-slot="d2" data-type="date" data-name="signing date"></span>
+                        <span class="sy-page__label">Date</span>
+                      </span>
+                      <span class="sy-page__labelled sy-page__labelled--line">
+                        <span class="sy-slot sy-slot--text" data-slot="t2" data-type="text" data-name="full name"></span>
+                        <span class="sy-page__label">Full name</span>
+                      </span>
+                    </div>
+                    <span class="sy-stamp" aria-hidden="true">
+                      <svg class="sy-ico" width="16" height="16"><use href="#sy-i-check" /></svg>Completed
+                    </span>
+                  </div>
+                  <div class="sy-guides" aria-hidden="true"><i data-g="t"></i><i data-g="b"></i><i data-g="l"></i><i data-g="r"></i></div>
+                </div>
+
+                <!-- Footer actions -->
+                <div class="sy-foot" data-side="prepare">
+                  <p class="sy-foot__note" data-prep-note>Add a signature field to send</p>
+                  <button class="sy-action" type="button" data-send disabled>
+                    Send for signature
+                    <svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-send" /></svg>
+                  </button>
+                </div>
+                <div class="sy-foot" data-side="sign" hidden>
+                  <p class="sy-foot__note" data-sign-note>Select each highlighted field</p>
+                  <button class="sy-action" type="button" data-finish disabled>
+                    Finish signing
+                    <svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-check" /></svg>
+                  </button>
+                </div>
+
+                <!-- One-time passcode (optional recipient verification) -->
+                <div class="sy-otp" data-otp hidden>
+                  <div class="sy-otp__card">
+                    <svg class="sy-ico sy-otp__ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-lock" /></svg>
+                    <p class="sy-otp__title">Verify it’s you</p>
+                    <p class="sy-otp__text">One-time passcode sent to jordan@northwind.co</p>
+                    <div class="sy-otp__digits" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    <p class="sy-otp__ok"><svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-check" /></svg>Verified</p>
+                  </div>
+                </div>
+
+                <!-- Signature pad -->
+                <div class="sy-pad" data-pad role="dialog" aria-modal="true" aria-labelledby="sy-pad-title" hidden>
+                  <div class="sy-pad__card">
+                    <div class="sy-pad__head">
+                      <p class="sy-pad__title" id="sy-pad-title">Create your signature</p>
+                      <button class="sy-pad__close" type="button" data-pad-cancel aria-label="Close">
+                        <svg class="sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-x" /></svg>
+                      </button>
+                    </div>
+                    <div class="sy-tabs" role="tablist" aria-label="Signature method">
+                      <button type="button" role="tab" id="sy-tab-draw" aria-controls="sy-panel-draw" aria-selected="true" data-tab="draw">
+                        <svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-pen" /></svg>Draw
+                      </button>
+                      <button type="button" role="tab" id="sy-tab-type" aria-controls="sy-panel-type" aria-selected="false" tabindex="-1" data-tab="type">
+                        <svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-text" /></svg>Type
+                      </button>
+                      <button type="button" role="tab" id="sy-tab-upload" aria-controls="sy-panel-upload" aria-selected="false" tabindex="-1" data-tab="upload">
+                        <svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-upload" /></svg>Upload
+                      </button>
+                    </div>
+                    <div class="sy-pad__panel" id="sy-panel-draw" role="tabpanel" aria-labelledby="sy-tab-draw" data-panel="draw">
+                      <div class="sy-pad__area">
+                        <svg class="sy-pad__svg" viewBox="0 0 400 150" data-draw aria-label="Signature drawing area" role="img">
+                          <path class="sy-pad__line" d="M28 118H372" />
+                          <path class="sy-pad__x" d="M30 96l10 10M40 96l-10 10" />
+                          <g data-draw-ink></g>
+                        </svg>
+                        <p class="sy-pad__hint" data-draw-hint>Sign here with your mouse, finger or stylus</p>
+                        <button class="sy-pad__clear" type="button" data-draw-clear>Clear</button>
+                      </div>
+                    </div>
+                    <div class="sy-pad__panel" id="sy-panel-type" role="tabpanel" aria-labelledby="sy-tab-type" data-panel="type" hidden>
+                      <label class="sy-pad__field">
+                        <span>Your name</span>
+                        <input type="text" value="Jordan Lee" maxlength="28" autocomplete="off" spellcheck="false" data-type-input />
+                      </label>
+                      <div class="sy-pad__area sy-pad__area--type">
+                        <svg class="sy-pad__svg" viewBox="0 0 400 150" aria-hidden="true">
+                          <path class="sy-pad__line" d="M28 118H372" />
+                          <text class="sy-script" x="200" y="100" text-anchor="middle" data-type-preview>Jordan Lee</text>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="sy-pad__panel" id="sy-panel-upload" role="tabpanel" aria-labelledby="sy-tab-upload" data-panel="upload" hidden>
+                      <div class="sy-pad__area sy-pad__area--upload" data-upload-area>
+                        <button class="sy-upload" type="button" data-upload>
+                          <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-upload" /></svg>
+                          <span><b>Choose a signature image</b><span>PNG or JPG — simulated in this demo</span></span>
+                        </button>
+                        <div class="sy-upload__file" data-upload-file hidden>
+                          <span class="sy-upload__name">signature.png</span>
+                          <span class="sy-upload__bar"><i></i></span>
+                          <svg class="sy-pad__svg sy-upload__img" viewBox="0 0 400 150" data-upload-img aria-hidden="true"></svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sy-pad__foot">
+                      <button class="sy-btn-quiet" type="button" data-pad-cancel>Cancel</button>
+                      <button class="sy-action" type="button" data-adopt disabled>Adopt and sign</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Completed -->
+                <div class="sy-done" data-done hidden>
+                  <div class="sy-done__card" tabindex="-1" data-done-card>
+                    <div class="sy-done__top">
+                      <span class="sy-done__seal" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" width="44" height="44"><circle class="sy-done__ring" cx="24" cy="24" r="21" pathLength="1" /><path class="sy-done__tick" d="m15 24.5 6 6 12-13" pathLength="1" /></svg>
+                      </span>
+                      <span>
+                        <p class="sy-done__title">Agreement completed</p>
+                        <p class="sy-done__sub">Certificate of authenticity attached</p>
+                      </span>
+                    </div>
+                    <dl class="sy-cert">
+                      <div><dt>Document</dt><dd>Service Agreement · SA-2048</dd></div>
+                      <div><dt>Signer</dt><dd>Jordan Lee</dd></div>
+                      <div><dt>Verified by</dt><dd>One-time passcode</dd></div>
+                      <div><dt>Completed</dt><dd data-done-time>Today</dd></div>
+                      <div><dt>Document ID</dt><dd class="sy-cert__mono">QC-7F3A-21C9-88D0</dd></div>
+                    </dl>
+                    <div class="sy-done__ctas">
+                      <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="hero-demo-complete">Start free 14-day trial</a>
+                      <button class="sy-btn-quiet" type="button" data-replay>
+                        <svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-replay" /></svg>Try again
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <span class="sy-ghost" data-ghost aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 3.5v15.2l4.1-3.9 2.7 6 2.6-1.1-2.6-5.9 5.7-.3L5 3.5Z" /></svg>
+              </span>
+              <p class="qc-sr-only" aria-live="polite" data-live></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── 1. No extra subscription ───────── -->
+      <section class="sy-sec sy-one" id="one-workflow" aria-labelledby="sy-one-title" data-toggle data-state="b">
+        <div class="qc-container">
+          <div class="sy-sec__head" data-reveal>
+            <h2 id="sy-one-title">E-signatures without <span class="sy-em">another subscription</span></h2>
+            <p>The platform you write quotes, proposals and contracts in also sends them for signature. Nothing to export, upload or re-version.</p>
+          </div>
+          <div class="sy-switch" role="group" aria-label="Compare workflows" data-reveal>
+            <button type="button" data-set="a" aria-pressed="false">Separate signing app</button>
+            <button type="button" data-set="b" aria-pressed="true">QuoteCloud</button>
+          </div>
+
+          <div class="sy-one__stage" data-reveal="scale">
+            <!-- A: the two-app shuffle -->
+            <div class="sy-apps" data-layer="a" aria-hidden="true">
+              <div class="sy-win sy-apps__card" style="--i: 0">
+                <div class="sy-win__bar"><i></i><i></i><i></i><span>Proposal.docx</span></div>
+                <div class="sy-win__body">
+                  <span class="sy-sk sy-sk--h"></span>
+                  <span class="sy-sk"></span><span class="sy-sk"></span><span class="sy-sk" style="--w: 70%"></span>
+                  <span class="sy-sk-table"><i></i><i></i><i></i></span>
+                </div>
+              </div>
+              <span class="sy-apps__link" style="--i: 1"><span>Export PDF</span></span>
+              <div class="sy-apps__files" style="--i: 2">
+                <span class="sy-file sy-file--3">Proposal_v1.pdf</span>
+                <span class="sy-file sy-file--2">Proposal_v2.pdf</span>
+                <span class="sy-file sy-file--1"><svg class="sy-ico" width="16" height="16"><use href="#sy-i-doc" /></svg>Proposal_v3_FINAL(2).pdf</span>
+              </div>
+              <span class="sy-apps__link" style="--i: 3"><span>Upload</span></span>
+              <div class="sy-win sy-win--grey sy-apps__card" style="--i: 4">
+                <div class="sy-win__bar"><i></i><i></i><i></i><span>Signing app</span><em>Separate login</em></div>
+                <div class="sy-win__body">
+                  <span class="sy-sk"></span><span class="sy-sk"></span><span class="sy-sk" style="--w: 55%"></span>
+                  <span class="sy-apps__sign">Sign here</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- B: one QuoteCloud document -->
+            <div class="sy-qcdoc" data-layer="b">
+              <div class="sy-qcdoc__bar">
+                <span class="sy-demo__logo" aria-hidden="true"><img src="/assets/logos/qc-symbol-white.png" width="15" height="15" alt="" loading="lazy" decoding="async" /></span>
+                <strong>Proposal · Northwind Studio</strong>
+                <ol class="sy-qcdoc__flow">
+                  <li style="--i: 0"><svg class="sy-ico" width="14" height="14" aria-hidden="true"><use href="#sy-i-check" /></svg>Create</li>
+                  <li style="--i: 1"><svg class="sy-ico" width="14" height="14" aria-hidden="true"><use href="#sy-i-check" /></svg>Send</li>
+                  <li style="--i: 2"><svg class="sy-ico" width="14" height="14" aria-hidden="true"><use href="#sy-i-check" /></svg>Sign</li>
+                </ol>
+              </div>
+              <div class="sy-qcdoc__body">
+                <div class="sy-qcdoc__price">
+                  <p class="sy-qcdoc__label">Investment</p>
+                  <table class="sy-ptable">
+                    <tbody>
+                      <tr><th scope="row">Brand strategy</th><td>$6,400</td></tr>
+                      <tr><th scope="row">Website build</th><td>$9,800</td></tr>
+                      <tr class="sy-ptable__opt"><th scope="row"><span class="sy-tog" aria-hidden="true"></span>Care plan <small>optional</small></th><td>$1,200</td></tr>
+                      <tr class="sy-ptable__total"><th scope="row">Total</th><td data-qc-total>$17,400</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="sy-qcdoc__form">
+                  <p class="sy-qcdoc__label">Your details</p>
+                  <span class="sy-input"><span>Preferred start</span><b>3 Nov 2026</b></span>
+                  <span class="sy-input"><span>Project contact</span><b>Jordan Lee</b></span>
+                  <span class="sy-qcdoc__pay">
+                    <span>Pay deposit</span>
+                    <img src="/assets/integrations/stripe.png" width="22" height="22" alt="Stripe" loading="lazy" decoding="async" />
+                    <img src="/assets/integrations/paypal.png" width="22" height="22" alt="PayPal" loading="lazy" decoding="async" />
+                  </span>
+                </div>
+                <div class="sy-qcdoc__sign">
+                  <span class="sy-qcdoc__sig">
+                    <svg class="sy-sig" viewBox="0 0 400 150" data-ink="jordan" aria-hidden="true"><path class="sy-ink-cl" d="M48 44C62 30 92 24 100 32C108 42 90 70 80 96C72 118 60 130 46 126C32 122 36 104 52 98C70 92 92 92 108 88C116 86 120 72 130 72C140 72 138 88 128 88C120 88 122 76 134 78C142 80 144 88 150 86C156 84 156 74 162 74C168 74 166 88 176 88C186 88 184 70 194 52C198 44 196 40 192 46C186 56 186 82 194 88C200 92 206 78 214 78C222 78 220 90 214 90C208 90 212 80 222 80C228 80 226 88 232 88C240 88 240 76 248 76C256 76 252 90 262 88" /><path class="sy-ink-cl" d="M286 40C280 60 272 92 268 110C266 120 278 120 290 112C300 104 304 96 312 96C322 96 316 108 308 106C302 104 306 94 316 94C330 94 330 108 340 106C346 104 344 96 338 98C332 100 334 108 346 108C356 108 362 102 368 96" /><path class="sy-ink-cl" d="M60 136C150 126 280 122 360 118" /></svg>
+                  </span>
+                  <span class="sy-qcdoc__signed"><b>Jordan Lee</b><span>Signed electronically</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="sy-caption" aria-live="polite">
+            <span data-when="a">Export, upload, re-version — all just to collect a signature.</span>
+            <span data-when="b">Create it. Send it. Sign it. Keep everything together.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────── 2. Signatures anywhere / existing PDFs ───────── -->
+      <section class="sy-sec sy-place" id="sign-pdfs" aria-labelledby="sy-place-title" data-toggle data-state="a">
+        <div class="qc-container sy-split">
+          <div class="sy-split__copy" data-reveal>
+            <h2 id="sy-place-title">Sign PDFs online, or <span class="sy-em">anywhere in your own documents</span></h2>
+            <p>
+              Insert the E-Sign block beside any clause and add electronic initials where pages need acknowledging. Already have the
+              contract as a PDF? Upload it and add fields right over the original pages.
+            </p>
+            <div class="sy-switch" role="group" aria-label="Choose a document type">
+              <button type="button" data-set="a" aria-pressed="true">Your document</button>
+              <button type="button" data-set="b" aria-pressed="false">Your PDF</button>
+            </div>
+            <ul class="sy-ticks" aria-live="polite">
+              <li data-when="a">E-Sign block beside an acceptance clause, in an approval section or next to customer details</li>
+              <li data-when="a">Electronic initials on the clauses and pages that need them</li>
+              <li data-when="b">Signature, initials, text, date and form fields placed exactly on the page</li>
+              <li data-when="b">Your original PDF design stays untouched underneath</li>
+            </ul>
+            <a class="sy-link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">
+              Explore QuoteCloud content blocks<svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-arrow" /></svg>
+            </a>
+          </div>
+
+          <div class="sy-place__stage" data-reveal="right" aria-hidden="true">
+            <!-- palettes -->
+            <div class="sy-tray" data-layer="a">
+              <p class="sy-tray__title">Content blocks</p>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-text" /></svg>Text</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-table" /></svg>Pricing table</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-form" /></svg>Form</span>
+              <span class="is-hot"><svg class="sy-ico" width="16" height="16"><use href="#sy-i-sign" /></svg>E-Sign</span>
+              <span class="is-hot"><svg class="sy-ico" width="16" height="16"><use href="#sy-i-init" /></svg>E-Initials</span>
+            </div>
+            <div class="sy-tray" data-layer="b">
+              <p class="sy-tray__title">Add fields</p>
+              <span class="is-hot"><svg class="sy-ico" width="16" height="16"><use href="#sy-i-sign" /></svg>E-Signature</span>
+              <span class="is-hot"><svg class="sy-ico" width="16" height="16"><use href="#sy-i-init" /></svg>E-Initials</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-text" /></svg>Text field</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-date" /></svg>Date</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-drop" /></svg>Dropdown</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-box" /></svg>Checkbox</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-radio" /></svg>Radio button</span>
+              <span><svg class="sy-ico" width="16" height="16"><use href="#sy-i-image" /></svg>Image</span>
+            </div>
+
+            <!-- A: a QuoteCloud document -->
+            <div class="sy-paper sy-paper--qc" data-layer="a">
+              <div class="sy-paper__band"><span class="sy-page__mark"></span><b>Professional Services Agreement</b></div>
+              <div class="sy-pclause"><b>1. Scope</b><span class="sy-sk"></span><span class="sy-sk" style="--w: 78%"></span><span class="sy-initial" style="--i: 0">JL</span></div>
+              <div class="sy-pclause"><b>2. Deliverables</b><span class="sy-sk"></span><span class="sy-sk" style="--w: 64%"></span><span class="sy-initial" style="--i: 1">JL</span></div>
+              <div class="sy-pclause"><b>3. Payment terms</b><span class="sy-sk"></span><span class="sy-sk" style="--w: 82%"></span><span class="sy-initial" style="--i: 2">JL</span></div>
+              <div class="sy-pclause sy-pclause--accept">
+                <b>4. Acceptance</b>
+                <span class="sy-sk" style="--w: 90%"></span>
+                <span class="sy-esign">
+                  <span class="sy-esign__tag">E-Sign</span>
+                  <svg class="sy-sig" viewBox="0 0 400 150" data-ink="jordan"><path class="sy-ink-cl" d="M48 44C62 30 92 24 100 32C108 42 90 70 80 96C72 118 60 130 46 126C32 122 36 104 52 98C70 92 92 92 108 88C116 86 120 72 130 72C140 72 138 88 128 88C120 88 122 76 134 78C142 80 144 88 150 86C156 84 156 74 162 74C168 74 166 88 176 88C186 88 184 70 194 52C198 44 196 40 192 46C186 56 186 82 194 88C200 92 206 78 214 78C222 78 220 90 214 90C208 90 212 80 222 80C228 80 226 88 232 88C240 88 240 76 248 76C256 76 252 90 262 88" /><path class="sy-ink-cl" d="M286 40C280 60 272 92 268 110C266 120 278 120 290 112C300 104 304 96 312 96C322 96 316 108 308 106C302 104 306 94 316 94C330 94 330 108 340 106C346 104 344 96 338 98C332 100 334 108 346 108C356 108 362 102 368 96" /><path class="sy-ink-cl" d="M60 136C150 126 280 122 360 118" /></svg>
+                  <span class="sy-esign__meta"><b>Jordan Lee</b><span>Northwind Studio</span></span>
+                </span>
+              </div>
+            </div>
+
+            <!-- B: an uploaded PDF with fields -->
+            <div class="sy-paper sy-paper--pdf" data-layer="b">
+              <div class="sy-paper__tab"><svg class="sy-ico" width="14" height="14"><use href="#sy-i-doc" /></svg>Service Agreement.pdf<span>Page 1 of 3</span></div>
+              <div class="sy-pdf">
+                <span class="sy-pdf__title"></span>
+                <span class="sy-pdf__sub"></span>
+                <span class="sy-pdf__p"><i></i><i></i><i></i><i style="--w: 60%"></i></span>
+                <span class="sy-pdf__p"><i></i><i></i><i style="--w: 74%"></i></span>
+                <span class="sy-pdf__p"><i></i><i style="--w: 48%"></i></span>
+                <span class="sy-pdf__lines"><i></i><i></i></span>
+              </div>
+              <span class="sy-ofield sy-ofield--init" style="--x: 86%; --y: 30%; --i: 1">JL</span>
+              <span class="sy-ofield sy-ofield--init" style="--x: 86%; --y: 50%; --i: 2">JL</span>
+              <span class="sy-ofield sy-ofield--check" style="--x: 7%; --y: 66%; --i: 3"><svg class="sy-ico" width="14" height="14"><use href="#sy-i-check" /></svg>I agree to the terms</span>
+              <span class="sy-ofield sy-ofield--sig" style="--x: 7%; --y: 76%; --i: 0"><svg class="sy-sig" viewBox="0 0 400 150" data-ink="priya"><path class="sy-ink-cl" d="M60 120C64 96 70 60 76 34C80 22 112 22 116 40C120 58 92 70 72 66" /><path class="sy-ink-cl" d="M100 96C108 84 114 80 118 88C122 96 120 104 126 96C132 86 138 82 144 86C150 90 146 104 154 100C162 96 164 84 170 84C176 84 170 108 178 104C186 100 190 86 198 86C208 86 204 102 196 100C190 98 196 86 206 88C212 90 212 100 220 98" /><path class="sy-ink-cl" d="M252 50C240 40 226 52 236 64C246 76 262 84 252 100C244 112 226 106 228 98" /><path class="sy-ink-cl" d="M262 98C270 70 282 40 286 34C280 60 276 84 274 100C280 86 288 80 294 84C300 90 296 100 304 98C314 96 316 84 324 86" /><path class="sy-ink-cl" d="M230 116C270 112 320 108 360 92" /></svg></span>
+              <span class="sy-ofield sy-ofield--text" style="--x: 56%; --y: 79%; --i: 4">Priya Shah</span>
+              <span class="sy-ofield sy-ofield--date" style="--x: 56%; --y: 89%; --i: 5">8 Oct 2026</span>
+              <span class="sy-pguide sy-pguide--h" style="--y: 76%"></span>
+              <span class="sy-pguide sy-pguide--v" style="--x: 56%"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── 3. Multiple signers, easy for each ───────── -->
+      <section class="sy-sec sy-multi" id="multiple-signers" aria-labelledby="sy-multi-title" data-toggle data-state="b">
+        <div class="qc-container">
+          <div class="sy-sec__head" data-reveal>
+            <h2 id="sy-multi-title">Multiple signers, <span class="sy-em">one easy signing flow</span></h2>
+            <p>Assign signatures and initials to customers, suppliers and internal approvers. Each one signs on any device, with no printing, scanning or returning.</p>
+          </div>
+          <div class="sy-switch" role="group" aria-label="Number of signers" data-reveal>
+            <button type="button" data-set="a" aria-pressed="false">1 signer</button>
+            <button type="button" data-set="b" aria-pressed="true">3 signers</button>
+          </div>
+
+          <div class="sy-multi__stage" data-reveal="scale" aria-hidden="true">
+            <div class="sy-agree">
+              <div class="sy-agree__head">
+                <b>Partnership Agreement</b>
+                <span>Signatures</span>
+              </div>
+              <div class="sy-agree__cols">
+                <div class="sy-scol" style="--c: var(--sy-violet); --i: 0" data-signer="0">
+                  <span class="sy-scol__role">Customer</span>
+                  <span class="sy-scol__box"><svg class="sy-sig" viewBox="0 0 400 150" data-ink="jordan"><path class="sy-ink-cl" d="M48 44C62 30 92 24 100 32C108 42 90 70 80 96C72 118 60 130 46 126C32 122 36 104 52 98C70 92 92 92 108 88C116 86 120 72 130 72C140 72 138 88 128 88C120 88 122 76 134 78C142 80 144 88 150 86C156 84 156 74 162 74C168 74 166 88 176 88C186 88 184 70 194 52C198 44 196 40 192 46C186 56 186 82 194 88C200 92 206 78 214 78C222 78 220 90 214 90C208 90 212 80 222 80C228 80 226 88 232 88C240 88 240 76 248 76C256 76 252 90 262 88" /><path class="sy-ink-cl" d="M286 40C280 60 272 92 268 110C266 120 278 120 290 112C300 104 304 96 312 96C322 96 316 108 308 106C302 104 306 94 316 94C330 94 330 108 340 106C346 104 344 96 338 98C332 100 334 108 346 108C356 108 362 102 368 96" /><path class="sy-ink-cl" d="M60 136C150 126 280 122 360 118" /></svg></span>
+                  <span class="sy-scol__name">Jordan Lee</span>
+                </div>
+                <div class="sy-scol sy-scol--extra" style="--c: var(--sy-sky); --i: 1" data-signer="1">
+                  <span class="sy-scol__role">Supplier</span>
+                  <span class="sy-scol__box"><svg class="sy-sig" viewBox="0 0 400 150" data-ink="priya"><path class="sy-ink-cl" d="M60 120C64 96 70 60 76 34C80 22 112 22 116 40C120 58 92 70 72 66" /><path class="sy-ink-cl" d="M100 96C108 84 114 80 118 88C122 96 120 104 126 96C132 86 138 82 144 86C150 90 146 104 154 100C162 96 164 84 170 84C176 84 170 108 178 104C186 100 190 86 198 86C208 86 204 102 196 100C190 98 196 86 206 88C212 90 212 100 220 98" /><path class="sy-ink-cl" d="M252 50C240 40 226 52 236 64C246 76 262 84 252 100C244 112 226 106 228 98" /><path class="sy-ink-cl" d="M262 98C270 70 282 40 286 34C280 60 276 84 274 100C280 86 288 80 294 84C300 90 296 100 304 98C314 96 316 84 324 86" /><path class="sy-ink-cl" d="M230 116C270 112 320 108 360 92" /></svg></span>
+                  <span class="sy-scol__name">Priya Shah</span>
+                </div>
+                <div class="sy-scol sy-scol--extra" style="--c: var(--sy-amber); --i: 2" data-signer="2">
+                  <span class="sy-scol__role">Internal approver</span>
+                  <span class="sy-scol__box"><svg class="sy-sig" viewBox="0 0 400 150" data-ink="marcus"><path class="sy-ink-cl" d="M48 112C56 80 64 50 70 34C76 60 82 84 88 96C96 70 104 46 112 32C114 60 116 88 122 104C128 92 134 84 142 86C150 88 146 100 140 100C134 100 138 88 150 88C158 88 156 100 164 98C172 96 172 86 180 86C186 86 184 100 192 98C200 96 206 88 214 90" /><path class="sy-ink-cl" d="M238 44C244 70 250 90 254 100C260 84 266 70 270 64C272 80 276 92 282 100C290 86 296 62 300 46" /><path class="sy-ink-cl" d="M300 46C300 70 300 96 304 100C312 106 324 92 316 86C308 82 306 98 320 100C330 102 336 84 334 70C332 92 336 104 346 100C356 94 352 82 344 86" /><path class="sy-ink-cl" d="M40 128C140 112 260 124 380 106" /></svg></span>
+                  <span class="sy-scol__name">Marcus Webb</span>
+                </div>
+              </div>
+            </div>
+            <div class="sy-people">
+              <p class="sy-people__title">Signers</p>
+              <div class="sy-person" style="--c: var(--sy-violet)" data-person="0">
+                <span class="sy-person__av">JL</span><span class="sy-person__who"><b>Jordan Lee</b><span>Customer</span></span><span class="sy-person__st">Signed</span>
+              </div>
+              <div class="sy-person sy-person--extra" style="--c: var(--sy-sky)" data-person="1">
+                <span class="sy-person__av">PS</span><span class="sy-person__who"><b>Priya Shah</b><span>Supplier</span></span><span class="sy-person__st">Signed</span>
+              </div>
+              <div class="sy-person sy-person--extra" style="--c: var(--sy-amber)" data-person="2">
+                <span class="sy-person__av">MW</span><span class="sy-person__who"><b>Marcus Webb</b><span>Internal approver</span></span><span class="sy-person__st">Signed</span>
+              </div>
+              <span class="sy-people__add">+ Add signer</span>
+            </div>
+          </div>
+
+          <ul class="sy-trio" data-reveal-stagger="90">
+            <li data-reveal>
+              <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-pen" /></svg>
+              <h3>Draw, type or upload</h3>
+              <p>Signers create their signature the way they prefer, right inside your document.</p>
+            </li>
+            <li data-reveal>
+              <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-key" /></svg>
+              <h3>Optional one-time passcode</h3>
+              <p>Send a passcode to the signatory to verify them before they sign.</p>
+            </li>
+            <li data-reveal>
+              <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-cert" /></svg>
+              <h3>Certificate of authenticity</h3>
+              <p>Every completed e-signature document includes one.</p>
+            </li>
+          </ul>
+
+          <div class="sy-trust" data-reveal>
+            <p><svg class="sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-shield" /></svg>Legally binding electronic signatures with an audit trail</p>
+            <div class="sy-trust__logos">
+              <img src="/assets/compliance/eidas.svg" width="88" height="40" alt="eIDAS compliant e-signatures" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" width="42" height="40" alt="256-bit encryption" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" width="60" height="36" alt="Hosted on AWS" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/gdpr.png" width="40" height="40" alt="GDPR" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── 4. More than e-signatures + proof ───────── -->
+      <section class="sy-sec sy-more" aria-labelledby="sy-more-title">
+        <div class="qc-container">
+          <div class="sy-more__grid">
+            <div class="sy-more__copy" data-reveal>
+              <h2 id="sy-more-title">More than <span class="sy-em">e-signature software</span></h2>
+              <p>Build the document, price it, collect information and approvals, take payment, then complete it with e-signatures. Creation through to completion, in one place.</p>
+              <div class="sy-more__ctas">
+                <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="more">Start free 14-day trial</a>
+                <a class="sy-link" href="https://www.quote.cloud/electronic-signature-software-solution">
+                  All e-signature features<svg class="sy-ico" width="16" height="16" aria-hidden="true"><use href="#sy-i-arrow" /></svg>
+                </a>
+              </div>
+            </div>
+            <ul class="sy-tiles" data-reveal-stagger="70">
+              <li data-reveal>
+                <a href="https://www.quote.cloud/cpq-software">
+                  <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-table" /></svg>
+                  <b>Pricing tables</b><span>Options, quantities and totals customers can choose</span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">
+                  <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-form" /></svg>
+                  <b>Forms and input fields</b><span>Collect customer details inside the document</span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a href="https://www.quote.cloud/collaboration">
+                  <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-users" /></svg>
+                  <b>Collaboration</b><span>Work on documents together with your team and customers</span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a href="https://www.quote.cloud/stripe-integration-with-quotecloud">
+                  <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-card" /></svg>
+                  <b>Pay online</b><span>Stripe and PayPal payments in the same document</span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">
+                  <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-blocks" /></svg>
+                  <b>Canvas and grid editing</b><span>Design freely or build in structured rows</span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a href="https://www.quote.cloud/quote-templates">
+                  <svg class="sy-ico" width="22" height="22" aria-hidden="true"><use href="#sy-i-doc" /></svg>
+                  <b>Templates</b><span>Start quotes, proposals and contracts from a template</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sy-proof" data-reveal-stagger="90">
+            <div class="sy-proof__item" data-reveal>
+              <span class="sy-proof__num"><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg class="sy-ico sy-star" width="20" height="20" aria-hidden="true"><use href="#sy-i-star" /></svg></span>
+              <span class="sy-proof__label">Rated on Capterra</span>
+            </div>
+            <div class="sy-proof__item" data-reveal>
+              <span class="sy-proof__num"><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg class="sy-ico sy-star" width="20" height="20" aria-hidden="true"><use href="#sy-i-star" /></svg></span>
+              <span class="sy-proof__label">Rated on Software Advice</span>
+            </div>
+            <div class="sy-proof__item" data-reveal>
+              <span class="sy-proof__num">2013</span>
+              <span class="sy-proof__label">In business since</span>
+            </div>
+            <div class="sy-proof__item" data-reveal>
+              <span class="sy-proof__num">Every plan</span>
+              <span class="sy-proof__label">E-signatures included</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="sy-faq-wrap">
+        <!-- @include faq-esign -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="sy-close" aria-labelledby="sy-close-title">
+        <div class="sy-close__inner qc-container" data-reveal="scale">
+          <h2 id="sy-close-title">Send your next agreement and <span class="sy-em">watch it come back signed</span></h2>
+          <svg class="sy-sig sy-close__sig" viewBox="0 0 400 150" data-ink="jordan" aria-hidden="true"><path class="sy-ink-cl" d="M48 44C62 30 92 24 100 32C108 42 90 70 80 96C72 118 60 130 46 126C32 122 36 104 52 98C70 92 92 92 108 88C116 86 120 72 130 72C140 72 138 88 128 88C120 88 122 76 134 78C142 80 144 88 150 86C156 84 156 74 162 74C168 74 166 88 176 88C186 88 184 70 194 52C198 44 196 40 192 46C186 56 186 82 194 88C200 92 206 78 214 78C222 78 220 90 214 90C208 90 212 80 222 80C228 80 226 88 232 88C240 88 240 76 248 76C256 76 252 90 262 88" /><path class="sy-ink-cl" d="M286 40C280 60 272 92 268 110C266 120 278 120 290 112C300 104 304 96 312 96C322 96 316 108 308 106C302 104 306 94 316 94C330 94 330 108 340 106C346 104 344 96 338 98C332 100 334 108 346 108C356 108 362 102 368 96" /><path class="sy-ink-cl" d="M60 136C150 126 280 122 360 118" /></svg>
+          <p>E-signatures, initials and PDF fields are included in every QuoteCloud plan.</p>
+          <div class="sy-close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow sy-ico" width="18" height="18" aria-hidden="true"><use href="#sy-i-arrow" /></svg>
+            </a>
+            <a class="qc-btn sy-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="sy-close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

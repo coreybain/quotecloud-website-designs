@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-quoting -->
+  </head>
+  <body class="bq">
+    <!-- @include header -->
+
+    <svg class="bq-sprite" aria-hidden="true" focusable="false">
+      <symbol id="bq-i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="bq-i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="bq-i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M5 12h14"/></symbol>
+      <symbol id="bq-i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 7l10 10M17 7 7 17"/></symbol>
+      <symbol id="bq-i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+      <symbol id="bq-i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></g></symbol>
+      <symbol id="bq-i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+      <symbol id="bq-i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.4"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
+      <symbol id="bq-i-grip" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></g></symbol>
+      <symbol id="bq-i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+      <symbol id="bq-i-bell" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15Z"/><path d="M10 21h4"/></g></symbol>
+      <symbol id="bq-i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.3-4.4" stroke-linecap="round"/></g></symbol>
+      <symbol id="bq-i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h6" stroke-linecap="round"/></g></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ═════════ HERO + PLAYABLE QUOTE BUILDER ═════════ -->
+      <section class="bq-hero" aria-labelledby="bq-title">
+        <div class="bq-hero__bg" aria-hidden="true">
+          <span class="bq-hero__glow bq-hero__glow--a"></span>
+          <span class="bq-hero__glow bq-hero__glow--b"></span>
+        </div>
+
+        <div class="bq-hero__inner">
+          <div class="bq-hero__copy">
+            <h1 class="bq-h1" id="bq-title"><em>Quoting software</em> that builds sales quotes in minutes</h1>
+            <p class="bq-lede">This price table is live. Add products, change quantities, apply a discount and switch currency: every total stays right.</p>
+            <div class="bq-ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="bq-note">No credit card required</p>
+          </div>
+
+          <!-- The playable builder. Fully readable without JS (static first state below). -->
+          <div class="bq-app" data-bq-app role="group" aria-labelledby="bq-app-title" aria-describedby="bq-app-desc">
+            <p class="qc-sr-only" id="bq-app-desc">Interactive demo of a QuoteCloud price table. Every control updates the quote totals.</p>
+
+            <div class="bq-app__bar">
+              <div class="bq-app__doc">
+                <span class="bq-app__mark" aria-hidden="true"><svg width="16" height="16"><use href="#bq-i-doc" /></svg></span>
+                <div class="bq-app__docText">
+                  <p class="bq-app__title" id="bq-app-title">Quote Q-1048 <span>· Northwind Logistics</span></p>
+                  <p class="bq-app__meta"><span class="bq-pill" data-bq-pill data-state="draft">Draft</span><span class="bq-app__ver" data-bq-ver>v1.0</span></p>
+                </div>
+              </div>
+              <div class="bq-app__controls">
+                <fieldset class="bq-seg" data-bq-currency>
+                  <legend class="qc-sr-only">Quote currency</legend>
+                  <label><input type="radio" name="bq-cur" value="USD" checked /><span>USD</span></label>
+                  <label><input type="radio" name="bq-cur" value="EUR" /><span>EUR</span></label>
+                  <label><input type="radio" name="bq-cur" value="GBP" /><span>GBP</span></label>
+                  <label><input type="radio" name="bq-cur" value="AUD" /><span>AUD</span></label>
+                  <span class="bq-seg__thumb" aria-hidden="true"></span>
+                </fieldset>
+                <label class="bq-switch">
+                  <input type="checkbox" role="switch" data-bq-internal />
+                  <span class="bq-switch__track" aria-hidden="true"><span class="bq-switch__dot"></span></span>
+                  <span class="bq-switch__label">Internal view</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="bq-app__body">
+              <div class="bq-sheet" data-bq-drop>
+                <div class="bq-table" role="table" aria-label="Price table" aria-describedby="bq-internal-note">
+                  <div class="bq-row bq-row--head" role="row">
+                    <span class="bq-c bq-c--item" role="columnheader">Item</span>
+                    <span class="bq-c bq-c--qty" role="columnheader">Qty</span>
+                    <span class="bq-c bq-c--cost bq-int" role="columnheader">Cost</span>
+                    <span class="bq-c bq-c--margin bq-int" role="columnheader">Margin</span>
+                    <span class="bq-c bq-c--total" role="columnheader">Total</span>
+                    <span class="bq-c bq-c--x" role="columnheader"><span class="qc-sr-only">Remove</span></span>
+                  </div>
+                  <div class="bq-rows" role="rowgroup" data-bq-rows>
+                    <div class="bq-row" role="row" data-id="licence">
+                      <div class="bq-c bq-c--item" role="cell"><span class="bq-item"><span class="bq-item__name">Enterprise software licence</span><span class="bq-item__sub">$15,000.00 · annual, 50 users</span></span></div>
+                      <div class="bq-c bq-c--qty" role="cell"><span class="bq-step"><button type="button" class="bq-step__btn" data-act="dec" aria-label="Decrease quantity of Enterprise software licence"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-minus" /></svg></button><output class="bq-step__val">1</output><button type="button" class="bq-step__btn" data-act="inc" aria-label="Increase quantity of Enterprise software licence"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-plus" /></svg></button></span></div>
+                      <div class="bq-c bq-c--cost bq-int" role="cell">$6,200.00</div>
+                      <div class="bq-c bq-c--margin bq-int" role="cell">58.7%</div>
+                      <div class="bq-c bq-c--total" role="cell">$15,000.00</div>
+                      <div class="bq-c bq-c--x" role="cell"><button type="button" class="bq-x" data-act="remove" aria-label="Remove Enterprise software licence"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-x" /></svg></button></div>
+                    </div>
+                    <div class="bq-row" role="row" data-id="impl">
+                      <div class="bq-c bq-c--item" role="cell"><span class="bq-item"><span class="bq-item__name">Implementation services</span><span class="bq-item__sub">$1,300.00 · per day</span></span></div>
+                      <div class="bq-c bq-c--qty" role="cell"><span class="bq-step"><button type="button" class="bq-step__btn" data-act="dec" aria-label="Decrease quantity of Implementation services"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-minus" /></svg></button><output class="bq-step__val">5</output><button type="button" class="bq-step__btn" data-act="inc" aria-label="Increase quantity of Implementation services"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-plus" /></svg></button></span></div>
+                      <div class="bq-c bq-c--cost bq-int" role="cell">$3,900.00</div>
+                      <div class="bq-c bq-c--margin bq-int" role="cell">40.0%</div>
+                      <div class="bq-c bq-c--total" role="cell">$6,500.00</div>
+                      <div class="bq-c bq-c--x" role="cell"><button type="button" class="bq-x" data-act="remove" aria-label="Remove Implementation services"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-x" /></svg></button></div>
+                    </div>
+                    <div class="bq-row is-optional" role="row" data-id="training">
+                      <div class="bq-c bq-c--item" role="cell"><label class="bq-opt"><input type="checkbox" checked data-act="toggle" aria-label="Include optional Training package" /><span class="bq-opt__box" aria-hidden="true"><svg width="12" height="12"><use href="#bq-i-check" /></svg></span></label><span class="bq-item"><span class="bq-item__name">Training package</span><span class="bq-item__sub">$1,200.00 · optional</span></span></div>
+                      <div class="bq-c bq-c--qty" role="cell"><span class="bq-step"><button type="button" class="bq-step__btn" data-act="dec" aria-label="Decrease quantity of Training package"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-minus" /></svg></button><output class="bq-step__val">1</output><button type="button" class="bq-step__btn" data-act="inc" aria-label="Increase quantity of Training package"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-plus" /></svg></button></span></div>
+                      <div class="bq-c bq-c--cost bq-int" role="cell">$450.00</div>
+                      <div class="bq-c bq-c--margin bq-int" role="cell">62.5%</div>
+                      <div class="bq-c bq-c--total" role="cell">$1,200.00</div>
+                      <div class="bq-c bq-c--x" role="cell"><button type="button" class="bq-x" data-act="remove" aria-label="Remove Training package"><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-x" /></svg></button></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="bq-empty" data-bq-empty hidden>Your quote is empty. Add something from the catalogue.</p>
+                <p class="bq-intnote" id="bq-internal-note" data-bq-intnote><svg width="14" height="14" aria-hidden="true"><use href="#bq-i-lock" /></svg><span data-bq-intnote-text>Costs and margins are hidden from your customer.</span></p>
+
+                <div class="bq-calc">
+                  <div class="bq-disc">
+                    <div class="bq-disc__head">
+                      <span class="bq-disc__label" id="bq-disc-label">Discount</span>
+                      <fieldset class="bq-mseg" data-bq-dmode>
+                        <legend class="qc-sr-only">Discount type</legend>
+                        <label><input type="radio" name="bq-dmode" value="pct" checked /><span>%</span></label>
+                        <label><input type="radio" name="bq-dmode" value="fixed" /><span data-bq-dsym>$</span></label>
+                      </fieldset>
+                      <output class="bq-disc__val" data-bq-dval for="bq-disc">10%</output>
+                    </div>
+                    <input class="bq-range" id="bq-disc" type="range" min="0" max="25" step="1" value="10" aria-labelledby="bq-disc-label" data-bq-disc style="--p: 40%" />
+                    <p class="bq-rule" data-bq-rule data-state="ok"><span class="bq-rule__dot" aria-hidden="true"></span><span data-bq-rule-text>Within pricing rules</span></p>
+                    <p class="bq-hint">Rule: discounts over 15% need manager approval.</p>
+                  </div>
+                  <dl class="bq-sum">
+                    <div><dt>Subtotal</dt><dd data-bq-sub>$22,700.00</dd></div>
+                    <div><dt>Discount</dt><dd data-bq-dsc>−$2,270.00</dd></div>
+                    <div><dt>Tax (10%)</dt><dd data-bq-tax>$2,043.00</dd></div>
+                    <div class="bq-sum__margin bq-int"><dt>Gross margin</dt><dd data-bq-gm>45.3%</dd></div>
+                    <div class="bq-sum__total"><dt>Total <span data-bq-curcode>USD</span></dt><dd><span class="bq-odo" data-bq-total aria-hidden="true">$22,473.00</span><span class="qc-sr-only" data-bq-total-sr>$22,473.00</span></dd></div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="bq-cat" data-bq-cat>
+                <p class="bq-cat__title" id="bq-cat-title">Product catalogue</p>
+                <p class="bq-cat__search" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-search" /></svg>Search 240 products</p>
+                <ul class="bq-cat__list" aria-labelledby="bq-cat-title">
+                  <li><button type="button" class="bq-cat__item" data-add="support" draggable="true"><span class="bq-cat__grip" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-grip" /></svg></span><span class="bq-cat__text"><span class="bq-cat__name">Premium support</span><span class="bq-cat__price" data-price="3600">$3,600.00</span></span><span class="bq-cat__add" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-plus" /></svg></span><span class="qc-sr-only">Add to quote</span></button></li>
+                  <li><button type="button" class="bq-cat__item" data-add="migration" draggable="true"><span class="bq-cat__grip" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-grip" /></svg></span><span class="bq-cat__text"><span class="bq-cat__name">Data migration</span><span class="bq-cat__price" data-price="2400">$2,400.00</span></span><span class="bq-cat__add" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-plus" /></svg></span><span class="qc-sr-only">Add to quote</span></button></li>
+                  <li><button type="button" class="bq-cat__item" data-add="seats" draggable="true"><span class="bq-cat__grip" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-grip" /></svg></span><span class="bq-cat__text"><span class="bq-cat__name">Extra user seats</span><span class="bq-cat__price" data-price="180">$180.00</span></span><span class="bq-cat__add" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-plus" /></svg></span><span class="qc-sr-only">Add to quote</span></button></li>
+                  <li><button type="button" class="bq-cat__item" data-add="crm" draggable="true"><span class="bq-cat__grip" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-grip" /></svg></span><span class="bq-cat__text"><span class="bq-cat__name">CRM integration setup</span><span class="bq-cat__price" data-price="2200">$2,200.00</span></span><span class="bq-cat__add" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-plus" /></svg></span><span class="qc-sr-only">Add to quote</span></button></li>
+                  <li><button type="button" class="bq-cat__item" data-add="workshop" draggable="true"><span class="bq-cat__grip" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-grip" /></svg></span><span class="bq-cat__text"><span class="bq-cat__name">Onsite workshop</span><span class="bq-cat__price" data-price="1800">$1,800.00</span></span><span class="bq-cat__add" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-plus" /></svg></span><span class="qc-sr-only">Add to quote</span></button></li>
+                </ul>
+                <p class="bq-cat__hint">Click or drag into the quote</p>
+              </div>
+            </div>
+
+            <div class="bq-app__foot">
+              <ol class="bq-flow" data-bq-flow aria-label="Quote progress">
+                <li data-step="draft" class="is-done"><span class="bq-flow__dot" aria-hidden="true"></span>Draft</li>
+                <li data-step="approval"><span class="bq-flow__dot" aria-hidden="true"></span><span data-bq-approval-label>Approval</span></li>
+                <li data-step="sent"><span class="bq-flow__dot" aria-hidden="true"></span>Sent</li>
+                <li data-step="signed"><span class="bq-flow__dot" aria-hidden="true"></span>Signed</li>
+              </ol>
+              <button type="button" class="bq-send" data-bq-send>Send for approval</button>
+            </div>
+
+            <div class="bq-signoff" data-bq-signoff hidden>
+              <div class="bq-signoff__head">
+                <span class="bq-signoff__check" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-check" /></svg></span>
+                <p><strong>Accepted and signed</strong><span>Jordan Lee, Northwind Logistics</span></p>
+              </div>
+              <svg class="bq-signoff__sig" viewBox="0 0 260 70" aria-hidden="true"><path pathLength="1" d="M8 48c10-18 22-34 30-30 7 4-8 36-2 38 7 2 16-30 24-28 6 2-2 22 4 22 7 0 10-16 17-15 6 1 1 14 7 14 8 0 13-20 22-20 7 0 2 18 9 18 10 0 18-24 30-22 8 1 2 20 10 20 12 0 26-12 46-16 14-3 30-2 43 0"/></svg>
+              <p class="bq-signoff__foot"><span data-bq-signed-total>$22,473.00</span> · eSigned 8 Oct 2026</p>
+            </div>
+
+            <p class="qc-sr-only" aria-live="polite" data-bq-live></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ MID CTA ═════════ -->
+      <section class="bq-band" aria-labelledby="bq-band-title">
+        <div class="bq-band__inner" data-reveal>
+          <div class="bq-band__copy">
+            <h2 id="bq-band-title">Build your real one: <em>start free.</em></h2>
+            <p>Start from a template, pull products from your catalogue and deals from your CRM, and send your first quote today.</p>
+          </div>
+          <div class="bq-band__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-demo">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+            <a class="bq-link bq-link--light" href="https://www.quote.cloud/quote-templates">Browse quote templates <svg width="16" height="16" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ FEATURE ROWS ═════════ -->
+      <div class="bq-features">
+        <!-- Approvals -->
+        <section class="bq-feat" aria-labelledby="bq-f1-title" data-bq-loop>
+          <div class="bq-feat__copy" data-reveal>
+            <h2 id="bq-f1-title">Approval workflows that <em>protect every margin</em></h2>
+            <p>Set rules on discounts, totals or products. Quotes that break them go to the right approver automatically, so sales keeps moving.</p>
+            <a class="bq-link" href="https://www.quote.cloud/cpq-software">Explore CPQ software <svg width="16" height="16" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+          </div>
+          <div class="bq-feat__visual" data-reveal="scale">
+            <div class="bq-appr" aria-hidden="true" data-bq-seq="1100" data-bq-max="5" data-bq-hold="3">
+              <div class="bq-appr__rule">
+                <p class="bq-appr__k">Rule</p>
+                <p class="bq-appr__r">Discount <b>over 15%</b> <svg width="14" height="14"><use href="#bq-i-arrow" /></svg> Sales manager</p>
+                <p class="bq-appr__r bq-appr__r--muted">Total <b>over $50,000</b> <svg width="14" height="14"><use href="#bq-i-arrow" /></svg> Finance</p>
+              </div>
+              <div class="bq-appr__quote">
+                <span class="bq-appr__qid">Q-1048</span>
+                <span class="bq-appr__qamt">$19,820.00</span>
+                <span class="bq-appr__qdisc">Discount 18%</span>
+              </div>
+              <ol class="bq-appr__chain">
+                <li data-s="1"><span class="bq-appr__node"><svg width="12" height="12"><use href="#bq-i-check" /></svg></span>Quote created</li>
+                <li data-s="2"><span class="bq-appr__node bq-appr__node--av">DM</span>Manager approval</li>
+                <li data-s="3"><span class="bq-appr__node"><svg width="12" height="12"><use href="#bq-i-check" /></svg></span>Approved</li>
+                <li data-s="4"><span class="bq-appr__node"><svg width="12" height="12"><use href="#bq-i-arrow" /></svg></span>Ready to send</li>
+              </ol>
+              <span class="bq-appr__stamp" data-s="5">Approved</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Versions + collaboration -->
+        <section class="bq-feat bq-feat--flip" aria-labelledby="bq-f2-title" data-bq-loop>
+          <div class="bq-feat__copy" data-reveal>
+            <h2 id="bq-f2-title">Version history and a <em>clear audit trail</em></h2>
+            <p>Sales, operations and finance work on the same quote in real time. Every change is tracked, and customers always get the latest version.</p>
+            <a class="bq-link" href="https://www.quote.cloud/collaboration">See real-time collaboration <svg width="16" height="16" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+          </div>
+          <div class="bq-feat__visual" data-reveal="scale">
+            <div class="bq-ver" aria-hidden="true" data-bq-seq="1000" data-bq-max="5" data-bq-hold="3">
+              <div class="bq-ver__stack">
+                <div class="bq-ver__card bq-ver__card--3"><span class="bq-ver__tag">v1.0</span><span class="bq-ver__l"></span><span class="bq-ver__l bq-ver__l--s"></span></div>
+                <div class="bq-ver__card bq-ver__card--2"><span class="bq-ver__tag">v1.1</span><span class="bq-ver__l"></span><span class="bq-ver__l bq-ver__l--s"></span></div>
+                <div class="bq-ver__card bq-ver__card--1">
+                  <div class="bq-ver__top"><span class="bq-ver__tag bq-ver__tag--live">v1.2 · Latest</span><span class="bq-ver__who"><i>SR</i><i>AK</i></span></div>
+                  <p class="bq-ver__diff" data-s="2"><span>Discount</span><s>18%</s><b>15%</b></p>
+                  <p class="bq-ver__diff" data-s="3"><span>Training package</span><b>Added</b></p>
+                  <p class="bq-ver__note" data-s="4"><b>@Alex</b> can we hold the training price for Q4?</p>
+                </div>
+              </div>
+              <ol class="bq-trail">
+                <li data-s="2"><span>09:12</span>Sophie changed discount 18% → 15%</li>
+                <li data-s="3"><span>09:20</span>Alex added Training package</li>
+                <li data-s="4"><span>09:31</span>Dana approved v1.2</li>
+                <li data-s="5"><span>09:32</span>Sent to Jordan Lee</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- Customer view, eSign, pay, notifications -->
+        <section class="bq-feat" aria-labelledby="bq-f3-title" data-bq-loop>
+          <div class="bq-feat__copy" data-reveal>
+            <h2 id="bq-f3-title">Interactive quotes with <em>eSignatures and payment</em></h2>
+            <p>Customers pick their options, sign with a legally binding eSignature and pay by Stripe or PayPal. You hear about every step as it happens.</p>
+            <a class="bq-link" href="https://www.quote.cloud/electronic-signature-software-solution">About eSignatures <svg width="16" height="16" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+          </div>
+          <div class="bq-feat__visual" data-reveal="scale">
+            <div class="bq-cust" aria-hidden="true" data-bq-seq="1300" data-bq-max="5" data-bq-hold="2">
+              <div class="bq-cust__doc">
+                <div class="bq-cust__chrome"><i></i><i></i><i></i><span>northwind.quote.cloud</span></div>
+                <p class="bq-cust__h">Your quote from Acme Software</p>
+                <p class="bq-cust__line"><span>Software licence</span><b>$15,000.00</b></p>
+                <p class="bq-cust__line"><span>Implementation, 5 days</span><b>$6,500.00</b></p>
+                <p class="bq-cust__line bq-cust__line--opt"><span class="bq-cust__tick"><svg width="10" height="10"><use href="#bq-i-check" /></svg></span><span>Premium support <em>optional</em></span><b>$3,600.00</b></p>
+                <p class="bq-cust__total"><span>Total incl. tax</span><span class="bq-cust__amts"><b class="bq-cust__a1">$23,650.00</b><b class="bq-cust__a2">$27,610.00</b></span></p>
+                <div class="bq-cust__sign">
+                  <svg viewBox="0 0 180 44"><path pathLength="1" d="M6 30c8-12 16-22 22-19 5 3-6 24-1 25 5 1 12-20 18-18 4 1-1 14 3 14 5 0 7-10 12-10 4 0 1 9 5 9 6 0 9-13 16-13 5 0 1 12 7 12 8 0 16-10 30-12 12-2 24-1 50 1"/></svg>
+                  <span class="bq-cust__paid" data-s="4">Paid · Stripe</span>
+                </div>
+              </div>
+              <ul class="bq-toasts">
+                <li data-s="1"><svg width="14" height="14"><use href="#bq-i-eye" /></svg><span><b>Quote opened</b> Jordan Lee · just now</span></li>
+                <li data-s="2"><svg width="14" height="14"><use href="#bq-i-plus" /></svg><span><b>Option selected</b> Premium support</span></li>
+                <li data-s="3"><svg width="14" height="14"><use href="#bq-i-check" /></svg><span><b>Accepted and signed</b> Q-1048 v1.2</span></li>
+                <li data-s="4"><svg width="14" height="14"><use href="#bq-i-bell" /></svg><span><b>Payment received</b> $27,610.00</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Integrations -->
+        <section class="bq-feat bq-feat--flip" aria-labelledby="bq-f4-title" data-bq-loop>
+          <div class="bq-feat__copy" data-reveal>
+            <h2 id="bq-f4-title">Connected to your <em>CRM, accounting and payments</em></h2>
+            <p>Pull deals and contacts from your CRM, send accepted quotes to accounting and take payment online, or build your own flow with the API.</p>
+            <a class="bq-link" href="https://www.quote.cloud/all-integrations">All integrations <svg width="16" height="16" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+          </div>
+          <div class="bq-feat__visual" data-reveal="scale">
+            <div class="bq-int-flow">
+              <ul class="bq-int-flow__col" aria-label="CRM integrations">
+                <li><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" width="120" height="60" alt="Salesforce" loading="lazy" decoding="async" /></a></li>
+                <li><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" width="120" height="60" alt="HubSpot" loading="lazy" decoding="async" /></a></li>
+                <li><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="120" height="60" alt="monday.com" loading="lazy" decoding="async" /></a></li>
+                <li><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" width="120" height="60" alt="Microsoft Dynamics" loading="lazy" decoding="async" /></a></li>
+              </ul>
+              <div class="bq-int-flow__hub" aria-hidden="true">
+                <svg class="bq-int-flow__wires" viewBox="0 0 200 240" preserveAspectRatio="none">
+                  <g class="bq-wire-base"><path d="M0 30 C 60 30, 60 120, 100 120"/><path d="M0 90 C 50 90, 60 120, 100 120"/><path d="M0 150 C 50 150, 60 120, 100 120"/><path d="M0 210 C 60 210, 60 120, 100 120"/><path d="M100 120 C 140 120, 140 30, 200 30"/><path d="M100 120 C 150 120, 150 90, 200 90"/><path d="M100 120 C 150 120, 150 150, 200 150"/><path d="M100 120 C 140 120, 140 210, 200 210"/></g>
+                  <g class="bq-wire-pulse"><path pathLength="100" d="M0 30 C 60 30, 60 120, 100 120"/><path pathLength="100" d="M0 150 C 50 150, 60 120, 100 120"/><path pathLength="100" d="M100 120 C 150 120, 150 90, 200 90"/><path pathLength="100" d="M100 120 C 140 120, 140 210, 200 210"/></g>
+                </svg>
+                <span class="bq-int-flow__q"><img src="/assets/logos/qc-symbol-white.png" width="30" height="31" alt="" loading="lazy" decoding="async" /></span>
+              </div>
+              <ul class="bq-int-flow__col" aria-label="Accounting and payment integrations">
+                <li><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" width="120" height="60" alt="Xero" loading="lazy" decoding="async" /></a></li>
+                <li><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" width="120" height="60" alt="QuickBooks Online" loading="lazy" decoding="async" /></a></li>
+                <li><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="120" height="60" alt="Stripe" loading="lazy" decoding="async" /></a></li>
+                <li><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="120" height="60" alt="PayPal" loading="lazy" decoding="async" /></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ═════════ SAMPLE QUOTES GALLERY ═════════ -->
+      <section class="bq-gallery" aria-labelledby="bq-gal-title">
+        <div class="bq-gallery__head" data-reveal>
+          <h2 id="bq-gal-title">Sales quotes for <em>every kind of business</em></h2>
+          <p>Example quotes built in QuoteCloud, from trade call-outs to software roll-outs.</p>
+        </div>
+        <ul class="bq-gallery__list" data-reveal-stagger="90">
+          <li data-reveal><a class="bq-sample" href="https://www.quote.cloud/sales-quotes-for-trade-services"><span class="bq-sample__frame"><img src="./img/quote-electrician.jpg" width="600" height="900" alt="Four-page electrical services quote from Powerline Electrical with cover, scope of work, pricing and acceptance pages" loading="lazy" decoding="async" /></span><span class="bq-sample__cap">Electrician</span></a></li>
+          <li data-reveal><a class="bq-sample" href="https://www.quote.cloud/solutions-by-industry"><span class="bq-sample__frame"><img src="./img/quote-kitchen-designer.jpg" width="600" height="900" alt="Kitchen design quote from DesignCraft Kitchens in black and gold" loading="lazy" decoding="async" /></span><span class="bq-sample__cap">Kitchen design</span></a></li>
+          <li data-reveal><a class="bq-sample" href="https://www.quote.cloud/sales-quotes-for-trade-services"><span class="bq-sample__frame"><img src="./img/quote-landscaping.jpg" width="600" height="900" alt="Landscaping quote from Greenscape Landscaping with project scope and pricing" loading="lazy" decoding="async" /></span><span class="bq-sample__cap">Landscaping</span></a></li>
+          <li data-reveal><a class="bq-sample" href="https://www.quote.cloud/sales-quotes-for-telco"><span class="bq-sample__frame"><img src="./img/quote-mobile-phone-plans.jpg" width="600" height="848" alt="Mobile phone plans quote from ConnectPlus Mobile with plan cards" loading="lazy" decoding="async" /></span><span class="bq-sample__cap">Mobile plans</span></a></li>
+          <li data-reveal><a class="bq-sample" href="https://www.quote.cloud/sales-quotes-for-it-services"><span class="bq-sample__frame"><img src="./img/quote-app-developer.jpg" width="600" height="849" alt="App development proposal and quote from AppCraft Solutions" loading="lazy" decoding="async" /></span><span class="bq-sample__cap">App development</span></a></li>
+        </ul>
+        <p class="bq-gallery__more" data-reveal><a class="bq-link" href="https://www.quote.cloud/quote-templates">Browse quote templates <svg width="16" height="16" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a></p>
+      </section>
+
+      <!-- ═════════ PROOF ═════════ -->
+      <section class="bq-proof" aria-labelledby="bq-proof-title">
+        <h2 class="bq-proof__title" id="bq-proof-title" data-reveal>Well reviewed, <em>secure by design</em></h2>
+        <ul class="bq-proof__list" data-reveal-stagger="70">
+          <li class="bq-proof__rating" data-reveal>
+            <span class="bq-proof__num"><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></span>
+            <span class="bq-stars" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg><span class="bq-stars__part"><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg></span></span>
+            <span class="bq-proof__lbl">Capterra</span>
+          </li>
+          <li class="bq-proof__rating" data-reveal>
+            <span class="bq-proof__num"><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></span>
+            <span class="bq-stars" aria-hidden="true"><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg><span class="bq-stars__part"><svg width="14" height="14"><use href="#bq-i-star" /></svg><svg width="14" height="14"><use href="#bq-i-star" /></svg></span></span>
+            <span class="bq-proof__lbl">Software Advice</span>
+          </li>
+          <li class="bq-proof__badge" data-reveal><img src="/assets/compliance/eidas.svg" width="44" height="44" alt="" loading="lazy" decoding="async" /><span class="bq-proof__lbl">eIDAS eSignatures</span></li>
+          <li class="bq-proof__badge" data-reveal><img src="/assets/compliance/encryption-256.png" width="44" height="44" alt="" loading="lazy" decoding="async" /><span class="bq-proof__lbl">256-bit encryption</span></li>
+          <li class="bq-proof__badge" data-reveal><img src="/assets/compliance/aws.svg" width="44" height="44" alt="" loading="lazy" decoding="async" /><span class="bq-proof__lbl">Hosted on AWS</span></li>
+          <li class="bq-proof__badge" data-reveal><img src="/assets/compliance/gdpr.png" width="44" height="44" alt="" loading="lazy" decoding="async" /><span class="bq-proof__lbl">GDPR</span></li>
+          <li class="bq-proof__since" data-reveal><span class="bq-proof__num"><span data-count-to="2013" data-count-format="plain">2013</span></span><span class="bq-proof__lbl">Helping teams quote since</span></li>
+        </ul>
+      </section>
+
+      <div class="bq-faq-wrap">
+        <!-- @include faq-quoting -->
+      </div>
+
+      <!-- ═════════ CLOSING CTA ═════════ -->
+      <section class="bq-close" aria-labelledby="bq-close-title">
+        <div class="bq-close__inner">
+          <div class="bq-close__copy" data-reveal>
+            <h2 id="bq-close-title">Your next quote could be <em>signed today.</em></h2>
+            <p>Start free, add your products and send a quote your customer can accept, sign and pay.</p>
+            <div class="bq-ctas bq-ctas--center">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#bq-i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--lg bq-btn-light" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="bq-note bq-note--light">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

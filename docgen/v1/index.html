@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-docgen -->
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="dg">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid-lines" aria-hidden="true"></div>
+        <div class="qc-container hero__grid">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              Document generation software that <span class="t-em">writes the first draft for you.</span>
+            </h1>
+            <p class="hero__lede">
+              Branded templates and your CRM data become finished proposals, quotes and contracts. One at a time, or thousands
+              through the API.
+            </p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo"
+                >Book a demo</a
+              >
+            </div>
+            <p class="hero__note">No credit card required <span aria-hidden="true">&middot;</span> Rated 4.2 on Capterra</p>
+          </div>
+
+          <div
+            class="hdoc"
+            data-hero-doc
+            role="img"
+            aria-label="A QuoteCloud proposal generating from a CRM record: merge fields for the client company, contact name, deal total and expiry date resolve into real values, the line items fill in, and the document is marked ready to send."
+          >
+            <div class="hdoc__src">
+              <span class="hdoc__avatar" data-hd="initials">HC</span>
+              <span class="hdoc__src-text"><strong data-hd="company">Halden &amp; Co.</strong><small>CRM record &middot; Deal won</small></span>
+              <span class="hdoc__pulse"></span>
+            </div>
+
+            <div class="hdoc__card">
+              <div class="hdoc__bar">
+                <span class="hdoc__dots"><i></i><i></i><i></i></span>
+                <span class="hdoc__file">Growth Partnership Proposal</span>
+                <span class="hdoc__status">
+                  <span class="hdoc__st hdoc__st--gen"><i></i>Generating</span>
+                  <span class="hdoc__st hdoc__st--ready"
+                    ><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>Ready to send</span
+                  >
+                </span>
+              </div>
+
+              <div class="hdoc__cover">
+                <span class="hdoc__logo" data-hd="initials">HC</span>
+                <div>
+                  <p class="hdoc__kicker">Proposal &middot; Growth Partnership</p>
+                  <p class="hdoc__for">
+                    Prepared for
+                    <span class="tok"><span class="tok__key">{{client.company}}</span><span class="tok__val" data-hd="company">Halden &amp; Co.</span></span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="hdoc__body">
+                <p class="hdoc__greet">
+                  Hi <span class="tok"><span class="tok__key">{{contact.first_name}}</span><span class="tok__val" data-hd="first">Maya</span></span>,
+                </p>
+                <p class="hdoc__text">
+                  Thanks for your time this week. Here is the plan and investment we discussed, ready whenever you are.
+                </p>
+
+                <div class="hdoc__table">
+                  <div class="hdoc__row hdoc__row--head"><span>Item</span><span>Amount</span></div>
+                  <div class="hdoc__row" style="--i: 0"><span>Platform licence &middot; 12 months</span><span data-hd="l0">$32,400</span></div>
+                  <div class="hdoc__row" style="--i: 1"><span>Onboarding &amp; data migration</span><span data-hd="l1">$9,600</span></div>
+                  <div class="hdoc__row" style="--i: 2"><span>Priority support</span><span data-hd="l2">$6,600</span></div>
+                  <div class="hdoc__row hdoc__row--total">
+                    <span>Total</span>
+                    <span class="tok tok--total"><span class="tok__key">{{deal.total}}</span><span class="tok__val" data-hd="total">$48,600</span></span>
+                  </div>
+                </div>
+
+                <div class="hdoc__foot">
+                  <span class="hdoc__valid"
+                    >Valid until
+                    <span class="tok"><span class="tok__key">{{deal.expiry}}</span><span class="tok__val" data-hd="expiry">30 Nov 2026</span></span></span
+                  >
+                  <span class="hdoc__accept">Accept &amp; sign</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hdoc__toast">
+              <svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>
+              <span><strong>Ready to send</strong><small>Web link &middot; PDF &middot; Email</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento 1: template + data ───────── -->
+      <section class="band" aria-labelledby="gen-title">
+        <div class="qc-container">
+          <header class="band__head" data-reveal>
+            <h2 class="band__title" id="gen-title">Template in. <span class="t-em">Finished document out.</span></h2>
+            <p class="band__lede">
+              Point a branded template at a record and every placeholder fills itself: client, contacts, line items and pricing.
+              No blank page, no re-keying.
+            </p>
+          </header>
+
+          <div class="bento" data-reveal-stagger="90">
+            <!-- CRM record → page -->
+            <article class="bt bt--xl" data-tile="crm" data-reveal aria-labelledby="t-crm">
+              <div class="bt__stage crm" aria-hidden="true">
+                <div class="crm__rec">
+                  <div class="crm__rec-head">
+                    <span class="crm__av">HC</span>
+                    <span><strong>Halden &amp; Co.</strong><small>Deal &middot; Proposal stage</small></span>
+                  </div>
+                  <dl class="crm__fields">
+                    <div class="crm__f"><dt>Company</dt><dd data-src="company">Halden &amp; Co.</dd></div>
+                    <div class="crm__f"><dt>Contact</dt><dd data-src="contact">Maya Chen</dd></div>
+                    <div class="crm__f"><dt>Products</dt><dd data-src="items">3 line items</dd></div>
+                    <div class="crm__f"><dt>Deal value</dt><dd data-src="total">$48,600</dd></div>
+                    <div class="crm__f"><dt>Close date</dt><dd data-src="date">30 Nov 2026</dd></div>
+                  </dl>
+                </div>
+
+                <div class="crm__flow"><i></i><i></i><i></i></div>
+
+                <div class="crm__page">
+                  <div class="crm__cover">
+                    <span class="crm__mark"></span>
+                    <span class="slot slot--light" data-slot="company"><span class="slot__ghost"></span><span class="slot__v">Halden &amp; Co.</span></span>
+                  </div>
+                  <div class="crm__line">
+                    <span class="crm__lab">Attention</span>
+                    <span class="slot" data-slot="contact"><span class="slot__ghost"></span><span class="slot__v">Maya Chen</span></span>
+                  </div>
+                  <div class="crm__items slot" data-slot="items">
+                    <span class="slot__ghost slot__ghost--block"></span>
+                    <span class="slot__v crm__rows">
+                      <span><b>Platform licence</b><b>$32,400</b></span>
+                      <span><b>Onboarding</b><b>$9,600</b></span>
+                      <span><b>Priority support</b><b>$6,600</b></span>
+                    </span>
+                  </div>
+                  <div class="crm__line crm__line--total">
+                    <span class="crm__lab">Total</span>
+                    <span class="slot" data-slot="total"><span class="slot__ghost"></span><span class="slot__v">$48,600</span></span>
+                  </div>
+                  <div class="crm__line">
+                    <span class="crm__lab">Valid until</span>
+                    <span class="slot" data-slot="date"><span class="slot__ghost"></span><span class="slot__v">30 Nov 2026</span></span>
+                  </div>
+                  <span class="crm__done"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>All fields filled</span>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-crm">Your CRM fills in every field</h3>
+                <p>Client details, contacts, products and pricing flow straight from the record into the document. Nothing typed twice, nothing to proofread twice.</p>
+              </div>
+            </article>
+
+            <!-- Brand theme -->
+            <article class="bt bt--wide" data-tile="brand" data-reveal aria-labelledby="t-brand">
+              <div class="bt__stage brand">
+                <div class="brand__docs" aria-hidden="true">
+                  <div class="brand__doc" data-label="Proposal">
+                    <div class="brand__skin is-on" style="--a: #5b3df5">
+                      <span class="bs-cover"></span><span class="bs-h"></span><span class="bs-l"></span><span class="bs-l bs-l--s"></span><span class="bs-btn"></span>
+                    </div>
+                  </div>
+                  <div class="brand__doc" data-label="Quote">
+                    <div class="brand__skin is-on" style="--a: #5b3df5">
+                      <span class="bs-band"></span><span class="bs-h"></span><span class="bs-tbl"><i></i><i></i><i></i></span><span class="bs-btn"></span>
+                    </div>
+                  </div>
+                  <div class="brand__doc" data-label="Contract">
+                    <div class="brand__skin is-on" style="--a: #5b3df5">
+                      <span class="bs-rule"></span><span class="bs-h"></span><span class="bs-l"></span><span class="bs-l"></span><span class="bs-l bs-l--s"></span><span class="bs-sig"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="brand__swatches" role="group" aria-label="Preview a brand theme">
+                  <button class="sw" type="button" style="--a: #5b3df5" aria-pressed="true" data-theme="0"><span class="qc-sr-only">Violet theme</span></button>
+                  <button class="sw" type="button" style="--a: #ff4d47" aria-pressed="false" data-theme="1"><span class="qc-sr-only">Coral theme</span></button>
+                  <button class="sw" type="button" style="--a: #1f2937" aria-pressed="false" data-theme="2"><span class="qc-sr-only">Graphite theme</span></button>
+                  <button class="sw" type="button" style="--a: #0f8f7e" aria-pressed="false" data-theme="3"><span class="qc-sr-only">Teal theme</span></button>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-brand">One theme, every document</h3>
+                <p>Change the theme once and proposals, quotes and contracts all follow, with the right layout blocks in the right places.</p>
+              </div>
+            </article>
+
+            <!-- Compliance -->
+            <article class="bt" data-tile="comply" data-reveal aria-labelledby="t-comply">
+              <div class="bt__stage comply" aria-hidden="true">
+                <div class="comply__page">
+                  <span class="gl"></span><span class="gl gl--s"></span>
+                  <div class="comply__clause">
+                    <svg viewBox="0 0 16 16"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5" /><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7" /></svg>
+                    <span><b>Terms &amp; conditions</b><small>Approved &middot; locked</small></span>
+                  </div>
+                  <div class="comply__disc">
+                    <svg viewBox="0 0 16 16"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5" /><path d="M5.5 7V5.2a2.5 2.5 0 0 1 5 0V7" /></svg>
+                    <span>Disclaimer</span>
+                  </div>
+                  <span class="comply__check"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></span>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-comply">Compliant by default</h3>
+                <p>Approved clauses and disclaimers are locked into the template, so nothing slips out.</p>
+              </div>
+            </article>
+
+            <!-- Reusable blocks -->
+            <article class="bt" data-tile="blocks" data-reveal aria-labelledby="t-blocks">
+              <div class="bt__stage blocks" aria-hidden="true">
+                <div class="blocks__page">
+                  <span class="blocks__b">Introduction</span>
+                  <span class="blocks__slot"><span class="blocks__drop">Case study</span></span>
+                  <span class="blocks__b">Pricing</span>
+                </div>
+                <div class="blocks__lib">
+                  <span>Library</span>
+                  <i></i><i class="is-pick"></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-blocks">Approved content, reused</h3>
+                <p>Pull reviewed blocks from a shared library instead of copying from old files.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento 2: connected + scale ───────── -->
+      <section class="band band--alt" aria-labelledby="scale-title">
+        <div class="qc-container">
+          <header class="band__head" data-reveal>
+            <h2 class="band__title" id="scale-title">Connected to your stack. <span class="t-em">Ready at any volume.</span></h2>
+            <p class="band__lede">
+              Data flows in from the tools you already use, and the API lets any system that speaks HTTPS generate documents
+              around the clock.
+            </p>
+          </header>
+
+          <div class="bento bento--flip" data-reveal-stagger="90">
+            <!-- Integrations hub -->
+            <article class="bt bt--wide" data-tile="hub" data-reveal aria-labelledby="t-hub">
+              <div class="bt__stage hub" aria-hidden="true">
+                <svg class="hub__lines" viewBox="0 0 600 240" preserveAspectRatio="none" focusable="false">
+                  <path d="M70 46 C 190 46, 220 120, 300 120" />
+                  <path d="M70 120 L 300 120" />
+                  <path d="M70 194 C 190 194, 220 120, 300 120" />
+                  <path d="M530 46 C 410 46, 380 120, 300 120" />
+                  <path d="M530 120 L 300 120" />
+                  <path d="M530 194 C 410 194, 380 120, 300 120" />
+                  <g class="hub__light">
+                    <path pathLength="1" d="M70 46 C 190 46, 220 120, 300 120" />
+                    <path pathLength="1" d="M70 120 L 300 120" />
+                    <path pathLength="1" d="M70 194 C 190 194, 220 120, 300 120" />
+                    <path pathLength="1" d="M530 46 C 410 46, 380 120, 300 120" />
+                    <path pathLength="1" d="M530 120 L 300 120" />
+                    <path pathLength="1" d="M530 194 C 410 194, 380 120, 300 120" />
+                  </g>
+                </svg>
+                <span class="hub__node" style="--x: 11.6%; --y: 19%"><img src="/assets/integrations/salesforce-cpq.png" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                <span class="hub__node" style="--x: 11.6%; --y: 50%"><img src="/assets/integrations/hub-spot.png" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                <span class="hub__node" style="--x: 11.6%; --y: 81%"><img src="/assets/integrations/microsoft-dynamics.jpg" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                <span class="hub__node" style="--x: 88.4%; --y: 19%"><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                <span class="hub__node" style="--x: 88.4%; --y: 50%"><img src="/assets/integrations/googlesheets.png" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                <span class="hub__node" style="--x: 88.4%; --y: 81%"><img src="/assets/integrations/xero.png" alt="" width="792" height="790" loading="lazy" decoding="async" /></span>
+                <div class="hub__doc">
+                  <span class="hub__doc-top"></span>
+                  <span class="hub__f"><i></i></span>
+                  <span class="hub__f"><i></i></span>
+                  <span class="hub__f"><i></i></span>
+                  <span class="hub__f hub__f--s"><i></i></span>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-hub">Connected to the tools you use</h3>
+                <p>
+                  Salesforce, HubSpot, Pipedrive, Zoho, Monday, Microsoft Dynamics, Xero, Google Sheets and many more feed data
+                  straight in. <a class="bt__link" href="https://www.quote.cloud/all-integrations">See all integrations</a>
+                </p>
+              </div>
+            </article>
+
+            <!-- API fan-out -->
+            <article class="bt bt--xl bt--dark" data-tile="api" data-reveal aria-labelledby="t-api">
+              <div class="bt__stage api" aria-hidden="true">
+                <div class="api__code">
+                  <div class="api__code-bar"><span>request.json</span><small>Illustrative</small></div>
+<pre class="api__pre"><code><span class="c-p">{</span>
+  <span class="c-k">"template"</span>: <span class="c-s">"proposal"</span>,
+  <span class="c-k">"records"</span>: <span class="c-p">[</span>
+    <span class="c-p">{</span> <span class="c-k">"client"</span>: <span class="c-s">"Halden &amp; Co."</span>,
+      <span class="c-k">"total"</span>: <span class="c-n">48600</span> <span class="c-p">},</span>
+    <span class="c-p">{</span> <span class="c-k">"client"</span>: <span class="c-s">"Northwind"</span>, <span class="c-c">…</span> <span class="c-p">},</span>
+    <span class="c-c">… 1,198 more</span>
+  <span class="c-p">],</span>
+  <span class="c-k">"deliver"</span>: <span class="c-p">[</span><span class="c-s">"pdf"</span>, <span class="c-s">"email"</span><span class="c-p">]</span>
+<span class="c-p">}</span></code></pre>
+                  <span class="api__run"><i></i>Generating</span>
+                </div>
+
+                <div class="api__out">
+                  <div class="api__stack">
+                    <span class="api__pg" style="--i: 0"><b>Halden &amp; Co.</b><i></i><i></i><em>$48,600</em></span>
+                    <span class="api__pg" style="--i: 1"><b>Northwind Freight</b><i></i><i></i><em>$126,400</em></span>
+                    <span class="api__pg" style="--i: 2"><b>Aster Dental Group</b><i></i><i></i><em>$18,950</em></span>
+                    <span class="api__pg" style="--i: 3"><b>Brightline Studio</b><i></i><i></i><em>$7,200</em></span>
+                    <span class="api__pg" style="--i: 4"><b>Kestrel Logistics</b><i></i><i></i><em>$64,300</em></span>
+                    <span class="api__pg" style="--i: 5"><b>Oakridge Realty</b><i></i><i></i><em>$22,750</em></span>
+                  </div>
+                  <div class="api__count">
+                    <span class="api__num" data-api-count>1,200</span>
+                    <span class="api__unit">documents generated</span>
+                  </div>
+                  <div class="api__uses"><span>Invoicing</span><span>Archiving</span><span>Email campaigns</span></div>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-api">One request, thousands of documents</h3>
+                <p>
+                  Any application that can make an HTTPS request can send document data to the GraphQL/REST API and generate any
+                  quantity, for archiving, email marketing, invoicing and more.
+                </p>
+              </div>
+            </article>
+
+            <!-- Delivery formats -->
+            <article class="bt" data-tile="deliver" data-reveal aria-labelledby="t-deliver">
+              <div class="bt__stage deliver" aria-hidden="true">
+                <div class="deliver__inbox">
+                  <span class="deliver__new">
+                    <span class="deliver__av">Q</span>
+                    <span class="deliver__txt"><b>Your proposal is ready</b><small>Halden &amp; Co. &middot; just now</small></span>
+                    <span class="deliver__dot"></span>
+                  </span>
+                  <span class="deliver__row"><i></i><i class="s"></i></span>
+                  <span class="deliver__row"><i></i><i class="s"></i></span>
+                </div>
+                <div class="deliver__fmts"><span>Web link</span><span>PDF</span><span>Email</span></div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-deliver">In their inbox, in their format</h3>
+                <p>Send a live web link, a PDF or both, precisely when it is needed.</p>
+              </div>
+            </article>
+
+            <!-- Around the clock -->
+            <article class="bt" data-tile="clock" data-reveal aria-labelledby="t-clock">
+              <div class="bt__stage clock" aria-hidden="true">
+                <svg class="clock__ring" viewBox="0 0 120 120" focusable="false">
+                  <circle class="clock__track" cx="60" cy="60" r="50" />
+                  <circle class="clock__prog" cx="60" cy="60" r="50" pathLength="1" />
+                  <g class="clock__ticks">
+                    <circle cx="60" cy="10" r="3" /><circle cx="110" cy="60" r="3" /><circle cx="60" cy="110" r="3" /><circle cx="10" cy="60" r="3" />
+                  </g>
+                </svg>
+                <div class="clock__jobs">
+                  <span style="--i: 0"><b>Invoices</b><small>Nightly</small></span>
+                  <span style="--i: 1"><b>Archive copies</b><small>Hourly</small></span>
+                  <span style="--i: 2"><b>Renewal letters</b><small>Mon 09:00</small></span>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-clock">Running around the clock</h3>
+                <p>Schedule batches that generate while your team sleeps.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento 3: the client's side ───────── -->
+      <section class="band" aria-labelledby="close-deal-title">
+        <div class="qc-container">
+          <header class="band__head" data-reveal>
+            <h2 class="band__title" id="close-deal-title">Generated to <span class="t-em">win the deal.</span></h2>
+            <p class="band__lede">
+              Not a static PDF. Clients choose options, read polished copy, watch, scroll and sign, all in one document.
+            </p>
+          </header>
+
+          <div class="bento" data-reveal-stagger="90">
+            <!-- Interactive pricing -->
+            <article class="bt bt--xl" data-tile="price" data-reveal aria-labelledby="t-price">
+              <div class="bt__stage price">
+                <div class="price__card">
+                  <div class="price__head">
+                    <span>Investment</span>
+                    <small>Client view &middot; try it</small>
+                  </div>
+                  <ul class="price__rows">
+                    <li class="price__row">
+                      <span class="price__name">Platform licence<small>12 months</small></span>
+                      <span class="price__amt" data-price-row="32400">$32,400</span>
+                    </li>
+                    <li class="price__row">
+                      <span class="price__name">Onboarding &amp; migration<small>Fixed fee</small></span>
+                      <span class="price__amt">$9,600</span>
+                    </li>
+                    <li class="price__row price__row--opt">
+                      <label class="price__toggle">
+                        <input type="checkbox" data-price-opt="6600" checked />
+                        <span class="price__switch" aria-hidden="true"></span>
+                        <span class="price__name">Priority support<small>Optional</small></span>
+                      </label>
+                      <span class="price__amt">$6,600</span>
+                    </li>
+                    <li class="price__row price__row--opt">
+                      <label class="price__toggle">
+                        <input type="checkbox" data-price-opt="4800" />
+                        <span class="price__switch" aria-hidden="true"></span>
+                        <span class="price__name">Quarterly strategy reviews<small>Optional</small></span>
+                      </label>
+                      <span class="price__amt">$4,800</span>
+                    </li>
+                    <li class="price__row">
+                      <span class="price__name">Extra user seats<small>$480 each</small></span>
+                      <span class="price__qty" role="group" aria-label="Extra user seats">
+                        <button type="button" data-qty="-1" aria-label="Remove a seat">&minus;</button>
+                        <output data-qty-out aria-live="polite">2</output>
+                        <button type="button" data-qty="1" aria-label="Add a seat">+</button>
+                      </span>
+                    </li>
+                  </ul>
+                  <div class="price__total">
+                    <span>Total</span>
+                    <strong data-price-total aria-live="polite">$49,560</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-price">Pricing your client can shape</h3>
+                <p>
+                  Interactive pricing tables let clients toggle options, compare packages and adjust quantities, with totals that
+                  update instantly. <a class="bt__link" href="https://www.quote.cloud/cpq-software">Explore CPQ</a>
+                </p>
+              </div>
+            </article>
+
+            <!-- AI rewrite -->
+            <article class="bt bt--wide" data-tile="ai" data-reveal aria-labelledby="t-ai">
+              <div class="bt__stage ai" aria-hidden="true">
+                <div class="ai__card">
+                  <div class="ai__text">
+                    <p class="ai__before">We can provide services to your company that will help with the project and its goals.</p>
+                    <p class="ai__after">
+                      Halden &amp; Co. gets a launch-ready platform in six weeks, with onboarding, migration and support handled by
+                      one team.
+                    </p>
+                  </div>
+                  <div class="ai__bar">
+                    <span class="ai__chip"><svg viewBox="0 0 16 16"><path d="M8 1.5l1.6 4.2 4.4 1.3-4.4 1.3L8 12.5 6.4 8.3 2 7l4.4-1.3z" /></svg>AI Co-worker</span>
+                    <span class="ai__cmd">Make it more persuasive</span>
+                    <span class="ai__busy"><i></i><i></i><i></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-ai">AI that polishes the draft</h3>
+                <p>
+                  The AI Co-worker drafts and rewrites introductions and value propositions in your tone.
+                  <a class="bt__link" href="https://www.quote.cloud/ai-coworker-in-quotecloud">Meet the AI Co-worker</a>
+                </p>
+              </div>
+            </article>
+
+            <!-- eSign -->
+            <article class="bt" data-tile="sign" data-reveal aria-labelledby="t-sign">
+              <div class="bt__stage sign" aria-hidden="true">
+                <div class="sign__box">
+                  <svg class="sign__sig" viewBox="0 0 220 70" focusable="false">
+                    <path pathLength="1" d="M10 48 C 22 18, 34 14, 36 30 S 30 58, 44 46 S 62 20, 70 34 S 74 52, 88 40 C 98 32, 104 30, 110 40 S 120 50, 132 36 C 142 24, 150 28, 152 38 S 162 50, 176 34 C 186 24, 196 30, 210 26" />
+                  </svg>
+                  <span class="sign__line"></span>
+                  <span class="sign__name">Maya Chen &middot; Halden &amp; Co.</span>
+                </div>
+                <span class="sign__stamp"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>Signed &middot; audit trail saved</span>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-sign">Accepted and signed</h3>
+                <p>
+                  Legally binding, eIDAS-compliant eSignatures with a full audit trail.
+                  <a class="bt__link" href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures</a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Rich media -->
+            <article class="bt" data-tile="media" data-reveal aria-labelledby="t-media">
+              <div class="bt__stage media" aria-hidden="true">
+                <div class="media__grid">
+                  <span class="media__video"><i class="media__play"></i><span class="media__prog"><i></i></span></span>
+                  <span class="media__chart"><i style="--h: 0.45"></i><i style="--h: 0.7"></i><i style="--h: 0.55"></i><i style="--h: 0.9"></i></span>
+                  <span class="media__img"></span>
+                  <span class="media__sheet"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                </div>
+              </div>
+              <div class="bt__copy">
+                <h3 class="bt__title" id="t-media">Rich media, built in</h3>
+                <p>
+                  Video, spreadsheets, images, PDFs and diagrams, from
+                  <a class="bt__link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">18 content blocks</a>.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento 4: proof, templates, CTA (quieter) ───────── -->
+      <section class="band band--quiet" aria-labelledby="start-title">
+        <div class="qc-container">
+          <header class="band__head" data-reveal>
+            <h2 class="band__title" id="start-title">Start from a template. <span class="t-em">Ship it today.</span></h2>
+          </header>
+
+          <div class="bento bento--quiet" data-reveal-stagger="80">
+            <article class="bq bq--wide" data-reveal aria-labelledby="q-int">
+              <h3 class="bq__title" id="q-int">Works with your app stack</h3>
+              <ul class="bq__logos">
+                <li><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="Monday.com" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/xero.png" alt="Xero" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/stripe.png" alt="Stripe" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/paypal.png" alt="PayPal" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/googlesheets.png" alt="Google Sheets" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/excel.png" alt="Microsoft Excel" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/slack.jpg" alt="Slack" width="792" height="790" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/serviceM8.png" alt="ServiceM8" width="792" height="790" loading="lazy" decoding="async" /></li>
+              </ul>
+              <a class="bq__more" href="https://www.quote.cloud/all-integrations">All integrations <span aria-hidden="true">&rarr;</span></a>
+            </article>
+
+            <article class="bq bq--rating" data-reveal aria-labelledby="q-rate">
+              <h3 class="qc-sr-only" id="q-rate">Customer ratings</h3>
+              <div class="bq__rate">
+                <strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></strong>
+                <span class="bq__stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="is-part"></i></span>
+                <span>Capterra</span>
+              </div>
+              <div class="bq__rate">
+                <strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></strong>
+                <span class="bq__stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="is-part"></i></span>
+                <span>Software Advice</span>
+              </div>
+            </article>
+
+            <article class="bq bq--trust" data-reveal aria-labelledby="q-trust">
+              <h3 class="bq__title" id="q-trust">Secure by design</h3>
+              <ul class="bq__trust">
+                <li><img src="/assets/compliance/eidas.svg" alt="" width="91" height="90" loading="lazy" decoding="async" />eIDAS</li>
+                <li><img src="/assets/compliance/encryption-256.png" alt="" width="320" height="305" loading="lazy" decoding="async" />256-bit</li>
+                <li><img src="/assets/compliance/aws.svg" alt="" width="91" height="90" loading="lazy" decoding="async" />AWS hosted</li>
+                <li><img src="/assets/compliance/gdpr.png" alt="" width="319" height="320" loading="lazy" decoding="async" />GDPR</li>
+              </ul>
+            </article>
+
+            <article class="bq bq--wide bq--tpl" data-reveal aria-labelledby="q-tpl">
+              <div class="bq__tpl-copy">
+                <h3 class="bq__title" id="q-tpl">Premade templates for your industry</h3>
+                <p>Real estate, telecommunications, trade services and more. Or build your own.</p>
+                <div class="bq__links">
+                  <a href="https://www.quote.cloud/templates">Proposal templates</a>
+                  <a href="https://www.quote.cloud/quote-templates">Quote templates</a>
+                  <a href="https://www.quote.cloud/solutions-by-industry">By industry</a>
+                </div>
+              </div>
+              <div class="bq__fan" aria-hidden="true">
+                <span class="bq__tp" style="--r: -9deg; --x: -46%; --a: #0f8f7e"><i></i><b></b><b></b><b class="s"></b></span>
+                <span class="bq__tp" style="--r: 8deg; --x: 46%; --a: #ff4d47"><i></i><b></b><b></b><b class="s"></b></span>
+                <span class="bq__tp" style="--r: 0deg; --x: 0%; --a: #5b3df5"><i></i><b></b><b></b><b class="s"></b></span>
+              </div>
+            </article>
+
+            <article class="bq bq--wide bq--cta" data-reveal aria-labelledby="q-cta">
+              <h3 class="bq__title" id="q-cta">Generate your first document in minutes</h3>
+              <p>Free for 14 days. No credit card required.</p>
+              <div class="bq__ctas">
+                <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="bento"
+                  >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+                >
+                <a class="qc-btn bq__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="bento-demo">Book a demo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-docgen -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title" data-close>
+        <div class="qc-container close__inner">
+          <div class="close__fan" aria-hidden="true">
+            <span class="close__pg" style="--i: -2"><b>Kestrel Logistics</b><i></i><i></i><i class="s"></i><em>Quote</em></span>
+            <span class="close__pg" style="--i: -1"><b>Aster Dental Group</b><i></i><i></i><i class="s"></i><em>Contract</em></span>
+            <span class="close__pg" style="--i: 2"><b>Oakridge Realty</b><i></i><i></i><i class="s"></i><em>Quote</em></span>
+            <span class="close__pg" style="--i: 1"><b>Northwind Freight</b><i></i><i></i><i class="s"></i><em>Proposal</em></span>
+            <span class="close__pg close__pg--front" style="--i: 0"><b>Halden &amp; Co.</b><i></i><i></i><i class="s"></i><em>Proposal</em></span>
+          </div>
+          <h2 class="close__title" id="close-title">Stop writing documents. <span class="t-em">Start generating them.</span></h2>
+          <p class="close__lede">Your templates, your data, your brand. Free for 14 days, no credit card required.</p>
+          <div class="close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing"
+              >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+            >
+            <a class="qc-btn qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="close__links">
+            <a href="https://www.quote.cloud/pricing">Pricing</a>
+            <a href="https://www.quote.cloud/proposal-software">Proposal software</a>
+            <a href="https://www.quote.cloud/quoting-software">Quoting software</a>
+            <a href="https://support.quote.cloud/">User guide &amp; API help</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

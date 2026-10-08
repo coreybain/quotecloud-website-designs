@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-canvas -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="cg-sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-canvas" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="13.5" y="6" width="7.5" height="5" rx="1.5" transform="rotate(8 17 8.5)"/><rect x="5" y="14" width="9" height="7" rx="1.5" transform="rotate(-6 9.5 17.5)"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 10h18M12 10v11"/></symbol>
+      <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6V4.5h14V6M12 4.5v15M9 19.5h6"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="9.5" r="1.8"/><path d="m21 16-5.2-5.2L5 20"/></symbol>
+      <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M3 15h18M10 9.5V20"/></symbol>
+      <symbol id="i-diagram" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1.2"/><rect x="3" y="16" width="6" height="5" rx="1.2"/><rect x="15" y="16" width="6" height="5" rx="1.2"/><path d="M12 8v4M6 16v-4h12v4"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m10 9 5 3-5 3z"/></symbol>
+      <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></symbol>
+      <symbol id="i-sign" viewBox="0 0 24 24"><path d="M3 17c2.5-6 4.5-9 5.5-8s-2 7 0 7 3-5 4.5-5-0.5 4 1.5 4 2.5-2 3.5-2M3 21h18"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></symbol>
+      <symbol id="i-form" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.5"/><rect x="3" y="12" width="18" height="5" rx="1.5"/><path d="M6 20.5h6"/></symbol>
+      <symbol id="i-shape" viewBox="0 0 24 24"><circle cx="8" cy="9" r="5"/><path d="m14 21 4-8 4 8z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2.5"/><path d="M16 8V5.5A2.5 2.5 0 0 0 13.5 3h-8A2.5 2.5 0 0 0 3 5.5v8A2.5 2.5 0 0 0 5.5 16H8"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-drag" viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.4"/><circle cx="15" cy="6" r="1.4"/><circle cx="9" cy="12" r="1.4"/><circle cx="15" cy="12" r="1.4"/><circle cx="9" cy="18" r="1.4"/><circle cx="15" cy="18" r="1.4"/></symbol>
+      <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3L12 17.3l-5.7 3 1.1-6.3L2.8 9.5l6.4-.9z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-cursor" viewBox="0 0 24 24"><path d="M5 3.5 19 10l-6.2 1.8L10 18z" fill="#0a0a0a" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    </svg>
+
+    <main id="main" class="cg">
+      <!-- ───────── Hero ───────── -->
+      <section class="cg-hero" aria-labelledby="hero-title">
+        <div class="cg-hero__inner qc-container">
+          <div class="cg-hero__copy">
+            <h1 class="cg-hero__title" id="hero-title">Two powerful ways to build documents: <em class="is-canvas">Canvas</em> <span class="cg-amp">&amp;</span> <em class="is-grid">Grid</em></h1>
+            <p class="cg-hero__lede">Some documents need the freedom of a design canvas. Others need rows and columns. QuoteCloud’s document editor gives you both.</p>
+            <div class="cg-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="cg-hero__note">No credit card required</p>
+          </div>
+
+          <div class="cg-hero__visual">
+            <div class="hx" data-hero data-mode="canvas" data-sel="price">
+              <p class="qc-sr-only" id="hx-desc">An editor preview of a Switzerland travel proposal. In Canvas Mode its blocks sit freely on the page, slightly rotated and layered like a designed brochure; in Grid Mode the same blocks snap into tidy rows and two columns.</p>
+              <div class="hx__bar">
+                <span class="hx__doc"><span class="hx__doc-dot" aria-hidden="true"></span><span class="hx__doc-t">Switzerland Travel Proposal</span></span>
+                <div class="hx__toggle" role="group" aria-label="Preview editing mode" aria-describedby="hx-desc">
+                  <span class="hx__thumb" aria-hidden="true"></span>
+                  <button type="button" class="hx__mode" data-set-mode="canvas" aria-pressed="true"><svg aria-hidden="true"><use href="#i-canvas" /></svg>Canvas</button>
+                  <button type="button" class="hx__mode" data-set-mode="grid" aria-pressed="false"><svg aria-hidden="true"><use href="#i-grid" /></svg>Grid</button>
+                </div>
+                <span class="hx__publish" aria-hidden="true">Publish</span>
+              </div>
+
+              <div class="hx__stage" aria-hidden="true">
+                <span class="hx__bg hx__bg--dots"></span>
+                <span class="hx__bg hx__bg--rules"></span>
+
+                <div class="hx__grid">
+                <div class="hx__rail">
+                  <span><svg><use href="#i-text" /></svg></span>
+                  <span><svg><use href="#i-image" /></svg></span>
+                  <span><svg><use href="#i-table" /></svg></span>
+                  <span><svg><use href="#i-diagram" /></svg></span>
+                  <span><svg><use href="#i-video" /></svg></span>
+                  <span><svg><use href="#i-qr" /></svg></span>
+                  <span><svg><use href="#i-sign" /></svg></span>
+                </div>
+
+                <div class="hx__page">
+                  <span class="hx__shape"></span>
+                  <div class="hx__rows">
+                    <span class="hx__row" style="--y: 4.5; --h: 39"><b>Row 1</b></span>
+                    <span class="hx__row hx__row--split" style="--y: 46.5; --h: 25"><b>Row 2</b></span>
+                    <span class="hx__row hx__row--split" style="--y: 74.5; --h: 33"><b>Row 3</b></span>
+                    <span class="hx__row hx__row--split" style="--y: 110.5; --h: 25"><b>Row 4</b></span>
+                  </div>
+
+                  <div class="blk blk--cover" data-b="cover" style="--i: 0; --w: 88; --h: 36; --gx: 6; --gy: 6; --cx: 0; --cy: 0; --cr: 0; --cs: 1.1364">
+                    <div class="art art--alps">
+                      <i class="art__sun"></i>
+                      <svg class="art__mtn" viewBox="0 0 400 160" preserveAspectRatio="none"><path class="m1" d="M0 120 70 50l40 30 60-62 70 70 40-28 60 50 60-30v130H0z"/><path class="m2" d="M0 160V122l60-30 50 34 70-46 80 58 60-34 80 40v16z"/><path class="snow" d="m154 34 16-16 22 22-12-5-9 8-6-7zM48 72l22-22 14 14-9-2-7 6z"/></svg>
+                      <i class="art__lake"></i>
+                    </div>
+                    <span class="sel"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <div class="blk blk--title" data-b="title" style="--i: 1; --w: 42.5; --h: 22; --gx: 6; --gy: 48; --cx: 8; --cy: 29; --cr: -3; --cs: 1.12">
+                    <span class="blk__eyebrow">Travel proposal</span>
+                    <span class="blk__h">Experience Switzerland</span>
+                    <span class="blk__sub">7 nights · Lucerne &amp; Zermatt</span>
+                    <span class="sel"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <div class="blk blk--price" data-b="price" style="--i: 2; --w: 42.5; --h: 22; --gx: 51.5; --gy: 48; --cx: 55; --cy: 49; --cr: 4; --cs: 1">
+                    <span class="blk__k">Total investment</span>
+                    <span class="blk__big">$4,250</span>
+                    <span class="blk__k">per person · twin share</span>
+                    <span class="sel sel--rot"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <div class="blk blk--text" data-b="text" style="--i: 3; --w: 42.5; --h: 30; --gx: 6; --gy: 76; --cx: 8; --cy: 61; --cr: 0; --cs: 1">
+                    <span class="blk__label">Your journey</span>
+                    <span class="sk"></span><span class="sk"></span><span class="sk sk--s"></span>
+                    <span class="blk__li"><svg><use href="#i-check" /></svg><span class="sk"></span></span>
+                    <span class="blk__li"><svg><use href="#i-check" /></svg><span class="sk sk--s"></span></span>
+                    <span class="sel"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <div class="blk blk--qr" data-b="qr" style="--i: 4; --w: 42.5; --h: 30; --gx: 51.5; --gy: 76; --cx: 62; --cy: 77; --cr: 6; --cs: 0.78">
+                    <svg class="qr" viewBox="0 0 21 21" shape-rendering="crispEdges"><path d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v3h-2zM8 3h2v2H8zM9 6h3v2H9zM0 8h2v2H0zM3 8h3v1H3zM4 10h3v2H4zM8 9h1v3H8zM10 9h2v1h-2zM13 8h2v2h-2zM16 8h2v1h-2zM19 8h2v3h-2zM15 10h3v2h-3zM10 11h3v2h-3zM8 13h2v2H8zM12 14h2v2h-2zM14 12h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2zM15 16h3v2h-3zM8 16h3v2H8zM11 18h3v3h-3zM15 19h2v2h-2zM19 19h2v2h-2zM8 19h2v2H8z"/></svg>
+                    <span class="blk__k">Scan to view<br />your itinerary</span>
+                    <span class="sel"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <div class="blk blk--sign" data-b="sign" style="--i: 5; --w: 42.5; --h: 22; --gx: 6; --gy: 112; --cx: 8; --cy: 101; --cr: -2; --cs: 1">
+                    <span class="blk__label">Approval</span>
+                    <svg class="sig" viewBox="0 0 160 44"><path pathLength="1" d="M6 32c10-2 16-22 22-22s-6 26 2 26 12-20 18-20-2 16 4 16 10-14 16-14 0 12 6 12 12-8 18-10 6 6 12 4 14-6 22-6 18 2 28 0"/></svg>
+                    <span class="blk__line">Client signature</span>
+                    <span class="sel"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <div class="blk blk--btn" data-b="btn" style="--i: 6; --w: 42.5; --h: 22; --gx: 51.5; --gy: 112; --cx: 53; --cy: 112; --cr: 0; --cs: 0.92">
+                    <span class="blk__pill">Accept &amp; pay deposit</span>
+                    <span class="blk__k">Secure online payment</span>
+                    <span class="sel"><i></i><i></i><i></i><i></i></span>
+                  </div>
+
+                  <span class="guide guide--v guide--c1"></span>
+                  <span class="guide guide--h guide--c2"></span>
+                  <span class="guide guide--v guide--g1"></span>
+                  <span class="guide guide--v guide--g2"></span>
+                </div>
+
+                <div class="hx__panel">
+                  <div class="hx__list hx__list--cv">
+                    <span class="hx__list-h">Layers</span>
+                    <span><svg><use href="#i-form" /></svg>Button</span>
+                    <span><svg><use href="#i-sign" /></svg>Signature</span>
+                    <span><svg><use href="#i-qr" /></svg>QR code</span>
+                    <span><svg><use href="#i-text" /></svg>Text</span>
+                    <span class="is-on"><svg><use href="#i-table" /></svg>Price</span>
+                    <span><svg><use href="#i-text" /></svg>Title</span>
+                    <span><svg><use href="#i-image" /></svg>Cover</span>
+                  </div>
+                  <div class="hx__list hx__list--gd">
+                    <span class="hx__list-h">Rows</span>
+                    <span><i class="c1"></i>Row 1</span>
+                    <span><i class="c2"></i>Row 2</span>
+                    <span class="is-on"><i class="c2"></i>Row 3</span>
+                    <span><i class="c2"></i>Row 4</span>
+                    <span class="hx__list-add"><svg><use href="#i-plus" /></svg>Add Row</span>
+                  </div>
+                </div>
+                </div>
+
+                <span class="hx__zoom">A4 · 100%</span>
+              </div>
+
+              <svg class="hx__cursor" aria-hidden="true"><use href="#i-cursor" /></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Bento: Canvas | Same blocks | Grid ───────── -->
+      <section class="cg-bento" id="modes" aria-labelledby="modes-title">
+        <div class="qc-container">
+          <header class="cg-head" data-reveal>
+            <h2 id="modes-title">Freedom when you want it. <em>Order</em> when you need it.</h2>
+            <p>Design layered, presentation-style pages in Canvas Mode, or build tidy, repeatable layouts in Grid Mode — with the same content blocks.</p>
+          </header>
+
+          <div class="bento" data-reveal-stagger="70">
+            <!-- Canvas side -->
+            <article class="tile tile--cv tile--c1" data-reveal data-tile aria-labelledby="t-c1">
+              <div class="tile__copy">
+                <h3 id="t-c1"><svg class="tile__ico" aria-hidden="true"><use href="#i-canvas" /></svg>Canvas Mode</h3>
+                <p>Complete creative freedom. Drag, drop and resize any block anywhere on the page, like Canva or PowerPoint, right inside your proposal.</p>
+              </div>
+              <div class="d-drag" aria-hidden="true">
+                <div class="d-drag__page">
+                  <span class="d-drag__h"></span>
+                  <span class="d-drag__p"></span><span class="d-drag__p"></span><span class="d-drag__p d-drag__p--s"></span>
+                  <span class="d-drag__card"><b>$4,250</b><i></i></span>
+                  <span class="d-drag__guide"></span>
+                  <div class="d-drag__img">
+                    <div class="art art--alps art--mini"><i class="art__sun"></i><svg class="art__mtn" viewBox="0 0 400 160" preserveAspectRatio="none"><path class="m1" d="M0 120 70 50l40 30 60-62 70 70 40-28 60 50 60-30v130H0z"/><path class="m2" d="M0 160V122l60-30 50 34 70-46 80 58 60-34 80 40v16z"/></svg><i class="art__lake"></i></div>
+                    <span class="sel sel--on"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="d-drag__dim">W 46 × H 30</span>
+                  <svg class="d-drag__cursor"><use href="#i-cursor" /></svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="tile tile--cv tile--c2" data-reveal data-tile aria-labelledby="t-c2">
+              <h3 id="t-c2">Rotate &amp; layer</h3>
+              <div class="d-rot" aria-hidden="true">
+                <span class="d-rot__card d-rot__card--a"><span class="art art--dusk"></span></span>
+                <span class="d-rot__card d-rot__card--b"><b>“</b><i></i><i></i><i class="s"></i></span>
+                <span class="d-rot__card d-rot__card--c"><span class="sel sel--on sel--rot"><i></i><i></i><i></i><i></i></span><b>$24,750</b><i></i></span>
+              </div>
+            </article>
+
+            <article class="tile tile--cv tile--c3" data-reveal data-tile aria-labelledby="t-c3">
+              <h3 id="t-c3">Snap to grid</h3>
+              <div class="d-snap" aria-hidden="true">
+                <span class="d-snap__switch"><i></i>Show grid</span>
+                <span class="d-snap__switch"><i></i>Snap</span>
+                <div class="d-snap__field">
+                  <span class="d-snap__lit" style="--x: 2; --y: 1"></span>
+                  <span class="d-snap__lit" style="--x: 6; --y: 1"></span>
+                  <span class="d-snap__lit" style="--x: 2; --y: 4"></span>
+                  <span class="d-snap__lit" style="--x: 6; --y: 4"></span>
+                  <span class="d-snap__blk"><svg><use href="#i-image" /></svg></span>
+                </div>
+              </div>
+            </article>
+
+            <article class="tile tile--cv tile--c4" data-reveal data-tile aria-labelledby="t-c4">
+              <div class="tile__copy">
+                <h3 id="t-c4">Layers you control</h3>
+                <p>Bring a block forward or send it back, align it to guides and other blocks.</p>
+              </div>
+              <div class="d-layers" aria-hidden="true">
+                <div class="d-layers__panel">
+                  <span class="d-layers__title">Layers</span>
+                  <span class="d-layers__row" style="--n: 0"><svg><use href="#i-text" /></svg>Heading<svg class="e"><use href="#i-eye" /></svg></span>
+                  <span class="d-layers__row" style="--n: 1"><svg><use href="#i-image" /></svg>Cover photo<svg class="e"><use href="#i-eye" /></svg></span>
+                  <span class="d-layers__row" style="--n: 2"><svg><use href="#i-shape" /></svg>Shape<svg class="e"><use href="#i-eye" /></svg></span>
+                  <span class="d-layers__row d-layers__row--move" style="--n: 3"><svg><use href="#i-table" /></svg>Price table<svg class="e"><use href="#i-eye" /></svg></span>
+                </div>
+                <div class="d-layers__preview">
+                  <span class="d-layers__photo art art--alps-flat"></span>
+                  <span class="d-layers__shape"></span>
+                  <span class="d-layers__price"><b>Total</b><i></i><i></i><em>$4,250</em></span>
+                  <span class="d-layers__head">Explore<br />Switzerland</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Centre -->
+            <article class="tile tile--mid" data-reveal data-tile data-palette aria-labelledby="t-mid">
+              <div class="tile__copy">
+                <h3 id="t-mid">Same blocks. <em>Both modes.</em></h3>
+                <p>Text, price tables, diagrams, video, QR codes, eSignatures and more work in Canvas and Grid.</p>
+              </div>
+              <ul class="pal" aria-label="Preview a content block in both modes">
+                <li><button type="button" class="pal__chip is-on" data-k="0" aria-pressed="true"><svg aria-hidden="true"><use href="#i-text" /></svg>Text</button></li>
+                <li><button type="button" class="pal__chip" data-k="1" aria-pressed="false"><svg aria-hidden="true"><use href="#i-table" /></svg>Price table</button></li>
+                <li><button type="button" class="pal__chip" data-k="2" aria-pressed="false"><svg aria-hidden="true"><use href="#i-diagram" /></svg>Diagram</button></li>
+                <li><button type="button" class="pal__chip" data-k="3" aria-pressed="false"><svg aria-hidden="true"><use href="#i-video" /></svg>Video</button></li>
+                <li><button type="button" class="pal__chip" data-k="4" aria-pressed="false"><svg aria-hidden="true"><use href="#i-qr" /></svg>QR code</button></li>
+                <li><button type="button" class="pal__chip" data-k="5" aria-pressed="false"><svg aria-hidden="true"><use href="#i-sign" /></svg>eSignature</button></li>
+              </ul>
+              <div class="pv" aria-hidden="true">
+                <div class="pv__frame pv__frame--cv">
+                  <span class="pv__tag"><svg><use href="#i-canvas" /></svg>Canvas</span>
+                  <span class="pv__deco pv__deco--a"></span><span class="pv__deco pv__deco--b"></span>
+                  <div class="pv__slot pv__slot--cv">
+                    <div class="mb mb--text is-on"><b>Our approach</b><i></i><i></i><i class="s"></i></div>
+                    <div class="mb mb--table"><span><b>Design</b><b>$4,500</b></span><span><b>Build</b><b>$11,250</b></span><span class="t"><b>Total</b><b>$15,750</b></span></div>
+                    <div class="mb mb--diagram"><svg viewBox="0 0 120 64"><path d="M60 16v10M24 40V30h72v10M60 30v10"/><rect x="46" y="4" width="28" height="12" rx="3" class="n1"/><rect x="10" y="44" width="28" height="12" rx="3" class="n2"/><rect x="46" y="44" width="28" height="12" rx="3" class="n3"/><rect x="82" y="44" width="28" height="12" rx="3" class="n2"/></svg></div>
+                    <div class="mb mb--video"><span class="art art--dusk"></span><i></i></div>
+                    <div class="mb mb--qr"><svg viewBox="0 0 21 21" shape-rendering="crispEdges"><use href="#qr-mini" /></svg><b>Scan me</b></div>
+                    <div class="mb mb--sign"><svg viewBox="0 0 160 44"><path d="M6 32c10-2 16-22 22-22s-6 26 2 26 12-20 18-20-2 16 4 16 10-14 16-14 0 12 6 12 12-8 18-10 6 6 12 4 14-6 22-6 18 2 28 0"/></svg><i></i></div>
+                    <span class="sel sel--on"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                </div>
+                <div class="pv__frame pv__frame--gd">
+                  <span class="pv__tag"><svg><use href="#i-grid" /></svg>Grid</span>
+                  <div class="pv__row">
+                    <div class="pv__col"><span class="sk"></span><span class="sk"></span><span class="sk sk--s"></span></div>
+                    <div class="pv__col pv__slot pv__slot--gd">
+                      <div class="mb mb--text is-on"><b>Our approach</b><i></i><i></i><i class="s"></i></div>
+                      <div class="mb mb--table"><span><b>Design</b><b>$4,500</b></span><span><b>Build</b><b>$11,250</b></span><span class="t"><b>Total</b><b>$15,750</b></span></div>
+                      <div class="mb mb--diagram"><svg viewBox="0 0 120 64"><path d="M60 16v10M24 40V30h72v10M60 30v10"/><rect x="46" y="4" width="28" height="12" rx="3" class="n1"/><rect x="10" y="44" width="28" height="12" rx="3" class="n2"/><rect x="46" y="44" width="28" height="12" rx="3" class="n3"/><rect x="82" y="44" width="28" height="12" rx="3" class="n2"/></svg></div>
+                      <div class="mb mb--video"><span class="art art--dusk"></span><i></i></div>
+                      <div class="mb mb--qr"><svg viewBox="0 0 21 21" shape-rendering="crispEdges"><use href="#qr-mini" /></svg><b>Scan me</b></div>
+                      <div class="mb mb--sign"><svg viewBox="0 0 160 44"><path d="M6 32c10-2 16-22 22-22s-6 26 2 26 12-20 18-20-2 16 4 16 10-14 16-14 0 12 6 12 12-8 18-10 6 6 12 4 14-6 22-6 18 2 28 0"/></svg><i></i></div>
+                    </div>
+                  </div>
+                  <div class="pv__row pv__row--3"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+              <a class="tile__link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Explore all 18 content blocks <svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <svg class="cg-sprite" aria-hidden="true"><symbol id="qr-mini" viewBox="0 0 21 21"><path d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v3h-2zM8 3h2v2H8zM9 6h3v2H9zM0 8h2v2H0zM3 8h3v1H3zM4 10h3v2H4zM8 9h1v3H8zM10 9h2v1h-2zM13 8h2v2h-2zM16 8h2v1h-2zM19 8h2v3h-2zM15 10h3v2h-3zM10 11h3v2h-3zM8 13h2v2H8zM12 14h2v2h-2zM14 12h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2zM15 16h3v2h-3zM8 16h3v2H8zM11 18h3v3h-3zM15 19h2v2h-2zM19 19h2v2h-2zM8 19h2v2H8z"/></symbol></svg>
+            </article>
+
+            <!-- Grid side -->
+            <article class="tile tile--gd tile--g1" data-reveal data-tile data-cols aria-labelledby="t-g1">
+              <div class="tile__copy">
+                <h3 id="t-g1"><svg class="tile__ico" aria-hidden="true"><use href="#i-grid" /></svg>Grid Mode</h3>
+                <p>Structured rows and columns. Each row is a container: choose its columns, set each width, then stack blocks inside.</p>
+              </div>
+              <div class="d-cols" aria-hidden="true">
+                <div class="d-cols__bar">
+                  <span class="d-cols__add"><svg><use href="#i-plus" /></svg>Add Row</span>
+                  <span class="d-cols__presets">
+                    <i data-p="1"><b></b></i><i data-p="2"><b></b><b></b></i><i data-p="3"><b></b><b></b><b></b></i><i data-p="4"><b></b><b></b><b></b><b></b></i>
+                  </span>
+                  <span class="d-cols__slider"><span class="d-cols__label">Column width</span><span class="d-cols__track"><span class="d-cols__fill"></span><span class="d-cols__knob"><i></i></span></span></span>
+                </div>
+                <div class="d-cols__row d-cols__row--static"><span class="d-cols__handle">Row 1</span><span class="d-cols__wide"><b>Project overview</b><i></i><i class="s"></i></span></div>
+                <div class="d-cols__row d-cols__row--live"><span class="d-cols__handle">Row 2</span>
+                  <div class="d-cols__cells">
+                    <span class="d-cols__cell" data-c="0"><span class="d-cols__inner"><b>Our approach</b><i></i><i></i><i class="s"></i></span></span>
+                    <span class="d-cols__cell" data-c="1"><span class="d-cols__inner"><span class="art art--alps-flat"></span></span></span>
+                    <span class="d-cols__cell" data-c="2"><span class="d-cols__inner"><b>Key benefits</b><i></i><i class="s"></i></span></span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="tile tile--gd tile--g2" data-reveal data-tile aria-labelledby="t-g2">
+              <h3 id="t-g2">Lasso select</h3>
+              <div class="d-lasso" aria-hidden="true">
+                <div class="d-lasso__rows">
+                  <span class="d-lasso__row"><i></i><i class="s"></i></span>
+                  <span class="d-lasso__row d-lasso__row--2"><i></i><i></i></span>
+                  <span class="d-lasso__row"><i class="s"></i><i></i></span>
+                </div>
+                <span class="d-lasso__box"></span>
+                <span class="d-lasso__count">3 rows selected</span>
+                <svg class="d-lasso__cursor"><use href="#i-cursor" /></svg>
+              </div>
+            </article>
+
+            <article class="tile tile--gd tile--g3" data-reveal data-tile aria-labelledby="t-g3">
+              <h3 id="t-g3">Reusable sections</h3>
+              <div class="d-dup" aria-hidden="true">
+                <span class="d-dup__sec d-dup__sec--orig"><b>Payment terms</b><i></i><i class="s"></i></span>
+                <span class="d-dup__sec d-dup__sec--copy"><b>Payment terms</b><i></i><i class="s"></i></span>
+                <span class="d-dup__btn"><svg><use href="#i-copy" /></svg>Duplicate</span>
+              </div>
+            </article>
+
+            <article class="tile tile--gd tile--g4" data-reveal data-tile aria-labelledby="t-g4">
+              <div class="tile__copy">
+                <h3 id="t-g4">Easy to maintain</h3>
+                <p>Add a row, pick a layout, stack blocks. Tidy business documents every time.</p>
+              </div>
+              <div class="d-rows" aria-hidden="true">
+                <span class="d-rows__r"><em>1</em><span class="c"><b>Scope of work</b><i></i></span><span class="c c--img art art--alps-flat"></span></span>
+                <span class="d-rows__r"><em>2</em><span class="c c--tbl"><b>Pricing summary</b><i></i><i></i><i class="t"></i></span></span>
+                <span class="d-rows__r d-rows__r--new"><em>3</em><span class="c"><b>Next steps</b><i></i></span><span class="c"><b>Approval</b><svg viewBox="0 0 160 44"><path d="M6 32c10-2 16-22 22-22s-6 26 2 26 12-20 18-20-2 16 4 16 10-14 16-14 0 12 6 12 12-8 18-10 6 6 12 4 14-6 22-6 18 2 28 0"/></svg></span></span>
+                <span class="d-rows__add"><svg><use href="#i-plus" /></svg>Add Row</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Perfect for ───────── -->
+      <section class="cg-uses" aria-labelledby="uses-title">
+        <div class="qc-container">
+          <header class="cg-head" data-reveal>
+            <h2 id="uses-title">From designed brochures to <em>structured</em> proposals.</h2>
+            <p>Choose the mode that best suits the content, the audience and the outcome.</p>
+          </header>
+
+          <div class="uses">
+            <div class="uses__side uses__side--cv" data-reveal>
+              <div class="uses__head">
+                <h3><svg aria-hidden="true"><use href="#i-canvas" /></svg>Canvas Mode is perfect for</h3>
+                <p class="uses__more">Layered, visual layouts that look like a designed brochure or presentation. Also great for cover pages and branded client-facing documents.</p>
+              </div>
+              <ul class="covers" data-covers>
+                <li class="cover cover--1" style="--k: 0"><span class="cover__art"></span><span class="cover__t">Sales proposals</span></li>
+                <li class="cover cover--2" style="--k: 1"><span class="cover__art"></span><span class="cover__t">Executive presentations</span></li>
+                <li class="cover cover--3" style="--k: 2"><span class="cover__art"></span><span class="cover__t">Marketing documents</span></li>
+                <li class="cover cover--4" style="--k: 3"><span class="cover__art art art--alps-flat"></span><span class="cover__t">Destination presentations</span></li>
+                <li class="cover cover--5" style="--k: 4"><span class="cover__art"></span><span class="cover__t">Product showcases</span></li>
+                <li class="cover cover--6" style="--k: 5"><span class="cover__art"></span><span class="cover__t">One-page summaries</span></li>
+                <li class="cover cover--7" style="--k: 6"><span class="cover__art"></span><span class="cover__t">Visual pitch documents</span></li>
+              </ul>
+            </div>
+
+            <div class="uses__side uses__side--gd" data-reveal>
+              <div class="uses__head">
+                <h3><svg aria-hidden="true"><use href="#i-grid" /></svg>Grid Mode is ideal for</h3>
+                <p class="uses__more">Consistent, repeatable layouts that stay easy to edit, organise and maintain. Start fast from ready-made <a href="https://www.quote.cloud/templates">document templates</a>.</p>
+              </div>
+              <ul class="docs" data-reveal-stagger="50">
+                <li data-reveal="fade"><span class="glyph glyph--a"></span>Business proposals</li>
+                <li data-reveal="fade"><span class="glyph glyph--b"></span>Quotes &amp; pricing documents</li>
+                <li data-reveal="fade"><span class="glyph glyph--c"></span>Statements of work</li>
+                <li data-reveal="fade"><span class="glyph glyph--d"></span>Client reports</li>
+                <li data-reveal="fade"><span class="glyph glyph--e"></span>Project plans</li>
+                <li data-reveal="fade"><span class="glyph glyph--f"></span>Travel itineraries</li>
+                <li data-reveal="fade"><span class="glyph glyph--b"></span>Internal documentation</li>
+                <li data-reveal="fade"><span class="glyph glyph--a"></span>Structured sales templates</li>
+                <li data-reveal="fade"><span class="glyph glyph--c"></span>Repeatable document layouts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Best of both worlds + decision CTA ───────── -->
+      <section class="cg-both" aria-labelledby="both-title">
+        <div class="qc-container">
+          <div class="both" data-reveal="scale">
+            <h2 id="both-title">The best of both worlds, <em>in one document editor.</em></h2>
+            <div class="both__split">
+              <div class="both__col both__col--cv">
+                <h3><svg aria-hidden="true"><use href="#i-canvas" /></svg>Canvas Mode</h3>
+                <ul>
+                  <li><svg aria-hidden="true"><use href="#i-check" /></svg>Freeform design</li>
+                  <li><svg aria-hidden="true"><use href="#i-check" /></svg>Creative, layered layouts</li>
+                  <li><svg aria-hidden="true"><use href="#i-check" /></svg>Precise visual positioning</li>
+                </ul>
+              </div>
+              <span class="both__plus" aria-hidden="true"><svg><use href="#i-plus" /></svg></span>
+              <div class="both__col both__col--gd">
+                <h3><svg aria-hidden="true"><use href="#i-grid" /></svg>Grid Mode</h3>
+                <ul>
+                  <li><svg aria-hidden="true"><use href="#i-check" /></svg>Structured rows</li>
+                  <li><svg aria-hidden="true"><use href="#i-check" /></svg>Flexible column widths</li>
+                  <li><svg aria-hidden="true"><use href="#i-check" /></svg>Organised business layouts</li>
+                </ul>
+              </div>
+            </div>
+            <p class="both__lede">Together, they make QuoteCloud a document creation platform for teams that need more than a traditional word processor, with <a href="https://www.quote.cloud/cpq-software">pricing</a>, interactive content and <a href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures</a> in the same document.</p>
+            <div class="both__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="both">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="both-demo">Book a demo</a>
+            </div>
+            <ul class="proof" aria-label="Ratings and trust">
+              <li><span class="stars" aria-hidden="true"><span class="stars__fill"></span></span><strong>4.2</strong> on Capterra</li>
+              <li><span class="stars" aria-hidden="true"><span class="stars__fill"></span></span><strong>4.2</strong> on Software Advice</li>
+              <li>In business since <strong>2013</strong></li>
+            </ul>
+          </div>
+
+          <div class="intg" data-reveal>
+            <p>Connects to the CRM, accounting and payment tools you already use.</p>
+            <ul class="intg__logos">
+              <li><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/xero.png" alt="Xero" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/stripe.png" alt="Stripe" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/paypal.png" alt="PayPal" width="56" height="56" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/slack.jpg" alt="Slack" width="56" height="56" loading="lazy" decoding="async" /></li>
+            </ul>
+            <a class="intg__link" href="https://www.quote.cloud/all-integrations">See all integrations <svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── FAQ ───────── -->
+      <div class="cg-faq">
+        <!-- @include faq-canvas -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="cg-close" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="close" data-reveal="scale" data-close>
+            <span class="close__dots" aria-hidden="true"></span>
+            <span class="close__rules" aria-hidden="true"></span>
+            <div class="close__inner">
+              <h2 id="close-title">Design it freely. Build it on a grid. <em>Send it today.</em></h2>
+              <p>Build your first proposal in Canvas Mode or Grid Mode. Free for 14 days, no credit card required.</p>
+              <div class="close__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+                <a class="qc-btn qc-btn--light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+              </div>
+              <p class="close__links">New to the editor? Read the <a href="https://www.quote.cloud/document-editor-quick-start-guide">quick start guide</a> or see <a href="https://www.quote.cloud/pricing">pricing</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

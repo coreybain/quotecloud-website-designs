@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-travel -->
+  </head>
+  <body class="gh">
+    <!-- @include header -->
+
+    <svg class="gh-sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></symbol>
+      <symbol id="i-hotel" viewBox="0 0 24 24"><path fill="currentColor" d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></symbol>
+      <symbol id="i-transfer" viewBox="0 0 24 24"><path fill="currentColor" d="M17 5H3c-1.1 0-2 .89-2 2v9h2c0 1.65 1.34 3 3 3s3-1.35 3-3h5.5c0 1.65 1.34 3 3 3s3-1.35 3-3H23v-5l-6-6zM3 11V7h4v4H3zm3 6.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM13 11H9V7h4v4zm4.5 6.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM15 11V7h1l4 4h-5z"/></symbol>
+      <symbol id="i-tour" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zM9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><path fill="currentColor" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></symbol>
+      <symbol id="i-qr" viewBox="0 0 24 24"><path fill="currentColor" d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zm0 10h2v2h-2zm-6-6h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm2 2h2v2h-2zm2-2h2v2h-2zm0-4h2v2h-2zm2 2h2v2h-2z"/></symbol>
+      <symbol id="i-gallery" viewBox="0 0 24 24"><path fill="currentColor" d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></g></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path fill="currentColor" d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
+      <symbol id="i-cash" viewBox="0 0 24 24"><path fill="currentColor" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ═════════ HERO ═════════ -->
+      <section class="gh-hero" aria-labelledby="gh-hero-title" data-gh-hero>
+        <div class="gh-hero__sky" aria-hidden="true">
+          <span class="gh-hero__sun"></span>
+          <span class="gh-hero__haze"></span>
+          <span class="gh-hero__horizon"></span>
+        </div>
+
+        <div class="gh-hero__inner qc-container">
+          <div class="gh-hero__copy">
+            <h1 class="gh-hero__title" id="gh-hero-title">
+              Travel quotes &amp; itineraries that <em class="gh-em">sell the journey</em>
+            </h1>
+            <p class="gh-hero__lede">Open any GDS or mid-office booking, make it beautiful in minutes, and let travellers sign, pay and go.</p>
+            <div class="gh-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="qc-btn qc-btn--lg gh-btn-glass" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="gh-hero__note">No credit card required</p>
+          </div>
+
+          <div class="gh-stage" aria-hidden="true" data-gh-stage>
+            <div class="gh-scene" data-gh-scene>
+              <svg class="gh-route" viewBox="0 0 640 560" preserveAspectRatio="none">
+                <path id="gh-route-path" d="M24 470 C 160 330, 300 520, 410 300 S 600 90, 628 60" />
+                <circle class="gh-route__dot" r="4"><animateMotion dur="9s" repeatCount="indefinite" rotate="auto"><mpath href="#gh-route-path" /></animateMotion></circle>
+              </svg>
+
+              <figure class="gh-layer gh-layer--collage" style="--z: -260px">
+                <div class="gh-float"><img class="gh-cover" src="/assets/travel/template-collage.jpg" width="566" height="800" alt="" /></div>
+              </figure>
+              <figure class="gh-layer gh-layer--paradise" style="--z: -150px">
+                <div class="gh-float"><img class="gh-cover" src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" /></div>
+              </figure>
+              <figure class="gh-layer gh-layer--african" style="--z: 0px">
+                <div class="gh-float"><img class="gh-cover" src="/assets/travel/template-african-journey.jpg" width="566" height="800" alt="" fetchpriority="high" /></div>
+              </figure>
+              <figure class="gh-layer gh-layer--phone-a" style="--z: 110px">
+                <div class="gh-float">
+                  <div class="gh-phone"><img src="/assets/travel/traveldocs-itineraries.jpg" width="414" height="900" alt="" /></div>
+                </div>
+              </figure>
+              <figure class="gh-layer gh-layer--phone-b" style="--z: 170px">
+                <div class="gh-float">
+                  <div class="gh-phone"><img src="/assets/travel/traveldocs-flight.jpg" width="414" height="900" alt="" /></div>
+                </div>
+              </figure>
+              <div class="gh-layer gh-layer--chip" style="--z: 230px">
+                <div class="gh-float">
+                  <div class="gh-chip">
+                    <span class="gh-chip__icon"><svg width="16" height="16"><use href="#i-check" /></svg></span>
+                    <span><strong>Booking imported</strong><small>Sabre GDS · 4 segments</small></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ 1 · IMPORT ═════════ -->
+      <section class="gh-sec" id="import" aria-labelledby="gh-import-title">
+        <div class="qc-container">
+          <article class="gh-panel gh-panel--import" data-gh-play>
+            <header class="gh-panel__head" data-reveal>
+              <h2 class="gh-h2" id="gh-import-title">Bookings in. <em class="gh-em">Beautiful itineraries</em> out.</h2>
+              <p class="gh-lede">Itineraries from Sabre GDS, PowerSuite and Tramada open straight in QuoteCloud, structured and ready. No rekeying, fewer errors.</p>
+            </header>
+
+            <div class="gh-import" data-gh-import>
+              <div class="gh-term" data-reveal="left">
+                <div class="gh-term__tabs" role="tablist" aria-label="Booking source">
+                  <button type="button" role="tab" aria-selected="true" data-source="sabre">Sabre GDS</button>
+                  <button type="button" role="tab" aria-selected="false" data-source="powersuite" tabindex="-1">PowerSuite</button>
+                  <button type="button" role="tab" aria-selected="false" data-source="tramada" tabindex="-1">Tramada</button>
+                </div>
+                <div class="gh-term__body" role="tabpanel" aria-live="polite" data-gh-term>
+                  <p class="gh-term__line"><span>RLOC</span> KX7Q2M · 2 PAX</p>
+                  <p class="gh-term__line"><span>1</span> QF 43 Y 04APR SYDDPS HK2 1035 1515</p>
+                  <p class="gh-term__line"><span>2</span> HHL HK2 DPS IN04APR OUT10APR LAGUNA</p>
+                  <p class="gh-term__line"><span>3</span> CAR DPS 04APR PRIVATE TRANSFER</p>
+                  <p class="gh-term__line"><span>4</span> TUR DPS 06APR ULUWATU TEMPLE</p>
+                </div>
+                <div class="gh-term__foot"><span class="gh-pulse"></span> Opening in QuoteCloud</div>
+              </div>
+
+              <div class="gh-beam" aria-hidden="true"><span></span></div>
+
+              <div class="gh-doc gh-doc--itin" data-reveal="right">
+                <div class="gh-doc__cover">
+                  <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                  <div class="gh-doc__title">
+                    <strong>Bali Discovery</strong>
+                    <span>04 – 10 Apr · 2 adults</span>
+                  </div>
+                </div>
+                <ol class="gh-segs">
+                  <li class="gh-seg" style="--i: 0">
+                    <span class="gh-seg__icon gh-tone-coral"><svg width="18" height="18"><use href="#i-plane" /></svg></span>
+                    <span class="gh-seg__main"><strong>Sydney to Bali</strong><small>QF 43 · SYD 10:35 → DPS 15:15</small></span>
+                    <span class="gh-seg__date">Fri 04</span>
+                  </li>
+                  <li class="gh-seg" style="--i: 1">
+                    <span class="gh-seg__icon gh-tone-amber"><svg width="18" height="18"><use href="#i-hotel" /></svg></span>
+                    <span class="gh-seg__main"><strong>The Laguna Resort &amp; Spa</strong><small>Check-in · 6 nights</small></span>
+                    <span class="gh-seg__date">Fri 04</span>
+                  </li>
+                  <li class="gh-seg" style="--i: 2">
+                    <span class="gh-seg__icon gh-tone-violet"><svg width="18" height="18"><use href="#i-transfer" /></svg></span>
+                    <span class="gh-seg__main"><strong>Private transfer</strong><small>Airport to resort</small></span>
+                    <span class="gh-seg__date">Fri 04</span>
+                  </li>
+                  <li class="gh-seg" style="--i: 3">
+                    <span class="gh-seg__icon gh-tone-mint"><svg width="18" height="18"><use href="#i-tour" /></svg></span>
+                    <span class="gh-seg__main"><strong>Uluwatu Temple tour</strong><small>Half day · sunset</small></span>
+                    <span class="gh-seg__date">Sun 06</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <a class="gh-link" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-sabre-gds">See how the Sabre integration works <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═════════ 2 · RICH MEDIA ═════════ -->
+      <section class="gh-sec" id="rich-media" aria-labelledby="gh-media-title">
+        <div class="qc-container">
+          <article class="gh-panel gh-panel--split gh-panel--media" data-gh-play>
+            <header class="gh-panel__head" data-reveal>
+              <h2 class="gh-h2" id="gh-media-title">Show them the trip <em class="gh-em">before they go</em></h2>
+              <p class="gh-lede">Destination guides, photos, video, maps, PDF brochures and QR codes, all inside one living itinerary.</p>
+              <a class="gh-link" href="https://www.quote.cloud/enhanced-travel-itinerary-software">Explore enhanced itineraries <span aria-hidden="true">→</span></a>
+            </header>
+
+            <div class="gh-media" aria-hidden="true">
+              <ul class="gh-palette">
+                <li style="--i: 0"><svg width="18" height="18"><use href="#i-image" /></svg>Image</li>
+                <li style="--i: 1"><svg width="18" height="18"><use href="#i-video" /></svg>Video</li>
+                <li style="--i: 2"><svg width="18" height="18"><use href="#i-map" /></svg>Map</li>
+                <li style="--i: 3"><svg width="18" height="18"><use href="#i-gallery" /></svg>Gallery</li>
+                <li style="--i: 4"><svg width="18" height="18"><use href="#i-doc" /></svg>PDF</li>
+                <li style="--i: 5"><svg width="18" height="18"><use href="#i-qr" /></svg>QR code</li>
+              </ul>
+
+              <div class="gh-page">
+                <div class="gh-blk gh-blk--hero" style="--i: 0">
+                  <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                  <span class="gh-blk__cap">Destination guide<strong>Discover Bali</strong></span>
+                </div>
+                <div class="gh-blk gh-blk--video" style="--i: 1">
+                  <img src="/assets/travel/template-collage.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                  <span class="gh-play"><svg width="18" height="18"><use href="#i-play" /></svg></span>
+                  <span class="gh-progress"><span></span></span>
+                </div>
+                <div class="gh-blk gh-blk--map" style="--i: 2">
+                  <svg viewBox="0 0 200 130" preserveAspectRatio="xMidYMid slice">
+                    <path class="gh-map__land" d="M-10 92 C 20 70, 40 88, 62 74 S 98 52, 120 66 S 160 82, 180 62 S 214 40, 220 50 V 140 H -10 Z" />
+                    <path class="gh-map__land gh-map__land--2" d="M-10 112 C 30 100, 60 116, 96 104 S 160 96, 220 108 V 140 H -10 Z" />
+                    <path class="gh-map__route" d="M44 96 C 70 44, 116 40, 152 64" pathLength="1" />
+                    <circle class="gh-map__pin" cx="44" cy="96" r="4" />
+                    <circle class="gh-map__pin gh-map__pin--end" cx="152" cy="64" r="5" />
+                  </svg>
+                </div>
+                <div class="gh-blk gh-blk--gallery" style="--i: 3">
+                  <img src="/assets/travel/template-african-journey.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                  <img src="/assets/travel/template-travel-agency.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                  <img src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="" loading="lazy" decoding="async" />
+                </div>
+                <div class="gh-blk gh-blk--pdf" style="--i: 4">
+                  <span class="gh-pdf">PDF</span>
+                  <span><strong>Bali brochure</strong><small>2.4 MB</small></span>
+                </div>
+                <div class="gh-blk gh-blk--qr" style="--i: 5">
+                  <svg viewBox="0 0 21 21" shape-rendering="crispEdges"><path fill="currentColor" d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v3h-2zM8 3h2v3H8zM9 7h3v2H9zM13 8h2v3h-2zM8 10h2v3H8zM0 8h3v2H0zM4 9h3v2H4zM16 8h3v2h-3zM19 11h2v3h-2zM15 12h3v2h-3zM11 12h3v3h-3zM8 15h3v2H8zM12 16h2v5h-2zM15 15h2v3h-2zM18 16h3v2h-3zM8 19h3v2H8zM16 19h3v2h-3z"/></svg>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═════════ 3 + 4 · LIBRARIES & BRAND ═════════ -->
+      <div class="gh-duo qc-container">
+        <section class="gh-panel gh-panel--lib" id="libraries" aria-labelledby="gh-lib-title" data-gh-play>
+          <header class="gh-panel__head" data-reveal>
+            <h2 class="gh-h2 gh-h2--sm" id="gh-lib-title">Your best content, <em class="gh-em">one drag away</em></h2>
+            <p class="gh-lede">Destination guides, visa requirements, safety info and terms live in shared libraries, so every document stays consistent and compliant.</p>
+          </header>
+          <div class="gh-lib" aria-hidden="true">
+            <div class="gh-lib__panel">
+              <div class="gh-lib__head"><svg width="16" height="16"><use href="#i-book" /></svg> Content library</div>
+              <div class="gh-lib__search"><svg width="14" height="14"><use href="#i-search" /></svg><span class="gh-type" data-text="Indonesia">Indonesia</span><i class="gh-caret"></i></div>
+              <ul class="gh-lib__list">
+                <li><span class="gh-dot gh-tone-amber"></span>Destination guide · Bali</li>
+                <li class="is-pick"><span class="gh-dot gh-tone-coral"></span>Visa requirements</li>
+                <li><span class="gh-dot gh-tone-mint"></span>Travel safety</li>
+                <li><span class="gh-dot gh-tone-violet"></span>Packing tips</li>
+                <li><span class="gh-dot gh-tone-sky"></span>Terms &amp; conditions</li>
+              </ul>
+            </div>
+            <div class="gh-lib__doc">
+              <span class="gh-skel" style="--w: 70%"></span>
+              <span class="gh-skel" style="--w: 92%"></span>
+              <span class="gh-skel" style="--w: 84%"></span>
+              <div class="gh-lib__drop">
+                <span class="gh-lib__drop-title"><svg width="14" height="14"><use href="#i-shield" /></svg> Visa requirements · Indonesia</span>
+                <span class="gh-skel" style="--w: 94%"></span>
+                <span class="gh-skel" style="--w: 78%"></span>
+              </div>
+              <span class="gh-skel" style="--w: 88%"></span>
+              <span class="gh-skel" style="--w: 60%"></span>
+            </div>
+            <div class="gh-lib__ghost"><span class="gh-dot gh-tone-coral"></span>Visa requirements</div>
+          </div>
+        </section>
+
+        <section class="gh-panel gh-panel--brand" id="templates" aria-labelledby="gh-brand-title" data-gh-play>
+          <header class="gh-panel__head" data-reveal>
+            <h2 class="gh-h2 gh-h2--sm" id="gh-brand-title">Unmistakably <em class="gh-em">your agency</em></h2>
+            <p class="gh-lede">Your logo, colours and layouts on every proposal, shaped for corporate, leisure or group travel.</p>
+            <a class="gh-link" href="https://www.quote.cloud/templates/travel">Browse travel templates <span aria-hidden="true">→</span></a>
+          </header>
+          <div class="gh-fan">
+            <img class="gh-fan__card" style="--n: -1.5" src="/assets/travel/template-travel-agency.jpg" width="566" height="800" alt="Travel agency proposal template with a beach umbrella cover" loading="lazy" decoding="async" />
+            <img class="gh-fan__card" style="--n: -0.5" src="/assets/travel/template-collage.jpg" width="566" height="800" alt="Photo collage travel template with beach, bridge, train and cruise imagery" loading="lazy" decoding="async" />
+            <img class="gh-fan__card" style="--n: 0.5" src="/assets/travel/template-african-journey.jpg" width="566" height="800" alt="Your African Journey template with a dusk safari lodge cover" loading="lazy" decoding="async" />
+            <img class="gh-fan__card" style="--n: 1.5" src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="Paradise Travel template reading Your Dream Holiday Awaits over a Bali beach" loading="lazy" decoding="async" />
+          </div>
+        </section>
+      </div>
+
+      <!-- ═════════ 5 + 6 · SELL ═════════ -->
+      <div class="gh-duo gh-duo--sell qc-container">
+        <section class="gh-panel gh-panel--cost" id="trip-cost" aria-labelledby="gh-cost-title" data-gh-play>
+          <header class="gh-panel__head" data-reveal>
+            <h2 class="gh-h2 gh-h2--sm" id="gh-cost-title">Every cost clear. <em class="gh-em">Every extra a click.</em></h2>
+            <p class="gh-lede">Break down flights, nights, transfers and tours, and let travellers choose the extras they want.</p>
+          </header>
+          <div class="gh-cost" data-gh-cost data-base="4550">
+            <div class="gh-cost__head"><span>Trip cost</span><span>USD</span></div>
+            <ul class="gh-cost__rows">
+              <li><span><svg width="14" height="14" aria-hidden="true"><use href="#i-plane" /></svg>Flights</span><span>$1,250</span></li>
+              <li><span><svg width="14" height="14" aria-hidden="true"><use href="#i-hotel" /></svg>Hotel · 6 nights</span><span>$2,400</span></li>
+              <li><span><svg width="14" height="14" aria-hidden="true"><use href="#i-transfer" /></svg>Transfers</span><span>$350</span></li>
+              <li><span><svg width="14" height="14" aria-hidden="true"><use href="#i-tour" /></svg>Tours &amp; activities</span><span>$550</span></li>
+            </ul>
+            <fieldset class="gh-cost__opts">
+              <legend>Optional extras</legend>
+              <label class="gh-opt"><input type="checkbox" value="220" data-gh-auto /><span class="gh-opt__box" aria-hidden="true"><svg width="12" height="12"><use href="#i-check" /></svg></span><span class="gh-opt__name">Sunset dinner cruise</span><span class="gh-opt__price">+$220</span></label>
+              <label class="gh-opt"><input type="checkbox" value="180" /><span class="gh-opt__box" aria-hidden="true"><svg width="12" height="12"><use href="#i-check" /></svg></span><span class="gh-opt__name">Travel insurance</span><span class="gh-opt__price">+$180</span></label>
+            </fieldset>
+            <div class="gh-cost__total"><span>Total</span><output data-gh-total aria-live="polite">$4,550</output></div>
+          </div>
+          <a class="gh-link" href="https://www.quote.cloud/travel-quoting-software">More on travel quoting <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="gh-panel gh-panel--sign" id="sign-and-pay" aria-labelledby="gh-sign-title" data-gh-play>
+          <header class="gh-panel__head" data-reveal>
+            <h2 class="gh-h2 gh-h2--sm" id="gh-sign-title">Accepted, signed <em class="gh-em">and paid</em></h2>
+            <p class="gh-lede">Legally binding eSignatures with a full audit trail, then a deposit online through Stripe or PayPal.</p>
+          </header>
+          <div class="gh-sign" data-gh-sign data-step="0" aria-hidden="true">
+            <div class="gh-sign__pad">
+              <span class="gh-sign__label">Sign to accept · Bali Discovery</span>
+              <svg class="gh-sign__ink" viewBox="0 0 300 90">
+                <path pathLength="1" d="M20 60 C 10 40, 40 18, 52 30 C 62 42, 30 58, 22 70 C 16 80, 40 82, 54 66 C 62 56, 66 48, 70 54 C 74 62, 78 64, 84 52 C 88 44, 94 46, 94 54 C 94 62, 100 62, 106 52 C 110 44, 116 44, 118 52 C 120 60, 126 60, 132 48 L 140 34 C 136 50, 136 62, 146 58 C 156 54, 160 44, 168 46 C 176 48, 170 62, 180 60 C 192 58, 200 42, 212 44 C 222 46, 214 60, 226 58 C 240 56, 250 50, 262 48" />
+              </svg>
+              <span class="gh-sign__line"></span>
+              <span class="gh-sign__stamp"><svg width="14" height="14"><use href="#i-check" /></svg>Signed · audit trail recorded</span>
+            </div>
+            <div class="gh-pay">
+              <div class="gh-pay__row"><span>Deposit due</span><strong>$1,000.00</strong></div>
+              <div class="gh-pay__methods">
+                <span class="gh-pay__method is-active"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" />Card</span>
+                <span class="gh-pay__method"><img src="/assets/integrations/paypal.png" width="792" height="790" alt="" loading="lazy" decoding="async" />PayPal</span>
+              </div>
+              <span class="gh-pay__btn"><span class="gh-pay__btn-idle">Pay deposit</span><span class="gh-pay__btn-done"><svg width="16" height="16"><use href="#i-check" /></svg>Paid · booking confirmed</span></span>
+            </div>
+            <ol class="gh-audit">
+              <li><span>Sent</span><time>09:12</time></li>
+              <li><span>Viewed</span><time>09:40</time></li>
+              <li class="gh-audit__sign"><span>Signed</span><time>09:46</time></li>
+              <li class="gh-audit__pay"><span>Paid</span><time>09:47</time></li>
+            </ol>
+          </div>
+          <a class="gh-link" href="https://www.quote.cloud/electronic-signature-software-solution">About eSignatures <span aria-hidden="true">→</span></a>
+        </section>
+      </div>
+
+      <!-- ═════════ MID CTA ═════════ -->
+      <section class="gh-mid" aria-labelledby="gh-mid-title">
+        <div class="qc-container gh-mid__inner" data-reveal>
+          <h2 class="gh-mid__title" id="gh-mid-title">Quote your next trip <em class="gh-em">today</em></h2>
+          <div class="gh-mid__ctas">
+            <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+            <a class="qc-btn gh-btn-glass" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ 7 · TRAVELDOCS ═════════ -->
+      <section class="gh-docs" id="traveldocs" aria-labelledby="gh-docs-title" data-gh-play>
+        <div class="gh-docs__glow" aria-hidden="true"></div>
+        <div class="qc-container gh-docs__head" data-reveal>
+          <img class="gh-docs__logo" src="/assets/travel/traveldocs-logo.png" width="640" height="247" alt="TravelDocs" loading="lazy" decoding="async" />
+          <h2 class="gh-h2 gh-h2--xl" id="gh-docs-title">The whole trip, <em class="gh-em">in their pocket</em></h2>
+          <p class="gh-lede">Free for travellers on iOS and Android, with every booking, document and live flight status, before and during the trip.</p>
+          <div class="gh-stores">
+            <a href="https://apps.apple.com/au/app/traveldocs/id6477499212" rel="noopener"><img src="/assets/travel/app-store.png" width="400" height="118" alt="Download TravelDocs on the App Store" loading="lazy" decoding="async" /></a>
+            <a href="https://play.google.com/store/apps/details?id=com.corporateinteractive.traveldocs" rel="noopener"><img src="/assets/travel/google-play.png" width="400" height="117" alt="Get TravelDocs on Google Play" loading="lazy" decoding="async" /></a>
+          </div>
+        </div>
+
+        <div class="gh-phones">
+          <figure class="gh-phones__item gh-phones__item--l1">
+            <div class="gh-phone"><img src="/assets/travel/traveldocs-flight.jpg" width="414" height="900" alt="TravelDocs flight detail with departure times, booking code, seat and airline" loading="lazy" decoding="async" /></div>
+          </figure>
+          <figure class="gh-phones__item gh-phones__item--c">
+            <div class="gh-phone gh-phone--lock"><div class="gh-screen">
+              <img src="/assets/travel/traveldocs-lockscreen-1.jpg" width="369" height="800" alt="Lock screen live flight status: gate departure in three minutes" loading="lazy" decoding="async" />
+              <img class="gh-lock2" src="/assets/travel/traveldocs-lockscreen-2.jpg" width="369" height="800" alt="Lock screen live flight status: departed gate and taxiing" loading="lazy" decoding="async" />
+            </div></div>
+            <figcaption class="gh-live"><span class="gh-pulse"></span>Live flight status</figcaption>
+          </figure>
+          <figure class="gh-phones__item gh-phones__item--r1">
+            <div class="gh-phone"><img src="/assets/travel/traveldocs-timeline.jpg" width="414" height="900" alt="TravelDocs trip timeline with flight, hotel check-in and car hire" loading="lazy" decoding="async" /></div>
+          </figure>
+        </div>
+        <div class="qc-container gh-docs__foot">
+          <a class="gh-link" href="https://www.quote.cloud/traveldocs-mobile-app">Discover the TravelDocs app <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <!-- ═════════ BENTO · ENHANCEMENTS ═════════ -->
+      <section class="gh-sec" id="enhancements" aria-labelledby="gh-bento-title">
+        <div class="qc-container">
+          <h2 class="gh-h2 gh-center" id="gh-bento-title" data-reveal>Details travellers <em class="gh-em">remember</em></h2>
+          <div class="gh-bento" data-gh-bento data-reveal-stagger="90">
+            <article class="gh-tile gh-tile--msg" data-reveal data-gh-play>
+              <div class="gh-tile__vis" aria-hidden="true">
+                <div class="gh-msg">
+                  <span class="gh-msg__avatar">JL</span>
+                  <p class="gh-msg__text">Hi <mark>Sarah</mark>, your Bali escape is ready. I've added a sunset dinner on your anniversary.</p>
+                </div>
+              </div>
+              <h3>Personalised messaging</h3>
+              <p>Speak to every traveller by name, occasion and interest.</p>
+            </article>
+
+            <article class="gh-tile gh-tile--map" data-reveal data-gh-play>
+              <div class="gh-tile__vis" aria-hidden="true">
+                <svg class="gh-bmap" viewBox="0 0 520 260" preserveAspectRatio="xMidYMid slice">
+                  <defs>
+                    <pattern id="gh-grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="currentColor" stroke-opacity=".07" /></pattern>
+                  </defs>
+                  <rect width="520" height="260" fill="url(#gh-grid)" />
+                  <path class="gh-bmap__land" d="M40 190 C 90 150, 130 176, 170 160 S 240 120, 280 136 S 350 170, 400 150 S 470 110, 520 124 V 260 H 40 Z" />
+                  <path class="gh-bmap__land gh-bmap__land--2" d="M0 90 C 40 70, 80 96, 120 80 S 170 50, 200 64 V 0 H 0 Z" />
+                  <path class="gh-bmap__route" pathLength="1" d="M70 96 C 160 66, 210 146, 270 146 S 380 106, 440 176" />
+                  <g class="gh-bmap__pins">
+                    <circle cx="70" cy="96" r="6" />
+                    <circle cx="270" cy="146" r="6" />
+                    <circle cx="440" cy="176" r="7" class="is-end" />
+                  </g>
+                  <g class="gh-bmap__labels">
+                    <text x="46" y="124">Denpasar</text>
+                    <text x="250" y="174">Ubud</text>
+                    <text x="356" y="184">Uluwatu</text>
+                  </g>
+                </svg>
+              </div>
+              <h3>Interactive maps</h3>
+              <p>Every stop pinned, every route drawn.</p>
+            </article>
+
+            <article class="gh-tile gh-tile--tips" data-reveal data-gh-play>
+              <div class="gh-tile__vis" aria-hidden="true">
+                <ul class="gh-tips">
+                  <li style="--i: 0"><span class="gh-tone-amber"><svg width="14" height="14"><use href="#i-shield" /></svg></span>Customs &amp; entry</li>
+                  <li style="--i: 1"><span class="gh-tone-mint"><svg width="14" height="14"><use href="#i-cash" /></svg></span>Local currency</li>
+                  <li style="--i: 2"><span class="gh-tone-coral"><svg width="14" height="14"><use href="#i-phone" /></svg></span>Emergency contacts</li>
+                </ul>
+              </div>
+              <h3>Travel tips &amp; reminders</h3>
+              <p>The practical details, right where travellers look.</p>
+            </article>
+
+            <article class="gh-tile gh-tile--collab" data-reveal data-gh-play>
+              <div class="gh-tile__vis" aria-hidden="true">
+                <div class="gh-thread">
+                  <p class="gh-bubble gh-bubble--them"><span>S</span>Could we stay one more night in Ubud?</p>
+                  <p class="gh-bubble gh-bubble--us"><span>JL</span>Done. Day 4 updated, new total sent.</p>
+                  <p class="gh-bubble gh-bubble--typing"><i></i><i></i><i></i></p>
+                </div>
+              </div>
+              <h3>Collaboration</h3>
+              <p>Travellers comment, ask and request changes inside the document.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ INTEGRATIONS ═════════ -->
+      <section class="gh-sec gh-sec--integrations" id="integrations" aria-labelledby="gh-int-title">
+        <div class="qc-container">
+          <h2 class="gh-h2 gh-center" id="gh-int-title" data-reveal>Connected to <em class="gh-em">how you book</em></h2>
+          <ul class="gh-ints" data-reveal-stagger="70">
+            <li data-reveal="scale"><a class="gh-int" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-sabre-gds"><span class="gh-int__plate"><img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" /></span><span class="gh-int__name">Sabre GDS</span></a></li>
+            <li data-reveal="scale"><a class="gh-int" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-powersuite-mid-office"><span class="gh-int__plate"><img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" /></span><span class="gh-int__name">PowerSuite</span></a></li>
+            <li data-reveal="scale"><a class="gh-int" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tramada"><span class="gh-int__plate gh-int__plate--wide"><img src="/assets/travel/tramada.png" width="400" height="125" alt="" loading="lazy" decoding="async" /></span><span class="gh-int__name">Tramada</span></a></li>
+            <li data-reveal="scale"><a class="gh-int" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tres-ccte"><span class="gh-int__plate gh-int__plate--word">Tres <b>CCTE</b></span><span class="gh-int__name">Tres CCTE</span></a></li>
+            <li data-reveal="scale"><a class="gh-int" href="https://www.quote.cloud/all-integrations"><span class="gh-int__plate"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="" loading="lazy" decoding="async" /></span><span class="gh-int__name">Stripe</span></a></li>
+            <li data-reveal="scale"><a class="gh-int" href="https://www.quote.cloud/all-integrations"><span class="gh-int__plate"><img src="/assets/integrations/paypal.png" width="792" height="790" alt="" loading="lazy" decoding="async" /></span><span class="gh-int__name">PayPal</span></a></li>
+          </ul>
+          <p class="gh-center"><a class="gh-link" href="https://www.quote.cloud/all-integrations">See all integrations <span aria-hidden="true">→</span></a></p>
+        </div>
+      </section>
+
+      <!-- ═════════ PROOF ═════════ -->
+      <section class="gh-proof" aria-labelledby="gh-proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="gh-proof-title">Why travel teams trust QuoteCloud</h2>
+          <ul class="gh-proof__row" data-reveal-stagger="90">
+            <li data-reveal><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg width="22" height="22" aria-hidden="true"><use href="#i-star" /></svg></strong><span>Rated on Capterra</span></li>
+            <li data-reveal><strong><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg width="22" height="22" aria-hidden="true"><use href="#i-star" /></svg></strong><span>Rated on Software Advice</span></li>
+            <li data-reveal><strong><span data-count-to="2013" data-count-format="plain">2013</span></strong><span>Building since</span></li>
+            <li data-reveal><strong>256<small>-bit</small></strong><span>Encryption · eIDAS · GDPR · AWS</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ═════════ FAQ ═════════ -->
+      <div class="gh-faq-wrap">
+        <!-- @include faq-travel -->
+      </div>
+
+      <!-- ═════════ CLOSING CTA ═════════ -->
+      <section class="gh-final" aria-labelledby="gh-final-title" data-gh-final>
+        <div class="gh-final__sun" aria-hidden="true"></div>
+        <div class="qc-container gh-final__inner" data-reveal>
+          <h2 class="gh-h2 gh-h2--xl" id="gh-final-title">Your next booking <em class="gh-em">starts here</em></h2>
+          <p class="gh-lede">Just click, quote and close. Free for 14 days, no credit card required.</p>
+          <div class="gh-hero__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+            <a class="qc-btn qc-btn--lg gh-btn-glass" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="gh-final__links"><a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+        <div class="gh-dawn" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <div class="gh-sticky" data-gh-sticky hidden>
+      <a class="qc-btn qc-btn--primary qc-btn--block" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile">Start free 14-day trial</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

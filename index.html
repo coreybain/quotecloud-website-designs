@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>QuoteCloud — Product Overview design variants</title>
+    <link rel="icon" type="image/png" href="/assets/logos/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Quicksand:wght@600;700&display=swap" />
+    <style>
+      :root { --ink:#242424; --red:#ff4d47; --line:#e8e8ec; }
+      * { box-sizing: border-box; }
+      body { margin:0; font-family:"Open Sans",system-ui,sans-serif; color:var(--ink); background:#fafafa; }
+      header { background:#0a0a0a; color:#fff; padding:28px clamp(20px,5vw,64px); display:flex; align-items:center; gap:16px; }
+      header img { width:34px; }
+      header h1 { font:700 22px/1.2 Quicksand,sans-serif; margin:0; }
+      main { padding:48px clamp(20px,5vw,64px) 80px; max-width:1240px; margin:auto; }
+      h2 { font:700 26px/1.2 Quicksand,sans-serif; margin:0 0 10px; }
+      h2 ~ h2 { margin-top:64px; }
+      main > p { color:#55565c; max-width:640px; margin:0 0 36px; }
+      ol { list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:18px; }
+      a.card { display:flex; flex-direction:column; gap:10px; height:100%; padding:24px; border-radius:20px; background:#fff; border:1px solid var(--line); text-decoration:none; color:inherit; transition:transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s; }
+      a.card:hover { transform:translateY(-4px); box-shadow:0 24px 48px -24px rgb(0 0 0 / .3); }
+      .num { font:700 14px Quicksand,sans-serif; color:var(--red); }
+      .name { font:700 22px/1.2 Quicksand,sans-serif; }
+      .desc { font-size:14.5px; color:#55565c; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="/assets/logos/qc-symbol-white.png" alt="" width="34" height="35" />
+      <h1>QuoteCloud website — design variants</h1>
+    </header>
+    <main>
+      <h2>Product Overview</h2>
+      <p>Each variant shares the same header, footer, SEO head and FAQ. Open one, scroll slowly to see the motion, and try it on your phone.</p>
+      <ol>
+        <li><a class="card" href="/v1/"><span class="num">01</span><span class="name">Bento Showcase</span><span class="desc">Live product moments inside an animated bento grid.</span></a></li>
+        <li><a class="card" href="/v2/"><span class="num">02</span><span class="name">Sticky Product Story</span><span class="desc">One product window that transforms as you scroll through the deal.</span></a></li>
+        <li><a class="card" href="/v3/"><span class="num">03</span><span class="name">Many Tools → One</span><span class="desc">Scattered apps converge into a single QuoteCloud document.</span></a></li>
+        <li><a class="card" href="/v4/"><span class="num">04</span><span class="name">Deal Journey</span><span class="desc">A pinned horizontal track from first draft to signed and paid.</span></a></li>
+        <li><a class="card" href="/v5/"><span class="num">05</span><span class="name">Midnight</span><span class="desc">Dark, premium, spotlight cards and glowing accents.</span></a></li>
+        <li><a class="card" href="/v6/"><span class="num">06</span><span class="name">Try It Hero</span><span class="desc">An interactive proposal in the hero: pick options, watch the total, sign.</span></a></li>
+        <li><a class="card" href="/v7/"><span class="num">07</span><span class="name">Content Blocks</span><span class="desc">18 blocks, canvas and grid modes, rearranging live.</span></a></li>
+        <li><a class="card" href="/v8/"><span class="num">08</span><span class="name">Grid Lines</span><span class="desc">The current site's structural grid, refined, with lines that draw in.</span></a></li>
+        <li><a class="card" href="/v9/"><span class="num">09</span><span class="name">Aurora</span><span class="desc">Light, airy, soft moving gradients behind floating glass UI.</span></a></li>
+        <li><a class="card" href="/v10/"><span class="num">10</span><span class="name">Outcomes First</span><span class="desc">Time saved and deals won lead; features prove it.</span></a></li>
+      </ol>
+
+      <h2>Travel (Sales Quotes for Travel)</h2>
+      <p>Ten variants of the travel industry page, sharing the same header, footer, travel SEO head and travel FAQ.</p>
+      <ol>
+        <li><a class="card" href="/travel/v1/"><span class="num">01</span><span class="name">Itinerary Bento</span><span class="desc">Living travel moments in an animated bento: flights, hotels, costs, video, signing.</span></a></li>
+        <li><a class="card" href="/travel/v2/"><span class="num">02</span><span class="name">Booking → Wow</span><span class="desc">A raw GDS booking transforms into a rich, branded itinerary as you scroll.</span></a></li>
+        <li><a class="card" href="/travel/v3/"><span class="num">03</span><span class="name">Route Lines</span><span class="desc">An elegant route draws across an abstract map; each stop reveals a feature.</span></a></li>
+        <li><a class="card" href="/travel/v4/"><span class="num">04</span><span class="name">Day by Day</span><span class="desc">The page is a trip: a day-by-day itinerary timeline where each day is a feature.</span></a></li>
+        <li><a class="card" href="/travel/v5/"><span class="num">05</span><span class="name">Boarding Pass</span><span class="desc">Premium ticket and boarding-pass craft: perforations, tear-offs, gate-style CTAs.</span></a></li>
+        <li><a class="card" href="/travel/v6/"><span class="num">06</span><span class="name">Golden Hour</span><span class="desc">Dark, cinematic and warm, with real templates and TravelDocs phones floating in depth.</span></a></li>
+        <li><a class="card" href="/travel/v7/"><span class="num">07</span><span class="name">Two Sides</span><span class="desc">Toggle the consultant's view and the traveller's view of the same trip.</span></a></li>
+        <li><a class="card" href="/travel/v8/"><span class="num">08</span><span class="name">Build a Trip</span><span class="desc">Interactive hero: drag segments, choose upgrades, watch the cost, accept and sign.</span></a></li>
+        <li><a class="card" href="/travel/v9/"><span class="num">09</span><span class="name">Your Brand, Every Trip</span><span class="desc">Template covers fan out; a live theme switcher re-skins an itinerary.</span></a></li>
+        <li><a class="card" href="/travel/v10/"><span class="num">10</span><span class="name">Departures</span><span class="desc">Split-flap departure-board motion on a crisp grid; features as gates.</span></a></li>
+      </ol>
+      <h2>Itinerary EDM landing page</h2>
+      <p>Five variants of the email-campaign landing page for branded itineraries and TravelDocs, sharing the same header, footer, SEO head and FAQ.</p>
+      <ol>
+        <li><a class="card" href="/itinerary/v1/"><span class="num">01</span><span class="name">Three Moves</span><span class="desc">Import, personalise, share: a tight three-step story with a live PDF-to-itinerary demo hero.</span></a></li>
+        <li><a class="card" href="/itinerary/v2/"><span class="num">02</span><span class="name">Plain to Polished</span><span class="desc">A plain PNR and a branded travel document side by side, with a drag-to-compare transformation.</span></a></li>
+        <li><a class="card" href="/itinerary/v3/"><span class="num">03</span><span class="name">In Their Pocket</span><span class="desc">TravelDocs-led: the traveller signs in with surname and booking ref, then the trip comes alive on the phone.</span></a></li>
+        <li><a class="card" href="/itinerary/v4/"><span class="num">04</span><span class="name">The Travel Document</span><span class="desc">The page is the enhanced document itself, annotated to show how each enrichment was added.</span></a></li>
+        <li><a class="card" href="/itinerary/v5/"><span class="num">05</span><span class="name">Booking to Boarding</span><span class="desc">One booking's journey, from GDS to QuoteCloud to the document to the phone to offline at 35,000 ft.</span></a></li>
+      </ol>
+      <h2>Telco (Sales Quotes for Telco)</h2>
+      <p>Ten variants of the telecommunications industry page, sharing the same header, footer, telco SEO head and telco FAQ.</p>
+      <ol>
+        <li><a class="card" href="/telco/v1/"><span class="num">01</span><span class="name">Quote Bento</span><span class="desc">An animated bento of live telco quote moments: MRC vs once-off, term pricing, margins, approvals, diagrams, e-sign.</span></a></li>
+        <li><a class="card" href="/telco/v2/"><span class="num">02</span><span class="name">The Term Switch</span><span class="desc">Interactive hero quote: flip 12 / 24 / 36 months and watch monthly, upfront and contract value re-price.</span></a></li>
+        <li><a class="card" href="/telco/v3/"><span class="num">03</span><span class="name">Network Map</span><span class="desc">A multi-site network draws itself; each site and link reveals a capability of the proposal.</span></a></li>
+        <li><a class="card" href="/telco/v4/"><span class="num">04</span><span class="name">Signal</span><span class="desc">Dark, precise and cinematic: signal pulses and light-lines carry the quote from configure to signed.</span></a></li>
+        <li><a class="card" href="/telco/v5/"><span class="num">05</span><span class="name">Deal Desk</span><span class="desc">Sticky scroll story of one deal: sales, pre-sales and engineering collaborate, approvals fire, the customer signs.</span></a></li>
+        <li><a class="card" href="/telco/v6/"><span class="num">06</span><span class="name">Two Ledgers</span><span class="desc">Your view vs the customer's: carrier buy rates and margins visible inside, hidden on the proposal.</span></a></li>
+        <li><a class="card" href="/telco/v7/"><span class="num">07</span><span class="name">Bundle Builder</span><span class="desc">Build a connectivity, voice, mobile and device bundle; recurring and upfront totals update live.</span></a></li>
+        <li><a class="card" href="/telco/v8/"><span class="num">08</span><span class="name">Spreadsheet to Signed</span><span class="desc">Spreadsheets, Word docs and email threads collapse into one clean, signable telecom proposal.</span></a></li>
+        <li><a class="card" href="/telco/v9/"><span class="num">09</span><span class="name">The Stack</span><span class="desc">Connectivity, voice, cloud, managed services and hardware stack up in layers into one solution.</span></a></li>
+        <li><a class="card" href="/telco/v10/"><span class="num">10</span><span class="name">Live Proposal</span><span class="desc">The page is the customer's interactive telecom proposal, annotated to show how each part was built.</span></a></li>
+      </ol>
+      <h2>Free eSignature Software</h2>
+      <ol>
+        <li><a class="card" href="/esign/v1/"><span class="num">01</span><span class="name">Ink Bento</span><span class="desc">A contract signs itself, then a bento of live eSign moments: initials, PDF fields, multiple signers, passcode, certificate.</span></a></li>
+        <li><a class="card" href="/esign/v2/"><span class="num">02</span><span class="name">From Paper to Signed</span><span class="desc">One uploaded PDF transforms as you scroll: fields, signers, verification, signatures, certificate.</span></a></li>
+        <li><a class="card" href="/esign/v3/"><span class="num">03</span><span class="name">Sign It Yourself</span><span class="desc">Place fields, send, and actually sign a mini document in the hero.</span></a></li>
+      </ol>
+      <h2>Quoting Software</h2>
+      <ol>
+        <li><a class="card" href="/quoting/v1/"><span class="num">01</span><span class="name">The Quote Bento</span><span class="desc">A bento of live quote moments: discounts, optional items, currency, hidden margins, approvals, signing.</span></a></li>
+        <li><a class="card" href="/quoting/v2/"><span class="num">02</span><span class="name">From Draft to Signed</span><span class="desc">One pinned quote moves through chapters: priced, approved, sent, options chosen, signed and paid.</span></a></li>
+        <li><a class="card" href="/quoting/v3/"><span class="num">03</span><span class="name">Build a Quote</span><span class="desc">A playable quote builder hero: catalogue, quantities, options, discount, internal vs customer view.</span></a></li>
+      </ol>
+      <h2>Document Generation Software</h2>
+      <ol>
+        <li><a class="card" href="/docgen/v1/"><span class="num">01</span><span class="name">The Generation Bento</span><span class="desc">Merge fields fill with real data, then a bento of CRM, themes, locked clauses, API and delivery.</span></a></li>
+        <li><a class="card" href="/docgen/v2/"><span class="num">02</span><span class="name">Blank Page to Signed</span><span class="desc">One document builds itself as you scroll, then multiplies into a wall of personalised documents.</span></a></li>
+        <li><a class="card" href="/docgen/v3/"><span class="num">03</span><span class="name">Generate One Now</span><span class="desc">Pick a template, client and brand, press Generate — plus an API view and volume control.</span></a></li>
+      </ol>
+      <h2>18 Content Blocks</h2>
+      <ol>
+        <li><a class="card" href="/blocks/v1/"><span class="num">01</span><span class="name">The Block Wall</span><span class="desc">All 18 content blocks as an animated bento wall, one living tile per block.</span></a></li>
+        <li><a class="card" href="/blocks/v2/"><span class="num">02</span><span class="name">Patchwork to One Document</span><span class="desc">Word, Excel, diagrams, PDFs and forms merge into one interactive QuoteCloud document as you scroll.</span></a></li>
+        <li><a class="card" href="/blocks/v3/"><span class="num">03</span><span class="name">Build It Yourself</span><span class="desc">A mini editor with all 18 blocks: add, toggle prices, edit a spreadsheet, fill a form, sign.</span></a></li>
+      </ol>
+      <h2>Canvas & Grid Mode Editing</h2>
+      <ol>
+        <li><a class="card" href="/canvas/v1/"><span class="num">01</span><span class="name">Freedom &amp; Order</span><span class="desc">The hero loops between freeform blocks and a snapped grid; a bento of canvas and grid micro-demos.</span></a></li>
+        <li><a class="card" href="/canvas/v2/"><span class="num">02</span><span class="name">One Page, Two Minds</span><span class="desc">A pinned page builds freely, then snaps into rows and columns, ending side by side.</span></a></li>
+        <li><a class="card" href="/canvas/v3/"><span class="num">03</span><span class="name">Try the Editor</span><span class="desc">A working mini editor: drag blocks in Canvas, pick columns in Grid.</span></a></li>
+      </ol>
+      <h2>Collaboration</h2>
+      <ol>
+        <li><a class="card" href="/collab/v1/"><span class="num">01</span><span class="name">The Living Bento</span><span class="desc">A bento where each tile loops a collaboration scene: live editing, comments, versions, permissions, alerts.</span></a></li>
+        <li><a class="card" href="/collab/v2/"><span class="num">02</span><span class="name">One Document, Many Hands</span><span class="desc">One pinned proposal gathers the team, comments, roles, versions and the customer signature as you scroll.</span></a></li>
+        <li><a class="card" href="/collab/v3/"><span class="num">03</span><span class="name">Try It Together</span><span class="desc">A playable mini editor with two simulated teammates: comment, edit, switch roles, restore a version.</span></a></li>
+      </ol>
+    </main>
+  </body>
+</html>

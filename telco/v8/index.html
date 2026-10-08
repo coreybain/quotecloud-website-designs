@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-telco -->
+  </head>
+  <body class="t8">
+    <!-- @include header -->
+    <main id="main">
+      <!-- ───────────────── Hero: spreadsheet → signed ───────────────── -->
+      <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
+        <div class="hero__pin">
+          <div class="hero__inner qc-container">
+            <div class="hero__copy">
+              <h1 class="hero__title" id="hero-title">
+                Telecom quoting software, <span class="hl">from spreadsheet to signed.</span>
+              </h1>
+              <p class="hero__lead">
+                Buy-rate sheets, scope docs and email approvals become one branded telco proposal, with monthly and once-off
+                pricing, contract terms and eSignature built in.
+              </p>
+              <div class="hero__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                  Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+              </div>
+              <p class="hero__note">No credit card required</p>
+            </div>
+
+            <div class="hero__visual">
+              <div class="stage-wrap" data-stage-wrap>
+                <div
+                  class="stage s1 s2 s3 s4"
+                  data-stage
+                  role="img"
+                  aria-label="A buy-rate spreadsheet, a Word scope document and an email approval thread collapse into one QuoteCloud telco proposal with a cover, solution summary, network diagram, monthly and once-off pricing on a 36-month term, and an eSignature."
+                >
+                  <!-- BEFORE: spreadsheet -->
+                  <div class="b b--sheet">
+                    <div class="b__chrome b__chrome--xl">
+                      <span class="b__ico b__ico--xl"></span>
+                      <span class="b__file">Buy rates v7 FINAL(2).xlsx</span>
+                      <span class="b__meta">Edited 3 days ago</span>
+                    </div>
+                    <div class="xl__fx"><span class="xl__ref">G8</span><span class="xl__fxi">fx</span><span class="xl__formula">=ROUND(D8*(1+E8),2)*C8</span></div>
+                    <div class="xl__grid">
+                      <span class="xl__c xl__corner"></span><span class="xl__c xl__h">A</span><span class="xl__c xl__h">B</span><span class="xl__c xl__h">C</span><span class="xl__c xl__h">D</span><span class="xl__c xl__h">E</span><span class="xl__c xl__h">F</span><span class="xl__c xl__h">G</span>
+                      <span class="xl__c xl__n">1</span><span class="xl__c xl__b">Item</span><span class="xl__c xl__b">Source</span><span class="xl__c xl__b xl__r">Qty</span><span class="xl__c xl__b xl__r">Buy</span><span class="xl__c xl__b xl__r">Margin</span><span class="xl__c xl__b xl__r">Sell</span><span class="xl__c xl__b xl__r">MRC</span>
+                      <span class="xl__c xl__n">2</span><span class="xl__c">Fibre 500/500</span><span class="xl__c">Wholesale</span><span class="xl__c xl__r">3</span><span class="xl__c xl__r">142.00</span><span class="xl__c xl__r">33%</span><span class="xl__c xl__r">189.00</span><span class="xl__c xl__r">567.00</span>
+                      <span class="xl__c xl__n">3</span><span class="xl__c">SD-WAN edge</span><span class="xl__c">Distributor</span><span class="xl__c xl__r">3</span><span class="xl__c xl__r">58.00</span><span class="xl__c xl__r">36%</span><span class="xl__c xl__r">79.00</span><span class="xl__c xl__r">237.00</span>
+                      <span class="xl__c xl__n">4</span><span class="xl__c">Hosted PBX seat</span><span class="xl__c">Hosted</span><span class="xl__c xl__r">40</span><span class="xl__c xl__r">11.20</span><span class="xl__c xl__r">38%</span><span class="xl__c xl__r">15.50</span><span class="xl__c xl__r">620.00</span>
+                      <span class="xl__c xl__n">5</span><span class="xl__c">Mobile 40GB + iPhone</span><span class="xl__c">Mobile</span><span class="xl__c xl__r">25</span><span class="xl__c xl__r">52.00</span><span class="xl__c xl__r xl__warn">33%</span><span class="xl__c xl__r">69.00</span><span class="xl__c xl__r">1,725.00</span>
+                      <span class="xl__c xl__n">6</span><span class="xl__c">M365 Business Std</span><span class="xl__c">Distributor</span><span class="xl__c xl__r">40</span><span class="xl__c xl__r">14.10</span><span class="xl__c xl__r">33%</span><span class="xl__c xl__r">18.70</span><span class="xl__c xl__r">748.00</span>
+                      <span class="xl__c xl__n">7</span><span class="xl__c">Managed support</span><span class="xl__c">Internal</span><span class="xl__c xl__r">1</span><span class="xl__c xl__r">300.00</span><span class="xl__c xl__r">50%</span><span class="xl__c xl__r">450.00</span><span class="xl__c xl__r">450.00</span>
+                      <span class="xl__c xl__n">8</span><span class="xl__c">Install (once-off?)</span><span class="xl__c">Internal</span><span class="xl__c xl__r">1</span><span class="xl__c xl__r">1,600</span><span class="xl__c xl__r">50%</span><span class="xl__c xl__r">2,400</span><span class="xl__c xl__r xl__sel">2,400.00</span>
+                      <span class="xl__c xl__n">9</span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span>
+                      <span class="xl__c xl__n">10</span><span class="xl__c xl__b">Total MRC</span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c"></span><span class="xl__c xl__r xl__err">#REF!</span>
+                    </div>
+                    <div class="xl__tabs"><span class="is-on">Buy rates</span><span>Quote v7</span><span>Quote v7 (2)</span><span>OLD – don’t use</span></div>
+                    <span class="mark mark--sheet"><i>Pricing</i></span>
+                  </div>
+
+                  <!-- BEFORE: Word scope doc -->
+                  <div class="b b--doc">
+                    <div class="b__chrome b__chrome--wd">
+                      <span class="b__ico b__ico--wd"></span>
+                      <span class="b__file">Scope_v4_tracked.docx</span>
+                    </div>
+                    <div class="wd__ruler"></div>
+                    <div class="wd__page">
+                      <p class="wd__h">Scope of Works</p>
+                      <p class="wd__sub">Kestrel Logistics · network refresh</p>
+                      <p class="wd__p">
+                        Supply business fibre and SD-WAN at HQ, Warehouse and Branch on a <del>24</del> <ins>36</ins>-month term. Hosted
+                        voice for 40 users; 25 handsets on mobile plans.
+                      </p>
+                      <div class="wd__img" aria-hidden="true">
+                        <span class="wd__box wd__box--a">HQ</span><span class="wd__box wd__box--b">WH</span><span class="wd__box wd__box--c">BR</span>
+                        <span class="wd__ln wd__ln--1"></span><span class="wd__ln wd__ln--2"></span>
+                      </div>
+                      <p class="wd__p wd__p--mute">Engineering to confirm design. Pricing as per attached spreadsheet (v7?).</p>
+                      <span class="wd__lines"></span>
+                      <span class="wd__comment">Is 4G backup in scope? <b>– Raj</b></span>
+                    </div>
+                    <span class="mark mark--doc"><i>Solution &amp; diagram</i></span>
+                  </div>
+
+                  <!-- BEFORE: email thread -->
+                  <div class="b b--mail">
+                    <div class="b__chrome b__chrome--ml">
+                      <span class="ml__dots"><i></i><i></i><i></i></span>
+                      <span class="b__file">Inbox</span>
+                      <span class="b__meta">4 replies</span>
+                    </div>
+                    <div class="ml__body">
+                      <p class="ml__subj">RE: RE: FW: discount approval? Kestrel</p>
+                      <p class="ml__from"><b>Dan (Sales)</b> to Sales Management · Yesterday 6:48 pm</p>
+                      <p class="ml__msg">
+                        <span class="ml__ask">Can we go 12% off on the 36-month option?</span> Carrier rate changed again, new numbers in v7 (2).
+                        Need sign-off before I send it.
+                      </p>
+                      <p class="ml__quote">&gt; On Tue, Michelle wrote: which version is current?</p>
+                      <div class="ml__att"><span>Buy rates v7 FINAL(2).xlsx</span><span>Scope_v4_tracked.docx</span></div>
+                    </div>
+                    <span class="mark mark--mail"><i>Approval</i></span>
+                  </div>
+
+                  <!-- AFTER: one QuoteCloud proposal -->
+                  <div class="p">
+                    <div class="p__bar">
+                      <span class="p__logo"><img src="/assets/logos/qc-symbol-white.png" width="14" height="14" alt="" /></span>
+                      <span class="p__doc">Kestrel Logistics · Network, Voice &amp; Mobile</span>
+                      <span class="p__people"><i class="av av--m">M</i><i class="av av--r">R</i><i class="av av--t">T</i></span>
+                      <span class="p__send">Send</span>
+                    </div>
+                    <div class="p__cover">
+                      <svg class="p__fibre" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="fib" x1="0" x2="1">
+                            <stop offset="0" stop-color="#ff4d47" stop-opacity="0" />
+                            <stop offset=".55" stop-color="#ff4d47" />
+                            <stop offset="1" stop-color="#7b61ff" />
+                          </linearGradient>
+                        </defs>
+                        <path d="M0 96 C 120 96, 170 40, 400 34" />
+                        <path d="M0 108 C 140 104, 200 62, 400 58" />
+                        <path d="M0 84 C 110 86, 160 22, 400 12" />
+                      </svg>
+                      <p class="p__kicker">Proposal #1042 · Prepared for Kestrel Logistics</p>
+                      <p class="p__title">Managed network, voice &amp; mobile</p>
+                      <p class="p__subt">3 sites · <span data-term-label>36</span>-month term</p>
+                    </div>
+                    <div class="p__body">
+                      <div class="p__left">
+                        <p class="p__h">Solution</p>
+                        <ul class="p__sum">
+                          <li><i class="dot dot--net"></i>Fibre 500/500 + SD-WAN, 3 sites</li>
+                          <li><i class="dot dot--voice"></i>Hosted PBX, 40 SIP seats</li>
+                          <li><i class="dot dot--mob"></i>25 iPhones on Mobile 40GB</li>
+                          <li><i class="dot dot--cloud"></i>Microsoft 365 + 24/7 support</li>
+                        </ul>
+                        <div class="p__diag">
+                          <svg viewBox="0 0 240 118" aria-hidden="true">
+                            <g class="dg__links">
+                              <path d="M40 22 L120 59" /><path d="M40 59 L120 59" /><path d="M40 96 L120 59" />
+                              <path d="M120 59 L200 22" /><path d="M120 59 L200 59" /><path d="M120 59 L200 96" />
+                            </g>
+                            <g class="dg__pulse">
+                              <path d="M40 22 L120 59" pathLength="100" /><path d="M40 96 L120 59" pathLength="100" />
+                              <path d="M120 59 L200 22" pathLength="100" /><path d="M120 59 L200 96" pathLength="100" />
+                            </g>
+                            <g class="dg__nodes">
+                              <rect x="10" y="12" width="60" height="20" rx="6" /><rect x="10" y="49" width="60" height="20" rx="6" /><rect x="10" y="86" width="60" height="20" rx="6" />
+                              <rect class="dg__hub" x="94" y="45" width="52" height="28" rx="14" />
+                              <rect x="170" y="12" width="60" height="20" rx="6" /><rect x="170" y="49" width="60" height="20" rx="6" /><rect x="170" y="86" width="60" height="20" rx="6" />
+                            </g>
+                            <g class="dg__txt">
+                              <text x="40" y="25.5">HQ</text><text x="40" y="62.5">Warehouse</text><text x="40" y="99.5">Branch</text>
+                              <text class="dg__hubt" x="120" y="62.5">SD-WAN</text>
+                              <text x="200" y="25.5">Internet</text><text x="200" y="62.5">Voice</text><text x="200" y="99.5">M365</text>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="p__price">
+                        <div class="p__ph">
+                          <p class="p__h">Investment</p>
+                          <span class="p__terms" data-hero-terms><i data-t="12">12</i><i data-t="24">24</i><i data-t="36" class="is-on">36 mo</i><b class="p__thumb"></b></span>
+                        </div>
+                        <div class="p__table">
+                          <span class="p__th">Service</span><span class="p__th p__r">Monthly</span><span class="p__th p__r">Once-off</span>
+                          <span class="p__row">Fibre + SD-WAN ×3</span><span class="p__r" data-m="942,852,804">$804</span><span class="p__r">$1,350</span>
+                          <span class="p__row">Hosted PBX ×40</span><span class="p__r" data-m="760,680,620">$620</span><span class="p__r p__nil">–</span>
+                          <span class="p__row">iPhone + 40GB ×25</span><span class="p__r" data-m="2225,1875,1725">$1,725</span><span class="p__r" data-o="6000,0,0">$0</span>
+                          <span class="p__row">M365 + support</span><span class="p__r" data-m="1268,1228,1198">$1,198</span><span class="p__r p__nil">–</span>
+                          <span class="p__row">Wi-Fi &amp; install</span><span class="p__r p__nil">–</span><span class="p__r">$5,880</span>
+                        </div>
+                        <div class="p__tot">
+                          <span>Monthly<b data-mt="5195,4635,4347">$4,347</b></span>
+                          <span>Once-off<b data-ot="13230,7230,7230">$7,230</b></span>
+                        </div>
+                        <span class="p__margin"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8s2.2-4 6-4 6 4 6 4-2.2 4-6 4-6-4-6-4Z" /><path d="M3 13 13 3" /></svg>Margin 31% · team only</span>
+                      </div>
+                    </div>
+                    <div class="p__sign">
+                      <div class="p__accept">
+                        <p class="p__h">Acceptance</p>
+                        <p class="p__who">Jordan Lee, Kestrel Logistics</p>
+                      </div>
+                      <div class="p__sigbox">
+                        <svg class="p__sig" viewBox="0 0 160 44" aria-hidden="true">
+                          <path pathLength="1" d="M6 30c8-14 14-22 18-20 5 3-9 24-4 25 6 1 12-20 18-19 4 1-3 15 1 16 5 1 9-12 14-12 3 0 0 9 4 10 7 1 14-9 22-11 9-2 14 4 24 2 12-3 22-9 30-12" />
+                        </svg>
+                        <span class="p__btn"><span class="p__btn-a">Accept &amp; sign</span><span class="p__btn-b">✓ Signed 10:42</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- floating moments -->
+                  <div class="fx fx--approve">
+                    <i class="fx__check"></i>
+                    <span><b>12% discount approved</b><small>Sales manager · rule: over 10%</small></span>
+                  </div>
+                  <div class="fx fx--cur fx--c1"><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1v11l3-3 2.4 4.6 2-1L6 8h4.5Z" /></svg><span>Raj · Pre-sales</span></div>
+                  <div class="fx fx--cur fx--c2"><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1v11l3-3 2.4 4.6 2-1L6 8h4.5Z" /></svg><span>Maya · Sales</span></div>
+                  <div class="fx fx--done"><i class="fx__check"></i><span><b>Proposal accepted</b><small>Audit trail saved</small></span></div>
+                </div>
+              </div>
+
+              <div class="steps" data-steps role="group" aria-label="Show the transformation">
+                <span class="steps__track" aria-hidden="true"><span class="steps__fill" data-steps-fill></span></span>
+                <button type="button" data-go="0">Spreadsheets</button>
+                <button type="button" data-go="3">Proposal</button>
+                <button type="button" data-go="4" aria-pressed="true">Signed</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────── 1. Pricing accuracy ───────────────── -->
+      <section class="chap chap--pricing" id="pricing" aria-labelledby="pricing-title">
+        <div class="qc-container">
+          <header class="chap__head" data-reveal>
+            <h2 id="pricing-title">Monthly, once-off and every term. <span class="hl">Priced right.</span></h2>
+            <div class="chap__aside">
+              <p>
+                Pull plans, devices, bundles and SKUs from your catalogue. Price tables apply your tiers, discounts and currencies, so
+                recurring and upfront totals add up the first time.
+              </p>
+              <p class="was"><span>Replaces</span> <s>Buy rates v7 FINAL(2).xlsx</s></p>
+            </div>
+          </header>
+
+          <div class="pq" data-reveal="scale" data-pricing>
+            <aside class="pq__cat" aria-label="Product catalogue (example)">
+              <p class="pq__cat-h">Catalogue</p>
+              <div class="pq__search"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5" /><path d="m10.5 10.5 3 3" /></svg>Search plans, devices, SKUs</div>
+              <ul class="pq__cats">
+                <li>Connectivity <span>14</span></li>
+                <li>Voice &amp; UC <span>9</span></li>
+                <li class="is-on">Mobile &amp; devices <span>22</span></li>
+                <li>Cloud services <span>11</span></li>
+                <li>Managed services <span>7</span></li>
+                <li>Hardware &amp; install <span>18</span></li>
+              </ul>
+              <div class="pq__bundle">
+                <p><b>Bundle</b> Office in a box</p>
+                <p>Fibre · SD-WAN · Voice · Wi-Fi</p>
+              </div>
+              <div class="pq__sku" aria-hidden="true">
+                <span class="pq__sku-ico"></span>
+                <span><b>iPhone 16 128GB</b> on Business Mobile 40GB</span>
+              </div>
+            </aside>
+
+            <div class="pq__main">
+              <div class="pq__top">
+                <p class="pq__title">Kestrel Logistics · Investment</p>
+                <div class="pq__ctl">
+                  <span class="pq__cur">AUD <svg viewBox="0 0 10 6" aria-hidden="true"><path d="m1 1 4 4 4-4" /></svg></span>
+                  <div class="seg" role="group" aria-label="Contract term" data-term-group>
+                    <button type="button" data-term="0" aria-pressed="false">12 mo</button>
+                    <button type="button" data-term="1" aria-pressed="false">24 mo</button>
+                    <button type="button" data-term="2" aria-pressed="true">36 mo</button>
+                    <span class="seg__thumb" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pq__table" role="table" aria-label="Example telecom quote">
+                <div class="pq__tr pq__tr--h" role="row">
+                  <span role="columnheader">Service</span><span role="columnheader" class="pq__q">Qty</span><span role="columnheader" class="pq__n">Monthly</span><span role="columnheader" class="pq__n">Once-off</span>
+                </div>
+                <div class="pq__group" role="row"><span role="cell">Connectivity · 3 sites</span></div>
+                <div class="pq__tr" role="row">
+                  <span role="cell">Business Fibre 500/500</span><span role="cell" class="pq__q">3</span><span role="cell" class="pq__n" data-v="657,597,567">$567</span><span role="cell" class="pq__n pq__nil">–</span>
+                </div>
+                <div class="pq__tr" role="row">
+                  <span role="cell">Managed SD-WAN edge <em class="pq__rule">+ install</em></span><span role="cell" class="pq__q">3</span><span role="cell" class="pq__n" data-v="285,255,237">$237</span><span role="cell" class="pq__n">$1,350</span>
+                </div>
+                <div class="pq__group" role="row"><span role="cell">Voice &amp; mobile</span></div>
+                <div class="pq__tr" role="row">
+                  <span role="cell">Hosted PBX + SIP seat <em class="pq__rule">tier 20+ seats</em></span><span role="cell" class="pq__q">40</span><span role="cell" class="pq__n" data-v="760,680,620">$620</span><span role="cell" class="pq__n pq__nil">–</span>
+                </div>
+                <div class="pq__tr pq__tr--new" role="row">
+                  <span role="cell">iPhone 16 on Business Mobile 40GB</span><span role="cell" class="pq__q">25</span><span role="cell" class="pq__n" data-v="2225,1875,1725">$1,725</span><span role="cell" class="pq__n" data-v="6000,0,0">$0</span>
+                </div>
+                <div class="pq__group" role="row"><span role="cell">Cloud, services &amp; hardware</span></div>
+                <div class="pq__tr" role="row">
+                  <span role="cell">Microsoft 365 Business Standard</span><span role="cell" class="pq__q">40</span><span role="cell" class="pq__n">$748</span><span role="cell" class="pq__n pq__nil">–</span>
+                </div>
+                <div class="pq__tr" role="row">
+                  <span role="cell">Managed support, 24/7</span><span role="cell" class="pq__q">1</span><span role="cell" class="pq__n" data-v="520,480,450">$450</span><span role="cell" class="pq__n pq__nil">–</span>
+                </div>
+                <div class="pq__tr" role="row">
+                  <span role="cell">Managed Wi-Fi APs, installation &amp; setup</span><span role="cell" class="pq__q">12</span><span role="cell" class="pq__n pq__nil">–</span><span role="cell" class="pq__n">$5,880</span>
+                </div>
+              </div>
+
+              <div class="pq__totals">
+                <div><span>Monthly recurring</span><b data-v="5195,4635,4347">$4,347</b></div>
+                <div><span>Once-off</span><b data-v="13230,7230,7230">$7,230</b></div>
+                <div class="pq__tcv"><span>Contract value</span><b data-v="75570,118470,163722">$163,722</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────── 2. Margins & approvals ───────────────── -->
+      <section class="chap chap--protect" id="margins" aria-labelledby="margins-title">
+        <div class="qc-container">
+          <header class="chap__head" data-reveal>
+            <h2 id="margins-title">Carrier costs stay hidden. <span class="hl">Discounts get approved.</span></h2>
+            <div class="chap__aside">
+              <p>
+                Buy rates and margins sit inside the quote for your team only, and approval rules step in before a deal goes out under
+                margin.
+              </p>
+              <p class="was"><span>Replaces</span> <s>RE: RE: FW: discount approval?</s></p>
+            </div>
+          </header>
+
+          <div class="bento bento--protect" data-reveal-stagger="120">
+            <article class="card card--margin" data-reveal data-margin>
+              <div class="card__head">
+                <h3>Your margins, never on the customer’s page</h3>
+                <div class="seg seg--sm" role="group" aria-label="Quote view" data-view-group>
+                  <button type="button" data-view="team" aria-pressed="true">Team view</button>
+                  <button type="button" data-view="customer" aria-pressed="false">Customer view</button>
+                  <span class="seg__thumb" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="mg" data-view="team">
+                <div class="mg__row mg__row--h">
+                  <span>Service</span><span class="mg__int">Buy rate</span><span class="mg__int">Margin</span><span>Monthly</span>
+                </div>
+                <div class="mg__row"><span>Business Fibre 500/500 ×3</span><span class="mg__int">$426</span><span class="mg__int">25%</span><span>$567</span></div>
+                <div class="mg__row"><span>Hosted PBX ×40</span><span class="mg__int">$448</span><span class="mg__int">28%</span><span>$620</span></div>
+                <div class="mg__row"><span>iPhone on Mobile 40GB ×25</span><span class="mg__int">$1,300</span><span class="mg__int">25%</span><span>$1,725</span></div>
+                <div class="mg__row"><span>Managed support</span><span class="mg__int">$300</span><span class="mg__int">33%</span><span>$450</span></div>
+                <p class="mg__flag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8s2.2-4 6-4 6 4 6 4-2.2 4-6 4-6-4-6-4Z" /><path d="M3 13 13 3" /></svg>Buy rate and margin columns are hidden from the customer</p>
+              </div>
+              <div class="meter" aria-hidden="true">
+                <div class="meter__top"><span>Deal margin</span><b>31.4%</b></div>
+                <div class="meter__bar"><span class="meter__fill"></span><span class="meter__floor"><i>Floor 25%</i></span></div>
+              </div>
+            </article>
+
+            <article class="card card--approve" data-reveal data-approve>
+              <h3>Approvals, built into the deal</h3>
+              <ol class="flow">
+                <li class="flow__step">
+                  <i class="flow__dot"></i>
+                  <div><b>Discount 12% requested</b><span>Dan · Sales · on the 36-month option</span></div>
+                </li>
+                <li class="flow__step flow__step--rule">
+                  <i class="flow__dot"></i>
+                  <div><b>Rule: discounts over 10% need approval</b><span>Send is locked until it’s approved</span></div>
+                </li>
+                <li class="flow__step flow__step--ok">
+                  <i class="flow__dot"></i>
+                  <div><b>Approved by Sales Manager</b><span>Margin stays above the 25% floor</span></div>
+                </li>
+                <li class="flow__step flow__step--send">
+                  <i class="flow__dot"></i>
+                  <div><b>Proposal ready to send</b><span>No email thread, full history kept</span></div>
+                </li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────── 3. Collaboration + diagrams ───────────────── -->
+      <section class="chap chap--collab" id="collaboration" aria-labelledby="collab-title">
+        <div class="qc-container">
+          <header class="chap__head" data-reveal>
+            <h2 id="collab-title">Sales, pre-sales and engineering. <span class="hl">One live proposal.</span></h2>
+            <div class="chap__aside">
+              <p>
+                Everyone edits the same document in real time: the commercials, network diagrams, implementation timelines and SLAs, with no
+                versions emailed back and forth.
+              </p>
+              <p class="was"><span>Replaces</span> <s>Scope_v4_tracked.docx</s></p>
+            </div>
+          </header>
+
+          <div class="bento bento--collab" data-reveal-stagger="120">
+            <article class="card card--net" data-reveal data-loop>
+              <div class="ed">
+                <div class="ed__bar">
+                  <span class="ed__blk">Network diagram</span>
+                  <span class="ed__live"><i class="av av--m">M</i><i class="av av--r">R</i><i class="av av--t">T</i> 3 editing</span>
+                </div>
+                <div class="net">
+                  <svg viewBox="0 0 560 300" aria-hidden="true">
+                    <defs>
+                      <pattern id="netgrid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" /></pattern>
+                    </defs>
+                    <rect class="net__grid" width="560" height="300" fill="url(#netgrid)" />
+                    <g class="net__links">
+                      <path pathLength="100" d="M120 62 C 190 62, 200 150, 280 150" />
+                      <path pathLength="100" d="M120 150 L 280 150" />
+                      <path pathLength="100" d="M120 238 C 190 238, 200 150, 280 150" />
+                      <path pathLength="100" d="M280 150 C 360 150, 370 62, 440 62" />
+                      <path pathLength="100" d="M280 150 L 440 150" />
+                      <path pathLength="100" d="M280 150 C 360 150, 370 238, 440 238" />
+                      <path class="net__backup" pathLength="100" d="M120 150 C 120 200, 70 262, 70 262" />
+                    </g>
+                    <g class="net__pulses">
+                      <path pathLength="100" d="M120 62 C 190 62, 200 150, 280 150" />
+                      <path pathLength="100" d="M120 238 C 190 238, 200 150, 280 150" />
+                      <path pathLength="100" d="M280 150 C 360 150, 370 62, 440 62" />
+                      <path pathLength="100" d="M280 150 C 360 150, 370 238, 440 238" />
+                      <path pathLength="100" d="M120 150 L 280 150" />
+                    </g>
+                  </svg>
+                  <div class="net__node" style="--x: 21.4%; --y: 20.7%"><b>HQ</b><span>Fibre 500/500</span></div>
+                  <div class="net__node" style="--x: 21.4%; --y: 50%"><b>Warehouse</b><span>Fibre 500/500</span></div>
+                  <div class="net__node" style="--x: 21.4%; --y: 79.3%"><b>Branch</b><span>Fibre 500/500</span></div>
+                  <div class="net__node net__node--hub" style="--x: 50%; --y: 50%"><b>SD-WAN</b><span>Managed overlay</span></div>
+                  <div class="net__node" style="--x: 78.6%; --y: 20.7%"><b>Internet</b><span>Breakout</span></div>
+                  <div class="net__node" style="--x: 78.6%; --y: 50%"><b>Hosted voice</b><span>40 SIP seats</span></div>
+                  <div class="net__node" style="--x: 78.6%; --y: 79.3%"><b>Microsoft 365</b><span>40 licences</span></div>
+                  <div class="net__node net__node--4g" style="--x: 12.5%; --y: 87.3%"><b>4G backup</b></div>
+                  <div class="net__comment">
+                    <p><b>Raj</b> Add 4G failover at the Warehouse?</p>
+                    <p class="net__reply"><b>Tom</b> Added, priced in the quote.</p>
+                  </div>
+                  <div class="cur cur--t"><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1v11l3-3 2.4 4.6 2-1L6 8h4.5Z" /></svg><span>Tom · Engineering</span></div>
+                  <div class="cur cur--m"><svg viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1v11l3-3 2.4 4.6 2-1L6 8h4.5Z" /></svg><span>Maya · Sales</span></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card--time" data-reveal data-loop>
+              <h3>Implementation timeline</h3>
+              <ol class="gantt">
+                <li style="--s: 0; --w: 1"><span>Discovery</span><i></i></li>
+                <li style="--s: 1; --w: 1.5"><span>Design</span><i></i></li>
+                <li style="--s: 2.5; --w: 1.5"><span>Provision</span><i></i></li>
+                <li style="--s: 3.5; --w: 1.5"><span>Deploy</span><i></i></li>
+                <li style="--s: 5; --w: 0.6" class="gantt__live"><span>Go live</span><i></i></li>
+              </ol>
+              <div class="gantt__wk" aria-hidden="true"><span>Wk 1</span><span>Wk 2</span><span>Wk 3</span><span>Wk 4</span><span>Wk 5</span><span>Wk 6</span></div>
+            </article>
+
+            <article class="card card--lib" data-reveal data-loop>
+              <h3>Approved content, one click away</h3>
+              <ul class="lib">
+                <li><span class="lib__t">SLA · Managed network</span><span class="lib__s">Company library</span></li>
+                <li><span class="lib__t">Service description · SD-WAN</span><span class="lib__s">Telco library</span></li>
+                <li><span class="lib__t">Contract terms · 36 months</span><span class="lib__s">Legal</span></li>
+                <li><span class="lib__t">Case study · Multi-site rollout</span><span class="lib__s">Team library</span></li>
+              </ul>
+            </article>
+          </div>
+          <p class="chap__more" data-reveal>
+            <a href="https://www.quote.cloud/collaboration">How collaboration works <span aria-hidden="true">→</span></a>
+            <a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">All 18 content blocks <span aria-hidden="true">→</span></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────────────── 4. Options + eSign ───────────────── -->
+      <section class="chap chap--close" id="esign" aria-labelledby="esign-title">
+        <div class="qc-container">
+          <header class="chap__head" data-reveal>
+            <h2 id="esign-title">Customers pick their options. <span class="hl">Then they sign.</span></h2>
+            <div class="chap__aside">
+              <p>
+                Optional upgrades, support levels and alternative configurations update the price as they choose. Acceptance is online,
+                legally binding and fully audited.
+              </p>
+              <p class="was"><span>Replaces</span> <s>print, sign, scan, reply-all</s></p>
+            </div>
+          </header>
+
+          <div class="close" data-reveal="scale" data-close>
+            <div class="close__opts">
+              <p class="close__h">Choose your options</p>
+              <fieldset class="opt-term">
+                <legend class="qc-sr-only">Contract term</legend>
+                <label><input type="radio" name="t8-term" value="24" /><span><b>24 months</b><small>$4,635 / mo</small></span></label>
+                <label><input type="radio" name="t8-term" value="36" checked /><span><b>36 months</b><small>$4,347 / mo</small></span></label>
+              </fieldset>
+              <ul class="opts">
+                <li>
+                  <label class="opt">
+                    <input type="checkbox" data-mo="270" />
+                    <span class="opt__box" aria-hidden="true"></span>
+                    <span class="opt__t"><b>4G backup at every site</b><small>Automatic failover</small></span>
+                    <span class="opt__p">+$270/mo</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="opt">
+                    <input type="checkbox" data-mo="300" data-auto />
+                    <span class="opt__box" aria-hidden="true"></span>
+                    <span class="opt__t"><b>Premium support</b><small>1-hour response, named engineer</small></span>
+                    <span class="opt__p">+$300/mo</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="opt">
+                    <input type="checkbox" data-oo="1800" />
+                    <span class="opt__box" aria-hidden="true"></span>
+                    <span class="opt__t"><b>Wi-Fi 7 upgrade</b><small>12 access points</small></span>
+                    <span class="opt__p">+$1,800 once</span>
+                  </label>
+                </li>
+              </ul>
+              <div class="close__tot" aria-live="polite">
+                <span>Monthly <b data-close-mo>$4,347</b></span>
+                <span>Once-off <b data-close-oo>$7,230</b></span>
+              </div>
+            </div>
+
+            <div class="close__sign">
+              <p class="close__h">Accept and sign</p>
+              <div class="sigpad" data-sigpad>
+                <svg viewBox="0 0 300 90" aria-hidden="true">
+                  <path pathLength="1" d="M14 62c14-26 26-44 34-40 9 5-17 46-8 48 11 2 22-38 33-36 8 2-5 28 3 30 9 2 16-22 25-22 6 0 1 17 8 18 12 2 26-16 40-20 16-4 26 8 44 4 22-5 40-16 56-22" />
+                </svg>
+                <span class="sigpad__line"></span>
+                <span class="sigpad__name">Jordan Lee · Operations Director</span>
+              </div>
+              <button type="button" class="qc-btn qc-btn--dark qc-btn--block sign-btn" data-sign>
+                <span class="sign-btn__a">Accept &amp; sign</span><span class="sign-btn__b">Signed, thank you</span>
+              </button>
+              <ol class="audit" aria-label="Audit trail (example)">
+                <li><span>Proposal viewed</span><time>09:12</time></li>
+                <li><span>Options selected</span><time>09:20</time></li>
+                <li><span>Signed, IP and device logged</span><time>09:24</time></li>
+                <li><span>Setup paid via Stripe</span><time>09:25</time></li>
+              </ol>
+              <p class="close__trust">eIDAS compliant · 256-bit encryption · Hosted on AWS</p>
+            </div>
+          </div>
+
+          <div class="mid-cta" data-reveal>
+            <p>Your next telco quote could be the last one built in a spreadsheet.</p>
+            <div class="mid-cta__btns">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="mid-cta__link" href="https://www.quote.cloud/electronic-signature-software-solution">About eSignatures <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────────── Integrations ───────────────── -->
+      <section class="intg" id="integrations" aria-labelledby="intg-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="intg-title">Your CRM fills it in. <span class="hl">No re-keying.</span></h2>
+            <p>Customer, product and opportunity data flow in from the tools you already use, and signed deals flow back out.</p>
+          </header>
+
+          <div class="hub" data-reveal="fade" data-loop>
+            <svg class="hub__lines" viewBox="0 0 1000 420" preserveAspectRatio="none" aria-hidden="true">
+              <g class="hub__base">
+                <path pathLength="100" d="M150 60 C 330 60, 330 210, 500 210" /><path pathLength="100" d="M150 160 C 330 160, 330 210, 500 210" />
+                <path pathLength="100" d="M150 260 C 330 260, 330 210, 500 210" /><path pathLength="100" d="M150 360 C 330 360, 330 210, 500 210" />
+                <path pathLength="100" d="M500 210 C 670 210, 670 60, 850 60" /><path pathLength="100" d="M500 210 C 670 210, 670 160, 850 160" />
+                <path pathLength="100" d="M500 210 C 670 210, 670 260, 850 260" /><path pathLength="100" d="M500 210 C 670 210, 670 360, 850 360" />
+              </g>
+              <g class="hub__flow">
+                <path pathLength="100" d="M150 60 C 330 60, 330 210, 500 210" /><path pathLength="100" d="M150 160 C 330 160, 330 210, 500 210" />
+                <path pathLength="100" d="M150 260 C 330 260, 330 210, 500 210" /><path pathLength="100" d="M150 360 C 330 360, 330 210, 500 210" />
+                <path pathLength="100" d="M500 210 C 670 210, 670 60, 850 60" /><path pathLength="100" d="M500 210 C 670 210, 670 160, 850 160" />
+                <path pathLength="100" d="M500 210 C 670 210, 670 260, 850 260" /><path pathLength="100" d="M500 210 C 670 210, 670 360, 850 360" />
+              </g>
+            </svg>
+            <ul class="hub__col hub__col--in" aria-label="CRM and data sources">
+              <li><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" width="792" height="790" alt="Salesforce" loading="lazy" decoding="async" /><span>Salesforce</span></a></li>
+              <li><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" width="792" height="790" alt="HubSpot" loading="lazy" decoding="async" /><span>HubSpot</span></a></li>
+              <li><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="792" height="790" alt="monday.com" loading="lazy" decoding="async" /><span>monday.com</span></a></li>
+              <li><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" width="792" height="790" alt="Microsoft Dynamics" loading="lazy" decoding="async" /><span>Dynamics</span></a></li>
+            </ul>
+            <div class="hub__core">
+              <span class="hub__q"><img src="/assets/logos/qc-symbol-white.png" width="28" height="28" alt="" /></span>
+              <p class="hub__name">Proposal #1042</p>
+              <ul class="hub__data">
+                <li><span>Customer</span>Kestrel Logistics</li>
+                <li><span>Opportunity</span>Network refresh</li>
+                <li><span>Products</span>7 lines synced</li>
+              </ul>
+            </div>
+            <ul class="hub__col hub__col--out" aria-label="Payments, accounting and spreadsheets">
+              <li><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="792" height="790" alt="Stripe" loading="lazy" decoding="async" /><span>Stripe</span></a></li>
+              <li><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="792" height="790" alt="PayPal" loading="lazy" decoding="async" /><span>PayPal</span></a></li>
+              <li><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" width="792" height="790" alt="Xero" loading="lazy" decoding="async" /><span>Xero</span></a></li>
+              <li><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" width="792" height="790" alt="QuickBooks" loading="lazy" decoding="async" /><span>QuickBooks</span></a></li>
+            </ul>
+          </div>
+          <p class="intg__more" data-reveal>
+            Also Pipedrive, Zoho, Google Sheets and Excel.
+            <a href="https://www.quote.cloud/all-integrations">See all integrations <span aria-hidden="true">→</span></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────────────── Templates ───────────────── -->
+      <section class="tpl" id="templates" aria-labelledby="tpl-title">
+        <div class="qc-container tpl__inner">
+          <header class="tpl__head" data-reveal>
+            <h2 id="tpl-title">Send your first one <span class="hl">this afternoon.</span></h2>
+            <p>Start from a ready-made telecommunications template, then make it yours with your layouts, colours and approved content.</p>
+            <a class="tpl__link" href="https://www.quote.cloud/templates/telecommunications">Browse telco templates <span aria-hidden="true">→</span></a>
+          </header>
+          <ul class="tpl__covers" data-reveal-stagger="110">
+            <li data-reveal>
+              <a href="https://www.quote.cloud/templates/telecommunications">
+                <img src="/assets/telco/template-network-rack.jpg" width="566" height="800" alt="Network Installation Proposal template cover with a server rack photo" loading="lazy" decoding="async" />
+                <span>Network installation</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://www.quote.cloud/templates/telecommunications">
+                <img src="/assets/telco/template-mobile-internet-bundle.jpg" width="566" height="800" alt="Mobile and Internet Bundle Proposal template cover with a city skyline" loading="lazy" decoding="async" />
+                <span>Mobile &amp; internet bundle</span>
+              </a>
+            </li>
+            <li data-reveal>
+              <a href="https://www.quote.cloud/templates/telecommunications">
+                <img src="/assets/telco/template-mobile-plan.jpg" width="566" height="800" alt="Mobile Phone Plan proposal template cover" loading="lazy" decoding="async" />
+                <span>Mobile phone plan</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────────────── Proof ───────────────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="proof-title">Ratings and track record</h2>
+          <ul class="proof__list" data-reveal-stagger="100">
+            <li data-reveal>
+              <b><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></b>
+              <span>Rated on Capterra</span>
+            </li>
+            <li data-reveal>
+              <b><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></b>
+              <span>Rated on Software Advice</span>
+            </li>
+            <li data-reveal>
+              <b><span data-count-to="2013" data-count-format="plain">2013</span></b>
+              <span>Building quoting software since</span>
+            </li>
+            <li data-reveal>
+              <b>14<small> days</small></b>
+              <span>Free trial, no credit card</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-telco -->
+      </div>
+
+      <!-- ───────────────── Closing CTA ───────────────── -->
+      <section class="final" id="start" aria-labelledby="final-title">
+        <svg class="final__fibre" viewBox="0 0 1440 520" preserveAspectRatio="none" aria-hidden="true">
+          <path pathLength="100" d="M-20 420 C 360 420, 520 120, 1460 90" />
+          <path pathLength="100" d="M-20 460 C 420 450, 600 200, 1460 170" />
+          <path pathLength="100" d="M-20 380 C 300 390, 480 60, 1460 20" />
+          <path pathLength="100" d="M-20 500 C 480 480, 700 280, 1460 250" />
+        </svg>
+        <div class="qc-container final__inner" data-reveal>
+          <h2 id="final-title">Close the spreadsheet. <span class="hl">Send the proposal.</span></h2>
+          <p>Quote connectivity, voice, mobile and managed services in one place, and get them signed. Free for 14 days.</p>
+          <div class="final__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="final">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+            <a class="qc-btn qc-btn--lg final__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="final-demo">Book a demo</a>
+          </div>
+          <p class="final__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a> · <a href="https://www.quote.cloud/cpq-software">CPQ software</a></p>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-canvas -->
+  </head>
+  <body class="c2">
+    <!-- @include header -->
+
+    <!-- Shared icons, scenes and gradients (referenced by every document mock) -->
+    <svg class="c2-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="c2g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7cffe" /><stop offset=".62" stop-color="#f3e6f7" /><stop offset="1" stop-color="#ffe4da" /></linearGradient>
+        <linearGradient id="c2g-mtn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8174f4" /><stop offset="1" stop-color="#3f2fc9" /></linearGradient>
+        <linearGradient id="c2g-far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9bcf2" /><stop offset="1" stop-color="#d8d4f6" /></linearGradient>
+        <linearGradient id="c2g-lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9c0ff" /><stop offset="1" stop-color="#4058e0" /></linearGradient>
+        <linearGradient id="c2g-sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1e9ff" /><stop offset="1" stop-color="#ffe2d9" /></linearGradient>
+        <linearGradient id="c2g-water2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8c8ff0" /><stop offset="1" stop-color="#2c2296" /></linearGradient>
+      </defs>
+      <symbol id="c2-alps" viewBox="0 0 56 50" preserveAspectRatio="xMidYMid slice">
+        <rect width="56" height="50" fill="url(#c2g-sky)" />
+        <circle cx="39" cy="14" r="5.2" fill="#fff4ea" opacity=".95" />
+        <path d="M0 30 8 22l6 4 8-10 8 8 8-6 8 7 10-5v30H0Z" fill="url(#c2g-far)" />
+        <path d="M0 36 12 28l8 3 11-19 9 14 7-4 9 8v20H0Z" fill="url(#c2g-mtn)" />
+        <path d="m31 12 4.6 7.2-2.5-1-2.1 2.4-2-3-2.1 1.5Z" fill="#fff" opacity=".92" />
+        <path d="m12 28 3.2 1.6-1.6.3-1.6 1.2-1.4-1Z" fill="#fff" opacity=".7" />
+        <path d="M0 38q28-3.5 56 0v12H0Z" fill="url(#c2g-lake)" />
+        <path d="M30 40.2h10M24 42.4h18M33 44.6h8" stroke="#fff" stroke-width=".45" stroke-linecap="round" opacity=".55" />
+        <path d="M0 44q11-4 23 1v5H0Z" fill="#26196e" />
+      </symbol>
+      <symbol id="c2-lake" viewBox="0 0 100 46" preserveAspectRatio="xMidYMid slice">
+        <rect width="100" height="46" fill="url(#c2g-sky2)" />
+        <circle cx="70" cy="17" r="7.5" fill="#ff9d8f" opacity=".75" />
+        <path d="M0 25 14 15l10 6 14-11 13 10 11-6 14 9 11-5 13 6v22H0Z" fill="#cbc4f4" />
+        <path d="M0 29 18 22l12 5 16-8 15 9 13-4 26 6v16H0Z" fill="#8a80ea" />
+        <path d="M0 30h100v16H0Z" fill="url(#c2g-water2)" />
+        <path d="M63 32.5h14M60 35h20M65 37.5h10M67 40h6" stroke="#ffb2a6" stroke-width=".7" stroke-linecap="round" opacity=".7" />
+        <path d="M8 34h12M30 38h9M86 36h8" stroke="#fff" stroke-width=".4" stroke-linecap="round" opacity=".4" />
+      </symbol>
+
+      <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6V4.5h14V6M12 4.5v15M9 19.5h6" /></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.5" /><circle cx="8.5" cy="9.5" r="1.6" /><path d="m3.5 17.5 5.5-5.2 4 3.7 2.6-2.4 4.9 4.4" /></symbol>
+      <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" /><path d="M14 3v5h5M8.5 13h7M8.5 16.5h5" /></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" /><path d="m10.2 9.2 4.6 2.8-4.6 2.8Z" /></symbol>
+      <symbol id="i-diagram" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1.2" /><rect x="3" y="16" width="6" height="5" rx="1.2" /><rect x="15" y="16" width="6" height="5" rx="1.2" /><path d="M12 8v4M6 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" /></symbol>
+      <symbol id="i-form" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="5" rx="1.5" /><rect x="3.5" y="12" width="17" height="5" rx="1.5" /><path d="M6.5 20.5h6" /></symbol>
+      <symbol id="i-sheet" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2" /><path d="M3.5 9.3h17M3.5 14.6h17M9.5 4v16M15 4v16" /></symbol>
+      <symbol id="i-gantt" viewBox="0 0 24 24"><path d="M4 5h8M7 10.5h10M11 16h9M4 3v18" /></symbol>
+      <symbol id="i-itin" viewBox="0 0 24 24"><path d="M2.5 13.5 21 6l-4.5 13-4.2-5.2Z" /><path d="m12.3 13.8 8.7-7.8" /></symbol>
+      <symbol id="i-shape" viewBox="0 0 24 24"><circle cx="9" cy="9" r="5.5" /><rect x="10.5" y="10.5" width="10" height="10" rx="1.6" /></symbol>
+      <symbol id="i-divider" viewBox="0 0 24 24"><path d="M3 12h18M7 7h10M7 17h10" opacity=".9" /></symbol>
+      <symbol id="i-button" viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="19" height="9" rx="4.5" /><path d="m13 13 6.5 6-3 .4-1.4 2.6Z" /></symbol>
+      <symbol id="i-qr" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1" /><rect x="14" y="3.5" width="6.5" height="6.5" rx="1" /><rect x="3.5" y="14" width="6.5" height="6.5" rx="1" /><path d="M14 14h2.5v2.5H14ZM18 18h2.5v2.5H18ZM14 18.5v2M18.5 14h2" /></symbol>
+      <symbol id="i-price" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 9h18M7.5 13h5M7.5 16.5h4M15.5 13h2M15.5 16.5h2" /></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16M7 16.5V11M12 16.5V6M17 16.5v-8" /></symbol>
+      <symbol id="i-timeline" viewBox="0 0 24 24"><path d="M3 12h18" /><circle cx="6" cy="12" r="2" /><circle cx="12" cy="12" r="2" /><circle cx="18" cy="12" r="2" /><path d="M6 7V5M12 19v-2M18 7V5" /></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="m3 6.5 6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5Z" /><path d="M9 4v13.5M15 6.5V20" /></symbol>
+      <symbol id="i-sign" viewBox="0 0 24 24"><path d="M3 17c2.5-5.5 4.5-10 6-10s-1.5 9 .5 9 3-4.5 4.5-4.5-.5 3.5 1 3.5 2.5-1.5 3.5-2.5" /><path d="M3 21h18" /></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.5 1.1 6.3L12 17.3l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" /></symbol>
+      <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" /></symbol>
+      <symbol id="i-redo" viewBox="0 0 24 24"><path d="m15 14 5-5-5-5" /><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13" /></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9" /><path d="M20 4v5h-5" /></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5Z" /><path d="m3 13 9 5 9-5" /></symbol>
+      <symbol id="i-align" viewBox="0 0 24 24"><path d="M4 3v18" /><rect x="7" y="6" width="12" height="4" rx="1" /><rect x="7" y="14" width="8" height="4" rx="1" /></symbol>
+      <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h15l-4-4M20 16H5l4 4" /></symbol>
+      <symbol id="i-dotgrid" viewBox="0 0 24 24"><circle cx="6" cy="6" r="1.2" /><circle cx="12" cy="6" r="1.2" /><circle cx="18" cy="6" r="1.2" /><circle cx="6" cy="12" r="1.2" /><circle cx="12" cy="12" r="1.2" /><circle cx="18" cy="12" r="1.2" /><circle cx="6" cy="18" r="1.2" /><circle cx="12" cy="18" r="1.2" /><circle cx="18" cy="18" r="1.2" /></symbol>
+      <symbol id="i-magnet" viewBox="0 0 24 24"><path d="M6 4v8a6 6 0 0 0 12 0V4h-4v8a2 2 0 0 1-4 0V4Z" /><path d="M6 8h4M14 8h4" /></symbol>
+    </svg>
+
+    <!-- One document, many states: stamped by main.ts into every [data-doc-slot] -->
+    <template id="c2-doc-tpl">
+      <div class="c2-doc" data-step="3" data-mode="canvas">
+        <div class="c2-doc__dots"></div>
+        <div class="c2-doc__shape"></div>
+        <div class="c2-rows">
+          <div class="c2-row" style="--rx: 4; --ry: 4; --rw: 92; --rh: 46; --ri: 0"><span class="c2-row__tab">Row 1</span></div>
+          <div class="c2-row" style="--rx: 4; --ry: 53; --rw: 92; --rh: 32; --ri: 1"><span class="c2-row__tab">Row 2</span></div>
+          <div class="c2-row" style="--rx: 4; --ry: 88; --rw: 92; --rh: 30; --ri: 2"><span class="c2-row__tab">Row 3</span></div>
+          <div class="c2-row" style="--rx: 4; --ry: 121; --rw: 92; --rh: 18; --ri: 3"><span class="c2-row__tab">Row 4</span></div>
+          <i class="c2-col c2-col--1" style="--ry: 4; --rh: 46; --ri: 0"></i>
+          <i class="c2-col c2-col--2" style="--ry: 53; --rh: 32; --ri: 1"></i>
+          <i class="c2-col c2-col--3" style="--ry: 88; --rh: 30; --ri: 2"></i>
+        </div>
+
+        <div class="c2-b c2-b--title" style="--i: 0">
+          <span class="c2-b__kicker">Experience</span>
+          <span class="c2-b__h">Switzerland</span>
+          <span class="c2-b__sub">Travel proposal</span>
+        </div>
+        <div class="c2-b c2-b--intro" style="--i: 1">
+          <span>A journey through alpine lakes, scenic rail and mountain villages, planned end to end for your group.</span>
+        </div>
+        <div class="c2-b c2-b--img" style="--i: 2">
+          <div class="c2-b__clip"><svg viewBox="0 0 56 50"><use href="#c2-alps" /></svg></div>
+        </div>
+        <div class="c2-b c2-b--price" style="--i: 3">
+          <span class="c2-b__label">Total investment</span>
+          <span class="c2-b__amt">$4,250</span>
+          <span class="c2-b__per">per person</span>
+          <span class="c2-b__rule"></span>
+          <span class="c2-b__line"><i>Rail &amp; transfers</i><i>$1,180</i></span>
+          <span class="c2-b__line"><i>Hotels</i><i>$2,340</i></span>
+        </div>
+        <div class="c2-b c2-b--list" style="--i: 4">
+          <span class="c2-b__lh">Hand-picked experiences</span>
+          <span class="c2-b__li"><i></i>Scenic trains</span>
+          <span class="c2-b__li"><i></i>Lake cruises</span>
+          <span class="c2-b__li"><i></i>Mountain adventures</span>
+          <span class="c2-b__li"><i></i>Cultural tours</span>
+        </div>
+        <div class="c2-b c2-b--sign" style="--i: 5">
+          <span class="c2-b__label">Approval</span>
+          <svg class="c2-b__sig" viewBox="0 0 64 22"><path d="M2 17c4-9 7-14 9-12s-3 12 0 12 5-9 8-9-1 7 2 7 4-6 7-6-1 5 2 5 5-4 8-5 6 1 10-1 8-3 14-3" /></svg>
+          <span class="c2-b__sline"></span>
+          <span class="c2-b__per">Client signature</span>
+        </div>
+        <div class="c2-b c2-b--qr" style="--i: 6">
+          <svg class="c2-b__qr" viewBox="0 0 21 21"><path data-qr d="" /></svg>
+          <span class="c2-b__per">Scan for full itinerary</span>
+        </div>
+        <div class="c2-b c2-b--lake" style="--i: 7">
+          <div class="c2-b__clip"><svg viewBox="0 0 100 46"><use href="#c2-lake" /></svg></div>
+        </div>
+
+        <i class="c2-guide c2-guide--v"></i>
+        <i class="c2-guide c2-guide--h"></i>
+        <svg class="c2-cursor" viewBox="0 0 24 24"><path d="M5 3.5 19 12l-6.2 1.4L9.6 19.5Z" /></svg>
+      </div>
+    </template>
+
+    <main id="main">
+      <!-- ───────── Hero ───────── -->
+      <section class="c2-hero" aria-labelledby="c2-hero-title">
+        <div class="qc-container c2-hero__inner">
+          <div class="c2-hero__copy">
+            <h1 class="c2-hero__title" id="c2-hero-title">Two powerful ways to build documents: <em>Canvas</em> &amp;&nbsp;<em>Grid</em></h1>
+            <p class="c2-hero__lede">Some documents need the freedom of a design canvas. Others need rows and columns. QuoteCloud’s document editor gives you both.</p>
+            <div class="c2-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="c2-hero__note">No credit card required</p>
+          </div>
+
+          <div class="c2-compare" data-compare>
+            <div class="c2-compare__labels" aria-hidden="true">
+              <span class="c2-chip c2-chip--canvas"><svg width="16" height="16"><use href="#i-shape" /></svg>Canvas Mode</span>
+              <span class="c2-chip c2-chip--grid"><svg width="16" height="16"><use href="#i-sheet" /></svg>Grid Mode</span>
+            </div>
+            <div class="c2-compare__stage">
+              <div class="c2-compare__layer c2-compare__layer--grid" data-doc-slot data-step="5" data-ui="tabs"></div>
+              <div class="c2-compare__layer c2-compare__layer--canvas" data-doc-slot data-step="3" data-ui="sel"></div>
+              <div class="c2-seam" aria-hidden="false">
+                <span class="c2-seam__line"></span>
+                <button class="c2-seam__knob" type="button" role="slider" aria-label="Compare Canvas Mode and Grid Mode" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="Half Canvas, half Grid">
+                  <svg width="18" height="18" aria-hidden="true"><use href="#i-swap" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── The story: one page, two minds (pinned on desktop) ───────── -->
+      <section class="c2-story" id="how-it-works" aria-labelledby="c2-story-title" data-story>
+        <div class="qc-container c2-story__head">
+          <h2 id="c2-story-title">One page. <em>Two ways</em> to build it.</h2>
+          <p>Follow one proposal from freeform design on a canvas to structured rows and columns.</p>
+        </div>
+
+        <div class="c2-track" data-track>
+          <div class="c2-stage" data-stage data-step="0">
+            <div class="c2-stage__captions">
+              <div class="c2-rail" aria-hidden="true"><span class="c2-rail__fill"></span></div>
+              <ol class="c2-steps">
+                <li class="c2-step is-active" data-step-i="0">
+                  <div class="c2-step__doc" data-doc-slot data-step="0" data-ui="full" data-card></div>
+                  <div class="c2-step__text">
+                    <p class="c2-step__meta"><b>01</b> Canvas Mode</p>
+                    <h3>Start on a blank canvas</h3>
+                    <p>Canvas Mode works like a visual design tool, much like Canva or PowerPoint. Pick the page size and orientation, show the grid and turn on snapping.</p>
+                  </div>
+                </li>
+                <li class="c2-step" data-step-i="1">
+                  <div class="c2-step__doc" data-doc-slot data-step="1" data-ui="full" data-card></div>
+                  <div class="c2-step__text">
+                    <p class="c2-step__meta"><b>02</b> Canvas Mode</p>
+                    <h3>Place blocks anywhere</h3>
+                    <p>Drop text, images, price tables, QR codes and signatures exactly where you want them, free of a traditional document flow.</p>
+                  </div>
+                </li>
+                <li class="c2-step" data-step-i="2">
+                  <div class="c2-step__doc" data-doc-slot data-step="2" data-ui="full" data-card></div>
+                  <div class="c2-step__text">
+                    <p class="c2-step__meta"><b>03</b> Canvas Mode</p>
+                    <h3>Drag, resize and snap</h3>
+                    <p>Pull a photo into place and resize it freely. Alignment guides and snap to grid keep every edge precise.</p>
+                  </div>
+                </li>
+                <li class="c2-step" data-step-i="3">
+                  <div class="c2-step__doc" data-doc-slot data-step="3" data-ui="full" data-card></div>
+                  <div class="c2-step__text">
+                    <p class="c2-step__meta"><b>04</b> Canvas Mode</p>
+                    <h3>Rotate and layer</h3>
+                    <p>Tilt the price card and bring it forward over the photo. Layered layouts that read like a designed brochure.</p>
+                  </div>
+                </li>
+                <li class="c2-step" data-step-i="4">
+                  <div class="c2-step__doc" data-doc-slot data-step="4" data-ui="full" data-card></div>
+                  <div class="c2-step__text">
+                    <p class="c2-step__meta"><b>05</b> Grid Mode</p>
+                    <h3>Build with rows instead</h3>
+                    <p>In Grid Mode every row is a container. Content blocks sit inside its columns and stack neatly, top to bottom.</p>
+                  </div>
+                </li>
+                <li class="c2-step" data-step-i="5">
+                  <div class="c2-step__doc" data-doc-slot data-step="5" data-ui="full" data-card></div>
+                  <div class="c2-step__text">
+                    <p class="c2-step__meta"><b>06</b> Grid Mode</p>
+                    <h3>Set columns and widths</h3>
+                    <p>Choose how many columns each row needs and drag their widths. Structured, repeatable and easy to maintain.</p>
+                  </div>
+                </li>
+              </ol>
+              <div class="c2-ticks" role="group" aria-label="Jump to a step">
+                <button type="button" class="c2-tick" data-goto="0" aria-label="Step 1: Start on a blank canvas"></button>
+                <button type="button" class="c2-tick" data-goto="1" aria-label="Step 2: Place blocks anywhere"></button>
+                <button type="button" class="c2-tick" data-goto="2" aria-label="Step 3: Drag, resize and snap"></button>
+                <button type="button" class="c2-tick" data-goto="3" aria-label="Step 4: Rotate and layer"></button>
+                <button type="button" class="c2-tick" data-goto="4" aria-label="Step 5: Build with rows instead"></button>
+                <button type="button" class="c2-tick" data-goto="5" aria-label="Step 6: Set columns and widths"></button>
+              </div>
+            </div>
+
+            <div class="c2-editor">
+              <div class="c2-toolbar">
+                <div class="c2-toggle" role="group" aria-label="Editing mode">
+                  <span class="c2-toggle__thumb" aria-hidden="true"></span>
+                  <button type="button" class="c2-toggle__btn" data-goto="0" aria-pressed="true"><svg width="15" height="15" aria-hidden="true"><use href="#i-shape" /></svg>Canvas</button>
+                  <button type="button" class="c2-toggle__btn" data-goto="4" aria-pressed="false"><svg width="15" height="15" aria-hidden="true"><use href="#i-sheet" /></svg>Grid</button>
+                </div>
+                <div class="c2-tools" aria-hidden="true">
+                  <div class="c2-tools__set c2-tools__set--canvas">
+                    <span class="c2-tool"><svg><use href="#i-undo" /></svg></span>
+                    <span class="c2-tool c2-tool--align"><svg><use href="#i-align" /></svg></span>
+                    <span class="c2-tool c2-tool--rotate"><svg><use href="#i-rotate" /></svg></span>
+                    <span class="c2-tool c2-tool--layer"><svg><use href="#i-layers" /></svg></span>
+                    <span class="c2-tool is-on"><svg><use href="#i-dotgrid" /></svg></span>
+                    <span class="c2-tool c2-tool--snap is-on"><svg><use href="#i-magnet" /></svg></span>
+                  </div>
+                  <div class="c2-tools__set c2-tools__set--grid">
+                    <span class="c2-addrow"><svg><use href="#i-plus" /></svg>Add row</span>
+                    <span class="c2-presets"><i data-n="1"></i><i data-n="2" class="is-on"></i><i data-n="3"></i><i data-n="4"></i></span>
+                    <span class="c2-width"><span class="c2-width__track"><span class="c2-width__knob"></span></span><span class="c2-width__val"><b>50 / 50</b><b>40 / 60</b></span></span>
+                  </div>
+                </div>
+                <span class="c2-publish" aria-hidden="true">Publish</span>
+              </div>
+              <div class="c2-editor__body" aria-hidden="true">
+                <div class="c2-palette">
+                  <span class="c2-pal" style="--k: 0"><svg><use href="#i-text" /></svg>Text</span>
+                  <span class="c2-pal" style="--k: 1"><svg><use href="#i-image" /></svg>Image</span>
+                  <span class="c2-pal" style="--k: 2"><svg><use href="#i-price" /></svg>Price</span>
+                  <span class="c2-pal" style="--k: 3"><svg><use href="#i-sign" /></svg>Sign</span>
+                  <span class="c2-pal" style="--k: 4"><svg><use href="#i-qr" /></svg>QR</span>
+                  <span class="c2-pal" style="--k: 5"><svg><use href="#i-diagram" /></svg>Diagram</span>
+                </div>
+                <div class="c2-editor__page" data-doc-slot data-step="0" data-ui="full" data-stage-doc></div>
+              </div>
+            </div>
+
+            <div class="c2-panel" aria-hidden="true">
+              <div class="c2-panel__set c2-panel__set--layers">
+                <p class="c2-panel__title"><svg><use href="#i-layers" /></svg>Layers</p>
+                <ul class="c2-layers">
+                  <li style="--o: 0; --o3: 1" class="c2-layer--img"><svg><use href="#i-image" /></svg>Hero image</li>
+                  <li style="--o: 1; --o3: 0" class="c2-layer--price"><svg><use href="#i-price" /></svg>Price card</li>
+                  <li style="--o: 2; --o3: 2"><svg><use href="#i-text" /></svg>Title</li>
+                  <li style="--o: 3; --o3: 3"><svg><use href="#i-text" /></svg>Intro text</li>
+                  <li style="--o: 4; --o3: 4"><svg><use href="#i-text" /></svg>Highlights</li>
+                  <li style="--o: 5; --o3: 5"><svg><use href="#i-qr" /></svg>QR code</li>
+                  <li style="--o: 6; --o3: 6"><svg><use href="#i-sign" /></svg>eSignature</li>
+                  <li style="--o: 7; --o3: 7"><svg><use href="#i-image" /></svg>Lake image</li>
+                </ul>
+              </div>
+              <div class="c2-panel__set c2-panel__set--rows">
+                <p class="c2-panel__title"><svg><use href="#i-sheet" /></svg>Rows</p>
+                <ul class="c2-rowlist">
+                  <li class="c2-rowlist--1"><b>Row 1</b><span class="c2-mini c2-mini--a"><i></i><i></i></span></li>
+                  <li><b>Row 2</b><span class="c2-mini"><i></i><i></i></span></li>
+                  <li class="c2-rowlist--3"><b>Row 3</b><span class="c2-mini c2-mini--b"><i></i><i></i></span></li>
+                  <li><b>Row 4</b><span class="c2-mini"><i></i></span></li>
+                </ul>
+              </div>
+              <div class="c2-panel__page">
+                <p class="c2-panel__title">Page</p>
+                <span class="c2-panel__kv"><i>Size</i><b>A4 · 210 × 297 mm</b></span>
+                <span class="c2-panel__kv"><i>Orientation</i><b>Portrait</b></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Act 3: best of both worlds ───────── -->
+      <section class="c2-both" aria-labelledby="c2-both-title">
+        <div class="qc-container">
+          <div class="c2-both__head" data-reveal>
+            <h2 id="c2-both-title">The best of <em>both worlds</em></h2>
+            <p>Together, Canvas and Grid make QuoteCloud a document creation platform for teams that need more than a traditional word processor.</p>
+          </div>
+
+          <div class="c2-pair" data-pair>
+            <figure class="c2-pair__item c2-pair__item--canvas">
+              <div class="c2-pair__doc" data-doc-slot data-step="3" data-ui="none"></div>
+              <figcaption><b>Canvas Mode</b> Freeform design, creative layouts and precise visual positioning.</figcaption>
+            </figure>
+            <span class="c2-pair__swap" aria-hidden="true"><svg width="22" height="22"><use href="#i-swap" /></svg></span>
+            <figure class="c2-pair__item c2-pair__item--grid">
+              <div class="c2-pair__doc" data-doc-slot data-step="5" data-ui="none"></div>
+              <figcaption><b>Grid Mode</b> Structured rows, flexible columns and organised business document layouts.</figcaption>
+            </figure>
+          </div>
+
+          <div class="c2-blocks" data-reveal>
+            <div class="c2-blocks__head">
+              <h3>The same content blocks in either mode</h3>
+              <a class="c2-link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Explore all 18 content blocks <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </div>
+            <ul class="c2-blocks__grid" data-reveal-stagger="35">
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-text" /></svg>Text</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-image" /></svg>Image</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-pdf" /></svg>PDF</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-video" /></svg>Video</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-diagram" /></svg>Diagram</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-form" /></svg>Form</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-sheet" /></svg>Spreadsheet</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-gantt" /></svg>Gantt chart</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-itin" /></svg>Travel itinerary</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-shape" /></svg>Shape</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-divider" /></svg>Divider</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-button" /></svg>Button</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-qr" /></svg>QR code</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-price" /></svg>Price table</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-chart" /></svg>Chart</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-timeline" /></svg>Timeline</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-map" /></svg>Map</li>
+              <li data-reveal="scale"><svg aria-hidden="true"><use href="#i-sign" /></svg>eSignature</li>
+            </ul>
+          </div>
+
+          <div class="c2-decide" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="both">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            <a class="c2-link" href="https://www.quote.cloud/document-editor-quick-start-guide">Read the document editor quick start guide <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Use cases ───────── -->
+      <section class="c2-uses" aria-labelledby="c2-uses-title">
+        <div class="qc-container c2-uses__head" data-reveal>
+          <h2 id="c2-uses-title">Pick the mode that suits <em>the document</em></h2>
+          <p>Choose for the content, the audience and the outcome.</p>
+        </div>
+
+        <div class="c2-lane" data-reveal>
+          <h3 class="c2-lane__title"><span class="c2-lane__dot c2-lane__dot--canvas"></span>Canvas Mode is perfect for</h3>
+          <div class="c2-marquee" data-marquee>
+            <ul class="c2-marquee__track">
+              <li class="c2-cover c2-cover--1"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">Highly visual sales proposals</span></li>
+              <li class="c2-cover c2-cover--2"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">Executive presentations</span></li>
+              <li class="c2-cover c2-cover--3"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">Marketing documents</span></li>
+              <li class="c2-cover c2-cover--4"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">Product showcases</span></li>
+              <li class="c2-cover c2-cover--5"><span class="c2-cover__art" aria-hidden="true"><svg viewBox="0 0 56 50"><use href="#c2-alps" /></svg><i></i><i></i><i></i></span><span class="c2-cover__name">Destination presentations</span></li>
+              <li class="c2-cover c2-cover--6"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">Designed cover pages</span></li>
+              <li class="c2-cover c2-cover--7"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">Branded client-facing documents</span></li>
+              <li class="c2-cover c2-cover--8"><span class="c2-cover__art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="c2-cover__name">One-page summaries</span></li>
+              <li class="c2-cover c2-cover--9"><span class="c2-cover__art" aria-hidden="true"><svg viewBox="0 0 100 46"><use href="#c2-lake" /></svg><i></i><i></i><i></i></span><span class="c2-cover__name">Visual pitch documents</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="c2-lane c2-lane--grid" data-reveal>
+          <h3 class="c2-lane__title"><span class="c2-lane__dot c2-lane__dot--grid"></span>Grid Mode is ideal for</h3>
+          <div class="c2-marquee c2-marquee--rev" data-marquee>
+            <ul class="c2-marquee__track">
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i><i class="m"></i></b><b><i class="t"></i></b><b><i class="p"></i></b><b><i class="s"></i><i class="t"></i></b></span><span class="c2-cover__name">Business proposals</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i><i class="t"></i></b><b><i class="p p--tall"></i></b><b><i class="t"></i><i class="s"></i></b></span><span class="c2-cover__name">Quotes and pricing documents</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i></b><b><i class="t"></i><i class="t"></i><i class="t"></i></b><b><i class="g"></i></b><b><i class="s"></i></b></span><span class="c2-cover__name">Statements of work</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i><i class="c"></i></b><b><i class="c"></i><i class="c"></i><i class="c"></i></b><b><i class="t"></i></b></span><span class="c2-cover__name">Client reports</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i></b><b><i class="g g--tall"></i></b><b><i class="t"></i><i class="t"></i></b></span><span class="c2-cover__name">Project plans</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="m"></i><i class="t"></i></b><b><i class="t"></i><i class="m"></i></b><b><i class="m"></i><i class="t"></i></b><b><i class="p"></i></b></span><span class="c2-cover__name">Travel itineraries</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i></b><b><i class="t"></i><i class="t"></i></b><b><i class="t"></i></b><b><i class="t"></i><i class="t"></i></b></span><span class="c2-cover__name">Internal documentation</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="m"></i></b><b><i class="t"></i><i class="t"></i></b><b><i class="p"></i></b><b><i class="s"></i></b></span><span class="c2-cover__name">Structured sales templates</span></li>
+              <li class="c2-gdoc"><span class="c2-gdoc__art" aria-hidden="true"><b><i class="t"></i><i class="m"></i></b><b><i class="t"></i><i class="m"></i></b><b><i class="t"></i><i class="m"></i></b></span><span class="c2-cover__name">Repeatable document layouts</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="qc-container c2-uses__more" data-reveal>
+          See it in <a href="https://www.quote.cloud/proposal-software">proposal software</a>, <a href="https://www.quote.cloud/quoting-software">quoting software</a>, <a href="https://www.quote.cloud/enhanced-travel-itinerary-software">travel itineraries</a> and <a href="https://www.quote.cloud/templates">ready-made templates</a>.
+        </p>
+      </section>
+
+      <!-- ───────── Proof + platform ───────── -->
+      <section class="c2-proof" aria-labelledby="c2-proof-title">
+        <div class="qc-container c2-proof__inner">
+          <div class="c2-proof__copy" data-reveal>
+            <h2 id="c2-proof-title">One editor inside <em>one platform</em></h2>
+            <p>Designed or structured, every document can carry price tables and eSignatures, and QuoteCloud connects to the CRM, accounting and payment tools you already use.</p>
+            <ul class="c2-proof__stats">
+              <li><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg aria-hidden="true"><use href="#i-star" /></svg></b><span>on Capterra</span></li>
+              <li><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg aria-hidden="true"><use href="#i-star" /></svg></b><span>on Software Advice</span></li>
+              <li><b><small class="c2-proof__since">Since</small>2013</b><span>in business</span></li>
+            </ul>
+          </div>
+          <div class="c2-proof__side" data-reveal="right">
+            <ul class="c2-logos" data-reveal-stagger="50">
+              <li data-reveal="scale"><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Salesforce</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>HubSpot</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>monday.com</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Xero</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>QuickBooks</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Stripe</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>PayPal</span></a></li>
+              <li data-reveal="scale"><a href="https://www.quote.cloud/googlesheets-with-quotecloud"><img src="/assets/integrations/googlesheets.png" alt="" width="40" height="40" loading="lazy" decoding="async" /><span>Google Sheets</span></a></li>
+            </ul>
+            <p class="c2-proof__links">
+              <a class="c2-link" href="https://www.quote.cloud/all-integrations">All integrations <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="c2-link" href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="c2-link" href="https://www.quote.cloud/collaboration">Real-time collaboration <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="c2-faq-wrap">
+        <!-- @include faq-canvas -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="c2-close" aria-labelledby="c2-close-title">
+        <div class="qc-container">
+          <div class="c2-close__panel" data-reveal="scale">
+            <div class="c2-close__bg" aria-hidden="true"><span class="c2-close__dots"></span><span class="c2-close__rules"></span></div>
+            <div class="c2-close__mini" aria-hidden="true"><span class="c2-close__thumb"></span><span>Canvas</span><span>Grid</span></div>
+            <h2 id="c2-close-title">Design it freely. Or build it on a grid. <em>Start today.</em></h2>
+            <p>Build your next proposal in either mode, with a free 14-day trial and no credit card required.</p>
+            <div class="c2-close__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg></a>
+              <a class="qc-btn c2-btn--light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="c2-close__links"><a href="https://www.quote.cloud/pricing">See pricing</a><a href="https://www.quote.cloud/product-overview">Product overview</a><a href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

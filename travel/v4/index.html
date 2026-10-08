@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-travel -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <!-- Segment-type line icons (24px grid, 1.6 stroke) -->
+    <svg class="dd-sprite" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="i-flight" viewBox="0 0 24 24">
+          <path d="M21 12c0-.9-.7-1.5-1.6-1.5H14L9.6 3.5H7.6l2.3 7H5.6L3.9 8.3H2.6l.9 3.7-.9 3.7h1.3l1.7-2.2h4.3l-2.3 7h2L14 13.5h5.4c.9 0 1.6-.6 1.6-1.5Z" />
+        </symbol>
+        <symbol id="i-hotel" viewBox="0 0 24 24">
+          <path d="M3 5.5V19M3 15h18v4M21 15v-2.6A2.4 2.4 0 0 0 18.6 10H11v5" />
+          <circle cx="7" cy="12.3" r="1.9" />
+        </symbol>
+        <symbol id="i-transfer" viewBox="0 0 24 24">
+          <path d="M4.5 16.5h-.3a1.2 1.2 0 0 1-1.2-1.2v-2.6c0-.6.3-1.1.8-1.4l1.1-.6 1.6-3.3A2.2 2.2 0 0 1 8.5 6h7a2.2 2.2 0 0 1 2 1.4l1.6 3.3 1.1.6c.5.3.8.8.8 1.4v2.6a1.2 1.2 0 0 1-1.2 1.2h-.3M9.5 16.5h5M5.4 10.8h13.2" />
+          <circle cx="7" cy="16.5" r="1.9" />
+          <circle cx="17" cy="16.5" r="1.9" />
+        </symbol>
+        <symbol id="i-tour" viewBox="0 0 24 24">
+          <path d="M3 9.4A2.4 2.4 0 0 1 5.4 7h1.9l1.4-2.2h6.6L16.7 7h1.9A2.4 2.4 0 0 1 21 9.4v8.2a2.4 2.4 0 0 1-2.4 2.4H5.4A2.4 2.4 0 0 1 3 17.6Z" />
+          <circle cx="12" cy="13.3" r="3.4" />
+        </symbol>
+        <symbol id="i-compass" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1Z" />
+        </symbol>
+        <symbol id="i-palette" viewBox="0 0 24 24">
+          <path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.8 1.8-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.8-1.7h2A4.4 4.4 0 0 0 21 10.8C21 6.5 17 3 12 3Z" />
+          <circle cx="7.6" cy="11.3" r="1.2" />
+          <circle cx="10.6" cy="7.4" r="1.2" />
+          <circle cx="15.4" cy="7.8" r="1.2" />
+        </symbol>
+        <symbol id="i-package" viewBox="0 0 24 24">
+          <rect x="3.5" y="7.5" width="17" height="12.5" rx="2.2" />
+          <path d="M9 7.5V5.6A1.6 1.6 0 0 1 10.6 4h2.8A1.6 1.6 0 0 1 15 5.6v1.9M8 7.5V20M16 7.5V20" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+          <path d="M12 3.2 19 6v5.4c0 4.2-2.9 7.7-7 9.4-4.1-1.7-7-5.2-7-9.4V6Z" />
+          <path d="m9 12 2.1 2.1L15.2 10" />
+        </symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24">
+          <rect x="6.5" y="2.8" width="11" height="18.4" rx="2.6" />
+          <path d="M10.8 18h2.4" />
+        </symbol>
+        <symbol id="i-check" viewBox="0 0 24 24">
+          <path d="m5 12.5 4.2 4.2L19 7" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24">
+          <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" />
+          <circle cx="12" cy="10" r="2.3" />
+        </symbol>
+        <symbol id="i-doc" viewBox="0 0 24 24">
+          <path d="M14 3H7.4A2.4 2.4 0 0 0 5 5.4v13.2A2.4 2.4 0 0 0 7.4 21h9.2a2.4 2.4 0 0 0 2.4-2.4V8Z" />
+          <path d="M14 3v5h5M8.5 13h7M8.5 16.5h5" />
+        </symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24">
+          <rect x="3.5" y="5" width="17" height="15.5" rx="2.4" />
+          <path d="M3.5 10h17M8 3v4M16 3v4" />
+        </symbol>
+        <symbol id="i-users" viewBox="0 0 24 24">
+          <circle cx="9" cy="8.5" r="3.3" />
+          <path d="M3 19.5c.6-3.2 3-5.2 6-5.2s5.4 2 6 5.2" />
+          <path d="M15.5 5.6a3.2 3.2 0 0 1 0 5.9M17.6 14.6c1.8.7 3 2.4 3.4 4.9" />
+        </symbol>
+        <symbol id="i-play" viewBox="0 0 24 24">
+          <path d="M8 5.5v13l10.5-6.5Z" />
+        </symbol>
+        <symbol id="i-search" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="6.5" />
+          <path d="m16 16 4 4" />
+        </symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24">
+          <rect x="5" y="10.5" width="14" height="10" rx="2.2" />
+          <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" />
+        </symbol>
+      </defs>
+    </svg>
+
+    <main id="main" class="dd">
+      <!-- ───────────── Hero ───────────── -->
+      <section class="dd-hero" aria-labelledby="dd-hero-title">
+        <div class="dd-hero__inner qc-container">
+          <div class="dd-hero__copy">
+            <h1 id="dd-hero-title" class="dd-hero__title">
+              Travel itineraries &amp; quotes that <em>turn ideas into bookings</em>
+            </h1>
+            <p class="dd-hero__lede">
+              Itinerary and quote software for travel agents. Open GDS bookings, enrich every day of the trip,
+              and let travellers sign and pay. Just click, quote, and close.
+            </p>
+            <div class="dd-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+            </div>
+            <p class="dd-hero__note">No credit card required</p>
+          </div>
+
+          <!-- Trip header card -->
+          <div class="dd-trip" data-reveal="scale">
+            <div class="dd-trip__shadow" aria-hidden="true"></div>
+            <article class="dd-trip__card" aria-label="Sample trip: Bali Discovery, 7 nights for two travellers">
+              <div class="dd-trip__cover">
+                <img
+                  src="/assets/travel/template-paradise.jpg"
+                  width="566"
+                  height="800"
+                  alt="Beach loungers under palm trees on a Bali beach"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+                <div class="dd-trip__countdown" data-countdown>
+                  <span class="dd-trip__pulse" aria-hidden="true"></span>
+                  <span>Departs in <strong data-cd-days>25 days</strong></span>
+                  <span class="dd-trip__clock" data-cd-clock aria-hidden="true">06:14:32</span>
+                </div>
+                <div class="dd-trip__title">
+                  <p class="dd-trip__kicker">Itinerary</p>
+                  <p class="dd-trip__name">Bali Discovery</p>
+                </div>
+              </div>
+
+              <dl class="dd-trip__facts">
+                <div>
+                  <dt><svg aria-hidden="true"><use href="#i-calendar" /></svg>Dates</dt>
+                  <dd>01 – 08 Nov</dd>
+                </div>
+                <div>
+                  <dt><svg aria-hidden="true"><use href="#i-pin" /></svg>Destination</dt>
+                  <dd>Bali, Indonesia</dd>
+                </div>
+                <div>
+                  <dt><svg aria-hidden="true"><use href="#i-users" /></svg>Travellers</dt>
+                  <dd>2 adults</dd>
+                </div>
+              </dl>
+
+              <div class="dd-trip__route" aria-hidden="true">
+                <span class="dd-trip__port"><b>SYD</b>Sydney</span>
+                <svg class="dd-trip__arc" viewBox="0 0 300 60" preserveAspectRatio="none">
+                  <path class="dd-trip__arc-base" d="M4 54 C 90 -8, 210 -8, 296 54" />
+                  <path class="dd-trip__arc-fill" pathLength="1" d="M4 54 C 90 -8, 210 -8, 296 54" />
+                </svg>
+                <span class="dd-trip__plane"><svg><use href="#i-flight" /></svg></span>
+                <span class="dd-trip__port dd-trip__port--end"><b>DPS</b>Denpasar</span>
+              </div>
+
+              <nav class="dd-trip__days" aria-label="Jump to a day">
+                <a href="#day-1"><span>1</span>Arrive</a>
+                <a href="#day-2"><span>2</span>Explore</a>
+                <a href="#day-3"><span>3</span>Discover</a>
+                <a href="#day-4"><span>4</span>Style</a>
+                <a href="#day-5"><span>5</span>Decide</a>
+                <a href="#day-6"><span>6</span>Confirm</a>
+                <a href="#day-7"><span>7</span>On the go</a>
+              </nav>
+            </article>
+
+            <div class="dd-trip__chip" aria-hidden="true">
+              <span class="dd-ico dd-ico--sm"><svg><use href="#i-flight" /></svg></span>
+              <span><b>QF 43 · SYD → DPS</b>10:20 – 15:15 · Imported from Sabre</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Timeline ───────────── -->
+      <section class="dd-journey" id="journey" aria-labelledby="dd-journey-title">
+        <div class="qc-container">
+          <header class="dd-journey__head" data-reveal>
+            <h2 id="dd-journey-title">From booking to boarding, <em>day by day</em></h2>
+            <p>Follow one trip and see what QuoteCloud adds at every stop.</p>
+          </header>
+
+          <div class="dd-tl" data-tl>
+            <aside class="dd-tl__rail" aria-hidden="true">
+              <div class="dd-marker" data-marker>
+                <span class="dd-marker__label">Day</span>
+                <span class="dd-marker__num"><span class="dd-roll" data-roll="num"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></span></span>
+                <span class="dd-marker__verb"><span class="dd-roll" data-roll="verb"><span>Arrive</span><span>Explore</span><span>Discover</span><span>Your style</span><span>Decide</span><span>Confirm</span><span>On the go</span></span></span>
+                <span class="dd-marker__date"><span class="dd-roll" data-roll="date"><span>01 Nov</span><span>02 Nov</span><span>03 Nov</span><span>04 Nov</span><span>05 Nov</span><span>06 Nov</span><span>07 Nov</span></span></span>
+                <span class="dd-marker__ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+            </aside>
+
+            <div class="dd-tl__track">
+              <div class="dd-tl__line" aria-hidden="true"><span class="dd-tl__fill" data-tl-fill></span></div>
+
+              <!-- Day 1 · Arrive -->
+              <article class="dd-day" id="day-1" data-day="1" aria-labelledby="day-1-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 1</b><span>Flight</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-flight" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-1-title"><span class="dd-seg__verb">Arrive</span> <span class="dd-seg__feat">GDS &amp; mid-office import</span></h3>
+                      <p>Bookings from Sabre, PowerSuite or Tramada open in QuoteCloud, structured automatically. No rekeying.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/enhanced-travel-itinerary-software">Learn more<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-import" data-import>
+                      <div class="v-import__src">
+                        <div class="v-import__tabs" role="group" aria-label="Import source">
+                          <button type="button" aria-pressed="true" data-src="Sabre GDS · PNR 7KX2LP">Sabre</button>
+                          <button type="button" aria-pressed="false" data-src="PowerSuite · Booking 48213">PowerSuite</button>
+                          <button type="button" aria-pressed="false" data-src="Tramada · Booking TR-90514">Tramada</button>
+                        </div>
+                        <p class="v-import__label" data-src-label>Sabre GDS · PNR 7KX2LP</p>
+                        <ol class="v-import__pnr" aria-label="Raw booking lines">
+                          <li><span>1</span>QF 43Y 01NOV SYDDPS HK2 1020 1515</li>
+                          <li><span>2</span>TRF DPS-UBUD 01NOV 1600 PVT 2PAX</li>
+                          <li><span>3</span>HTL UBUD 01NOV-08NOV 7N 2A KNG</li>
+                          <li><span>4</span>TUR ULUWATU 03NOV 1500 2PAX</li>
+                          <li><span>5</span>QF 44Y 08NOV DPSSYD HK2 1640 0025</li>
+                        </ol>
+                      </div>
+                      <div class="v-import__pipe" aria-hidden="true">
+                        <span class="v-import__pipe-line"></span>
+                        <span class="v-import__pipe-node"><img src="/assets/logos/qc-symbol-white.png" width="20" height="20" alt="" loading="lazy" decoding="async" /></span>
+                      </div>
+                      <div class="v-import__doc">
+                        <div class="v-doc__bar"><span></span><span></span><span></span><b>Bali Discovery · Your itinerary</b></div>
+                        <ul class="v-import__rows">
+                          <li>
+                            <time>01 Nov</time><span class="dd-ico dd-ico--sm"><svg aria-hidden="true"><use href="#i-flight" /></svg></span>
+                            <span class="v-row__main"><b>Flight to Bali</b>Sydney (SYD) → Denpasar (DPS)</span>
+                            <span class="v-row__meta">10:20 – 15:15</span>
+                          </li>
+                          <li>
+                            <time>01 Nov</time><span class="dd-ico dd-ico--sm"><svg aria-hidden="true"><use href="#i-transfer" /></svg></span>
+                            <span class="v-row__main"><b>Private transfer</b>Airport → Ubud</span>
+                            <span class="v-row__meta">16:00</span>
+                          </li>
+                          <li>
+                            <time>01 Nov</time><span class="dd-ico dd-ico--sm"><svg aria-hidden="true"><use href="#i-hotel" /></svg></span>
+                            <span class="v-row__main"><b>Hotel check-in</b>Ubud villa · King room</span>
+                            <span class="v-row__meta">7 nights</span>
+                          </li>
+                          <li>
+                            <time>03 Nov</time><span class="dd-ico dd-ico--sm"><svg aria-hidden="true"><use href="#i-tour" /></svg></span>
+                            <span class="v-row__main"><b>Uluwatu Temple tour</b>Half day · Guided</span>
+                            <span class="v-row__meta">15:00</span>
+                          </li>
+                          <li>
+                            <time>08 Nov</time><span class="dd-ico dd-ico--sm"><svg aria-hidden="true"><use href="#i-flight" /></svg></span>
+                            <span class="v-row__main"><b>Flight home</b>Denpasar (DPS) → Sydney (SYD)</span>
+                            <span class="v-row__meta">16:40 – 00:25</span>
+                          </li>
+                        </ul>
+                        <p class="v-import__toast"><svg aria-hidden="true"><use href="#i-check" /></svg>5 segments imported · nothing rekeyed</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Day 2 · Explore -->
+              <article class="dd-day" id="day-2" data-day="2" aria-labelledby="day-2-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 2</b><span>Tour</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-tour" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-2-title"><span class="dd-seg__verb">Explore</span> <span class="dd-seg__feat">Rich media, galleries &amp; video</span></h3>
+                      <p>Photos, maps, PDF brochures, destination videos and QR codes help travellers picture the trip.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Content blocks<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-media" data-media>
+                      <figure class="v-media__gallery">
+                        <div class="v-media__frames">
+                          <div class="v-media__frame is-active" style="--img: url(/assets/travel/template-paradise.jpg); --size: 267%; --pos: 85% 68%"></div>
+                          <div class="v-media__frame" style="--img: url(/assets/travel/template-collage.jpg); --size: 300%; --pos: 50% 60%"></div>
+                          <div class="v-media__frame" style="--img: url(/assets/travel/template-african-journey.jpg); --size: 285%; --pos: 100% 92%"></div>
+                          <div class="v-media__frame" style="--img: url(/assets/travel/template-travel-agency.jpg); --size: 340%; --pos: 0% 81%"></div>
+                        </div>
+                        <figcaption class="v-media__cap"><span>Gallery</span><b data-media-count>1 / 4</b></figcaption>
+                        <div class="v-media__thumbs" role="group" aria-label="Choose gallery photo">
+                          <button type="button" aria-pressed="true" aria-label="Photo 1" style="--img: url(/assets/travel/template-paradise.jpg); --size: 267%; --pos: 85% 68%"></button>
+                          <button type="button" aria-pressed="false" aria-label="Photo 2" style="--img: url(/assets/travel/template-collage.jpg); --size: 300%; --pos: 50% 60%"></button>
+                          <button type="button" aria-pressed="false" aria-label="Photo 3" style="--img: url(/assets/travel/template-african-journey.jpg); --size: 285%; --pos: 100% 92%"></button>
+                          <button type="button" aria-pressed="false" aria-label="Photo 4" style="--img: url(/assets/travel/template-travel-agency.jpg); --size: 400%; --pos: 2% 82%"></button>
+                        </div>
+                      </figure>
+
+                      <div class="v-media__video" aria-label="Destination video player preview" role="img">
+                        <div class="v-media__poster"></div>
+                        <span class="v-media__play"><svg aria-hidden="true"><use href="#i-play" /></svg></span>
+                        <div class="v-media__vbar">
+                          <b>Destination overview</b>
+                          <span class="v-media__track"><i></i></span>
+                          <span class="v-media__time" data-vtime>00:00</span><span class="v-media__dur">/ 02:45</span>
+                        </div>
+                      </div>
+
+                      <div class="v-media__map" role="img" aria-label="Map with Ubud, Uluwatu and Seminyak pinned">
+                        <svg viewBox="0 0 220 160" aria-hidden="true">
+                          <defs>
+                            <pattern id="dd-dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1" /></pattern>
+                          </defs>
+                          <rect class="v-map__sea" width="220" height="160" />
+                          <path class="v-map__land" d="M18 58c22-20 52-26 78-18 18 6 30-4 52-6 24-2 46 10 56 28 6 12-2 24-14 30-16 8-28 2-42 10-12 8-14 24-30 28-14 4-24-6-30-16-6-10-18-12-30-12-18 0-38-6-44-18-6-10-4-18 4-26Z" />
+                          <path class="v-map__land v-map__land--dots" d="M18 58c22-20 52-26 78-18 18 6 30-4 52-6 24-2 46 10 56 28 6 12-2 24-14 30-16 8-28 2-42 10-12 8-14 24-30 28-14 4-24-6-30-16-6-10-18-12-30-12-18 0-38-6-44-18-6-10-4-18 4-26Z" />
+                          <path class="v-map__route" pathLength="1" d="M138 62 C 120 84, 92 92, 82 118 M82 118 C 70 104, 60 92, 58 74" />
+                          <g class="v-map__pin" style="--d: 0s" transform="translate(138 62)"><circle r="9" class="v-map__halo" /><circle r="4.2" /></g>
+                          <g class="v-map__pin" style="--d: .6s" transform="translate(82 118)"><circle r="9" class="v-map__halo" /><circle r="4.2" /></g>
+                          <g class="v-map__pin" style="--d: 1.2s" transform="translate(58 74)"><circle r="9" class="v-map__halo" /><circle r="4.2" /></g>
+                          <text x="148" y="58">Ubud</text>
+                          <text x="92" y="132">Uluwatu</text>
+                          <text x="22" y="64">Seminyak</text>
+                        </svg>
+                      </div>
+
+                      <div class="v-media__files">
+                        <div class="v-media__pdf">
+                          <span class="v-media__pdf-ico">PDF</span>
+                          <span><b>Bali brochure.pdf</b>2.4 MB</span>
+                        </div>
+                        <div class="v-media__qr">
+                          <svg viewBox="0 0 21 21" aria-hidden="true" shape-rendering="crispEdges">
+                            <path d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v1H8zM11 1h2v2h-1v1h-2V2h1zM8 3h1v2h1v1H8zM12 5h1v3h-2V7h1zM8 8h2v1h1v2H9v-1H8zM0 8h2v1H1v1H0zM3 8h3v1H5v2H4v-2H3zM13 8h3v1h-2v2h-1zM17 8h4v2h-1v1h-2v-1h1V9h-2zM6 10h1v2H6zM11 11h2v2h-1v1h-2v-2h1zM15 11h2v1h1v2h-2v-1h-1zM19 12h2v3h-1v-2h-1zM0 12h2v1H0zM3 12h2v1H3zM8 13h1v3H8zM14 14h2v2h-2zM17 15h2v2h2v1h-3v-2h-1zM10 16h3v1h-1v2h-1v-1h-1zM8 18h1v3H8zM14 17h2v1h-1v2h-1zM19 19h2v2h-2zM10 20h3v1h-3zM16 20h2v1h-2z" />
+                          </svg>
+                          <span>Scan for the live itinerary</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Day 3 · Discover -->
+              <article class="dd-day" id="day-3" data-day="3" aria-labelledby="day-3-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 3</b><span>Activity</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-compass" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-3-title"><span class="dd-seg__verb">Discover</span> <span class="dd-seg__feat">Destination guides &amp; content libraries</span></h3>
+                      <p>Drop in approved guides, visa notes, safety info and terms. Consistent and compliant across the team.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/travel-quoting-software">Travel quoting<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-lib" data-lib>
+                      <div class="v-lib__panel">
+                        <p class="v-lib__title">Content library</p>
+                        <div class="v-lib__tabs" aria-hidden="true"><span>Personal</span><span>Team</span><span class="is-on">Company</span></div>
+                        <p class="v-lib__search"><svg aria-hidden="true"><use href="#i-search" /></svg>Bali</p>
+                        <ul class="v-lib__list">
+                          <li data-lib-source><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-compass" /></svg></span>Destination guide · Bali</li>
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-doc" /></svg></span>Visa requirements · Indonesia</li>
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-shield" /></svg></span>Travel safety</li>
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-package" /></svg></span>Packing tips · Tropics</li>
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-doc" /></svg></span>Terms &amp; conditions</li>
+                        </ul>
+                      </div>
+                      <div class="v-lib__doc">
+                        <div class="v-doc__bar"><span></span><span></span><span></span><b>Bali Discovery · Day 3</b></div>
+                        <div class="v-lib__skel" aria-hidden="true"><i></i><i></i><i></i></div>
+                        <div class="v-lib__drop" data-lib-target>
+                          <div class="v-lib__block">
+                            <p class="v-lib__block-title"><svg aria-hidden="true"><use href="#i-compass" /></svg>Bali at a glance</p>
+                            <dl class="v-lib__facts">
+                              <div><dt>Currency</dt><dd>Rupiah (IDR)</dd></div>
+                              <div><dt>Time zone</dt><dd>UTC+8</dd></div>
+                              <div><dt>Power</dt><dd>Type C/F · 230V</dd></div>
+                              <div><dt>Language</dt><dd>Bahasa Indonesia</dd></div>
+                            </dl>
+                            <ul class="v-lib__checks">
+                              <li><svg aria-hidden="true"><use href="#i-check" /></svg>Passport valid 6 months beyond travel</li>
+                              <li><svg aria-hidden="true"><use href="#i-check" /></svg>Respectful dress for temple visits</li>
+                            </ul>
+                          </div>
+                          <span class="v-lib__hint">Drop block here</span>
+                        </div>
+                        <div class="v-lib__ghost" data-lib-ghost aria-hidden="true">
+                          <span class="dd-ico dd-ico--xs"><svg><use href="#i-compass" /></svg></span>Destination guide · Bali
+                          <svg class="v-cursor" viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L10 19Z" /></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Day 4 · Your style -->
+              <article class="dd-day" id="day-4" data-day="4" aria-labelledby="day-4-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 4</b><span>Hotel</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-hotel" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-4-title"><span class="dd-seg__verb">Your style</span> <span class="dd-seg__feat">Branding &amp; travel templates</span></h3>
+                      <p>Any layout, your logo and colours, structured for leisure, corporate or group travel.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/templates/travel">Travel templates<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-style" data-style>
+                      <div class="v-style__stage">
+                        <div class="v-style__deck">
+                          <img class="v-style__cover" data-pos="0" src="/assets/travel/template-paradise.jpg" width="566" height="800" alt="Paradise Travel template cover: Your Dream Holiday Awaits" loading="lazy" decoding="async" />
+                          <img class="v-style__cover" data-pos="1" src="/assets/travel/template-travel-agency.jpg" width="566" height="800" alt="Travel Agency Proposal template cover with beach umbrella" loading="lazy" decoding="async" />
+                          <img class="v-style__cover" data-pos="2" src="/assets/travel/template-african-journey.jpg" width="566" height="800" alt="Your African Journey template cover with a lodge at dusk" loading="lazy" decoding="async" />
+                          <img class="v-style__cover" data-pos="3" src="/assets/travel/template-collage.jpg" width="566" height="800" alt="Travel collage template cover with beach, bridge, train and cruise photos" loading="lazy" decoding="async" />
+                        </div>
+                      </div>
+                      <div class="v-style__panel">
+                        <p class="v-style__title">Template</p>
+                        <div class="v-style__picks" role="group" aria-label="Choose a travel template">
+                          <button type="button" aria-pressed="true" data-pal="#0e3a6b,#18a3b8,#f0b04a,#f6efe3">Paradise</button>
+                          <button type="button" aria-pressed="false" data-pal="#1d5fd1,#f5a300,#0f2a5c,#eaf2ff">Agency</button>
+                          <button type="button" aria-pressed="false" data-pal="#2a2018,#c9a24a,#6b4b2a,#f1e6cf">African</button>
+                          <button type="button" aria-pressed="false" data-pal="#e3141b,#1a1a1a,#2b7bb9,#f4f1ea">Collage</button>
+                        </div>
+                        <p class="v-style__title">Brand colours</p>
+                        <div class="v-style__swatches" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                        <p class="v-style__title">Built for</p>
+                        <div class="v-style__seg" aria-hidden="true"><span class="is-on">Leisure</span><span>Corporate</span><span>Group</span></div>
+                        <p class="v-style__title">Editing</p>
+                        <div class="v-style__seg" aria-hidden="true"><span class="is-on">Canvas</span><span>Grid</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Day 5 · Decide -->
+              <article class="dd-day" id="day-5" data-day="5" aria-labelledby="day-5-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 5</b><span>Package</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-package" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-5-title"><span class="dd-seg__verb">Decide</span> <span class="dd-seg__feat">Trip cost &amp; optional tours</span></h3>
+                      <p>A clear cost breakdown with extras travellers tick themselves. The total updates instantly.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/cpq-software">Pricing tables<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-cost" data-cost>
+                      <div class="v-cost__table">
+                        <p class="v-cost__title">Trip cost breakdown <span>AUD</span></p>
+                        <ul class="v-cost__rows">
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-flight" /></svg></span>Return flights · 2 adults<b>$1,250</b></li>
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-hotel" /></svg></span>Ubud villa · 7 nights<b>$2,400</b></li>
+                          <li><span class="dd-ico dd-ico--xs"><svg aria-hidden="true"><use href="#i-transfer" /></svg></span>Private transfers<b>$350</b></li>
+                        </ul>
+                        <p class="v-cost__sub">Optional tours</p>
+                        <ul class="v-cost__opts">
+                          <li>
+                            <label><input type="checkbox" value="180" checked data-opt /><span class="v-cost__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span>Uluwatu sunset &amp; Kecak dance<b>+$180</b></label>
+                          </li>
+                          <li data-auto>
+                            <label><input type="checkbox" value="220" data-opt /><span class="v-cost__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span>Mount Batur sunrise trek<b>+$220</b></label>
+                          </li>
+                          <li>
+                            <label><input type="checkbox" value="150" data-opt /><span class="v-cost__box" aria-hidden="true"><svg><use href="#i-check" /></svg></span>Ubud cooking class<b>+$150</b></label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="v-cost__sum">
+                        <p class="v-cost__sum-label">Trip total</p>
+                        <p class="v-cost__total" aria-live="polite"><span>$</span><span data-total>4,180</span></p>
+                        <p class="v-cost__pp"><span data-pp>$2,090</span> per person</p>
+                        <div class="v-cost__bar" aria-hidden="true"><i class="is-base"></i><i class="is-opt" data-optbar></i></div>
+                        <a class="v-cost__next" href="#day-6">Accept &amp; sign<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Day 6 · Confirm -->
+              <article class="dd-day" id="day-6" data-day="6" aria-labelledby="day-6-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 6</b><span>Confirmed</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-shield" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-6-title"><span class="dd-seg__verb">Confirm</span> <span class="dd-seg__feat">eSignature &amp; online payment</span></h3>
+                      <p>Travellers accept with a legally binding e-signature and pay the deposit with Stripe or PayPal.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/electronic-signature-software-solution">eSignature<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-sign" data-sign>
+                      <div class="v-sign__card">
+                        <p class="v-sign__title">Accept &amp; sign</p>
+                        <p class="v-sign__check"><span class="v-cost__box is-on" aria-hidden="true"><svg><use href="#i-check" /></svg></span>I accept the itinerary and booking terms</p>
+                        <div class="v-sign__pad">
+                          <svg viewBox="0 0 320 110" aria-hidden="true">
+                            <path class="v-sign__ink" pathLength="1" d="M18 78c10-28 22-52 30-50 8 2-6 46-2 52 4 6 16-30 26-30 8 0 0 26 8 26s14-22 22-22c6 0 2 18 10 18 10 0 16-30 26-30 6 0 4 14 0 26-4 14 4 14 14 2 10-12 18-30 26-28 6 2-2 22 6 24 8 2 18-16 28-16 8 0 4 12 12 12 10 0 22-12 40-14 14-2 30 2 42 6" />
+                          </svg>
+                          <span class="v-sign__line"></span>
+                        </div>
+                        <p class="v-sign__who"><b>Jordan Lee</b><span>Signed · 256-bit encrypted</span></p>
+                        <span class="v-sign__stamp" aria-hidden="true">Confirmed<small>7KX2LP</small></span>
+                      </div>
+                      <div class="v-sign__side">
+                        <div class="v-pay">
+                          <p class="v-pay__label">Deposit due</p>
+                          <p class="v-pay__amt">$1,000.00</p>
+                          <div class="v-pay__methods">
+                            <span class="is-on"><img src="/assets/integrations/stripe.png" width="28" height="28" alt="" loading="lazy" decoding="async" />Stripe</span>
+                            <span><img src="/assets/integrations/paypal.png" width="28" height="28" alt="" loading="lazy" decoding="async" />PayPal</span>
+                          </div>
+                          <p class="v-pay__btn"><span class="v-pay__btn-a"><svg aria-hidden="true"><use href="#i-lock" /></svg>Pay deposit</span><span class="v-pay__btn-b"><svg aria-hidden="true"><use href="#i-check" /></svg>Paid</span></p>
+                        </div>
+                        <ol class="v-audit" aria-label="Audit trail">
+                          <li><time>09:12</time>Quote opened</li>
+                          <li><time>09:14</time>Signed by Jordan Lee</li>
+                          <li><time>09:15</time>Deposit paid</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Day 7 · On the go -->
+              <article class="dd-day" id="day-7" data-day="7" aria-labelledby="day-7-title">
+                <span class="dd-day__dot" aria-hidden="true"></span>
+                <div class="dd-seg">
+                  <header class="dd-seg__head">
+                    <div class="dd-seg__when"><b>Day 7</b><span>Transfer</span></div>
+                    <span class="dd-ico"><svg aria-hidden="true"><use href="#i-phone" /></svg></span>
+                    <div class="dd-seg__text">
+                      <h3 id="day-7-title"><span class="dd-seg__verb">On the go</span> <span class="dd-seg__feat">The TravelDocs mobile app</span></h3>
+                      <p>The whole trip in the traveller's pocket, with documents, countdowns and live flight status. Free on iOS and Android.</p>
+                    </div>
+                    <a class="dd-seg__link" href="https://www.quote.cloud/traveldocs-mobile-app">TravelDocs<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+                  </header>
+                  <div class="dd-seg__body">
+                    <div class="v-app">
+                      <div class="v-app__aside">
+                        <img class="v-app__logo" src="/assets/travel/traveldocs-logo.png" width="640" height="247" alt="TravelDocs" loading="lazy" decoding="async" />
+                        <ul class="v-app__list">
+                          <li><svg aria-hidden="true"><use href="#i-calendar" /></svg>Trips with countdowns</li>
+                          <li><svg aria-hidden="true"><use href="#i-flight" /></svg>Flight times, seat &amp; booking code</li>
+                          <li><svg aria-hidden="true"><use href="#i-phone" /></svg>Live status on the lock screen</li>
+                        </ul>
+                        <div class="v-app__stores">
+                          <a href="https://apps.apple.com/au/app/traveldocs/id6477499212"><img src="/assets/travel/app-store.png" width="400" height="118" alt="Download TravelDocs on the App Store" loading="lazy" decoding="async" /></a>
+                          <a href="https://play.google.com/store/apps/details?id=com.corporateinteractive.traveldocs"><img src="/assets/travel/google-play.png" width="400" height="118" alt="Get TravelDocs on Google Play" loading="lazy" decoding="async" /></a>
+                        </div>
+                      </div>
+                      <div class="v-app__stage">
+                        <div class="dd-phone dd-phone--l">
+                          <img src="/assets/travel/traveldocs-flight.jpg" width="414" height="900" alt="TravelDocs flight detail with departure times, booking code and seat" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="dd-phone dd-phone--c">
+                          <img src="/assets/travel/traveldocs-itineraries.jpg" width="414" height="900" alt="TravelDocs My Itineraries screen with pinned trips and day countdowns" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="dd-phone dd-phone--r">
+                          <img src="/assets/travel/traveldocs-lockscreen-1.jpg" width="369" height="800" alt="iPhone lock screen showing live flight status: gate departure in three minutes" loading="lazy" decoding="async" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- End of the line: mid-page CTA -->
+              <div class="dd-tl__end" data-reveal>
+                <span class="dd-day__dot dd-day__dot--end" aria-hidden="true"></span>
+                <p class="dd-tl__end-title">Plan your first trip this week.</p>
+                <div class="dd-tl__end-ctas">
+                  <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="timeline-end">Start free 14-day trial</a>
+                  <a class="qc-btn qc-btn--ghost" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Integrations ───────────── -->
+      <section class="dd-int" aria-labelledby="dd-int-title">
+        <div class="qc-container">
+          <header class="dd-int__head" data-reveal>
+            <h2 id="dd-int-title">Connected to the systems <em>you book in</em></h2>
+            <p>Itineraries open directly from your GDS or mid-office.</p>
+          </header>
+          <div class="dd-int__route" data-int>
+            <svg class="dd-int__line" viewBox="0 0 1000 20" preserveAspectRatio="none" aria-hidden="true">
+              <path class="dd-int__line-base" d="M0 10H1000" />
+              <path class="dd-int__line-fill" pathLength="1" d="M0 10H1000" />
+            </svg>
+            <ul class="dd-int__list" data-reveal-stagger="120">
+              <li data-reveal>
+                <span class="dd-int__stop" aria-hidden="true"></span>
+                <a class="dd-int__card" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-sabre-gds">
+                  <img src="/assets/travel/sabre.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" />
+                  <span><b>Sabre GDS</b>Enhanced itineraries direct from Sabre</span>
+                  <svg class="dd-int__arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </li>
+              <li data-reveal>
+                <span class="dd-int__stop" aria-hidden="true"></span>
+                <a class="dd-int__card" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-powersuite-mid-office">
+                  <img src="/assets/travel/powersuite.jpg" width="200" height="200" alt="" loading="lazy" decoding="async" />
+                  <span><b>PowerSuite</b>Straight from your mid-office</span>
+                  <svg class="dd-int__arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </li>
+              <li data-reveal>
+                <span class="dd-int__stop" aria-hidden="true"></span>
+                <a class="dd-int__card" href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tramada">
+                  <img class="is-wide" src="/assets/travel/tramada.png" width="400" height="125" alt="" loading="lazy" decoding="async" />
+                  <span><b>Tramada</b>Bookings become branded itineraries</span>
+                  <svg class="dd-int__arrow" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="dd-int__more">
+            Also <a href="https://www.quote.cloud/sales-quotes-for-travel-enhanced-itineraries-with-tres-ccte">Tres CCTE</a>, with payments through Stripe and PayPal.
+            <a class="dd-int__all" href="https://www.quote.cloud/all-integrations">All integrations<svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────────── Proof ───────────── -->
+      <section class="dd-proof" aria-labelledby="dd-proof-title">
+        <div class="qc-container">
+          <h2 id="dd-proof-title" class="qc-sr-only">Ratings and security</h2>
+          <ul class="dd-proof__stats" data-reveal-stagger="90">
+            <li data-reveal><b data-count-to="4.2" data-count-decimals="1">4.2</b><span>Capterra rating</span></li>
+            <li data-reveal><b data-count-to="4.2" data-count-decimals="1">4.2</b><span>Software Advice rating</span></li>
+            <li data-reveal><b data-count-to="2013" data-count-format="plain" data-count-duration="1400">2013</b><span>Building QuoteCloud since</span></li>
+            <li data-reveal><b data-count-to="14" data-count-suffix=" days">14 days</b><span>Free trial, no card</span></li>
+          </ul>
+          <ul class="dd-proof__badges" aria-label="Security and compliance">
+            <li><img src="/assets/compliance/eidas.svg" width="96" height="40" alt="eIDAS compliant eSignatures" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/encryption-256.png" width="96" height="40" alt="256-bit encryption" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/aws.svg" width="96" height="40" alt="Hosted on AWS" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/compliance/gdpr.png" width="96" height="40" alt="GDPR compliant" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- @include faq-travel -->
+
+      <!-- ───────────── Departure (closing CTA) ───────────── -->
+      <section class="dd-depart" aria-labelledby="dd-depart-title">
+        <div class="qc-container">
+          <div class="dd-pass" data-reveal="scale">
+            <div class="dd-pass__main">
+              <div class="dd-pass__route" aria-hidden="true">
+                <span><small>From</small>Booking</span>
+                <svg class="dd-pass__arc" viewBox="0 0 200 40" preserveAspectRatio="none"><path pathLength="1" d="M4 34 C 60 -6, 140 -6, 196 34" /></svg>
+                <span class="dd-pass__plane"><svg><use href="#i-flight" /></svg></span>
+                <span class="is-end"><small>To</small>Booked</span>
+              </div>
+              <h2 id="dd-depart-title">Ready for <em>departure</em>?</h2>
+              <p>Turn your next booking into an itinerary travellers can't wait to sign.</p>
+              <div class="dd-pass__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="departure">
+                  Start free 14-day trial
+                  <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#i-arrow" /></svg>
+                </a>
+                <a class="qc-btn qc-btn--ghost qc-btn--lg dd-pass__ghost" href="https://www.quote.cloud/quotecloud-demo">Book a demo</a>
+              </div>
+            </div>
+            <div class="dd-pass__stub" aria-hidden="true">
+              <dl>
+                <div><dt>Gate</dt><dd>Free trial</dd></div>
+                <div><dt>Boarding</dt><dd>Now</dd></div>
+                <div><dt>Valid</dt><dd>14 days</dd></div>
+                <div><dt>Card</dt><dd>Not needed</dd></div>
+              </dl>
+              <span class="dd-pass__barcode"></span>
+            </div>
+          </div>
+          <p class="dd-depart__links"><a href="/pricing">See pricing</a><span aria-hidden="true">·</span><a href="https://www.quote.cloud/templates/travel">Browse travel templates</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
