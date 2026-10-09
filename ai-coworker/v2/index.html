@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-ai-coworker -->
+  </head>
+  <body class="ac2">
+    <!-- @include header -->
+
+    <svg class="ac-sprite" aria-hidden="true" focusable="false">
+      <symbol id="ac-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="ac-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="ac-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+      <symbol id="ac-spark" viewBox="0 0 24 24"><path d="M12 2.5c.6 4.9 3.6 7.9 8.5 8.5-4.9.6-7.9 3.6-8.5 8.5-.6-4.9-3.6-7.9-8.5-8.5 4.9-.6 7.9-3.6 8.5-8.5Z" /></symbol>
+      <symbol id="ac-plane" viewBox="0 0 24 24"><path d="M10.5 13.5 3 11l1.5-1.5 7.5 1 4-4c1-1 2.6-1.4 3.2-.8.6.6.2 2.2-.8 3.2l-4 4 1 7.5L14 22l-2.5-7.5" /></symbol>
+      <symbol id="ac-send" viewBox="0 0 24 24"><path d="M4 12 20 4l-6 16-3-7-7-1Z" /></symbol>
+      <symbol id="ac-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4ZM13 7l4 4" /></symbol>
+      <symbol id="ac-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" /><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" /></symbol>
+      <symbol id="ac-redo" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5" /></symbol>
+      <symbol id="ac-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5M4 9h10a6 6 0 0 1 0 12h-3" /></symbol>
+      <symbol id="ac-cursor" viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L10 19z" /></symbol>
+      <symbol id="ac-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h4" /></symbol>
+      <symbol id="ac-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 13l9 5 9-5" /></symbol>
+      <symbol id="ac-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3ZM4 7.5l8 4.5 8-4.5M12 12v9" /></symbol>
+      <symbol id="ac-table" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" /><path d="M3.5 9.5h17M3.5 14.5h17M10 9.5v10" /></symbol>
+      <symbol id="ac-brace" viewBox="0 0 24 24"><path d="M8 4c-2 0-3 1-3 3v2.5C5 11 4 12 3 12c1 0 2 1 2 2.5V17c0 2 1 3 3 3M16 4c2 0 3 1 3 3v2.5c0 1.5 1 2.5 2 2.5-1 0-2 1-2 2.5V17c0 2-1 3-3 3" /></symbol>
+      <symbol id="ac-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────────── Hero ───────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid qc-container">
+          <div class="hero__copy">
+            <h1 id="hero-title" class="hero__title">The AI proposal writer that turns messy notes into <em>polished proposals</em></h1>
+            <p class="hero__lede">AI Co-Worker works inside every QuoteCloud document. Paste a flight search, a price list or your call notes and it builds the itinerary, the pricing table and the words. You approve every line.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow ac-i" width="18" height="18" aria-hidden="true"><use href="#ac-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">
+              <span>No credit card required</span>
+              <span class="hero__rating"><svg class="ac-i" width="14" height="14" aria-hidden="true"><use href="#ac-star" /></svg> 4.2 on Capterra</span>
+            </p>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="ed" data-hero data-h="5">
+              <div class="ed__bar">
+                <span class="ed__dots"><i></i><i></i><i></i></span>
+                <span class="ed__name">Singapore offsite · Proposal</span>
+                <span class="ed__share">Share</span>
+              </div>
+              <div class="ed__body">
+                <div class="ed__page">
+                  <div class="pg__band"><span class="pg__mark">M</span><b>Meridian Travel</b><span>Proposal · MT-0412</span></div>
+                  <p class="pg__kicker">Prepared for Harbour &amp; Co.</p>
+                  <p class="pg__title">Leadership offsite, Singapore</p>
+                  <p class="pg__h">Introduction</p>
+                  <div class="pg__slot">
+                    <div class="pg__ghost"><i style="--w: 92%"></i><i style="--w: 86%"></i><i style="--w: 58%"></i></div>
+                    <p class="pg__ins" data-hero-ins>Thank you for your time on Thursday, Priya. Here is a five-night leadership offsite in Singapore for your team of twelve: an easy direct flight, a harbourfront hotel, two free days and a team dinner on the river.</p>
+                  </div>
+                  <p class="pg__h">Itinerary</p>
+                  <div class="pg__seg"><svg class="ac-i" width="14" height="14"><use href="#ac-plane" /></svg><b>SYD → SIN</b><span>Fri 14 Nov · QC 214</span></div>
+                  <div class="pg__seg"><svg class="ac-i" width="14" height="14"><use href="#ac-plane" /></svg><b>SIN → SYD</b><span>Wed 19 Nov · QC 215</span></div>
+                </div>
+
+                <div class="ai" data-hero-panel>
+                  <div class="ai__head">
+                    <svg class="ai__spark" width="16" height="16"><use href="#ac-spark" /></svg>
+                    <b>AI Coworker</b>
+                    <span class="ai__new">New Chat</span>
+                  </div>
+                  <div class="ai__body">
+                    <div class="ai__hello">
+                      <p class="ai__hi">Hi Sam</p>
+                      <p class="ai__help">How can I help you today?</p>
+                      <span class="ai__chip">Write a proposal introduction</span>
+                      <span class="ai__chip">Improve existing content</span>
+                      <span class="ai__chip">Create value proposition</span>
+                    </div>
+                    <div class="ai__thread">
+                      <div class="ai__me">
+                        <span class="ai__file"><svg class="ac-i" width="12" height="12"><use href="#ac-doc" /></svg>call-notes.txt</span>
+                        <span>Write the introduction from my call notes</span>
+                      </div>
+                      <div class="ai__reply">
+                        <p class="ai__lead">Here's a draft for you:</p>
+                        <p class="ai__draft" data-hero-draft>Thank you for your time on Thursday, Priya. Here is a five-night leadership offsite in Singapore for your team of twelve: an easy direct flight, a harbourfront hotel, two free days and a team dinner on the river.</p>
+                        <div class="ai__acts">
+                          <span><svg class="ac-i" width="13" height="13"><use href="#ac-copy" /></svg></span>
+                          <span><svg class="ac-i" width="13" height="13"><use href="#ac-redo" /></svg> Regenerate</span>
+                          <span class="ai__insert" data-hero-insert>Insert</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ai__input">
+                    <span class="ai__attach"><svg class="ac-i" width="11" height="11"><use href="#ac-doc" /></svg>call-notes.txt</span>
+                    <span class="ai__typed" data-hero-typed></span><span class="ai__ph">Ask AI Coworker</span>
+                    <span class="ai__send"><svg class="ac-i" width="13" height="13"><use href="#ac-send" /></svg></span>
+                  </div>
+                  <p class="ai__fine">AI Coworker can make mistakes. Check important info.</p>
+                </div>
+              </div>
+              <svg class="ed__cursor" width="22" height="22" data-hero-cursor><use href="#ac-cursor" /></svg>
+            </div>
+
+            <div class="paste" data-hero-paste>
+              <span class="paste__tab">call-notes.txt</span>
+              <pre>call w/ priya, thu
+- 12 ppl, leadership team
+- somewhere warm, not too far
+- nice hotel but budget-aware
+- 2 free days + team dinner
+- sign off before 20th!!</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Story: messy in, polished out ───────────── -->
+      <section class="story" id="story" aria-labelledby="story-title">
+        <div class="story__head qc-container" data-reveal>
+          <h2 id="story-title">Paste the mess. Get <em>finished Content Blocks.</em></h2>
+          <p>Airfare searches, supplier price lists, scribbled call notes. AI Co-Worker reads them and rebuilds them as itineraries, pricing tables and client-ready copy inside your document.</p>
+        </div>
+
+        <div class="story__track" data-track>
+          <div class="story__sticky">
+            <div class="story__inner qc-container">
+              <div class="rail" data-rail>
+                <span class="rail__line"><i class="rail__fill" data-rail-fill></i></span>
+                <button type="button" class="rail__step" data-go="1"><span>Itinerary</span></button>
+                <button type="button" class="rail__step" data-go="2"><span>Pricing</span></button>
+                <button type="button" class="rail__step" data-go="3"><span>Introduction</span></button>
+                <button type="button" class="rail__step" data-go="4"><span>Branding</span></button>
+                <button type="button" class="rail__step" data-go="5"><span>Review</span></button>
+                <button type="button" class="rail__step" data-go="6"><span>Send &amp; sign</span></button>
+              </div>
+
+              <ol class="caps">
+                <li class="cap" data-cap="1">
+                  <h3>A flight search becomes an itinerary</h3>
+                  <p>Paste raw airfare results. AI Co-Worker picks out flights, dates and times and builds formatted itinerary segments.</p>
+                  <div class="cap__pair" data-pair="1"></div>
+                </li>
+                <li class="cap" data-cap="2">
+                  <h3>A price list becomes a pricing table</h3>
+                  <p>Supplier rates pasted from an email turn into line items with quantities, tax and a total.</p>
+                  <div class="cap__pair" data-pair="2"></div>
+                </li>
+                <li class="cap" data-cap="3">
+                  <h3>Call notes become the introduction</h3>
+                  <p>Rough notes turn into a client-ready opening in the tone you chose, ready to expand, shorten or rewrite.</p>
+                  <div class="cap__pair" data-pair="3"></div>
+                </li>
+                <li class="cap" data-cap="4">
+                  <h3>Your brand, applied</h3>
+                  <p>Ask for heading or body typography in plain words and the whole document restyles.</p>
+                  <div class="cap__pair" data-pair="4"></div>
+                </li>
+                <li class="cap" data-cap="5">
+                  <h3>You review every block</h3>
+                  <p>AI content stays flagged until a person accepts, edits or rejects it. Nothing goes out unchecked.</p>
+                  <div class="cap__pair" data-pair="5"></div>
+                </li>
+                <li class="cap" data-cap="6">
+                  <h3>Then send, track and sign</h3>
+                  <p>Send from the same document, see when it's opened and collect a legally binding <a href="https://www.quote.cloud/electronic-signature-software-solution">eSignature</a>.</p>
+                  <div class="cap__pair" data-pair="6"></div>
+                </li>
+              </ol>
+
+              <div class="stage" data-stage data-step="6" data-s1 data-s2 data-s3 data-s4 data-s5 data-s6 aria-hidden="true">
+                <!-- Left: the raw clipboard -->
+                <div class="clip">
+                  <div class="clip__head"><span class="clip__dot"></span>Clipboard<span class="clip__count" data-clip-count>3 pastes</span></div>
+                  <div class="win" data-win="clip">
+                    <div class="win__in" data-pan="clip">
+                      <div class="chunk" data-chunk="1">
+                        <span class="chunk__src">Pasted from airfare search</span>
+                        <pre>SEARCH RESULTS  SYD-SIN-SYD  ADT x12
+-------------------------------------------
+1  <b data-frag="it1">QC214</b> Y  <b data-frag="it2">14NOV</b> SYDSIN <b data-frag="it3">0940 1505</b>  8H25
+   bag 30K  fare GRP12  seats 12/12 OK
+2  <b data-frag="it4">QC215</b> Y  <b data-frag="it5">19NOV</b> SINSYD <b data-frag="it6">2110 0740+1</b> 7H30
+   bag 30K  fare GRP12  seats 12/12 OK
+** TTL 20OCT  pls confirm names **</pre>
+                        <span class="chunk__done"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Moved to Itinerary</span>
+                      </div>
+                      <div class="chunk" data-chunk="2">
+                        <span class="chunk__src">Fwd: Group rates, Nov</span>
+                        <pre>Hi Sam, as discussed for your grp:
+ * <b data-frag="pr1">Deluxe King</b> 5n @ 289/nt  = <b data-frag="pr2">1,445</b> pp
+ * <b data-frag="pr3">airport coach</b> return  .... <b data-frag="pr4">640</b> flat
+ * gardens <b data-frag="pr5">private tour</b> 85pp
+flights held at <b data-frag="pr6">1180</b> pp (12 pax)
+rates excl GST. thx! – Lena</pre>
+                        <span class="chunk__done"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Moved to Pricing</span>
+                      </div>
+                      <div class="chunk chunk--notes" data-chunk="3">
+                        <span class="chunk__src">call-notes.txt</span>
+                        <pre>call w/ <b data-frag="in1">priya</b>, thu
+- <b data-frag="in2">12 ppl</b>, leadership team
+- somewhere <b data-frag="in3">warm</b>, not too far
+- nice hotel but budget-aware
+- <b data-frag="in4">2 free days</b> + team dinner
+- sign off before 20th!!</pre>
+                        <span class="chunk__done"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Moved to Introduction</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <svg class="wires" data-wires></svg>
+
+                <!-- Right: the QuoteCloud document -->
+                <div class="docwrap">
+                  <div class="win win--doc" data-win="doc">
+                    <div class="win__in doc" data-pan="doc">
+                      <div class="doc__band"><span class="doc__mark">M</span><b>Meridian Travel</b><span>Proposal · MT-0412</span></div>
+                      <div class="doc__cover" data-block="0">
+                        <span class="doc__kicker">Prepared for Harbour &amp; Co.</span>
+                        <span class="doc__title hx"><span class="hx__d">Leadership offsite, Singapore</span><span class="hx__b">Leadership offsite, Singapore</span></span>
+                        <span class="doc__meta">14 – 19 November · 12 travellers</span>
+                      </div>
+
+                      <div class="blk" data-block="3">
+                        <span class="doc__h hx"><span class="hx__d">Introduction</span><span class="hx__b">Introduction</span></span>
+                        <div class="rv"><svg class="ac-i" width="12" height="12"><use href="#ac-spark" /></svg><span class="rv__t">AI content · review</span><span class="rv__b rv__b--x">Reject</span><span class="rv__b">Edit</span><span class="rv__b rv__b--ok" data-accept>Accept</span><span class="rv__done"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Accepted</span></div>
+                        <div class="blk__empty"><i style="--w: 94%"></i><i style="--w: 88%"></i><i style="--w: 52%"></i></div>
+                        <div class="blk__real">
+                          <p class="intro" data-intro>Thank you for your time on Thursday, <b data-land="in1">Priya</b>. Below is a five-night leadership offsite in Singapore for your <b data-land="in2">team of twelve</b>: a short direct flight to somewhere <b data-land="in3">warm</b>, a harbourfront hotel, <b data-land="in4">two free days</b> and a team dinner on the river. Everything is priced and ready to confirm by 20 October.</p>
+                          <span class="tone">Tone · Professional</span>
+                        </div>
+                      </div>
+
+                      <div class="blk" data-block="1">
+                        <span class="doc__h hx"><span class="hx__d">Itinerary</span><span class="hx__b">Itinerary</span></span>
+                        <div class="rv"><svg class="ac-i" width="12" height="12"><use href="#ac-spark" /></svg><span class="rv__t">AI content · review</span><span class="rv__b rv__b--x">Reject</span><span class="rv__b">Edit</span><span class="rv__b rv__b--ok" data-accept>Accept</span><span class="rv__done"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Accepted</span></div>
+                        <div class="blk__empty blk__empty--box"></div>
+                        <div class="blk__real segs">
+                          <div class="seg">
+                            <span class="seg__ic"><svg class="ac-i" width="15" height="15"><use href="#ac-plane" /></svg></span>
+                            <div class="seg__main"><b>Sydney → Singapore</b><span>Flight <i data-land="it1">QC 214</i> · Economy · 30 kg</span></div>
+                            <div class="seg__time"><b data-land="it3">09:40 – 15:05</b><span data-land="it2">Fri 14 Nov</span></div>
+                          </div>
+                          <div class="seg">
+                            <span class="seg__ic"><svg class="ac-i" width="15" height="15"><use href="#ac-plane" /></svg></span>
+                            <div class="seg__main"><b>Singapore → Sydney</b><span>Flight <i data-land="it4">QC 215</i> · Economy · 30 kg</span></div>
+                            <div class="seg__time"><b data-land="it6">21:10 – 07:40<sup>+1</sup></b><span data-land="it5">Wed 19 Nov</span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="blk" data-block="2">
+                        <span class="doc__h hx"><span class="hx__d">Your investment</span><span class="hx__b">Your investment</span></span>
+                        <div class="rv"><svg class="ac-i" width="12" height="12"><use href="#ac-spark" /></svg><span class="rv__t">AI content · review</span><span class="rv__b rv__b--x">Reject</span><span class="rv__b">Edit</span><span class="rv__b rv__b--ok" data-accept>Accept</span><span class="rv__done"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Accepted</span></div>
+                        <div class="blk__empty blk__empty--box blk__empty--tall"></div>
+                        <div class="blk__real pt">
+                          <div class="pt__row pt__row--head"><span>Item</span><span>Qty</span><span>Price</span><span>Total</span></div>
+                          <div class="pt__row"><span data-land="pr6">Return flights SYD–SIN</span><span>12</span><span>$1,180</span><span>$14,160</span></div>
+                          <div class="pt__row"><span data-land="pr1">Deluxe King, 5 nights</span><span>12</span><span data-land="pr2">$1,445</span><span>$17,340</span></div>
+                          <div class="pt__row"><span data-land="pr3">Airport transfers</span><span>1</span><span data-land="pr4">$640</span><span>$640</span></div>
+                          <div class="pt__row"><span data-land="pr5">Private garden tour</span><span>12</span><span>$85</span><span>$1,020</span></div>
+                          <div class="pt__sum"><span>Subtotal</span><span>$33,160</span></div>
+                          <div class="pt__sum"><span>GST 10%</span><span>$3,316</span></div>
+                          <div class="pt__sum pt__sum--total"><span>Total (AUD)</span><span data-total>$36,476</span></div>
+                        </div>
+                      </div>
+
+                      <div class="sign" data-block="6">
+                        <div class="sign__box">
+                          <svg class="sign__ink" viewBox="0 0 220 60" fill="none"><path pathLength="1" d="M8 42c10-20 22-32 28-28 6 4-8 30-2 32 7 2 16-30 24-28 7 2 0 24 6 24 6 0 12-18 20-18 7 0 2 14 9 14 9 0 17-14 27-14 8 0 6 10 14 10 10 0 22-8 34-12 12-4 24-6 40-6" /></svg>
+                          <span class="sign__line"></span>
+                          <span class="sign__who">Priya Shah · Harbour &amp; Co.</span>
+                        </div>
+                        <div class="sign__meta">
+                          <span class="sign__st" data-st="1"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Sent</span>
+                          <span class="sign__st" data-st="2"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Viewed</span>
+                          <span class="sign__st" data-st="3"><svg class="ac-i" width="12" height="12"><use href="#ac-check" /></svg>Signed</span>
+                        </div>
+                      </div>
+                    </div>
+                    <svg class="stage__cursor" width="22" height="22" data-cursor><use href="#ac-cursor" /></svg>
+                    <div class="scan" data-scan></div>
+                  </div>
+                </div>
+
+                <!-- Bottom: the AI Coworker prompt -->
+                <div class="ask">
+                  <svg class="ask__spark" width="16" height="16"><use href="#ac-spark" /></svg>
+                  <span class="ask__text" data-ask>Ask AI Coworker</span>
+                  <span class="ask__status" data-ask-status></span>
+                  <span class="ask__send"><svg class="ac-i" width="14" height="14"><use href="#ac-send" /></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Human + AI ───────────── -->
+      <section class="trust" aria-labelledby="trust-title">
+        <div class="trust__inner qc-container" data-reveal>
+          <h2 id="trust-title">The AI drafts. <em>Your team decides.</em></h2>
+          <p>AI Co-Worker enhances your team, it doesn't replace it. Edit, refine and approve everything before it's sent, and use it as a starting point or a finishing tool.</p>
+          <div class="review" aria-hidden="true" data-review>
+            <svg class="review__spark" width="18" height="18"><use href="#ac-spark" /></svg>
+            <span class="review__msg">This segment was generated by your AI Coworker from your supplied information. Please review carefully and either Accept, Edit, or Reject.</span>
+            <span class="review__btns">
+              <span class="review__b review__b--x"><svg class="ac-i" width="13" height="13"><use href="#ac-x" /></svg>Reject</span>
+              <span class="review__b"><svg class="ac-i" width="13" height="13"><use href="#ac-pen" /></svg>Edit</span>
+              <span class="review__b review__b--ok"><svg class="ac-i" width="13" height="13"><use href="#ac-check" /></svg>Accept</span>
+            </span>
+          </div>
+          <div class="trust__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-story">Start free 14-day trial <svg class="qc-btn__arrow ac-i" width="18" height="18" aria-hidden="true"><use href="#ac-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="after-story-demo">See it in a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Tone, rules and plain-language requests ───────────── -->
+      <section class="ask-sec" aria-labelledby="ask-title">
+        <div class="ask-sec__head qc-container" data-reveal>
+          <h2 id="ask-title">Set the tone once. <em>Then just ask.</em></h2>
+          <p>Tone, Assistant Rules and About You keep every rep's drafts on-brand. Pricing changes happen in plain words, with undo.</p>
+        </div>
+        <div class="ask-sec__grid qc-container" data-reveal-stagger="120">
+          <!-- Settings card -->
+          <div class="card set" data-reveal data-settings>
+            <div class="card__head"><svg class="ai__spark" width="16" height="16" aria-hidden="true"><use href="#ac-spark" /></svg><b>AI Coworker</b><span>Settings</span></div>
+            <fieldset class="set__tone">
+              <legend>Tone</legend>
+              <div class="set__opts">
+                <label><input type="radio" name="ac-tone" value="neutral" /><span>Neutral</span></label>
+                <label><input type="radio" name="ac-tone" value="friendly" /><span>Friendly</span></label>
+                <label><input type="radio" name="ac-tone" value="professional" checked /><span>Professional</span></label>
+                <label><input type="radio" name="ac-tone" value="concise" /><span>Concise</span></label>
+                <label><input type="radio" name="ac-tone" value="persuasive" /><span>Persuasive</span></label>
+                <label><input type="radio" name="ac-tone" value="technical" /><span>Technical</span></label>
+              </div>
+            </fieldset>
+            <div class="set__field">
+              <span class="set__label">Assistant Rules</span>
+              <p class="set__val">Always mention our 30-day price hold. Use bullet points when helpful. Avoid jargon.</p>
+            </div>
+            <div class="set__field">
+              <span class="set__label">About You</span>
+              <p class="set__val">Corporate travel consultant. Groups of 10 to 40.</p>
+            </div>
+            <div class="set__preview">
+              <span class="set__label">Introduction preview</span>
+              <p class="set__out" data-tone-out aria-live="polite">Please find our proposal for a five-night leadership offsite in Singapore for 12 attendees, covering return flights, harbourfront accommodation, transfers and a private garden tour. Prices are held for 30 days.</p>
+            </div>
+          </div>
+
+          <!-- Pricing request card -->
+          <div class="card req" data-reveal data-pricing>
+            <div class="card__head"><svg class="ac-i req__ic" width="16" height="16" aria-hidden="true"><use href="#ac-table" /></svg><b>Pricing table</b><span>Singapore offsite</span></div>
+            <div class="mt" data-mt>
+              <div class="mt__row mt__row--head"><span>Item</span><span>Qty</span><span>Total</span></div>
+              <div class="mt__row" data-row="flights"><span>Return flights SYD–SIN</span><span class="mt__qty"><i>−</i>12<i>+</i></span><span>$14,160</span></div>
+              <div class="mt__row" data-row="hotel"><span>Deluxe King, 5 nights</span><span class="mt__qty"><i>−</i>12<i>+</i></span><span>$17,340</span></div>
+              <div class="mt__row" data-row="coach"><span>Airport transfers</span><span class="mt__qty"><i>−</i>1<i>+</i></span><span>$640</span></div>
+              <div class="mt__row" data-row="tour"><span><em class="mt__opt" aria-hidden="true"></em>Private garden tour<small>Optional</small></span><span class="mt__qty"><i>−</i>12<i>+</i></span><span>$1,020</span></div>
+              <div class="mt__row mt__row--new" data-row="ins"><span>Travel insurance, comprehensive</span><span class="mt__qty"><i>−</i>12<i>+</i></span><span>$1,140</span></div>
+              <div class="mt__total"><span>Total incl. GST</span><b data-mt-total>$36,476</b></div>
+            </div>
+            <div class="req__chat">
+              <p class="req__reply" data-reply aria-live="polite">Ask for a change and the table updates.</p>
+              <button type="button" class="req__undo" data-undo hidden><svg class="ac-i" width="14" height="14" aria-hidden="true"><use href="#ac-undo" /></svg>Undo</button>
+            </div>
+            <div class="req__chips" role="group" aria-label="Try a pricing request">
+              <button type="button" class="req__chip" data-cmd="ins">Add travel insurance from the catalogue</button>
+              <button type="button" class="req__chip" data-cmd="opt">Make the garden tour optional</button>
+              <button type="button" class="req__chip" data-cmd="qty">Let the client change quantity</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Works with your content + proof ───────────── -->
+      <section class="works" aria-labelledby="works-title">
+        <div class="works__inner qc-container">
+          <h2 id="works-title" data-reveal>Works with what you <em>already have</em></h2>
+          <ul class="works__list" data-reveal-stagger="70">
+            <li data-reveal><a href="https://www.quote.cloud/templates"><svg class="ac-i" width="22" height="22" aria-hidden="true"><use href="#ac-doc" /></svg><b>Templates</b><span>Every draft starts on-brand</span></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud"><svg class="ac-i" width="22" height="22" aria-hidden="true"><use href="#ac-layers" /></svg><b>Content library</b><span>Approved, reusable content</span></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/cpq-software"><svg class="ac-i" width="22" height="22" aria-hidden="true"><use href="#ac-box" /></svg><b>Product catalogue</b><span>Your real products and prices</span></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/quoting-software"><svg class="ac-i" width="22" height="22" aria-hidden="true"><use href="#ac-table" /></svg><b>Pricing tables</b><span>Quantities, tax, optional items</span></a></li>
+            <li data-reveal><a href="https://www.quote.cloud/document-generation-software"><svg class="ac-i" width="22" height="22" aria-hidden="true"><use href="#ac-brace" /></svg><b>Document fields</b><span>Client and deal data</span></a></li>
+          </ul>
+          <div class="proof" data-reveal>
+            <span class="proof__rate"><svg class="ac-i" width="15" height="15" aria-hidden="true"><use href="#ac-star" /></svg><b>4.2</b> Capterra</span>
+            <span class="proof__rate"><svg class="ac-i" width="15" height="15" aria-hidden="true"><use href="#ac-star" /></svg><b>4.2</b> Software Advice</span>
+            <span class="proof__sep" aria-hidden="true"></span>
+            <span class="proof__badges">
+              <img src="/assets/compliance/eidas.svg" alt="eIDAS compliant" width="91" height="90" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" alt="256-bit encryption" width="320" height="305" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" alt="Hosted on AWS" width="91" height="90" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/gdpr.png" alt="GDPR" width="319" height="320" loading="lazy" decoding="async" />
+            </span>
+            <span class="proof__since">Helping teams quote since 2013</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-ai-coworker -->
+
+      <!-- ───────────── Closing CTA ───────────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="close__panel qc-container" data-reveal>
+          <div class="close__mess" aria-hidden="true">
+            <span>14NOV SYDSIN 0940</span><span>deluxe king 5n @ 289</span><span>2 free days + dinner</span><span>pls confirm names</span>
+          </div>
+          <h2 id="close-title">Hand your next messy brief to <em>your AI Co-Worker</em></h2>
+          <p>Paste it in, review what it builds, and send a proposal you're proud of.</p>
+          <div class="close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow ac-i" width="18" height="18" aria-hidden="true"><use href="#ac-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="close__note">No credit card required · <a href="https://www.quote.cloud/proposal-software">Explore proposal software</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-cpq -->
+  </head>
+  <body class="c2">
+    <!-- @include header -->
+
+    <svg class="c2-sprite" aria-hidden="true" focusable="false">
+      <symbol id="c2-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="c2-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="c2-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+      <symbol id="c2-lock" viewBox="0 0 24 24"><rect x="4.5" y="11" width="15" height="10" rx="2" /><path d="M8 11V7.5a4 4 0 0 1 8 0V11" /></symbol>
+      <symbol id="c2-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="c2-fibre" viewBox="0 0 24 24"><path d="M3 8c3-3 6 3 9 0s6 3 9 0M3 16c3-3 6 3 9 0s6 3 9 0" /></symbol>
+      <symbol id="c2-wan" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.5" /><circle cx="19" cy="6" r="2.5" /><circle cx="19" cy="18" r="2.5" /><path d="M7.3 11 16.7 7M7.3 13l9.4 4" /></symbol>
+      <symbol id="c2-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.8 12.6a9 9 0 0 1 12.4 0M9.2 16.1a4 4 0 0 1 5.6 0" /><circle cx="12" cy="19.4" r="1" /></symbol>
+      <symbol id="c2-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5" /><path d="M10.5 18.5h3" /></symbol>
+      <symbol id="c2-sim" viewBox="0 0 24 24"><path d="M6 3.5h8.5L19 8v12.5H6z" /><rect x="9" y="11" width="7" height="6.5" rx="1" /></symbol>
+      <symbol id="c2-cloud" viewBox="0 0 24 24"><path d="M7 18.5a4.5 4.5 0 0 1-.6-9 6 6 0 0 1 11.5 1.6A3.8 3.8 0 0 1 17.5 18.5z" /></symbol>
+      <symbol id="c2-tool" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5a4 4 0 0 0-2-2z" /></symbol>
+      <symbol id="c2-rule" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" /><circle cx="16" cy="7" r="2" /><circle cx="8" cy="17" r="2" /></symbol>
+      <symbol id="c2-fx" viewBox="0 0 24 24"><path d="M10 20c1.5 0 2-1 2.4-3l1.8-10c.4-2 1-3 2.6-3M8.5 10h7M14 14l5 5M19 14l-5 5" /></symbol>
+      <symbol id="c2-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></symbol>
+      <symbol id="c2-layers" viewBox="0 0 24 24"><path d="M12 3 21 8l-9 5-9-5z" /><path d="M3 12.5 12 17.5l9-5M3 16.5l9 5 9-5" /></symbol>
+      <symbol id="c2-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.5 1.1 6.3L12 17.3l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── The film: hero + three acts on one pinned stage (chaos → structure) ───────── -->
+      <div class="c2-film" data-film>
+        <div class="c2-film__pin" data-pin>
+          <div class="c2-film__copy">
+            <section class="c2-hero" aria-labelledby="c2-title" data-copy="0">
+              <h1 class="c2-hero__title" id="c2-title"><em>CPQ software</em> that brings order to complex deals.</h1>
+              <p class="c2-hero__lede">Configure, price, quote: products, pricing rules and approvals snap into one accurate, client-ready quote.</p>
+              <div class="c2-hero__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#c2-arrow" /></svg></a>
+                <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+              </div>
+              <p class="c2-hero__note">
+                <span>No credit card required</span>
+                <span class="c2-hero__rating"><svg width="14" height="14" aria-hidden="true"><use href="#c2-star" /></svg> 4.2 on Capterra</span>
+                <span>Works with your CRM</span>
+              </p>
+              <p class="c2-hero__cue" aria-hidden="true"><span class="c2-hero__cue-line"></span>Scroll to assemble the deal</p>
+            </section>
+
+            <section class="c2-act" id="configure" aria-labelledby="c2-act1-title" data-copy="1">
+              <h2 class="c2-act__title" id="c2-act1-title">Configure with <em>confidence.</em></h2>
+              <p class="c2-act__lede">Rule-based product configuration adds what each option requires and blocks combinations you don't sell, so every configuration is valid.</p>
+              <figure class="c2-pair" role="img" aria-label="Before: loose products and options. After: a valid configuration where Business Fibre is added because Managed Wi-Fi requires it, and an incompatible option is blocked.">
+                <div class="c2-pair__before" aria-hidden="true">
+                  <span class="c2-chip" style="--px: 6%; --py: 12%; --pr: -10deg">Managed Wi-Fi</span>
+                  <span class="c2-chip" style="--px: 50%; --py: 6%; --pr: 8deg">SD-WAN edge</span>
+                  <span class="c2-chip" style="--px: 30%; --py: 40%; --pr: -4deg">5G handset ×60</span>
+                  <span class="c2-chip c2-chip--warn" style="--px: 56%; --py: 52%; --pr: 12deg">Consumer NBN 100</span>
+                  <span class="c2-chip" style="--px: 4%; --py: 70%; --pr: 6deg">Cloud workspace</span>
+                  <span class="c2-chip c2-chip--ghost" style="--px: 64%; --py: 80%; --pr: -14deg">?</span>
+                </div>
+                <span class="c2-pair__arrow" aria-hidden="true"><svg width="20" height="20"><use href="#c2-arrow" /></svg></span>
+                <div class="c2-pair__after c2-mtree" aria-hidden="true">
+                  <p class="c2-mtree__root">Meridian Freight <small>Multi-site solution</small></p>
+                  <div class="c2-mtree__group"><b>Connectivity</b><span class="c2-chip">SD-WAN edge</span><span class="c2-chip c2-chip--auto">Business Fibre <i>Auto-added</i></span></div>
+                  <div class="c2-mtree__group"><b>Mobility</b><span class="c2-chip">5G handset ×60</span><span class="c2-chip">Voice &amp; data ×60</span></div>
+                  <div class="c2-mtree__group"><b>Services</b><span class="c2-chip">Cloud workspace</span><span class="c2-chip c2-chip--src">Managed Wi-Fi</span></div>
+                  <p class="c2-mtree__log"><span class="c2-ok"><svg width="12" height="12"><use href="#c2-check" /></svg></span>Business Fibre added: required by Managed Wi-Fi</p>
+                  <p class="c2-mtree__log"><span class="c2-no"><svg width="12" height="12"><use href="#c2-x" /></svg></span>Consumer NBN 100 blocked: not compatible with SD-WAN</p>
+                </div>
+              </figure>
+            </section>
+
+            <section class="c2-act" id="price" aria-labelledby="c2-act2-title" data-copy="2">
+              <h2 class="c2-act__title" id="c2-act2-title">Price with <em>precision.</em></h2>
+              <p class="c2-act__lede">The pricing engine applies tiers, region, contract term and customer contract pricing in real time, with margin visible only to your team.</p>
+              <figure class="c2-pair" role="img" aria-label="Before: loose prices, tiers, terms and discounts. After: a multi-layered price table with tier, contract-term, contract-price and spreadsheet rules applied, monthly and once-off totals, and internal margin.">
+                <div class="c2-pair__before" aria-hidden="true">
+                  <span class="c2-chip" style="--px: 8%; --py: 10%; --pr: 9deg">$38</span>
+                  <span class="c2-chip" style="--px: 46%; --py: 8%; --pr: -12deg">50+ seats</span>
+                  <span class="c2-chip" style="--px: 22%; --py: 42%; --pr: 5deg">12 · 24 · 36 mo</span>
+                  <span class="c2-chip" style="--px: 62%; --py: 46%; --pr: 14deg">−12%</span>
+                  <span class="c2-chip" style="--px: 6%; --py: 74%; --pr: -7deg">= B4 × C4</span>
+                  <span class="c2-chip" style="--px: 58%; --py: 78%; --pr: 6deg">AUD</span>
+                </div>
+                <span class="c2-pair__arrow" aria-hidden="true"><svg width="20" height="20"><use href="#c2-arrow" /></svg></span>
+                <div class="c2-pair__after c2-mtable" aria-hidden="true">
+                  <p class="c2-mtable__row"><span>Business Fibre ×6</span><i class="c2-rulechip"><svg width="11" height="11"><use href="#c2-fx" /></svg>Sites × Rate</i><b>$1,140</b></p>
+                  <p class="c2-mtable__row"><span>5G handset ×60</span><i class="c2-rulechip">Term 24 mo</i><b>$2,520</b></p>
+                  <p class="c2-mtable__row"><span>Voice &amp; data ×60</span><i class="c2-rulechip">Tier 50+ seats</i><b>$2,100</b></p>
+                  <p class="c2-mtable__row"><span>Cloud workspace ×60</span><i class="c2-rulechip">Contract −12%</i><b>$1,320</b></p>
+                  <p class="c2-mtable__sum"><span>Monthly <b>$7,980</b></span><span>Once-off <b>$2,700</b></span><span class="c2-mtable__margin"><svg width="12" height="12"><use href="#c2-eye" /></svg>Margin 34%</span></p>
+                </div>
+              </figure>
+            </section>
+
+            <section class="c2-act" id="quote" aria-labelledby="c2-act3-title" data-copy="3">
+              <h2 class="c2-act__title" id="c2-act3-title">Quote at <em>speed.</em></h2>
+              <p class="c2-act__lede">A branded quote generates itself, clears approval workflows set on your thresholds, with backup approvers, and lands ready to sign.</p>
+              <figure class="c2-pair" role="img" aria-label="Before: a draft price table waiting on two approvals. After: a branded quote for Meridian Freight approved by a manager and a backup commercial approver, ready to sign.">
+                <div class="c2-pair__before" aria-hidden="true">
+                  <span class="c2-chip" style="--px: 6%; --py: 12%; --pr: -8deg">Draft v1.0</span>
+                  <span class="c2-chip c2-chip--ghost" style="--px: 48%; --py: 10%; --pr: 10deg">? Manager</span>
+                  <span class="c2-chip c2-chip--ghost" style="--px: 20%; --py: 46%; --pr: 4deg">? Commercial</span>
+                  <span class="c2-chip" style="--px: 60%; --py: 50%; --pr: -12deg">Price table</span>
+                  <span class="c2-chip" style="--px: 10%; --py: 78%; --pr: 7deg">Unsigned</span>
+                </div>
+                <span class="c2-pair__arrow" aria-hidden="true"><svg width="20" height="20"><use href="#c2-arrow" /></svg></span>
+                <div class="c2-pair__after c2-mdoc" aria-hidden="true">
+                  <p class="c2-mdoc__brand"><i>A</i>Atlas Networks <small>Q-2207 · v1.3</small></p>
+                  <p class="c2-mdoc__title">Multi-site connectivity proposal <small>Prepared for Meridian Freight</small></p>
+                  <p class="c2-mdoc__total"><span>Monthly <b>$7,980</b></span><span>Once-off <b>$2,700</b></span></p>
+                  <p class="c2-mdoc__gates"><span><svg width="11" height="11"><use href="#c2-check" /></svg>Manager</span><span><svg width="11" height="11"><use href="#c2-check" /></svg>Commercial <small>backup</small></span></p>
+                  <p class="c2-mdoc__sign"><svg viewBox="0 0 120 30" width="96" height="24"><path d="M4 22c8-14 14-16 14-8s-4 10 2 4 10-14 14-10-2 12 4 8 8-8 12-6 4 6 10 2 10-6 16-4" /></svg>Accept &amp; sign</p>
+                </div>
+              </figure>
+            </section>
+
+            <nav class="c2-rail" aria-label="Configure, price, quote" data-rail>
+              <button type="button" data-goto="1"><span class="c2-rail__label">Configure</span><span class="c2-rail__bar"><i data-fill="1"></i></span></button>
+              <button type="button" data-goto="2"><span class="c2-rail__label">Price</span><span class="c2-rail__bar"><i data-fill="2"></i></span></button>
+              <button type="button" data-goto="3"><span class="c2-rail__label">Quote</span><span class="c2-rail__bar"><i data-fill="3"></i></span></button>
+            </nav>
+          </div>
+
+          <!-- The stage: decorative, all copy lives in the sections above -->
+          <div class="c2-film__stage" data-stagewrap aria-hidden="true">
+            <div class="c2-stage" data-stage>
+              <div class="c2-stage__grid" data-layer="grid"></div>
+
+              <!-- Act 1 layer: configuration tree -->
+              <div class="c2-tree" data-layer="tree">
+                <svg class="c2-tree__links" viewBox="0 0 640 600" width="640" height="600">
+                  <path data-draw="root" pathLength="1" d="M320 68 C320 92, 104 88, 104 112" />
+                  <path data-draw="root" pathLength="1" d="M320 68 V112" />
+                  <path data-draw="root" pathLength="1" d="M320 68 C320 92, 536 88, 536 112" />
+                  <path data-draw="chain" pathLength="1" d="M104 140 V156 M104 196 V208" />
+                  <path data-draw="chain" pathLength="1" d="M320 140 V156 M320 196 V208" />
+                  <path data-draw="chain" pathLength="1" d="M536 140 V156 M536 196 V208 M536 248 V260" />
+                  <path class="c2-tree__dep" data-draw="dep" pathLength="1" d="M536 300 C536 352, 104 352, 104 248" />
+                </svg>
+                <span class="c2-tree__group" style="left: 16px">Connectivity</span>
+                <span class="c2-tree__group" style="left: 232px">Mobility</span>
+                <span class="c2-tree__group" style="left: 448px">Services</span>
+                <span class="c2-tree__req">Requires</span>
+                <span class="c2-tree__tray">Pricing rules</span>
+              </div>
+
+              <!-- Act 2 layer: multi-layered price table -->
+              <div class="c2-table" data-layer="table">
+                <div class="c2-table__head"><span>Item</span><span>Qty</span><span>Unit</span><span>Rules applied</span><span>Total / mo</span></div>
+                <span class="c2-table__group" style="top: 100px">Monthly</span>
+                <div class="c2-row" style="top: 120px"><span class="c2-row__q">6</span><span class="c2-row__u">$190</span><span class="c2-row__t">$1,140</span></div>
+                <div class="c2-row" style="top: 166px"><span class="c2-row__q">6</span><span class="c2-row__u">$85</span><span class="c2-row__t">$510</span></div>
+                <div class="c2-row" style="top: 212px"><span class="c2-row__q">6</span><span class="c2-row__u">$65</span><span class="c2-row__t">$390</span></div>
+                <div class="c2-row" data-row="term" style="top: 258px"><span class="c2-row__q">60</span><span class="c2-row__u"><s>$68</s><b>$42</b></span><span class="c2-row__t"><s>$4,080</s><b>$2,520</b></span></div>
+                <div class="c2-row" data-row="tier" style="top: 304px"><span class="c2-row__q">60</span><span class="c2-row__u"><s>$38</s><b>$35</b></span><span class="c2-row__t"><s>$2,280</s><b>$2,100</b></span></div>
+                <div class="c2-row" data-row="contract" style="top: 350px"><span class="c2-row__q">60</span><span class="c2-row__u"><s>$25</s><b>$22</b></span><span class="c2-row__t"><s>$1,500</s><b>$1,320</b></span></div>
+                <span class="c2-table__group" style="top: 398px">Once-off</span>
+                <div class="c2-row" style="top: 418px"><span class="c2-row__q">6</span><span class="c2-row__u">$450</span><span class="c2-row__t">$2,700</span></div>
+                <div class="c2-table__sum">
+                  <p class="c2-table__val"><small>Monthly (AUD)</small><b data-monthly>$9,900</b></p>
+                  <p class="c2-table__val"><small>Once-off</small><b>$2,700</b></p>
+                  <div class="c2-gauge">
+                    <svg viewBox="0 0 52 52" width="52" height="52"><circle cx="26" cy="26" r="21" /><circle class="c2-gauge__arc" data-gauge cx="26" cy="26" r="21" pathLength="100" /></svg>
+                    <p><b>34%</b><small><svg width="11" height="11"><use href="#c2-eye" /></svg>Margin · internal</small></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Act 3 layer: approval gates + the finished document -->
+              <div class="c2-gates" data-layer="gates">
+                <span class="c2-gates__track"></span>
+                <div class="c2-gate" data-gate="1" style="left: 250px">
+                  <p class="c2-gate__who"><span class="c2-av" style="--av: #5b3df5">MK</span><span class="c2-gate__state"></span></p>
+                  <p class="c2-gate__label"><b>Manager</b><small>Deal over $5k / mo</small></p>
+                  <span class="c2-gate__line"></span>
+                </div>
+                <div class="c2-gate" data-gate="2" style="left: 420px">
+                  <p class="c2-gate__who"><span class="c2-av c2-av--away" style="--av: #8a8b92">RO</span><span class="c2-av c2-av--backup" style="--av: #1fbf8f">LC</span><span class="c2-gate__state"></span></p>
+                  <p class="c2-gate__label"><b>Commercial</b><small class="c2-gate__away">R. Okafor away</small><small class="c2-gate__bk">Backup: L. Chen</small></p>
+                  <span class="c2-gate__line"></span>
+                </div>
+              </div>
+
+              <div class="c2-doc" data-doc>
+                <div class="c2-doc__band"><span class="c2-doc__logo"><i>A</i>Atlas Networks</span><span class="c2-doc__status">Ready to send</span></div>
+                <p class="c2-doc__kicker">Q-2207 · v1.3</p>
+                <p class="c2-doc__title">Multi-site connectivity proposal</p>
+                <p class="c2-doc__for">Prepared for Meridian Freight</p>
+                <div class="c2-doc__lines">
+                  <p><span>Connectivity &amp; managed Wi-Fi</span><b>$2,040/mo</b></p>
+                  <p><span>Mobility · 60 seats · 24 mo</span><b>$4,620/mo</b></p>
+                  <p><span>Cloud workspace · contract price</span><b>$1,320/mo</b></p>
+                  <p><span>Install &amp; onboarding</span><b>$2,700</b></p>
+                </div>
+                <p class="c2-doc__total"><span>Monthly <b>$7,980</b></span><span>Once-off <b>$2,700</b></span></p>
+                <p class="c2-doc__approvals"><span><svg width="10" height="10"><use href="#c2-check" /></svg>Manager</span><span><svg width="10" height="10"><use href="#c2-check" /></svg>Commercial</span></p>
+                <div class="c2-doc__sign">
+                  <svg viewBox="0 0 160 40" width="160" height="40"><path pathLength="1" d="M6 30c10-18 18-22 18-11s-5 14 3 6 13-19 18-13-2 15 5 10 10-10 15-8 6 8 13 3 13-8 21-5 10 4 20-2" /></svg>
+                  <span>Accept &amp; sign</span>
+                </div>
+              </div>
+
+              <!-- Fragments: inline vars are the exploded (no-JS) pose; main.ts animates them -->
+              <div class="c2-frag c2-frag--root" data-frag="root" style="--x: 196; --y: 250; --r: -4; --s: 1.06; --w: 232"><div class="c2-frag__in"><i class="c2-frag__mark">M</i><span><b>Meridian Freight</b><small>Multi-site solution · Atlas Networks</small></span></div></div>
+
+              <div class="c2-frag c2-frag--item" data-frag="sdwan" style="--x: 392; --y: 42; --r: 9; --s: 0.86; --o: 0.85"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #2ba8f0"><svg width="14" height="14"><use href="#c2-wan" /></svg></i><span><b>SD-WAN edge</b><small>6 sites</small></span></div></div>
+              <div class="c2-frag c2-frag--item" data-frag="fibre" style="--x: 30; --y: 96; --r: -12; --s: 0.96"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #2ba8f0"><svg width="14" height="14"><use href="#c2-fibre" /></svg></i><span><b>Business Fibre</b><small>1 Gbps · 6 sites</small></span><em class="c2-frag__tag">Auto-added</em></div></div>
+              <div class="c2-frag c2-frag--item" data-frag="wifi" style="--x: 424; --y: 172; --r: -7; --s: 1.04"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #5b3df5"><svg width="14" height="14"><use href="#c2-wifi" /></svg></i><span><b>Managed Wi-Fi</b><small>6 sites</small></span></div></div>
+              <div class="c2-frag c2-frag--item" data-frag="handset" style="--x: 50; --y: 384; --r: 8; --s: 1"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #e25b01"><svg width="14" height="14"><use href="#c2-phone" /></svg></i><span><b>5G handset</b><small>60 devices</small></span></div></div>
+              <div class="c2-frag c2-frag--item" data-frag="voice" style="--x: 336; --y: 396; --r: -10; --s: 0.94"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #e25b01"><svg width="14" height="14"><use href="#c2-sim" /></svg></i><span><b>Voice &amp; data plan</b><small>60 seats</small></span></div></div>
+              <div class="c2-frag c2-frag--item" data-frag="cloud" style="--x: 150; --y: 516; --r: 5; --s: 0.84; --o: 0.8"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #1fbf8f"><svg width="14" height="14"><use href="#c2-cloud" /></svg></i><span><b>Cloud workspace</b><small>60 seats</small></span></div></div>
+              <div class="c2-frag c2-frag--item" data-frag="install" style="--x: 446; --y: 300; --r: 13; --s: 0.9"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #1fbf8f"><svg width="14" height="14"><use href="#c2-tool" /></svg></i><span><b>Install &amp; onboarding</b><small>Once-off · 6 sites</small></span></div></div>
+              <div class="c2-frag c2-frag--item c2-frag--bad" data-frag="nbn" style="--x: 12; --y: 236; --r: 10; --s: 0.92"><div class="c2-frag__in"><i class="c2-ic" style="--ic: #8a8b92"><svg width="14" height="14"><use href="#c2-fibre" /></svg></i><span><b>Consumer NBN 100</b><small>1 site</small></span><em class="c2-frag__tag">Not compatible</em></div></div>
+
+              <div class="c2-frag c2-frag--rule" data-frag="region" style="--x: 246; --y: 150; --r: 14; --s: 1; --w: 118"><div class="c2-frag__in"><svg width="12" height="12"><use href="#c2-rule" /></svg>Region: APAC</div></div>
+              <div class="c2-frag c2-frag--rule" data-frag="tier" style="--x: 468; --y: 486; --r: -9; --s: 0.95; --w: 128"><div class="c2-frag__in"><svg width="12" height="12"><use href="#c2-rule" /></svg>Tier: 50+ seats</div></div>
+              <div class="c2-frag c2-frag--rule" data-frag="term" style="--x: 196; --y: 36; --r: -16; --s: 0.86; --o: 0.85; --w: 108"><div class="c2-frag__in"><svg width="12" height="12"><use href="#c2-rule" /></svg>Term: 24 mo</div></div>
+              <div class="c2-frag c2-frag--rule" data-frag="contract" style="--x: 34; --y: 470; --r: 12; --s: 0.92; --w: 120"><div class="c2-frag__in"><svg width="12" height="12"><use href="#c2-rule" /></svg>Contract −12%</div></div>
+              <div class="c2-frag c2-frag--rule c2-frag--cell" data-frag="cell" style="--x: 300; --y: 548; --r: -6; --s: 0.86; --w: 150"><div class="c2-frag__in"><svg width="12" height="12"><use href="#c2-fx" /></svg>C4 = Sites × Rate</div></div>
+              <div class="c2-frag c2-frag--rule c2-frag--ask" data-frag="approval" style="--x: 520; --y: 104; --r: 18; --s: 0.92; --w: 112"><div class="c2-frag__in"><b class="c2-frag__q">?</b><span class="c2-frag__ask-a">Approval</span><span class="c2-frag__ask-b">Needs approval</span></div></div>
+
+              <span class="c2-frag c2-frag--bit" data-frag="b1" data-parent="fibre" style="--x: 300; --y: 216; --r: 20; --s: 0.8; --o: 0.6; --w: 64"><span class="c2-frag__in">FBR-1G</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b2" data-parent="sdwan" style="--x: 120; --y: 20; --r: -8; --s: 0.72; --o: 0.5; --w: 60"><span class="c2-frag__in">SDW-E2</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b3" data-parent="wifi" style="--x: 566; --y: 250; --r: -14; --s: 0.8; --o: 0.6; --w: 64"><span class="c2-frag__in">WIFI-M</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b4" data-parent="handset" style="--x: 14; --y: 330; --r: 22; --s: 0.72; --o: 0.5; --w: 56"><span class="c2-frag__in">5G-HS</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b5" data-parent="voice" style="--x: 252; --y: 336; --r: -20; --s: 0.9; --o: 0.7; --w: 52"><span class="c2-frag__in">$38</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b6" data-parent="cloud" style="--x: 566; --y: 404; --r: 10; --s: 0.76; --o: 0.55; --w: 58"><span class="c2-frag__in">CW-60</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b7" data-parent="install" style="--x: 330; --y: 486; --r: -12; --s: 0.72; --o: 0.5; --w: 52"><span class="c2-frag__in">INS-6</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b8" data-parent="term" style="--x: 136; --y: 180; --r: 7; --s: 0.9; --o: 0.8; --w: 96"><span class="c2-frag__in">12 · 24 · 36</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b9" data-parent="region" style="--x: 520; --y: 28; --r: -10; --s: 0.8; --o: 0.6; --w: 46"><span class="c2-frag__in">AUD</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b10" data-parent="contract" style="--x: 196; --y: 452; --r: 16; --s: 0.86; --o: 0.7; --w: 52"><span class="c2-frag__in">−12%</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b11" data-parent="tier" style="--x: 580; --y: 172; --r: 24; --s: 0.9; --o: 0.7; --w: 44"><span class="c2-frag__in">50+</span></span>
+              <span class="c2-frag c2-frag--bit" data-frag="b12" data-parent="cell" style="--x: 96; --y: 298; --r: -18; --s: 0.84; --o: 0.7; --w: 76"><span class="c2-frag__in">=B4*C4</span></span>
+
+              <!-- Rule log: why each rule fired -->
+              <div class="c2-log">
+                <p class="c2-log__line" data-log="1"><span class="c2-no"><svg width="12" height="12"><use href="#c2-x" /></svg></span>Consumer NBN 100 blocked: not compatible with SD-WAN</p>
+                <p class="c2-log__line" data-log="2"><span class="c2-ok"><svg width="12" height="12"><use href="#c2-check" /></svg></span>Business Fibre added: required by Managed Wi-Fi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───────── Close: the customer's interactive price table ───────── -->
+      <section class="c2-close" id="close" aria-labelledby="c2-close-title">
+        <div class="qc-container c2-close__inner">
+          <div class="c2-close__copy" data-reveal>
+            <h2 class="c2-close__title" id="c2-close-title">Customers choose options, <em>sign and pay</em> in one place.</h2>
+            <p class="c2-close__lede">Interactive price tables let buyers add optional items and set quantities before they accept, e-sign and pay online with Stripe or PayPal.</p>
+            <div class="c2-close__ctas">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial <svg class="qc-btn__arrow" width="16" height="16" aria-hidden="true"><use href="#c2-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+            </div>
+            <a class="c2-textlink" href="https://www.quote.cloud/electronic-signature-software-solution">How eSignatures work in QuoteCloud <svg width="14" height="14" aria-hidden="true"><use href="#c2-arrow" /></svg></a>
+          </div>
+
+          <div class="c2-cx" data-cx data-reveal="scale">
+            <div class="c2-cx__chrome" aria-hidden="true"><i></i><i></i><i></i><span><svg width="10" height="10"><use href="#c2-lock" /></svg>atlas.quote.cloud/q/meridian-freight</span></div>
+            <div class="c2-cx__body">
+              <div class="c2-cx__head">
+                <p class="c2-cx__brand"><i aria-hidden="true">A</i>Atlas Networks <small>Quote for Meridian Freight</small></p>
+                <p class="c2-cx__status" data-cx-status>Awaiting acceptance</p>
+              </div>
+              <ul class="c2-cx__lines" aria-label="Included items">
+                <li><span>Connectivity &amp; managed Wi-Fi <small>6 sites</small></span><b>$2,040/mo</b></li>
+                <li><span>Mobility <small>60 seats · 24-month term</small></span><b>$4,620/mo</b></li>
+                <li><span>Cloud workspace <small>60 seats · contract price</small></span><b>$1,320/mo</b></li>
+                <li><span>Install &amp; onboarding <small>Once-off</small></span><b>$2,700</b></li>
+              </ul>
+              <fieldset class="c2-cx__opts">
+                <legend>Optional extras</legend>
+                <label class="c2-opt"><input type="checkbox" data-opt="72" /><span class="c2-opt__sw" aria-hidden="true"></span><span class="c2-opt__name">Wi-Fi 6E upgrade <small>6 sites · $12 each</small></span><b>+$72/mo</b></label>
+                <label class="c2-opt"><input type="checkbox" data-opt="240" /><span class="c2-opt__sw" aria-hidden="true"></span><span class="c2-opt__name">After-hours support <small>All sites</small></span><b>+$240/mo</b></label>
+                <div class="c2-opt c2-opt--qty">
+                  <span class="c2-opt__name" id="c2-spare-label">Spare 5G handsets <small>$42 each / mo</small></span>
+                  <div class="c2-step" role="group" aria-labelledby="c2-spare-label">
+                    <button type="button" data-step="-1" aria-label="Remove a spare handset">−</button>
+                    <output data-qty aria-live="polite">0</output>
+                    <button type="button" data-step="1" aria-label="Add a spare handset">+</button>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="c2-cx__totals" aria-live="polite">
+                <p><small>Monthly (AUD)</small><b data-cx-monthly>$7,980</b></p>
+                <p><small>Once-off</small><b>$2,700</b></p>
+              </div>
+              <div class="c2-cx__accept">
+                <div class="c2-cx__sig" aria-hidden="true">
+                  <svg viewBox="0 0 160 40" width="160" height="40"><path pathLength="1" d="M6 30c10-18 18-22 18-11s-5 14 3 6 13-19 18-13-2 15 5 10 10-10 15-8 6 8 13 3 13-8 21-5 10 4 20-2" /></svg>
+                  <span>Signed by D. Reyes, Meridian Freight</span>
+                </div>
+                <button class="c2-cx__btn" type="button" data-cx-sign>Accept &amp; sign</button>
+                <div class="c2-cx__pay" data-cx-pay hidden>
+                  <button class="c2-cx__btn c2-cx__btn--pay" type="button" data-cx-paybtn>Pay $2,700 with <img src="/assets/integrations/stripe.png" width="56" height="56" alt="Stripe" loading="lazy" decoding="async" /></button>
+                  <button class="c2-cx__btn c2-cx__btn--pay c2-cx__btn--alt" type="button" data-cx-paybtn><img src="/assets/integrations/paypal.png" width="56" height="56" alt="PayPal" loading="lazy" decoding="async" /></button>
+                </div>
+                <p class="c2-cx__done" data-cx-done hidden><svg width="16" height="16" aria-hidden="true"><use href="#c2-check" /></svg>Signed and paid. <button type="button" data-cx-reset>Replay</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Governance ───────── -->
+      <section class="c2-gov" id="governance" aria-labelledby="c2-gov-title">
+        <div class="qc-container">
+          <div class="c2-head" data-reveal>
+            <h2 class="c2-head__title" id="c2-gov-title">Approval workflows and <em>pricing governance</em>, built in.</h2>
+            <p class="c2-head__lede">Every quote follows your rules, from one centralised product catalogue to the final approved version.</p>
+          </div>
+          <ul class="c2-gov__grid" data-reveal-stagger="90">
+            <li class="c2-gov__item" data-reveal>
+              <div class="c2-gv c2-gv--cat" aria-hidden="true">
+                <p><i style="--ic: #2ba8f0"><svg width="12" height="12"><use href="#c2-fibre" /></svg></i>Business Fibre 1 Gbps<b>$190</b></p>
+                <p><i style="--ic: #5b3df5"><svg width="12" height="12"><use href="#c2-wifi" /></svg></i>Managed Wi-Fi<b>$65</b></p>
+                <p><i style="--ic: #e25b01"><svg width="12" height="12"><use href="#c2-phone" /></svg></i>5G handset · 24 mo<b>$42</b></p>
+                <p><i style="--ic: #1fbf8f"><svg width="12" height="12"><use href="#c2-cloud" /></svg></i>Cloud workspace<b>$25</b></p>
+              </div>
+              <h3>Smart product catalogue</h3>
+              <p>Products, services, bundles and pricing rules live in one hub, reused across every quote.</p>
+            </li>
+            <li class="c2-gov__item" data-reveal>
+              <div class="c2-gv c2-gv--flow" aria-hidden="true">
+                <span class="c2-gv__node is-ok">MK</span><span class="c2-gv__wire"></span><span class="c2-gv__node c2-gv__node--swap"><b>RO</b><b>LC</b></span><span class="c2-gv__wire"></span><span class="c2-gv__node c2-gv__node--end"><svg width="14" height="14"><use href="#c2-check" /></svg></span>
+                <p class="c2-gv__rule">Discount over 15% · deal over $5k / mo</p>
+              </div>
+              <h3>Multi-level approvals</h3>
+              <p>Rules and thresholds route deals to the right approvers, with backups when someone is away.</p>
+            </li>
+            <li class="c2-gov__item" data-reveal>
+              <div class="c2-gv c2-gv--lock" aria-hidden="true">
+                <p><span>Unit price</span><b>$190</b><i><svg width="12" height="12"><use href="#c2-lock" /></svg></i></p>
+                <p><span>Terms &amp; conditions</span><b>Locked</b><i><svg width="12" height="12"><use href="#c2-lock" /></svg></i></p>
+                <p class="is-open"><span>Intro message</span><b>Editable</b></p>
+              </div>
+              <h3>Content locking</h3>
+              <p>Lock layout, pricing and terms so reps change only what they should.</p>
+            </li>
+            <li class="c2-gov__item" data-reveal>
+              <div class="c2-gv c2-gv--ver" aria-hidden="true">
+                <span>v1.0</span><span>v1.1</span><span>v1.2</span><span class="is-now">v1.3</span>
+                <em class="c2-gv__diff is-del">− Term 12 months · $46 / handset</em>
+                <em class="c2-gv__diff is-add">+ Term 24 months · $42 / handset</em>
+                <p><svg width="12" height="12"><use href="#c2-clock" /></svg>Term 12 → 24 mo · Fri 14:02</p>
+              </div>
+              <h3>Versions and audit trail</h3>
+              <p>Track every configuration and pricing change, compare versions and restore in a click.</p>
+            </li>
+          </ul>
+          <p class="c2-gov__trust">
+            <span><img src="/assets/compliance/eidas.svg" width="28" height="28" alt="" loading="lazy" decoding="async" />eIDAS-compliant eSignatures</span>
+            <span><img src="/assets/compliance/encryption-256.png" width="28" height="28" alt="" loading="lazy" decoding="async" />256-bit encryption</span>
+            <span><img src="/assets/compliance/aws.svg" width="28" height="28" alt="" loading="lazy" decoding="async" />Hosted on AWS</span>
+            <span><img src="/assets/compliance/gdpr.png" width="28" height="28" alt="" loading="lazy" decoding="async" />GDPR</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations ───────── -->
+      <section class="c2-int" id="integrations" aria-labelledby="c2-int-title">
+        <div class="qc-container">
+          <div class="c2-head" data-reveal>
+            <h2 class="c2-head__title" id="c2-int-title">A CPQ solution that <em>fits your stack.</em></h2>
+            <p class="c2-head__lede">Pull opportunity and customer data from your CRM, keep finance and job systems in step, and extend with the API. Most teams are up and running in days, with no coding.</p>
+          </div>
+          <div class="c2-hub" data-hub>
+            <svg class="c2-hub__wires" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M500 0 C500 60, 167 50, 167 120" />
+              <path pathLength="1" d="M500 0 V120" />
+              <path pathLength="1" d="M500 0 C500 60, 833 50, 833 120" />
+              <path class="c2-hub__pulse" pathLength="1" d="M500 0 C500 60, 167 50, 167 120" />
+              <path class="c2-hub__pulse" pathLength="1" d="M500 0 V120" />
+              <path class="c2-hub__pulse" pathLength="1" d="M500 0 C500 60, 833 50, 833 120" />
+            </svg>
+            <p class="c2-hub__core"><img src="/assets/logos/qc-symbol-white.png" width="28" height="28" alt="" loading="lazy" decoding="async" /><span>QuoteCloud CPQ <small>+ API access</small></span></p>
+            <div class="c2-hub__cols" data-reveal-stagger="90">
+              <div class="c2-hub__col" data-reveal>
+                <h3>CRM</h3>
+                <ul>
+                  <li><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Salesforce</a></li>
+                  <li><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" width="40" height="40" alt="" loading="lazy" decoding="async" />HubSpot</a></li>
+                  <li><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" width="40" height="40" alt="" loading="lazy" decoding="async" />Microsoft Dynamics</a></li>
+                  <li><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" width="40" height="40" alt="" loading="lazy" decoding="async" />monday.com</a></li>
+                </ul>
+                <p class="c2-hub__more">Also <a href="https://www.quote.cloud/pipedrive-integration-with-quotecloud">Pipedrive</a> and <a href="https://www.quote.cloud/zoho-with-quotecloud">Zoho</a></p>
+              </div>
+              <div class="c2-hub__col" data-reveal>
+                <h3>Finance &amp; data</h3>
+                <ul>
+                  <li><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Xero</a></li>
+                  <li><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" width="40" height="40" alt="" loading="lazy" decoding="async" />QuickBooks</a></li>
+                  <li><a href="https://www.quote.cloud/googlesheets-with-quotecloud"><img src="/assets/integrations/googlesheets.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Google Sheets</a></li>
+                  <li><a href="https://www.quote.cloud/microsoft-excel-with-quotecloud"><img src="/assets/integrations/excel.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Excel</a></li>
+                </ul>
+                <p class="c2-hub__more">Plus FreshBooks, OneDrive, Slack and Teams</p>
+              </div>
+              <div class="c2-hub__col" data-reveal>
+                <h3>Payments &amp; delivery</h3>
+                <ul>
+                  <li><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" width="40" height="40" alt="" loading="lazy" decoding="async" />Stripe</a></li>
+                  <li><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" width="40" height="40" alt="" loading="lazy" decoding="async" />PayPal</a></li>
+                  <li><a href="https://www.quote.cloud/servicem8-with-quotecloud"><img src="/assets/integrations/serviceM8.png" width="40" height="40" alt="" loading="lazy" decoding="async" />ServiceM8</a></li>
+                  <li><a href="https://www.quote.cloud/quotecloud-with-simpro"><span class="c2-hub__mono" aria-hidden="true">sP</span>simPRO</a></li>
+                </ul>
+                <p class="c2-hub__more">Job management and delivery systems stay in step</p>
+              </div>
+            </div>
+            <a class="c2-textlink c2-hub__all" href="https://www.quote.cloud/all-integrations">See all integrations <svg width="14" height="14" aria-hidden="true"><use href="#c2-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-cpq -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="c2-end" id="start" aria-labelledby="c2-end-title">
+        <div class="qc-container">
+          <div class="c2-end__panel" data-end>
+            <div class="c2-end__chips" aria-hidden="true">
+              <span style="--i: 0; --r: -14deg; --dx: -40px; --dy: 30px">Configure</span>
+              <span style="--i: 1; --r: 10deg; --dx: 26px; --dy: -34px">Price</span>
+              <span style="--i: 2; --r: -8deg; --dx: -18px; --dy: 40px">Approve</span>
+              <span style="--i: 3; --r: 16deg; --dx: 36px; --dy: -26px">Quote</span>
+              <span style="--i: 4; --r: -12deg; --dx: -30px; --dy: -30px">Sign &amp; pay</span>
+            </div>
+            <h2 class="c2-end__title" id="c2-end-title">Take control of complex selling with a <em>modern CPQ solution.</em></h2>
+            <p class="c2-end__lede">Set up your catalogue and pricing rules in days. No coding, no credit card.</p>
+            <div class="c2-end__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#c2-arrow" /></svg></a>
+              <a class="qc-btn c2-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <ul class="c2-end__proof">
+              <li><b data-count-to="4.2" data-count-decimals="1">4.2</b><span>on Capterra</span></li>
+              <li><b data-count-to="4.2" data-count-decimals="1">4.2</b><span>on Software Advice</span></li>
+              <li><b data-count-to="2013" data-count-format="plain">2013</b><span>in business since</span></li>
+              <li><b data-count-to="14">14</b><span>day free trial</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

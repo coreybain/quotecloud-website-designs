@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-image-editor -->
+  </head>
+  <body class="ie2">
+    <!-- @include header -->
+
+    <svg class="ie2-sprite" aria-hidden="true" focusable="false">
+      <symbol id="ie2-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="ie2-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="ie2-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" /></symbol>
+      <symbol id="ie2-redo" viewBox="0 0 24 24"><path d="m15 14 5-5-5-5" /><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13" /></symbol>
+      <symbol id="ie2-select" viewBox="0 0 24 24"><path d="M6 3.5 18.5 12l-5.6 1.4-2.9 5.6z" /></symbol>
+      <symbol id="ie2-marquee" viewBox="0 0 24 24"><path d="M4 7V4h3M10 4h4M17 4h3v3M20 10v4M20 17v3h-3M14 20h-4M7 20H4v-3M4 14v-4" /></symbol>
+      <symbol id="ie2-fill" viewBox="0 0 24 24"><path d="m11 3 8 8-7 7-8-8 7-7z" /><path d="M4 10h15M20 15s2 2.4 2 3.6a2 2 0 0 1-4 0C18 17.4 20 15 20 15z" /></symbol>
+      <symbol id="ie2-draw" viewBox="0 0 24 24"><path d="M15.5 4.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4z" /></symbol>
+      <symbol id="ie2-eraser" viewBox="0 0 24 24"><path d="m7 21-4-4a2 2 0 0 1 0-2.8L13.2 4a2 2 0 0 1 2.8 0l4.2 4.2a2 2 0 0 1 0 2.8L10 21z" /><path d="M21 21H7M8.5 9.5l6 6" /></symbol>
+      <symbol id="ie2-text" viewBox="0 0 24 24"><path d="M5 6V4h14v2M12 4v16M9 20h6" /></symbol>
+      <symbol id="ie2-shapes" viewBox="0 0 24 24"><rect x="3.5" y="10.5" width="10" height="10" rx="1.5" /><circle cx="15.5" cy="8.5" r="5" /></symbol>
+      <symbol id="ie2-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" /><circle cx="9" cy="9.5" r="1.8" /><path d="m4 18 5.5-5.5 4 4 2.5-2.5L21 19" /></symbol>
+      <symbol id="ie2-crop" viewBox="0 0 24 24"><path d="M6 2v14a2 2 0 0 0 2 2h14" /><path d="M18 22V8a2 2 0 0 0-2-2H2" /></symbol>
+      <symbol id="ie2-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" /><circle cx="12" cy="12" r="2.8" /></symbol>
+      <symbol id="ie2-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18M10.6 5.6A9 9 0 0 1 12 5.5c6 0 9.5 6.5 9.5 6.5a16 16 0 0 1-2.6 3.4M6.6 6.6A15.6 15.6 0 0 0 2.5 12S6 18.5 12 18.5a9 9 0 0 0 4.1-1" /></symbol>
+      <symbol id="ie2-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></symbol>
+      <symbol id="ie2-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2" /><path d="M8 11V8a4 4 0 0 1 7.7-1.5" /></symbol>
+      <symbol id="ie2-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="ie2-rot-l" viewBox="0 0 24 24"><path d="M3 4v5h5" /><path d="M3.5 9A8.5 8.5 0 1 1 5 16.5" /></symbol>
+      <symbol id="ie2-rot-r" viewBox="0 0 24 24"><path d="M21 4v5h-5" /><path d="M20.5 9A8.5 8.5 0 1 0 19 16.5" /></symbol>
+      <symbol id="ie2-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1" /><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" /></symbol>
+      <symbol id="ie2-wand" viewBox="0 0 24 24"><path d="m4 20 11-11M14 4v2M19 9h2M17.5 5.5 19 4M9 4l.7 1.6M20 14l-1.6-.7" /><path d="m13.5 7.5 3 3" /></symbol>
+      <symbol id="ie2-bold" viewBox="0 0 24 24"><path d="M7 4h6.5a4 4 0 0 1 0 8H7zM7 12h7.5a4 4 0 0 1 0 8H7z" /></symbol>
+      <symbol id="ie2-italic" viewBox="0 0 24 24"><path d="M10 4h8M6 20h8M14 4l-4 16" /></symbol>
+      <symbol id="ie2-align" viewBox="0 0 24 24"><path d="M4 6h16M4 10h10M4 14h16M4 18h10" /></symbol>
+      <symbol id="ie2-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></symbol>
+      <symbol id="ie2-reset" viewBox="0 0 24 24"><path d="M4 4v5h5" /><path d="M4.6 15A8 8 0 1 0 5 8.5L4 9" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────────── Hero ───────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid qc-container">
+          <div class="hero__copy">
+            <h1 id="hero-title" class="hero__title">Photo &amp; Image Editor <em>Built Into Your Documents</em></h1>
+            <p class="hero__lede">Crop, retouch and brand your images without leaving the document. Real editing tools, right inside every proposal, quote and contract.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow ie2-i" width="18" height="18" aria-hidden="true"><use href="#ie2-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">No credit card required</p>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <!-- The proposal the image lives in, peeking out behind the editor -->
+            <div class="hdoc">
+              <span class="hdoc__brand"><i></i><b>Meridian Voyages</b></span>
+              <span class="hdoc__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /><span class="hdoc__open"><svg class="ie2-i" aria-hidden="true"><use href="#ie2-image" /></svg>Open Editor</span></span>
+              <span class="hdoc__line" style="--w: 64%"></span>
+              <span class="hdoc__line" style="--w: 88%"></span>
+              <span class="hdoc__line" style="--w: 52%"></span>
+            </div>
+
+            <div class="hed" data-hero-editor>
+              <div class="hed__top">
+                <span class="hed__hist"><span class="hed__ico"><svg class="ie2-i"><use href="#ie2-undo" /></svg></span><span class="hed__ico"><svg class="ie2-i"><use href="#ie2-redo" /></svg></span></span>
+                <span class="hed__file">deck-at-dusk.jpg</span>
+                <span class="hed__acts"><span class="hed__cancel">Cancel</span><span class="hed__save">Save</span></span>
+              </div>
+              <div class="hed__body">
+                <div class="hed__rail">
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-select" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-marquee" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-fill" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-draw" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-eraser" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-text" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-shapes" /></svg></span>
+                  <span class="rl"><svg class="ie2-i"><use href="#ie2-image" /></svg></span>
+                  <span class="rl is-on"><svg class="ie2-i"><use href="#ie2-crop" /></svg></span>
+                </div>
+                <div class="hed__canvas">
+                  <div class="fit" data-fit data-w="460" data-h="198">
+                    <div class="fit__in fit__in--band" data-comp data-state="final">
+                      <img class="comp-fallback" src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" fetchpriority="high" />
+                    </div>
+                  </div>
+                </div>
+                <div class="hed__panel">
+                  <span class="tabs"><span>Layers</span><span class="is-on">Filters</span></span>
+                  <span class="hed__label">Presets</span>
+                  <div class="presets" data-presets>
+                    <span class="preset" data-p="original"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Original</span>
+                    <span class="preset" data-p="grayscale"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Grayscale</span>
+                    <span class="preset" data-p="sepia"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Sepia</span>
+                    <span class="preset" data-p="invert"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Invert</span>
+                    <span class="preset is-on" data-p="warm"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Warm</span>
+                    <span class="preset" data-p="cool"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Cool</span>
+                    <span class="preset" data-p="noir"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" /></span>Noir</span>
+                  </div>
+                  <span class="sl"><span class="sl__k">Brightness</span><span class="sl__v">0.05</span><span class="sl__t" style="--x: 0.53"></span></span>
+                  <span class="sl"><span class="sl__k">Contrast</span><span class="sl__v">18</span><span class="sl__t" style="--x: 0.59"></span></span>
+                  <span class="sl"><span class="sl__k">Saturation</span><span class="sl__v">0.2</span><span class="sl__t" style="--x: 0.55"></span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── The exploded view: one photo, edited step by step ───────────── -->
+      <section class="ex" aria-labelledby="ex-title" data-story>
+        <div class="ex__intro qc-container">
+          <h2 id="ex-title" class="ex__title">One photo, edited <em>without leaving the proposal</em></h2>
+          <p class="ex__lede">Follow a real edit from first crop to final save. Every tool you see here is in the editor.</p>
+        </div>
+
+        <div class="ex__track" data-track>
+          <div class="ex__pin">
+            <div class="ex__grid">
+              <ol class="ex__steps">
+                <li class="ex-step" data-step-i="0">
+                  <span class="ex-step__n">01</span>
+                  <h3>Crop to the shot you want</h3>
+                  <p>Free, 1:1, 4:3 or 21:9, then set the exact output width and height.</p>
+                  <div class="ex-card" data-card="0" aria-hidden="true"></div>
+                </li>
+                <li class="ex-step" data-step-i="1">
+                  <span class="ex-step__n">02</span>
+                  <h3>Straighten the horizon</h3>
+                  <p>Rotate 90° either way, or level it to the degree with the Rotation angle slider.</p>
+                  <div class="ex-card" data-card="1" aria-hidden="true"></div>
+                </li>
+                <li class="ex-step" data-step-i="2">
+                  <span class="ex-step__n">03</span>
+                  <h3>Set the mood</h3>
+                  <p>Seven filter presets, plus Brightness, Contrast, Saturation, Hue and Blur. They combine.</p>
+                  <div class="ex-card" data-card="2" aria-hidden="true"></div>
+                </li>
+                <li class="ex-step" data-step-i="3">
+                  <span class="ex-step__n">04</span>
+                  <h3>Erase the logo’s white box</h3>
+                  <p>Add your logo as its own layer. One click of the Magic Eraser clears the white around it.</p>
+                  <div class="ex-card" data-card="3" aria-hidden="true"></div>
+                </li>
+                <li class="ex-step" data-step-i="4">
+                  <span class="ex-step__n">05</span>
+                  <h3>Add a headline and an arrow</h3>
+                  <p>Text, shapes, arrows, highlights and freehand drawing, right on the photo.</p>
+                  <div class="ex-card" data-card="4" aria-hidden="true"></div>
+                </li>
+                <li class="ex-step" data-step-i="5">
+                  <span class="ex-step__n">06</span>
+                  <h3>Every edit is its own layer</h3>
+                  <p>Reorder, hide, lock, fade or merge them. The photo underneath stays untouched.</p>
+                  <div class="ex-card" data-card="5" aria-hidden="true"></div>
+                </li>
+                <li class="ex-step" data-step-i="6">
+                  <span class="ex-step__n">07</span>
+                  <h3>Save. It’s already in your proposal.</h3>
+                  <p>No download, no re-upload. The edited image goes straight back into the document.</p>
+                  <div class="ex-card" data-card="6" aria-hidden="true"></div>
+                </li>
+              </ol>
+
+              <div class="ex__rail" role="group" aria-label="Edit steps">
+                <span class="ex__rail-line"><span class="ex__rail-fill"></span></span>
+                <button type="button" class="ex-tick" data-goto="0" aria-label="Step 1: Crop"><span>Crop</span></button>
+                <button type="button" class="ex-tick" data-goto="1" aria-label="Step 2: Straighten"><span>Straighten</span></button>
+                <button type="button" class="ex-tick" data-goto="2" aria-label="Step 3: Filters"><span>Filters</span></button>
+                <button type="button" class="ex-tick" data-goto="3" aria-label="Step 4: Erase"><span>Erase</span></button>
+                <button type="button" class="ex-tick" data-goto="4" aria-label="Step 5: Text"><span>Text</span></button>
+                <button type="button" class="ex-tick" data-goto="5" aria-label="Step 6: Layers"><span>Layers</span></button>
+                <button type="button" class="ex-tick" data-goto="6" aria-label="Step 7: Save"><span>Save</span></button>
+              </div>
+
+              <div class="ex__stage" data-stage-wrap aria-hidden="true">
+                <div class="stg" data-stage data-step="4" data-bar="text" data-tool="text" data-tab="layers" data-layers="4">
+                  <!-- Editor chrome -->
+                  <div class="ed">
+                    <div class="ed__top">
+                      <span class="ed__hist"><span class="ed__ico"><svg class="ie2-i"><use href="#ie2-undo" /></svg></span><span class="ed__ico"><svg class="ie2-i"><use href="#ie2-redo" /></svg></span></span>
+
+                      <span class="bar bar--crop">
+                        <span class="chips"><span class="chip">Free</span><span class="chip">1:1</span><span class="chip">4:3</span><span class="chip chip--on">21:9</span></span>
+                        <span class="bar__sep"></span>
+                        <span class="bar__hint">Output</span><span class="field">1260</span><span class="bar__x">×</span><span class="field">540</span><span class="ed__ico ed__ico--on"><svg class="ie2-i"><use href="#ie2-link" /></svg></span>
+                      </span>
+                      <span class="bar bar--rotate">
+                        <span class="ed__ico"><svg class="ie2-i"><use href="#ie2-rot-l" /></svg></span>
+                        <span class="ed__ico"><svg class="ie2-i"><use href="#ie2-rot-r" /></svg></span>
+                        <span class="bar__sep"></span>
+                        <span class="bar__hint">Rotation angle</span><span class="angle"><i></i></span><span class="angle__v"><span class="angle__a">2.5°</span><span class="angle__b">0°</span></span>
+                      </span>
+                      <span class="bar bar--eraser">
+                        <span class="bar__tool"><svg class="ie2-i"><use href="#ie2-wand" /></svg>Magic Eraser Tool</span>
+                        <span class="bar__hint">Tolerance</span><span class="mini-sl"><i style="--x: 0.32"></i></span><span class="bar__val">32</span>
+                        <span class="check"><svg class="ie2-i"><use href="#ie2-check" /></svg></span><span class="bar__hint">Contiguous</span>
+                      </span>
+                      <span class="bar bar--text">
+                        <span class="field field--wide">Quicksand</span>
+                        <span class="field">30</span>
+                        <span class="ed__ico ed__ico--on"><svg class="ie2-i"><use href="#ie2-bold" /></svg></span>
+                        <span class="ed__ico"><svg class="ie2-i"><use href="#ie2-italic" /></svg></span>
+                        <span class="ed__ico"><svg class="ie2-i"><use href="#ie2-align" /></svg></span>
+                        <span class="swatch"></span>
+                        <span class="bar__hint">Opacity</span><span class="bar__val">100%</span>
+                      </span>
+
+                      <span class="ed__acts"><span class="ed__cancel">Cancel</span><span class="ed__save">Save</span></span>
+                    </div>
+
+                    <div class="ed__rail">
+                      <span class="rl" data-t="select"><svg class="ie2-i"><use href="#ie2-select" /></svg></span>
+                      <span class="rl" data-t="marquee"><svg class="ie2-i"><use href="#ie2-marquee" /></svg></span>
+                      <span class="rl" data-t="fill"><svg class="ie2-i"><use href="#ie2-fill" /></svg></span>
+                      <span class="rl" data-t="draw"><svg class="ie2-i"><use href="#ie2-draw" /></svg></span>
+                      <span class="rl" data-t="eraser"><svg class="ie2-i"><use href="#ie2-eraser" /></svg></span>
+                      <span class="rl" data-t="text"><svg class="ie2-i"><use href="#ie2-text" /></svg></span>
+                      <span class="rl" data-t="shapes"><svg class="ie2-i"><use href="#ie2-shapes" /></svg></span>
+                      <span class="rl" data-t="image"><svg class="ie2-i"><use href="#ie2-image" /></svg></span>
+                      <span class="rl" data-t="crop"><svg class="ie2-i"><use href="#ie2-crop" /></svg></span>
+                    </div>
+
+                    <div class="ed__canvas"></div>
+
+                    <div class="ed__panel">
+                      <span class="tabs"><span class="tabs__l">Layers</span><span class="tabs__f">Filters</span></span>
+
+                      <div class="pane pane--layers" data-layers-panel>
+                        <span class="pane__row"><span class="pane__k">Opacity</span><span class="mini-sl"><i style="--x: 1"></i></span><span class="pane__v">100%</span></span>
+                        <div class="lrows">
+                          <span class="lrow" data-k="3" style="--k: 3"><span class="lrow__th lrow__th--arrow"><svg viewBox="0 0 46 24"><path d="M10 6l24 11M27 18.5l7-1.5-3-6.5" /></svg></span><span class="lrow__n">Arrow</span><svg class="ie2-i"><use href="#ie2-eye" /></svg><svg class="ie2-i"><use href="#ie2-unlock" /></svg></span>
+                          <span class="lrow" data-k="2" style="--k: 2"><span class="lrow__th lrow__th--text">Aa</span><span class="lrow__n">Text</span><svg class="ie2-i"><use href="#ie2-eye" /></svg><svg class="ie2-i"><use href="#ie2-unlock" /></svg></span>
+                          <span class="lrow" data-k="1" style="--k: 1"><span class="lrow__th lrow__th--logo"><span class="lrow__logo-box"></span><svg viewBox="0 0 46 24"><circle cx="15" cy="12" r="5" /><path d="M24 10h12M24 14h8" /></svg></span><span class="lrow__n">Logo</span><svg class="ie2-i"><use href="#ie2-eye" /></svg><svg class="ie2-i"><use href="#ie2-unlock" /></svg></span>
+                          <span class="lrow" data-k="0" style="--k: 0"><span class="lrow__th"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span><span class="lrow__n">Background</span><svg class="ie2-i"><use href="#ie2-eye" /></svg><svg class="ie2-i"><use href="#ie2-lock" /></svg></span>
+                        </div>
+                        <span class="pane__add"><svg class="ie2-i"><use href="#ie2-plus" /></svg>Add new layer</span>
+                      </div>
+
+                      <div class="pane pane--filters">
+                        <span class="pane__label">Presets</span>
+                        <div class="presets">
+                          <span class="preset" data-p="original"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Original</span>
+                          <span class="preset" data-p="grayscale"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Grayscale</span>
+                          <span class="preset" data-p="sepia"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Sepia</span>
+                          <span class="preset" data-p="invert"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Invert</span>
+                          <span class="preset preset--pick" data-p="warm"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Warm</span>
+                          <span class="preset" data-p="cool"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Cool</span>
+                          <span class="preset" data-p="noir"><span class="preset__img"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span>Noir</span>
+                        </div>
+                        <span class="sl"><span class="sl__k">Brightness</span><span class="sl__v">0</span><span class="sl__t" style="--x: 0.5"></span></span>
+                        <span class="sl sl--move"><span class="sl__k">Contrast</span><span class="sl__v"><span class="sl__a">0</span><span class="sl__b">18</span></span><span class="sl__t" style="--x: 0.5; --x2: 0.59"></span></span>
+                        <span class="sl"><span class="sl__k">Saturation</span><span class="sl__v">0</span><span class="sl__t" style="--x: 0.5"></span></span>
+                        <span class="sl"><span class="sl__k">Hue</span><span class="sl__v">0°</span><span class="sl__t" style="--x: 0.5"></span></span>
+                        <span class="sl"><span class="sl__k">Blur</span><span class="sl__v">0</span><span class="sl__t" style="--x: 0"></span></span>
+                        <span class="pane__reset"><svg class="ie2-i"><use href="#ie2-reset" /></svg>Reset all</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- The proposal page the flattened image lands in -->
+                  <div class="pg">
+                    <span class="pg__brand"><i></i><b>Meridian Voyages</b><small>Proposal · MV-1182</small></span>
+                    <span class="pg__slot"></span>
+                    <span class="pg__title">Norwegian Fjords, 10 nights</span>
+                    <span class="pg__meta">Balcony stateroom · 2 guests · Departs 14 June</span>
+                    <span class="pg__row"><span>Cruise fare, 2 guests</span><b>$8,940</b></span>
+                    <span class="pg__row"><span>Shore excursions</span><b>$1,260</b></span>
+                    <span class="pg__row"><span>Airport transfers</span><b>$380</b></span>
+                    <span class="pg__total"><span>Total</span><b>$10,580</b></span>
+                    <span class="pg__sign">Accept &amp; sign</span>
+                  </div>
+
+                  <!-- The photo itself: one composition, layer by layer -->
+                  <div class="stg__comp" data-comp data-state="4">
+                    <img class="comp-fallback" src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" />
+                  </div>
+
+                  <span class="stg__chip"><span class="stg__spin"></span><span class="stg__saving">Saving…</span><span class="stg__saved"><svg class="ie2-i"><use href="#ie2-check" /></svg>Saved to proposal</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ex__payoff qc-container">
+          <p class="ex__payoff-line">Edited, saved and <em>already in the proposal.</em></p>
+          <div class="ex__payoff-ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-story">Start free 14-day trial <svg class="qc-btn__arrow ie2-i" width="18" height="18" aria-hidden="true"><use href="#ie2-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg ex__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="after-story-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Opens wherever images live ───────────── -->
+      <section class="where" aria-labelledby="where-title">
+        <div class="qc-container">
+          <div class="sec-head" data-reveal>
+            <h2 id="where-title" class="sec-title">Edit any image, <em>right where it sits</em></h2>
+            <p class="sec-lede">Select an image and choose Open Editor. When you save, the new version replaces it in the document.</p>
+          </div>
+          <ul class="where__grid" data-reveal-stagger="90" data-where>
+            <li class="wt" data-reveal>
+              <div class="wt__vis" aria-hidden="true">
+                <span class="wt__gallery">
+                  <img src="/assets/image-editor/photo-palm-beach.jpg" width="182" height="294" alt="" loading="lazy" decoding="async" />
+                  <img src="/assets/image-editor/photo-paris-bridge.jpg" width="182" height="296" alt="" loading="lazy" decoding="async" />
+                  <img src="/assets/image-editor/photo-savanna-sunset-lodge.jpg" width="232" height="270" alt="" loading="lazy" decoding="async" />
+                </span>
+                <span class="wt__open">Open Editor</span>
+              </div>
+              <h3>Image &amp; gallery blocks</h3>
+            </li>
+            <li class="wt" data-reveal>
+              <div class="wt__vis" aria-hidden="true">
+                <span class="wt__inline">
+                  <img src="/assets/image-editor/photo-aerial-forest-plane.jpg" width="369" height="300" alt="" loading="lazy" decoding="async" />
+                  <i></i><i></i><i></i><i style="--w: 60%"></i><i></i><i style="--w: 74%"></i>
+                </span>
+                <span class="wt__open">Open Editor</span>
+              </div>
+              <h3>Images inside text</h3>
+            </li>
+            <li class="wt" data-reveal>
+              <div class="wt__vis" aria-hidden="true">
+                <span class="wt__shape"><img src="/assets/image-editor/photo-savanna-sunset-lodge.jpg" width="232" height="270" alt="" loading="lazy" decoding="async" /></span>
+                <span class="wt__open">Open Editor</span>
+              </div>
+              <h3>Shape image fills</h3>
+            </li>
+            <li class="wt" data-reveal>
+              <div class="wt__vis" aria-hidden="true">
+                <span class="wt__bg">
+                  <img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" />
+                  <b>Your journey</b><i></i><i style="--w: 40%"></i>
+                </span>
+                <span class="wt__open">Edit Image</span>
+              </div>
+              <h3>Page, column &amp; container backgrounds</h3>
+            </li>
+            <li class="wt" data-reveal>
+              <div class="wt__vis" aria-hidden="true">
+                <span class="wt__video">
+                  <img src="/assets/image-editor/photo-server-rack.jpg" width="224" height="530" alt="" loading="lazy" decoding="async" />
+                  <span class="wt__play"><svg class="ie2-i"><use href="#ie2-play" /></svg></span>
+                </span>
+                <span class="wt__open">Open Editor</span>
+              </div>
+              <h3>Video thumbnails</h3>
+            </li>
+          </ul>
+          <p class="where__more" data-reveal><a class="tlink" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">See all 18 content blocks <svg class="ie2-i" aria-hidden="true"><use href="#ie2-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <!-- ───────────── Pro tools bento ───────────── -->
+      <section class="tools" aria-labelledby="tools-title">
+        <div class="qc-container">
+          <div class="sec-head" data-reveal>
+            <h2 id="tools-title" class="sec-title">The tools you know, <em>inside every document</em></h2>
+            <p class="sec-lede">Selections, erasers, shapes and layers, the same tools you know from desktop photo editors.</p>
+          </div>
+
+          <div class="bento" data-reveal-stagger="100">
+            <article class="tile tile--sel" data-reveal data-loop="sel" aria-labelledby="t-sel">
+              <div class="tile__copy">
+                <h3 id="t-sel">Select exactly what you need</h3>
+                <p>Marquee, Lasso, Polygonal Lasso and Magic Wand, with Feather and Tolerance. Delete the selection to cut it out.</p>
+              </div>
+              <div class="tsel" aria-hidden="true">
+                <div class="tsel__photo">
+                  <img src="/assets/image-editor/photo-aerial-forest-plane.jpg" width="369" height="300" alt="" loading="lazy" decoding="async" />
+                  <svg class="tsel__ants" viewBox="0 0 369 300" preserveAspectRatio="none">
+                    <g class="ant" data-s="0"><rect x="132" y="140" width="102" height="86" /><rect class="ant__b" x="132" y="140" width="102" height="86" /></g>
+                    <g class="ant" data-s="1"><ellipse cx="187" cy="186" rx="56" ry="40" /><ellipse class="ant__b" cx="187" cy="186" rx="56" ry="40" /></g>
+                    <g class="ant" data-s="2"><path d="M150 196 172 168l4-8 12 2 2 10 24-10 8 10-26 16 14 16-8 8-16-12-14 6z" /><path class="ant__b" d="M150 196 172 168l4-8 12 2 2 10 24-10 8 10-26 16 14 16-8 8-16-12-14 6z" /></g>
+                    <g class="ant" data-s="3"><path d="M156 192c10-12 16-20 20-30 4 0 10 0 12 4l22-10c6 0 8 4 8 8l-22 14c4 6 12 10 12 18-2 4-6 6-10 4l-14-10c-6 2-14 6-20 6-6 0-10-2-8-4z" /><path class="ant__b" d="M156 192c10-12 16-20 20-30 4 0 10 0 12 4l22-10c6 0 8 4 8 8l-22 14c4 6 12 10 12 18-2 4-6 6-10 4l-14-10c-6 2-14 6-20 6-6 0-10-2-8-4z" /></g>
+                  </svg>
+                </div>
+                <ul class="tsel__list">
+                  <li data-s="0"><svg class="ie2-i"><use href="#ie2-marquee" /></svg><span>Rectangular Marquee</span><kbd>M</kbd></li>
+                  <li data-s="1"><svg class="ie2-i"><use href="#ie2-marquee" /></svg><span>Elliptical Marquee</span><kbd>M</kbd></li>
+                  <li data-s="2"><svg class="ie2-i"><use href="#ie2-draw" /></svg><span>Polygonal Lasso</span><kbd>L</kbd></li>
+                  <li data-s="3"><svg class="ie2-i"><use href="#ie2-wand" /></svg><span>Magic Wand</span><kbd>W</kbd></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="tile tile--erase" data-reveal data-loop="erase" aria-labelledby="t-erase">
+              <div class="tile__copy">
+                <h3 id="t-erase">Lift a logo off its white box</h3>
+                <p>Background Eraser and Magic Eraser turn plain backgrounds transparent, right in your browser.</p>
+              </div>
+              <div class="terase" aria-hidden="true">
+                <div class="terase__art">
+                  <span class="terase__box"></span>
+                  <svg class="terase__logo" viewBox="0 0 160 56"><circle cx="26" cy="28" r="15" /><path class="terase__wave" d="M8 34c6-4 12-4 18 0s12 4 18 0" /><text x="52" y="34">MERIDIAN</text></svg>
+                  <span class="terase__ring"></span>
+                  <span class="terase__cur"><svg class="ie2-i"><use href="#ie2-wand" /></svg></span>
+                </div>
+                <span class="terase__opts"><b>Magic Eraser Tool</b><span>Tolerance 32</span><span class="terase__chk"><svg class="ie2-i"><use href="#ie2-check" /></svg>Contiguous</span></span>
+              </div>
+            </article>
+
+            <article class="tile tile--shapes" data-reveal data-loop="shapes" aria-labelledby="t-shapes">
+              <div class="tile__copy">
+                <h3 id="t-shapes">Shapes, text and freehand</h3>
+                <p>Rectangle, Ellipse, Line, Arrow, Polygon, Free form, Star, Speech bubble and Highlight.</p>
+              </div>
+              <svg class="tshapes" viewBox="0 0 300 180" aria-hidden="true">
+                <rect class="tsh tsh--hl" x="14" y="16" width="70" height="24" rx="3" pathLength="1" style="--i: 0" />
+                <rect class="tsh" x="112" y="12" width="60" height="34" rx="6" pathLength="1" style="--i: 1" />
+                <ellipse class="tsh" cx="232" cy="29" rx="34" ry="18" pathLength="1" style="--i: 2" />
+                <path class="tsh" d="M16 92h64" pathLength="1" style="--i: 3" />
+                <path class="tsh tsh--accent" d="M112 102l52-28M152 70l12 4-4 12" pathLength="1" style="--i: 4" />
+                <path class="tsh" d="M232 69l20 11.5v23L232 115l-20-11.5v-23z" pathLength="1" style="--i: 5" />
+                <path class="tsh" d="M16 154c10-16 20 8 30-6s18-14 24 0 10 6 14-2" pathLength="1" style="--i: 6" />
+                <path class="tsh tsh--accent" d="M138 131l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z" pathLength="1" style="--i: 7" />
+                <path class="tsh" d="M202 134h56a8 8 0 0 1 8 8v8a8 8 0 0 1-8 8h-38l-12 8 2-8h-8a8 8 0 0 1-8-8v-8a8 8 0 0 1 8-8z" pathLength="1" style="--i: 8" />
+              </svg>
+            </article>
+
+            <article class="tile tile--layers" data-reveal data-loop="layers" aria-labelledby="t-layers">
+              <div class="tile__copy">
+                <h3 id="t-layers">Layers you can work with</h3>
+                <p>Show, hide, lock, fade, duplicate, rename, merge and drag to reorder.</p>
+              </div>
+              <div class="tlay" aria-hidden="true">
+                <span class="tlay__row tlay__row--a"><span class="tlay__th tlay__th--arrow"></span><span class="tlay__n">Arrow</span><span class="tlay__eye"><svg class="ie2-i"><use href="#ie2-eye" /></svg></span><svg class="ie2-i"><use href="#ie2-unlock" /></svg></span>
+                <span class="tlay__row tlay__row--b"><span class="tlay__th tlay__th--text">Aa</span><span class="tlay__n">Text</span><span class="tlay__eye"><svg class="ie2-i"><use href="#ie2-eye" /></svg></span><svg class="ie2-i"><use href="#ie2-unlock" /></svg></span>
+                <span class="tlay__row tlay__row--c"><span class="tlay__th tlay__th--logo"></span><span class="tlay__n">Logo</span><span class="tlay__eye tlay__eye--blink"><svg class="ie2-i tlay__on"><use href="#ie2-eye" /></svg><svg class="ie2-i tlay__off"><use href="#ie2-eye-off" /></svg></span><svg class="ie2-i"><use href="#ie2-unlock" /></svg></span>
+                <span class="tlay__row tlay__row--d"><span class="tlay__th"><img src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" /></span><span class="tlay__n">Background</span><span class="tlay__eye"><svg class="ie2-i"><use href="#ie2-eye" /></svg></span><svg class="ie2-i"><use href="#ie2-lock" /></svg></span>
+                <span class="tlay__op"><span>Opacity</span><span class="tlay__track"><i></i></span></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Non-destructive ───────────── -->
+      <section class="orig" aria-labelledby="orig-title">
+        <div class="orig__grid qc-container">
+          <div class="orig__copy" data-reveal>
+            <h2 id="orig-title" class="sec-title">Never lose <em>the original</em></h2>
+            <p class="sec-lede">QuoteCloud keeps the untouched photo and a record of every edit. Reopen the editor any time and pick up where you left off.</p>
+            <ul class="orig__list">
+              <li><svg class="ie2-i" aria-hidden="true"><use href="#ie2-check" /></svg><span><b>Re-editable.</b> Layers, crop, rotation, size and filters all come back.</span></li>
+              <li><svg class="ie2-i" aria-hidden="true"><use href="#ie2-check" /></svg><span><b>No quality loss.</b> Edits never stack up on a re-saved copy.</span></li>
+              <li><svg class="ie2-i" aria-hidden="true"><use href="#ie2-check" /></svg><span><b>Undo and Redo</b> at every step, before you save.</span></li>
+              <li><svg class="ie2-i" aria-hidden="true"><use href="#ie2-check" /></svg><span><b>The right format.</b> JPEG for photos, PNG when there is transparency.</span></li>
+            </ul>
+          </div>
+
+          <div class="orig__vis" data-reveal="scale">
+            <div class="ocard" data-orig>
+              <div class="ocard__photo">
+                <div class="fit" data-fit data-w="460" data-h="198">
+                  <div class="fit__in fit__in--band" data-comp data-state="final">
+                    <img class="comp-fallback" src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+              <div class="ocard__bar">
+                <button type="button" class="ocard__btn" aria-pressed="false" data-orig-btn>Original</button>
+                <span class="ocard__record" aria-hidden="true">
+                  <span>Crop 21:9</span><span>Rotation 0°</span><span>Warm</span><span>Contrast +18</span><span>4 layers</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-image-editor -->
+
+      <!-- ───────────── Closing CTA ───────────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="close__panel qc-container" data-reveal="scale">
+          <div class="close__copy">
+            <h2 id="close-title" class="close__title">Better images. <em>Same document.</em></h2>
+            <p class="close__lede">Try QuoteCloud free for 14 days and see how much faster proposals come together when every tool lives in one place.</p>
+            <div class="close__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow ie2-i" width="18" height="18" aria-hidden="true"><use href="#ie2-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg close__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="close__note">No credit card required. The Photo &amp; Image Editor is available as the <span class="nowrap">Image Editor add-on</span>. <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+          </div>
+          <div class="close__vis" aria-hidden="true">
+            <div class="close__frame">
+              <div class="fit" data-fit data-w="460" data-h="198">
+                <div class="fit__in fit__in--band" data-comp data-state="final">
+                  <img class="comp-fallback" src="/assets/image-editor/photo-sunset-ship-deck.jpg" width="558" height="296" alt="" loading="lazy" decoding="async" />
+                </div>
+              </div>
+              <span class="close__saved"><svg class="ie2-i"><use href="#ie2-check" /></svg>Saved</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

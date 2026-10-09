@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-proposal -->
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main" class="pv2">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__lines" aria-hidden="true"></div>
+        <div class="qc-container hero__grid">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">Sales <span class="em">proposal software</span> that wins complex deals</h1>
+            <p class="hero__lede">
+              Build structured, persuasive business proposals that explain value, strategy and outcomes, then get them approved,
+              accepted and e-signed online.
+            </p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">No credit card required <span aria-hidden="true">&middot;</span> Rated 4.2 on Capterra</p>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true" data-loop>
+            <div class="hero__glow"></div>
+
+            <!-- back page: investment -->
+            <div class="hp hp--invest">
+              <div class="hp__band">
+                <span>05</span>
+                <b>Investment Summary</b>
+              </div>
+              <div class="hp__rows">
+                <p><span>Discovery &amp; design</span><b>$6,800</b></p>
+                <p><span>Platform implementation</span><b>$13,950</b></p>
+                <p><span>Training &amp; handover</span><b>$3,600</b></p>
+              </div>
+              <div class="hp__bar"><i style="--w: 28%"></i><i style="--w: 57%"></i><i style="--w: 15%"></i></div>
+              <div class="hp__total"><span>Total investment</span><b>$24,350</b></div>
+              <span class="hp__sign">Accept &amp; sign</span>
+            </div>
+
+            <!-- middle page: delivery -->
+            <div class="hp hp--plan">
+              <div class="hp__band hp__band--light">
+                <span>04</span>
+                <b>Delivery Timeline</b>
+              </div>
+              <div class="hp__gantt">
+                <i style="--x: 0%; --w: 26%"></i>
+                <i style="--x: 18%; --w: 30%"></i>
+                <i style="--x: 40%; --w: 38%"></i>
+                <i style="--x: 70%; --w: 22%"></i>
+                <em style="--x: 90%"></em>
+              </div>
+              <div class="hp__sk"><i></i><i></i><i style="--w: 60%"></i></div>
+            </div>
+
+            <!-- front: cover -->
+            <div class="hp hp--cover">
+              <svg class="hp__art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="hc-glass" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#3a5490" />
+                    <stop offset="1" stop-color="#121a33" />
+                  </linearGradient>
+                </defs>
+                <path d="M150 300V70l70 30v200Z" fill="url(#hc-glass)" opacity=".9" />
+                <path d="M150 300V70L96 104v196Z" fill="#1a2546" />
+                <g stroke="#7f9ad6" stroke-opacity=".35" stroke-width=".6">
+                  <path d="M150 90l70 28M150 120l70 26M150 150l70 24M150 180l70 22M150 210l70 20M150 240l70 18M150 270l70 16" />
+                  <path d="M164 76v224M178 82v218M192 88v212M206 94v206" />
+                  <path d="M150 104l-54 26M150 134l-54 24M150 164l-54 22M150 194l-54 20M150 224l-54 18M150 254l-54 16" />
+                </g>
+                <circle cx="232" cy="64" r="58" fill="none" stroke="#ff4d47" stroke-opacity=".7" stroke-width="1" />
+                <circle cx="232" cy="64" r="74" fill="none" stroke="#ff4d47" stroke-opacity=".25" stroke-width="1" />
+              </svg>
+              <div class="hp__cover-copy">
+                <span class="hp__brand">TEMPTUS</span>
+                <span class="hp__title">Digital Transformation Proposal</span>
+                <span class="hp__for">Prepared for Northwind Logistics</span>
+              </div>
+            </div>
+
+            <!-- contents: the story structure -->
+            <div class="htoc">
+              <p class="htoc__head">Contents</p>
+              <ol class="htoc__list">
+                <li><i></i>The Challenge</li>
+                <li><i></i>Our Solution</li>
+                <li><i></i>Expected Outcomes</li>
+                <li><i></i>Delivery Timeline</li>
+                <li><i></i>Investment Summary</li>
+                <li><i></i>Acceptance</li>
+              </ol>
+            </div>
+
+            <div class="htoast">
+              <span class="htoast__dot"></span>
+              <span class="htoast__text"><b>Northwind opened your proposal</b><span>Viewing Investment Summary &middot; just now</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── The arc: Problem → Solution → Value → Delivery → Impact ───────── -->
+      <section class="arc" id="story" aria-labelledby="arc-title" data-arc>
+        <div class="arc__stage" data-arc-stage>
+          <div class="arc__intro ch" data-step="0">
+            <div class="ch__copy">
+              <h2 class="arc__title" id="arc-title">Move beyond quotes. <span class="em">Deliver proposals that win work.</span></h2>
+              <p class="ch__line">
+                Business proposals aren&rsquo;t just pricing. They tell a complete story: problem, solution, value and delivery.
+              </p>
+            </div>
+            <div class="arc__quote-snap" aria-hidden="true">
+              <div class="pgw"><div class="pg pg--bare">
+                <div class="bare">
+                  <p class="bare__h">QUOTE <span>#Q-1042</span></p>
+                  <p class="bare__to">To: Northwind Logistics</p>
+                  <div class="bare__rows">
+                    <p><span>Discovery &amp; design</span><span>6,800.00</span></p>
+                    <p><span>Platform implementation</span><span>13,950.00</span></p>
+                    <p><span>Training &amp; handover</span><span>3,600.00</span></p>
+                  </div>
+                  <p class="bare__total"><span>TOTAL</span><span>$24,350.00</span></p>
+                </div>
+              </div></div>
+            </div>
+          </div>
+
+          <nav class="arc__rail" aria-label="Proposal story chapters">
+            <ol>
+              <li><a href="#ch-problem" data-go="1">Problem</a></li>
+              <li><a href="#ch-solution" data-go="2">Solution</a></li>
+              <li><a href="#ch-value" data-go="3">Value</a></li>
+              <li><a href="#ch-delivery" data-go="4">Delivery</a></li>
+              <li><a href="#ch-impact" data-go="5">Impact</a></li>
+            </ol>
+            <span class="arc__rail-track" aria-hidden="true"><span class="arc__rail-fill"></span></span>
+          </nav>
+
+          <div class="arc__desk" aria-hidden="true" data-arc-desk></div>
+
+          <svg class="arc__thread" aria-hidden="true" data-arc-thread>
+            <path class="arc__thread-base" data-thread-base />
+            <path class="arc__thread-line" data-thread-line pathLength="100" />
+            <g data-thread-nodes></g>
+          </svg>
+
+          <!-- 1 · Problem -->
+          <article class="ch" id="ch-problem" data-step="1">
+            <div class="ch__copy">
+              <p class="ch__tag">Problem</p>
+              <h3 class="ch__title">Open with the client&rsquo;s challenge</h3>
+              <p class="ch__line">Define the problem clearly, in their words, so every page that follows answers something real.</p>
+            </div>
+            <div class="pgw"><div class="pg pg--problem" aria-hidden="true">
+              <div class="pg__head"><span class="pg__brand">TEMPTUS</span><span class="pg__no">01</span></div>
+              <p class="pg__kicker">The Challenge</p>
+              <p class="pg__title">Where Northwind is today</p>
+              <div class="pg__sk"><i></i><i></i><i style="--w: 72%"></i></div>
+              <ul class="pain">
+                <li style="--i: 0">
+                  <span class="pain__ico"><svg viewBox="0 0 20 20"><path d="M3 5h5v5H3zM12 10h5v5h-5zM8 7.5h2.5v5H12" /></svg></span>
+                  <span><b>Three depots, three systems</b><i></i></span>
+                </li>
+                <li style="--i: 1">
+                  <span class="pain__ico"><svg viewBox="0 0 20 20"><path d="M3 4h14v12H3zM3 8h14M8 4v12M13 4v12" /></svg></span>
+                  <span><b>Dispatch planned by spreadsheet</b><i></i></span>
+                </li>
+                <li style="--i: 2">
+                  <span class="pain__ico"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="6.5" /><path d="M10 6.5V10l2.5 1.5" /></svg></span>
+                  <span><b>No live view of deliveries</b><i></i></span>
+                </li>
+              </ul>
+              <div class="pg__sk pg__sk--end"><i></i><i style="--w: 84%"></i></div>
+              <div class="pg__foot"><span>Digital Transformation Proposal</span><span>02</span></div>
+            </div></div>
+          </article>
+
+          <!-- 2 · Solution -->
+          <article class="ch" id="ch-solution" data-step="2">
+            <div class="ch__copy">
+              <p class="ch__tag">Solution</p>
+              <h3 class="ch__title">Present a solution designed for them</h3>
+              <p class="ch__line">Solution design, diagrams and scope of work, built right inside the proposal instead of attached to it.</p>
+            </div>
+            <div class="pgw"><div class="pg pg--solution" aria-hidden="true">
+              <div class="pg__head"><span class="pg__brand">TEMPTUS</span><span class="pg__no">02</span></div>
+              <p class="pg__kicker">Our Solution</p>
+              <p class="pg__title">One connected operations platform</p>
+              <svg class="dia" viewBox="0 0 240 132">
+                <g class="dia__links" fill="none">
+                  <path d="M52 22C86 22 84 66 104 66" />
+                  <path d="M52 66H104" />
+                  <path d="M52 110C86 110 84 66 104 66" />
+                  <path d="M152 66C170 66 172 36 188 36" />
+                  <path d="M152 66C170 66 172 96 188 96" />
+                </g>
+                <g class="dia__nodes">
+                  <g style="--i: 0"><rect x="6" y="10" width="46" height="24" rx="6" /><text x="29" y="25.5">Depot A</text></g>
+                  <g style="--i: 1"><rect x="6" y="54" width="46" height="24" rx="6" /><text x="29" y="69.5">Depot B</text></g>
+                  <g style="--i: 2"><rect x="6" y="98" width="46" height="24" rx="6" /><text x="29" y="113.5">Depot C</text></g>
+                  <g class="dia__hub" style="--i: 3"><rect x="104" y="48" width="48" height="36" rx="9" /><text x="128" y="64">Ops</text><text x="128" y="74">platform</text></g>
+                  <g style="--i: 4"><rect x="188" y="24" width="48" height="24" rx="6" /><text x="212" y="39.5">Live view</text></g>
+                  <g style="--i: 5"><rect x="188" y="84" width="48" height="24" rx="6" /><text x="212" y="99.5">Dispatch</text></g>
+                </g>
+              </svg>
+              <p class="pg__sub">Scope of work</p>
+              <ul class="scope">
+                <li><i></i><span style="--w: 78%"></span></li>
+                <li><i></i><span style="--w: 64%"></span></li>
+                <li><i></i><span style="--w: 70%"></span></li>
+              </ul>
+              <div class="pg__foot"><span>Digital Transformation Proposal</span><span>03</span></div>
+            </div></div>
+          </article>
+
+          <!-- 3 · Value -->
+          <article class="ch" id="ch-value" data-step="3">
+            <div class="ch__copy">
+              <p class="ch__tag">Value</p>
+              <h3 class="ch__title">Explain outcomes, not just services</h3>
+              <p class="ch__line">Strong proposals show what changes for the client and reinforce value beyond cost alone.</p>
+            </div>
+            <div class="pgw"><div class="pg pg--value" aria-hidden="true">
+              <div class="pg__head"><span class="pg__brand">TEMPTUS</span><span class="pg__no">03</span></div>
+              <p class="pg__kicker">Expected Outcomes</p>
+              <p class="pg__title">What success looks like</p>
+              <ul class="outc">
+                <li style="--i: 0"><span class="outc__chk"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></span><span><b>Faster dispatch decisions</b><i></i></span><em></em></li>
+                <li style="--i: 1"><span class="outc__chk"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></span><span><b>One live view across depots</b><i></i></span><em></em></li>
+                <li style="--i: 2"><span class="outc__chk"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></span><span><b>Fewer manual handoffs</b><i></i></span><em></em></li>
+              </ul>
+              <div class="pg__sk pg__sk--end"><i></i><i></i><i style="--w: 56%"></i></div>
+              <div class="pg__foot"><span>Digital Transformation Proposal</span><span>04</span></div>
+            </div></div>
+          </article>
+
+          <!-- 4 · Delivery -->
+          <article class="ch" id="ch-delivery" data-step="4">
+            <div class="ch__copy">
+              <p class="ch__tag">Delivery</p>
+              <h3 class="ch__title">Prove you can deliver it</h3>
+              <p class="ch__line">Methodology, milestones and a live Gantt timeline from the same editor. No separate project files.</p>
+            </div>
+            <div class="pgw"><div class="pg pg--delivery" aria-hidden="true">
+              <div class="pg__head"><span class="pg__brand">TEMPTUS</span><span class="pg__no">04</span></div>
+              <p class="pg__kicker">Methodology &amp; Timeline</p>
+              <p class="pg__title">How we&rsquo;ll get you there</p>
+              <div class="meth">
+                <span style="--i: 0">Discover</span><i></i><span style="--i: 1">Design</span><i></i><span style="--i: 2">Deliver</span>
+              </div>
+              <div class="gantt">
+                <div class="gantt__months"><span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span></div>
+                <div class="gantt__row" style="--i: 0; --x: 0; --w: 0.22"><span>Discovery</span><b><i></i></b></div>
+                <div class="gantt__row" style="--i: 1; --x: 0.16; --w: 0.3"><span>Solution design</span><b><i></i></b></div>
+                <div class="gantt__row" style="--i: 2; --x: 0.36; --w: 0.4"><span>Build &amp; integrate</span><b><i></i></b></div>
+                <div class="gantt__row" style="--i: 3; --x: 0.68; --w: 0.2"><span>Training</span><b><i></i></b></div>
+                <div class="gantt__row gantt__row--ms" style="--i: 4; --x: 0.9; --w: 0"><span>Go-live</span><b><em></em></b></div>
+              </div>
+              <div class="pg__foot"><span>Digital Transformation Proposal</span><span>05</span></div>
+            </div></div>
+          </article>
+
+          <!-- 5 · Impact, part 1: the original quote becomes the investment summary -->
+          <article class="ch" id="ch-investment" data-step="5">
+            <div class="ch__copy">
+              <p class="ch__tag">Investment</p>
+              <h3 class="ch__title">Now the price makes sense</h3>
+              <p class="ch__line">The same three lines, presented as an investment summary backed by everything before it.</p>
+            </div>
+            <div class="pgw"><div class="pg pg--invest" aria-hidden="true" data-quote-page>
+              <div class="bare">
+                <p class="bare__h">QUOTE <span>#Q-1042</span></p>
+                <p class="bare__to">To: Northwind Logistics</p>
+                <div class="bare__rows">
+                  <p><span>Discovery &amp; design</span><span>6,800.00</span></p>
+                  <p><span>Platform implementation</span><span>13,950.00</span></p>
+                  <p><span>Training &amp; handover</span><span>3,600.00</span></p>
+                </div>
+                <p class="bare__total"><span>TOTAL</span><span>$24,350.00</span></p>
+              </div>
+              <div class="inv">
+                <div class="pg__head pg__head--dark"><span class="pg__brand">TEMPTUS</span><span class="pg__no">05</span></div>
+                <div class="inv__band">
+                  <p class="pg__kicker">Investment Summary</p>
+                  <p class="pg__title">Your investment</p>
+                </div>
+                <div class="inv__rows">
+                  <p style="--i: 0"><span><b>Discovery &amp; design</b><i>Workshops, solution blueprint</i></span><em>$6,800</em></p>
+                  <p style="--i: 1"><span><b>Platform implementation</b><i>Build, integrate, migrate</i></span><em>$13,950</em></p>
+                  <p style="--i: 2"><span><b>Training &amp; handover</b><i>Teams, depots, go-live support</i></span><em>$3,600</em></p>
+                </div>
+                <div class="inv__split"><i style="--w: 28%"></i><i style="--w: 57%"></i><i style="--w: 15%"></i></div>
+                <div class="inv__total"><span>Total investment</span><b>$24,350</b></div>
+                <span class="inv__cta">Accept &amp; sign</span>
+                <div class="pg__foot"><span>Digital Transformation Proposal</span><span>06</span></div>
+              </div>
+            </div></div>
+          </article>
+
+          <!-- 6 · Impact, part 2: the client's view -->
+          <article class="ch ch--impact" id="ch-impact" data-step="6">
+            <div class="ch__copy">
+              <p class="ch__tag">Impact</p>
+              <h3 class="ch__title">Win the decision in the client&rsquo;s browser</h3>
+              <p class="ch__line">They navigate every section on any device, and you know when they open it. Then they accept and e-sign.</p>
+            </div>
+            <div class="ch__visual" aria-hidden="true">
+              <div class="brw" data-browser>
+                <div class="brw__bar">
+                  <span class="brw__dots"><i></i><i></i><i></i></span>
+                  <span class="brw__url">quote.cloud/p/northwind-proposal</span>
+                </div>
+                <div class="brw__nav">
+                  <p class="brw__doc">Digital Transformation Proposal</p>
+                  <ol>
+                    <li style="--i: 0">The Challenge</li>
+                    <li style="--i: 1">Our Solution</li>
+                    <li style="--i: 2">Outcomes</li>
+                    <li style="--i: 3">Timeline</li>
+                    <li style="--i: 4">Investment</li>
+                    <li style="--i: 5">Acceptance</li>
+                  </ol>
+                  <span class="brw__btn">Accept &amp; sign</span>
+                </div>
+                <div class="brw__toast">
+                  <span class="brw__toast-dot"></span>
+                  <span><b>Opened by Northwind</b><i>2 minutes ago</i></span>
+                </div>
+              </div>
+              <div class="pgw"><div class="pg pg--accept">
+                <div class="pg__head"><span class="pg__brand">TEMPTUS</span><span class="pg__no">06</span></div>
+                <p class="pg__kicker">Acceptance</p>
+                <p class="pg__title">Ready when you are</p>
+                <div class="pg__sk"><i></i><i style="--w: 80%"></i></div>
+                <div class="acc">
+                  <p class="acc__field"><span>Client</span><b>Northwind Logistics</b></p>
+                  <p class="acc__field"><span>Signed by</span><b>Emily R.</b></p>
+                  <div class="acc__sig">
+                    <svg viewBox="0 0 200 64">
+                      <path
+                        pathLength="1"
+                        d="M10 44c10-2 16-26 22-26 6 0-6 34 2 34 7 0 10-24 18-24 6 0 1 18 7 18s10-14 16-14 3 12 9 12c7 0 9-16 17-16 6 0 2 14 9 14 8 0 14-12 22-12 7 0 8 8 16 8 7 0 14-4 22-10"
+                      />
+                    </svg>
+                    <span class="acc__line"></span>
+                  </div>
+                  <span class="acc__stamp"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>Accepted</span>
+                </div>
+                <div class="pg__foot"><span>Digital Transformation Proposal</span><span>07</span></div>
+              </div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ───────── Mid CTA ───────── -->
+      <section class="mid" aria-labelledby="mid-title">
+        <div class="qc-container mid__inner" data-reveal>
+          <h2 class="mid__title" id="mid-title">Send your next proposal as the whole story.</h2>
+          <div class="mid__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="mid"
+              >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+            >
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="mid-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Team + templates ───────── -->
+      <section class="row" aria-labelledby="team-title">
+        <div class="qc-container row__grid">
+          <div class="row__copy" data-reveal>
+            <h2 class="row__title" id="team-title">One proposal, built by <span class="em">the whole team</span></h2>
+            <p class="row__line">
+              Sales, delivery and technical contributors work in the same document in real time, while proposal templates and
+              content locking keep every submission consistent and on-brand.
+            </p>
+            <p class="row__links">
+              <a href="https://www.quote.cloud/collaboration">Real-time collaboration <span aria-hidden="true">&rarr;</span></a>
+              <a href="https://www.quote.cloud/templates">Proposal templates <span aria-hidden="true">&rarr;</span></a>
+            </p>
+          </div>
+          <div class="row__visual" data-reveal="scale" aria-hidden="true">
+            <div class="team" data-loop data-live>
+              <div class="team__bar">
+                <span class="team__name">Digital Transformation Proposal</span>
+                <span class="team__faces"><i class="av av--s">S</i><i class="av av--l">L</i><i class="av av--e">E</i></span>
+              </div>
+              <div class="team__doc">
+                <div class="team__brand">
+                  <span class="team__logo">TEMPTUS</span>
+                  <span class="team__lock">
+                    <svg viewBox="0 0 20 20"><rect x="4.5" y="9" width="11" height="8" rx="2" /><path class="team__shackle" d="M7 9V6.5a3 3 0 0 1 6 0V9" /></svg>
+                    Locked by template
+                  </span>
+                </div>
+                <div class="team__sec team__sec--a">
+                  <p class="team__h">2. Our Solution</p>
+                  <p class="team__txt"><span class="team__sel">A single operations platform connecting all three depots</span> with live dispatch.</p>
+                  <span class="cur cur--s"><svg viewBox="0 0 16 16"><path d="M2 1.5l11 6-5 1.2-2.2 4.8z" /></svg><b>Sophia &middot; Sales</b></span>
+                </div>
+                <div class="team__sec team__sec--b">
+                  <p class="team__h">4. Delivery plan</p>
+                  <p class="team__txt">Go-live across depots in <span class="team__type">phased weekly releases</span><span class="team__caret"></span></p>
+                  <span class="cur cur--l"><svg viewBox="0 0 16 16"><path d="M2 1.5l11 6-5 1.2-2.2 4.8z" /></svg><b>Liam &middot; Delivery</b></span>
+                </div>
+                <div class="team__sk"><i></i><i style="--w: 70%"></i></div>
+              </div>
+              <div class="team__comment">
+                <i class="av av--e">E</i>
+                <span><b>Emily &middot; Technical</b>Integration diagram added to section 2.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Approvals + versions ───────── -->
+      <section class="row row--flip" aria-labelledby="gov-title">
+        <div class="qc-container row__grid">
+          <div class="row__copy" data-reveal>
+            <h2 class="row__title" id="gov-title">Approval workflows and <span class="em">version control</span>, built in</h2>
+            <p class="row__line">
+              Multi-step reviews decide who can send, and every draft is tracked, comparable and restorable. Accurate, aligned and
+              approved before it goes to market.
+            </p>
+          </div>
+          <div class="row__visual" data-reveal="scale" aria-hidden="true">
+            <div class="gov" data-loop data-live>
+              <div class="gov__chain">
+                <p class="gov__label">Review process</p>
+                <ol>
+                  <li style="--i: 0"><i><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></i><span>Author</span></li>
+                  <li style="--i: 1"><i><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></i><span>Manager</span></li>
+                  <li style="--i: 2"><i><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></i><span>Legal</span></li>
+                  <li style="--i: 3"><i><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></i><span>Finance</span></li>
+                  <li style="--i: 4"><i><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></i><span>Final</span></li>
+                </ol>
+                <span class="gov__send"><span class="gov__send-off">Send locked until approved</span><span class="gov__send-on">Ready to send</span></span>
+              </div>
+              <div class="gov__versions">
+                <p class="gov__label">Version history</p>
+                <ul>
+                  <li class="is-current"><b>v4.2</b><span>Sophia &middot; 2m ago</span><em>Current</em></li>
+                  <li class="is-compare"><b>v4.1</b><span>Liam &middot; 1h ago</span><em>Compare</em></li>
+                  <li><b>v4.0</b><span>Emily &middot; Yesterday</span><em>Restore</em></li>
+                </ul>
+                <div class="gov__diff">
+                  <p class="gov__del">Go-live in week 12</p>
+                  <p class="gov__add">Go-live in week 10</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Data + integrations ───────── -->
+      <section class="row" aria-labelledby="data-title">
+        <div class="qc-container row__grid">
+          <div class="row__copy" data-reveal>
+            <h2 class="row__title" id="data-title">Connected to your CRM, so <span class="em">proposals fill themselves in</span></h2>
+            <p class="row__line">
+              Auto-populate client, opportunity and project fields from structured data, and keep CRM, project and accounting
+              systems in step. No retyping, no inconsistent details.
+            </p>
+            <p class="row__links">
+              <a href="https://www.quote.cloud/all-integrations">All integrations <span aria-hidden="true">&rarr;</span></a>
+            </p>
+          </div>
+          <div class="row__visual" data-reveal="scale" aria-hidden="true">
+            <div class="sync" data-loop data-live>
+              <div class="sync__crm">
+                <p class="sync__label">CRM opportunity</p>
+                <p class="sync__f"><span>Account</span><b>Northwind Logistics</b></p>
+                <p class="sync__f"><span>Contact</span><b>Emily R.</b></p>
+                <p class="sync__f"><span>Amount</span><b>$24,350</b></p>
+                <p class="sync__f"><span>Stage</span><b>Proposal</b></p>
+              </div>
+              <svg class="sync__flow" viewBox="0 0 80 120" preserveAspectRatio="none">
+                <path d="M0 30C40 30 40 30 80 30M0 60H80M0 90C40 90 40 90 80 90" />
+              </svg>
+              <div class="sync__doc">
+                <p class="sync__label">Proposal</p>
+                <p class="sync__t">Prepared for <span class="tok" style="--i: 0">Northwind Logistics</span></p>
+                <p class="sync__t">Attention <span class="tok" style="--i: 1">Emily R.</span></p>
+                <p class="sync__t">Investment <span class="tok" style="--i: 2">$24,350</span></p>
+                <div class="sync__sk"><i></i><i style="--w: 76%"></i><i style="--w: 52%"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="logos" data-loop aria-label="Integrations include">
+          <ul class="logos__track">
+            <li><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="monday.com" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/zendesk-logo.jpg" alt="Zendesk Sell" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/xero.png" alt="Xero" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/freshbooks-accounting-logo.jpg" alt="FreshBooks" width="785" height="783" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/stripe.png" alt="Stripe" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/paypal.png" alt="PayPal" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/googlesheets.png" alt="Google Sheets" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/slack.jpg" alt="Slack" width="792" height="790" loading="lazy" decoding="async" /></li>
+            <li><img src="/assets/integrations/serviceM8.png" alt="ServiceM8" width="792" height="790" loading="lazy" decoding="async" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Real sample proposals ───────── -->
+      <section class="samples" aria-labelledby="samples-title">
+        <div class="qc-container">
+          <div class="samples__head" data-reveal>
+            <h2 class="samples__title" id="samples-title">Proposal templates for <span class="em">complex services businesses</span></h2>
+            <p class="samples__line">Real QuoteCloud proposals, ready to make your own.</p>
+          </div>
+          <ul class="samples__list" data-reveal-stagger="90">
+            <li class="smp" data-reveal>
+              <a class="smp__link" href="https://www.quote.cloud/templates/consulting">
+                <span class="smp__frame"><img src="/assets/proposal/sample-proposal-architectural-design.png" alt="Architectural design proposal template: cover, journey, scope of services, professional fees and acceptance pages" width="1055" height="1491" loading="lazy" decoding="async" /></span>
+                <span class="smp__name">Architectural Design</span>
+                <span class="smp__kind">Professional services</span>
+              </a>
+            </li>
+            <li class="smp" data-reveal>
+              <a class="smp__link" href="https://www.quote.cloud/templates/technology">
+                <span class="smp__frame"><img src="/assets/proposal/sample-proposal-hosted-services.png" alt="Hosted services proposal template: cover, connected journey, service plan options, plan comparison and investment summary pages" width="1054" height="1492" loading="lazy" decoding="async" /></span>
+                <span class="smp__name">Hosted Services</span>
+                <span class="smp__kind">Technology</span>
+              </a>
+            </li>
+            <li class="smp" data-reveal>
+              <a class="smp__link" href="https://www.quote.cloud/templates/construction">
+                <span class="smp__frame"><img src="/assets/proposal/sample-proposal-new-home-build.png" alt="New home build proposal template: cover, floor plans, inclusions packages and acceptance pages" width="1055" height="1491" loading="lazy" decoding="async" /></span>
+                <span class="smp__name">New Home Build</span>
+                <span class="smp__kind">Construction &amp; infrastructure</span>
+              </a>
+            </li>
+            <li class="smp" data-reveal>
+              <a class="smp__link" href="https://www.quote.cloud/templates">
+                <span class="smp__frame"><img src="/assets/proposal/sample-proposal-medical-devices.png" alt="Medical device proposal template: cover, device packages and investment pages" width="1055" height="1491" loading="lazy" decoding="async" /></span>
+                <span class="smp__name">Medical Devices</span>
+                <span class="smp__kind">High-value solutions</span>
+              </a>
+            </li>
+          </ul>
+          <p class="samples__more" data-reveal>
+            <a class="qc-btn qc-btn--dark" href="https://www.quote.cloud/templates" data-qc-cta="templates">Browse all proposal templates</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="qc-container proof__inner" data-reveal>
+          <h2 class="proof__title" id="proof-title">Secure eSignatures. <span class="em">Trusted since 2013.</span></h2>
+          <ul class="proof__list">
+            <li class="proof__rate"><b>4.2</b><span class="stars" aria-hidden="true"><i style="--f: 0.84"></i></span><span>Capterra</span></li>
+            <li class="proof__rate"><b>4.2</b><span class="stars" aria-hidden="true"><i style="--f: 0.84"></i></span><span>Software Advice</span></li>
+            <li class="proof__badge"><img src="/assets/compliance/eidas.svg" alt="" width="91" height="90" loading="lazy" decoding="async" /><span>eIDAS compliant</span></li>
+            <li class="proof__badge"><img src="/assets/compliance/encryption-256.png" alt="" width="320" height="305" loading="lazy" decoding="async" /><span>256-bit encryption</span></li>
+            <li class="proof__badge"><img src="/assets/compliance/aws.svg" alt="" width="91" height="90" loading="lazy" decoding="async" /><span>Hosted on AWS</span></li>
+            <li class="proof__badge"><img src="/assets/compliance/gdpr.png" alt="" width="319" height="320" loading="lazy" decoding="async" /><span>GDPR ready</span></li>
+          </ul>
+          <p class="proof__links">
+            <a href="https://www.quote.cloud/electronic-signature-software-solution">How eSignatures work <span aria-hidden="true">&rarr;</span></a>
+            <a href="https://www.quote.cloud/pricing">See pricing <span aria-hidden="true">&rarr;</span></a>
+          </p>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-proposal -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="close__panel" data-reveal="scale">
+            <svg class="close__thread" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+              <path pathLength="1" d="M-10 80C120 80 160 30 300 30S480 92 600 92 780 26 900 26 1080 70 1210 64" />
+            </svg>
+            <h2 class="close__title" id="close-title">Stop sending prices. <span class="em">Start winning work.</span></h2>
+            <p class="close__line">Your first proposal can be ready today. 14-day free trial, no credit card required.</p>
+            <div class="close__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

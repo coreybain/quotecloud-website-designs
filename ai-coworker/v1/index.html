@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-ai-coworker -->
+  </head>
+  <body>
+    <!-- @include header -->
+    <svg class="acw-sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5c.7 5.6 3.4 8.3 9 9-5.6.7-8.3 3.4-9 9-.7-5.6-3.4-8.3-9-9 5.6-.7 8.3-3.4 9-9Z" /></symbol>
+      <symbol id="i-send" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M8 13V3M3.5 7.5 8 3l4.5 4.5" /></symbol>
+      <symbol id="i-plus" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M8 3v10M3 8h10" /></symbol>
+      <symbol id="i-x" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="m4 4 8 8M12 4l-8 8" /></symbol>
+      <symbol id="i-redo" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M13 8a5 5 0 1 1-1.6-3.7M13 2.5v3h-3" /></symbol>
+      <symbol id="i-up" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M5 7v6.5H2.5V7zM5 7l2.6-4.5c.9 0 1.6.8 1.4 1.7L8.5 6.5h4c.8 0 1.4.8 1.2 1.6l-1.1 4.4c-.2.6-.7 1-1.3 1H5" /></symbol>
+      <symbol id="i-check" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3.5 8.5 3 3 6-7" /></symbol>
+      <symbol id="i-clip" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="m13 7.5-5 5a3.2 3.2 0 0 1-4.5-4.5l5.5-5.5a2.1 2.1 0 0 1 3 3l-5.4 5.4a1 1 0 0 1-1.5-1.5l4.8-4.8" /></symbol>
+      <symbol id="i-pen" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M10.5 2.5 13.5 5.5 6 13H3v-3z" /></symbol>
+      <symbol id="i-bulb" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6 12.5h4M6.5 14.5h3M8 1.8a4.3 4.3 0 0 0-2.6 7.7c.4.3.6.8.6 1.3V11h4v-.2c0-.5.2-1 .6-1.3A4.3 4.3 0 0 0 8 1.8Z" /></symbol>
+      <symbol id="i-file" viewBox="0 0 20 20"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 2.5h6.5L15.5 6.5v11h-10.5zM11.5 2.5v4h4" /></symbol>
+      <symbol id="i-plane" viewBox="0 0 16 16"><path fill="currentColor" d="M14.6 7.2c.5.2.5.9 0 1.1l-4.4 1.5-2.6 4.4H6.2l1-4L3.6 11l-1 1.4H1.5l.6-2.6L1 8.3h1.1l1.3 1 3.8-.6-1-4h1.4l2.6 4.3z" transform="rotate(-6 8 8)" /></symbol>
+      <symbol id="i-cursor" viewBox="0 0 20 20"><path d="M4 2.5v13.2l3.4-3.1 2.3 5 2.3-1-2.3-5h4.6z" fill="#0a0a0a" stroke="#fff" stroke-width="1.3" stroke-linejoin="round" /></symbol>
+      <symbol id="i-undo" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 4 2.5 6.5 5 9M2.5 6.5h7a4 4 0 0 1 0 8H7" /></symbol>
+      <symbol id="i-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="m10.5 10.5 3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></symbol>
+    </svg>
+
+    <main id="main" class="acw">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="qc-container hero__grid">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">Your <span class="nw">AI Co-Worker</span> for <span class="em">proposals and quotes</span></h1>
+            <p class="hero__lede">
+              It drafts, rewrites and turns pasted data into pricing tables and itineraries, right inside your QuoteCloud
+              document. You approve every word.
+            </p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="hero__note">
+              <span>No credit card required</span><i aria-hidden="true"></i><span><span class="star" aria-hidden="true">&#9733;</span> 4.2 on Capterra and Software Advice</span>
+            </p>
+          </div>
+
+          <figure class="hero__visual">
+            <figcaption class="qc-sr-only">
+              A QuoteCloud proposal open in the editor with the AI Coworker panel docked beside it. The request "Write a proposal
+              introduction" is typed, a draft streams into the panel, and pressing Insert places it in the document's Introduction.
+            </figcaption>
+            <div class="stage" data-scene="hero" aria-hidden="true">
+              <div class="doc">
+                <div class="doc__bar">
+                  <svg class="ico ico--file"><use href="#i-file" /></svg>
+                  <span class="doc__name">Office Fitout Proposal</span>
+                  <span class="doc__saved"><i></i>Saved</span>
+                  <span class="doc__av">S</span>
+                </div>
+                <div class="doc__page">
+                  <p class="doc__brand"><span class="doc__mark"></span>Brightline Interiors</p>
+                  <p class="doc__title">Office Fitout Proposal</p>
+                  <p class="doc__meta">Prepared for Northwind Studio &middot; 4 November</p>
+                  <p class="doc__h">Introduction</p>
+                  <div class="slot">
+                    <div class="slot__ph js-out" data-k="ph"><i class="slot__caret"></i>Type / for blocks, or ask AI Coworker</div>
+                    <div class="slot__text js-in" data-k="slot">
+                      <span class="slot__glow js-out" data-k="glow"></span>
+                      <p>Northwind Studio is growing, and your workspace should grow with you. This proposal sets out a three-phase fitout that adds 24 workstations, two meeting rooms and a breakout kitchen, delivered floor by floor so your team keeps working throughout.</p>
+                    </div>
+                  </div>
+                  <div class="doc__inv">
+                    <p class="doc__h">Investment</p>
+                    <div class="mt">
+                      <div class="mt__row"><span>Design &amp; planning</span><span>$6,400</span></div>
+                      <div class="mt__row"><span>Fitout works</span><span>$36,800</span></div>
+                      <div class="mt__row"><span>Furniture package</span><span>$5,400</span></div>
+                      <div class="mt__row mt__row--total"><span>Total</span><span>$48,600</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="toast js-out" data-k="toast"><svg class="ico"><use href="#i-check" /></svg>Inserted into Introduction<b>Undo</b></div>
+              </div>
+
+              <div class="ai">
+                <div class="ai__head">
+                  <span class="ai__badge"><svg class="ico"><use href="#i-spark" /></svg></span>
+                  <span class="ai__ttl"><b>AI Coworker</b><small>Your AI assistant for sales success</small></span>
+                  <span class="ai__btn"><svg class="ico"><use href="#i-plus" /></svg></span>
+                  <span class="ai__btn"><svg class="ico"><use href="#i-x" /></svg></span>
+                </div>
+                <div class="ai__body">
+                  <div class="ai__greet js-out" data-k="greet">
+                    <p class="ai__hi">Hi Sam</p>
+                    <p class="ai__how">How can I help you today?</p>
+                    <ul class="qp">
+                      <li class="qp__item" data-k="qp1"><svg class="ico"><use href="#i-pen" /></svg>Write a proposal introduction</li>
+                      <li class="qp__item"><svg class="ico"><use href="#i-redo" /></svg>Improve existing content</li>
+                      <li class="qp__item"><svg class="ico"><use href="#i-bulb" /></svg>Create value proposition</li>
+                    </ul>
+                  </div>
+                  <div class="ai__conv">
+                    <p class="bubble js-in" data-k="bubble">Write a proposal introduction</p>
+                    <p class="ai__lead js-in" data-k="lead"><span class="ai__dot"><svg class="ico"><use href="#i-spark" /></svg></span>Here's a draft for you:</p>
+                    <div class="draft js-in" data-k="draft">
+                      <p class="stream" data-k="stream">Northwind Studio is growing, and your workspace should grow with you. This proposal sets out a three-phase fitout that adds 24 workstations, two meeting rooms and a breakout kitchen, delivered floor by floor so your team keeps working throughout.</p>
+                    </div>
+                    <div class="acts js-in" data-k="acts">
+                      <span class="acts__regen"><svg class="ico"><use href="#i-redo" /></svg>Regenerate</span>
+                      <span class="acts__thumb"><svg class="ico"><use href="#i-up" /></svg></span>
+                      <span class="acts__thumb acts__thumb--down"><svg class="ico"><use href="#i-up" /></svg></span>
+                      <span class="acts__insert" data-k="insert">Insert</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ai__foot">
+                  <div class="ai__input">
+                    <svg class="ico ico--mute"><use href="#i-clip" /></svg>
+                    <span class="ai__field">
+                      <span class="ai__ph js-in" data-k="ph-input">Ask AI Coworker</span>
+                      <span class="ai__typed js-out" data-k="typed">Write a proposal introduction</span>
+                    </span>
+                    <span class="ai__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+                  </div>
+                  <p class="ai__disc">AI Coworker can make mistakes. Check important info.</p>
+                </div>
+              </div>
+
+              <svg class="cursor js-out" data-k="cursor"><use href="#i-cursor" /></svg>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────── Bento: a day of requests ───────── -->
+      <section class="day" id="features" aria-labelledby="day-title">
+        <div class="qc-container">
+          <div class="sec-head" data-reveal>
+            <h2 class="sec-title" id="day-title">Ask in plain words. <span class="em">Watch the work get done.</span></h2>
+            <p class="sec-lede">A day of real requests inside one proposal. Each tile is the ask, and the answer it gets, in place.</p>
+          </div>
+
+          <div class="bento" data-reveal-stagger="90">
+            <!-- Itinerary: messy in, polished out -->
+            <article class="tile tile--itin" data-scene="itin" data-reveal aria-labelledby="t-itin">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Turn this into an itinerary</span>
+                <span class="ask__time">9:12</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis itin" aria-hidden="true">
+                <div class="raw">
+                  <p class="raw__head"><span>Pasted from clipboard</span><span class="raw__toast js-out" data-k="parse"><i class="spin"></i>Parsing itinerary from clipboard...</span></p>
+                  <pre class="raw__body"><span class="raw__l" data-k="r1">1 QC 214 Y 12MAR SYDSIN HK2 0915 1520</span>
+<span class="raw__l" data-k="r2">2 QC 318 Y 12MAR SINLHR HK2 2340 0610+1</span>
+<span class="raw__l" data-k="r3">  FARE AUD 4280.00 TAX AUD 612.40 /2ADT</span></pre>
+                </div>
+                <div class="itin__block">
+                  <div class="seg js-in" data-k="s1">
+                    <span class="seg__date"><b>12</b>MAR</span>
+                    <span class="seg__main"><b>SYD <i>&rarr;</i> SIN</b><small>Flight QC 214 &middot; Economy</small></span>
+                    <span class="seg__time"><b>09:15 – 15:20</b><small>8h 05m</small></span>
+                    <span class="seg__ai"><svg class="ico"><use href="#i-spark" /></svg></span>
+                  </div>
+                  <div class="seg js-in" data-k="s2">
+                    <span class="seg__date"><b>12</b>MAR</span>
+                    <span class="seg__main"><b>SIN <i>&rarr;</i> LHR</b><small>Flight QC 318 &middot; Economy</small></span>
+                    <span class="seg__time"><b>23:40 – 06:10<sup>+1</sup></b><small>14h 30m</small></span>
+                    <span class="seg__ai"><svg class="ico"><use href="#i-spark" /></svg></span>
+                  </div>
+                  <div class="fare js-in" data-k="s3"><span>Airfare &middot; 2 adults, incl. taxes</span><b>AUD 4,892.40</b></div>
+                  <div class="review js-in" data-k="review">
+                    <span class="review__msg"><svg class="ico"><use href="#i-spark" /></svg>Generated by your AI Coworker. Please review.</span>
+                    <span class="review__btns"><span class="pill pill--ghost">Reject</span><span class="pill pill--violet" data-k="accept">Accept</span></span>
+                    <span class="review__done js-out" data-k="done"><svg class="ico"><use href="#i-check" /></svg>Accepted</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tile__txt">
+                <h3 id="t-itin">Paste an airfare search. Get an itinerary.</h3>
+                <p>Messy text in, formatted Content Blocks out: itinerary segments and pricing, flagged for your review. <a class="tlink" href="https://www.quote.cloud/enhanced-travel-itinerary-software">Travel itineraries</a></p>
+              </div>
+            </article>
+
+            <!-- Summarize -->
+            <article class="tile tile--sum" data-scene="sum" data-reveal aria-labelledby="t-sum">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Summarize this document</span>
+                <span class="ask__time">9:40</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis sum" aria-hidden="true">
+                <div class="sum__page" data-k="page">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  <span class="sum__scan js-out" data-k="scan"></span>
+                </div>
+                <div class="sum__out">
+                  <ul class="sum__list">
+                    <li class="js-in" data-k="b1">Three-phase fitout over ten weeks</li>
+                    <li class="js-in" data-k="b2">Fixed investment of $48,600</li>
+                    <li class="js-in" data-k="b3">Work runs floor by floor, team stays in</li>
+                  </ul>
+                  <span class="pill pill--violet js-in" data-k="insert">Insert</span>
+                </div>
+              </div>
+              <div class="tile__txt"><h3 id="t-sum">A long document, in three lines</h3></div>
+            </article>
+
+            <!-- Tone (interactive) -->
+            <article class="tile tile--tone" data-scene="tone" data-reveal aria-labelledby="t-tone">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Rewrite this in a different tone</span>
+                <span class="ask__time">10:15</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis tone">
+                <div class="seg-ctl" role="radiogroup" aria-label="Tone">
+                  <button type="button" role="radio" aria-checked="true" data-tone="0">Professional</button>
+                  <button type="button" role="radio" aria-checked="false" data-tone="1">Friendly</button>
+                  <button type="button" role="radio" aria-checked="false" data-tone="2">Concise</button>
+                  <button type="button" role="radio" aria-checked="false" data-tone="3">Technical</button>
+                  <span class="seg-ctl__thumb" aria-hidden="true"></span>
+                </div>
+                <div class="tone__out" aria-live="polite">
+                  <p class="tone__p is-on" data-tone-p="0">Northwind Studio needs a workspace that supports a growing team. This proposal sets out a three-phase fitout, delivered with minimal disruption to your operations.</p>
+                  <p class="tone__p" data-tone-p="1">You're growing fast, and your space should keep up. Here's how we'll give the Northwind team a studio they'll love, without slowing your week down.</p>
+                  <p class="tone__p" data-tone-p="2">Three phases. Ten weeks. Minimal disruption. One fixed price.</p>
+                  <p class="tone__p" data-tone-p="3">Scope covers partitioning, electrical and Cat6A data cabling, and HVAC rebalancing, sequenced in three phases to keep each floor operational.</p>
+                </div>
+              </div>
+              <div class="tile__txt"><h3 id="t-tone">Same message, the tone you choose</h3></div>
+            </article>
+
+            <!-- Consistency -->
+            <article class="tile tile--cons" data-scene="cons" data-reveal aria-labelledby="t-cons">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Follow our team's rules</span>
+                <span class="ask__time">11:30</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis cons" aria-hidden="true">
+                <div class="rules">
+                  <p class="rules__lbl">Tone</p>
+                  <p class="rules__val">Professional</p>
+                  <p class="rules__lbl">Assistant Rules</p>
+                  <p class="rules__val rules__val--txt">Lead with the client's goal. No jargon. End on a next step.</p>
+                  <span class="rules__save" data-k="save">Save Settings</span>
+                </div>
+                <div class="reps" data-k="reps">
+                  <div class="rep rep--a"><span class="rep__av">A</span><i style="--w:.9"></i><i style="--w:.55"></i><i style="--w:.75"></i><svg class="rep__ok ico"><use href="#i-check" /></svg></div>
+                  <div class="rep rep--j"><span class="rep__av">J</span><i style="--w:.6"></i><i style="--w:.95"></i><i style="--w:.4"></i><svg class="rep__ok ico"><use href="#i-check" /></svg></div>
+                  <div class="rep rep--m"><span class="rep__av">M</span><i style="--w:.8"></i><i style="--w:.35"></i><i style="--w:.9"></i><svg class="rep__ok ico"><use href="#i-check" /></svg></div>
+                  <div class="rep rep--p"><span class="rep__av">P</span><i style="--w:.45"></i><i style="--w:.85"></i><i style="--w:.6"></i><svg class="rep__ok ico"><use href="#i-check" /></svg></div>
+                </div>
+              </div>
+              <div class="tile__txt"><h3 id="t-cons">Every rep, on-brand</h3><p>Set the Tone and Assistant Rules once. Every draft follows them.</p></div>
+            </article>
+
+            <!-- Pricing -->
+            <article class="tile tile--price" data-scene="price" data-reveal aria-labelledby="t-price">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Add Premium Support from the catalogue</span>
+                <span class="ask__time">13:05</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis price" aria-hidden="true">
+                <div class="pt">
+                  <div class="pt__row pt__row--head"><span>Item</span><span>Qty</span><span>Total</span></div>
+                  <div class="pt__row"><span>Design &amp; planning</span><span>1</span><span>$6,400</span></div>
+                  <div class="pt__row"><span>Fitout works</span><span>1</span><span>$36,800</span></div>
+                  <div class="pt__row"><span>Furniture package</span><span>1</span><span>$5,400</span></div>
+                  <div class="pt__row pt__row--new js-in" data-k="newrow"><span>Premium Support <small>12 months</small></span><span>1</span><span>$7,200</span></div>
+                  <div class="pt__row pt__row--total" data-k="total"><span>Total <small>excl. tax</small></span><span></span><span data-k="sum">$55,800</span></div>
+                </div>
+                <span class="undo js-in" data-k="undo"><svg class="ico"><use href="#i-check" /></svg>Premium Support added<b><svg class="ico"><use href="#i-undo" /></svg>Undo</b></span>
+                <div class="cat" data-k="cat">
+                  <p class="cat__search"><svg class="ico"><use href="#i-search" /></svg>Product catalogue<span class="cat__q">Premium</span></p>
+                  <p class="cat__item cat__item--hit" data-k="hit"><span>Premium Support <small>12 months</small></span><b>$7,200</b><svg class="ico cat__ok"><use href="#i-check" /></svg></p>
+                  <p class="cat__item"><span>Premium Install <small>per site</small></span><b>$1,900</b></p>
+                  <p class="cat__item"><span>Premium Finishes <small>upgrade</small></span><b>$3,250</b></p>
+                  <p class="cat__item"><span>Premium Training <small>per seat</small></span><b>$480</b></p>
+                </div>
+              </div>
+              <div class="tile__txt">
+                <h3 id="t-price">Edit the pricing table in plain words</h3>
+                <p>Add products from your catalogue, remove or move rows, rename columns. Every change can be undone. <a class="tlink" href="https://www.quote.cloud/cpq-software">CPQ software</a></p>
+              </div>
+            </article>
+
+            <!-- Optional -->
+            <article class="tile tile--opt" data-scene="opt" data-reveal aria-labelledby="t-opt">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Make onboarding optional</span>
+                <span class="ask__time">14:20</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis opt" aria-hidden="true">
+                <div class="opt__row opt__row--dim"><span>Fitout works</span><b>$36,800</b></div>
+                <div class="opt__row opt__row--hl" data-k="row">
+                  <span class="sw js-in" data-k="sw"><i></i></span>
+                  <span class="opt__name">Onboarding workshop<small class="js-in" data-k="tag">Optional &middot; client decides</small></span>
+                  <b>$2,400</b>
+                </div>
+                <div class="opt__row opt__row--dim"><span>Furniture package</span><b>$5,400</b></div>
+                <span class="undo undo--sm js-in" data-k="undo"><b><svg class="ico"><use href="#i-undo" /></svg>Undo</b></span>
+              </div>
+              <div class="tile__txt"><h3 id="t-opt">Let clients choose</h3><p>Make a row optional, or let the client change quantity.</p></div>
+            </article>
+
+            <!-- Headings -->
+            <article class="tile tile--head" data-scene="head" data-reveal aria-labelledby="t-head">
+              <div class="ask" aria-hidden="true">
+                <svg class="ico ico--spark"><use href="#i-spark" /></svg>
+                <span class="ask__text" data-type>Headings in Quicksand</span>
+                <span class="ask__time">15:45</span>
+                <span class="ask__send" data-k="send"><svg class="ico"><use href="#i-send" /></svg></span>
+              </div>
+              <div class="tile__vis hd" aria-hidden="true">
+                <div class="hd__page">
+                  <span class="hd__sweep js-out" data-k="sweep"></span>
+                  <div class="hd__blk" data-k="h1"><span class="hd__old">Scope of work</span><span class="hd__new">Scope of work</span><i></i><i></i></div>
+                  <div class="hd__blk" data-k="h2"><span class="hd__old">Timeline</span><span class="hd__new">Timeline</span><i></i><i></i></div>
+                  <div class="hd__blk" data-k="h3"><span class="hd__old">Investment</span><span class="hd__new">Investment</span><i></i></div>
+                </div>
+                <span class="undo undo--sm js-in" data-k="undo"><b><svg class="ico"><use href="#i-undo" /></svg>Reset to default</b></span>
+              </div>
+              <div class="tile__txt"><h3 id="t-head">Restyle the whole document</h3><p>Body text and headings, with a reset to default.</p></div>
+            </article>
+          </div>
+
+          <div class="mid-cta" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-bento"
+              >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+            >
+            <a class="qc-btn qc-btn--dark qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="after-bento-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Human + AI ───────── -->
+      <section class="ctrl" aria-labelledby="ctrl-title">
+        <div class="qc-container ctrl__grid">
+          <div class="ctrl__copy" data-reveal>
+            <h2 class="sec-title" id="ctrl-title">You stay in control. <span class="em">Always.</span></h2>
+            <p class="sec-lede">
+              AI Co-Worker enhances your team, it doesn't replace it. Every suggestion waits for a person to accept, edit or
+              reject it, and nothing is sent until you send it.
+            </p>
+            <p class="ctrl__hint">Try it: review the AI-written section on the right.</p>
+          </div>
+
+          <div class="rv" data-scene="review" data-reveal>
+            <div class="rv__doc">
+              <p class="rv__h">Why Brightline</p>
+              <p class="rv__fixed">We have delivered workplace fitouts for growing teams since our first project, and we manage every trade in-house.</p>
+              <div class="rv__ai" data-state="pending">
+                <p class="rv__flag"><svg class="ico" aria-hidden="true"><use href="#i-spark" /></svg>This segment was generated by your AI Coworker from your supplied information. Please review carefully and either Accept, Edit, or Reject.</p>
+                <p class="rv__text" id="rv-text">Your project lead stays with you from the first walkthrough to handover, with a weekly progress report and a single number to call.</p>
+                <div class="rv__bar">
+                  <button type="button" class="rbtn rbtn--accept" data-act="accept"><svg class="ico" aria-hidden="true"><use href="#i-check" /></svg>Accept</button>
+                  <button type="button" class="rbtn" data-act="edit"><svg class="ico" aria-hidden="true"><use href="#i-pen" /></svg>Edit</button>
+                  <button type="button" class="rbtn rbtn--reject" data-act="reject"><svg class="ico" aria-hidden="true"><use href="#i-x" /></svg>Reject</button>
+                </div>
+                <p class="rv__status" aria-live="polite"></p>
+              </div>
+              <p class="rv__fixed rv__fixed--last">Our pricing is fixed, itemised and agreed before work begins.</p>
+            </div>
+            <svg class="cursor rv__cursor" aria-hidden="true"><use href="#i-cursor" /></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Then send, sign, close ───────── -->
+      <section class="close-loop" aria-labelledby="loop-title">
+        <div class="qc-container">
+          <div class="sec-head" data-reveal>
+            <h2 class="sec-title" id="loop-title">Then send it, sign it, <span class="em">close it.</span></h2>
+            <p class="sec-lede">AI Co-Worker lives in the same platform you use to build, send, track and e-sign every proposal.</p>
+          </div>
+          <div class="loop" data-scene="loop" data-reveal-stagger="100">
+            <article class="lc" data-reveal>
+              <div class="lc__vis lc__vis--src" aria-hidden="true">
+                <span class="src src--1">Templates</span>
+                <span class="src src--2">Content library</span>
+                <span class="src src--3">Product catalogue</span>
+                <span class="src__doc"><svg class="ico"><use href="#i-file" /></svg></span>
+              </div>
+              <h3>Built on your content</h3>
+              <p>Works alongside your templates, content library, pricing and workflows.</p>
+              <a class="tlink" href="https://www.quote.cloud/templates">Browse templates</a>
+            </article>
+            <article class="lc" data-reveal>
+              <div class="lc__vis lc__vis--track" aria-hidden="true">
+                <p class="trk"><span class="trk__dot"></span>Sent to Northwind Studio<small>10:02</small></p>
+                <p class="trk"><span class="trk__dot"></span>Opened by Dana Ruiz<small>10:47</small></p>
+                <p class="trk trk--live"><span class="trk__dot"></span>Viewing Investment<small>now</small></p>
+              </div>
+              <h3>Send and track</h3>
+              <p>Share one interactive link and see when it's opened. Clients choose options and comment in place.</p>
+              <a class="tlink" href="https://www.quote.cloud/proposal-software">Proposal software</a>
+            </article>
+            <article class="lc" data-reveal>
+              <div class="lc__vis lc__vis--sign" aria-hidden="true">
+                <svg class="sig" viewBox="0 0 220 70" fill="none"><path pathLength="1" d="M8 50c14-2 22-30 30-32 7-2-2 34 6 33 9-1 14-26 22-26 6 0-3 22 4 22 8 0 12-16 20-16 6 0 3 12 9 12 10 0 18-20 28-20 8 0 0 16 8 16 12 0 30-10 60-12" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                <span class="sig__line">Dana Ruiz &middot; Signed</span>
+              </div>
+              <h3>Signed, legally binding</h3>
+              <p>eIDAS-compliant eSignatures with 256-bit encryption and a full audit trail.</p>
+              <a class="tlink" href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures</a>
+            </article>
+          </div>
+
+          <div class="proof" data-reveal>
+            <p class="proof__item"><b>4.2</b><span><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>Capterra</span></p>
+            <p class="proof__item"><b>4.2</b><span><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>Software Advice</span></p>
+            <p class="proof__item"><b data-count-to="2013" data-count-format="plain">2013</b><span>In business since</span></p>
+            <div class="proof__logos">
+              <img src="/assets/compliance/eidas.svg" alt="eIDAS compliant" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/encryption-256.png" alt="256-bit encryption" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/gdpr.png" alt="GDPR" width="64" height="40" loading="lazy" decoding="async" />
+              <img src="/assets/compliance/aws.svg" alt="Hosted on AWS" width="64" height="40" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- @include faq-ai-coworker -->
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="final" aria-labelledby="final-title">
+        <div class="qc-container">
+          <div class="final__card" data-reveal="scale">
+            <svg class="final__spark" aria-hidden="true"><use href="#i-spark" /></svg>
+            <h2 class="final__title" id="final-title">Put an <span class="nw">AI Co-Worker</span> <span class="em">on every proposal.</span></h2>
+            <p class="final__lede">Start a free 14-day trial of QuoteCloud, or book a demo to see AI Co-Worker on documents like yours.</p>
+            <div class="final__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="final"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="final-demo">Book a demo</a>
+            </div>
+            <p class="final__note">No credit card required</p>
+            <nav class="final__links" aria-label="Related pages">
+              <a href="https://www.quote.cloud/proposal-software">Proposal software</a>
+              <a href="https://www.quote.cloud/quoting-software">Quoting software</a>
+              <a href="https://www.quote.cloud/pricing">Pricing</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-ai-coworker -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="ac-sprite" aria-hidden="true" focusable="false">
+      <symbol id="ac-i-spark" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2.5c.5 5 2.6 7.6 9.5 9.5-6.9 1.9-9 4.5-9.5 9.5-.5-5-2.6-7.6-9.5-9.5 6.9-1.9 9-4.5 9.5-9.5Z" /></symbol>
+      <symbol id="ac-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="ac-i-send" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+      <symbol id="ac-i-stop" viewBox="0 0 24 24"><rect fill="currentColor" stroke="none" x="7" y="7" width="10" height="10" rx="2" /></symbol>
+      <symbol id="ac-i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="ac-i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+      <symbol id="ac-i-chat" viewBox="0 0 24 24"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4.5 3.5V16H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></symbol>
+      <symbol id="ac-i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></symbol>
+      <symbol id="ac-i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M6 18l1.6-1.6M16.4 7.6 18 6" /></symbol>
+      <symbol id="ac-i-clip" viewBox="0 0 24 24"><path d="m20 11.5-7.8 7.8a4.6 4.6 0 0 1-6.5-6.5l7.9-7.9a3 3 0 0 1 4.3 4.3l-7.9 7.9a1.5 1.5 0 0 1-2.1-2.1l7.3-7.3" /></symbol>
+      <symbol id="ac-i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2" /><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5" /></symbol>
+      <symbol id="ac-i-redo" viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3L19.5 9M19.5 4.5V9H15" /></symbol>
+      <symbol id="ac-i-undo" viewBox="0 0 24 24"><path d="M9 14 4.5 9.5 9 5M4.5 9.5H14a5.5 5.5 0 0 1 0 11h-3" /></symbol>
+      <symbol id="ac-i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="ac-i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" /></symbol>
+      <symbol id="ac-i-pen" viewBox="0 0 24 24"><path d="m14.5 5.5 4 4L8 20H4v-4L14.5 5.5ZM12.5 7.5l4 4" /></symbol>
+      <symbol id="ac-i-plane" viewBox="0 0 24 24"><path d="M21 15.5v-1.7l-8-5V4.3a1.5 1.5 0 0 0-3 0v4.5l-8 5v1.7l8-2.4v4.6L7.8 19v1.5l3.7-1 3.7 1V19L13 17.7v-4.6l8 2.4Z" /></symbol>
+      <symbol id="ac-i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /><path d="M14 3v5h5M9 13h6M9 17h4" /></symbol>
+      <symbol id="ac-i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3ZM4 7.5l8 4.5 8-4.5M12 12v9" /></symbol>
+      <symbol id="ac-i-eye-off" viewBox="0 0 24 24"><path d="M3.5 3.5l17 17M10 6.2A9.7 9.7 0 0 1 12 6c6 0 9.5 6 9.5 6a17 17 0 0 1-2.9 3.6M6.4 7.6A16 16 0 0 0 2.5 12s3.5 6 9.5 6c1.6 0 3-.4 4.2-1M9.9 10a3 3 0 0 0 4.1 4.1" /></symbol>
+      <symbol id="ac-i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m3.5 7 8.5 6 8.5-6" /></symbol>
+      <symbol id="ac-i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="ac-i-sign" viewBox="0 0 24 24"><path d="M3.5 17.5c2.5 0 3.5-9 6-9s1 7 3.5 7 2-3 3.5-3 1.5 2 4 2M3.5 21h17" /></symbol>
+      <symbol id="ac-i-template" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 9.5h16M9.5 9.5V20" /></symbol>
+      <symbol id="ac-i-table" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="M3.5 10h17M3.5 14.5h17M10 10v9" /></symbol>
+      <symbol id="ac-i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" /></symbol>
+      <symbol id="ac-i-chev" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5" /></symbol>
+      <symbol id="ac-i-cursor" viewBox="0 0 20 22"><path fill="#0a0a0a" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" d="M2.5 2.2v15.6l4.3-4.1 3 6.6 2.9-1.3-3-6.5 6-.3L2.5 2.2Z" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: a playable editor with the AI Coworker open ───────── -->
+      <section class="ac-hero" aria-labelledby="ac-hero-title">
+        <div class="qc-container ac-hero__top">
+          <h1 class="ac-hero__title" id="ac-hero-title">
+            The AI proposal writer <span class="ac-em">that works inside your documents</span>
+          </h1>
+          <div class="ac-hero__side">
+            <p class="ac-hero__lead">
+              AI Co-Worker drafts, rewrites and restructures proposal content right in the QuoteCloud editor. You approve every word.
+            </p>
+            <div class="ac-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow ac-ico" width="18" height="18" aria-hidden="true"><use href="#ac-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="ac-hero__note">No credit card required</p>
+          </div>
+        </div>
+
+        <div class="qc-container ac-stage">
+          <div class="ac-frame" id="ac-frame" data-reveal="scale">
+            <p class="qc-sr-only">
+              Interactive demo of the AI Coworker panel inside a sample QuoteCloud proposal. Every answer is pre-written sample content; no AI model
+              is called.
+            </p>
+            <!-- Editor toolbar -->
+            <div class="ac-bar">
+              <span class="ac-bar__doc" aria-hidden="true"><svg class="ac-ico" width="18" height="18"><use href="#ac-i-doc" /></svg></span>
+              <p class="ac-bar__name">Fleet platform rollout <span>· Northwind Logistics</span></p>
+              <span class="ac-bar__saved" aria-hidden="true">Saved</span>
+              <span class="ac-bar__tools" aria-hidden="true">
+                <svg class="ac-ico" width="17" height="17"><use href="#ac-i-undo" /></svg>
+                <svg class="ac-ico ac-flip" width="17" height="17"><use href="#ac-i-undo" /></svg>
+              </span>
+              <span class="ac-bar__avs" aria-hidden="true"><span class="ac-av">A</span></span>
+              <button class="ac-bar__ai" type="button" id="ac-ai-toggle" aria-controls="ac-side" aria-expanded="true">
+                <svg class="ac-ico" width="16" height="16" aria-hidden="true"><use href="#ac-i-spark" /></svg>
+                <span>AI Coworker</span>
+              </button>
+              <span class="ac-bar__send" aria-hidden="true">Send</span>
+            </div>
+
+            <div class="ac-body">
+              <!-- The document -->
+              <div class="ac-canvas" id="ac-canvas">
+                <div class="ac-paper" id="ac-paper">
+                  <div class="ac-cover">
+                    <p class="ac-cover__kicker">Proposal for Northwind Logistics</p>
+                    <p class="ac-cover__title">Fleet platform rollout</p>
+                    <p class="ac-cover__meta">Prepared by Alex Morgan · Brightline Systems</p>
+                  </div>
+
+                  <div class="ac-blk ac-blk--ai" data-blk="summary" hidden></div>
+
+                  <div class="ac-blk" data-blk="intro">
+                    <p class="ac-doc-h">Introduction</p>
+                    <p class="ac-doc-p" id="ac-intro">
+                      Brightline Systems is pleased to present a six-week rollout of the fleet platform across Northwind Logistics' three depots. The
+                      plan covers configuration, data migration and team training, so your dispatchers are productive from day one.
+                    </p>
+                  </div>
+
+                  <div class="ac-blk ac-blk--ai" data-blk="selling" hidden></div>
+
+                  <div class="ac-blk" data-blk="pricing">
+                    <p class="ac-doc-h">Investment <span class="ac-hidden-note" id="ac-hidden-note" hidden><svg class="ac-ico" width="13" height="13" aria-hidden="true"><use href="#ac-i-eye-off" /></svg>Cost column hidden from client</span></p>
+                    <div class="ac-table" id="ac-table">
+                      <table>
+                        <thead>
+                          <tr><th scope="col">Item</th><th scope="col" class="ac-num">Qty</th><th scope="col" class="ac-num">Cost</th><th scope="col" class="ac-num">Price</th><th scope="col" class="ac-num">Total</th></tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>Platform licences (annual)</td><td class="ac-num">12</td><td class="ac-num">$310</td><td class="ac-num">$480</td><td class="ac-num">$5,760</td></tr>
+                          <tr><td>Onboarding &amp; setup</td><td class="ac-num">1</td><td class="ac-num">$1,900</td><td class="ac-num">$3,200</td><td class="ac-num">$3,200</td></tr>
+                          <tr><td>Data migration</td><td class="ac-num">1</td><td class="ac-num">$1,100</td><td class="ac-num">$1,800</td><td class="ac-num">$1,800</td></tr>
+                          <tr><td>Team training workshop</td><td class="ac-num">2</td><td class="ac-num">$600</td><td class="ac-num">$950</td><td class="ac-num">$1,900</td></tr>
+                        </tbody>
+                      </table>
+                      <dl class="ac-sum">
+                        <div><dt>Subtotal</dt><dd>$12,660</dd></div>
+                        <div><dt>Tax (10%)</dt><dd>$1,266</dd></div>
+                        <div class="ac-sum__total"><dt>Total</dt><dd>$13,926</dd></div>
+                      </dl>
+                    </div>
+                  </div>
+
+                  <div class="ac-blk ac-blk--itin" data-blk="itinerary" hidden></div>
+                  <div class="ac-blk ac-blk--ai" data-blk="next" hidden></div>
+                </div>
+              </div>
+
+              <div class="ac-undo" id="ac-undo" hidden>
+                <svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-check" /></svg>
+                <span id="ac-undo-label">Pricing table updated</span>
+                <button type="button" id="ac-undo-btn">
+                  <svg class="ac-ico" width="14" height="14" aria-hidden="true"><use href="#ac-i-undo" /></svg>Undo
+                </button>
+              </div>
+
+              <!-- The AI Coworker sidebar -->
+              <aside class="ac-side" id="ac-side" aria-label="AI Coworker">
+                <div class="ac-sheet" id="ac-sheet">
+                  <button class="ac-sheet__grab" type="button" id="ac-grab" aria-controls="ac-side" aria-expanded="false">
+                    <span class="qc-sr-only">Show or hide the AI Coworker conversation</span>
+                  </button>
+                  <div class="ac-side__head">
+                    <span class="ac-mark" aria-hidden="true"><svg class="ac-ico" width="16" height="16"><use href="#ac-i-spark" /></svg></span>
+                    <p class="ac-side__title">AI Coworker</p>
+                    <div class="ac-tabs" role="tablist" aria-label="AI Coworker views">
+                      <button class="ac-tab" type="button" role="tab" id="ac-tab-chat" aria-controls="ac-panel-chat" aria-selected="true">Chat</button>
+                      <button class="ac-tab" type="button" role="tab" id="ac-tab-paste" aria-controls="ac-panel-paste" aria-selected="false" tabindex="-1">Paste</button>
+                    </div>
+                    <span class="ac-side__tools" aria-hidden="true">
+                      <svg class="ac-ico" width="16" height="16"><use href="#ac-i-clock" /></svg>
+                      <svg class="ac-ico" width="16" height="16"><use href="#ac-i-gear" /></svg>
+                    </span>
+                  </div>
+
+                  <div class="ac-panel" id="ac-panel-chat" role="tabpanel" aria-labelledby="ac-tab-chat">
+                    <div class="ac-log" id="ac-log" role="log" aria-live="polite" aria-label="Conversation">
+                      <div class="ac-hello">
+                        <p class="ac-hello__hi">Hi Alex</p>
+                        <p class="ac-hello__sub">How can I help you today?</p>
+                        <div class="ac-quick">
+                          <button type="button" class="ac-quick__btn" data-ask="summarize"><svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-spark" /></svg>Summarize this document</button>
+                          <button type="button" class="ac-quick__btn" data-ask="selling"><svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-spark" /></svg>Highlight key selling points</button>
+                          <button type="button" class="ac-quick__btn" data-ask="friendly"><svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-spark" /></svg>Rewrite in a friendlier tone</button>
+                          <button type="button" class="ac-quick__btn" data-ask="next"><svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-spark" /></svg>Suggest next steps for client</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ac-panel ac-paste" id="ac-panel-paste" role="tabpanel" aria-labelledby="ac-tab-paste" hidden>
+                    <p class="ac-paste__lead">Paste messy data from anywhere. AI Coworker turns it into Content Blocks.</p>
+                    <div class="ac-seg" role="radiogroup" aria-label="Sample clipboard">
+                      <label class="ac-seg__opt"><input type="radio" name="ac-src" value="itinerary" checked /><span>Airfare search</span></label>
+                      <label class="ac-seg__opt"><input type="radio" name="ac-src" value="prices" /><span>Supplier rates</span></label>
+                    </div>
+                    <div class="ac-clip" id="ac-clip" aria-label="Sample clipboard contents">
+                      <pre data-src="itinerary"><span>1  QC214  09MAR  SYDSIN  HK2  0940  1555  E</span>
+<span>   OPERATED BY QC  /DC*QCX4R9  SEAT AT CHECK-IN</span>
+<span>2  QC215  13MAR  SINSYD  HK2  2110  0705+1  E</span>
+<span>TTL FARE AUD 2486.40 INCL TAX  2PAX  BAG 30K</span></pre>
+                      <pre data-src="prices" hidden><span>Hi Alex, updated rates below as discussed</span>
+<span>- telematics unit (per vehicle) .. $189 ea, need 24</span>
+<span>- install + calibration   24 x $65</span>
+<span>- driver app setup  flat 450</span></pre>
+                    </div>
+                    <button type="button" class="ac-paste__go" id="ac-paste-go">
+                      <svg class="ac-ico" width="16" height="16" aria-hidden="true"><use href="#ac-i-spark" /></svg>
+                      <span id="ac-paste-label">Paste Itinerary Data</span>
+                    </button>
+                    <p class="ac-paste__status" id="ac-paste-status" aria-live="polite"></p>
+                  </div>
+                </div>
+
+                <div class="ac-composer">
+                  <div class="ac-chips" id="ac-chips">
+                    <div class="ac-chips__switch" role="group" aria-label="Suggestion set">
+                      <button type="button" data-set="write" aria-pressed="false">Write</button>
+                      <button type="button" data-set="pricing" aria-pressed="true">Pricing</button>
+                    </div>
+                    <div class="ac-chips__row" data-chips="write" hidden>
+                      <button type="button" class="ac-chip" data-ask="summarize">Summarize this document</button>
+                      <button type="button" class="ac-chip" data-ask="selling">Highlight key selling points</button>
+                      <button type="button" class="ac-chip" data-ask="friendly">Rewrite in a friendlier tone</button>
+                      <button type="button" class="ac-chip" data-ask="next">Suggest next steps for client</button>
+                    </div>
+                    <div class="ac-chips__row" data-chips="pricing">
+                      <button type="button" class="ac-chip" data-ask="support">Add Premium Support from the catalogue</button>
+                      <button type="button" class="ac-chip" data-ask="optional">Make onboarding optional</button>
+                      <button type="button" class="ac-chip" data-ask="qty">Let the client change quantity</button>
+                      <button type="button" class="ac-chip" data-ask="hidecost">Hide the cost column</button>
+                    </div>
+                  </div>
+                  <form class="ac-input" id="ac-form">
+                    <label class="qc-sr-only" for="ac-q">Ask AI Coworker</label>
+                    <input id="ac-q" type="text" autocomplete="off" enterkeyhint="send" placeholder="Ask AI Coworker" />
+                    <div class="ac-input__row">
+                      <span class="ac-input__attach" aria-hidden="true"><svg class="ac-ico" width="16" height="16"><use href="#ac-i-clip" /></svg></span>
+                      <label class="ac-tone">
+                        <span>Tone</span>
+                        <select id="ac-tone">
+                          <option value="neutral">Neutral</option>
+                          <option value="friendly">Friendly</option>
+                          <option value="professional" selected>Professional</option>
+                          <option value="concise">Concise</option>
+                          <option value="persuasive">Persuasive</option>
+                          <option value="technical">Technical</option>
+                        </select>
+                        <svg class="ac-ico" width="14" height="14" aria-hidden="true"><use href="#ac-i-chev" /></svg>
+                      </label>
+                      <button class="ac-send" type="submit" id="ac-send" aria-label="Send">
+                        <svg class="ac-ico ac-send__go" width="17" height="17" aria-hidden="true"><use href="#ac-i-send" /></svg>
+                        <svg class="ac-ico ac-send__stop" width="17" height="17" aria-hidden="true"><use href="#ac-i-stop" /></svg>
+                      </button>
+                    </div>
+                  </form>
+                  <p class="ac-disclaimer">AI Coworker can make mistakes. Check important info.</p>
+                </div>
+              </aside>
+
+              <svg class="ac-cursor" id="ac-cursor" width="22" height="24" aria-hidden="true"><use href="#ac-i-cursor" /></svg>
+            </div>
+          </div>
+
+          <div class="ac-after">
+            <div class="ac-try" role="group" aria-label="Try the demo">
+              <span class="ac-try__label">Try it</span>
+              <button type="button" class="ac-try__btn" data-try="summarize">Summarize the proposal</button>
+              <button type="button" class="ac-try__btn" data-try="tone">Re-voice the intro</button>
+              <button type="button" class="ac-try__btn" data-try="support">Add a catalogue item</button>
+              <button type="button" class="ac-try__btn" data-try="paste">Paste an airfare search</button>
+            </div>
+            <a class="qc-btn qc-btn--dark ac-after__cta" href="https://app.quote.cloud/register" data-qc-cta="after-demo">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow ac-ico" width="17" height="17" aria-hidden="true"><use href="#ac-i-arrow" /></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Tone + Assistant Rules ───────── -->
+      <section class="ac-sec ac-rules" aria-labelledby="ac-rules-title">
+        <div class="qc-container">
+          <div class="ac-sec__head" data-reveal>
+            <h2 class="ac-sec__title" id="ac-rules-title">Your tone, your rules, <span class="ac-em">every proposal on-brand</span></h2>
+            <p class="ac-sec__line">
+              Set the tone, add assistant rules and tell AI Co-Worker about you. Every draft follows them, so the whole team writes in one
+              consistent voice.
+            </p>
+          </div>
+
+          <div class="ac-rules__stage" data-reveal-stagger="120">
+            <form class="ac-settings" id="ac-settings" data-reveal="left" aria-label="AI Coworker settings (sample)">
+              <p class="ac-settings__title">
+                <span class="ac-mark" aria-hidden="true"><svg class="ac-ico" width="14" height="14"><use href="#ac-i-spark" /></svg></span>Settings
+              </p>
+              <fieldset class="ac-field">
+                <legend>Tone</legend>
+                <div class="ac-pills">
+                  <label><input type="radio" name="ac-rtone" value="neutral" /><span>Neutral</span></label>
+                  <label><input type="radio" name="ac-rtone" value="friendly" /><span>Friendly</span></label>
+                  <label><input type="radio" name="ac-rtone" value="professional" checked /><span>Professional</span></label>
+                  <label><input type="radio" name="ac-rtone" value="concise" /><span>Concise</span></label>
+                  <label><input type="radio" name="ac-rtone" value="persuasive" /><span>Persuasive</span></label>
+                  <label><input type="radio" name="ac-rtone" value="technical" /><span>Technical</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="ac-field">
+                <legend>Assistant Rules</legend>
+                <div class="ac-rulebox">
+                  <label class="ac-rule"><input type="checkbox" name="ac-rule" value="concise" /><span>Always be concise</span></label>
+                  <label class="ac-rule"><input type="checkbox" name="ac-rule" value="bullets" checked /><span>Use bullet points when helpful</span></label>
+                  <label class="ac-rule"><input type="checkbox" name="ac-rule" value="jargon" /><span>Avoid jargon</span></label>
+                </div>
+              </fieldset>
+              <div class="ac-field">
+                <p class="ac-field__label">About You</p>
+                <p class="ac-about">Account manager at Brightline Systems. We roll out fleet software for logistics companies.</p>
+              </div>
+              <button type="submit" class="ac-save" id="ac-save"><span>Save Settings</span></button>
+            </form>
+
+            <div class="ac-preview" data-reveal="right">
+              <div class="ac-preview__ask">
+                <span class="ac-av" aria-hidden="true">A</span>
+                <p>Suggest next steps for client</p>
+              </div>
+              <div class="ac-preview__answer">
+                <span class="ac-mark" aria-hidden="true"><svg class="ac-ico" width="14" height="14"><use href="#ac-i-spark" /></svg></span>
+                <div class="ac-preview__text" id="ac-preview-text" aria-live="polite">
+                  <ul>
+                    <li>Please confirm the preferred go-live sequence for the three depots.</li>
+                    <li>Provide a representative job export to inform data migration and UAT planning.</li>
+                    <li>Countersign the proposal to secure the March kickoff with your stakeholders.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="ac-preview__foot" id="ac-preview-foot">Professional · bullet points</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Human + AI ───────── -->
+      <section class="ac-sec ac-review" aria-labelledby="ac-review-title">
+        <div class="qc-container ac-review__grid">
+          <div class="ac-review__copy" data-reveal>
+            <h2 class="ac-sec__title" id="ac-review-title">AI drafts it. <span class="ac-em">You decide.</span></h2>
+            <p class="ac-sec__line">
+              AI Co-Worker enhances your team, it doesn't replace it. Every suggestion arrives as a draft you can accept, edit or reject, and
+              nothing goes to your client until you send it.
+            </p>
+          </div>
+
+          <div class="ac-rcard" id="ac-rcard" data-reveal="scale">
+            <p class="ac-rcard__head"><svg class="ac-ico" width="16" height="16" aria-hidden="true"><use href="#ac-i-plane" /></svg>Kickoff travel · Day 1</p>
+            <div class="ac-seg-ai" id="ac-seg-ai" data-state="review">
+              <div class="ac-flag" id="ac-flag">
+                <span class="ac-mark" aria-hidden="true"><svg class="ac-ico" width="13" height="13"><use href="#ac-i-spark" /></svg></span>
+                <p>
+                  This segment was generated by your AI Coworker from your supplied information. Please review carefully and either Accept, Edit, or
+                  Reject.
+                </p>
+              </div>
+              <div class="ac-seg-ai__body">
+                <p class="ac-seg-ai__date"><span>MON</span><strong>09</strong><span>MAR</span></p>
+                <div class="ac-seg-ai__main">
+                  <p class="ac-seg-ai__title">Arrive Singapore, transfer to hotel</p>
+                  <p class="ac-seg-ai__text" id="ac-seg-text">
+                    Flight QC 214 lands at 15:55. A private transfer takes the team to the hotel near the Northwind regional office, with the
+                    welcome dinner booked for 19:30.
+                  </p>
+                </div>
+              </div>
+              <div class="ac-rbar" id="ac-rbar">
+                <button type="button" class="ac-rbar__btn ac-rbar__btn--accept" data-review="accept" aria-label="Accept AI Itinerary content">
+                  <svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-check" /></svg>Accept
+                </button>
+                <button type="button" class="ac-rbar__btn" data-review="edit">
+                  <svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-pen" /></svg><span>Edit</span>
+                </button>
+                <button type="button" class="ac-rbar__btn ac-rbar__btn--reject" data-review="reject" aria-label="Reject and remove AI content">
+                  <svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-close" /></svg>Reject
+                </button>
+              </div>
+              <p class="ac-rdone" id="ac-rdone" aria-live="polite"></p>
+            </div>
+            <button type="button" class="ac-rcard__reset" id="ac-rreset" hidden>
+              <svg class="ac-ico" width="14" height="14" aria-hidden="true"><use href="#ac-i-redo" /></svg>Try again
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Send, track, sign ───────── -->
+      <section class="ac-sec ac-loop" aria-labelledby="ac-loop-title">
+        <div class="qc-container ac-loop__grid">
+          <div class="ac-loop__copy" data-reveal>
+            <h2 class="ac-sec__title" id="ac-loop-title">Then send it, track it <span class="ac-em">and get it signed</span></h2>
+            <p class="ac-sec__line">
+              Drafting is only the start. The same document goes out, gets opened and is e-signed in QuoteCloud, next to the templates, content
+              library and pricing your co-worker already uses.
+            </p>
+            <ul class="ac-links">
+              <li>
+                <a href="https://www.quote.cloud/electronic-signature-software-solution"><svg class="ac-ico" width="18" height="18" aria-hidden="true"><use href="#ac-i-sign" /></svg>Electronic signatures<svg class="ac-ico ac-links__arrow" width="16" height="16" aria-hidden="true"><use href="#ac-i-arrow" /></svg></a>
+              </li>
+              <li>
+                <a href="https://www.quote.cloud/proposal-software"><svg class="ac-ico" width="18" height="18" aria-hidden="true"><use href="#ac-i-doc" /></svg>Proposal software<svg class="ac-ico ac-links__arrow" width="16" height="16" aria-hidden="true"><use href="#ac-i-arrow" /></svg></a>
+              </li>
+              <li>
+                <a href="https://www.quote.cloud/cpq-software"><svg class="ac-ico" width="18" height="18" aria-hidden="true"><use href="#ac-i-table" /></svg>Pricing tables and CPQ<svg class="ac-ico ac-links__arrow" width="16" height="16" aria-hidden="true"><use href="#ac-i-arrow" /></svg></a>
+              </li>
+              <li>
+                <a href="https://www.quote.cloud/templates"><svg class="ac-ico" width="18" height="18" aria-hidden="true"><use href="#ac-i-template" /></svg>Templates and content library<svg class="ac-ico ac-links__arrow" width="16" height="16" aria-hidden="true"><use href="#ac-i-arrow" /></svg></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ac-send-card" id="ac-sendcard" data-step="0" data-reveal="scale">
+            <div class="ac-send-card__doc">
+              <span class="ac-send-card__thumb" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+              <div>
+                <p class="ac-send-card__name">Fleet platform rollout</p>
+                <p class="ac-send-card__to">To Jordan Lee, Northwind Logistics</p>
+              </div>
+              <button type="button" class="ac-send-card__btn" id="ac-send-go">
+                <svg class="ac-ico" width="15" height="15" aria-hidden="true"><use href="#ac-i-mail" /></svg><span>Send proposal</span>
+              </button>
+            </div>
+            <ol class="ac-steps" aria-live="polite">
+              <li class="ac-step" data-n="1">
+                <span class="ac-step__dot"><svg class="ac-ico" width="14" height="14" aria-hidden="true"><use href="#ac-i-mail" /></svg></span>
+                <p><strong>Sent</strong><span>Delivered to j.lee@northwind.example</span></p>
+              </li>
+              <li class="ac-step" data-n="2">
+                <span class="ac-step__dot"><svg class="ac-ico" width="14" height="14" aria-hidden="true"><use href="#ac-i-eye" /></svg></span>
+                <p><strong>Viewed</strong><span>Jordan opened the proposal and chose the optional onboarding</span></p>
+              </li>
+              <li class="ac-step" data-n="3">
+                <span class="ac-step__dot"><svg class="ac-ico" width="14" height="14" aria-hidden="true"><use href="#ac-i-sign" /></svg></span>
+                <p><strong>Signed</strong><span>E-signed and added to the audit trail</span></p>
+              </li>
+            </ol>
+            <div class="ac-sig" aria-hidden="true">
+              <svg viewBox="0 0 260 70" width="260" height="70">
+                <path class="ac-sig__path" pathLength="1" d="M8 48c14-2 22-30 30-32s-6 34 2 36 14-26 22-28-2 22 6 22 10-14 18-14 4 12 12 12 12-18 22-20 6 18 14 18c10 0 18-10 30-12s20 6 34 4 30-10 52-12" />
+              </svg>
+              <span class="ac-sig__line"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="ac-proof" aria-labelledby="ac-proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="ac-proof-title">Trusted, secure and compliant</h2>
+          <ul class="ac-proof__row" data-reveal-stagger="70">
+            <li data-reveal><strong><svg class="ac-ico" width="16" height="16" aria-hidden="true"><use href="#ac-i-star" /></svg>4.2</strong><span>on Capterra</span></li>
+            <li data-reveal><strong><svg class="ac-ico" width="16" height="16" aria-hidden="true"><use href="#ac-i-star" /></svg>4.2</strong><span>on Software Advice</span></li>
+            <li data-reveal><img src="/assets/compliance/eidas.svg" width="40" height="40" alt="" loading="lazy" decoding="async" /><span>eIDAS e-signatures</span></li>
+            <li data-reveal><img src="/assets/compliance/encryption-256.png" width="42" height="40" alt="" loading="lazy" decoding="async" /><span>256-bit encryption</span></li>
+            <li data-reveal><img src="/assets/compliance/aws.svg" width="44" height="40" alt="" loading="lazy" decoding="async" /><span>Hosted on AWS</span></li>
+            <li data-reveal><img src="/assets/compliance/gdpr.png" width="40" height="40" alt="" loading="lazy" decoding="async" /><span>GDPR</span></li>
+            <li data-reveal><span>Since</span><strong>2013</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ac-faq-wrap">
+        <!-- @include faq-ai-coworker -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="ac-close" aria-labelledby="ac-close-title">
+        <div class="qc-container ac-close__inner" data-reveal>
+          <span class="ac-close__mark" aria-hidden="true"><svg class="ac-ico" width="26" height="26"><use href="#ac-i-spark" /></svg></span>
+          <h2 class="ac-close__title" id="ac-close-title">Start your next proposal <span class="ac-em">with a co-worker</span></h2>
+          <p class="ac-close__sub">Try QuoteCloud free for 14 days, or book a demo and we'll show AI Co-Worker on your own documents.</p>
+          <div class="ac-close__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow ac-ico" width="18" height="18" aria-hidden="true"><use href="#ac-i-arrow" /></svg>
+            </a>
+            <a class="qc-btn ac-btn-light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="ac-close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

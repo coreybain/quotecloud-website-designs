@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-document-creation -->
+  </head>
+  <body class="dc-page">
+    <!-- @include header -->
+    <main id="main">
+      <!-- ───────── Hero: h1 + a stack of finished documents ───────── -->
+      <section class="dc-hero" aria-labelledby="dc-hero-title">
+        <div class="qc-container dc-hero__inner">
+          <div class="dc-hero__copy">
+            <h1 class="dc-hero__title" id="dc-hero-title" data-reveal>
+              <span class="dc-hero__lead">One platform. <em>Every type of business document.</em></span>
+              <span class="dc-hero__kw">Document creation software that goes beyond word processing</span>
+            </h1>
+            <p class="dc-hero__sub" data-reveal style="--reveal-delay: 100">
+              Write, design, calculate, plan and get signed, all in one online document.
+            </p>
+            <div class="dc-hero__cta" data-reveal style="--reveal-delay: 180">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="dc-hero__note" data-reveal style="--reveal-delay: 240">
+              No credit card required <span class="dc-dot" aria-hidden="true"></span> Rated 4.2 on Capterra
+            </p>
+          </div>
+
+          <figure class="dc-stack" data-stack data-reveal="fade" style="--reveal-delay: 120">
+            <figcaption class="qc-sr-only">
+              Example documents created in QuoteCloud: a business report, a presentation-style page, a project plan and a signed service agreement.
+            </figcaption>
+            <div class="dc-stack__deck" aria-hidden="true">
+              <div class="dc-stack__ghost dc-stack__ghost--2"></div>
+              <div class="dc-stack__ghost dc-stack__ghost--1"></div>
+
+              <!-- Page 1: Business report -->
+              <div class="dc-page-doc dc-pd--report is-active" data-stack-page data-blocks="Text · Image · Table of Contents · Spreadsheet">
+                <div class="pd-cover">
+                  <span class="pd-cover__brand"><i></i>Northwind Group</span>
+                  <span class="pd-cover__title">Q3 Business Report</span>
+                  <span class="pd-cover__meta">October 2026 · Board edition</span>
+                  <span class="pd-cover__bars"><i style="--h: 38%"></i><i style="--h: 52%"></i><i style="--h: 46%"></i><i style="--h: 70%"></i><i style="--h: 88%"></i></span>
+                </div>
+                <div class="pd-report__body">
+                  <div class="pd-toc">
+                    <span class="pd-label">Contents</span>
+                    <span class="pd-toc__row"><b>1</b> Executive summary <em>2</em></span>
+                    <span class="pd-toc__row"><b>2</b> Performance <em>4</em></span>
+                    <span class="pd-toc__row"><b>3</b> Regional results <em>7</em></span>
+                    <span class="pd-toc__row"><b>4</b> Outlook <em>11</em></span>
+                  </div>
+                  <div class="pd-sheet">
+                    <span class="pd-label">Revenue by region</span>
+                    <span class="pd-sheet__row pd-sheet__row--head"><i>Region</i><i>Q2</i><i>Q3</i></span>
+                    <span class="pd-sheet__row"><i>North</i><i>412</i><i>468</i></span>
+                    <span class="pd-sheet__row"><i>South</i><i>298</i><i>341</i></span>
+                    <span class="pd-sheet__row"><i>West</i><i>356</i><i>379</i></span>
+                    <span class="pd-sheet__row pd-sheet__row--total"><i>Total</i><i>1,066</i><i>1,188</i></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page 2: Presentation-style page (Canvas) -->
+              <div class="dc-page-doc dc-pd--pitch" data-stack-page data-blocks="Shapes · Image · Text · Video">
+                <span class="pd-pitch__circle"></span>
+                <span class="pd-pitch__img"></span>
+                <span class="pd-pitch__kicker">Brand launch</span>
+                <span class="pd-pitch__title">Meet Aurora.<br />Light, reimagined.</span>
+                <span class="pd-pitch__video"><i></i></span>
+                <span class="pd-pitch__cards">
+                  <span><b>6</b> launch markets</span>
+                  <span><b>Spring</b> 2027 release</span>
+                </span>
+                <span class="pd-pitch__tag">Canvas Mode</span>
+              </div>
+
+              <!-- Page 3: Project plan -->
+              <div class="dc-page-doc dc-pd--plan" data-stack-page data-blocks="Text · Gantt Chart · Diagram">
+                <span class="pd-doc__eyebrow">Project plan</span>
+                <span class="pd-doc__title">Project Phoenix</span>
+                <span class="pd-plan__weeks"><i>W1</i><i>W2</i><i>W3</i><i>W4</i><i>W5</i><i>W6</i></span>
+                <span class="pd-gantt">
+                  <span class="pd-gantt__row"><i>Discovery</i><b style="--x: 0; --w: 2; --c: var(--dc-violet)"></b></span>
+                  <span class="pd-gantt__row"><i>Design</i><b style="--x: 1.5; --w: 2; --c: var(--dc-sky)"></b></span>
+                  <span class="pd-gantt__row"><i>Build</i><b style="--x: 3; --w: 2.2; --c: var(--qc-red)"></b></span>
+                  <span class="pd-gantt__row"><i>Testing</i><b style="--x: 4.4; --w: 1.1; --c: var(--dc-mint)"></b></span>
+                  <span class="pd-gantt__row"><i>Launch</i><b class="is-milestone" style="--x: 5.5; --w: 0"></b></span>
+                  <span class="pd-gantt__today"></span>
+                </span>
+                <span class="pd-flow">
+                  <span>Brief</span><svg viewBox="0 0 24 8"><path d="M1 4h20M17 1l4 3-4 3" /></svg><span>Review</span><svg viewBox="0 0 24 8"><path d="M1 4h20M17 1l4 3-4 3" /></svg><span class="is-on">Approve</span>
+                </span>
+              </div>
+
+              <!-- Page 4: Contract -->
+              <div class="dc-page-doc dc-pd--contract" data-stack-page data-blocks="Text · PDF · eSignature">
+                <span class="pd-doc__eyebrow">Agreement</span>
+                <span class="pd-doc__title">Service Agreement</span>
+                <span class="pd-contract__parties"><span><i>Provider</i>Brightline Studio</span><span><i>Client</i>Harbor &amp; Co.</span></span>
+                <span class="pd-clause"><b>1. Scope of services</b><i style="--w: 96%"></i><i style="--w: 88%"></i><i style="--w: 72%"></i></span>
+                <span class="pd-clause"><b>2. Fees and payment</b><i style="--w: 92%"></i><i style="--w: 64%"></i></span>
+                <span class="pd-clause"><b>3. Term</b><i style="--w: 84%"></i></span>
+                <span class="pd-sign">
+                  <span class="pd-sign__box">
+                    <svg class="pd-sign__svg" viewBox="0 0 220 64"><path pathLength="1" d="M8 44c10-22 20-34 26-30 7 5-12 34-4 36 9 2 18-30 26-28 7 2-4 24 4 25 8 1 14-16 22-17 6 0 3 13 9 13 9 0 16-14 26-14 9 0 6 10 14 10 10 0 22-8 34-12 12-4 24-4 46-2" /></svg>
+                  </span>
+                  <span class="pd-sign__meta"><b>Jordan Ellis</b><i>Signed 14 Oct 2026</i></span>
+                  <span class="pd-sign__stamp">Signed</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="dc-stack__made" aria-hidden="true">
+              <span class="dc-stack__made-label">Made with</span>
+              <span class="dc-stack__made-list" data-stack-made>Text · Image · Table of Contents · Spreadsheet</span>
+            </div>
+
+            <div class="dc-stack__tabs" role="group" aria-label="Example document types">
+              <button type="button" class="dc-stack__tab" aria-pressed="true" data-stack-tab="0"><span>Report</span><i aria-hidden="true"></i></button>
+              <button type="button" class="dc-stack__tab" aria-pressed="false" data-stack-tab="1"><span>Presentation</span><i aria-hidden="true"></i></button>
+              <button type="button" class="dc-stack__tab" aria-pressed="false" data-stack-tab="2"><span>Project plan</span><i aria-hidden="true"></i></button>
+              <button type="button" class="dc-stack__tab" aria-pressed="false" data-stack-tab="3"><span>Contract</span><i aria-hidden="true"></i></button>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ───────── The document-type bento ───────── -->
+      <section class="dc-docs" id="documents" aria-labelledby="dc-docs-title">
+        <div class="qc-container">
+          <header class="dc-head" data-reveal>
+            <h2 id="dc-docs-title">Create almost any <em>business document</em></h2>
+            <p>One document creator for reports, proposals, pitches, plans, contracts, onboarding packs and itineraries.</p>
+          </header>
+
+          <div class="dc-bento" data-reveal-stagger="70">
+            <!-- Business report -->
+            <article class="dc-tile dc-tile--report" data-tile="report" data-reveal="scale" aria-labelledby="dc-t-report">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--report">
+                  <div class="mr-side">
+                    <span class="mr-side__title">Contents</span>
+                    <span class="mr-side__item is-on">Summary</span>
+                    <span class="mr-side__item">Performance</span>
+                    <span class="mr-side__item">Regions</span>
+                    <span class="mr-side__item">Outlook</span>
+                    <span class="mr-side__hl"></span>
+                  </div>
+                  <div class="mr-main">
+                    <span class="mr-main__title">Q3 Business Report</span>
+                    <span class="mr-main__line" style="--w: 92%"></span>
+                    <span class="mr-main__line" style="--w: 78%"></span>
+                    <div class="mr-grid">
+                      <span class="mr-grid__row mr-grid__row--head"><i></i><i>Q1</i><i>Q2</i><i>Q3</i></span>
+                      <span class="mr-grid__row"><i>Revenue</i><i>0.92m</i><i>1.07m</i><i class="mr-pop">1.19m</i></span>
+                      <span class="mr-grid__row"><i>Margin</i><i>31%</i><i>33%</i><i class="mr-pop">35%</i></span>
+                      <span class="mr-grid__row"><i>New clients</i><i>18</i><i>24</i><i class="mr-pop">29</i></span>
+                      <span class="mr-grid__cursor"></span>
+                    </div>
+                    <div class="mr-chart">
+                      <i style="--h: 42%"></i><i style="--h: 55%"></i><i style="--h: 48%"></i><i style="--h: 66%"></i><i style="--h: 74%"></i><i style="--h: 92%"></i>
+                    </div>
+                    <span class="mr-main__sub">Outlook</span>
+                    <span class="mr-main__line" style="--w: 96%"></span>
+                    <span class="mr-main__line" style="--w: 88%"></span>
+                    <span class="mr-main__line" style="--w: 64%"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-report">Business reports</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Text</li><li>Table of Contents</li><li>Spreadsheet</li><li>Image</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Board packs and client reports with live figures and a navigable contents page.
+                  <a href="https://www.quote.cloud/templates/finance">Report templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Proposal -->
+            <article class="dc-tile dc-tile--proposal" data-tile="proposal" data-reveal="scale" aria-labelledby="dc-t-proposal">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--proposal">
+                  <span class="mp-title">Website redesign proposal</span>
+                  <span class="mp-row"><i>Discovery workshop</i><b>$2,400</b></span>
+                  <span class="mp-row"><i>UX &amp; visual design</i><b>$6,800</b></span>
+                  <span class="mp-row mp-row--opt"><i><span class="mp-check"></span>SEO package <em>Optional</em></i><b>$1,200</b></span>
+                  <span class="mp-total"><i>Total</i><b data-proposal-total>$10,400</b></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-proposal">Proposals &amp; quotes</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Text</li><li>Price Table</li><li>eSignature</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Clients pick options and the total updates in front of them.
+                  <a href="https://www.quote.cloud/quote-templates">Quote templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Contract -->
+            <article class="dc-tile dc-tile--contract" data-tile="contract" data-reveal="scale" aria-labelledby="dc-t-contract">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--contract">
+                  <span class="mc-lines"><i style="--w: 94%"></i><i style="--w: 86%"></i><i style="--w: 62%"></i></span>
+                  <span class="mc-sign">
+                    <svg viewBox="0 0 220 64"><path pathLength="1" d="M8 44c10-22 20-34 26-30 7 5-12 34-4 36 9 2 18-30 26-28 7 2-4 24 4 25 8 1 14-16 22-17 6 0 3 13 9 13 9 0 16-14 26-14 9 0 6 10 14 10 10 0 22-8 34-12 12-4 24-4 46-2" /></svg>
+                    <span class="mc-sign__line"></span>
+                    <span class="mc-sign__name">Jordan Ellis</span>
+                  </span>
+                  <span class="mc-badge"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>Signed</span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-contract">Contracts &amp; agreements</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Text</li><li>PDF</li><li>eSignature</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Legally binding e-signatures, included in every plan.
+                  <a href="https://www.quote.cloud/templates">Agreement templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Presentation-style pitch -->
+            <article class="dc-tile dc-tile--pitch" data-tile="pitch" data-reveal="scale" aria-labelledby="dc-t-pitch">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--pitch">
+                  <span class="mpi-el mpi-circle"></span>
+                  <span class="mpi-el mpi-img"></span>
+                  <span class="mpi-el mpi-title">Meet Aurora.</span>
+                  <span class="mpi-el mpi-text"><i></i><i></i></span>
+                  <span class="mpi-el mpi-video"><b></b></span>
+                  <span class="mpi-el mpi-shape"></span>
+                  <span class="mpi-select"></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-pitch">Presentation-style pitches</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Shapes</li><li>Image</li><li>Video</li><li>Text</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Lay pages out freely in Canvas Mode for presentation-quality visuals.
+                  <a href="https://www.quote.cloud/templates/technology">Pitch templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Project plan -->
+            <article class="dc-tile dc-tile--plan" data-tile="plan" data-reveal="scale" aria-labelledby="dc-t-plan">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--plan">
+                  <span class="mg-head"><i>Project Phoenix</i><span><b>Jan</b><b>Feb</b><b>Mar</b><b>Apr</b></span></span>
+                  <span class="mg-row"><i>Discovery</i><span><b style="--x: 0; --w: 22; --g: 4; --c: var(--dc-violet)"></b></span></span>
+                  <span class="mg-row"><i>Design</i><span><b style="--x: 26; --w: 28; --g: 4; --c: var(--dc-sky)"></b></span></span>
+                  <span class="mg-row"><i>Build</i><span><b style="--x: 58; --w: 24; --g: 3; --c: var(--qc-red)"></b></span></span>
+                  <span class="mg-row"><i>Testing</i><span><b class="is-last" style="--x: 85; --w: 9; --c: var(--dc-mint)"></b></span></span>
+                  <span class="mg-row"><i>Go-live</i><span><b class="is-ms" style="--x: 94"></b></span></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-plan">Project plans</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Gantt Chart</li><li>Diagram</li><li>Text</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Schedules, milestones and process diagrams inside the plan itself.
+                  <a href="https://www.quote.cloud/templates/construction">Project templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Onboarding pack -->
+            <article class="dc-tile dc-tile--onboard" data-tile="onboard" data-reveal="scale" aria-labelledby="dc-t-onboard">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--onboard">
+                  <span class="mo-video"><b></b><i>Welcome from the team</i></span>
+                  <span class="mo-form">
+                    <span class="mo-field"><i>Company name</i><b data-type-to="Harbor &amp; Co.">Harbor &amp; Co.</b></span>
+                    <span class="mo-field"><i>Main contact</i><b data-type-to="Sam Rivera">Sam Rivera</b></span>
+                    <span class="mo-checks"><span class="mo-check">Brand assets sent</span><span class="mo-check">Kick-off booked</span></span>
+                    <span class="mo-btn">Submit</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-onboard">Onboarding packs</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Forms</li><li>Video</li><li>Button</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Welcome guides that collect details through forms inside the document.
+                  <a href="https://www.quote.cloud/templates/human-resources">Onboarding templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Travel itinerary -->
+            <article class="dc-tile dc-tile--travel" data-tile="travel" data-reveal="scale" aria-labelledby="dc-t-travel">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--travel">
+                  <span class="mt-hero"><i>Kyoto &amp; Tokyo</i><b>6 nights · April</b></span>
+                  <span class="mt-day"><b>Day 1</b><i>Flight SYD → KIX</i><em>09:40</em></span>
+                  <span class="mt-day"><b>Day 2</b><i>Fushimi Inari tour</i><em>08:00</em></span>
+                  <span class="mt-day"><b>Day 4</b><i>Shinkansen to Tokyo</i><em>11:15</em></span>
+                  <span class="mt-qr"><i></i></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-t-travel">Travel itineraries</h3>
+                <ul class="dc-made" aria-label="Made with these blocks">
+                  <li>Itinerary</li><li>Gallery</li><li>QR Code</li>
+                </ul>
+                <p class="dc-tile__more">
+                  Day-by-day itineraries with galleries and scannable links.
+                  <a href="https://www.quote.cloud/templates/travel">Travel templates&nbsp;<span aria-hidden="true">→</span></a>
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <p class="dc-docs__all" data-reveal>
+            <a href="https://www.quote.cloud/templates">Browse professional document templates by industry&nbsp;<span aria-hidden="true">→</span></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ───────── The 18 blocks as a typographic index ───────── -->
+      <section class="dc-index" id="blocks" aria-labelledby="dc-index-title" data-index>
+        <div class="qc-container dc-index__inner">
+          <div class="dc-index__copy" data-reveal>
+            <h2 id="dc-index-title">One online document builder. <em>18 content blocks.</em></h2>
+            <p>
+              Every document above is assembled from the same toolkit, so a report can carry a price table and a contract can carry a video.
+            </p>
+            <p class="dc-index__now" aria-hidden="true">Building a <b data-index-label>business report</b></p>
+            <div class="dc-index__cta">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="blocks">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+              <a class="dc-link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Explore all 18 blocks <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <ul class="dc-index__list" data-reveal="fade">
+            <li data-b="Text">Text</li>
+            <li data-b="Price Table">Price Table</li>
+            <li data-b="Spreadsheet">Spreadsheet</li>
+            <li data-b="Image">Image</li>
+            <li data-b="Gallery">Gallery</li>
+            <li data-b="Video">Video</li>
+            <li data-b="PDF">PDF</li>
+            <li data-b="Diagram">Diagram</li>
+            <li data-b="Gantt Chart">Gantt Chart</li>
+            <li data-b="Forms">Forms</li>
+            <li data-b="eSignature">eSignature</li>
+            <li data-b="Shapes">Shapes</li>
+            <li data-b="Button">Button</li>
+            <li data-b="QR Code">QR Code</li>
+            <li data-b="Barcode">Barcode</li>
+            <li data-b="Table of Contents">Table of Contents</li>
+            <li data-b="Itinerary">Itinerary</li>
+            <li data-b="Empty Space">Empty Space</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Three audiences: Write / Design / Present ───────── -->
+      <section class="dc-modes" id="editor" aria-labelledby="dc-modes-title">
+        <div class="qc-container">
+          <header class="dc-head" data-reveal>
+            <h2 id="dc-modes-title">Write it. Design it. <em>Present it.</em></h2>
+            <p>The writing of a word processor, the layouts of a design tool and the visuals of a presentation, in one visual document editor.</p>
+          </header>
+
+          <div class="dc-trio" data-reveal-stagger="90">
+            <!-- Write -->
+            <article class="dc-tile dc-tile--write" data-tile="write" data-reveal aria-labelledby="dc-m-write">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--write">
+                  <span class="mw-bar"><b>H1</b><b class="is-on">B</b><b><i>I</i></b><b>≡</b><b>⊞</b><span class="mw-bar__ai">AI Co-worker</span></span>
+                  <span class="mw-h">Executive summary</span>
+                  <span class="mw-p">
+                    <span class="mw-p__a">We propose a phased rollout that starts with the three busiest branches and expands once the pilot is signed off.</span>
+                    <span class="mw-p__b">A three-branch pilot first, then a company-wide rollout once it's signed off.</span>
+                  </span>
+                  <span class="mw-list"><i>Faster turnaround on client requests</i><i>One source of approved content</i></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-m-write">Write</h3>
+                <p>Everything you need to write professional business documents, with much more than text.</p>
+              </div>
+            </article>
+
+            <!-- Design -->
+            <article class="dc-tile dc-tile--design" data-tile="design" data-reveal aria-labelledby="dc-m-design">
+              <div class="dc-tile__vis">
+                <div class="mini mini--design" data-layout="canvas">
+                  <div class="md-switch" role="group" aria-label="Layout mode preview">
+                    <button type="button" aria-pressed="true" data-layout-btn="canvas">Canvas</button>
+                    <button type="button" aria-pressed="false" data-layout-btn="grid">Grid</button>
+                    <span class="md-switch__thumb" aria-hidden="true"></span>
+                  </div>
+                  <div class="md-page" aria-hidden="true">
+                    <span class="md-b md-b--img"></span>
+                    <span class="md-b md-b--title"><i>Aurora</i></span>
+                    <span class="md-b md-b--text"><i></i><i></i><i></i></span>
+                    <span class="md-b md-b--shape"></span>
+                    <span class="md-b md-b--price"><i></i><i></i><i></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-m-design">Design</h3>
+                <p>Design visually engaging documents without sacrificing business functionality.</p>
+                <a class="dc-link" href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas and Grid modes <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Present -->
+            <article class="dc-tile dc-tile--present" data-tile="present" data-reveal aria-labelledby="dc-m-present">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--present">
+                  <svg class="mpr-flow" viewBox="0 0 240 120">
+                    <path class="mpr-edge" pathLength="1" d="M58 30 H96" />
+                    <path class="mpr-edge" pathLength="1" d="M144 30 H182" />
+                    <path class="mpr-edge" pathLength="1" d="M120 44 V76" />
+                    <rect class="mpr-node" x="8" y="16" width="50" height="28" rx="8" />
+                    <rect class="mpr-node" x="96" y="16" width="48" height="28" rx="8" />
+                    <rect class="mpr-node mpr-node--on" x="182" y="16" width="50" height="28" rx="8" />
+                    <rect class="mpr-node" x="90" y="76" width="60" height="28" rx="14" />
+                    <text x="33" y="34">Lead</text><text x="120" y="34">Quote</text><text x="207" y="34" class="is-on">Won</text><text x="120" y="94">Review</text>
+                  </svg>
+                  <span class="mpr-media">
+                    <span class="mpr-video"><b></b></span>
+                    <span class="mpr-thumbs"><i></i><i></i><i></i></span>
+                  </span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-m-present">Present</h3>
+                <p>Bring presentation-quality diagrams, video and galleries into interactive business documents.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Documents that do more + the business layer ───────── -->
+      <section class="dc-biz" id="business" aria-labelledby="dc-biz-title">
+        <div class="qc-container">
+          <header class="dc-head" data-reveal>
+            <h2 id="dc-biz-title">Interactive documents, <em>built for business</em></h2>
+            <p>Your client chooses, fills in, comments, signs and pays in the document. Your team creates it together.</p>
+          </header>
+
+          <div class="dc-bento dc-bento--biz" data-reveal-stagger="70">
+            <!-- Client experience -->
+            <article class="dc-tile dc-tile--client" data-tile="client" data-reveal="scale" aria-labelledby="dc-b-client">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--client">
+                  <span class="cl-bar"><i></i><i></i><i></i><b>proposal.quote.cloud</b></span>
+                  <span class="cl-doc">
+                    <span class="cl-title">Website redesign proposal</span>
+                    <span class="cl-opt"><i>Design &amp; build</i><b>$9,200</b></span>
+                    <span class="cl-opt cl-opt--toggle"><i><span class="cl-toggle"></span>Add SEO package</i><b>$1,200</b></span>
+                    <span class="cl-total"><i>Total</i><b data-client-total>$10,400</b></span>
+                    <span class="cl-field"><i>Preferred start date</i><b>3 May 2027</b></span>
+                    <span class="cl-comment"><b>HC</b>Can we review the copy in week two?</span>
+                    <span class="cl-sign">
+                      <svg viewBox="0 0 220 64"><path pathLength="1" d="M10 42c8-18 18-30 24-26 6 5-10 30-2 31 8 1 16-26 24-24 6 2-2 20 6 21 7 1 12-14 20-14 6 0 3 11 9 11 9 0 15-12 24-12 8 0 6 9 13 9 9 0 20-7 31-10 11-3 22-3 41-1" /></svg>
+                      <span class="cl-sign__btn">Accept &amp; sign</span>
+                    </span>
+                  </span>
+                  <span class="cl-accepted"><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg>Accepted · Deposit paid</span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-b-client">Documents that do more</h3>
+                <p>Optional items with live totals, forms, comments, e-signatures and online payment through Stripe or PayPal, in one link.</p>
+                <a class="dc-link" href="https://www.quote.cloud/electronic-signature-software-solution">E-signatures in every plan <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Collaboration -->
+            <article class="dc-tile dc-tile--collab" data-tile="collab" data-reveal="scale" aria-labelledby="dc-b-collab">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--collab">
+                  <span class="co-line" style="--w: 90%"></span>
+                  <span class="co-line co-line--sel" style="--w: 76%"></span>
+                  <span class="co-line" style="--w: 84%"></span>
+                  <span class="co-line" style="--w: 58%"></span>
+                  <span class="co-cursor co-cursor--a"><svg viewBox="0 0 12 16"><path d="M1 1l10 8-5 1-2 5z" /></svg><b>Maya</b></span>
+                  <span class="co-cursor co-cursor--b"><svg viewBox="0 0 12 16"><path d="M1 1l10 8-5 1-2 5z" /></svg><b>Leo</b></span>
+                  <span class="co-note"><b>MK</b><span><em>@Leo</em> can you check the timeline?</span></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-b-collab">Real-time collaboration</h3>
+                <p>Edit together, comment, @mention and restore earlier versions.</p>
+                <a class="dc-link" href="https://www.quote.cloud/collaboration">Collaboration <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <!-- Libraries & templates -->
+            <article class="dc-tile dc-tile--library" data-tile="library" data-reveal="scale" aria-labelledby="dc-b-library">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--library">
+                  <span class="li-tabs"><b class="is-on">Company</b><b>Team</b><b>Personal</b></span>
+                  <span class="li-card"><i></i>About us</span>
+                  <span class="li-card li-card--drag"><i></i>Case study</span>
+                  <span class="li-card"><i></i>Terms</span>
+                  <span class="li-doc"><i></i><i></i><span class="li-slot"></span></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-b-library">Templates &amp; content libraries</h3>
+                <p>Branded templates plus company, team and personal libraries of approved content.</p>
+              </div>
+            </article>
+
+            <!-- Approvals -->
+            <article class="dc-tile dc-tile--approve" data-tile="approve" data-reveal="scale" aria-labelledby="dc-b-approve">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--approve">
+                  <span class="ap-step"><b><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></b>Draft</span>
+                  <span class="ap-link"></span>
+                  <span class="ap-step"><b><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></b>Manager</span>
+                  <span class="ap-link"></span>
+                  <span class="ap-step"><b><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7" /></svg></b>Finance</span>
+                  <span class="ap-rule">If discount &gt; 10%</span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-b-approve">Approval workflows</h3>
+                <p>Visual approval flows with conditional rules. No code.</p>
+              </div>
+            </article>
+
+            <!-- Tracking -->
+            <article class="dc-tile dc-tile--track" data-tile="track" data-reveal="scale" aria-labelledby="dc-b-track">
+              <div class="dc-tile__vis" aria-hidden="true">
+                <div class="mini mini--track">
+                  <span class="tr-item"><i class="tr-dot" style="--c: var(--dc-sky)"></i><b>Opened</b> by Harbor &amp; Co.<em>9:02</em></span>
+                  <span class="tr-item"><i class="tr-dot" style="--c: var(--dc-violet)"></i><b>Viewed</b> pricing<em>9:05</em></span>
+                  <span class="tr-item"><i class="tr-dot" style="--c: var(--qc-amber)"></i><b>Commented</b> on scope<em>9:11</em></span>
+                  <span class="tr-item"><i class="tr-dot" style="--c: var(--dc-mint)"></i><b>Accepted</b> and signed<em>9:18</em></span>
+                </div>
+              </div>
+              <div class="dc-tile__body">
+                <h3 id="dc-b-track">Notifications &amp; tracking</h3>
+                <p>Know when a document is opened, viewed, commented on or accepted.</p>
+              </div>
+            </article>
+
+            <!-- Integrations -->
+            <div class="dc-integrations" data-reveal>
+              <p>Connects with the CRM, accounting and payment tools you already use.</p>
+              <ul class="dc-integrations__logos">
+                <li><img src="/assets/integrations/salesforce-cpq.png" width="44" height="44" alt="Salesforce" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/hub-spot.png" width="44" height="44" alt="HubSpot" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/xero.png" width="44" height="44" alt="Xero" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/quickbooks.png" width="44" height="44" alt="QuickBooks" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/stripe.png" width="44" height="44" alt="Stripe" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/paypal.png" width="44" height="44" alt="PayPal" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/slack.jpg" width="44" height="44" alt="Slack" loading="lazy" decoding="async" /></li>
+              </ul>
+              <a class="dc-link" href="https://www.quote.cloud/all-integrations">All integrations <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Comparison ledger ───────── -->
+      <section class="dc-ledger" id="compare" aria-labelledby="dc-ledger-title">
+        <div class="qc-container dc-ledger__inner">
+          <header class="dc-head dc-head--left" data-reveal>
+            <h2 id="dc-ledger-title">Why stop at traditional <em>document software?</em></h2>
+            <p>Most business documents are stitched together from separate tools. QuoteCloud keeps the whole job in one document.</p>
+            <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="compare">Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a>
+          </header>
+          <table class="dc-table" data-reveal-stagger="60">
+            <caption class="qc-sr-only">How common document tasks are usually done, and how they are done in QuoteCloud</caption>
+            <thead>
+              <tr><th scope="col">To</th><th scope="col">Usually done with</th><th scope="col">In QuoteCloud</th></tr>
+            </thead>
+            <tbody>
+              <tr data-reveal><th scope="row">Write and format content</th><td>a word processor</td><td>Text block</td></tr>
+              <tr data-reveal><th scope="row">Design visual layouts</th><td>a design or presentation app</td><td>Canvas and Grid modes</td></tr>
+              <tr data-reveal><th scope="row">Calculate</th><td>a spreadsheet</td><td>Spreadsheet block</td></tr>
+              <tr data-reveal><th scope="row">Build pricing</th><td>a spreadsheet or quoting tool</td><td>Price Table</td></tr>
+              <tr data-reveal><th scope="row">Show project timelines</th><td>a project tool</td><td>Gantt Chart</td></tr>
+              <tr data-reveal><th scope="row">Explain processes</th><td>a diagramming tool</td><td>Diagram</td></tr>
+              <tr data-reveal><th scope="row">Collect information</th><td>a separate form app</td><td>Forms</td></tr>
+              <tr data-reveal><th scope="row">Get signatures</th><td>a separate e-signature service</td><td>eSignature</td></tr>
+              <tr data-reveal class="is-final"><th scope="row">Share</th><td>multiple files and links</td><td>one interactive document</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="dc-proof" aria-labelledby="dc-proof-title">
+        <h2 class="qc-sr-only" id="dc-proof-title">Why teams trust QuoteCloud</h2>
+        <ul class="qc-container dc-proof__list" data-reveal-stagger="80">
+          <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><i aria-hidden="true">★</i></b><span>Rated on Capterra</span></li>
+          <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><i aria-hidden="true">★</i></b><span>Rated on Software Advice</span></li>
+          <li data-reveal><b><span data-count-to="2013" data-count-format="plain">2013</span></b><span>Building document software since</span></li>
+          <li data-reveal><b>eIDAS</b><span>Compliant e-signatures, 256-bit encryption</span></li>
+        </ul>
+      </section>
+
+      <div class="dc-faq">
+        <!-- @include faq-document-creation -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="dc-final" aria-labelledby="dc-final-title">
+        <div class="qc-container dc-final__inner">
+          <div class="dc-final__fan" aria-hidden="true">
+            <span class="dc-final__sheet dc-final__sheet--1"><i></i><i></i><i></i></span>
+            <span class="dc-final__sheet dc-final__sheet--2"><i></i><i></i><i></i></span>
+            <span class="dc-final__sheet dc-final__sheet--3"><i></i><i></i><i></i></span>
+            <span class="dc-final__sheet dc-final__sheet--4"><i></i><i></i><i></i></span>
+          </div>
+          <h2 id="dc-final-title" data-reveal>Start creating better <em>documents today</em></h2>
+          <p data-reveal style="--reveal-delay: 80">Reports, proposals, plans, contracts and more, from one online document editor.</p>
+          <div class="dc-final__cta" data-reveal style="--reveal-delay: 160">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="final"
+              >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">→</span></a
+            >
+            <a class="qc-btn qc-btn--ghost qc-btn--lg dc-final__demo" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="final-demo">Book a demo</a>
+          </div>
+          <p class="dc-final__note" data-reveal style="--reveal-delay: 220">14-day free trial · No credit card required</p>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

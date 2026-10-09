@@ -11,5 +11,5 @@
     "allowImportingTsExtensions": true,
     "types": ["vite/client", "node"]
   },
-  "include": ["src", "v*/**/*.ts", "travel/**/*.ts", "telco/**/*.ts", "esign/**/*.ts", "quoting/**/*.ts", "docgen/**/*.ts", "blocks/**/*.ts", "canvas/**/*.ts", "collab/**/*.ts", "vite.config.ts"]
+  "include": ["src", "v*/**/*.ts", "travel/**/*.ts", "telco/**/*.ts", "esign/**/*.ts", "quoting/**/*.ts", "docgen/**/*.ts", "blocks/**/*.ts", "canvas/**/*.ts", "collab/**/*.ts", "proposal/**/*.ts", "cpq/**/*.ts", "ai-coworker/**/*.ts", "document-creation/**/*.ts", "image-editor/**/*.ts", "demo/**/*.ts", "vite.config.ts"]
 }

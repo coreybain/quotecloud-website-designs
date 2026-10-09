@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-cpq -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <!-- @include header -->
+    <main id="main">
+      <!-- ───────── Hero ───────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="qc-container hero__inner">
+          <div class="hero__copy">
+            <h1 class="hero__title" id="hero-title">
+              <span class="em">CPQ software</span> for complex pricing, configuration and deals
+            </h1>
+            <p class="hero__lede">Configure with confidence. Price with precision. Quote at speed.</p>
+            <div class="hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo"
+                >Book a demo</a
+              >
+            </div>
+            <p class="hero__note">No credit card required</p>
+            <div class="hero__crm">
+              <ul class="logo-row" aria-hidden="true">
+                <li><img src="/assets/integrations/salesforce-cpq.png" alt="" width="792" height="790" /></li>
+                <li><img src="/assets/integrations/hub-spot.png" alt="" width="792" height="790" /></li>
+                <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="" width="792" height="790" /></li>
+                <li><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="" width="792" height="790" /></li>
+              </ul>
+              <p>Connects to Salesforce, HubSpot, Microsoft Dynamics, Pipedrive, Zoho and <a href="#stack">more</a>.</p>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="deal is-done" data-deal>
+              <svg class="deal__wires" data-deal-wires aria-hidden="true"></svg>
+              <ul class="deal__rules" aria-label="Pricing rules applied to this quote">
+                <li class="rule is-on" data-rule="0"><i aria-hidden="true"></i><span>Region</span> <b>APAC</b></li>
+                <li class="rule is-on" data-rule="1"><i aria-hidden="true"></i><span>Tier</span> <b>50+ seats</b></li>
+                <li class="rule is-on" data-rule="2"><i aria-hidden="true"></i><span>Term</span> <b>24 mo</b></li>
+              </ul>
+              <article class="deal__card" aria-label="Sample quote AN-2481 for Meridian Freight">
+                <header class="deal__head">
+                  <span class="deal__mark" aria-hidden="true">AN</span>
+                  <span class="deal__meta"><b>Quote AN-2481</b><small>Meridian Freight · 3 sites</small></span>
+                  <span class="deal__status"><i aria-hidden="true"></i><span data-deal-status>Ready</span></span>
+                </header>
+                <ul class="deal__lines">
+                  <li class="line is-applied" data-line="0">
+                    <span class="line__name"
+                      ><b>Business Fibre 500</b><small><span class="line__list">List price</span><span class="line__why">APAC price list</span></small></span
+                    >
+                    <span class="line__amt"><s>$680</s><b>$620</b></span>
+                  </li>
+                  <li class="line is-applied" data-line="1">
+                    <span class="line__name"
+                      ><b>Managed Workplace</b><small><span class="line__list">60 seats × $42</span><span class="line__why">60 seats × $36</span></small></span
+                    >
+                    <span class="line__amt"><s>$2,520</s><b>$2,160</b></span>
+                  </li>
+                  <li class="line is-applied" data-line="2">
+                    <span class="line__name"
+                      ><b>Managed Wi-Fi</b><small><span class="line__list">List price</span><span class="line__why">24-month rate</span></small></span
+                    >
+                    <span class="line__amt"><s>$390</s><b>$350</b></span>
+                  </li>
+                </ul>
+                <footer class="deal__foot">
+                  <div class="deal__total">
+                    <span>Monthly total</span>
+                    <strong><span data-deal-total>$3,130</span><small>/mo</small></strong>
+                  </div>
+                  <p class="deal__once">+ $1,450 once-off installation</p>
+                  <p class="deal__ok">
+                    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.4l2.9 2.8 6-6.4" /></svg>All pricing rules applied
+                  </p>
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── The connected engine (bento circuit) ───────── -->
+      <section class="engine" id="engine" aria-labelledby="engine-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="engine-title">Configure, Price, Quote: <span class="em">one connected engine</span></h2>
+            <p>Every rule feeds the next step, so each configuration is valid, each price is accurate and each quote is consistent.</p>
+          </header>
+
+          <div class="circuit" data-circuit>
+            <svg class="circuit__wires" data-circuit-wires aria-hidden="true"></svg>
+
+            <!-- 1 · Configure -->
+            <article class="tile tile--config" data-tile aria-labelledby="t-config">
+              <span class="node"><i aria-hidden="true"></i>Configure</span>
+              <div class="tile__copy">
+                <h3 id="t-config">Rule-based product configuration</h3>
+                <p>Dependencies add what's required and block what won't work, with the reason shown.</p>
+              </div>
+              <div
+                class="ui cfg is-valid"
+                data-cfg
+                role="img"
+                aria-label="Configurator: turning on Managed Wi-Fi automatically adds Business Fibre 500 because Wi-Fi requires it, and ADSL Broadband is blocked as not compatible with Business Fibre."
+              >
+                <div class="ui__bar"><span>Branch configuration · Meridian Freight</span><em class="cfg__valid">Valid</em></div>
+                <ul class="cfg__list">
+                  <li class="opt is-on" data-opt="wifi">
+                    <span class="opt__name"><b>Managed Wi-Fi</b><small>3 sites</small></span><span class="tgl"></span>
+                  </li>
+                  <li class="opt is-on is-auto" data-opt="fibre">
+                    <span class="opt__name"
+                      ><b>Business Fibre 500</b><small><span class="opt__base">Fibre internet</span><span class="opt__why">Required by Managed Wi-Fi</span></small></span
+                    ><span class="tgl"></span>
+                  </li>
+                  <li class="opt is-blocked" data-opt="adsl">
+                    <span class="opt__name"
+                      ><b>ADSL Broadband 25</b><small><span class="opt__base">Copper internet</span><span class="opt__why">Incompatible with fibre</span></small></span
+                    ><span class="tgl"></span>
+                  </li>
+                  <li class="opt is-on" data-opt="backup">
+                    <span class="opt__name"><b>Cloud Backup</b><small>500 GB</small></span><span class="tgl"></span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- 2 · Bundle -->
+            <article class="tile tile--bundle" data-tile aria-labelledby="t-bundle">
+              <span class="node"><i aria-hidden="true"></i>Configure</span>
+              <div class="tile__copy">
+                <h3 id="t-bundle">Bundles in one click</h3>
+                <p>One selection drops every line item into the price table.</p>
+              </div>
+              <div
+                class="ui bnd is-added"
+                data-bnd
+                role="img"
+                aria-label="Adding the Branch Office Bundle inserts four line items: Business Fibre 500 at $620 a month, Managed Wi-Fi at $350 a month, a security gateway at $890 and on-site installation at $560, totalling $970 a month plus $1,450 once-off."
+              >
+                <div class="bnd__pick">
+                  <span class="bnd__icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                  <span class="bnd__name"><b>Branch Office Bundle</b><small>4 items</small></span>
+                  <span class="bnd__add"><span class="bnd__plus">Add</span><span class="bnd__done">Added</span></span>
+                </div>
+                <ul class="bnd__lines">
+                  <li style="--i: 0"><span>Business Fibre 500</span><b>$620/mo</b></li>
+                  <li style="--i: 1"><span>Managed Wi-Fi</span><b>$350/mo</b></li>
+                  <li style="--i: 2"><span>Security gateway</span><b>$890</b></li>
+                  <li style="--i: 3"><span>On-site installation</span><b>$560</b></li>
+                </ul>
+                <div class="bnd__sum"><span>Bundle total</span><b>$970/mo</b><b>$1,450 once-off</b></div>
+              </div>
+            </article>
+
+            <!-- 3 · Tiered pricing -->
+            <article class="tile tile--tier" data-tile aria-labelledby="t-tier">
+              <span class="node"><i aria-hidden="true"></i>Price</span>
+              <div class="tile__copy">
+                <h3 id="t-tier">A pricing engine with tiers</h3>
+                <p>Volume, tiered and margin-driven rules update every price in real time.</p>
+              </div>
+              <div
+                class="ui tier"
+                data-tier
+                role="img"
+                aria-label="Tiered seat pricing: 1 to 19 seats $42, 20 to 49 seats $39, 50 to 99 seats $36, 100 or more $33. At 60 seats the 50 to 99 tier applies: 60 times $36 equals $2,160 a month."
+              >
+                <div class="tier__qty"><span>Seats</span><b data-tier-seats>60</b></div>
+                <ol class="tier__ladder" style="--t: 2">
+                  <li class="tier__hl" aria-hidden="true"></li>
+                  <li><span>1–19</span><b>$42</b></li>
+                  <li><span>20–49</span><b>$39</b></li>
+                  <li class="is-act"><span>50–99</span><b>$36</b></li>
+                  <li><span>100+</span><b>$33</b></li>
+                </ol>
+                <div class="tier__calc"><span data-tier-calc>60 × $36</span><b data-tier-amt>$2,160/mo</b></div>
+              </div>
+            </article>
+
+            <!-- 4 · Contract plans (interactive) -->
+            <article class="tile tile--term" data-tile aria-labelledby="t-term">
+              <span class="node"><i aria-hidden="true"></i>Price</span>
+              <div class="tile__copy">
+                <h3 id="t-term">Contract plans and contract pricing</h3>
+                <p>Device and service prices follow the term and the customer's contract.</p>
+              </div>
+              <div class="ui term" data-term>
+                <div class="term__seg" role="group" aria-label="Contract term">
+                  <span class="term__thumb" aria-hidden="true"></span>
+                  <button type="button" data-term-btn="12" aria-pressed="false">12 mo</button>
+                  <button type="button" data-term-btn="24" aria-pressed="true">24 mo</button>
+                  <button type="button" data-term-btn="36" aria-pressed="false">36 mo</button>
+                </div>
+                <p class="term__rule"><i aria-hidden="true"></i>Contract price applied · Meridian Freight</p>
+                <div class="term__device">
+                  <span class="term__laptop" aria-hidden="true"><i></i></span>
+                  <span class="term__name"><b>ProBook 14 laptop</b><small>Managed device</small></span>
+                  <span class="term__price" aria-live="polite"><b data-term-price>$52</b><small>/mo</small></span>
+                </div>
+                <div class="term__foot">
+                  <span>Over <span data-term-months>24</span> months</span><b data-term-total>$1,248</b>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5 · Hidden spreadsheet -->
+            <article class="tile tile--sheet" data-tile aria-labelledby="t-sheet">
+              <span class="node"><i aria-hidden="true"></i>Price</span>
+              <div class="tile__copy">
+                <h3 id="t-sheet">Complex formulas, hidden spreadsheet</h3>
+                <p>Cell values flow straight into price table lines.</p>
+              </div>
+              <div
+                class="ui sheet"
+                data-sheet
+                role="img"
+                aria-label="A hidden spreadsheet calculates 3 sites times 18 hours times a $90 rate equals $4,860, and that cell is linked to the Site engineering line in the price table."
+              >
+                <div class="sheet__fx"><i>fx</i><code>=B1*B2*B3</code><em>Hidden</em></div>
+                <div class="sheet__grid">
+                  <span class="sheet__h"></span><span class="sheet__h">A</span><span class="sheet__h">B</span>
+                  <span class="sheet__n">1</span><span>Sites</span><span class="sheet__v">3</span>
+                  <span class="sheet__n">2</span><span>Hours per site</span><span class="sheet__v" data-sheet-hours>18</span>
+                  <span class="sheet__n">3</span><span>Rate</span><span class="sheet__v">$90</span>
+                  <span class="sheet__n">4</span><span>Labour total</span><span class="sheet__v sheet__out" data-sheet-out>$4,860</span>
+                </div>
+                <div class="sheet__flow" aria-hidden="true"><i></i></div>
+                <div class="sheet__row">
+                  <span><b>Site engineering</b><small>Linked to Sheet!B4</small></span><b data-sheet-row>$4,860</b>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6 · Approvals -->
+            <article class="tile tile--approve" data-tile aria-labelledby="t-approve">
+              <span class="node"><i aria-hidden="true"></i>Approve</span>
+              <div class="tile__copy">
+                <h3 id="t-approve">Multi-level approval workflows</h3>
+                <p>Thresholds route each deal, and backup approvers step in when someone is away.</p>
+              </div>
+              <div
+                class="ui apv is-ready"
+                data-apv
+                role="img"
+                aria-label="An 18% discount exceeds the 15% threshold, so the quote routes for approval. The sales manager is away, so a backup approver approves, then the commercial director approves and the quote is ready to send."
+              >
+                <p class="apv__rule"><i aria-hidden="true"></i>Needs approval: discount 18% &gt; 15%</p>
+                <ol class="apv__chain">
+                  <li class="st is-done">
+                    <span class="st__dot"></span><span class="st__txt"><b>Quote created</b><small>Sales rep</small></span>
+                  </li>
+                  <li class="st st--mgr is-done is-backup">
+                    <span class="st__dot"></span>
+                    <span class="st__txt"
+                      ><b>Sales manager</b><small><span class="st__wait">Awaiting approval</span><span class="st__away">Away · backup notified</span><span class="st__by">Approved by backup</span></small></span
+                    >
+                    <span class="st__avs" aria-hidden="true"><span class="av av--a">JP</span><span class="av av--b">AR</span></span>
+                  </li>
+                  <li class="st st--com is-done">
+                    <span class="st__dot"></span><span class="st__txt"><b>Commercial director</b><small>Margin check</small></span>
+                    <span class="st__avs" aria-hidden="true"><span class="av av--c">DL</span></span>
+                  </li>
+                  <li class="st st--ready is-done">
+                    <span class="st__dot"></span><span class="st__txt"><b>Ready to send</b><small>Locked for pricing</small></span>
+                  </li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- 7 · Versions -->
+            <article class="tile tile--ver" data-tile aria-labelledby="t-ver">
+              <span class="node"><i aria-hidden="true"></i>Quote</span>
+              <div class="tile__copy">
+                <h3 id="t-ver">Versions and audit trail</h3>
+                <p>Compare, restore and see who changed what.</p>
+              </div>
+              <div
+                class="ui ver"
+                data-ver
+                style="--v: 3"
+                role="img"
+                aria-label="Version history from v1.0 to v1.3: v1.1 added Managed Wi-Fi and Business Fibre, v1.2 changed the term from 12 to 24 months, v1.3 changed the discount from 12% to 18%."
+              >
+                <ol class="ver__track">
+                  <li class="ver__fill" aria-hidden="true"></li>
+                  <li class="is-act">v1.0</li>
+                  <li class="is-act">v1.1</li>
+                  <li class="is-act">v1.2</li>
+                  <li class="is-act">v1.3</li>
+                </ol>
+                <div class="ver__diffs">
+                  <ul class="ver__diff" data-v="0">
+                    <li class="d-new">Draft created</li>
+                    <li class="d-new">+ Cloud Backup</li>
+                  </ul>
+                  <ul class="ver__diff" data-v="1">
+                    <li class="d-add">+ Managed Wi-Fi</li>
+                    <li class="d-add">+ Business Fibre 500</li>
+                  </ul>
+                  <ul class="ver__diff" data-v="2">
+                    <li class="d-chg">Term 12 → 24 mo</li>
+                    <li class="d-del">− ADSL Broadband</li>
+                  </ul>
+                  <ul class="ver__diff is-cur" data-v="3">
+                    <li class="d-chg">Discount 12% → 18%</li>
+                    <li class="d-new">Approved · 2 levels</li>
+                  </ul>
+                </div>
+                <div class="ver__acts"><span>Compare</span><span>Restore</span></div>
+                <p class="ver__who">Every change logged with user and time</p>
+              </div>
+            </article>
+
+            <!-- 8 · Accept -->
+            <article class="tile tile--accept" data-tile aria-labelledby="t-accept">
+              <span class="node"><i aria-hidden="true"></i>Accept</span>
+              <div class="tile__copy">
+                <h3 id="t-accept">Customers choose, sign and pay</h3>
+                <p>Optional add-ons, eSignature and online payment in one document.</p>
+              </div>
+              <div
+                class="ui acc is-signed is-paid is-checked"
+                data-acc
+                role="img"
+                aria-label="The customer ticks an optional 4G failover add-on for $45 a month, bringing the monthly total to $3,175, signs the quote and pays the $1,450 once-off amount online."
+              >
+                <div class="acc__opt">
+                  <span class="acc__chk" aria-hidden="true"
+                    ><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6-6.4" /></svg></span
+                  >
+                  <span class="acc__label"><b>4G failover</b><small>Optional</small></span>
+                  <b>+$45/mo</b>
+                </div>
+                <div class="acc__total"><span>Monthly total</span><b data-acc-total>$3,175</b></div>
+                <div class="acc__sign">
+                  <svg viewBox="0 0 220 56" aria-hidden="true">
+                    <path
+                      class="acc__ink"
+                      pathLength="1"
+                      d="M8 38c10-14 18-26 24-24 7 2-6 28 2 28 8 0 14-24 22-22 6 2-2 18 4 18 8 0 12-12 18-12 5 0 2 10 8 10 9 0 16-14 26-14 7 0 6 9 14 9 10 0 22-6 40-12 14-4 26-6 40-6"
+                    />
+                  </svg>
+                  <span>Signed · Meridian Freight</span>
+                </div>
+                <div class="acc__paid">
+                  <span class="acc__stamp">Accepted</span>
+                  <span class="acc__pay"><i aria-hidden="true"></i>$1,450 paid online</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="engine__cta" data-reveal>
+            <p>Configure your real catalogue, free for 14 days.</p>
+            <div class="engine__btns">
+              <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="engine"
+                >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+              >
+              <a class="qc-btn qc-btn--ghost" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="engine-demo">Book a demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Governance ───────── -->
+      <section class="gov" aria-labelledby="gov-title">
+        <div class="qc-container">
+          <header class="sec-head sec-head--left" data-reveal>
+            <h2 id="gov-title">Pricing governance <span class="em">built into every quote</span></h2>
+          </header>
+          <ul class="gov__list" data-reveal-stagger="90">
+            <li data-reveal>
+              <svg class="gov__ico" viewBox="0 0 32 32" aria-hidden="true">
+                <rect x="7" y="14" width="18" height="13" rx="3" />
+                <path d="M11 14v-3a5 5 0 0 1 10 0v3" />
+                <path d="M16 19v3" />
+              </svg>
+              <h3>Content locking</h3>
+              <p>Control appearance, functionality and pricing options, so reps sell inside the rules.</p>
+            </li>
+            <li data-reveal>
+              <svg class="gov__ico" viewBox="0 0 32 32" aria-hidden="true">
+                <rect x="5" y="6" width="9" height="9" rx="2" />
+                <rect x="18" y="6" width="9" height="9" rx="2" />
+                <rect x="5" y="19" width="9" height="9" rx="2" />
+                <path d="M18 23.5h9M22.5 19v9" />
+              </svg>
+              <h3>Smart product catalogue</h3>
+              <p>One hub for products, services and pricing rules, reused across every team.</p>
+            </li>
+            <li data-reveal>
+              <svg class="gov__ico" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M9 4h10l6 6v18H9z" />
+                <path d="M19 4v6h6" />
+                <path d="M13 17l6-4M13 13h0.01M19 17h0.01" />
+              </svg>
+              <h3>Contract pricing</h3>
+              <p>Customer-specific prices or percentage discounts, applied automatically from contract terms.</p>
+            </li>
+            <li data-reveal>
+              <svg class="gov__ico" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M7 6h12l6 6v14H7z" />
+                <path d="M12 17h8M12 21h5" />
+                <path d="M21 24l2 2 4-4" />
+              </svg>
+              <h3>Critical information, attached</h3>
+              <p>Add a product and the right contract documents are attached to the quote automatically.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Integrations circuit ───────── -->
+      <section class="stack" id="stack" aria-labelledby="stack-title">
+        <div class="qc-container">
+          <header class="sec-head" data-reveal>
+            <h2 id="stack-title">Wired into your <span class="em">CRM, finance and payments</span></h2>
+            <p>Pull opportunity and customer data in, push accepted deals out, or automate your own flows with API access.</p>
+          </header>
+
+          <div class="hub" data-hub>
+            <svg class="hub__wires" data-hub-wires aria-hidden="true"></svg>
+            <div class="hub__core" data-hub-core>
+              <img src="/assets/logos/qc-symbol-white.png" alt="" width="64" height="64" loading="lazy" decoding="async" />
+              <b>QuoteCloud CPQ</b>
+              <small>Catalogue · rules · quotes</small>
+            </div>
+
+            <a class="port port--l" style="--r: 1" href="https://www.quote.cloud/integrations/crm/salesforce-cpq" data-hub-port>
+              <span class="port__logos" aria-hidden="true">
+                <img src="/assets/integrations/salesforce-cpq.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/hub-spot.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/microsoft-dynamics.jpg" alt="" width="792" height="790" loading="lazy" decoding="async" />
+              </span>
+              <span class="port__txt"><b>CRM</b><small>Salesforce, HubSpot, Dynamics, Pipedrive, Zoho, Zendesk Sell</small></span>
+            </a>
+            <a class="port port--l" style="--r: 2" href="https://www.quote.cloud/xero-accounting-with-quotecloud" data-hub-port>
+              <span class="port__logos" aria-hidden="true">
+                <img src="/assets/integrations/xero.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/quickbooks.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/freshbooks-accounting-logo.jpg" alt="" width="785" height="783" loading="lazy" decoding="async" />
+              </span>
+              <span class="port__txt"><b>Accounting &amp; ERP</b><small>Xero, QuickBooks, FreshBooks</small></span>
+            </a>
+            <a class="port port--l" style="--r: 3" href="https://www.quote.cloud/servicem8-with-quotecloud" data-hub-port>
+              <span class="port__logos" aria-hidden="true">
+                <img src="/assets/integrations/serviceM8.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/mondaydotcom-logo.jpg" alt="" width="792" height="790" loading="lazy" decoding="async" />
+              </span>
+              <span class="port__txt"><b>Jobs &amp; delivery</b><small>ServiceM8, simPRO, monday.com</small></span>
+            </a>
+            <a class="port port--r" style="--r: 1" href="https://www.quote.cloud/stripe-integration-with-quotecloud" data-hub-port>
+              <span class="port__logos" aria-hidden="true">
+                <img src="/assets/integrations/stripe.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/paypal.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+              </span>
+              <span class="port__txt"><b>Payments</b><small>Stripe, PayPal</small></span>
+            </a>
+            <a class="port port--r" style="--r: 2" href="https://www.quote.cloud/googlesheets-with-quotecloud" data-hub-port>
+              <span class="port__logos" aria-hidden="true">
+                <img src="/assets/integrations/googlesheets.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/excel.png" alt="" width="792" height="790" loading="lazy" decoding="async" />
+                <img src="/assets/integrations/slack.jpg" alt="" width="792" height="790" loading="lazy" decoding="async" />
+              </span>
+              <span class="port__txt"><b>Data &amp; teams</b><small>Google Sheets, Excel, OneDrive, Slack, Teams</small></span>
+            </a>
+            <a class="port port--r port--api" style="--r: 3" href="https://www.quote.cloud/all-integrations" data-hub-port>
+              <span class="port__logos" aria-hidden="true"><code>{ }</code></span>
+              <span class="port__txt"><b>API access</b><small>Custom workflows and automation</small></span>
+            </a>
+          </div>
+          <p class="stack__more" data-reveal><a href="https://www.quote.cloud/all-integrations">See all integrations <span aria-hidden="true">&rarr;</span></a></p>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="qc-container proof__inner">
+          <div class="proof__copy" data-reveal>
+            <h2 id="proof-title">Up and running in days, <span class="em">no coding needed</span></h2>
+            <p>Load your catalogue and pricing rules, and your team quotes the same week.</p>
+          </div>
+          <dl class="proof__facts" data-reveal-stagger="100">
+            <div data-reveal>
+              <dt>Capterra rating</dt>
+              <dd><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></dd>
+            </div>
+            <div data-reveal>
+              <dt>Software Advice rating</dt>
+              <dd><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></dd>
+            </div>
+            <div data-reveal>
+              <dt>Building QuoteCloud since</dt>
+              <dd><span data-count-to="2013" data-count-format="plain">2013</span></dd>
+            </div>
+          </dl>
+          <ul class="proof__trust" data-reveal>
+            <li><img src="/assets/compliance/eidas.svg" alt="" width="91" height="90" loading="lazy" decoding="async" />eIDAS-compliant eSignatures</li>
+            <li><img src="/assets/compliance/encryption-256.png" alt="" width="320" height="305" loading="lazy" decoding="async" />256-bit encryption</li>
+            <li><img src="/assets/compliance/aws.svg" alt="" width="91" height="90" loading="lazy" decoding="async" />Hosted on AWS</li>
+            <li><img src="/assets/compliance/gdpr.png" alt="" width="319" height="320" loading="lazy" decoding="async" />GDPR</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="faq-wrap">
+        <!-- @include faq-cpq -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="close" aria-labelledby="close-title">
+        <div class="qc-container">
+          <div class="close__panel" data-close>
+            <svg class="close__traces" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g class="close__base">
+                <path d="M0 90H240q20 0 20 20V190q0 20 20 20H520" />
+                <path d="M0 330H180q20 0 20-20V270q0-20 20-20H430" />
+                <path d="M1200 70H980q-20 0-20 20V170q0 20-20 20H700" />
+                <path d="M1200 350H1020q-20 0-20-20V290q0-20-20-20H780" />
+              </g>
+              <g class="close__pulse">
+                <path pathLength="100" d="M0 90H240q20 0 20 20V190q0 20 20 20H520" />
+                <path pathLength="100" d="M0 330H180q20 0 20-20V270q0-20 20-20H430" />
+                <path pathLength="100" d="M1200 70H980q-20 0-20 20V170q0 20-20 20H700" />
+                <path pathLength="100" d="M1200 350H1020q-20 0-20-20V290q0-20-20-20H780" />
+              </g>
+            </svg>
+            <div class="close__copy">
+              <h2 id="close-title">Take control of complex selling with a <span class="em">modern CPQ solution</span></h2>
+              <p>Every configuration valid. Every price on rule. Every quote ready to sign.</p>
+              <div class="close__btns">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="close"
+                  >Start free 14-day trial <span class="qc-btn__arrow" aria-hidden="true">&rarr;</span></a
+                >
+                <a class="qc-btn qc-btn--light qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="close-demo"
+                  >Book a demo</a
+                >
+              </div>
+              <p class="close__note">No credit card required · Explore <a href="https://www.quote.cloud/pricing">pricing</a> or <a href="https://www.quote.cloud/quoting-software">quoting software</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

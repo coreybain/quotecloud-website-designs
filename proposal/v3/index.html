@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-proposal -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="rv-sprite" aria-hidden="true" focusable="false">
+      <symbol id="rv-i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /><path d="M14 3v5h5M9 13h6M9 17h4" /></symbol>
+      <symbol id="rv-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="rv-i-grip" viewBox="0 0 24 24"><circle cx="9" cy="6.5" r="1.3" /><circle cx="15" cy="6.5" r="1.3" /><circle cx="9" cy="12" r="1.3" /><circle cx="15" cy="12" r="1.3" /><circle cx="9" cy="17.5" r="1.3" /><circle cx="15" cy="17.5" r="1.3" /></symbol>
+      <symbol id="rv-i-up" viewBox="0 0 24 24"><path d="m6.5 14.5 5.5-5.5 5.5 5.5" /></symbol>
+      <symbol id="rv-i-down" viewBox="0 0 24 24"><path d="m6.5 9.5 5.5 5.5 5.5-5.5" /></symbol>
+      <symbol id="rv-i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.2" /><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" /></symbol>
+      <symbol id="rv-i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="rv-i-comment" viewBox="0 0 24 24"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4.5 3.5V16H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" /></symbol>
+      <symbol id="rv-i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="rv-i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.5 2h-15l1.5-2ZM10 20.5a2.2 2.2 0 0 0 4 0" /></symbol>
+      <symbol id="rv-i-send" viewBox="0 0 24 24"><path d="M20.5 3.5 10 14M20.5 3.5 14 20.5l-4-6.5-6.5-4 17-6.5Z" /></symbol>
+      <symbol id="rv-i-pen" viewBox="0 0 24 24"><path d="m14.5 5.5 4 4L8 20H4v-4L14.5 5.5ZM12.5 7.5l4 4" /></symbol>
+      <symbol id="rv-i-restore" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5M4 4v4.5h4.5" /><path d="M12 8v4.5l3 1.8" /></symbol>
+      <symbol id="rv-i-compare" viewBox="0 0 24 24"><path d="M8 4v16M16 4v16M4 8h4M16 16h4M4 16h4M16 8h4" /></symbol>
+      <symbol id="rv-i-desktop" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="1.8" /><path d="M9 20h6M12 16.5V20" /></symbol>
+      <symbol id="rv-i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.4" /><path d="M11 18.5h2" /></symbol>
+      <symbol id="rv-i-reset" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7L20 8.5M20 4v4.5h-4.5" /></symbol>
+      <symbol id="rv-i-forward" viewBox="0 0 24 24"><path d="m5 6 7 6-7 6V6ZM12 6l7 6-7 6V6Z" /></symbol>
+      <symbol id="rv-i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5L8 5.5Z" /></symbol>
+      <symbol id="rv-i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.9 7 9.5 4-1.6 7-5.2 7-9.5V6l-7-3Z" /><path d="m9 12 2.2 2.2L15.5 10" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: the proposal workspace you steer ───────── -->
+      <section class="rv-hero" aria-labelledby="rv-hero-title">
+        <div class="qc-container rv-hero__grid">
+          <div class="rv-hero__copy">
+            <h1 class="rv-hero__title" id="rv-hero-title">
+              Sales <span class="rv-em">proposal software</span> that wins complex deals
+            </h1>
+            <p class="rv-hero__lead">
+              Move beyond quotes. Deliver proposals that win work: shaped by your team, approved before they go out, signed online.
+            </p>
+            <div class="rv-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="qc-btn__arrow rv-ico" width="18" height="18" aria-hidden="true"><use href="#rv-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="rv-hero__note">No credit card required</p>
+          </div>
+
+          <!-- The interactive workspace -->
+          <div class="rv-ws" id="rv-ws" role="region" aria-label="Interactive demo: steer a proposal from draft to signed" data-ws>
+            <div class="rv-ws__bar">
+              <span class="rv-ws__file">
+                <span class="rv-ws__icon" aria-hidden="true"><svg class="rv-ico" width="17" height="17"><use href="#rv-i-doc" /></svg></span>
+                <span class="rv-ws__name"><span data-title>Digital Transformation Proposal</span><span class="rv-ws__client">Temptus for Northwind</span></span>
+              </span>
+              <span class="rv-ws__meta">
+                <span class="rv-ver" data-ver aria-label="Current version">v1.0</span>
+                <button class="rv-ws__reset" type="button" data-reset aria-label="Reset demo">
+                  <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-reset" /></svg>
+                </button>
+              </span>
+            </div>
+
+            <ol class="rv-stages" data-stages aria-label="Proposal stage">
+              <li class="rv-stage is-current" data-stage="0"><span class="rv-stage__dot" aria-hidden="true"></span><span class="rv-stage__label">Draft</span></li>
+              <li class="rv-stage" data-stage="1"><span class="rv-stage__dot" aria-hidden="true"></span><span class="rv-stage__label">Review</span></li>
+              <li class="rv-stage" data-stage="2"><span class="rv-stage__dot" aria-hidden="true"></span><span class="rv-stage__label">Approval</span></li>
+              <li class="rv-stage" data-stage="3"><span class="rv-stage__dot" aria-hidden="true"></span><span class="rv-stage__label">Sent</span></li>
+              <li class="rv-stage" data-stage="4"><span class="rv-stage__dot" aria-hidden="true"></span><span class="rv-stage__label">Accepted</span></li>
+              <li class="rv-stages__track" aria-hidden="true"><span class="rv-stages__fill" data-stage-fill></span></li>
+            </ol>
+
+            <div class="rv-tabs" role="tablist" aria-label="What you can do">
+              <button class="rv-tab" role="tab" id="rv-tab-shape" aria-controls="rv-panel-shape" aria-selected="true" data-tab="shape">
+                <span class="rv-tab__n" aria-hidden="true">1</span>Shape<span class="rv-tab__more">&nbsp;the story</span>
+              </button>
+              <button class="rv-tab" role="tab" id="rv-tab-approve" aria-controls="rv-panel-approve" aria-selected="false" tabindex="-1" data-tab="approve">
+                <span class="rv-tab__n" aria-hidden="true">2</span>Approve<span class="rv-tab__more">&nbsp;it</span>
+              </button>
+              <button class="rv-tab" role="tab" id="rv-tab-client" aria-controls="rv-panel-client" aria-selected="false" tabindex="-1" data-tab="client">
+                <span class="rv-tab__n" aria-hidden="true">3</span>Client view
+              </button>
+              <span class="rv-tabs__ink" aria-hidden="true" data-tab-ink></span>
+            </div>
+
+            <!-- Panel 1: shape the story -->
+            <div class="rv-panel rv-shape" role="tabpanel" id="rv-panel-shape" aria-labelledby="rv-tab-shape" data-panel="shape">
+              <div class="rv-deal" role="radiogroup" aria-label="Deal type">
+                <button class="rv-deal__opt" role="radio" aria-checked="false" tabindex="-1" data-deal="consulting">Consulting</button>
+                <button class="rv-deal__opt" role="radio" aria-checked="true" data-deal="technology">Technology<span class="rv-deal__more">&nbsp;implementation</span></button>
+                <button class="rv-deal__opt" role="radio" aria-checked="false" tabindex="-1" data-deal="infrastructure">Infrastructure</button>
+                <span class="rv-deal__ink" aria-hidden="true" data-deal-ink></span>
+              </div>
+
+              <div class="rv-shape__body">
+                <div class="rv-outline">
+                  <p class="rv-outline__head" id="rv-outline-label">Section outline</p>
+                  <p class="qc-sr-only" id="rv-outline-help">Use Alt plus Up or Down arrow, or the move buttons, to reorder. Use the switch to include or leave out a section.</p>
+                  <ol class="rv-outline__list" data-outline aria-labelledby="rv-outline-label">
+                    <li class="rv-row" data-key="summary"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Executive summary</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                    <li class="rv-row" data-key="challenge"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Current state</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                    <li class="rv-row" data-key="solution"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Solution design</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                    <li class="rv-row" data-key="timeline"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Implementation plan</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                    <li class="rv-row" data-key="method"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Delivery approach</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                    <li class="rv-row" data-key="investment"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Investment</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                    <li class="rv-row rv-row--locked" data-key="terms" data-locked><button class="rv-row__grip" type="button" aria-describedby="rv-lock-note" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-lock" /></svg></span><span class="qc-sr-only">Locked: </span><span class="rv-row__title" data-name>Terms &amp; conditions</span></button><span class="rv-row__lock" id="rv-lock-note">Locked by template</span></li>
+                    <li class="rv-row" data-key="accept"><button class="rv-row__grip" type="button" aria-describedby="rv-outline-help" data-grip><span class="rv-row__gi" aria-hidden="true"><svg class="rv-ico" width="16" height="16"><use href="#rv-i-grip" /></svg></span><span class="qc-sr-only">Move </span><span class="rv-row__title" data-name>Acceptance</span></button><span class="rv-row__moves"><button class="rv-row__mv" type="button" data-move="-1" aria-label="Move up"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-up" /></svg></button><button class="rv-row__mv" type="button" data-move="1" aria-label="Move down"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-down" /></svg></button></span><button class="rv-switch" type="button" role="switch" aria-checked="true" data-toggle><span class="qc-sr-only">Include section</span></button></li>
+                  </ol>
+                </div>
+
+                <div class="rv-page" aria-hidden="true">
+                  <div class="rv-page__cover">
+                    <span class="rv-page__brand">Temptus</span>
+                    <span class="rv-page__title" data-title>Digital Transformation Proposal</span>
+                    <span class="rv-page__for">Prepared for Northwind</span>
+                  </div>
+                  <div class="rv-page__blocks" data-preview>
+                    <div class="rv-pb" data-key="summary"><b data-name>Executive summary</b><span class="rv-pb__lines"><i></i><i class="rv-hl"></i><i class="rv-short"></i></span></div>
+                    <div class="rv-pb" data-key="challenge"><b data-name>Current state</b><span class="rv-pb__bul"><i></i><i></i><i></i></span></div>
+                    <div class="rv-pb rv-pb--wide" data-key="solution"><b data-name>Solution design</b><svg class="rv-pb__dia" viewBox="0 0 120 34"><rect x="2" y="11" width="26" height="12" rx="4" /><rect x="47" y="2" width="26" height="12" rx="4" /><rect x="47" y="20" width="26" height="12" rx="4" /><rect x="92" y="11" width="26" height="12" rx="4" /><path d="M28 17h8v-9h11M36 17v9h11M73 8h8v9h11M81 17v9h-8" /></svg></div>
+                    <div class="rv-pb rv-pb--wide" data-key="timeline"><b data-name>Implementation plan</b><span class="rv-pb__gantt"><i style="--s: 0; --w: 0.34"></i><i style="--s: 0.26; --w: 0.42"></i><i style="--s: 0.6; --w: 0.38"></i></span></div>
+                    <div class="rv-pb" data-key="method"><b data-name>Delivery approach</b><span class="rv-pb__chips"><i>Discover</i><i>Design</i><i>Deliver</i></span></div>
+                    <div class="rv-pb rv-pb--wide" data-key="investment"><b data-name>Investment</b><span class="rv-pb__inv"><span>Total</span><strong data-total>$24,350</strong></span></div>
+                    <div class="rv-pb" data-key="terms"><b data-name>Terms &amp; conditions</b><span class="rv-pb__lines rv-pb__lines--lock"><i></i><i class="rv-short"></i><svg class="rv-ico" width="12" height="12"><use href="#rv-i-lock" /></svg></span></div>
+                    <div class="rv-pb" data-key="accept"><b data-name>Acceptance</b><span class="rv-pb__sig"><svg viewBox="0 0 80 18"><path d="M2 13c6-1 7-10 11-10s-1 12 3 12 5-8 9-8 1 6 5 6 6-4 9-4 3 3 6 3 8-2 10-2" /></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: approve it -->
+            <div class="rv-panel rv-approve" role="tabpanel" id="rv-panel-approve" aria-labelledby="rv-tab-approve" data-panel="approve" hidden>
+              <ol class="rv-chain" data-chain aria-label="Approval chain">
+                <li class="rv-ap" data-ap="0"><span class="rv-av rv-av--emily" aria-hidden="true">E</span><span class="rv-ap__who"><b>Emily</b><span>Manager</span></span><span class="rv-ap__st" data-ap-st>Waiting</span></li>
+                <li class="rv-ap" data-ap="1"><span class="rv-av rv-av--liam" aria-hidden="true">L</span><span class="rv-ap__who"><b>Liam</b><span>Legal</span></span><span class="rv-ap__st" data-ap-st>Waiting</span></li>
+                <li class="rv-ap" data-ap="2"><span class="rv-av rv-av--sophia" aria-hidden="true">S</span><span class="rv-ap__who"><b>Sophia</b><span>Finance</span></span><span class="rv-ap__st" data-ap-st>Waiting</span></li>
+                <li class="rv-ap" data-ap="3"><span class="rv-av rv-av--ava" aria-hidden="true">A</span><span class="rv-ap__who"><b>Ava</b><span>Final</span></span><span class="rv-ap__st" data-ap-st>Waiting</span></li>
+                <li class="rv-chain__track" aria-hidden="true"><span class="rv-chain__fill" data-chain-fill></span></li>
+              </ol>
+
+              <div class="rv-approve__body">
+                <div class="rv-act" data-act>
+                  <p class="rv-act__msg" data-act-msg>Your draft is ready. Send it through the approval chain before anything reaches the client.</p>
+                  <div class="rv-act__btns" data-act-btns>
+                    <button class="rv-btn rv-btn--primary" type="button" data-do="submit"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-send" /></svg>Submit for review</button>
+                  </div>
+                </div>
+
+                <div class="rv-clauses" aria-label="Key lines in this version">
+                  <p class="rv-mini-head">Key lines <span data-clause-ver>v1.0</span></p>
+                  <ul class="rv-clauses__list" data-clauses>
+                    <li class="rv-cl" data-cl="summary"><span class="rv-cl__k">Summary</span><span class="rv-cl__v" data-cl-v>We will move Northwind onto one modern cloud platform.</span></li>
+                    <li class="rv-cl" data-cl="terms"><span class="rv-cl__k">Terms</span><span class="rv-cl__v" data-cl-v>Liability is capped at twice the annual fees.</span></li>
+                    <li class="rv-cl" data-cl="investment"><span class="rv-cl__k">Payment</span><span class="rv-cl__v" data-cl-v>100% of fees due on signing.</span></li>
+                    <li class="rv-cl" data-cl="timeline"><span class="rv-cl__k">Timeline</span><span class="rv-cl__v" data-cl-v>Go-live in week 12.</span></li>
+                  </ul>
+                </div>
+
+                <div class="rv-hist">
+                  <p class="rv-mini-head">Version history</p>
+                  <ol class="rv-hist__list" data-history reversed>
+                    <li class="rv-h is-current" data-h="0"><span class="rv-h__v">v1.0</span><span class="rv-h__note">First draft · You</span><span class="rv-h__tag">Current</span></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: see it as the client -->
+            <div class="rv-panel rv-client" role="tabpanel" id="rv-panel-client" aria-labelledby="rv-tab-client" data-panel="client" hidden>
+              <div class="rv-client__top">
+                <div class="rv-dev" role="radiogroup" aria-label="Client device">
+                  <button class="rv-dev__opt" role="radio" aria-checked="true" data-dev="desktop"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-desktop" /></svg>Desktop</button>
+                  <button class="rv-dev__opt" role="radio" aria-checked="false" tabindex="-1" data-dev="mobile"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-phone" /></svg>Mobile</button>
+                </div>
+                <p class="rv-client__state" data-client-state>Preview · not sent yet</p>
+              </div>
+
+              <div class="rv-client__stage">
+                <div class="rv-frame" data-frame data-dev="desktop">
+                  <div class="rv-frame__chrome" aria-hidden="true"><i></i><i></i><i></i><span>Northwind · <span data-title>Digital Transformation Proposal</span></span></div>
+                  <div class="rv-frame__body">
+                    <nav class="rv-cnav" aria-label="Proposal sections" data-cnav></nav>
+                    <div class="rv-cdoc" data-cdoc tabindex="0" aria-label="Proposal content, scrollable">
+                      <header class="rv-cdoc__cover">
+                        <span>Temptus</span>
+                        <strong data-title>Digital Transformation Proposal</strong>
+                        <small>Prepared for Northwind</small>
+                      </header>
+                      <div class="rv-cs" data-key="summary"><p class="rv-cs__h" data-name>Executive summary</p><p data-cl-v="summary">We will move Northwind onto one modern cloud platform.</p></div>
+                      <div class="rv-cs" data-key="challenge"><p class="rv-cs__h" data-name>Current state</p><ul><li>Three disconnected systems</li><li>Manual hand-offs between teams</li><li>Slow, error-prone reporting</li></ul></div>
+                      <div class="rv-cs" data-key="solution"><p class="rv-cs__h" data-name>Solution design</p><svg class="rv-cs__dia" viewBox="0 0 160 40" aria-hidden="true"><rect x="2" y="13" width="34" height="14" rx="5" /><rect x="63" y="2" width="34" height="14" rx="5" /><rect x="63" y="24" width="34" height="14" rx="5" /><rect x="124" y="13" width="34" height="14" rx="5" /><path d="M36 20h13V9h14M49 20v11h14M97 9h13v11h14M110 20v11H97" /></svg></div>
+                      <div class="rv-cs" data-key="timeline"><p class="rv-cs__h" data-name>Implementation plan</p><div class="rv-cs__gantt" aria-hidden="true"><i style="--s: 0; --w: 0.3"></i><i style="--s: 0.22; --w: 0.44"></i><i style="--s: 0.58; --w: 0.42"></i></div><p data-cl-v="timeline">Go-live in week 12.</p></div>
+                      <div class="rv-cs" data-key="method"><p class="rv-cs__h" data-name>Delivery approach</p><p>Discover, design, deliver: one accountable team from kickoff to go-live.</p></div>
+                      <div class="rv-cs" data-key="investment"><p class="rv-cs__h" data-name>Investment</p><div class="rv-cs__inv"><span>Total investment</span><strong data-total>$24,350</strong></div><p data-cl-v="investment">100% of fees due on signing.</p></div>
+                      <div class="rv-cs" data-key="terms"><p class="rv-cs__h" data-name>Terms &amp; conditions</p><p data-cl-v="terms">Liability is capped at twice the annual fees.</p></div>
+                      <div class="rv-cs" data-key="accept"><p class="rv-cs__h" data-name>Acceptance</p><p>Sign below to accept this proposal.</p></div>
+                    </div>
+                  </div>
+                  <div class="rv-frame__foot">
+                    <span class="rv-frame__total"><small>Investment</small><strong data-total>$24,350</strong></span>
+                    <button class="rv-btn rv-btn--primary" type="button" data-do="sign"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-pen" /></svg>Accept &amp; sign</button>
+                  </div>
+                  <div class="rv-signed" data-signed hidden>
+                    <svg class="rv-signed__sig" viewBox="0 0 220 70" aria-hidden="true"><path pathLength="1" d="M8 48c14-2 18-34 30-34s-4 40 8 40 12-26 22-26 2 18 12 18 14-12 22-12 6 8 14 8c10 0 16-10 26-10s10 8 18 8 26-6 50-8" /></svg>
+                    <p class="rv-signed__name">Daniel Reyes · Northwind</p>
+                    <p class="rv-signed__stamp"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-check" /></svg>Accepted &amp; signed</p>
+                  </div>
+                  <div class="rv-gate" data-gate>
+                    <p><svg class="rv-ico" width="18" height="18" aria-hidden="true"><use href="#rv-i-shield" /></svg>Proposals can only be sent once every approver has signed off.</p>
+                    <button class="rv-btn rv-btn--dark" type="button" data-do="forward"><svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-forward" /></svg>Approve all &amp; send</button>
+                  </div>
+                </div>
+
+                <ul class="rv-pings" data-pings aria-label="Notifications"></ul>
+              </div>
+            </div>
+
+            <p class="qc-sr-only" aria-live="polite" data-live></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Mid-page CTA ───────── -->
+      <section class="rv-run" aria-labelledby="rv-run-title">
+        <div class="qc-container rv-run__inner" data-reveal>
+          <h2 class="rv-run__title" id="rv-run-title">That was the demo. <span class="rv-em">Run your real one.</span></h2>
+          <div class="rv-run__ctas">
+            <a class="qc-btn qc-btn--primary" href="https://app.quote.cloud/register" data-qc-cta="mid">Start free 14-day trial</a>
+            <a class="rv-link rv-link--light" href="https://www.quote.cloud/templates">Browse proposal templates <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Feature 1: the whole story, one editor ───────── -->
+      <section class="rv-feat" aria-labelledby="rv-f1-title">
+        <div class="qc-container rv-feat__grid">
+          <div class="rv-feat__copy" data-reveal>
+            <h2 class="rv-feat__title" id="rv-f1-title">Business proposals that tell the <span class="rv-em">whole story</span></h2>
+            <p class="rv-feat__line">
+              Challenge, solution, methodology, timeline, outcomes and investment, built from 18+ content types in one editor instead of Word, Excel,
+              PowerPoint and a folder of PDFs.
+            </p>
+            <a class="rv-link" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">See all content blocks <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-arrow" /></svg></a>
+          </div>
+
+          <div class="rv-merge" data-reveal="scale" data-loop="merge" aria-hidden="true">
+            <ul class="rv-merge__files">
+              <li class="rv-file rv-file--doc"><b>DOC</b>Proposal draft</li>
+              <li class="rv-file rv-file--xls"><b>XLS</b>Budget model</li>
+              <li class="rv-file rv-file--ppt"><b>PPT</b>Solution deck</li>
+              <li class="rv-file rv-file--pdf"><b>PDF</b>Specifications</li>
+            </ul>
+            <div class="rv-merge__page">
+              <div class="rv-mp__head"><span>Temptus</span><b>Project Proposal</b></div>
+              <div class="rv-mp rv-mp--text"><em>Executive summary</em><i></i><i></i><i class="rv-short"></i></div>
+              <div class="rv-mp rv-mp--sheet">
+                <em>Budget</em>
+                <table>
+                  <tr><td>Discovery</td><td>$4,200</td></tr>
+                  <tr><td>Build</td><td>$15,650</td></tr>
+                  <tr><td>Training</td><td>$4,500</td></tr>
+                  <tr class="rv-mp__sum"><td>Total</td><td>$24,350</td></tr>
+                </table>
+              </div>
+              <div class="rv-mp rv-mp--dia">
+                <em>Solution</em>
+                <svg viewBox="0 0 120 50"><rect x="44" y="2" width="32" height="13" rx="4" /><rect x="6" y="34" width="32" height="13" rx="4" /><rect x="44" y="34" width="32" height="13" rx="4" /><rect x="82" y="34" width="32" height="13" rx="4" /><path pathLength="1" d="M60 15v9M22 34v-10h76v10M60 24v10" /></svg>
+              </div>
+              <div class="rv-mp rv-mp--gantt">
+                <em>Timeline</em>
+                <span><i style="--s: 0; --w: 0.3"></i><i style="--s: 0.2; --w: 0.45"></i><i style="--s: 0.55; --w: 0.4"></i><i style="--s: 0.8; --w: 0.2"></i></span>
+              </div>
+              <div class="rv-mp rv-mp--pdf"><em>Specs.pdf</em><span class="rv-mp__pdf"><i></i><i></i><i></i></span></div>
+              <div class="rv-mp rv-mp--video"><em>Walkthrough</em><span class="rv-mp__play"><svg class="rv-ico" width="14" height="14"><use href="#rv-i-play" /></svg></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Feature 2: built by the team, kept on-brand ───────── -->
+      <section class="rv-feat rv-feat--flip" aria-labelledby="rv-f2-title">
+        <div class="qc-container rv-feat__grid">
+          <div class="rv-feat__copy" data-reveal>
+            <h2 class="rv-feat__title" id="rv-f2-title">One proposal, <span class="rv-em">the whole team</span>, every template on-brand</h2>
+            <p class="rv-feat__line">
+              Sales, delivery and technical contributors write in the same document at once. Proposal templates and content locking keep structure,
+              wording and branding consistent on every deal.
+            </p>
+            <a class="rv-link" href="https://www.quote.cloud/collaboration">Explore collaboration <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-arrow" /></svg></a>
+          </div>
+
+          <div class="rv-team" data-reveal="scale" data-loop="team" aria-hidden="true">
+            <div class="rv-team__brand"><span class="rv-team__logo">Temptus</span><span class="rv-team__lock"><svg class="rv-ico" width="14" height="14"><use href="#rv-i-lock" /></svg>Template · locked</span></div>
+            <div class="rv-tsec rv-tsec--sophia">
+              <em>Executive summary</em>
+              <span class="rv-tsec__lines"><i></i><i class="rv-tsec__type"></i></span>
+              <span class="rv-cur"><svg viewBox="0 0 20 22"><path d="M2.5 2.2v15.6l4.3-4.1 3 6.6 2.9-1.3-3-6.5 6-.3L2.5 2.2Z" /></svg><b>Sophia · Sales</b></span>
+            </div>
+            <div class="rv-tsec rv-tsec--liam">
+              <em>Solution design</em>
+              <span class="rv-tsec__nodes"><i></i><i></i><i></i></span>
+              <span class="rv-cur"><svg viewBox="0 0 20 22"><path d="M2.5 2.2v15.6l4.3-4.1 3 6.6 2.9-1.3-3-6.5 6-.3L2.5 2.2Z" /></svg><b>Liam · Technical</b></span>
+            </div>
+            <div class="rv-tsec rv-tsec--emily">
+              <em>Implementation plan</em>
+              <span class="rv-tsec__gantt"><i></i><i></i><i></i></span>
+              <span class="rv-cur"><svg viewBox="0 0 20 22"><path d="M2.5 2.2v15.6l4.3-4.1 3 6.6 2.9-1.3-3-6.5 6-.3L2.5 2.2Z" /></svg><b>Emily · Delivery</b></span>
+            </div>
+            <div class="rv-tnote">
+              <span class="rv-av rv-av--liam">L</span>
+              <p><b>Liam</b> Added the integration layer. @Emily can phase two start in week 6?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Feature 3: data + integrations ───────── -->
+      <section class="rv-feat" aria-labelledby="rv-f3-title">
+        <div class="qc-container rv-feat__grid">
+          <div class="rv-feat__copy" data-reveal>
+            <h2 class="rv-feat__title" id="rv-f3-title">Data-driven proposals, <span class="rv-em">connected to your CRM</span></h2>
+            <p class="rv-feat__line">
+              Client, opportunity and project data fills the proposal automatically, so nothing is retyped and every figure matches your systems.
+            </p>
+            <a class="rv-link" href="https://www.quote.cloud/all-integrations">See all integrations <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-arrow" /></svg></a>
+          </div>
+
+          <div class="rv-data" data-reveal="scale" data-loop="data">
+            <div class="rv-data__flow" aria-hidden="true">
+              <div class="rv-crm">
+                <p class="rv-crm__head"><span class="rv-crm__dot"></span>Opportunity</p>
+                <dl>
+                  <div><dt>Account</dt><dd>Northwind</dd></div>
+                  <div><dt>Contact</dt><dd>Daniel Reyes</dd></div>
+                  <div><dt>Amount</dt><dd>$24,350</dd></div>
+                  <div><dt>Close date</dt><dd>30 Nov</dd></div>
+                </dl>
+              </div>
+              <svg class="rv-data__wire" viewBox="0 0 100 120" preserveAspectRatio="none"><path d="M0 30C50 30 50 20 100 20M0 54C50 54 50 54 100 54M0 78C50 78 50 88 100 88" /><path class="rv-data__pulse" pathLength="1" d="M0 30C50 30 50 20 100 20M0 54C50 54 50 54 100 54M0 78C50 78 50 88 100 88" /></svg>
+              <div class="rv-dprop">
+                <p class="rv-dprop__brand">Temptus</p>
+                <p class="rv-dprop__t">Proposal for <span class="rv-fld" style="--d: 0"><s>{client}</s><b>Northwind</b></span></p>
+                <p class="rv-dprop__r">Attention <span class="rv-fld" style="--d: 1"><s>{contact}</s><b>Daniel Reyes</b></span></p>
+                <p class="rv-dprop__r">Investment <span class="rv-fld rv-fld--num" style="--d: 2"><s>{amount}</s><b>$24,350</b></span></p>
+              </div>
+            </div>
+            <ul class="rv-logos" aria-label="Some of the tools QuoteCloud connects with">
+              <li><img src="/assets/integrations/salesforce-cpq.png" width="120" height="60" alt="Salesforce" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/hub-spot.png" width="120" height="60" alt="HubSpot" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/microsoft-dynamics.jpg" width="120" height="60" alt="Microsoft Dynamics" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/mondaydotcom-logo.jpg" width="120" height="60" alt="monday.com" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/xero.png" width="120" height="60" alt="Xero" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/quickbooks.png" width="120" height="60" alt="QuickBooks" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/stripe.png" width="120" height="60" alt="Stripe" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/integrations/slack.jpg" width="120" height="60" alt="Slack" loading="lazy" decoding="async" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Feature 4: notified, accepted, e-signed ───────── -->
+      <section class="rv-feat rv-feat--flip" aria-labelledby="rv-f4-title">
+        <div class="qc-container rv-feat__grid">
+          <div class="rv-feat__copy" data-reveal>
+            <h2 class="rv-feat__title" id="rv-f4-title">Know when they read it. <span class="rv-em">Close with eSignatures.</span></h2>
+            <p class="rv-feat__line">
+              Real-time alerts when a proposal is opened, viewed or commented on, then legally binding eSignatures with a complete audit trail.
+            </p>
+            <a class="rv-link" href="https://www.quote.cloud/electronic-signature-software-solution">Explore eSignatures <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-arrow" /></svg></a>
+          </div>
+
+          <div class="rv-close" data-reveal="scale" data-loop="close">
+            <ol class="rv-trail" aria-hidden="true">
+              <li><span class="rv-trail__ic"><svg class="rv-ico" width="15" height="15"><use href="#rv-i-send" /></svg></span><b>Sent to Daniel Reyes</b><time>9:02</time></li>
+              <li><span class="rv-trail__ic"><svg class="rv-ico" width="15" height="15"><use href="#rv-i-eye" /></svg></span><b>Opened the proposal</b><time>9:41</time></li>
+              <li><span class="rv-trail__ic"><svg class="rv-ico" width="15" height="15"><use href="#rv-i-comment" /></svg></span><b>Commented on Timeline</b><time>9:47</time></li>
+              <li><span class="rv-trail__ic rv-trail__ic--ok"><svg class="rv-ico" width="15" height="15"><use href="#rv-i-pen" /></svg></span><b>Accepted &amp; signed</b><time>10:05</time></li>
+            </ol>
+            <div class="rv-sigcard" aria-hidden="true">
+              <svg viewBox="0 0 220 70"><path pathLength="1" d="M8 48c14-2 18-34 30-34s-4 40 8 40 12-26 22-26 2 18 12 18 14-12 22-12 6 8 14 8c10 0 16-10 26-10s10 8 18 8 26-6 50-8" /></svg>
+              <p>Daniel Reyes · Northwind</p>
+            </div>
+            <ul class="rv-trust" aria-label="Security and compliance">
+              <li><img src="/assets/compliance/eidas.svg" width="64" height="40" alt="eIDAS compliant" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/compliance/encryption-256.png" width="64" height="40" alt="256-bit encryption" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/compliance/aws.svg" width="64" height="40" alt="Hosted on AWS" loading="lazy" decoding="async" /></li>
+              <li><img src="/assets/compliance/gdpr.png" width="64" height="40" alt="GDPR" loading="lazy" decoding="async" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Real sample proposals ───────── -->
+      <section class="rv-samples" aria-labelledby="rv-samples-title">
+        <div class="qc-container">
+          <div class="rv-samples__head" data-reveal>
+            <h2 class="rv-samples__title" id="rv-samples-title">Proposal templates for <span class="rv-em">complex services businesses</span></h2>
+            <a class="rv-link" href="https://www.quote.cloud/templates">Browse all templates <svg class="rv-ico" width="16" height="16" aria-hidden="true"><use href="#rv-i-arrow" /></svg></a>
+          </div>
+          <ul class="rv-samples__list" data-reveal-stagger="90">
+            <li class="rv-sample" data-reveal>
+              <a class="rv-sample__link" href="https://www.quote.cloud/templates/technology">
+                <span class="rv-sample__frame"><img src="./img/hosted-services.jpg" width="640" height="906" alt="Hosted Services Proposal: connected journey, scope of services, plan comparison, investment summary and acceptance pages" loading="lazy" decoding="async" /></span>
+                <span class="rv-sample__meta"><b>Hosted services</b><span>Technology &amp; telco</span></span>
+              </a>
+            </li>
+            <li class="rv-sample" data-reveal>
+              <a class="rv-sample__link" href="https://www.quote.cloud/templates/consulting">
+                <span class="rv-sample__frame"><img src="./img/architectural-design.jpg" width="640" height="904" alt="Architectural Design Proposal: project journey, scope, fee packages and acceptance pages in black and gold" loading="lazy" decoding="async" /></span>
+                <span class="rv-sample__meta"><b>Architectural design</b><span>Professional services</span></span>
+              </a>
+            </li>
+            <li class="rv-sample" data-reveal>
+              <a class="rv-sample__link" href="https://www.quote.cloud/templates/construction">
+                <span class="rv-sample__frame"><img src="./img/new-home-build.jpg" width="640" height="904" alt="Your New Home Proposal: floor plans, inclusions packages, investment summary and acceptance pages" loading="lazy" decoding="async" /></span>
+                <span class="rv-sample__meta"><b>New home build</b><span>Construction &amp; infrastructure</span></span>
+              </a>
+            </li>
+            <li class="rv-sample" data-reveal>
+              <a class="rv-sample__link" href="https://www.quote.cloud/templates">
+                <span class="rv-sample__frame"><img src="./img/medical-devices.jpg" width="640" height="904" alt="Medical Device Proposal: device packages, service scope, investment summary and acceptance pages in purple" loading="lazy" decoding="async" /></span>
+                <span class="rv-sample__meta"><b>Medical devices</b><span>High-value equipment</span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="rv-proof" aria-labelledby="rv-proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="rv-proof-title">Why teams trust QuoteCloud</h2>
+          <ul class="rv-proof__list" data-reveal-stagger="80">
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></b><span>Rated on Capterra</span></li>
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><small>/5</small></b><span>Rated on Software Advice</span></li>
+            <li data-reveal><b><span data-count-to="2013" data-count-format="plain">2013</span></b><span>Year we started building business documents</span></li>
+            <li data-reveal><b>14<small> days</small></b><span>Free trial, no credit card</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="rv-faq">
+        <!-- @include faq-proposal -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="rv-final" aria-labelledby="rv-final-title" data-final>
+        <div class="qc-container rv-final__inner">
+          <div class="rv-final__stages" aria-hidden="true">
+            <span>Draft</span><span>Review</span><span>Approval</span><span>Sent</span><span>Accepted</span>
+          </div>
+          <h2 class="rv-final__title" id="rv-final-title" data-reveal>Your next proposal: <span class="rv-em">reviewed, approved and signed.</span></h2>
+          <p class="rv-final__line" data-reveal>Set up your first proposal template today. Free for 14 days, no credit card required.</p>
+          <div class="rv-final__ctas" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="final">
+              Start free 14-day trial
+              <svg class="qc-btn__arrow rv-ico" width="18" height="18" aria-hidden="true"><use href="#rv-i-arrow" /></svg>
+            </a>
+            <a class="qc-btn qc-btn--ghost rv-final__demo qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="final-demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="rv-sticky" data-sticky aria-hidden="true">
+      <a class="qc-btn qc-btn--primary qc-btn--block" href="https://app.quote.cloud/register" data-qc-cta="sticky-mobile" tabindex="-1">Start free 14-day trial</a>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

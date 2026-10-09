@@ -16,7 +16,8 @@ bun run build   # static output in dist/
 
 - `index.html`: hub linking every variant
 - `v1/` to `v10/`: product overview
-- `travel/`, `itinerary/`, `telco/`, `esign/`, `quoting/`, `docgen/`, `blocks/`, `canvas/`, `collab/`: one folder per page, each holding `vN/` variants
+- `travel/`, `itinerary/`, `telco/`, `esign/`, `quoting/`, `docgen/`, `blocks/`, `canvas/`, `collab/`, `proposal/`, `cpq/`, `ai-coworker/`, `document-creation/`, `image-editor/`, `demo/`: one folder per page, each holding `vN/` variants
+- The `v2/` pages (scroll-driven, pinned story) are the preferred style; `image-editor/v2/` and `demo/v1/` were built in that style only
 - `src/partials/`: shared header, footer, SEO head and FAQ partials, pulled in with `<!-- @include name -->`
 - `src/shared/`: shared base styles and scripts
 - `public/assets/`: images and logos

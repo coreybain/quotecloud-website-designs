@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-demo -->
+  </head>
+  <body class="d1">
+    <!-- @include header -->
+
+    <svg class="d1-sprite" aria-hidden="true" focusable="false">
+      <symbol id="d1-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="d1-i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+      <symbol id="d1-i-out" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8" /><path d="M17 14v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h4" /></symbol>
+      <symbol id="d1-i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="d1-i-doc" viewBox="0 0 24 24"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z" /><path d="M14 2.5V8h5.5" /></symbol>
+      <symbol id="d1-i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" /><circle cx="12" cy="12" r="3" /></symbol>
+      <symbol id="d1-i-pen" viewBox="0 0 24 24"><path d="M3 21c3-1 4.5-4 7-4s2 3 5 3 3.5-2 6-2" /><path d="m14.5 4.5 3 3L9 16l-4 1 1-4z" /></symbol>
+      <symbol id="d1-i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5" /><path d="M2.5 10h19M6.5 15h4" /></symbol>
+      <symbol id="d1-i-plane" viewBox="0 0 24 24"><path d="M21 15.5 13.5 11V5a1.5 1.5 0 0 0-3 0v6L3 15.5V17l7.5-2.2V19L8.5 20.5V22l3.5-1 3.5 1v-1.5L13.5 19v-4.2L21 17z" /></symbol>
+      <symbol id="d1-i-swap" viewBox="0 0 24 24"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5" /></symbol>
+      <symbol id="d1-i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z" /><path d="M5 19c3-4 6-6.5 9.5-8.5" /></symbol>
+      <symbol id="d1-i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4" /></symbol>
+      <symbol id="d1-i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8" /><path d="M4.5 20c1.2-3.6 4-5.5 7.5-5.5s6.3 1.9 7.5 5.5" /></symbol>
+      <symbol id="d1-i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.5 2.5M15.2 15.2l2.5 2.5M6.3 17.7l2.5-2.5M15.2 8.8l2.5-2.5" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: the promise + the real booking calendar ───────── -->
+      <section class="d1-hero" aria-labelledby="d1-hero-title">
+        <div class="qc-container d1-hero__grid">
+          <div class="d1-hero__intro">
+            <nav class="d1-crumbs" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="https://www.quote.cloud/">Home</a></li>
+                <li aria-current="page">Book a demo</li>
+              </ol>
+            </nav>
+            <h1 class="d1-hero__title" id="d1-hero-title">
+              Book a QuoteCloud demo. <span class="d1-hero__l2">See quotes turn into <em>closed deals.</em></span>
+            </h1>
+            <p class="d1-hero__lede">A free, live, one-on-one walkthrough with a QuoteCloud product expert, tailored to how your team quotes, proposes and closes.</p>
+          </div>
+
+          <div class="d1-book" id="book" role="region" aria-labelledby="d1-book-title">
+            <div class="d1-book__frame" data-cal-frame>
+              <div class="d1-book__bar">
+                <span class="d1-book__mark" aria-hidden="true"><img src="/assets/logos/qc-symbol-white.png" alt="" width="122" height="126" /></span>
+                <span class="d1-book__who">
+                  <b id="d1-book-title">Pick a time for your demo</b>
+                  <small>Free, live and one-on-one</small>
+                </span>
+              </div>
+              <div class="d1-book__body">
+                <div class="d1-book__cal" id="d1-cal" data-cal-host></div>
+                <div class="d1-book__skel" aria-hidden="true">
+                  <div class="d1-skel__month"><i></i><span><i></i><i></i></span></div>
+                  <div class="d1-skel__days"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="d1-skel__grid">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="d1-skel__slots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="d1-book__fail" role="status">
+                  <p>The calendar didn’t load here. You can still book in a couple of clicks.</p>
+                  <a class="qc-btn qc-btn--dark" href="https://cal.com/quotecloud/quotecloud-demo" target="_blank" rel="noopener" data-qc-cta="demo-fallback">Open the booking page <svg class="d1-ic" width="16" height="16" aria-hidden="true"><use href="#d1-i-out" /></svg></a>
+                </div>
+              </div>
+              <p class="d1-book__alt">
+                Calendar not loading?
+                <a href="https://cal.com/quotecloud/quotecloud-demo" target="_blank" rel="noopener" data-qc-cta="demo-cal-link">Book on cal.com<svg class="d1-ic" width="14" height="14" aria-hidden="true"><use href="#d1-i-out" /></svg></a>
+              </p>
+            </div>
+          </div>
+
+          <div class="d1-hero__more">
+            <ul class="d1-expect">
+              <li><svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-check" /></svg>Your use case, your industry, your pricing</li>
+              <li><svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-check" /></svg>Templates, CPQ, eSignatures and payments, live</li>
+              <li><svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-check" /></svg>Answers on setup, integrations and add-ons</li>
+            </ul>
+            <div class="d1-hero__trial">
+              <p>Rather explore on your own?</p>
+              <a class="qc-btn qc-btn--ghost" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow d1-ic" width="16" height="16" aria-hidden="true"><use href="#d1-i-arrow" /></svg></a>
+              <small>No credit card required</small>
+            </div>
+            <p class="d1-rated">
+              <a href="https://www.capterra.com/reviews/161530/QuoteCloud" target="_blank" rel="noopener"><b>4.2</b> on Capterra</a>
+              <span aria-hidden="true">·</span>
+              <a href="https://www.softwareadvice.com/cpq/quotecloud-profile/reviews/" target="_blank" rel="noopener"><b>4.2</b> on Software Advice</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── The pinned story: one proposal, through the demo agenda ───────── -->
+      <section class="d1-story" id="d1-story" aria-labelledby="d1-story-title" data-story>
+        <div class="d1-story__track">
+          <div class="d1-story__pin">
+            <div class="d1-rail">
+              <h2 class="d1-rail__title" id="d1-story-title">What you’ll see <em>in your demo</em></h2>
+              <div class="d1-rail__body">
+                <span class="d1-rail__line" aria-hidden="true"><i></i></span>
+                <ol class="d1-steps">
+                  <li class="d1-step" data-step="1">
+                    <div class="d1-step__txt">
+                      <span class="d1-step__n" aria-hidden="true">01</span>
+                      <h3>Your template, your brand</h3>
+                      <p>Start from a ready-made template and content library, so every quote is on-brand and approved.</p>
+                    </div>
+                  </li>
+                  <li class="d1-step" data-step="2">
+                    <div class="d1-step__txt">
+                      <span class="d1-step__n" aria-hidden="true">02</span>
+                      <h3>Pricing, configured</h3>
+                      <p>Price tables with options, quantities, discounts, tax and multi-currency. Totals add up for you.</p>
+                    </div>
+                  </li>
+                  <li class="d1-step" data-step="3">
+                    <div class="d1-step__txt">
+                      <span class="d1-step__n" aria-hidden="true">03</span>
+                      <h3>An interactive proposal</h3>
+                      <p>Customers pick optional items and comment, and the total updates. No static PDF.</p>
+                    </div>
+                  </li>
+                  <li class="d1-step" data-step="4">
+                    <div class="d1-step__txt">
+                      <span class="d1-step__n" aria-hidden="true">04</span>
+                      <h3>Signed, with a deposit paid</h3>
+                      <p>Legally binding eSignatures and online deposits through Stripe or PayPal, on any device.</p>
+                    </div>
+                  </li>
+                  <li class="d1-step" data-step="5">
+                    <div class="d1-step__txt">
+                      <span class="d1-step__n" aria-hidden="true">05</span>
+                      <h3>Know the moment it moves</h3>
+                      <p>See when your proposal is opened, signed and paid, without chasing anyone.</p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="d1-stage" role="img" aria-label="A conference proposal is built from a branded template, priced with a configurable price table, opened by the customer who adds an optional item, signed with a deposit paid online, and marked as won with notifications for opened, signed and paid.">
+              <div class="d1-scene is-1 is-2 is-3 is-4 is-5" data-step="5" data-scene aria-hidden="true">
+                <div class="d1-doc">
+                  <div class="d1-doc__bar">
+                    <span class="d1-doc__file"><svg class="d1-ic" width="16" height="16"><use href="#d1-i-doc" /></svg><b>Conference-Proposal</b></span>
+                    <span class="d1-doc__status">
+                      <span data-s="0">Blank</span><span data-s="1">Draft</span><span data-s="2">Priced</span><span data-s="3">Viewed</span><span data-s="4">Signed</span><span data-s="5"><svg class="d1-ic" width="12" height="12"><use href="#d1-i-check" /></svg>Won</span>
+                    </span>
+                  </div>
+
+                  <div class="d1-page">
+                    <div class="d1-page__band">
+                      <span class="d1-page__logo"><i></i>Atlas Events</span>
+                      <span class="d1-page__ref">P-2027-031</span>
+                    </div>
+                    <p class="d1-page__title">Annual Conference 2027</p>
+                    <p class="d1-page__sub">Proposal for Meridian Group</p>
+                    <div class="d1-page__lines"><i style="--w: 92%"></i><i style="--w: 84%"></i><i style="--w: 58%"></i></div>
+
+                    <div class="d1-price">
+                      <span class="d1-price__ph">+ Price table</span>
+                      <div class="d1-price__table">
+                        <div class="d1-price__row d1-price__row--head"><span>Item</span><span>Qty</span><span>Price</span><span>Total</span></div>
+                        <div class="d1-price__row" style="--i: 0"><span>Venue hire, 2 days</span><span>1</span><span>12,400</span><span>12,400</span></div>
+                        <div class="d1-price__row" style="--i: 1"><span>Catering, per guest</span><span class="d1-price__qty">180</span><span>68</span><span>12,240</span></div>
+                        <div class="d1-price__row" style="--i: 2"><span>AV &amp; stage production</span><span>1</span><span>6,850</span><span>6,850</span></div>
+                        <div class="d1-price__row d1-price__row--opt" style="--i: 3"><span><i class="d1-toggle"><i></i></i>Photography &amp; video</span><span>1</span><span>2,400</span><span class="d1-swap"><s>Optional</s><b>2,400</b></span></div>
+                        <div class="d1-price__sum" style="--i: 4">
+                          <span>Tax (10%)</span><span class="d1-swap"><s>3,149.00</s><b>3,389.00</b></span>
+                          <span>Total USD</span><span class="d1-swap d1-price__total"><s>$34,639.00</s><b>$37,279.00</b></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d1-accept">
+                      <div class="d1-accept__sig">
+                        <svg class="d1-sig" viewBox="0 0 200 60" aria-hidden="true"><path pathLength="1" d="M8 44c10-6 16-24 22-30 5-5 6 6 2 16-3 8-7 15-4 14 7-2 12-22 18-21 4 1-3 18 1 18 5 0 9-12 14-12 4 0 1 9 5 9 6 0 10-10 15-9 4 1 2 7 6 7 8 0 16-9 24-10 10-1 18 3 30 1 10-2 18-6 26-9" /></svg>
+                        <span>Dana Reyes, Meridian Group</span>
+                      </div>
+                      <div class="d1-accept__pay">
+                        <span>Deposit 30%</span>
+                        <b>$11,183.70</b>
+                        <i class="d1-accept__chip"><svg class="d1-ic" width="12" height="12"><use href="#d1-i-check" /></svg>Paid</i>
+                      </div>
+                    </div>
+                    <span class="d1-won"><svg class="d1-ic" width="16" height="16"><use href="#d1-i-check" /></svg>Closed deal</span>
+                  </div>
+                </div>
+
+                <!-- step 1: template & brand panel -->
+                <div class="d1-card d1-card--tpl" data-for="1">
+                  <p class="d1-card__h">Templates</p>
+                  <div class="d1-tpl">
+                    <span class="d1-tpl__item"><i></i><i></i><i></i></span>
+                    <span class="d1-tpl__item is-picked"><i></i><i></i><i></i></span>
+                    <span class="d1-tpl__item"><i></i><i></i><i></i></span>
+                  </div>
+                  <p class="d1-card__h">Brand</p>
+                  <div class="d1-swatches"><i style="--c: #1f2a5c"></i><i style="--c: #ff4d47"></i><i style="--c: #5b3df5"></i><i style="--c: #14a37a"></i></div>
+                  <p class="d1-card__h">Content library</p>
+                  <div class="d1-lib"><span>About Atlas Events</span><span>Terms &amp; conditions</span></div>
+                </div>
+
+                <!-- step 2: CPQ configurator -->
+                <div class="d1-card d1-card--cpq" data-for="2">
+                  <p class="d1-card__h">Catering, per guest</p>
+                  <div class="d1-field"><span>Guests</span><span class="d1-stepper"><i>−</i><b>180</b><i>+</i></span></div>
+                  <div class="d1-field"><span>Unit price</span><b>$68.00</b></div>
+                  <div class="d1-field"><span>Discount</span><b>0%</b></div>
+                  <div class="d1-field"><span>Currency</span><b>USD</b></div>
+                  <div class="d1-field d1-field--total"><span>Line total</span><b>$12,240.00</b></div>
+                </div>
+
+                <!-- step 3: customer view: cursor + comment -->
+                <span class="d1-viewer" data-for="3"><svg class="d1-ic" width="14" height="14"><use href="#d1-i-eye" /></svg>Dana is viewing</span>
+                <span class="d1-cursor" data-for="3"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 3.5 19 11l-6.2 1.6L10 19z" /></svg></span>
+                <div class="d1-card d1-card--note" data-for="3">
+                  <span class="d1-av">DR</span>
+                  <p><b>Dana Reyes</b>Added photography &amp; video. Can we confirm on Friday?</p>
+                </div>
+
+                <!-- step 4: pay card -->
+                <div class="d1-card d1-card--pay" data-for="4">
+                  <p class="d1-card__h">Pay deposit</p>
+                  <p class="d1-pay__amt">$11,183.70</p>
+                  <div class="d1-pay__field"><svg class="d1-ic" width="16" height="16"><use href="#d1-i-card" /></svg>•••• 4242</div>
+                  <span class="d1-pay__btn"><span>Pay now</span><span><svg class="d1-ic" width="14" height="14"><use href="#d1-i-check" /></svg>Paid</span></span>
+                  <p class="d1-pay__via">Stripe · PayPal</p>
+                </div>
+
+                <!-- step 5: notifications -->
+                <div class="d1-notes" data-for="5">
+                  <div class="d1-note" style="--i: 0"><span class="d1-note__ic"><svg class="d1-ic" width="14" height="14"><use href="#d1-i-eye" /></svg></span><p><b>Proposal opened</b>Meridian Group · 3 views</p></div>
+                  <div class="d1-note" style="--i: 1"><span class="d1-note__ic"><svg class="d1-ic" width="14" height="14"><use href="#d1-i-pen" /></svg></span><p><b>Signed by Dana Reyes</b>Conference-Proposal</p></div>
+                  <div class="d1-note" style="--i: 2"><span class="d1-note__ic is-paid"><svg class="d1-ic" width="14" height="14"><use href="#d1-i-check" /></svg></span><p><b>Deposit paid</b>$11,183.70 via Stripe</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qc-container d1-payoff" data-reveal>
+          <p class="d1-payoff__line">From template to paid deposit, <em>in one document.</em></p>
+          <div class="d1-payoff__links">
+            <a href="#book" data-qc-cta="story-book"><svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-up" /></svg>Pick a demo time</a>
+            <a href="https://www.quote.cloud/product-overview">Explore every feature <svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Industry add-ons ───────── -->
+      <section class="d1-ind" aria-labelledby="d1-ind-title">
+        <div class="qc-container">
+          <div class="d1-head" data-reveal>
+            <h2 id="d1-ind-title">Add-ons built for <em>your industry</em></h2>
+            <p>Software extensions made by experts for the way your sector sells. Ask about yours in the demo.</p>
+          </div>
+
+          <div class="d1-ind__grid" data-reveal-stagger="80">
+            <article class="d1-ind__card" data-reveal data-play>
+              <div class="d1-ind__viz d1-v-travel" aria-hidden="true">
+                <div class="d1-v-travel__day">
+                  <img src="/assets/image-editor/photo-palm-beach.jpg" alt="" width="182" height="294" loading="lazy" decoding="async" />
+                  <span><b>Day 3 · Malé</b>Overwater villa, 4 nights</span>
+                </div>
+                <div class="d1-v-travel__leg">
+                  <span>SYD</span>
+                  <span class="d1-v-travel__route"><i></i><svg class="d1-v-travel__plane" viewBox="0 0 24 24" width="16" height="16"><use href="#d1-i-plane" /></svg></span>
+                  <span>MLE</span>
+                </div>
+              </div>
+              <h3><a href="https://www.quote.cloud/sales-quotes-for-travel">Travel Agents</a></h3>
+              <p>Create travel itineraries manually, or directly from your mid-office or GDS software.</p>
+            </article>
+
+            <article class="d1-ind__card" data-reveal data-play>
+              <div class="d1-ind__viz d1-v-telco" aria-hidden="true">
+                <p class="d1-v__label">Business Mobile Plan</p>
+                <div class="d1-v-telco__terms"><span>12 mo</span><span>24 mo</span><span>36 mo</span><i></i></div>
+                <div class="d1-v-telco__rows">
+                  <span><b>Hosted phone system</b><em>$39 /mo</em></span>
+                  <span><b>10 × mobile plans</b><em>$290 /mo</em></span>
+                </div>
+              </div>
+              <h3><a href="https://www.quote.cloud/sales-quotes-for-telco">Telecoms &amp; Hosting</a></h3>
+              <p>Contracts and plans for selling mobile plans, hosted solutions and business phone systems.</p>
+            </article>
+
+            <article class="d1-ind__card" data-reveal data-play>
+              <div class="d1-ind__viz d1-v-fx" aria-hidden="true">
+                <div class="d1-v-fx__row"><span class="d1-v-fx__cur">EUR</span><b>18,400.00</b></div>
+                <span class="d1-v-fx__swap"><svg class="d1-ic" width="16" height="16"><use href="#d1-i-swap" /></svg></span>
+                <div class="d1-v-fx__row is-to"><span class="d1-v-fx__cur">USD</span><b><span class="d1-v-fx__digits">19,872.00</span></b></div>
+                <p class="d1-v__label d1-v-fx__live"><i></i>Live exchange rate</p>
+              </div>
+              <h3>Importers &amp; Exporters</h3>
+              <p>Real-time currency exchange rates, so you can quote easily from your local currency.</p>
+            </article>
+
+            <article class="d1-ind__card" data-reveal data-play>
+              <div class="d1-ind__viz d1-v-events" aria-hidden="true">
+                <div class="d1-v-events__top"><span><b>Gala dinner, 240 guests</b>Deposit due on signing</span><em>30%</em></div>
+                <div class="d1-v-events__bar"><i></i></div>
+                <span class="d1-v-events__btn"><span>Pay deposit</span><span><svg class="d1-ic" width="14" height="14"><use href="#d1-i-check" /></svg>Deposit paid</span></span>
+              </div>
+              <h3><a href="https://www.quote.cloud/sales-quotes-for-events">Events Planning &amp; Hospitality</a></h3>
+              <p>Take customer deposits inside the quote. Payment is simpler, commitment firmer, risk lower.</p>
+            </article>
+
+            <article class="d1-ind__card" data-reveal data-play>
+              <div class="d1-ind__viz d1-v-legal" aria-hidden="true">
+                <div class="d1-v-legal__field"><span>Client name</span><b>Jordan Lee</b></div>
+                <div class="d1-v-legal__field"><span>Matter</span><b>Commercial lease review</b></div>
+                <div class="d1-v-legal__sig">
+                  <svg class="d1-sig" viewBox="0 0 200 60"><path pathLength="1" d="M10 40c8-4 12-20 18-24 5-3 3 10 0 17-2 6 4 2 8-3 4-6 6-4 5 1-1 6 3 6 8 1 5-5 9-7 9-2 0 6 7 2 12-1 9-6 18-3 27-4 14-2 26-5 40-8" /></svg>
+                  <span>Signed electronically</span>
+                </div>
+              </div>
+              <h3>Legal Services</h3>
+              <p>The Form Builder add-on and built-in eSignature simplify document creation and approval.</p>
+            </article>
+
+            <article class="d1-ind__card" data-reveal data-play>
+              <div class="d1-ind__viz d1-v-trans" aria-hidden="true">
+                <div class="d1-v-trans__row"><span>Freight, Sydney → Melbourne</span><b>$4,200.00</b></div>
+                <div class="d1-v-trans__row"><span>Refrigerated trailer</span><b>$680.00</b></div>
+                <div class="d1-v-trans__row is-levy"><span><svg class="d1-ic" width="14" height="14"><use href="#d1-i-leaf" /></svg>Environmental levy</span><b>$126.00</b><em>Added automatically</em></div>
+              </div>
+              <h3>Transport</h3>
+              <p>Environmental levies added automatically, for accurate and transparent costs.</p>
+            </article>
+          </div>
+
+          <p class="d1-ind__all" data-reveal><a href="https://www.quote.cloud/solutions-by-industry">See all industries <svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-arrow" /></svg></a></p>
+        </div>
+      </section>
+
+      <div class="d1-faq-wrap">
+        <!-- @include faq-demo -->
+      </div>
+
+      <!-- ───────── Closing CTA: back to the calendar ───────── -->
+      <section class="d1-close" aria-labelledby="d1-close-title">
+        <div class="qc-container">
+          <div class="d1-close__panel" data-close>
+            <div class="d1-close__copy">
+              <h2 id="d1-close-title">See it with <em>your own quotes</em></h2>
+              <p>Book a free, live demo and we’ll walk through QuoteCloud with your industry, your pricing and your team in mind.</p>
+              <div class="d1-close__ctas">
+                <a class="qc-btn qc-btn--primary qc-btn--lg" href="#book" data-qc-cta="close-book"><svg class="d1-ic" width="18" height="18" aria-hidden="true"><use href="#d1-i-cal" /></svg>Pick a demo time</a>
+                <a class="qc-btn qc-btn--lg d1-btn-light" href="https://app.quote.cloud/register" data-qc-cta="close">Start free 14-day trial</a>
+              </div>
+              <p class="d1-close__note">No credit card required for the trial</p>
+            </div>
+            <div class="d1-close__art" aria-hidden="true">
+              <div class="d1-close__sheet">
+                <div class="d1-close__head"><span><i></i>Atlas Events</span><em><svg class="d1-ic" width="12" height="12"><use href="#d1-i-check" /></svg>Won</em></div>
+                <p class="d1-close__title">Annual Conference 2027</p>
+                <div class="d1-close__lines"><i></i><i></i><i></i></div>
+                <div class="d1-close__sig">
+                  <svg class="d1-sig" viewBox="0 0 200 60"><path pathLength="1" d="M8 44c10-6 16-24 22-30 5-5 6 6 2 16-3 8-7 15-4 14 7-2 12-22 18-21 4 1-3 18 1 18 5 0 9-12 14-12 4 0 1 9 5 9 6 0 10-10 15-9 4 1 2 7 6 7 8 0 16-9 24-10 10-1 18 3 30 1 10-2 18-6 26-9" /></svg>
+                </div>
+                <div class="d1-close__meta"><span>Dana Reyes</span><span><svg class="d1-ic" width="12" height="12"><use href="#d1-i-check" /></svg>Deposit paid</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

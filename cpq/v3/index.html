@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-cpq -->
+  </head>
+  <body class="cq">
+    <!-- @include header -->
+
+    <svg class="cq-sprite" aria-hidden="true" focusable="false">
+      <symbol id="cq-i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="cq-i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+      <symbol id="cq-i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="cq-i-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M5 12h14"/></symbol>
+      <symbol id="cq-i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+      <symbol id="cq-i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.4"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
+      <symbol id="cq-i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></g></symbol>
+      <symbol id="cq-i-ban" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="m6.5 6.5 11 11"/></g></symbol>
+      <symbol id="cq-i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h6" stroke-linecap="round"/></g></symbol>
+      <symbol id="cq-i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+      <symbol id="cq-i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ═════════ HERO + PLAYABLE CONFIGURATOR ═════════ -->
+      <section class="cq-hero" aria-labelledby="cq-title">
+        <div class="cq-hero__grid" aria-hidden="true"></div>
+        <div class="cq-hero__inner">
+          <div class="cq-hero__copy">
+            <h1 class="cq-h1" id="cq-title"><em>CPQ software</em> for complex pricing, configuration and deals</h1>
+            <p class="cq-lede">Configure with confidence. Price with precision. Quote at speed. This deal is live: change it and watch your rules do the work.</p>
+            <div class="cq-ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="cq-note">No credit card required</p>
+            <div class="cq-crm">
+              <p class="cq-crm__label">Syncs with your CRM</p>
+              <ul class="cq-crm__logos">
+                <li><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="64" height="32" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="64" height="32" loading="lazy" decoding="async" /></li>
+                <li><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="64" height="32" loading="lazy" decoding="async" /></li>
+                <li class="cq-crm__more">Pipedrive · Zoho · API</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- The configurator. Fully readable without JS (static default state). -->
+          <div class="cq-app" data-cq-app data-view="config" role="group" aria-labelledby="cq-app-title" aria-describedby="cq-app-desc">
+            <p class="qc-sr-only" id="cq-app-desc">Interactive CPQ demo. Choose a bundle, seats, contract term, region and add-ons. Pricing rules, dependencies and approval limits update the quote as you go.</p>
+
+            <div class="cq-app__bar">
+              <div class="cq-app__deal">
+                <span class="cq-app__mark" aria-hidden="true"><svg width="16" height="16"><use href="#cq-i-doc" /></svg></span>
+                <div>
+                  <p class="cq-app__title" id="cq-app-title">Meridian Freight <span>· Managed IT &amp; connectivity</span></p>
+                  <p class="cq-app__meta">Q-2207 · Atlas Networks · <span class="cq-app__live"><span aria-hidden="true"></span>Live demo</span></p>
+                </div>
+              </div>
+              <ol class="cq-acts" data-cq-acts aria-label="Configure, Price, Quote">
+                <li class="is-on">Configure</li>
+                <li class="is-on">Price</li>
+                <li data-cq-act-quote>Quote</li>
+              </ol>
+              <label class="cq-switch">
+                <input type="checkbox" role="switch" data-cq-internal />
+                <span class="cq-switch__track" aria-hidden="true"><span class="cq-switch__dot"></span></span>
+                <span class="cq-switch__label">Internal view</span>
+              </label>
+            </div>
+
+            <div class="cq-stage" data-cq-stage>
+              <!-- ── Configurator pane ── -->
+              <div class="cq-pane cq-pane--config" data-cq-pane="config">
+                <div class="cq-main">
+                  <div class="cq-controls" data-cq-controls>
+                    <div class="cq-stepnav" data-cq-stepnav aria-label="Configuration steps">
+                      <button type="button" class="is-active" data-step="0" aria-current="step"><b>1</b> Bundle</button>
+                      <button type="button" data-step="1"><b>2</b> Seats</button>
+                      <button type="button" data-step="2"><b>3</b> Term</button>
+                      <button type="button" data-step="3"><b>4</b> Add-ons</button>
+                    </div>
+
+                    <fieldset class="cq-group is-active" data-cq-group="0">
+                      <legend class="cq-label"><span class="cq-label__n" aria-hidden="true">1</span>Starting bundle</legend>
+                      <div class="cq-bundles" data-flash="bundle">
+                        <label class="cq-bundle"><input type="radio" name="cq-bundle" value="starter" /><span class="cq-bundle__body"><strong>Office Starter</strong><small>1 site · 1 router</small></span></label>
+                        <label class="cq-bundle"><input type="radio" name="cq-bundle" value="multi" checked /><span class="cq-bundle__body"><strong>Multi-site</strong><small>3 sites · 3 routers</small></span></label>
+                        <label class="cq-bundle"><input type="radio" name="cq-bundle" value="enterprise" /><span class="cq-bundle__body"><strong>Enterprise</strong><small>6 sites · onboarding incl.</small></span></label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="cq-group" data-cq-group="1">
+                      <legend class="cq-label"><span class="cq-label__n" aria-hidden="true">2</span>Seats</legend>
+                      <div class="cq-seats" data-flash="seats">
+                        <div class="cq-stepper">
+                          <button type="button" data-cq-seats="-5" aria-label="Remove 5 seats"><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-minus" /></svg></button>
+                          <output data-cq-seat-out aria-live="off">40</output>
+                          <button type="button" data-cq-seats="5" aria-label="Add 5 seats"><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-plus" /></svg></button>
+                        </div>
+                        <p class="cq-seats__rate"><strong data-cq-seat-rate>$56.05</strong> per seat / mo<span data-cq-seat-why>Tier 25–49 · 24-mo term −5%</span></p>
+                      </div>
+                      <ol class="cq-ladder" data-cq-ladder style="--tier: 1">
+                        <li><button type="button" data-tier="0" aria-label="Jump to 10 seats, tier 1 to 24"><span>1–24</span><b data-tier-price>$64</b></button></li>
+                        <li><button type="button" data-tier="1" aria-pressed="true" aria-label="Jump to 25 seats, tier 25 to 49"><span>25–49</span><b data-tier-price>$59</b></button></li>
+                        <li><button type="button" data-tier="2" aria-label="Jump to 50 seats, tier 50 to 99"><span>50–99</span><b data-tier-price>$54</b></button></li>
+                        <li><button type="button" data-tier="3" aria-label="Jump to 100 seats, tier 100 plus"><span>100+</span><b data-tier-price>$49</b></button></li>
+                        <li class="cq-ladder__thumb" aria-hidden="true"></li>
+                      </ol>
+                    </fieldset>
+
+                    <div class="cq-group cq-group--pair" data-cq-group="2">
+                      <fieldset class="cq-sub">
+                        <legend class="cq-label"><span class="cq-label__n" aria-hidden="true">3</span>Contract term</legend>
+                        <div class="cq-seg" data-flash="term">
+                          <label><input type="radio" name="cq-term" value="12" /><span>12 mo</span></label>
+                          <label><input type="radio" name="cq-term" value="24" checked /><span>24 mo</span></label>
+                          <label><input type="radio" name="cq-term" value="36" /><span>36 mo</span></label>
+                        </div>
+                        <p class="cq-rule" data-cq-term-rule><span class="cq-rule__dot" aria-hidden="true"></span><span>Services −5% · router $52/mo</span></p>
+                      </fieldset>
+                      <fieldset class="cq-sub">
+                        <legend class="cq-label">Region</legend>
+                        <div class="cq-seg" data-flash="region">
+                          <label><input type="radio" name="cq-region" value="anz" checked /><span>ANZ</span></label>
+                          <label><input type="radio" name="cq-region" value="apac" /><span>APAC</span></label>
+                          <label><input type="radio" name="cq-region" value="ukeu" /><span>UK &amp; EU</span></label>
+                        </div>
+                        <p class="cq-rule" data-cq-region-rule><span class="cq-rule__dot" aria-hidden="true"></span><span>ANZ price list · standard rates</span></p>
+                      </fieldset>
+                    </div>
+
+                    <fieldset class="cq-group" data-cq-group="3">
+                      <legend class="cq-label"><span class="cq-label__n" aria-hidden="true">4</span>Add-ons</legend>
+                      <ul class="cq-addons" data-flash="addons">
+                        <li class="cq-addon" data-addon="wifi">
+                          <label><input type="checkbox" value="wifi" /><span class="cq-tog" aria-hidden="true"></span><span class="cq-addon__txt"><strong>Managed Wi-Fi</strong><small data-addon-note>$8.55 per seat / mo · needs fibre</small></span></label>
+                        </li>
+                        <li class="cq-addon" data-addon="fibre">
+                          <label><input type="checkbox" value="fibre" /><span class="cq-tog" aria-hidden="true"></span><span class="cq-addon__txt"><strong>Business Fibre 1 Gbps</strong><small data-addon-note>$399.00 per site / mo</small></span></label>
+                        </li>
+                        <li class="cq-addon" data-addon="sdwan">
+                          <label><input type="checkbox" value="sdwan" /><span class="cq-tog" aria-hidden="true"></span><span class="cq-addon__txt"><strong>SD-WAN</strong><small data-addon-note>$171.00 per site / mo · 2+ sites</small></span></label>
+                        </li>
+                        <li class="cq-addon" data-addon="security">
+                          <label><input type="checkbox" value="security" checked /><span class="cq-tog" aria-hidden="true"></span><span class="cq-addon__txt"><strong>Endpoint security</strong><small data-addon-note>$5.70 per seat / mo</small></span></label>
+                        </li>
+                      </ul>
+                    </fieldset>
+
+                    <div class="cq-stepfoot" data-cq-stepfoot>
+                      <button type="button" class="cq-stepfoot__btn" data-cq-step-prev disabled><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-back" /></svg>Back</button>
+                      <button type="button" class="cq-stepfoot__btn cq-stepfoot__btn--next" data-cq-step-next>Next: <span data-cq-step-next-label>Seats</span><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-arrow" /></svg></button>
+                    </div>
+                  </div>
+
+                  <div class="cq-summary" data-cq-summary>
+                    <div class="cq-summary__glow" aria-hidden="true"></div>
+                    <p class="cq-sum__label">Monthly recurring <span class="cq-sum__ex">AUD, ex GST</span></p>
+                    <p class="cq-sum__big"><span data-cq-monthly>$2,363.40</span><small>/mo</small></p>
+                    <dl class="cq-sum__sub">
+                      <div><dt>Once-off</dt><dd data-cq-once>$3,200.00</dd></div>
+                      <div><dt>Contract value · <span data-cq-term-label>24 mo</span></dt><dd data-cq-tcv>$59,921.60</dd></div>
+                    </dl>
+
+                    <ul class="cq-lines" data-cq-lines aria-label="Quote lines">
+                      <li data-key="seats"None><span class="cq-line__name"><span data-n>Multi-site managed seats</span><small data-d>40 seats × $56.05</small><small class="cq-int" data-c>Cost $1,360.00</small></span><span class="cq-line__amt" data-a>$2,242.00</span></li>
+                      <li data-key="routers"None><span class="cq-line__name"><span data-n>Edge routers · 24-mo plan</span><small data-d>3 × $52.00</small><small class="cq-int" data-c>Cost $132.00</small></span><span class="cq-line__amt" data-a>$156.00</span></li>
+                      <li data-key="security"None><span class="cq-line__name"><span data-n>Endpoint security</span><small data-d>40 seats × $5.70</small><small class="cq-int" data-c>Cost $120.00</small></span><span class="cq-line__amt" data-a>$228.00</span></li>
+                      <li data-key="onboarding" class="is-once"><span class="cq-line__name"><span data-n>Onboarding &amp; migration</span><small data-d>Once-off</small><small class="cq-int" data-c>Cost $1,900.00</small></span><span class="cq-line__amt" data-a>$3,200.00</span></li>
+                    </ul>
+
+                    <dl class="cq-sum__calc">
+                      <div><dt>Recurring subtotal</dt><dd data-cq-sub>$2,626.00</dd></div>
+                      <div><dt>Discount <span data-cq-disc-label>10%</span></dt><dd data-cq-disc-amt>−$262.60</dd></div>
+                    </dl>
+
+                    <div class="cq-margin cq-int" data-cq-margin>
+                      <div class="cq-margin__head"><span><svg width="13" height="13" aria-hidden="true"><use href="#cq-i-lock" /></svg>Gross margin · hidden from customer</span><b data-cq-margin-val>32.3%</b></div>
+                      <div class="cq-margin__track"><span class="cq-margin__fill" data-cq-margin-fill style="--m: 0.538"></span><span class="cq-margin__floor" title="25% margin floor"></span></div>
+                    </div>
+
+                    <div class="cq-applied">
+                      <p class="cq-applied__head"><svg width="14" height="14" aria-hidden="true"><use href="#cq-i-check" /></svg>All pricing rules applied</p>
+                      <ul class="cq-chips" data-cq-chips aria-label="Pricing rules applied">
+                        <li data-kind="price" data-key="bundle">Multi-site · 3 sites</li>
+                        <li data-kind="price" data-key="tier">Tier 25–49</li>
+                        <li data-kind="price" data-key="term">24-mo term −5%</li>
+                        <li data-kind="price" data-key="region">ANZ price list</li>
+                        <li data-kind="ok" data-key="disc">Discount 10% · in limit</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cq-foot">
+                  <div class="cq-disc">
+                    <div class="cq-disc__head">
+                      <label class="cq-disc__label" for="cq-disc">Discount</label>
+                      <output class="cq-disc__val" data-cq-disc-out for="cq-disc">10%</output>
+                    </div>
+                    <input class="cq-range" id="cq-disc" type="range" min="0" max="25" step="1" value="10" data-cq-disc data-flash="disc" style="--p: 40%" aria-describedby="cq-disc-hint" />
+                    <p class="cq-disc__hint" id="cq-disc-hint"><span class="cq-disc__mark" aria-hidden="true"></span>Over 15% needs approval</p>
+                  </div>
+
+                  <div class="cq-appr" data-cq-appr data-state="ok">
+                    <p class="cq-appr__status"><span class="cq-appr__dot" aria-hidden="true"></span><span data-cq-appr-text>Within pricing rules · ready to send</span></p>
+                    <ol class="cq-chain" aria-label="Approval chain">
+                      <li class="cq-chain__step" data-cq-step="manager"><span class="cq-av" aria-hidden="true">DW</span><span class="cq-chain__txt"><strong>Manager</strong><small data-cq-step-note>Dana Whitfield</small></span></li>
+                      <li class="cq-chain__link" aria-hidden="true"></li>
+                      <li class="cq-chain__step" data-cq-step="commercial"><span class="cq-av cq-av--stack" aria-hidden="true"><span class="cq-av__a">PR</span><span class="cq-av__b">TA</span></span><span class="cq-chain__txt"><strong>Commercial</strong><small data-cq-step-note>Priya R. · backup Tom A.</small></span></li>
+                    </ol>
+                  </div>
+
+                  <button type="button" class="cq-action" data-cq-action><span data-cq-action-label>Preview as customer</span><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-eye" /></svg></button>
+                </div>
+              </div>
+
+              <!-- ── Customer pane (interactive price table) ── -->
+              <div class="cq-pane cq-pane--customer" data-cq-pane="customer" hidden>
+                <div class="cq-cust">
+                  <div class="cq-cust__top">
+                    <div>
+                      <p class="cq-cust__brand"><span class="cq-cust__logo" aria-hidden="true"></span>Atlas Networks</p>
+                      <p class="cq-cust__title">Proposal for Meridian Freight</p>
+                      <p class="cq-cust__meta">Q-2207 · <span data-cq-cust-term>24-month</span> agreement · what your customer sees</p>
+                    </div>
+                    <button type="button" class="cq-back" data-cq-back><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-back" /></svg>Back to configurator</button>
+                  </div>
+
+                  <div class="cq-ctable">
+                    <ul class="cq-clines" data-cq-clines aria-label="Included in your quote"></ul>
+                    <p class="cq-copt__head" data-cq-copt-head>Optional add-ons <span>tick to include</span></p>
+                    <ul class="cq-copts" data-cq-copts aria-label="Optional add-ons"></ul>
+                    <dl class="cq-ctotals">
+                      <div><dt>Monthly</dt><dd data-cq-c-monthly>$0.00</dd></div>
+                      <div><dt>Once-off</dt><dd data-cq-c-once>$0.00</dd></div>
+                      <div class="cq-ctotals__big"><dt>Contract value</dt><dd data-cq-c-tcv>$0.00</dd></div>
+                    </dl>
+                  </div>
+
+                  <div class="cq-sign" data-cq-sign data-state="idle">
+                    <div class="cq-sign__pad">
+                      <svg class="cq-sign__svg" viewBox="0 0 220 56" aria-hidden="true"><path d="M6 40c10-22 18-30 22-24s-8 26-2 26 14-30 22-30-6 22 2 22 10-14 16-14 2 12 8 12 12-20 20-20-4 18 4 18 18-10 26-10 10 6 18 4 20-6 34-8 22 2 38 0"/></svg>
+                      <p class="cq-sign__line"><span data-cq-sign-name>Sign here</span></p>
+                    </div>
+                    <div class="cq-sign__actions">
+                      <button type="button" class="cq-action cq-action--accept" data-cq-accept><svg width="16" height="16" aria-hidden="true"><use href="#cq-i-check" /></svg>Accept &amp; sign</button>
+                      <button type="button" class="cq-action cq-action--pay" data-cq-pay hidden>Pay once-off <span data-cq-pay-amt>$3,200.00</span></button>
+                      <p class="cq-sign__done" data-cq-paid hidden><svg width="14" height="14" aria-hidden="true"><use href="#cq-i-check" /></svg><span data-cq-paid-text>Paid by card · receipt sent</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="qc-sr-only" aria-live="polite" data-cq-live></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ MID CTA ═════════ -->
+      <section class="cq-band" aria-labelledby="cq-band-title">
+        <div class="cq-band__inner qc-container" data-reveal>
+          <div class="cq-band__copy">
+            <h2 id="cq-band-title">Configure your real catalogue: <em>start free.</em></h2>
+            <p>Configure, Price, Quote in one connected platform. Load your products, pricing rules and approval limits, and every rep quotes this way.</p>
+          </div>
+          <div class="cq-band__ctas">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="after-demo">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+            <a class="cq-band__link" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="after-demo-demo">Book a demo for complex deals <svg width="16" height="16" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═════════ FEATURE ROWS ═════════ -->
+      <div class="cq-rows">
+        <!-- Catalogue -->
+        <section class="cq-row" aria-labelledby="cq-cat-title">
+          <div class="cq-row__copy" data-reveal>
+            <h2 id="cq-cat-title">A smart <em>product catalogue</em> that carries its own pricing rules</h2>
+            <p>Products, services, bundles and contract plans live in one hub with their tiers, dependencies and contract pricing attached, so every team sells from the same rules.</p>
+            <a class="cq-more" href="https://www.quote.cloud/quote-templates">Explore quote templates <svg width="16" height="16" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+          </div>
+          <div class="cq-row__vis" data-reveal="scale">
+            <div class="cq-cat" data-cq-anim="cat">
+              <div class="cq-cat__head"><span>Catalogue</span><span>Rules</span></div>
+              <ul class="cq-cat__list">
+                <li><span class="cq-cat__item"><strong>Managed seat</strong><small>Recurring · per seat</small></span><span class="cq-tags"><span class="cq-tag cq-tag--price">4 volume tiers</span></span></li>
+                <li><span class="cq-cat__item"><strong>Managed Wi-Fi</strong><small>Recurring · per seat</small></span><span class="cq-tags"><span class="cq-tag cq-tag--dep"><svg width="12" height="12" aria-hidden="true"><use href="#cq-i-link" /></svg>Requires fibre</span></span></li>
+                <li><span class="cq-cat__item"><strong>SD-WAN</strong><small>Recurring · per site</small></span><span class="cq-tags"><span class="cq-tag cq-tag--block"><svg width="12" height="12" aria-hidden="true"><use href="#cq-i-ban" /></svg>2+ sites only</span></span></li>
+                <li><span class="cq-cat__item"><strong>Edge router</strong><small>Device · contract plan</small></span><span class="cq-tags"><span class="cq-tag cq-tag--price">12 / 24 / 36 mo</span></span></li>
+                <li><span class="cq-cat__item"><strong>Multi-site bundle</strong><small>Adds 4 lines in one click</small></span><span class="cq-tags"><span class="cq-tag cq-tag--bundle">Bundle</span></span></li>
+                <li><span class="cq-cat__item"><strong>Harbourline Group</strong><small>Customer contract pricing</small></span><span class="cq-tags"><span class="cq-tag cq-tag--price">−8% on seats</span></span></li>
+              </ul>
+              <span class="cq-cat__scan" aria-hidden="true"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hidden spreadsheet -->
+        <section class="cq-row cq-row--flip" aria-labelledby="cq-sheet-title">
+          <div class="cq-row__copy" data-reveal>
+            <h2 id="cq-sheet-title">Complex formulas in a <em>hidden spreadsheet</em></h2>
+            <p>Link spreadsheet cells to price table lines for unlimited formula pricing. Your customer sees a clean quote; the maths stays behind it.</p>
+            <a class="cq-more" href="https://www.quote.cloud/quoting-software">See quoting software <svg width="16" height="16" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+          </div>
+          <div class="cq-row__vis" data-reveal="scale">
+            <div class="cq-sheetvis" data-cq-anim="sheet">
+              <div class="cq-sheet">
+                <p class="cq-sheet__bar"><span>fx</span><code>=B3*C3*(1-D1)</code><span class="cq-sheet__hidden"><svg width="12" height="12" aria-hidden="true"><use href="#cq-i-lock" /></svg>Hidden</span></p>
+                <table class="cq-sheet__grid">
+                  <thead><tr><th scope="col"></th><th scope="col">A</th><th scope="col">B</th><th scope="col">C</th><th scope="col">D</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">1</th><td colspan="2">Freight lanes</td><td>Loading</td><td>12%</td></tr>
+                    <tr><th scope="row">2</th><td>Depot</td><td>Kms</td><td>Rate/km</td><td></td></tr>
+                    <tr><th scope="row">3</th><td>Brisbane</td><td>1,420</td><td>$2.35</td><td class="cq-sheet__out">$2,936.56</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <svg class="cq-sheet__wire" viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true"><path d="M86 2 C86 30, 60 30, 60 58" /></svg>
+              <div class="cq-ptable">
+                <p class="cq-ptable__head"><span>Price table</span><span>Total</span></p>
+                <p class="cq-ptable__row"><span>Linehaul · Brisbane lane</span><b class="cq-ptable__val">$2,936.56</b></p>
+                <p class="cq-ptable__row cq-ptable__row--mute"><span>Fuel levy</span><b>$412.00</b></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Approvals, versions, audit -->
+        <section class="cq-row" aria-labelledby="cq-gov-title">
+          <div class="cq-row__copy" data-reveal>
+            <h2 id="cq-gov-title"><em>Approval workflows</em>, content locking and a full audit trail</h2>
+            <p>Thresholds route deals to the right approvers, with backups when someone is away. Locked pricing, version compare and restore keep every quote on policy.</p>
+            <a class="cq-more" href="https://www.quote.cloud/collaboration">See collaboration and review <svg width="16" height="16" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+          </div>
+          <div class="cq-row__vis" data-reveal="scale">
+            <ol class="cq-versions" data-cq-anim="versions" aria-label="Version history">
+              <li><span class="cq-ver">v1.0</span><span class="cq-ver__txt"><strong>Quote created from Multi-site bundle</strong><small>Sam Lee</small></span></li>
+              <li><span class="cq-ver">v1.1</span><span class="cq-ver__txt"><strong>Seats <del>40</del> <ins>50</ins> · tier 50–99 applied</strong><small>Sam Lee</small></span></li>
+              <li><span class="cq-ver">v1.2</span><span class="cq-ver__txt"><strong>Discount <del>10%</del> <ins>18%</ins> · routed for approval</strong><small>Rule: discount over 15%</small></span></li>
+              <li class="is-final"><span class="cq-ver">v1.3</span><span class="cq-ver__txt"><strong>Approved by Tom Ashby</strong><small>Backup for Priya Raman · pricing locked</small></span><svg class="cq-ver__lock" width="16" height="16" aria-hidden="true"><use href="#cq-i-lock" /></svg></li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Integrations -->
+        <section class="cq-row cq-row--flip" aria-labelledby="cq-int-title">
+          <div class="cq-row__copy" data-reveal>
+            <h2 id="cq-int-title">A <em>CPQ solution</em> that fits your CRM, finance and payments</h2>
+            <p>Pull customers and opportunities from your CRM, sync accepted deals to accounting, take payment online, or automate with the API. Started in days, no coding needed.</p>
+            <a class="cq-more" href="https://www.quote.cloud/all-integrations">See all integrations <svg width="16" height="16" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+          </div>
+          <div class="cq-row__vis" data-reveal="scale">
+            <div class="cq-hub" data-cq-anim="hub">
+              <svg class="cq-hub__ring" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="150" /><circle cx="200" cy="200" r="88" /></svg>
+              <div class="cq-hub__core"><img src="/assets/logos/qc-symbol-white.png" alt="" width="28" height="28" loading="lazy" decoding="async" /><span>CPQ</span></div>
+              <ul class="cq-hub__logos">
+                <li style="--a: 0"><a href="https://www.quote.cloud/integrations/crm/salesforce-cpq"><img src="/assets/integrations/salesforce-cpq.png" alt="Salesforce" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 1"><a href="https://www.quote.cloud/hubspot-integration-with-quotecloud"><img src="/assets/integrations/hub-spot.png" alt="HubSpot" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 2"><a href="https://www.quote.cloud/microsoft-dynamics-with-quotecloud"><img src="/assets/integrations/microsoft-dynamics.jpg" alt="Microsoft Dynamics" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 3"><a href="https://www.quote.cloud/xero-accounting-with-quotecloud"><img src="/assets/integrations/xero.png" alt="Xero" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 4"><a href="https://www.quote.cloud/quickbooks-online-with-quotecloud"><img src="/assets/integrations/quickbooks.png" alt="QuickBooks" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 5"><a href="https://www.quote.cloud/stripe-integration-with-quotecloud"><img src="/assets/integrations/stripe.png" alt="Stripe" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 6"><a href="https://www.quote.cloud/paypal-integration-with-quotecloud"><img src="/assets/integrations/paypal.png" alt="PayPal" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+                <li style="--a: 7"><a href="https://www.quote.cloud/integrations/crm/mondaydotcom"><img src="/assets/integrations/mondaydotcom-logo.jpg" alt="monday.com" width="60" height="30" loading="lazy" decoding="async" /></a></li>
+              </ul>
+              <p class="cq-hub__api"><code>POST /quotes</code> API access</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ═════════ PROOF ═════════ -->
+      <section class="cq-proof" aria-labelledby="cq-proof-title">
+        <div class="qc-container">
+          <h2 class="cq-proof__title" id="cq-proof-title" data-reveal>Governed, secure and <em>ready for complex selling</em></h2>
+          <ul class="cq-proof__list" data-reveal-stagger="80">
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg width="18" height="18" aria-hidden="true"><use href="#cq-i-star" /></svg></b><span>Rated on Capterra</span></li>
+            <li data-reveal><b><span data-count-to="4.2" data-count-decimals="1">4.2</span><svg width="18" height="18" aria-hidden="true"><use href="#cq-i-star" /></svg></b><span>Rated on Software Advice</span></li>
+            <li data-reveal><b><span data-count-to="2013" data-count-format="plain">2013</span></b><span>In business since</span></li>
+            <li data-reveal><b>14 days</b><span>Free trial, no credit card</span></li>
+          </ul>
+          <p class="cq-proof__trust" data-reveal>
+            <span><img src="/assets/compliance/eidas.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />eIDAS-compliant eSignatures</span>
+            <span><img src="/assets/compliance/encryption-256.png" alt="" width="28" height="28" loading="lazy" decoding="async" />256-bit encryption</span>
+            <span><img src="/assets/compliance/aws.svg" alt="" width="28" height="28" loading="lazy" decoding="async" />Hosted on AWS</span>
+            <span><img src="/assets/compliance/gdpr.png" alt="" width="28" height="28" loading="lazy" decoding="async" />GDPR</span>
+          </p>
+        </div>
+      </section>
+
+      <div class="cq-faq">
+        <!-- @include faq-cpq -->
+      </div>
+
+      <!-- ═════════ CLOSING CTA ═════════ -->
+      <section class="cq-close" aria-labelledby="cq-close-title">
+        <div class="cq-close__inner qc-container" data-reveal>
+          <h2 id="cq-close-title">Take control of complex selling with a modern <em>CPQ solution</em></h2>
+          <p>Valid configurations, rule-based prices and approval-ready quotes your customers can sign and pay.</p>
+          <div class="cq-ctas cq-ctas--center">
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">Start free 14-day trial <svg class="qc-btn__arrow" width="18" height="18" aria-hidden="true"><use href="#cq-i-arrow" /></svg></a>
+            <a class="qc-btn qc-btn--ghost cq-close__ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+          </div>
+          <p class="cq-close__note">No credit card required · <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

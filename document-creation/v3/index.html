@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include head-document-creation -->
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <svg class="dc3-sprite" aria-hidden="true" focusable="false">
+      <symbol id="dc3-i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="dc3-i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+      <symbol id="dc3-i-list" viewBox="0 0 24 24"><path d="M10 6.5h10M10 12h10M10 17.5h10" /><circle cx="5" cy="6.5" r="1.2" /><circle cx="5" cy="12" r="1.2" /><circle cx="5" cy="17.5" r="1.2" /></symbol>
+      <symbol id="dc3-i-table" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2" /><path d="M3.5 9.5h17M3.5 14.5h17M10 9.5v10" /></symbol>
+      <symbol id="dc3-i-spark" viewBox="0 0 24 24"><path d="M12 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5zM18.5 15.5c.3 1.6 1 2.3 2.5 2.5-1.5.3-2.2 1-2.5 2.5-.3-1.5-1-2.2-2.5-2.5 1.5-.2 2.2-.9 2.5-2.5z" /></symbol>
+      <symbol id="dc3-i-reset" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4.5v3.8h3.8" /></symbol>
+      <symbol id="dc3-i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7-9.5-7-9.5-7Z" /><circle cx="12" cy="12" r="2.8" /></symbol>
+      <symbol id="dc3-i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+      <symbol id="dc3-i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.2" /><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" /></symbol>
+      <symbol id="dc3-i-split" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="M11 5v14" /><path d="M14 9.5h4M14 12.5h3" /></symbol>
+      <symbol id="dc3-i-full" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="M6.5 15h7M6.5 12h4" /></symbol>
+      <symbol id="dc3-i-band" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2" /><path d="M3.5 12.5h17M6.5 8.5h7" /></symbol>
+      <symbol id="dc3-i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.4" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.4" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.4" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.4" /></symbol>
+      <symbol id="dc3-i-canvas" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="9" height="7" rx="1.4" transform="rotate(-8 8 9)" /><circle cx="16.5" cy="15.5" r="4" /><path d="M5 19.5h6" /></symbol>
+      <symbol id="dc3-i-text" viewBox="0 0 24 24"><path d="M5 7V5h14v2M12 5v14M9.2 19h5.6" /></symbol>
+      <symbol id="dc3-i-toc" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01" /></symbol>
+      <symbol id="dc3-i-pdf" viewBox="0 0 24 24"><path d="M6 3.5h8.5L19 8v12.5H6z" /><path d="M14 3.5v5h5M9 13h6M9 16.5h4" /></symbol>
+      <symbol id="dc3-i-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2" /><circle cx="9" cy="9.6" r="1.6" /><path d="m4 17.5 5-4.6 4 3.5 3-2.5 4.5 3.6" /></symbol>
+      <symbol id="dc3-i-gallery" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="8" height="10" rx="1.6" /><rect x="13.5" y="3.5" width="7" height="6" rx="1.6" /><rect x="13.5" y="11.5" width="7" height="9" rx="1.6" /><rect x="3.5" y="15.5" width="8" height="5" rx="1.6" /></symbol>
+      <symbol id="dc3-i-video" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.6" /><path d="m10.4 9.4 4.2 2.6-4.2 2.6z" /></symbol>
+      <symbol id="dc3-i-shapes" viewBox="0 0 24 24"><circle cx="8.5" cy="8.5" r="4.5" /><rect x="13" y="13" width="7.5" height="7.5" rx="1.4" /><path d="m16.8 3 3.8 6.3h-7.6z" /></symbol>
+      <symbol id="dc3-i-price" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2" /><path d="M3.5 9.5h17M3.5 14.5h17M14 9.5v10" /></symbol>
+      <symbol id="dc3-i-sheet" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.2" /><path d="M3.5 9.5h17M3.5 14.5h17M9 4.5v15M14.5 4.5v15" /></symbol>
+      <symbol id="dc3-i-gantt" viewBox="0 0 24 24"><path d="M4 4v16h16" /><rect x="7" y="6.5" width="7" height="3" rx="1.2" /><rect x="10.5" y="11" width="8" height="3" rx="1.2" /><rect x="8" y="15.5" width="5" height="2.6" rx="1.2" /></symbol>
+      <symbol id="dc3-i-diagram" viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="5" rx="1.3" /><rect x="3.5" y="15.5" width="6" height="5" rx="1.3" /><rect x="14.5" y="15.5" width="6" height="5" rx="1.3" /><path d="M12 8.5V12M6.5 15.5V12h11v3.5" /></symbol>
+      <symbol id="dc3-i-itin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" /><circle cx="12" cy="10" r="2.4" /></symbol>
+      <symbol id="dc3-i-form" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="5.5" rx="1.6" /><rect x="4" y="12.5" width="16" height="5.5" rx="1.6" /><path d="M6.8 21h5" /></symbol>
+      <symbol id="dc3-i-sign" viewBox="0 0 24 24"><path d="M3 16.5c2.6-1 4.2-5.2 5.6-9 1-2.6 2.9-2.2 2.3.6-.7 3.3-2.4 7.4-.9 7.4 1.3 0 2.3-2.7 3.4-2.7.9 0 .6 2 1.6 2 .9 0 1.8-.8 2.6-1.4M3 20.5h18" /></symbol>
+      <symbol id="dc3-i-button" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5" /><path d="M8.5 12h7M13 9.6l2.5 2.4-2.5 2.4" /></symbol>
+      <symbol id="dc3-i-qr" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.2" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.2" /><path d="M13.5 13.5h3v3h-3zM17.5 17.5h3v3h-3zM20.5 13.5v.5M13.5 20.5h.5" /></symbol>
+      <symbol id="dc3-i-barcode" viewBox="0 0 24 24"><path d="M4 5v14M7 5v14M9.5 5v14M13 5v14M15.5 5v14M18 5v14M20.5 5v14" /></symbol>
+      <symbol id="dc3-i-space" viewBox="0 0 24 24"><path d="M4 4.5h16M4 19.5h16M12 8.2v7.6M9.6 10.4 12 8l2.4 2.4M9.6 13.6 12 16l2.4-2.4" /></symbol>
+      <symbol id="dc3-i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" /></symbol>
+    </svg>
+
+    <main id="main">
+      <!-- ───────── Hero: a working mini document app ───────── -->
+      <section class="dc3-hero" aria-labelledby="dc3-title">
+        <div class="dc3-hero__grid qc-container">
+          <div class="dc3-hero__copy">
+            <h1 class="dc3-hero__title" id="dc3-title">
+              Document creation software that goes <span class="dc3-em">beyond word processing</span>
+            </h1>
+            <p class="dc3-hero__lead">
+              One platform for every type of business document. Write, design, calculate, plan and get signed, all in one online document.
+            </p>
+            <div class="dc3-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="hero">
+                Start free 14-day trial
+                <svg class="dc3-ic qc-btn__arrow" aria-hidden="true"><use href="#dc3-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="hero-demo">Book a demo</a>
+            </div>
+            <p class="dc3-hero__note">
+              No credit card required<span class="dc3-hero__dot" aria-hidden="true"></span><a href="#dc3-app" class="dc3-hero__try">Try the live editor</a>
+            </p>
+          </div>
+
+          <!-- The demo app: three tabs, one document -->
+          <div class="dc3-app" id="dc3-app" role="region" aria-label="Interactive document editor demo" data-tab="write" data-type="report" data-mode="grid" data-cover="split">
+            <div class="dc3-app__bar">
+              <div class="dc3-app__file">
+                <span class="dc3-app__mark" aria-hidden="true"><img src="/assets/logos/qc-symbol-white.png" width="30" height="31" alt="" /></span>
+                <span class="dc3-app__meta">
+                  <span class="dc3-app__name" data-doc-name>Q3 Business Report</span>
+                  <span class="dc3-app__status" data-status>Draft · saved</span>
+                </span>
+              </div>
+
+              <div class="dc3-tabs" role="tablist" aria-label="Editor mode">
+                <span class="dc3-tabs__pill" aria-hidden="true"></span>
+                <button class="dc3-tab" type="button" role="tab" id="dc3-tab-write" aria-controls="dc3-panel-write" aria-selected="true" data-tab-btn="write">Write</button>
+                <button class="dc3-tab" type="button" role="tab" id="dc3-tab-design" aria-controls="dc3-panel-design" aria-selected="false" tabindex="-1" data-tab-btn="design">Design</button>
+                <button class="dc3-tab" type="button" role="tab" id="dc3-tab-interact" aria-controls="dc3-panel-interact" aria-selected="false" tabindex="-1" data-tab-btn="interact">Interact</button>
+              </div>
+
+              <div class="dc3-app__side">
+                <span class="dc3-app__people" aria-hidden="true"><span class="dc3-av dc3-av--a">PS</span><span class="dc3-av dc3-av--b">TL</span></span>
+                <button class="dc3-iconbtn" type="button" data-reset aria-label="Reset the demo">
+                  <svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-reset" /></svg><span class="dc3-iconbtn__label">Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="dc3-app__tools">
+              <div class="dc3-panel" role="tabpanel" id="dc3-panel-write" aria-labelledby="dc3-tab-write">
+                <div class="dc3-tool" role="toolbar" aria-label="Formatting" aria-controls="dc3-editable">
+                  <button class="dc3-tbtn dc3-tbtn--h" type="button" data-cmd="heading" aria-pressed="false" aria-label="Heading">H</button>
+                  <button class="dc3-tbtn dc3-tbtn--b" type="button" data-cmd="bold" aria-pressed="false" aria-label="Bold">B</button>
+                  <button class="dc3-tbtn dc3-tbtn--i" type="button" data-cmd="italic" aria-pressed="false" aria-label="Italic">I</button>
+                  <button class="dc3-tbtn" type="button" data-cmd="list" aria-label="Bulleted list"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-list" /></svg></button>
+                  <button class="dc3-tbtn" type="button" data-cmd="table" aria-label="Insert table"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-table" /></svg></button>
+                  <span class="dc3-tool__sep" aria-hidden="true"></span>
+                  <button class="dc3-ai-btn" type="button" data-ai>
+                    <svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-spark" /></svg><span>Ask AI to tighten this</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="dc3-panel" role="tabpanel" id="dc3-panel-design" aria-labelledby="dc3-tab-design" hidden>
+                <div class="dc3-tool" role="group" aria-label="Design">
+                  <div class="dc3-swatches" role="group" aria-label="Theme">
+                    <button class="dc3-swatch" type="button" data-theme-btn="coral" aria-pressed="true" aria-label="Theme: Coral, rounded headings"><span>Aa</span></button>
+                    <button class="dc3-swatch" type="button" data-theme-btn="violet" aria-pressed="false" aria-label="Theme: Violet, serif headings"><span>Aa</span></button>
+                    <button class="dc3-swatch" type="button" data-theme-btn="forest" aria-pressed="false" aria-label="Theme: Forest, modern sans"><span>Aa</span></button>
+                    <button class="dc3-swatch" type="button" data-theme-btn="midnight" aria-pressed="false" aria-label="Theme: Midnight, classic serif"><span>Aa</span></button>
+                  </div>
+                  <span class="dc3-tool__sep" aria-hidden="true"></span>
+                  <div class="dc3-layouts" role="group" aria-label="Cover layout">
+                    <button class="dc3-tbtn" type="button" data-cover-btn="split" aria-pressed="true" aria-label="Cover layout: split"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-split" /></svg></button>
+                    <button class="dc3-tbtn" type="button" data-cover-btn="full" aria-pressed="false" aria-label="Cover layout: full bleed"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-full" /></svg></button>
+                    <button class="dc3-tbtn" type="button" data-cover-btn="band" aria-pressed="false" aria-label="Cover layout: band"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-band" /></svg></button>
+                  </div>
+                  <span class="dc3-tool__sep" aria-hidden="true"></span>
+                  <div class="dc3-modes" role="group" aria-label="Layout mode">
+                    <button class="dc3-mode" type="button" data-mode-btn="canvas" aria-pressed="false"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-canvas" /></svg>Canvas</button>
+                    <button class="dc3-mode" type="button" data-mode-btn="grid" aria-pressed="true"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-grid" /></svg>Grid</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dc3-panel" role="tabpanel" id="dc3-panel-interact" aria-labelledby="dc3-tab-interact" hidden>
+                <p class="dc3-tool dc3-tool--note">
+                  <svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-eye" /></svg>
+                  <span><strong>Previewing as your client.</strong> Pick options, fill in the form, then sign.</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="dc3-types" role="group" aria-label="Starter template">
+              <button class="dc3-type" type="button" data-type-btn="report" aria-pressed="true"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-sheet" /></svg>Report</button>
+              <button class="dc3-type" type="button" data-type-btn="proposal" aria-pressed="false"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-price" /></svg>Proposal</button>
+              <button class="dc3-type" type="button" data-type-btn="presentation" aria-pressed="false"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-shapes" /></svg>Presentation</button>
+              <button class="dc3-type" type="button" data-type-btn="plan" aria-pressed="false"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-gantt" /></svg>Project plan</button>
+              <button class="dc3-type" type="button" data-type-btn="contract" aria-pressed="false"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-sign" /></svg>Contract</button>
+            </div>
+
+            <div class="dc3-stage" data-stage>
+              <article class="dc3-doc" data-doc data-theme="coral" aria-label="Sample document">
+                <div class="dc3-cover" data-cover-el>
+                  <div class="dc3-cover__media" data-flip>
+                    <div class="dc3-cover__media-in" data-art>
+                      <svg class="dc3-art" viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                        <rect class="dc3-art__bg" width="200" height="160" />
+                        <circle class="dc3-art__glow" cx="160" cy="28" r="58" />
+                        <g class="dc3-art__bars"><rect x="34" y="96" width="18" height="40" rx="3" /><rect x="62" y="80" width="18" height="56" rx="3" /><rect x="90" y="66" width="18" height="70" rx="3" /><rect class="dc3-art__hi" x="118" y="44" width="18" height="92" rx="3" /></g>
+                        <path class="dc3-art__line" d="M30 88 L70 74 L100 60 L140 34 L172 22" />
+                      </svg>
+                      <span class="dc3-handles" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                    </div>
+                  </div>
+                  <span class="dc3-cover__shape" aria-hidden="true"></span>
+                  <div class="dc3-cover__text" data-flip="t">
+                    <div class="dc3-cover__text-in">
+                      <p class="dc3-cover__kicker" data-f="kicker">Northwind Studio</p>
+                      <p class="dc3-cover__title" data-f="title">Q3 Business Report</p>
+                      <p class="dc3-cover__sub" data-f="sub">Prepared for the board · October 2026</p>
+                    </div>
+                  </div>
+                  <span class="dc3-guides" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                </div>
+
+                <div class="dc3-body" data-flip="t" data-section="write">
+                  <div class="dc3-editable" id="dc3-editable" data-editable contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" aria-label="Document text, editable">
+                    <p class="dc3-h">Executive summary</p>
+                    <p data-ai-target>Revenue grew across all three regions this quarter, and we want to take a moment to explain in some detail what drove that growth and what we think it could mean for the plans we are making for next year.</p>
+                  </div>
+                  <p class="dc3-ai-note" data-ai-note hidden>
+                    <svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-spark" /></svg>
+                    <span>Sample rewrite by AI Co-worker</span>
+                    <button type="button" class="dc3-link-btn" data-ai-undo>Undo</button>
+                  </p>
+                </div>
+
+                <div class="dc3-block" data-flip="t" data-block>
+                  <div class="dc3-sheet" role="img" aria-label="Spreadsheet block: revenue by region">
+                    <div class="dc3-sheet__row dc3-sheet__row--cols"><span></span><span>A</span><span>B</span><span>C</span><span>D</span></div>
+                    <div class="dc3-sheet__row dc3-sheet__row--head"><span>1</span><span>Region</span><span>Q2</span><span>Q3</span><span>Change</span></div>
+                    <div class="dc3-sheet__row"><span>2</span><span>North</span><span>$184k</span><span>$212k</span><span class="dc3-up">+15%</span></div>
+                    <div class="dc3-sheet__row"><span>3</span><span>Central</span><span>$142k</span><span>$158k</span><span class="dc3-up">+11%</span></div>
+                    <div class="dc3-sheet__row"><span>4</span><span>South</span><span>$96k</span><span>$121k</span><span class="dc3-up">+26%</span></div>
+                    <div class="dc3-sheet__row dc3-sheet__row--total"><span>5</span><span>Total</span><span>$422k</span><span>$491k</span><span class="dc3-up">+16%</span></div>
+                  </div>
+                </div>
+
+                <div class="dc3-clientwrap" data-section="interact">
+                  <div class="dc3-client" data-client>
+                    <p class="dc3-client__title"><span data-f="clientTitle">Approve this report</span></p>
+                    <ul class="dc3-opts" data-opts>
+                      <li class="dc3-opt dc3-opt--base"><span class="dc3-opt__name">Quarterly reporting retainer</span><span class="dc3-opt__price">$4,500</span><span class="dc3-opt__lock"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-lock" /></svg>Included</span></li>
+                      <li class="dc3-opt"><label class="dc3-opt__label"><span class="dc3-opt__name">Board presentation session</span><span class="dc3-opt__price">$1,200</span><input class="dc3-switch" type="checkbox" data-price="1200" /></label></li>
+                      <li class="dc3-opt"><label class="dc3-opt__label"><span class="dc3-opt__name">Q4 forecast appendix</span><span class="dc3-opt__price">$800</span><input class="dc3-switch" type="checkbox" data-price="800" /></label></li>
+                    </ul>
+                    <p class="dc3-total"><span>Total</span><output data-total data-base="4500">$4,500</output></p>
+
+                    <div class="dc3-form">
+                      <label class="dc3-field"><span>Full name</span><input type="text" autocomplete="off" data-name placeholder="Your name" /></label>
+                      <label class="dc3-field"><span>Preferred start</span>
+                        <select data-start>
+                          <option>November 2026</option>
+                          <option>December 2026</option>
+                          <option>January 2027</option>
+                        </select>
+                      </label>
+                    </div>
+
+                    <div class="dc3-sign" data-sign>
+                      <div class="dc3-sign__head">
+                        <span class="dc3-sign__label" id="dc3-sign-label">Signature</span>
+                        <div class="dc3-seg" role="group" aria-label="Signature method">
+                          <button type="button" class="dc3-seg__btn" data-sign-mode="type" aria-pressed="true">Type</button>
+                          <button type="button" class="dc3-seg__btn" data-sign-mode="draw" aria-pressed="false">Draw</button>
+                        </div>
+                      </div>
+                      <div class="dc3-sign__pad">
+                        <input class="dc3-sign__type" type="text" autocomplete="off" data-sign-type aria-labelledby="dc3-sign-label" placeholder="Type your name to sign" />
+                        <canvas class="dc3-sign__draw" data-sign-draw width="600" height="140" aria-label="Draw your signature with a pointer" hidden></canvas>
+                        <button type="button" class="dc3-link-btn dc3-sign__clear" data-sign-clear hidden>Clear</button>
+                      </div>
+                      <button type="button" class="dc3-accept" data-accept disabled>
+                        <svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-check" /></svg>Accept &amp; sign
+                      </button>
+                    </div>
+
+                    <div class="dc3-accepted" data-accepted hidden>
+                      <span class="dc3-accepted__stamp"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-check" /></svg>Accepted</span>
+                      <span class="dc3-accepted__sig" data-accepted-sig></span>
+                      <span class="dc3-accepted__meta" data-accepted-meta></span>
+                    </div>
+                  </div>
+                  <button type="button" class="dc3-veil" data-veil>
+                    <svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-eye" /></svg>Preview as client to try this
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <p class="dc3-app__hint" data-hint aria-hidden="true"><span class="dc3-app__hint-dot"></span>Auto demo · click to take over</p>
+            <span class="dc3-cursor" data-cursor aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L10 19z" /></svg>
+            </span>
+            <p class="qc-sr-only" aria-live="polite" data-live></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Three audiences ───────── -->
+      <section class="dc3-ways" aria-labelledby="dc3-ways-title">
+        <div class="qc-container">
+          <div class="dc3-head" data-reveal>
+            <h2 class="dc3-h2" id="dc3-ways-title">An online document editor for <span class="dc3-em">writers, designers and presenters</span></h2>
+            <p class="dc3-sub">You don't have to choose between a document, a presentation, a spreadsheet or an interactive business app. One document does it.</p>
+          </div>
+
+          <div class="dc3-ways__grid" data-reveal-stagger="110">
+            <article class="dc3-way" data-reveal>
+              <div class="dc3-way__viz dc3-wv-write" aria-hidden="true">
+                <div class="dc3-wv-write__bar"><b>H</b><b>B</b><i>I</i><span></span><span></span></div>
+                <span class="dc3-wv-write__h"></span>
+                <span class="dc3-wv-write__l" style="--w: 92%"></span>
+                <span class="dc3-wv-write__l" style="--w: 84%"></span>
+                <span class="dc3-wv-write__l dc3-wv-write__l--hi" style="--w: 64%"></span>
+                <div class="dc3-wv-write__table"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+              <h3 class="dc3-way__title">Write</h3>
+              <p class="dc3-way__text">Everything you need to write professional business documents, with much more than text: headings, columns, lists, tables, links and media.</p>
+              <div class="dc3-way__links">
+                <button type="button" class="dc3-try" data-try="write"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-up" /></svg>Try Write</button>
+                <a class="dc3-more" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Content blocks<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="dc3-way" data-reveal>
+              <div class="dc3-way__viz dc3-wv-design" aria-hidden="true">
+                <span class="dc3-wv-design__a"></span>
+                <span class="dc3-wv-design__b"></span>
+                <span class="dc3-wv-design__c"></span>
+                <span class="dc3-wv-design__d"></span>
+              </div>
+              <h3 class="dc3-way__title">Design</h3>
+              <p class="dc3-way__text">Design visually engaging documents without giving up business functionality. Canvas Mode places blocks anywhere; Grid Mode snaps them into rows and columns.</p>
+              <div class="dc3-way__links">
+                <button type="button" class="dc3-try" data-try="design"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-up" /></svg>Try Design</button>
+                <a class="dc3-more" href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">Canvas &amp; Grid<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="dc3-way" data-reveal>
+              <div class="dc3-way__viz dc3-wv-act" aria-hidden="true">
+                <span class="dc3-wv-act__row"><i></i><b class="is-on"></b></span>
+                <span class="dc3-wv-act__row"><i></i><b></b></span>
+                <span class="dc3-wv-act__total"><i></i><em>$14,700</em></span>
+                <svg class="dc3-wv-act__sig" viewBox="0 0 160 40"><path d="M6 28c10-4 16-20 22-20s-4 22 4 22 10-14 16-14-2 12 6 12 12-10 20-12c6-1 2 10 10 10s14-8 22-12 18-6 44-6" /></svg>
+              </div>
+              <h3 class="dc3-way__title">Interact</h3>
+              <p class="dc3-way__text">Bring presentation-quality visuals into documents clients act on: they choose options, fill in forms, comment, sign and pay online.</p>
+              <div class="dc3-way__links">
+                <button type="button" class="dc3-try" data-try="interact"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-up" /></svg>Try Interact</button>
+                <a class="dc3-more" href="https://www.quote.cloud/electronic-signature-software-solution">eSignatures<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Why juggle tools ───────── -->
+      <section class="dc3-compare" aria-labelledby="dc3-compare-title">
+        <div class="qc-container dc3-compare__inner">
+          <div class="dc3-head dc3-head--left" data-reveal>
+            <h2 class="dc3-h2" id="dc3-compare-title">Why juggle six apps? Use <span class="dc3-em">interactive document software</span></h2>
+            <p class="dc3-sub">The writing of a word processor, the layouts of a design tool and the numbers of a spreadsheet, in one document.</p>
+          </div>
+
+          <div class="dc3-ledger" data-ledger>
+            <table class="dc3-ledger__table">
+              <caption class="qc-sr-only">How each part of a business document is usually made, and where it lives in QuoteCloud</caption>
+              <thead>
+                <tr><th scope="col">Capability</th><th scope="col">Usually done with</th><th scope="col"><span class="dc3-ledger__qc">In QuoteCloud</span></th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Write and format content</th><td data-label="Usually done with"><span class="dc3-file">a word processor</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-text" /></svg>Text block</span></td></tr>
+                <tr><th scope="row">Design visual layouts</th><td data-label="Usually done with"><span class="dc3-file">a design or presentation app</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-canvas" /></svg>Canvas and Grid modes</span></td></tr>
+                <tr><th scope="row">Calculate</th><td data-label="Usually done with"><span class="dc3-file">a spreadsheet</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-sheet" /></svg>Embedded Spreadsheet</span></td></tr>
+                <tr><th scope="row">Build pricing</th><td data-label="Usually done with"><span class="dc3-file">a spreadsheet or quoting tool</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-price" /></svg>Price Table</span></td></tr>
+                <tr><th scope="row">Show project timelines</th><td data-label="Usually done with"><span class="dc3-file">a project tool</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-gantt" /></svg>Gantt Chart</span></td></tr>
+                <tr><th scope="row">Explain processes</th><td data-label="Usually done with"><span class="dc3-file">a diagramming tool</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-diagram" /></svg>Diagram</span></td></tr>
+                <tr><th scope="row">Collect information</th><td data-label="Usually done with"><span class="dc3-file">a separate form app</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-form" /></svg>Forms</span></td></tr>
+                <tr><th scope="row">Get signatures</th><td data-label="Usually done with"><span class="dc3-file">a separate e-signature service</span></td><td data-label="In QuoteCloud"><span class="dc3-blk"><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-sign" /></svg>eSignature</span></td></tr>
+                <tr class="dc3-ledger__last"><th scope="row">Share</th><td data-label="Usually done with"><span class="dc3-file">multiple files and links</span></td><td data-label="In QuoteCloud"><span class="dc3-blk dc3-blk--one">One interactive document</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── 18 blocks index ───────── -->
+      <section class="dc3-kit" aria-labelledby="dc3-kit-title">
+        <div class="qc-container dc3-kit__inner">
+          <div class="dc3-kit__intro" data-reveal>
+            <h2 class="dc3-h2" id="dc3-kit-title">18 content blocks. One <span class="dc3-em">online document builder</span>.</h2>
+            <p class="dc3-sub">Most tools make you choose between a word processor, a spreadsheet, a presentation tool, a diagramming app or a form builder. QuoteCloud brings them together in a single document.</p>
+            <a class="dc3-more dc3-more--lg" href="https://www.quote.cloud/18-powerful-content-blocks-for-interactive-business-documents-quotecloud">Explore all 18 content blocks<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+          </div>
+
+          <div class="dc3-kit__grid" data-reveal-stagger="70" data-kit>
+            <div class="dc3-cat" data-reveal>
+              <div class="dc3-cat__viz dc3-cv-write" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <h3 class="dc3-cat__title">Write</h3>
+              <ul class="dc3-cat__list">
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-text" /></svg>Text</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-toc" /></svg>Table of Contents</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-pdf" /></svg>PDF</li>
+              </ul>
+            </div>
+            <div class="dc3-cat" data-reveal>
+              <div class="dc3-cat__viz dc3-cv-show" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <h3 class="dc3-cat__title">Show</h3>
+              <ul class="dc3-cat__list">
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-image" /></svg>Image</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-gallery" /></svg>Gallery</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-video" /></svg>Video</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-shapes" /></svg>Shapes</li>
+              </ul>
+            </div>
+            <div class="dc3-cat" data-reveal>
+              <div class="dc3-cat__viz dc3-cv-calc" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <h3 class="dc3-cat__title">Calculate</h3>
+              <ul class="dc3-cat__list">
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-price" /></svg>Price Table</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-sheet" /></svg>Spreadsheet</li>
+              </ul>
+            </div>
+            <div class="dc3-cat" data-reveal>
+              <div class="dc3-cat__viz dc3-cv-plan" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h3 class="dc3-cat__title">Plan</h3>
+              <ul class="dc3-cat__list">
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-gantt" /></svg>Gantt Chart</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-diagram" /></svg>Diagram</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-itin" /></svg>Itinerary</li>
+              </ul>
+            </div>
+            <div class="dc3-cat" data-reveal>
+              <div class="dc3-cat__viz dc3-cv-sign" aria-hidden="true">
+                <span></span>
+                <svg viewBox="0 0 160 40"><path d="M6 28c10-4 16-20 22-20s-4 22 4 22 10-14 16-14-2 12 6 12 12-10 20-12c6-1 2 10 10 10s14-8 22-12 18-6 44-6" /></svg>
+              </div>
+              <h3 class="dc3-cat__title">Collect and sign</h3>
+              <ul class="dc3-cat__list">
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-form" /></svg>Forms</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-sign" /></svg>eSignature</li>
+              </ul>
+            </div>
+            <div class="dc3-cat" data-reveal>
+              <div class="dc3-cat__viz dc3-cv-link" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h3 class="dc3-cat__title">Link and lay out</h3>
+              <ul class="dc3-cat__list">
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-button" /></svg>Button</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-qr" /></svg>QR Code</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-barcode" /></svg>Barcode</li>
+                <li><svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-space" /></svg>Empty Space</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Document gallery ───────── -->
+      <section class="dc3-gallery" aria-labelledby="dc3-gallery-title">
+        <div class="qc-container">
+          <div class="dc3-head" data-reveal>
+            <h2 class="dc3-h2" id="dc3-gallery-title">One platform. <span class="dc3-em">Every type of business document.</span></h2>
+            <p class="dc3-sub">Start from professional document templates for reports, proposals, pitches, plans, contracts, onboarding packs and travel.</p>
+          </div>
+
+          <div class="dc3-filters" role="group" aria-label="Filter documents by type" data-filters hidden>
+            <button type="button" class="dc3-filter" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="dc3-filter" data-filter="report" aria-pressed="false">Reports</button>
+            <button type="button" class="dc3-filter" data-filter="proposal" aria-pressed="false">Proposals &amp; quotes</button>
+            <button type="button" class="dc3-filter" data-filter="pitch" aria-pressed="false">Presentations</button>
+            <button type="button" class="dc3-filter" data-filter="plan" aria-pressed="false">Project plans</button>
+            <button type="button" class="dc3-filter" data-filter="contract" aria-pressed="false">Contracts</button>
+            <button type="button" class="dc3-filter" data-filter="travel" aria-pressed="false">Travel</button>
+          </div>
+
+          <ul class="dc3-docs" data-docs>
+            <li class="dc3-docs__item" data-kind="report">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/finance">
+                <span class="dc3-card__cover dc3-cc-report" aria-hidden="true">
+                  <span class="dc3-cc-report__top"><b>Q3</b><em>Business Report</em></span>
+                  <span class="dc3-cc-report__chart"><i style="--h: 42%"></i><i style="--h: 58%"></i><i style="--h: 50%"></i><i style="--h: 74%"></i><i style="--h: 92%"></i></span>
+                  <span class="dc3-cc-lines"><i></i><i></i><i></i></span>
+                </span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Business reports</h3><span class="dc3-card__meta">Spreadsheet, Table of Contents</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="proposal">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/telecommunications">
+                <span class="dc3-card__cover"><img src="/assets/telco/template-network-rack.jpg" width="566" height="800" loading="lazy" decoding="async" alt="Network installation proposal template cover" /></span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Proposals</h3><span class="dc3-card__meta">Price Table, eSignature</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="pitch">
+              <a class="dc3-card" href="https://www.quote.cloud/canvas-and-grid-mode-document-editing">
+                <span class="dc3-card__cover dc3-cc-pitch" aria-hidden="true">
+                  <span class="dc3-cc-pitch__orb"></span><span class="dc3-cc-pitch__orb dc3-cc-pitch__orb--2"></span>
+                  <span class="dc3-cc-pitch__t">Brand<br />Launch</span>
+                  <span class="dc3-cc-pitch__s">Spring campaign · Executive summary</span>
+                </span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Presentation-style pitches</h3><span class="dc3-card__meta">Canvas Mode, Shapes, Video</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="travel">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/travel">
+                <span class="dc3-card__cover"><img src="/assets/travel/template-paradise.jpg" width="566" height="800" loading="lazy" decoding="async" alt="Bali holiday travel itinerary template cover" /></span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Travel itineraries</h3><span class="dc3-card__meta">Itinerary, Gallery</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="plan">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/construction">
+                <span class="dc3-card__cover dc3-cc-plan" aria-hidden="true">
+                  <span class="dc3-cc-plan__t">Project Phoenix<em>Delivery plan</em></span>
+                  <span class="dc3-cc-plan__g"><i style="--x: 0; --w: 38%"></i><i style="--x: 22%; --w: 42%"></i><i style="--x: 48%; --w: 30%"></i><i style="--x: 62%; --w: 34%"></i></span>
+                  <span class="dc3-cc-lines"><i></i><i></i></span>
+                </span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Project plans</h3><span class="dc3-card__meta">Gantt Chart, Diagram</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="proposal">
+              <a class="dc3-card" href="https://www.quote.cloud/quote-templates">
+                <span class="dc3-card__cover dc3-card__cover--top"><img src="/assets/quoting/sample-quote-app-developer.png" width="1054" height="1492" loading="lazy" decoding="async" alt="App development quote: cover, scope, pricing and acceptance pages" /></span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Quotes</h3><span class="dc3-card__meta">Price Table, Forms</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="contract">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/consulting">
+                <span class="dc3-card__cover dc3-cc-contract" aria-hidden="true">
+                  <span class="dc3-cc-contract__t">Service Agreement</span>
+                  <span class="dc3-cc-contract__toc"><i>1 Services</i><i>2 Fees and payment</i><i>3 Term</i><i>4 Confidentiality</i></span>
+                  <span class="dc3-cc-contract__sig"><svg viewBox="0 0 160 40"><path d="M6 28c10-4 16-20 22-20s-4 22 4 22 10-14 16-14-2 12 6 12 12-10 20-12c6-1 2 10 10 10s14-8 22-12 18-6 44-6" /></svg></span>
+                </span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Contracts and agreements</h3><span class="dc3-card__meta">eSignature, PDF</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="plan">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/human-resources">
+                <span class="dc3-card__cover dc3-cc-onboard" aria-hidden="true">
+                  <span class="dc3-cc-onboard__t">Welcome<br />aboard</span>
+                  <span class="dc3-cc-onboard__list"><i class="is-done">Sign your agreement</i><i class="is-done">Meet the team</i><i>Set up your account</i></span>
+                </span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Onboarding packs</h3><span class="dc3-card__meta">Forms, Video, Button</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="proposal">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/telecommunications">
+                <span class="dc3-card__cover"><img src="/assets/telco/template-mobile-plan.jpg" width="566" height="800" loading="lazy" decoding="async" alt="Mobile plan proposal template cover" /></span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Service plans</h3><span class="dc3-card__meta">Price Table, QR Code</span></div>
+              </a>
+            </li>
+            <li class="dc3-docs__item" data-kind="travel">
+              <a class="dc3-card" href="https://www.quote.cloud/templates/travel">
+                <span class="dc3-card__cover"><img src="/assets/travel/template-african-journey.jpg" width="566" height="800" loading="lazy" decoding="async" alt="African journey travel proposal template cover" /></span>
+                <div class="dc3-card__cap"><h3 class="dc3-card__title">Customer travel documents</h3><span class="dc3-card__meta">Itinerary, Image, Gallery</span></div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="dc3-cta-row" data-reveal>
+            <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="gallery">
+              Start free 14-day trial
+              <svg class="dc3-ic qc-btn__arrow" aria-hidden="true"><use href="#dc3-i-arrow" /></svg>
+            </a>
+            <a class="qc-btn qc-btn--ghost qc-btn--lg" href="https://www.quote.cloud/templates">Browse all templates</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Business layer bento ───────── -->
+      <section class="dc3-biz" aria-labelledby="dc3-biz-title">
+        <div class="qc-container">
+          <div class="dc3-head" data-reveal>
+            <h2 class="dc3-h2" id="dc3-biz-title"><span class="dc3-em">Business document software</span> built for teams</h2>
+            <p class="dc3-sub">Keep every document on-brand, approved and moving, from first draft to signature.</p>
+          </div>
+
+          <div class="dc3-bento" data-bento>
+            <article class="dc3-tile dc3-tile--collab" data-reveal>
+              <div class="dc3-tile__viz dc3-bv-collab" aria-hidden="true">
+                <div class="dc3-bv-collab__page">
+                  <span class="dc3-bv-collab__h">Statement of work</span>
+                  <span class="dc3-bv-collab__l" style="--w: 94%"></span>
+                  <span class="dc3-bv-collab__l" style="--w: 88%"></span>
+                  <span class="dc3-bv-collab__typed"><span class="dc3-bv-collab__txt">Kick-off workshop in week one, then fortnightly reviews.</span><i class="dc3-bv-collab__caret"></i></span>
+                  <span class="dc3-bv-collab__l" style="--w: 72%"></span>
+                  <span class="dc3-bv-collab__l dc3-bv-collab__l--sel" style="--w: 58%"></span>
+                  <span class="dc3-bv-collab__l" style="--w: 80%"></span>
+                  <span class="dc3-bv-collab__cols"><i></i><i></i></span>
+                </div>
+                <span class="dc3-bv-cursor dc3-bv-cursor--a"><svg viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L10 19z" /></svg><em>Priya</em></span>
+                <span class="dc3-bv-cursor dc3-bv-cursor--b"><svg viewBox="0 0 24 24"><path d="M5 3.5 19 11l-6.2 1.6L10 19z" /></svg><em>Tom</em></span>
+                <span class="dc3-bv-comment"><b>TL</b><span><strong>@Priya</strong> can we add the review dates here?</span></span>
+              </div>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">Edit together, in real time</h3>
+                <p class="dc3-tile__text">Co-edit the same document, comment, @mention, compare versions and set who can view, comment, edit or approve.</p>
+                <a class="dc3-more" href="https://www.quote.cloud/collaboration">Collaboration<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="dc3-tile dc3-tile--brand" data-reveal>
+              <div class="dc3-tile__viz dc3-bv-brand" aria-hidden="true">
+                <span class="dc3-bv-brand__page"><i class="dc3-bv-brand__band"></i><i class="dc3-bv-brand__t"></i><i class="dc3-bv-brand__l"></i><i class="dc3-bv-brand__l dc3-bv-brand__l--s"></i></span>
+                <span class="dc3-bv-brand__dots"><i></i><i></i><i></i></span>
+              </div>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">Branded templates and themes</h3>
+                <p class="dc3-tile__text">One company-wide style, applied to every document.</p>
+              </div>
+            </article>
+
+            <article class="dc3-tile dc3-tile--lib" data-reveal>
+              <div class="dc3-tile__viz dc3-bv-lib" aria-hidden="true">
+                <span class="dc3-bv-lib__tabs"><i>Personal</i><i class="is-on">Team</i><i>Company</i></span>
+                <span class="dc3-bv-lib__item">About us</span>
+                <span class="dc3-bv-lib__item dc3-bv-lib__item--drag">Case study</span>
+                <span class="dc3-bv-lib__item">Terms</span>
+              </div>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">Content libraries</h3>
+                <p class="dc3-tile__text">Personal, team and company libraries of approved content.</p>
+              </div>
+            </article>
+
+            <article class="dc3-tile dc3-tile--flow" data-reveal>
+              <div class="dc3-tile__viz dc3-bv-flow" aria-hidden="true">
+                <span class="dc3-bv-flow__node">Draft</span>
+                <span class="dc3-bv-flow__wire"></span>
+                <span class="dc3-bv-flow__node dc3-bv-flow__node--rule">Discount over 10%</span>
+                <span class="dc3-bv-flow__wire"></span>
+                <span class="dc3-bv-flow__node dc3-bv-flow__node--ok">Approved</span>
+              </div>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">Approvals without code</h3>
+                <p class="dc3-tile__text">Visual approval flows with conditional rules.</p>
+              </div>
+            </article>
+
+            <article class="dc3-tile dc3-tile--track" data-reveal>
+              <div class="dc3-tile__viz dc3-bv-track" aria-hidden="true">
+                <span class="dc3-bv-track__n"><i class="dc3-bv-track__dot"></i>Opened by Harbour &amp; Co.</span>
+                <span class="dc3-bv-track__n"><i class="dc3-bv-track__dot"></i>Viewed the pricing</span>
+                <span class="dc3-bv-track__n"><i class="dc3-bv-track__dot"></i>Left a comment</span>
+                <span class="dc3-bv-track__n dc3-bv-track__n--ok"><i class="dc3-bv-track__dot"></i>Accepted and signed</span>
+              </div>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">Know when it's opened</h3>
+                <p class="dc3-tile__text">Notifications when a document is opened, viewed, commented on or accepted.</p>
+              </div>
+            </article>
+
+            <article class="dc3-tile dc3-tile--ai" data-reveal>
+              <div class="dc3-tile__viz dc3-bv-ai" aria-hidden="true">
+                <span class="dc3-bv-ai__prompt"><svg class="dc3-ic"><use href="#dc3-i-spark" /></svg>Make the introduction warmer</span>
+                <span class="dc3-bv-ai__out"><i style="--w: 96%"></i><i style="--w: 90%"></i><i style="--w: 66%"></i></span>
+              </div>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">AI Co-worker</h3>
+                <p class="dc3-tile__text">Drafts and rewrites introductions, value propositions and summaries for you to review.</p>
+                <a class="dc3-more" href="https://www.quote.cloud/ai-coworker-in-quotecloud">AI Co-worker<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="dc3-tile dc3-tile--int" data-reveal>
+              <div class="dc3-tile__copy">
+                <h3 class="dc3-tile__title">Connected to the tools you already use</h3>
+                <p class="dc3-tile__text">CRM, accounting, payments and productivity apps, including Salesforce, HubSpot, Xero, QuickBooks, Stripe, PayPal, Google Sheets and Slack.</p>
+                <a class="dc3-more" href="https://www.quote.cloud/all-integrations">All integrations<svg class="dc3-ic" aria-hidden="true"><use href="#dc3-i-arrow" /></svg></a>
+              </div>
+              <div class="dc3-marquee" aria-hidden="true">
+                <div class="dc3-marquee__track">
+                  <img src="/assets/integrations/salesforce-cpq.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/hub-spot.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/xero.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/quickbooks.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/stripe.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/paypal.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/googlesheets.png" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/slack.jpg" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/mondaydotcom-logo.jpg" width="792" height="790" decoding="async" alt="" />
+                  <img src="/assets/integrations/microsoft-dynamics.jpg" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/salesforce-cpq.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/hub-spot.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/xero.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/quickbooks.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/stripe.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/paypal.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/googlesheets.png" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/slack.jpg" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/mondaydotcom-logo.jpg" width="792" height="790" decoding="async" alt="" />
+                  <img data-dup src="/assets/integrations/microsoft-dynamics.jpg" width="792" height="790" decoding="async" alt="" />
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────── Proof ───────── -->
+      <section class="dc3-proof" aria-labelledby="dc3-proof-title">
+        <div class="qc-container">
+          <h2 class="qc-sr-only" id="dc3-proof-title">Ratings and security</h2>
+          <ul class="dc3-proof__list" data-reveal-stagger="90">
+            <li class="dc3-proof__item" data-reveal>
+              <span class="dc3-proof__num">4.2<svg class="dc3-ic dc3-proof__star" aria-hidden="true"><use href="#dc3-i-star" /></svg></span>
+              <span class="dc3-proof__label">Rated on Capterra</span>
+            </li>
+            <li class="dc3-proof__item" data-reveal>
+              <span class="dc3-proof__num">4.2<svg class="dc3-ic dc3-proof__star" aria-hidden="true"><use href="#dc3-i-star" /></svg></span>
+              <span class="dc3-proof__label">Rated on Software Advice</span>
+            </li>
+            <li class="dc3-proof__item" data-reveal>
+              <span class="dc3-proof__num">2013</span>
+              <span class="dc3-proof__label">Building document software since</span>
+            </li>
+            <li class="dc3-proof__item dc3-proof__item--seals" data-reveal>
+              <span class="dc3-proof__seals">
+                <img src="/assets/compliance/eidas.svg" width="64" height="64" loading="lazy" decoding="async" alt="eIDAS compliant" />
+                <img src="/assets/compliance/gdpr.png" width="64" height="64" loading="lazy" decoding="async" alt="GDPR" />
+                <img src="/assets/compliance/encryption-256.png" width="64" height="64" loading="lazy" decoding="async" alt="256-bit encryption" />
+                <img src="/assets/compliance/aws.svg" width="64" height="64" loading="lazy" decoding="async" alt="Hosted on AWS" />
+              </span>
+              <span class="dc3-proof__label">Legally binding e-signatures, included in every plan</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="dc3-faq">
+        <!-- @include faq-document-creation -->
+      </div>
+
+      <!-- ───────── Closing CTA ───────── -->
+      <section class="dc3-close" aria-labelledby="dc3-close-title">
+        <div class="qc-container dc3-close__inner">
+          <div class="dc3-close__copy" data-reveal>
+            <h2 class="dc3-close__title" id="dc3-close-title">You just made a document. <span class="dc3-em">Now make yours.</span></h2>
+            <p class="dc3-close__line">Start creating better documents today, with every block, template and e-signature included in your trial.</p>
+            <div class="dc3-hero__ctas">
+              <a class="qc-btn qc-btn--primary qc-btn--lg" href="https://app.quote.cloud/register" data-qc-cta="closing">
+                Start free 14-day trial
+                <svg class="dc3-ic qc-btn__arrow" aria-hidden="true"><use href="#dc3-i-arrow" /></svg>
+              </a>
+              <a class="qc-btn qc-btn--lg dc3-btn-light" href="https://www.quote.cloud/quotecloud-demo" data-qc-cta="closing-demo">Book a demo</a>
+            </div>
+            <p class="dc3-close__note">No credit card required. <a href="https://www.quote.cloud/pricing">See pricing</a></p>
+          </div>
+          <div class="dc3-close__viz" aria-hidden="true" data-reveal="scale">
+            <div class="dc3-close__page" data-close-page></div>
+            <span class="dc3-close__badge"><svg class="dc3-ic"><use href="#dc3-i-check" /></svg><span data-close-badge>Ready to send</span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

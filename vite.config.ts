@@ -7,7 +7,7 @@ const root = import.meta.dirname;
 // Every landing-page variant lives in its own folder: v1/index.html … v10/index.html
 // for the product overview, and <page>/vN/index.html for other pages (e.g. travel/v1/).
 const isVariant = (dir: string) => /^v\d+$/.test(dir);
-const pageDirs = ["travel", "itinerary", "telco", "esign", "quoting", "docgen", "blocks", "canvas", "collab"];
+const pageDirs = ["travel", "itinerary", "telco", "esign", "quoting", "docgen", "blocks", "canvas", "collab", "proposal", "cpq", "ai-coworker", "document-creation", "image-editor", "demo"];
 const variantInputs = Object.fromEntries([
   ...readdirSync(root)
     .filter((dir) => isVariant(dir) && existsSync(resolve(root, dir, "index.html")))
